@@ -2,7 +2,7 @@
 
 ## Storage rule
 
-This index stores research knowledge only. It does not store copied external source code or failed Candidate ZIPs.
+This index stores **external GitHub research knowledge only**. It does not define GSM SOP, and it does not store copied external source code or failed Candidate ZIPs.
 
 An external idea must pass:
 
@@ -22,17 +22,12 @@ All Strategy Champion and Combined Champion comparisons use this priority order:
 
 Drawdown remains a risk veto even though the primary objective is Net Profit USD.
 
-## GSM source doctrine used to judge GitHub ideas
+## Important boundary
 
-External GitHub ideas are Optimization Candidates only. They must not silently replace the GSM Base SOP.
-
-Current source-level constraints recorded from the user's GSM materials:
-
-- Supply & Demand: zone, not line; prioritize fresh First Touch; do not trade repeated used zones as if fresh.
-- Support & Resistance: zone, not line; repeated touches increase significance; distinguish major/minor and good/bad zones.
-- Candlestick: strongest when occurring at/near relevant support/resistance/zone; confirmation is required by the handbook framework.
-- Chart Pattern: treat patterns as confirmation structures, not standalone prediction engines; confirmation comes before pattern/price execution.
-- Three engines remain independently researchable: Scalping M5, Intraday M30, Swing.
+- GSM SOP is maintained separately under `gsm-sop/`.
+- GitHub ideas are research candidates only.
+- External GitHub logic must not silently overwrite or redefine GSM SOP.
+- A GitHub idea may enter the EA only after isolated Candidate testing and Champion comparison.
 
 ## Priority sources — Batch A
 
@@ -62,7 +57,7 @@ Current source-level constraints recorded from the user's GSM materials:
 - Code copied: NO
 - Study module: Research methodology, Candidate comparison, Train/OOS discipline
 
-## Priority sources — Batch B (added 2026-08-31)
+## Priority sources — Batch B
 
 ### samw2591/gold-quant-trading
 
@@ -150,7 +145,7 @@ Priority study sources:
 Priority study sources:
 - mehdi-jahani: S/R and candle modules
 - foeed: FVG freshness + OB overlap as optional confluence
-- GSM source doctrine remains authoritative for First Touch behavior
+- GSM SOP remains authoritative for First Touch behavior
 
 ### Swing low trade count
 
