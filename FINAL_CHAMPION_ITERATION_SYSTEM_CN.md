@@ -1998,3 +1998,246 @@ Candidate VS Champion
 ↓
 Champion Only If Proven
 ```
+
+---
+
+# 29. MT5 Strategy Tester 项目级强制验证门槛
+
+本节把前面的 MT5 评估规则正式提升为**本项目 Champion 晋级强制层**。如果第 7-8 节的通用诊断范围比本节宽松，以本节作为正式 Champion 晋级标准，除非用户明确修改 mandate。
+
+## 29.1 MT5 核心评分表
+
+每一次正式 Candidate VS Champion 比较，首页必须先显示：
+
+```text
+Net Profit USD
+Return % on Initial Capital
+Max Equity DD USD
+Max Equity DD %
+Profit Factor
+Total Trades
+Win Rate
+Expected Payoff / Expectancy
+Recovery Factor
+Reject / Execution Errors
+```
+
+正式排名仍然不变：
+
+```text
+#1 Net Profit USD
+#2 Max Equity Drawdown
+#3 Profit Factor
+#4 Trade Count
+#5 Win Rate
+```
+
+新增字段属于强制验证背景，不取代正式排名。
+
+## 29.2 本项目回撤强制规则
+
+本项目采用：
+
+```text
+Preferred Max Equity DD <= 15%
+15% < Max Equity DD <= 30% = 警戒区 / 必须有强理由
+Max Equity DD > 30% = 正式 Champion 拒绝，除非用户明确修改标准
+```
+
+Balance Drawdown 永远不能覆盖或替代 Equity Drawdown。
+
+超过硬上限时：
+
+```text
+EQUITY_DD_HARD_LIMIT_BREACH
+AUTOMATIC REJECT
+```
+
+## 29.3 Profit Factor 高值审查规则
+
+本项目可以把 `PF 1.3-1.8` 作为成熟策略的实用参考区间，但它**不是唯一理想范围**，也不代表 PF 越高越差。
+
+当：
+
+```text
+PF > 2.5
+```
+
+必须加强检查：
+
+- 样本数过少
+- Over-optimization
+- Parameter Cliff
+- 只集中在有利 Regime
+- Spread / Commission / Slippage 不现实
+- Future Data / Look-ahead
+- BUY / SELL 单边依赖
+
+禁止仅凭 PF 数值直接推断某个固定“过拟合概率”。
+
+## 29.4 Trade Count 证据要求
+
+一般 MT5 研究中，`>100 trades`、甚至 `200-500` 是较理想的统计样本参考，但本项目必须按策略类型执行：
+
+```text
+SCALPING：最好 > 200；能做到 300-1000+ 更好
+INTRADAY：最好 > 100
+SWING：允许较少交易，但必须用更长历史、多 Regime、OOS、双 Broker 补强证据
+```
+
+不能用高 Win Rate 或高 PF 去掩盖样本太少的问题。
+
+## 29.5 Recovery Factor 项目目标
+
+Champion 目标：
+
+```text
+Recovery Factor > 3.0
+```
+
+若 `Recovery Factor <= 3.0`，必须明确标记；没有额外风险解释和更强稳健性证据时，不能当作“干净晋级”。
+
+标记：
+
+```text
+RECOVERY_FACTOR_BELOW_TARGET
+```
+
+## 29.6 Expected Payoff 必须覆盖真实交易成本
+
+Expected Payoff 必须在扣除真实交易摩擦后仍然明显为正：
+
+```text
+Spread
+Commission
+Slippage
+Delay / Execution Friction
+```
+
+对于成本敏感的 Scalping，实用参考目标：
+
+```text
+Edge-to-Cost Ratio >= 3x-5x
+```
+
+它是安全缓冲参考，不是跨 Broker / Symbol 永远固定的数学常数。
+
+如果真实成本一加入，优势就消失：
+
+```text
+EXPECTED_PAYOFF_TOO_SMALL
+EDGE_COST_BUFFER_WEAK
+SPREAD_COST_EDGE_TOO_SMALL
+```
+
+该 Candidate 不允许晋级。
+
+## 29.7 Balance / Equity 与 Margin Call 完整性
+
+正式审核必须同时检查 Balance 和 Equity。
+
+如果 Balance 很平滑，但 Equity 出现深度下坠或长期明显分叉，必须检查：
+
+```text
+隐藏浮亏
+Martingale / Grid 暴露
+Recovery-only Exit
+Margin Stress
+Position Accumulation
+延迟实现亏损
+```
+
+绝不能因为 Balance Drawdown 很低就直接通过。
+
+## 29.8 Real Tick 是正式 Champion 的强制证据
+
+正式 Champion 证据必须使用：
+
+```text
+Every tick based on real ticks
+```
+
+`1-minute OHLC` 等低精度模式只能作为明确标记的诊断测试，不能作为唯一晋级证据。
+
+## 29.9 Delay / Slippage 压力测试
+
+对执行敏感的 Strategy，最终 Candidate 不能只依赖 `No Delay`。
+
+优先使用 Broker 实际合理的随机 Delay / Slippage；参考压力点可以包括：
+
+```text
+10 ms
+25 ms
+50 ms
+```
+
+或者有记录的 Broker 实际范围。
+
+必须比较：
+
+```text
+Baseline Real Tick
+vs
+Delay / Slippage Stress
+```
+
+如果 Net、PF、Expected Payoff 或执行可靠性明显崩溃，标记：
+
+```text
+NO_DELAY_ONLY_EVIDENCE
+DELAY_SLIPPAGE_FRAGILE
+```
+
+## 29.10 Untouched OOS 规则
+
+示例：
+
+```text
+2020-2025 = Train / Development
+2025-2026 = Untouched OOS Validation
+```
+
+日期只是示例；正式测试必须记录实际区间。
+
+一旦 OOS 结果已经被看过，任何重新调参都必须建立新实验；对修改后的 Candidate，该区间不能继续被称为 untouched OOS。
+
+## 29.11 最终 Champion 强制门槛矩阵
+
+Candidate 只有在以下项目全部完成后，才有资格进入最终晋级比较：
+
+```text
+[ ] Compile correctness 已确认
+[ ] Reject / Critical Execution Errors = 0
+[ ] No Future Data / Look-ahead
+[ ] No Hidden Risk / Lot Increase
+[ ] Risk-normalized Comparison 已完成
+[ ] 使用 Every tick based on real ticks
+[ ] Max Equity DD <= 30%
+[ ] Balance-vs-Equity Integrity 已检查
+[ ] Expected Payoff / Expectancy 扣真实成本后仍为正
+[ ] Trade Sample 对策略类型足够，或已有长期 / Regime 证据补强
+[ ] OOS untouched 且没有 Collapse
+[ ] FxPro + Tradona Cross-Broker Evidence 已完成
+[ ] 执行敏感策略已完成 Delay / Slippage Robustness
+[ ] BUY / SELL 不对称已审计
+[ ] Consecutive-Loss Stress 已完成
+[ ] Combined 已完成 Portfolio Audit
+```
+
+通过这张矩阵**不等于自动成为 Champion**。它只是取得进入最终比较的资格：
+
+```text
+Candidate VS Current Champion
+↓
+Net Profit USD
+↓
+Max Equity Drawdown
+↓
+Profit Factor
+↓
+Trade Count
+↓
+Win Rate
+↓
+只有明确更好并且稳健 → NEW CHAMPION
+```
