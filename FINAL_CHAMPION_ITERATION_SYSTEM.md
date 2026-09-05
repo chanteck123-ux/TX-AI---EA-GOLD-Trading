@@ -434,6 +434,10 @@ Official priority is permanently fixed:
 
 Supporting metrics must include:
 
+- Return % on Initial Capital
+- Max Equity Drawdown USD
+- Max Equity Drawdown %
+- Balance Drawdown as secondary context only
 - Relative Drawdown
 - Average Win
 - Average Loss
@@ -451,6 +455,162 @@ Supporting metrics must include:
 - Market Regime Performance
 
 Win Rate must never be judged in isolation.
+
+## 7.1 Net Profit must be normalized by capital
+
+Absolute Net Profit alone is insufficient.
+
+Every report must calculate:
+
+```text
+Return % = Net Profit USD / Initial Capital × 100
+```
+
+A strategy that earns a small absolute amount on a large account can be statistically valid but commercially unattractive. Therefore both `Net Profit USD` and `Return %` must be reported.
+
+This does not change the official Champion ranking order. `Net Profit USD` remains #1, while `Return %` is a mandatory interpretation metric.
+
+## 7.2 Profit Factor interpretation
+
+Profit Factor must be interpreted together with sample size, drawdown, OOS, costs, and parameter stability.
+
+Useful diagnostic reference bands:
+
+```text
+PF < 1.00      = losing system on the tested sample
+PF 1.00-1.20   = weak / marginal edge
+PF 1.20-1.50   = usable but needs robustness confirmation
+PF 1.50-2.00   = strong if supported by sufficient sample and OOS
+PF > 2.00      = very strong, but inspect sample size and overfitting risk carefully
+PF > 2.50-3.00 = not automatically invalid; requires heightened scrutiny
+```
+
+A high PF is **not** proof of overfitting by itself. It becomes suspicious when combined with one or more of:
+
+- very low trade count
+- one short favorable market regime
+- sharp OOS collapse
+- parameter cliff behavior
+- unrealistic spread / commission / slippage assumptions
+- future-data or look-ahead defects
+- one-sided BUY/SELL dependence
+
+Flag when appropriate:
+
+```text
+PF_OVERFIT_SUSPECT
+```
+
+## 7.3 Max Equity Drawdown is the primary drawdown metric
+
+Always prioritize `Equity Drawdown`, not Balance Drawdown, because open-position floating losses are economically real.
+
+Required output:
+
+```text
+Max Equity DD USD
+Max Equity DD %
+Max Balance DD USD / % (secondary only)
+```
+
+Diagnostic reference bands:
+
+```text
+<= 15%     = preferred / controlled
+15%-30%    = caution zone
+> 30%      = high-risk zone
+> 50%      = severe capital-risk zone
+```
+
+These bands are risk diagnostics, not universal hard pass/fail thresholds unless explicitly configured for the Champion mandate. Max Equity DD retains veto authority.
+
+Large divergence between Balance and Equity must trigger:
+
+```text
+BALANCE_EQUITY_DIVERGENCE
+HIDDEN_FLOATING_LOSS_RISK
+```
+
+## 7.4 Trade-count adequacy is strategy-dependent
+
+Do not force one universal `>100 trades` rule across all strategies.
+
+Preferred evidence guidance:
+
+```text
+Scalping: preferably > 200; 300-1000+ is better when feasible
+Intraday: preferably > 100
+Swing: do not mechanically force > 100; extend years and market regimes instead
+```
+
+Small samples must be flagged:
+
+```text
+LOW_SAMPLE_SIZE
+LOW_SAMPLE_WINRATE
+```
+
+The lower the sample size, the stronger the requirement for longer date ranges, regime diversity, OOS, Walk Forward, and cross-broker confirmation.
+
+## 7.5 Recovery Factor
+
+```text
+Recovery Factor = Net Profit / Maximum Drawdown Amount
+```
+
+Diagnostic interpretation:
+
+```text
+< 1.0  = weak
+1.0-2.0 = marginal
+2.0-3.0 = good
+> 3.0  = strong
+```
+
+`Recovery Factor > 3` is desirable but is **not** a universal standalone hard gate. It must be interpreted with DD, sample size, OOS and strategy type.
+
+## 7.6 Expected Payoff and cost coverage
+
+Expected Payoff must be positive and must survive realistic costs.
+
+For short-horizon strategies, especially Scalping, report:
+
+```text
+Expected Payoff / Trade
+Average Spread Cost / Trade
+Average Commission / Trade
+Estimated Slippage Cost / Trade
+Total Estimated Cost / Trade
+Edge-to-Cost Ratio
+```
+
+Where practical:
+
+```text
+Edge-to-Cost Ratio = Expected Payoff / Estimated Total Cost per Trade
+```
+
+A large safety buffer is preferred. A 3x-5x cost buffer can be used as a strong reference target for cost-sensitive strategies, but it is not a universal hard threshold because units and execution models differ by broker and symbol.
+
+Flag:
+
+```text
+EXPECTED_PAYOFF_TOO_SMALL
+SPREAD_COST_EDGE_TOO_SMALL
+```
+
+## 7.7 Balance-vs-Equity integrity check
+
+If the Balance curve looks smooth while Equity repeatedly drops far below it, investigate:
+
+- holding large floating losses
+- grid behavior
+- martingale behavior
+- delayed loss realization
+- recovery-only exit logic
+- margin-call proximity
+
+A strategy with attractive Balance statistics but severe Equity stress must not pass Champion review without explicit tail-risk evidence.
 
 ```text
 TEST PASS
@@ -527,7 +687,7 @@ Define:
 R = Average Win / abs(Average Loss)
 ```
 
-Then the theoretical break-even Win Rate is:
+Theoretical break-even Win Rate:
 
 ```text
 Break-even Win Rate = 1 / (1 + R)
@@ -536,54 +696,28 @@ Break-even Win Rate = 1 / (1 + R)
 Examples:
 
 ```text
-R:R = 1:1  → Break-even Win Rate ≈ 50.0%
-R:R = 2:1  → Break-even Win Rate ≈ 33.3%
-R:R = 3:1  → Break-even Win Rate ≈ 25.0%
+1:1 → 50.0%
+2:1 → 33.3%
+3:1 → 25.0%
 ```
 
-Champion analysis should prioritize **realized** Average R:R from actual closed trades over theoretical target R:R.
+Theoretical R:R and realized average R:R must be reported separately when they differ. Champion evaluation must care more about realized results than nominal SL/TP design.
 
-## 8.3 Strategy-profile reference ranges — diagnostic only
+## 8.3 Strategy-type interpretation
 
-These ranges are reference profiles for diagnosis, not hard PASS/FAIL gates:
+Reference ranges are diagnostic, not hard universal promotion thresholds:
 
-| Strategy Profile | Typical Win Rate Reference | Typical Average R:R Reference | Main Diagnostic Risk |
+| Strategy profile | Typical Win Rate behavior | Typical payoff structure | Main risk |
 |---|---:|---:|---|
-| Trend-following / Breakout | ~35%–45% | ~2:1 to 3:1+ | Low Win Rate can still be healthy if winners are materially larger than losers. |
-| Range / Scalping / Short-hold | ~65%–80% | ~1:1 or ~0.8:1 | Highly sensitive to spread, commission, slippage, latency, and small Win Rate deterioration. |
-| Grid / Martingale-style averaging | ~85%–95%+ | Can be extremely unfavorable, e.g. 1:5 or worse | High Win Rate may hide rare catastrophic losses, accumulated floating loss, margin stress, or tail risk. |
+| Trend / Breakout | often lower, e.g. 35%-45% | often 2:1, 3:1 or higher | long losing streaks, regime dependence |
+| Scalping / Range | often higher, e.g. 65%-80% | often around 1:1 or lower | spread, commission, slippage, latency |
+| Grid / Martingale | may show 85%-95%+ | many small wins, rare large losses | catastrophic tail loss / margin failure |
 
-Never promote or reject a Candidate only because its Win Rate sits inside or outside one of these reference bands.
+A very high Win Rate is not automatically good. A 90%+ system with severe negative skew can be materially worse than a 40%-50% system with strong realized R:R and positive expectancy.
 
-## 8.4 Engine-specific interpretation
+## 8.4 BUY / SELL direction audit
 
-### SCALPING
-
-Scalping normally requires closer scrutiny of:
-
-```text
-Win Rate
-+ Realized R:R
-+ Expected Payoff / Expectancy
-+ Spread
-+ Commission
-+ Slippage
-+ Execution Delay
-```
-
-A Scalping Candidate with a positive backtest expectancy but an edge smaller than realistic trading costs must not be treated as robust.
-
-### INTRADAY
-
-Intraday does not require an artificially high Win Rate. A moderate Win Rate can be acceptable when Net Profit, Max Equity DD, PF, Realized R:R, and Expectancy are strong and robust.
-
-### SWING
-
-Swing may have a lower Win Rate and still be healthy when Average Win is materially larger than Average Loss, Expectancy is positive, and drawdown remains acceptable.
-
-## 8.5 Long / Short balance audit
-
-Do not report only Total Win Rate. At minimum split:
+Every engine report should separately show:
 
 ```text
 BUY Trades
@@ -596,39 +730,50 @@ SELL Net Profit
 SELL Profit Factor
 ```
 
-If one direction materially dominates while the other is weak, raise:
+A large directional imbalance must trigger investigation rather than automatic rejection. Determine whether the cause is:
+
+- market regime
+- insufficient sample
+- asymmetric strategy logic
+- coding defect
+- one-direction structural dependency
+
+Flag where justified:
 
 ```text
 ONE_SIDE_DEPENDENCY
 ```
 
-A directional imbalance is not automatically a code defect. First determine whether it reflects market-regime dependence, insufficient sample size, or a genuine asymmetric logic problem.
+## 8.5 Consecutive-loss stress
 
-## 8.6 Consecutive-loss and drawdown stress
+Maximum Consecutive Losses must be read together with Max Equity DD and Risk per Trade.
 
-Maximum consecutive losses must always be interpreted together with Max Equity DD, Risk per Trade, Actual Lot, Margin Usage, and recovery characteristics.
-
-If the historical maximum losing streak is `N`, run additional stress scenarios at least around:
+Required stress sequence:
 
 ```text
-N
-N + 2
-N + 4
+Historical Max Consecutive Losses = N
+Stress Case 1 = N + 2
+Stress Case 2 = N + 4
 ```
 
 Inspect:
 
-- projected Equity DD
-- margin pressure
-- survival at minimum broker lot constraints
-- recovery time
-- whether account capital can remain above operational minimums
+- projected DD
+- free margin
+- margin level
+- position-sizing survival
+- recovery requirement
+- account ruin risk
 
-A high Win Rate does not eliminate the statistical possibility of a long losing streak.
+Flag:
 
-## 8.7 Mandatory diagnostic flags
+```text
+LOSS_STREAK_RISK
+```
 
-The evaluation system must be able to raise at least:
+## 8.6 Mandatory Win Rate diagnostic flags
+
+Use when supported by evidence:
 
 ```text
 HIGH_WINRATE_BAD_RR
@@ -640,24 +785,36 @@ LOW_SAMPLE_WINRATE
 HIDDEN_TAIL_RISK
 ```
 
-These flags are diagnostic/risk-veto inputs. They do not reorder the official Champion metric priority, but any severe unresolved risk may prevent promotion.
+## 8.7 Strategy-specific emphasis
 
-## 8.8 Formal Champion report fields
+```text
+SCALPING
+→ Win Rate + Realized R:R + Expected Payoff + Spread + Commission + Slippage + Delay
 
-The detailed Champion comparison must include at least:
+INTRADAY
+→ medium Win Rate is acceptable when Net + DD + PF + Expectancy are strong
+
+SWING
+→ lower Win Rate is acceptable when Average Win materially exceeds Average Loss and DD is controlled
+```
+
+## 8.8 Required detailed Champion report columns
 
 ```text
 Strategy
 Net Profit USD
-Max Equity DD
+Return %
+Max Equity DD USD
+Max Equity DD %
 Profit Factor
+Recovery Factor
 Trades
 Win Rate
 Average Win
 Average Loss
 Realized Average R:R
 Break-even Win Rate
-Expectancy / Trade
+Expected Payoff / Expectancy per Trade
 Maximum Consecutive Losses
 Long Win Rate
 Short Win Rate
@@ -667,17 +824,79 @@ Reject
 Diagnostic Flags
 ```
 
-The official ranking remains permanently:
+The official top-level ranking remains unchanged:
 
 ```text
-#1 Net Profit USD
-#2 Max Equity Drawdown
-#3 Profit Factor
-#4 Trade Count
-#5 Win Rate
+Net Profit USD
+→ Max Equity Drawdown
+→ Profit Factor
+→ Trade Count
+→ Win Rate
 ```
 
-This expanded Win Rate framework explains **why** the fifth metric is healthy or dangerous; it does not promote Win Rate above the first four metrics.
+The additional fields explain whether that ranking result is robust and economically credible.
+
+## 8.9 MT5 Strategy Tester robustness protocol
+
+Formal Champion validation must use:
+
+```text
+Every tick based on real ticks
+```
+
+for all formal Real Tick evidence unless a specific test is explicitly labeled as a lower-fidelity diagnostic run.
+
+Execution robustness must test realistic transaction friction. Depending on tester/broker capabilities, include multiple delay/slippage conditions rather than only `No Delay`.
+
+Reference execution-delay scenarios may include approximately:
+
+```text
+10 ms
+25 ms
+50 ms
+```
+
+or broker-realistic random delay ranges. These are stress scenarios, not fixed universal constants.
+
+For each scenario report the change in:
+
+- Net Profit
+- Max Equity DD
+- PF
+- Trades
+- Win Rate
+- Expected Payoff
+- Reject / execution errors
+
+Flag:
+
+```text
+DELAY_SLIPPAGE_FRAGILE
+```
+
+## 8.10 Train / OOS protocol
+
+Training data is for model and parameter selection.
+
+OOS data is for validation only.
+
+Example structure:
+
+```text
+Train: earlier period
+OOS: later untouched period
+```
+
+After OOS results are read, any retuning creates a new experiment and the previously viewed period cannot continue to be called untouched OOS for that same Candidate.
+
+Flag:
+
+```text
+OOS_COLLAPSE
+OOS_CONTAMINATION
+```
+
+A promising Candidate should also be evaluated across market regimes and, when required, Walk Forward, cost stress, execution stress, parameter-neighborhood stability, and Monte Carlo / trade-order randomization.
 
 ---
 
@@ -998,6 +1217,15 @@ DAILY_EQUITY_DD_CIRCUIT
 EVIDENCE_SCORE_LOW
 ADX_DI_REJECT
 FVG_QUALITY_LOW
+PF_OVERFIT_SUSPECT
+BALANCE_EQUITY_DIVERGENCE
+HIDDEN_FLOATING_LOSS_RISK
+LOW_SAMPLE_SIZE
+LOW_RECOVERY_FACTOR
+EXPECTED_PAYOFF_TOO_SMALL
+DELAY_SLIPPAGE_FRAGILE
+OOS_COLLAPSE
+OOS_CONTAMINATION
 ```
 
 Must distinguish:
@@ -1327,6 +1555,12 @@ Regardless of Research source, minimum review checklist:
 20. unexplained profit source
 21. Broker Reject / Retcode logging
 22. Freeze / Recovery state reconstruction
+23. Real Tick model correctness
+24. Equity-vs-Balance divergence
+25. sample-size adequacy for the strategy type
+26. OOS contamination
+27. delay / slippage sensitivity
+28. Expected Payoff after costs
 
 No Candidate may be promoted while a Critical Finding remains open.
 
@@ -1373,6 +1607,7 @@ Any one of the following triggers rejection:
 - retuning after OOS and still calling the same period OOS
 - unexplained abnormal profit
 - missing critical validation data
+- formal Champion evidence not based on Real Ticks without explicit lower-fidelity labeling
 
 Result:
 
@@ -1401,13 +1636,24 @@ Observed Evidence
 Modified Files
 Modified Rules
 GSM Base SOP Changed (YES/NO)
+Initial Capital
+Return %
 Risk Budget
 Actual Risk
 Test Protocol
 Broker / Symbol / Date Range
+Tester Model
+Real Tick Used (YES/NO)
+Delay / Slippage Scenario
 Champion Metrics
 Candidate Metrics
 Delta Metrics
+Max Equity DD USD / %
+Max Balance DD USD / %
+Recovery Factor
+Expected Payoff
+Edge-to-Cost Ratio
+Sample Size
 Standard Review Result
 Self Review Result
 Red Team Result
@@ -1546,7 +1792,7 @@ Field order is fixed:
 Net -> Max Equity DD -> PF -> Trades -> Win Rate -> Reject
 ```
 
-The detailed report must additionally include the Win Rate validation fields defined in Section 8.
+Detailed pages must additionally show Return %, Equity DD USD/%, Recovery Factor, Expected Payoff, Realized R:R, Buy/Sell split, consecutive-loss statistics, cost sensitivity, and diagnostic flags.
 
 The ZIP delivered to the user and GitHub `champion/current/` must be the exact same file, with matching filename, version, SHA256, and report metrics.
 
@@ -1680,7 +1926,7 @@ Final evaluation order remains permanently fixed:
 #5 Win Rate
 ```
 
-Any Automatic Reject condition, Look-ahead, hidden risk increase, unacceptable DD, OOS collapse, execution abnormality, or severe unresolved Win Rate / Expectancy diagnostic risk may veto promotion.
+Any Automatic Reject condition, Look-ahead, hidden risk increase, unacceptable DD, OOS collapse, or execution abnormality may veto promotion.
 
 ---
 
