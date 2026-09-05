@@ -1,10 +1,26 @@
-# GSM GOLD 3-SOP EA — Final Champion, Optimization & Research System
+# GSM GOLD 3-SOP EA — Final Champion, Optimization, Dual-AI Research & Program Governance System
 
 ## Authority
 
-本文件是 GSM GOLD 3-SOP EA 的最高层开发、优化、验证与 Champion 管理规范。
+本文件是 GSM GOLD 3-SOP EA 的最高层开发、优化、验证、AI Research、程序治理与 Champion 管理规范。
 
-若旧文档的指标顺序、Candidate 命名、Combined 假设、Research 处理方式或程序流程与本文件冲突，以本文件为准。
+若旧文档的指标顺序、Candidate 命名、Combined 假设、Research 处理方式、AI 协作方式或程序流程与本文件冲突，以本文件为准。
+
+当前运行假设：已经存在经过正式验证的 `REAL CURRENT CHAMPION`，包括：
+
+```text
+SCALPING M5 CHAMPION
+INTRADAY M30 CHAMPION
+SWING CHAMPION
+3-SOP COMBINED CHAMPION
+```
+
+从此以后：
+
+```text
+CHAMPION = 唯一正式基准
+Candidate VS Champion = 唯一晋级方式
+```
 
 最终评价顺序固定为：
 
@@ -24,6 +40,13 @@ GSM SOP FOUNDATION
   ├─ INTRADAY M30
   └─ SWING D1/H4/M30
         ↓
+RESEARCH LAB
+  ├─ USER SOP OPTIMIZATION
+  ├─ CODEX
+  ├─ CLAUDE CODE
+  ├─ CODEX + CLAUDE HYBRID
+  └─ EXTERNAL / GITHUB RESEARCH
+        ↓
 OPTIONAL OPTIMIZATION / RESEARCH MODULES
         ↓
 SIGNAL / CONFIDENCE
@@ -42,14 +65,16 @@ TRAIN / OOS
         ↓
 FXPRO / TRADONA
         ↓
+WALK FORWARD / STRESS TEST when required
+        ↓
 TRADE AUDIT + MISSED OPPORTUNITY AUDIT
         ↓
 CHAMPION COMPARISON
         ↓
-REJECT / MORE TESTING / NEW CHAMPION
+REJECT / KEEP CURRENT CHAMPION / RESEARCH FURTHER / NEW CHAMPION
 ```
 
-GSM SOP 决定“什么是有效交易逻辑”。GitHub / 外部 EA Research 只负责提供“值得测试的 Candidate Idea”。外部逻辑未经独立验证不得直接写入 Champion。
+GSM SOP 决定“什么是有效交易逻辑”。AI / GitHub / 外部 EA Research 只负责提供“值得测试的 Candidate Idea”。外部或 AI 逻辑未经独立验证不得直接写入 Champion。
 
 ---
 
@@ -62,18 +87,53 @@ GSM SOP 决定“什么是有效交易逻辑”。GitHub / 外部 EA Research �
 
 Combined 盈利不能证明三个策略都优秀；三个单策略盈利也不能证明 Combined 一定优秀。
 
+任何时候都必须可以明确回答：
+
+```text
+Current Scalping Champion = ?
+Current Intraday Champion = ?
+Current Swing Champion = ?
+Current Combined Champion = ?
+```
+
+禁止同一条 Champion Line 同时存在两个“正式 Champion”。
+
 每个 Champion 必须可追踪：版本、源码 SHA256、SET SHA256、Broker、Symbol、Capital、Risk、Real Tick 区间、OOS 区间、指标和最终报告。
 
 ---
 
-## 3. Candidate names
+## 3. Candidate names and provenance
 
-| Lane | Candidate | Branch |
+标准 Candidate ID：
+
+| Lane | Candidate | Canonical Branch |
 |---|---|---|
-| Scalping | `S-C01` | `research/scalping/<topic>` |
-| Intraday | `I-C01` | `research/intraday/<topic>` |
-| Swing | `W-C01` | `research/swing/<topic>` |
-| Combined | `C-C01` | `research/combined/<topic>` |
+| Scalping | `S-C01` | `research/scalping/<origin>/<topic>` |
+| Intraday | `I-C01` | `research/intraday/<origin>/<topic>` |
+| Swing | `W-C01` | `research/swing/<origin>/<topic>` |
+| Combined | `C-C01` | `research/combined/<origin>/<topic>` |
+
+`origin` 建议使用：
+
+```text
+user
+codex
+claude
+hybrid
+external
+```
+
+Candidate 来源必须明确记录为以下之一：
+
+```text
+USER_SOP_OPTIMIZATION
+CODEX
+CLAUDE
+CODEX_CLAUDE
+EXTERNAL_RESEARCH
+```
+
+来源不改变判定标准。
 
 `V3.21-GHxx` 或其它 Research ID 只代表 Idea / Research Record，不代表源码已经实现或回测通过。
 
@@ -92,7 +152,10 @@ Champion 与 Candidate 必须保持：
 - Same Real Tick Period
 - Same Tester Model
 - Same Spread / Commission assumptions
-- Same Risk
+- Same Slippage assumptions
+- Same Risk Budget
+- Same Position Sizing Rules
+- Same Session Conditions
 - Same base execution settings
 
 每个 Broker 固定输出：
@@ -110,6 +173,24 @@ Champion 与 Candidate 必须保持：
 
 Training 用于选参数；OOS 只用于验证。读取 OOS 后不得回头调参并仍把该段称为 OOS。
 
+### Risk-normalized comparison
+
+禁止：
+
+```text
+Candidate 用更高 Risk / Lot
+Champion 用更低 Risk / Lot
+然后只比较 Net Profit
+```
+
+如果风险不同，必须先做：
+
+```text
+RISK-NORMALIZED COMPARISON
+```
+
+并报告 Requested Risk 与 Actual Risk。
+
 ---
 
 ## 5. Strategy lanes
@@ -118,13 +199,61 @@ Training 用于选参数；OOS 只用于验证。读取 OOS 后不得回头调�
 
 研究只影响 Scalping Engine，例如：Zone、Departure、First Touch、Retest、closed reversal candle、Spread、Slippage、Entry Distance、SL/TP、成本与风险。
 
+核心流程：
+
+```text
+M5
+↓
+Find Current Nearest Valid S&D by CURRENT PRICE DISTANCE
+↓
+Fresh Zone
+↓
+Departure
+↓
+First Touch / Retest
+↓
+Reversal Confirmation
+↓
+Entry
+↓
+SL / TP
+↓
+Exit
+```
+
+不设人为每日硬上限；禁止为了增加 Trades 制造无效交易。
+
 ### Intraday M30
 
 研究只影响 Intraday Engine，例如：Trend、S&D、Zone、Candlestick、MTF、BOS/CHoCH、ATR/Structure SL、Entry Quality、Session。
 
+Base / Benchmark：
+
+```text
+M30 Market Direction
+↓
+Nearest Valid M30 Supply / Demand
+↓
+Define Zone
+↓
+Wait Price Enter Zone
+↓
+Entry
+↓
+SL
+↓
+TP
+↓
+Management
+```
+
+M15/M5 confirmation、Any 2 of 3、3 of 3、EMA、BOS、CHoCH、FVG、OB、Liquidity、ATR Stop、Structure Stop、Session、VWAP、Volume、AI Score 等都只能先作为 Optimization Candidate。
+
 ### Swing
 
 研究只影响 Swing Engine，例如：D1 Framework、H4 Trend、S/R、S&D、Pullback、Candlestick、Structure、SMC、Trailing、Protection、ATR、Fibonacci。
+
+Swing 正式 Base 以当前已验证 Champion Code / Authoritative SOP 为准；Research Lab 不凭空重写 Swing Base。
 
 未被研究的两个 Strategy Champions 必须锁定；源码与参数不得顺手修改。
 
@@ -148,6 +277,7 @@ Portfolio Audit 至少检查：
 - Position Sizing
 - Drawdown Overlap
 - Strategy Correlation
+- Portfolio Interaction
 
 组合变差时，三个独立 Champion 继续保留；只建立 `C-Cxx` 研究 Portfolio Risk，不回写已锁定策略逻辑。
 
@@ -165,31 +295,65 @@ Portfolio Audit 至少检查：
 
 辅助必须同时读取：
 
+- Relative Drawdown
 - Average Win
 - Average Loss
 - Realized Average R:R
 - Expected Payoff / Expectancy
 - Recovery Factor
 - Long Win Rate / Short Win Rate
+- BUY Performance / SELL Performance
 - Maximum Consecutive Losses
 - Spread / Commission / Slippage sensitivity
+- OOS Performance
+- Walk Forward Stability
+- Parameter Robustness
+- Market Regime Performance
 
 Win Rate 不得独立评价。高胜率但负 Expectancy、极差 Average R:R 或严重 Tail Risk 的 Candidate 不得成为 Champion。
 
+### Test Pass is not New Champion
+
+必须区分：
+
+```text
+TEST PASS
+≠
+BEAT CHAMPION
+```
+
+Candidate 自己赚钱，不等于可以替换 Champion。
+
+若结果只是“差不多”：
+
+```text
+KEEP CURRENT CHAMPION
+```
+
+只有证据明确：
+
+```text
+Candidate > Current Champion
+```
+
+才允许：
+
+```text
+PROMOTE TO NEW CHAMPION
+```
+
 ---
 
-## 8. External EA Research boundary
+## 8. External EA / GitHub / AI Research boundary
 
-外部 EA、GitHub 项目、截图参数和第三方模型解读全部属于：
-
-`EXTERNAL RESEARCH`。
+外部 EA、GitHub 项目、截图参数、第三方模型解读、Codex/Claude 新想法全部属于 Research Layer。
 
 它们不是 GSM SOP，也不是自动可用的 Champion Logic。
 
 外部来源必须经过：
 
 ```text
-Source / Screenshot / Repository
+Source / Screenshot / Repository / AI Hypothesis
         ↓
 Evidence Classification
         ↓
@@ -209,18 +373,21 @@ Train / OOS
         ↓
 FxPro + Tradona
         ↓
+Walk Forward / Stress Test if promising
+        ↓
 Candidate VS Current Champion
 ```
 
 没有源码时，参数名称不能被脑补成内部状态机。例如 `30 points`、`50%`、`120/50/20` 等只能记录界面事实，不能直接解释为止损、爆仓线、锁仓顺序或恢复逻辑。
 
-研究来源：`docs/EXTERNAL_EA_TEST_2_41_RESEARCH_CN.md`。
+研究来源包括：
+
+- `docs/EXTERNAL_EA_TEST_2_41_RESEARCH_CN.md`
+- `docs/GSM_GOLD_AI_RESEARCH_LAB_CN.md`
 
 ---
 
 ## 9. External Research Module A — Fast Adverse Move Guard
-
-外部测试版 2.41 最值得研究的模块之一是“快速不利移动保护”。
 
 目标：处理“刚进场后很短时间内就迅速证明错误”的情况，而不是机械等待固定 SL。
 
@@ -240,7 +407,7 @@ THEN
     Set state = FAST_ADVERSE_MOVE
 ```
 
-Scalping、Intraday、Swing 的 `K`、时间窗、触发逻辑必须分别测试，不能共用一个未经验证参数。
+Scalping、Intraday、Swing 的 `K`、时间窗、触发逻辑必须分别测试。
 
 此模块属于 Position/Risk Protection Candidate，不得直接改变 GSM Base Entry。
 
@@ -264,19 +431,11 @@ RECOVERY_CONFIRM
 NORMAL
 ```
 
-要求：
-
-- 状态尽量少。
-- 每次状态变化必须日志化。
-- 必须记录 trigger reason / timestamp / price / strategy / direction。
-- MT5 / VPS 重启后必须可以根据持仓、订单与持久化状态重建，而不是重启后错误回到 NORMAL。
-- Recovery 条件必须独立 A/B 测试。
+要求：状态尽量少、状态变化日志化、记录 trigger reason / timestamp / price / strategy / direction，并且 MT5 / VPS 重启后可根据持仓、订单与持久化状态重建。
 
 ---
 
 ## 11. External Research Module C — Direction Basket Risk
-
-风险不只看单笔，也要看同方向累计暴露。
 
 统一计算：
 
@@ -289,11 +448,7 @@ BUY_Total_Lots
 SELL_Total_Lots
 ```
 
-Candidate 可以研究：
-
-- BUY 方向达到风险上限时，只冻结/处理 BUY。
-- SELL 方向仍可保持独立资格，但必须经过 Portfolio Conflict Check。
-- 不因为一个方向失控就必然关闭整个 EA，除非触发账户级 Circuit Breaker。
+一个方向达到风险上限时，可以研究只冻结/处理该方向；另一个方向仍必须经过 Portfolio Conflict Check。
 
 该模块对 Combined Champion 尤其重要，因为 Scalping / Intraday / Swing 可能同时持有同向 Gold Exposure。
 
@@ -310,22 +465,19 @@ Risk Engine 应支持账户级熔断 Candidate：
 
 金额和百分比必须可独立开关。
 
-原因：账户从 `$500` 增长到更高 Equity 后，固定 USD 阈值可能失真；而只使用百分比也可能与实际最小手数风险冲突。
-
 所有 Daily Circuit Breaker 必须明确：
 
-- 以 Balance 还是 Equity 为准。
-- Reset 时间和 Broker Server Time。
-- 是否只阻止 New Entry，还是管理 Existing Position。
-- 触发后何时恢复。
+- Balance 还是 Equity 基准
+- Reset 时间和 Broker Server Time
+- 是否只阻止 New Entry
+- 是否继续管理 Existing Positions
+- 触发后何时恢复
 
 ---
 
 ## 13. External Research Module E — Optional Evidence Voting
 
 禁止把所有可选指标做成巨大 `AND` 条件导致长期不开单。
-
-正确层级：
 
 ```text
 Core GSM SOP = Trade Eligibility
@@ -348,24 +500,13 @@ Candidate Quality
 Pass / Reject / Risk Multiplier / Position Size Tier
 ```
 
-核心原则：
+核心原则：**SOP 决定有没有交易资格；Optional Evidence 只衡量证据强弱。**
 
-**SOP 决定有没有交易资格；Optional Evidence 只衡量证据强弱。**
-
-Evidence Voting 可以测试：
-
-- Hard threshold
-- Weighted score
-- Soft risk multiplier
-- Rank only
-
-但不得默认写入 Champion。
+Evidence Voting 可以测试 Hard threshold、Weighted score、Soft risk multiplier、Rank only，但不得默认写入 Champion。
 
 ---
 
 ## 14. ADX + DI separation
-
-如果测试 ADX / DI：
 
 - ADX = trend strength。
 - `+DI / -DI` = directional evidence。
@@ -388,15 +529,13 @@ ADX20、CCI14 ±100、EMA13/34 等外部 EA 参数只能作为 Candidate 起点�
 
 ## 15. External Research Module F — ATR-normalized FVG Quality
 
-外部研究中的 `FVG Size / ATR` 思路可以进入 Optimization Pool。
-
 候选定义：
 
 ```text
 ValidFVG = FVG_Size >= ATR × MinFvgAtrRatio
 ```
 
-然后与 GSM 结构组合测试：
+与 GSM 结构组合测试：
 
 ```text
 Impulse
@@ -423,8 +562,10 @@ SYMBOL_TRADE_TICK_SIZE
 SYMBOL_TRADE_TICK_VALUE
 SYMBOL_TRADE_CONTRACT_SIZE
 SYMBOL_VOLUME_MIN
+SYMBOL_VOLUME_MAX
 SYMBOL_VOLUME_STEP
 SYMBOL_TRADE_STOPS_LEVEL
+SYMBOL_TRADE_FREEZE_LEVEL
 ```
 
 程序必须同时记录：
@@ -432,8 +573,8 @@ SYMBOL_TRADE_STOPS_LEVEL
 - Raw points
 - Price distance
 - Lot
-- Actual Risk USD
-- Actual Risk %
+- Requested Risk USD / %
+- Actual Risk USD / %
 
 禁止硬编码“100 points 永远等于 X 美元”。
 
@@ -451,11 +592,11 @@ SYMBOL_TRADE_STOPS_LEVEL
 6. `ATR-normalized FVG Quality`
 7. `CCI Evidence`（低优先级）
 
-原因：先研究风险、状态与执行可靠性，再研究普通指标过滤。
+先研究风险、状态与执行可靠性，再研究普通指标过滤。
 
 ---
 
-## 18. Program flow with new research hooks
+## 18. Program flow with research hooks
 
 ### OnInit
 
@@ -523,7 +664,7 @@ LOG ORDER + STATE + BLOCK REASON
 UPDATE DASHBOARD / AUDIT
 ```
 
-外部 Research Hook 必须可单独关闭，以便永远可以重新跑纯 Champion Baseline。
+Research Hooks 必须可单独关闭，以便永远可以重新跑纯 Current Champion Baseline。
 
 ---
 
@@ -563,10 +704,12 @@ FVG_QUALITY_LOW
 
 历史链分别记录：
 
-- Scalping：Previous -> Candidate -> New Champion。
-- Intraday：Previous -> Candidate -> New Champion。
-- Swing：Previous -> Candidate -> New Champion。
-- Combined：Previous -> Candidate -> New Champion。
+- Scalping：Previous -> Candidate -> New Champion
+- Intraday：Previous -> Candidate -> New Champion
+- Swing：Previous -> Candidate -> New Champion
+- Combined：Previous -> Candidate -> New Champion
+
+旧 Champion 永不删除；晋级后进入 Previous Champion Archive。
 
 ---
 
@@ -612,7 +755,7 @@ GitHub 分为两类长期资产：
 
 失败 Candidate 不保存大型 ZIP，只保存 Markdown / CSV 摘要，防止未来重复测试同一个失败 Idea。
 
-外部 EA 研究文档，例如 `docs/EXTERNAL_EA_TEST_2_41_RESEARCH_CN.md`，长期保留在 Research Knowledge Base，不混入 `gsm-sop/`。
+外部 EA / AI Research 文档长期保留在 Research Knowledge Base，不混入 `gsm-sop/`。
 
 ---
 
@@ -688,20 +831,391 @@ GITHUB ARCHIVE
 
 ---
 
-## 24. Final principle
+## 24. Dual-AI Research Lab roles
+
+Codex 与 Claude Code 都视为完整的：
+
+```text
+MQL5 Research Engineer
++
+MQL5 Developer
++
+Code Reviewer
++
+Backtest Analyst
++
+Strategy Researcher
+```
+
+禁止固定为：
+
+```text
+Codex 只开发
+Claude 只审查
+```
+
+两边都可以：
+
+- 阅读完整 `.mq5` / `.mqh`
+- 独立分析 Champion
+- 找错误进场
+- 找漏掉机会
+- 找不开单原因
+- 修改 MQL5
+- 建立新模块
+- 修 BUG / 重构
+- 分析 MT5 日志
+- 分析 Strategy Tester
+- 分析 BUY / SELL
+- 分析市场状态
+- 提出 Candidate
+- 审查对方 Candidate
+- 反驳对方研究结论
+
+AI 没有最终裁决权；它们是 Research / Engineering Agents。
+
+---
+
+## 25. Independent dual-model research protocol
+
+默认要求 Codex 与 Claude Code **先独立研究，再交换结论**，避免一开始相互锚定。
+
+```text
+CURRENT CHAMPION
+        │
+        ├───────────────┐
+        │               │
+        ▼               ▼
+     CODEX            CLAUDE
+   Independent       Independent
+   Hypothesis A      Hypothesis B
+        │               │
+        ▼               ▼
+ Candidate A        Candidate B
+        │               │
+        └──────┬────────┘
+               ▼
+          CROSS REVIEW
+               │
+               ├─ Keep A
+               ├─ Keep B
+               ├─ Reject both
+               └─ Build Hybrid Candidate C
+                       ↓
+                 MetaEditor Compile
+                       ↓
+                 MT5 Real Tick
+                       ↓
+              Candidate VS Champion
+                       ↓
+                 OOS / Walk Forward
+                       ↓
+                    Stress Test
+                       ↓
+                 PASS? -> Promotion Review
+```
+
+Hybrid Candidate 也必须能说明各变化来自哪里，禁止把 A+B 所有想法一次性堆叠而失去归因能力。
+
+---
+
+## 26. Candidate promotion gate
+
+真正“打赢 Champion”至少要求：
+
+```text
+1. Code correctness
+2. No future data / look-ahead
+3. No hidden risk increase
+4. Valid Real Tick evidence
+5. OOS does not collapse
+6. Walk Forward acceptable when required
+7. Stress test acceptable
+8. Critical risk metrics not unacceptably worse
+9. Overall evidence clearly better than Current Champion
+```
+
+如果只是：
+
+```text
+Candidate 自己盈利
+```
+
+只能说明 Candidate 可能有研究价值，不代表 New Champion。
+
+---
+
+## 27. Cross code review and quantitative audit
+
+Codex 审 Claude，Claude 也审 Codex。
+
+最低审查清单：
+
+1. 是否重复进场
+2. 是否漏单
+3. 是否错误使用未收盘 K 线
+4. 是否存在 look-ahead
+5. `CopyBuffer` / `CopyRates` 是否正确
+6. Timeframe 是否正确
+7. Position / Order / Deal 是否混淆
+8. Magic Number 是否隔离
+9. Hedging / Netting 是否兼容
+10. SL / TP normalization 是否正确
+11. Stops Level / Freeze Level 是否满足 Broker 规格
+12. Spread / Slippage 是否正确处理
+13. Risk / Lot calculation 是否正确
+14. Volume min / max / step 是否正确
+15. 是否误改未研究 Engine
+16. 是否改变 GSM Base SOP；若改变是否明确披露
+17. 是否存在过拟合迹象
+18. 是否为了利润偷偷增加风险
+19. 是否改变测试条件美化结果
+20. 是否存在无法解释的利润来源
+21. 是否完整记录 Broker Reject / Retcode
+22. 是否可重建 Freeze / Recovery 状态
+
+任何 Critical Review Finding 未关闭前，不得晋级 Champion。
+
+---
+
+## 28. Automatic Reject rules
+
+禁止为了打赢 Champion：
+
+- 偷偷增加 Lot
+- 扩大 Risk %
+- 删除核心 SL
+- 增加隐性 Martingale / Grid Tail Risk
+- 增加未披露最大持仓
+- 使用未来 K 线
+- 使用未来数据
+- 修改回测区间挑最好年份
+- 删除亏损阶段
+- 降低 Commission / Spread 来美化 Candidate
+- 用不同测试条件比较 Champion
+- 用巨大 Equity DD 换 Net Profit
+- 针对单一历史区间过拟合
+- 隐藏 Broker Reject / Execution Failure
+- 在 OOS 结果出来后回调参数并继续把同一段称为 OOS
+
+发现任何一项：
+
+```text
+AUTOMATIC REJECT
+```
+
+---
+
+## 29. Experiment registry
+
+每个实验必须保存：
+
+```text
+Experiment ID
+Engine
+Candidate Version
+Candidate Origin
+Current Champion Version
+Strategy Source
+Research Hypothesis
+Modified Files
+Modified Rules
+是否改变 GSM SOP (YES/NO)
+Risk Budget
+Actual Risk
+Test Protocol
+Broker / Symbol / Date Range
+Champion Metrics
+Candidate Metrics
+Delta Metrics
+OOS Result
+Walk Forward Result
+Stress Test Result
+Codex Review
+Claude Review
+Audit Result
+Blocked / Trigger Reasons
+Final Verdict
+Promotion Decision
+Reason
+```
+
+Final Verdict 只允许：
+
+```text
+REJECT
+KEEP CURRENT CHAMPION
+RESEARCH FURTHER
+NEW ENGINE CHAMPION
+NEW 3-SOP COMBINED CHAMPION
+```
+
+---
+
+## 30. Git / version isolation
+
+正式 Champion 与 Research 必须隔离。
+
+推荐逻辑：
+
+```text
+main / production
+└── current formal Champion reference
+
+champion/
+├── current/
+└── history/
+
+research/
+├── scalping/<origin>/<topic>
+├── intraday/<origin>/<topic>
+├── swing/<origin>/<topic>
+└── combined/<origin>/<topic>
+
+research summaries / rejected results
+└── Markdown / CSV only
+```
+
+旧 Champion 永不删除。
+
+新 Champion 晋级：
+
+```text
+Old Current Champion
+→ champion/history/
+
+Winning Candidate
+→ champion/current/
+```
+
+必须保留完整 lineage。
+
+---
+
+## 31. Final dual-AI Champion loop
+
+```text
+CURRENT CHAMPION
+↓
+Codex + Claude independent research
+↓
+Hypothesis A / B
+↓
+Candidate A / B
+↓
+Cross Review
+↓
+Optional Hybrid Candidate C
+↓
+MetaEditor Compile
+↓
+MT5 Real Tick
+↓
+Candidate VS Current Champion
+↓
+No clear win
+→ REJECT / KEEP CURRENT CHAMPION / RESEARCH FURTHER
+
+Clear win
+↓
+OOS
+↓
+Walk Forward
+↓
+Stress Test
+↓
+Risk + Portfolio Audit
+↓
+Still clearly better
+↓
+NEW ENGINE CHAMPION
+↓
+Rebuild 3-SOP Combined Candidate
+↓
+Full Combined Real Tick + OOS + Portfolio Audit
+↓
+Beat Current Combined Champion?
+├─ NO  -> keep Current Combined Champion; retain new Engine Champion
+└─ YES -> NEW 3-SOP COMBINED CHAMPION
+↓
+FINAL REPORT CN
+↓
+CHAMPION ZIP
+↓
+SHA256
+↓
+GITHUB ARCHIVE
+```
+
+---
+
+## 32. Final decision authority
+
+Codex、Claude Code、GitHub Research、外部 EA 都没有最终裁决权。
+
+最终裁决来自：
+
+```text
+Code Correctness
++
+Fair Candidate VS Champion
++
+MT5 Real Tick
++
+OOS
++
+Walk Forward when required
++
+Stress Test
++
+Risk Audit
++
+Portfolio Audit
++
+Champion Evaluation Order
+```
+
+最终评价顺序仍然固定：
+
+```text
+#1 Net Profit USD
+#2 Max Equity Drawdown
+#3 Profit Factor
+#4 Trade Count
+#5 Win Rate
+```
+
+但任何自动拒绝、Look-ahead、风险偷加、不可接受 DD、OOS 崩溃或执行异常都可以否决晋级。
+
+---
+
+## 33. Final principle
 
 GSM SOP 负责：**怎么交易**。
 
-External / GitHub Research 负责：**还有什么值得测试**。
+AI / External / GitHub Research 负责：**还有什么值得测试**。
 
-Codex 负责：**设计、编码、实验、审计、归因**。
+Codex + Claude Code 负责：**独立研究、设计、编码、交叉审查、实验、审计、归因**。
 
 MetaEditor 负责：**证明源码可正确编译**。
 
-MT5 Real Tick + OOS + Dual Broker 负责：**证明 Candidate 是否具有可重复统计优势**。
+MT5 Real Tick + OOS + Dual Broker + Walk Forward / Stress Test 负责：**证明 Candidate 是否具有可重复统计优势与稳健性**。
 
 Champion System 负责：**决定最后留下哪个版本**。
 
-任何新模块，包括 Fast Adverse Move Guard、Recovery State、Direction Basket Risk、Daily Circuit Breaker、Evidence Voting、ADX/DI、ATR-normalized FVG，都必须遵守同一规则：
+核心制度：
 
-**Research first -> Candidate -> Evidence -> Champion only if proven.**
+```text
+研究可以无限继续。
+Champion 不能随便改变。
+
+不是：
+新版本不错就替换。
+
+而是：
+只有在公平条件下真正打赢旧 Champion，才允许替换。
+```
+
+任何新模块、任何 AI Candidate、任何外部 Research Idea 都必须遵守同一规则：
+
+**Research first -> Independent Hypothesis -> Candidate -> Cross Review -> Evidence -> Champion only if proven.**
