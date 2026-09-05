@@ -1994,3 +1994,246 @@ Candidate VS Champion
 ↓
 Champion Only If Proven
 ```
+
+---
+
+# 29. MT5 Strategy Tester Project-Level Enforcement Gate
+
+This section converts the MT5 evaluation guidance above into a **project-level Champion enforcement layer**. Where a generic diagnostic band in Sections 7-8 is looser than this section, this section controls formal Champion promotion unless the user explicitly changes the mandate.
+
+## 29.1 Core MT5 scorecard
+
+Every formal Candidate VS Champion comparison must present the following first-line scorecard:
+
+```text
+Net Profit USD
+Return % on Initial Capital
+Max Equity DD USD
+Max Equity DD %
+Profit Factor
+Total Trades
+Win Rate
+Expected Payoff / Expectancy
+Recovery Factor
+Reject / Execution Errors
+```
+
+The official ranking remains:
+
+```text
+#1 Net Profit USD
+#2 Max Equity Drawdown
+#3 Profit Factor
+#4 Trade Count
+#5 Win Rate
+```
+
+The additional fields are mandatory validation context, not a replacement ranking.
+
+## 29.2 Project drawdown mandate
+
+For this project:
+
+```text
+Preferred Max Equity DD <= 15%
+15% < Max Equity DD <= 30% = caution / requires strong justification
+Max Equity DD > 30% = formal Champion rejection unless the user explicitly changes the mandate
+```
+
+Balance Drawdown can never override Equity Drawdown.
+
+Trigger when exceeded:
+
+```text
+EQUITY_DD_HARD_LIMIT_BREACH
+AUTOMATIC REJECT
+```
+
+## 29.3 Profit Factor scrutiny rule
+
+The project may use `PF 1.3-1.8` as a practical reference zone for a mature strategy, but this is **not** an automatic optimum and does not mean higher PF is bad.
+
+When:
+
+```text
+PF > 2.5
+```
+
+perform heightened scrutiny for:
+
+- low sample size
+- over-optimization
+- parameter cliffs
+- favorable-regime concentration
+- unrealistic trading costs
+- future-data / look-ahead defects
+- direction dependence
+
+Do not assign a probability of overfitting from PF alone.
+
+## 29.4 Trade-count evidence requirement
+
+Generic MT5 guidance prefers more than 100 trades and often 200-500 for stable inference, but the project applies strategy-specific evidence targets:
+
+```text
+SCALPING: preferably > 200; 300-1000+ when feasible
+INTRADAY: preferably > 100
+SWING: lower counts are allowed only with longer history, multiple regimes, OOS, and cross-broker confirmation
+```
+
+A small sample cannot be compensated for by a high Win Rate or high PF alone.
+
+## 29.5 Recovery Factor project target
+
+Champion target:
+
+```text
+Recovery Factor > 3.0
+```
+
+If `Recovery Factor <= 3.0`, the Candidate must be explicitly flagged and cannot be treated as a clean promotion without additional risk justification and stronger robustness evidence.
+
+Flag:
+
+```text
+RECOVERY_FACTOR_BELOW_TARGET
+```
+
+## 29.6 Expected Payoff after transaction costs
+
+Expected Payoff must be materially positive after realistic:
+
+```text
+Spread
+Commission
+Slippage
+Delay / execution friction
+```
+
+For cost-sensitive Scalping, a practical target is:
+
+```text
+Edge-to-Cost Ratio >= 3x-5x
+```
+
+as a safety-buffer reference, not a broker-independent mathematical constant.
+
+If the edge disappears after realistic costs:
+
+```text
+EXPECTED_PAYOFF_TOO_SMALL
+EDGE_COST_BUFFER_WEAK
+SPREAD_COST_EDGE_TOO_SMALL
+```
+
+and the Candidate cannot be promoted.
+
+## 29.7 Balance / Equity and margin-call integrity
+
+Formal review must inspect Balance and Equity together.
+
+If Balance remains smooth while Equity forms deep drops or persistent separation, investigate:
+
+```text
+hidden floating loss
+martingale / grid exposure
+recovery-only exits
+margin stress
+position accumulation
+delayed loss realization
+```
+
+A strategy must not pass solely because Balance Drawdown looks low.
+
+## 29.8 Real Tick is mandatory final evidence
+
+Formal Champion evidence must use:
+
+```text
+Every tick based on real ticks
+```
+
+A lower-fidelity mode such as 1-minute OHLC may be used only for explicitly labeled diagnostics and never as the sole promotion proof.
+
+## 29.9 Delay / Slippage stress is mandatory for execution-sensitive strategies
+
+A final Candidate must not rely only on `No Delay` evidence.
+
+Use broker-realistic random delay/slippage where available. Reference stress points may include:
+
+```text
+10 ms
+25 ms
+50 ms
+```
+
+or a documented broker-realistic range.
+
+Required comparison:
+
+```text
+Baseline Real Tick
+vs
+Delay / Slippage Stress
+```
+
+If Net, PF, Expected Payoff, or execution reliability collapses materially, flag:
+
+```text
+NO_DELAY_ONLY_EVIDENCE
+DELAY_SLIPPAGE_FRAGILE
+```
+
+## 29.10 Untouched OOS rule
+
+Example:
+
+```text
+2020-2025 = Train / development
+2025-2026 = untouched OOS validation
+```
+
+The dates are illustrative; actual periods must be explicitly recorded.
+
+Once OOS results have been viewed, any retuning creates a new experiment. The previously viewed segment is no longer untouched OOS for that revised Candidate.
+
+## 29.11 Mandatory final Champion gate matrix
+
+A Candidate may enter final promotion review only if all mandatory items below are satisfied:
+
+```text
+[ ] Compile correctness confirmed
+[ ] Reject / critical execution errors = 0
+[ ] No future data / look-ahead
+[ ] No hidden Risk / Lot increase
+[ ] Risk-normalized comparison completed
+[ ] Every tick based on real ticks used
+[ ] Max Equity DD <= 30%
+[ ] Balance-vs-Equity integrity checked
+[ ] Expected Payoff / Expectancy positive after realistic costs
+[ ] Trade sample adequate for strategy type or explicitly compensated by longer/regime evidence
+[ ] OOS untouched and non-collapsing
+[ ] FxPro + Tradona cross-broker evidence completed
+[ ] Delay / Slippage robustness checked where execution-sensitive
+[ ] BUY / SELL asymmetry audited
+[ ] Consecutive-loss stress completed
+[ ] Portfolio audit completed for Combined
+```
+
+Passing this matrix does **not** automatically create a Champion. It only makes the Candidate eligible for the existing final comparison:
+
+```text
+Candidate VS Current Champion
+↓
+Net Profit USD
+↓
+Max Equity Drawdown
+↓
+Profit Factor
+↓
+Trade Count
+↓
+Win Rate
+↓
+Only if clearly better and robust → NEW CHAMPION
+```
