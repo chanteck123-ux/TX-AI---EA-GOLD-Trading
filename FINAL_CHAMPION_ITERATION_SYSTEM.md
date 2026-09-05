@@ -439,6 +439,7 @@ Supporting metrics must include:
 - Average Loss
 - Realized Average R:R
 - Expected Payoff / Expectancy
+- Break-even Win Rate
 - Recovery Factor
 - Long Win Rate / Short Win Rate
 - BUY Performance / SELL Performance
@@ -479,9 +480,32 @@ PROMOTE TO NEW CHAMPION
 
 ---
 
-# 8. Win Rate / Expectancy Rules
+# 8. Win Rate / Expectancy / Realized R:R Validation Standard
 
-Win Rate must be evaluated together with Average Win/Loss, Realized R:R, and Expectancy.
+MT5 Win Rate is normally reported as:
+
+```text
+Profit Trades (% of total)
+```
+
+Win Rate is a diagnostic metric, not a standalone proof of strategy quality. A high Win Rate can coexist with poor expectancy, weak R:R, hidden tail risk, or one-sided market dependence.
+
+## 8.1 Mandatory MT5 companion fields
+
+Every Champion and Candidate report must read Win Rate together with at least:
+
+```text
+Profit Trades (% of total)
+Average profit trade
+Average loss trade
+Long Positions (won %)
+Short Positions (won %)
+Maximum consecutive losses
+```
+
+When available, also retain Maximum consecutive wins, gross profit/loss, and direction-specific trade counts.
+
+## 8.2 Core formulas
 
 ```text
 Expectancy =
@@ -490,18 +514,170 @@ Expectancy =
 (Loss Rate × abs(Average Loss))
 ```
 
-Also report:
+```text
+Realized Average R:R =
+Average Profit Trade
+/
+abs(Average Loss Trade)
+```
 
-- Win Rate
-- Average Win
-- Average Loss
-- Realized Average R:R
-- Expected Payoff
-- Long Win Rate
-- Short Win Rate
-- Maximum Consecutive Losses
+Define:
 
-A high-win-rate Candidate with negative Expectancy, very poor Average R:R, or severe Tail Risk cannot become Champion.
+```text
+R = Average Win / abs(Average Loss)
+```
+
+Then the theoretical break-even Win Rate is:
+
+```text
+Break-even Win Rate = 1 / (1 + R)
+```
+
+Examples:
+
+```text
+R:R = 1:1  → Break-even Win Rate ≈ 50.0%
+R:R = 2:1  → Break-even Win Rate ≈ 33.3%
+R:R = 3:1  → Break-even Win Rate ≈ 25.0%
+```
+
+Champion analysis should prioritize **realized** Average R:R from actual closed trades over theoretical target R:R.
+
+## 8.3 Strategy-profile reference ranges — diagnostic only
+
+These ranges are reference profiles for diagnosis, not hard PASS/FAIL gates:
+
+| Strategy Profile | Typical Win Rate Reference | Typical Average R:R Reference | Main Diagnostic Risk |
+|---|---:|---:|---|
+| Trend-following / Breakout | ~35%–45% | ~2:1 to 3:1+ | Low Win Rate can still be healthy if winners are materially larger than losers. |
+| Range / Scalping / Short-hold | ~65%–80% | ~1:1 or ~0.8:1 | Highly sensitive to spread, commission, slippage, latency, and small Win Rate deterioration. |
+| Grid / Martingale-style averaging | ~85%–95%+ | Can be extremely unfavorable, e.g. 1:5 or worse | High Win Rate may hide rare catastrophic losses, accumulated floating loss, margin stress, or tail risk. |
+
+Never promote or reject a Candidate only because its Win Rate sits inside or outside one of these reference bands.
+
+## 8.4 Engine-specific interpretation
+
+### SCALPING
+
+Scalping normally requires closer scrutiny of:
+
+```text
+Win Rate
++ Realized R:R
++ Expected Payoff / Expectancy
++ Spread
++ Commission
++ Slippage
++ Execution Delay
+```
+
+A Scalping Candidate with a positive backtest expectancy but an edge smaller than realistic trading costs must not be treated as robust.
+
+### INTRADAY
+
+Intraday does not require an artificially high Win Rate. A moderate Win Rate can be acceptable when Net Profit, Max Equity DD, PF, Realized R:R, and Expectancy are strong and robust.
+
+### SWING
+
+Swing may have a lower Win Rate and still be healthy when Average Win is materially larger than Average Loss, Expectancy is positive, and drawdown remains acceptable.
+
+## 8.5 Long / Short balance audit
+
+Do not report only Total Win Rate. At minimum split:
+
+```text
+BUY Trades
+BUY Win Rate
+BUY Net Profit
+BUY Profit Factor
+SELL Trades
+SELL Win Rate
+SELL Net Profit
+SELL Profit Factor
+```
+
+If one direction materially dominates while the other is weak, raise:
+
+```text
+ONE_SIDE_DEPENDENCY
+```
+
+A directional imbalance is not automatically a code defect. First determine whether it reflects market-regime dependence, insufficient sample size, or a genuine asymmetric logic problem.
+
+## 8.6 Consecutive-loss and drawdown stress
+
+Maximum consecutive losses must always be interpreted together with Max Equity DD, Risk per Trade, Actual Lot, Margin Usage, and recovery characteristics.
+
+If the historical maximum losing streak is `N`, run additional stress scenarios at least around:
+
+```text
+N
+N + 2
+N + 4
+```
+
+Inspect:
+
+- projected Equity DD
+- margin pressure
+- survival at minimum broker lot constraints
+- recovery time
+- whether account capital can remain above operational minimums
+
+A high Win Rate does not eliminate the statistical possibility of a long losing streak.
+
+## 8.7 Mandatory diagnostic flags
+
+The evaluation system must be able to raise at least:
+
+```text
+HIGH_WINRATE_BAD_RR
+NEGATIVE_EXPECTANCY
+ONE_SIDE_DEPENDENCY
+LOSS_STREAK_RISK
+SPREAD_COST_EDGE_TOO_SMALL
+LOW_SAMPLE_WINRATE
+HIDDEN_TAIL_RISK
+```
+
+These flags are diagnostic/risk-veto inputs. They do not reorder the official Champion metric priority, but any severe unresolved risk may prevent promotion.
+
+## 8.8 Formal Champion report fields
+
+The detailed Champion comparison must include at least:
+
+```text
+Strategy
+Net Profit USD
+Max Equity DD
+Profit Factor
+Trades
+Win Rate
+Average Win
+Average Loss
+Realized Average R:R
+Break-even Win Rate
+Expectancy / Trade
+Maximum Consecutive Losses
+Long Win Rate
+Short Win Rate
+BUY Net / PF
+SELL Net / PF
+Reject
+Diagnostic Flags
+```
+
+The official ranking remains permanently:
+
+```text
+#1 Net Profit USD
+#2 Max Equity Drawdown
+#3 Profit Factor
+#4 Trade Count
+#5 Win Rate
+```
+
+This expanded Win Rate framework explains **why** the fifth metric is healthy or dangerous; it does not promote Win Rate above the first four metrics.
 
 ---
 
@@ -1370,6 +1546,8 @@ Field order is fixed:
 Net -> Max Equity DD -> PF -> Trades -> Win Rate -> Reject
 ```
 
+The detailed report must additionally include the Win Rate validation fields defined in Section 8.
+
 The ZIP delivered to the user and GitHub `champion/current/` must be the exact same file, with matching filename, version, SHA256, and report metrics.
 
 ---
@@ -1502,7 +1680,7 @@ Final evaluation order remains permanently fixed:
 #5 Win Rate
 ```
 
-Any Automatic Reject condition, Look-ahead, hidden risk increase, unacceptable DD, OOS collapse, or execution abnormality may veto promotion.
+Any Automatic Reject condition, Look-ahead, hidden risk increase, unacceptable DD, OOS collapse, execution abnormality, or severe unresolved Win Rate / Expectancy diagnostic risk may veto promotion.
 
 ---
 
