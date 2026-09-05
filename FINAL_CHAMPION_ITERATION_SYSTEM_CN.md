@@ -441,6 +441,7 @@ RISK-NORMALIZED COMPARISON
 - Average Loss
 - Realized Average R:R
 - Expected Payoff / Expectancy
+- Break-even Win Rate
 - Recovery Factor
 - Long Win Rate / Short Win Rate
 - BUY Performance / SELL Performance
@@ -481,9 +482,32 @@ PROMOTE TO NEW CHAMPION
 
 ---
 
-# 8. Win Rate / Expectancy 规则
+# 8. Win Rate / Expectancy / 实际盈亏比验证标准
 
-胜率必须和平均盈亏、Realized R:R、Expectancy 一起看。
+MT5 中的胜率通常显示为：
+
+```text
+Profit Trades (% of total)
+```
+
+Win Rate 是诊断指标，不是独立证明策略质量的指标。高胜率可以同时伴随负 Expectancy、差盈亏比、隐藏 Tail Risk，或严重单边市场依赖。
+
+## 8.1 MT5 必须同时读取的指标
+
+每个 Champion 与 Candidate 报告，Win Rate 至少必须和以下字段一起读取：
+
+```text
+Profit Trades (% of total)
+Average profit trade
+Average loss trade
+Long Positions (won %)
+Short Positions (won %)
+Maximum consecutive losses
+```
+
+若报告提供，也应保留 Maximum consecutive wins、Gross Profit / Gross Loss，以及 BUY / SELL 各自交易数。
+
+## 8.2 核心公式
 
 ```text
 Expectancy =
@@ -492,18 +516,178 @@ Expectancy =
 (Loss Rate × abs(Average Loss))
 ```
 
-同时报告：
+```text
+Realized Average R:R =
+Average Profit Trade
+/
+abs(Average Loss Trade)
+```
 
-- Win Rate
-- Average Win
-- Average Loss
-- Realized Average R:R
-- Expected Payoff
-- Long Win Rate
-- Short Win Rate
-- Maximum Consecutive Losses
+定义：
 
-高胜率但负 Expectancy、极差 Average R:R 或严重 Tail Risk 的 Candidate 不得成为 Champion。
+```text
+R = Average Win / abs(Average Loss)
+```
+
+理论 Break-even Win Rate：
+
+```text
+Break-even Win Rate = 1 / (1 + R)
+```
+
+例子：
+
+```text
+R:R = 1:1  → Break-even Win Rate ≈ 50.0%
+R:R = 2:1  → Break-even Win Rate ≈ 33.3%
+R:R = 3:1  → Break-even Win Rate ≈ 25.0%
+```
+
+Champion 分析应优先看实际已成交订单得到的 **Realized Average R:R**，而不是只看理论 TP/SL 目标比。
+
+## 8.3 策略类型参考范围——只用于诊断，不是硬门槛
+
+以下区间只作为策略类型诊断参考，不得机械作为 PASS / FAIL：
+
+| 策略类型 | 典型胜率参考 | 典型平均盈亏比参考 | 主要风险诊断 |
+|---|---:|---:|---|
+| 趋势跟踪 / 突破 | 约 35%–45% | 约 2:1 到 3:1+ | 低胜率不一定差，只要 Average Win 明显大于 Average Loss。 |
+| 震荡 / Scalping / 短持仓 | 约 65%–80% | 约 1:1 或 0.8:1 | 对 Spread、Commission、Slippage、Latency 和小幅胜率下降高度敏感。 |
+| Grid / Martingale 式逆势加仓 | 约 85%–95%+ | 可能非常差，例如 1:5 或更差 | 高胜率可能掩盖极端单次亏损、Floating Loss、Margin Stress 和 Tail Risk。 |
+
+不得因为 Candidate 胜率落在这些区间内或区间外，就直接晋级或淘汰。
+
+## 8.4 三个 Engine 的不同解释方式
+
+### SCALPING
+
+Scalping 必须重点联合检查：
+
+```text
+Win Rate
++ Realized R:R
++ Expected Payoff / Expectancy
++ Spread
++ Commission
++ Slippage
++ Execution Delay
+```
+
+如果回测 Expectancy 为正，但优势小到不足以覆盖真实交易成本，则不能视为稳健 Candidate。
+
+### INTRADAY
+
+Intraday 不要求人为追求超高 Win Rate。只要 Net Profit、Max Equity DD、PF、Realized R:R 与 Expectancy 整体健康并且稳健，中等胜率完全可以接受。
+
+### SWING
+
+Swing 即使胜率较低也可以是健康策略，只要 Average Win 明显大于 Average Loss、Expectancy 为正，并且 Drawdown 可接受。
+
+## 8.5 BUY / SELL 方向平衡审计
+
+禁止只报告 Total Win Rate。至少拆分：
+
+```text
+BUY Trades
+BUY Win Rate
+BUY Net Profit
+BUY Profit Factor
+SELL Trades
+SELL Win Rate
+SELL Net Profit
+SELL Profit Factor
+```
+
+如果一个方向明显优秀、另一个方向明显弱，必须标记：
+
+```text
+ONE_SIDE_DEPENDENCY
+```
+
+但方向失衡不自动等于代码错误。必须继续判断是 Market Regime 依赖、样本不足，还是逻辑本身存在方向性缺陷。
+
+## 8.6 连续亏损与 Drawdown 压力测试
+
+Maximum consecutive losses 必须与以下内容联合判断：
+
+```text
+Max Equity DD
+Risk per Trade
+Actual Lot
+Margin Usage
+Recovery Characteristics
+```
+
+如果历史最大连续亏损为 `N`，至少增加压力情景：
+
+```text
+N
+N + 2
+N + 4
+```
+
+检查：
+
+- 预计 Equity DD
+- Margin Pressure
+- Broker 最小手数限制下能否生存
+- Recovery Time
+- 账户资金是否仍高于正常运行最低水平
+
+高 Win Rate 不代表统计上不会出现较长连续亏损。
+
+## 8.7 强制诊断 Flags
+
+评估系统至少必须能产生：
+
+```text
+HIGH_WINRATE_BAD_RR
+NEGATIVE_EXPECTANCY
+ONE_SIDE_DEPENDENCY
+LOSS_STREAK_RISK
+SPREAD_COST_EDGE_TOO_SMALL
+LOW_SAMPLE_WINRATE
+HIDDEN_TAIL_RISK
+```
+
+这些 Flag 是诊断与风险否决输入，不会改变正式 Champion 指标排名；但严重且未解决的风险可以阻止晋级。
+
+## 8.8 正式 Champion 详细报告字段
+
+详细 Champion Comparison 至少必须包含：
+
+```text
+Strategy
+Net Profit USD
+Max Equity DD
+Profit Factor
+Trades
+Win Rate
+Average Win
+Average Loss
+Realized Average R:R
+Break-even Win Rate
+Expectancy / Trade
+Maximum Consecutive Losses
+Long Win Rate
+Short Win Rate
+BUY Net / PF
+SELL Net / PF
+Reject
+Diagnostic Flags
+```
+
+正式评价顺序永久不变：
+
+```text
+#1 Net Profit USD
+#2 Max Equity Drawdown
+#3 Profit Factor
+#4 Trade Count
+#5 Win Rate
+```
+
+这一套扩展 Win Rate 规则，是为了说明第 5 项胜率为什么健康或危险，不是把 Win Rate 提到前四项之前。
 
 ---
 
@@ -1372,6 +1556,8 @@ Best Combined
 Net -> Max Equity DD -> PF -> Trades -> Win Rate -> Reject
 ```
 
+详细报告必须另外包含第 8 章定义的 Win Rate / Expectancy / R:R 验证字段。
+
 用户收到的 ZIP 与 GitHub `champion/current/` 必须是同一文件；文件名、版本、SHA256 和报告指标完全一致。
 
 ---
@@ -1504,7 +1690,7 @@ Champion Evaluation Order
 #5 Win Rate
 ```
 
-任何 Automatic Reject、Look-ahead、风险偷加、不可接受 DD、OOS 崩溃或执行异常，都可以否决晋级。
+任何 Automatic Reject、Look-ahead、风险偷加、不可接受 DD、OOS 崩溃、执行异常，或严重且未解决的 Win Rate / Expectancy 诊断风险，都可以否决晋级。
 
 ---
 
