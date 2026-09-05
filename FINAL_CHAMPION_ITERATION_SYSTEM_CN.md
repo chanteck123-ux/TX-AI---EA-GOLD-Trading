@@ -436,6 +436,10 @@ RISK-NORMALIZED COMPARISON
 
 辅助必须读取：
 
+- Return % on Initial Capital
+- Max Equity Drawdown USD
+- Max Equity Drawdown %
+- Balance Drawdown（只作辅助背景）
 - Relative Drawdown
 - Average Win
 - Average Loss
@@ -453,6 +457,164 @@ RISK-NORMALIZED COMPARISON
 - Market Regime Performance
 
 Win Rate 不得独立评价。
+
+## 7.1 Net Profit 必须同时换算资金回报率
+
+不能只看绝对 Net Profit。
+
+每份报告必须计算：
+
+```text
+Return % = Net Profit USD / Initial Capital × 100
+```
+
+大资金账户赚到小金额，策略可能在统计上仍然为正，但商业意义可能很弱。因此必须同时报告 `Net Profit USD` 和 `Return %`。
+
+这不会改变正式 Champion 排名。`Net Profit USD` 仍然是 #1，`Return %` 是强制解释指标。
+
+## 7.2 Profit Factor 解释规则
+
+Profit Factor 必须结合交易样本数、DD、OOS、成本和参数稳定性一起解释。
+
+建议诊断参考区间：
+
+```text
+PF < 1.00      = 测试样本内亏损
+PF 1.00-1.20   = 边际 / 偏弱
+PF 1.20-1.50   = 可用，但必须继续验证稳健性
+PF 1.50-2.00   = 若样本充足且 OOS 支持，属于较强
+PF > 2.00      = 很强，但必须更认真检查样本数和过拟合
+PF > 2.50-3.00 = 不自动判定无效，但进入高强度审查
+```
+
+高 PF **本身不能证明过拟合**。当它同时伴随以下情况时，才需要高度怀疑：
+
+- 交易数非常少
+- 只在某一段有利行情特别强
+- OOS 明显崩溃
+- 参数轻微变化就失效
+- Spread / Commission / Slippage 设置不现实
+- Future Data / Look-ahead
+- BUY / SELL 严重单边依赖
+
+需要时标记：
+
+```text
+PF_OVERFIT_SUSPECT
+```
+
+## 7.3 Max Equity Drawdown 是主要回撤指标
+
+必须优先看 `Equity Drawdown`，不能只看 Balance Drawdown，因为浮亏是真实经济风险。
+
+强制输出：
+
+```text
+Max Equity DD USD
+Max Equity DD %
+Max Balance DD USD / %（辅助）
+```
+
+建议诊断参考区间：
+
+```text
+<= 15%     = 理想 / 控制良好
+15%-30%    = 警戒区
+> 30%      = 高风险区
+> 50%      = 严重资本风险区
+```
+
+这些是风险诊断区间，不是所有策略一刀切的固定 Pass/Fail，除非 Champion mandate 明确指定硬阈值。
+
+`Max Equity DD` 继续拥有风险否决权。
+
+如果 Balance 与 Equity 差距过大，必须标记：
+
+```text
+BALANCE_EQUITY_DIVERGENCE
+HIDDEN_FLOATING_LOSS_RISK
+```
+
+## 7.4 Trade Count 必须按策略类型判断
+
+禁止对所有策略统一硬性要求 `>100 trades`。
+
+建议证据目标：
+
+```text
+Scalping：最好 > 200；能做到 300-1000+ 更好
+Intraday：最好 > 100
+Swing：不要机械要求 > 100；应延长年份和市场状态
+```
+
+样本不足必须标记：
+
+```text
+LOW_SAMPLE_SIZE
+LOW_SAMPLE_WINRATE
+```
+
+样本越少，就越需要更长区间、更多 Regime、OOS、Walk Forward 和双 Broker 验证。
+
+## 7.5 Recovery Factor
+
+```text
+Recovery Factor = Net Profit / Maximum Drawdown Amount
+```
+
+建议解释：
+
+```text
+< 1.0   = 弱
+1.0-2.0 = 边际
+2.0-3.0 = 良好
+> 3.0   = 强
+```
+
+`Recovery Factor > 3` 是理想目标，但**不是所有策略统一硬门槛**。必须和 DD、样本数、OOS、策略类型一起判断。
+
+## 7.6 Expected Payoff 与成本覆盖
+
+Expected Payoff 必须为正，而且必须能承受真实交易成本。
+
+特别是 Scalping，必须报告：
+
+```text
+Expected Payoff / Trade
+Average Spread Cost / Trade
+Average Commission / Trade
+Estimated Slippage Cost / Trade
+Total Estimated Cost / Trade
+Edge-to-Cost Ratio
+```
+
+可行时：
+
+```text
+Edge-to-Cost Ratio = Expected Payoff / Estimated Total Cost per Trade
+```
+
+成本缓冲越大越好。对于成本敏感策略，可以把 3x-5x 成本缓冲作为强参考目标，但不能一刀切，因为 Broker、Symbol 和成本单位不同。
+
+需要时标记：
+
+```text
+EXPECTED_PAYOFF_TOO_SMALL
+SPREAD_COST_EDGE_TOO_SMALL
+```
+
+## 7.7 Balance 与 Equity 完整性检查
+
+如果 Balance 曲线很漂亮，但 Equity 多次大幅跌到 Balance 下方，必须检查：
+
+- 长时间扛大浮亏
+- Grid
+- Martingale
+- 延迟实现亏损
+- 只靠 Recovery 才退出
+- 接近 Margin Call
+
+Balance 数据漂亮但 Equity 压力严重的策略，在没有完整 Tail Risk 证据前不得通过 Champion 审核。
 
 ```text
 TEST PASS
@@ -538,54 +700,28 @@ Break-even Win Rate = 1 / (1 + R)
 例子：
 
 ```text
-R:R = 1:1  → Break-even Win Rate ≈ 50.0%
-R:R = 2:1  → Break-even Win Rate ≈ 33.3%
-R:R = 3:1  → Break-even Win Rate ≈ 25.0%
+1:1 → 50.0%
+2:1 → 33.3%
+3:1 → 25.0%
 ```
 
-Champion 分析应优先看实际已成交订单得到的 **Realized Average R:R**，而不是只看理论 TP/SL 目标比。
+理论 R:R 和实际平均 R:R 如果不同，必须分别报告。Champion 评价更重视真实成交后的 Realized R:R，而不是名义 SL/TP。
 
-## 8.3 策略类型参考范围——只用于诊断，不是硬门槛
+## 8.3 不同策略类型的胜率解释
 
-以下区间只作为策略类型诊断参考，不得机械作为 PASS / FAIL：
+以下只作诊断参考，不是统一硬性晋级阈值：
 
-| 策略类型 | 典型胜率参考 | 典型平均盈亏比参考 | 主要风险诊断 |
+| 策略类型 | 常见胜率表现 | 常见收益结构 | 主要风险 |
 |---|---:|---:|---|
-| 趋势跟踪 / 突破 | 约 35%–45% | 约 2:1 到 3:1+ | 低胜率不一定差，只要 Average Win 明显大于 Average Loss。 |
-| 震荡 / Scalping / 短持仓 | 约 65%–80% | 约 1:1 或 0.8:1 | 对 Spread、Commission、Slippage、Latency 和小幅胜率下降高度敏感。 |
-| Grid / Martingale 式逆势加仓 | 约 85%–95%+ | 可能非常差，例如 1:5 或更差 | 高胜率可能掩盖极端单次亏损、Floating Loss、Margin Stress 和 Tail Risk。 |
+| Trend / Breakout | 通常较低，例如 35%-45% | 常见 2:1、3:1 或更高 | 连亏、Regime 依赖 |
+| Scalping / Range | 通常较高，例如 65%-80% | 常见接近 1:1 或更低 | 点差、手续费、滑点、延迟 |
+| Grid / Martingale | 可能 85%-95%+ | 小赢很多次、偶尔一次大亏 | Tail Loss / Margin Failure |
 
-不得因为 Candidate 胜率落在这些区间内或区间外，就直接晋级或淘汰。
+非常高的胜率不等于好。90%+ 胜率但严重负偏态的系统，可能明显差于 40%-50% 胜率但 Realized R:R 和 Expectancy 健康的系统。
 
-## 8.4 三个 Engine 的不同解释方式
+## 8.4 BUY / SELL 分方向审计
 
-### SCALPING
-
-Scalping 必须重点联合检查：
-
-```text
-Win Rate
-+ Realized R:R
-+ Expected Payoff / Expectancy
-+ Spread
-+ Commission
-+ Slippage
-+ Execution Delay
-```
-
-如果回测 Expectancy 为正，但优势小到不足以覆盖真实交易成本，则不能视为稳健 Candidate。
-
-### INTRADAY
-
-Intraday 不要求人为追求超高 Win Rate。只要 Net Profit、Max Equity DD、PF、Realized R:R 与 Expectancy 整体健康并且稳健，中等胜率完全可以接受。
-
-### SWING
-
-Swing 即使胜率较低也可以是健康策略，只要 Average Win 明显大于 Average Loss、Expectancy 为正，并且 Drawdown 可接受。
-
-## 8.5 BUY / SELL 方向平衡审计
-
-禁止只报告 Total Win Rate。至少拆分：
+每个 Engine 报告应分别输出：
 
 ```text
 BUY Trades
@@ -598,47 +734,50 @@ SELL Net Profit
 SELL Profit Factor
 ```
 
-如果一个方向明显优秀、另一个方向明显弱，必须标记：
+BUY / SELL 差异过大时，先调查而不是自动否决。必须判断原因是否来自：
+
+- Market Regime
+- Sample 太少
+- Strategy Logic 不对称
+- Coding Defect
+- 单边结构依赖
+
+需要时标记：
 
 ```text
 ONE_SIDE_DEPENDENCY
 ```
 
-但方向失衡不自动等于代码错误。必须继续判断是 Market Regime 依赖、样本不足，还是逻辑本身存在方向性缺陷。
+## 8.5 连续亏损压力测试
 
-## 8.6 连续亏损与 Drawdown 压力测试
+`Maximum Consecutive Losses` 必须与 `Max Equity DD` 和 Risk per Trade 一起看。
 
-Maximum consecutive losses 必须与以下内容联合判断：
-
-```text
-Max Equity DD
-Risk per Trade
-Actual Lot
-Margin Usage
-Recovery Characteristics
-```
-
-如果历史最大连续亏损为 `N`，至少增加压力情景：
+强制压力序列：
 
 ```text
-N
-N + 2
-N + 4
+Historical Max Consecutive Losses = N
+Stress Case 1 = N + 2
+Stress Case 2 = N + 4
 ```
 
 检查：
 
-- 预计 Equity DD
-- Margin Pressure
-- Broker 最小手数限制下能否生存
-- Recovery Time
-- 账户资金是否仍高于正常运行最低水平
+- projected DD
+- free margin
+- margin level
+- position sizing survival
+- recovery requirement
+- account ruin risk
 
-高 Win Rate 不代表统计上不会出现较长连续亏损。
+标记：
 
-## 8.7 强制诊断 Flags
+```text
+LOSS_STREAK_RISK
+```
 
-评估系统至少必须能产生：
+## 8.6 Win Rate 强制诊断 Flag
+
+有证据时使用：
 
 ```text
 HIGH_WINRATE_BAD_RR
@@ -650,24 +789,36 @@ LOW_SAMPLE_WINRATE
 HIDDEN_TAIL_RISK
 ```
 
-这些 Flag 是诊断与风险否决输入，不会改变正式 Champion 指标排名；但严重且未解决的风险可以阻止晋级。
+## 8.7 三个 Engine 的不同重点
 
-## 8.8 正式 Champion 详细报告字段
+```text
+SCALPING
+→ Win Rate + Realized R:R + Expected Payoff + Spread + Commission + Slippage + Delay
 
-详细 Champion Comparison 至少必须包含：
+INTRADAY
+→ 中等 Win Rate 可以接受，只要 Net + DD + PF + Expectancy 强
+
+SWING
+→ 低 Win Rate 可以接受，只要 Average Win 明显大于 Average Loss，且 DD 可控
+```
+
+## 8.8 Champion 详细报告强制字段
 
 ```text
 Strategy
 Net Profit USD
-Max Equity DD
+Return %
+Max Equity DD USD
+Max Equity DD %
 Profit Factor
+Recovery Factor
 Trades
 Win Rate
 Average Win
 Average Loss
 Realized Average R:R
 Break-even Win Rate
-Expectancy / Trade
+Expected Payoff / Expectancy per Trade
 Maximum Consecutive Losses
 Long Win Rate
 Short Win Rate
@@ -677,17 +828,79 @@ Reject
 Diagnostic Flags
 ```
 
-正式评价顺序永久不变：
+最高层正式排名仍然不变：
 
 ```text
-#1 Net Profit USD
-#2 Max Equity Drawdown
-#3 Profit Factor
-#4 Trade Count
-#5 Win Rate
+Net Profit USD
+→ Max Equity Drawdown
+→ Profit Factor
+→ Trade Count
+→ Win Rate
 ```
 
-这一套扩展 Win Rate 规则，是为了说明第 5 项胜率为什么健康或危险，不是把 Win Rate 提到前四项之前。
+新增字段用于判断这个排名结果是否稳健、真实、具有经济意义。
+
+## 8.9 MT5 Strategy Tester 稳健性测试规范
+
+正式 Champion 验证必须使用：
+
+```text
+Every tick based on real ticks
+```
+
+除非某个测试明确标记为低精度诊断，否则不能用低精度模型冒充正式 Real Tick 证据。
+
+Execution Robustness 必须测试现实交易摩擦。根据 Tester / Broker 能力，不能只用 `No Delay`，应加入多个 Delay / Slippage 场景。
+
+参考 Delay 场景可以包括：
+
+```text
+10 ms
+25 ms
+50 ms
+```
+
+或者采用 Broker 实际更合理的随机延迟区间。这些只是压力情景，不是固定常数。
+
+每个情景必须报告变化：
+
+- Net Profit
+- Max Equity DD
+- PF
+- Trades
+- Win Rate
+- Expected Payoff
+- Reject / execution errors
+
+需要时标记：
+
+```text
+DELAY_SLIPPAGE_FRAGILE
+```
+
+## 8.10 Train / OOS 规则
+
+Training 数据只用于模型和参数选择。
+
+OOS 数据只用于验证。
+
+示例：
+
+```text
+Train: 较早区间
+OOS: 后面完全未参与调参的区间
+```
+
+一旦读取 OOS 结果后再调参，就必须建立新实验；该已看过的区间不能继续被称为同一个 Candidate 的 untouched OOS。
+
+需要时标记：
+
+```text
+OOS_COLLAPSE
+OOS_CONTAMINATION
+```
+
+有潜力的 Candidate 还应根据需要继续做：Market Regime、Walk Forward、Cost Stress、Execution Stress、Parameter Neighborhood Stability，以及 Monte Carlo / Trade-order Randomization。
 
 ---
 
@@ -1008,6 +1221,15 @@ DAILY_EQUITY_DD_CIRCUIT
 EVIDENCE_SCORE_LOW
 ADX_DI_REJECT
 FVG_QUALITY_LOW
+PF_OVERFIT_SUSPECT
+BALANCE_EQUITY_DIVERGENCE
+HIDDEN_FLOATING_LOSS_RISK
+LOW_SAMPLE_SIZE
+LOW_RECOVERY_FACTOR
+EXPECTED_PAYOFF_TOO_SMALL
+DELAY_SLIPPAGE_FRAGILE
+OOS_COLLAPSE
+OOS_CONTAMINATION
 ```
 
 必须区分：
@@ -1337,6 +1559,12 @@ Hybrid Candidate 必须说明每个变化来自哪里，禁止把 A+B 所有想�
 20. 是否存在无法解释利润
 21. Broker Reject / Retcode 是否完整记录
 22. Freeze / Recovery 状态是否可重建
+23. Real Tick Model 是否正确
+24. Equity 与 Balance 是否异常分叉
+25. 样本数是否适合该策略类型
+26. 是否发生 OOS Contamination
+27. Delay / Slippage 是否过度敏感
+28. Expected Payoff 扣除成本后是否仍有优势
 
 任何 Critical Finding 未关闭前，不得晋级 Champion。
 
@@ -1383,6 +1611,7 @@ Candidate 自己盈利，只能说明有研究价值，不代表 New Champion。
 - OOS 后重新调参并继续称同一段为 OOS
 - 无法解释的异常利润
 - 核心验证数据缺失
+- 正式 Champion 证据没有使用 Real Ticks，却没有明确标记为低精度诊断测试
 
 统一：
 
@@ -1411,13 +1640,24 @@ Observed Evidence
 Modified Files
 Modified Rules
 GSM Base SOP Changed (YES/NO)
+Initial Capital
+Return %
 Risk Budget
 Actual Risk
 Test Protocol
 Broker / Symbol / Date Range
+Tester Model
+Real Tick Used (YES/NO)
+Delay / Slippage Scenario
 Champion Metrics
 Candidate Metrics
 Delta Metrics
+Max Equity DD USD / %
+Max Balance DD USD / %
+Recovery Factor
+Expected Payoff
+Edge-to-Cost Ratio
+Sample Size
 Standard Review Result
 Self Review Result
 Red Team Result
@@ -1556,7 +1796,7 @@ Best Combined
 Net -> Max Equity DD -> PF -> Trades -> Win Rate -> Reject
 ```
 
-详细报告必须另外包含第 8 章定义的 Win Rate / Expectancy / R:R 验证字段。
+详细页还必须输出 Return %、Equity DD USD/%、Recovery Factor、Expected Payoff、Realized R:R、BUY/SELL 分拆、连续亏损、成本敏感度和 Diagnostic Flags。
 
 用户收到的 ZIP 与 GitHub `champion/current/` 必须是同一文件；文件名、版本、SHA256 和报告指标完全一致。
 
@@ -1690,7 +1930,7 @@ Champion Evaluation Order
 #5 Win Rate
 ```
 
-任何 Automatic Reject、Look-ahead、风险偷加、不可接受 DD、OOS 崩溃、执行异常，或严重且未解决的 Win Rate / Expectancy 诊断风险，都可以否决晋级。
+任何 Automatic Reject、Look-ahead、风险偷加、不可接受 DD、OOS 崩溃或执行异常，都可以否决晋级。
 
 ---
 
