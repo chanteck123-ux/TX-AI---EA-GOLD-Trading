@@ -3,6 +3,44 @@
 Partial fills/exits are deliberately unsupported here, not counted as extra trades.
 """
 import re
+import math
+from decimal import Decimal, ROUND_CEILING
+
+
+def estimated_fee(volume, rate, model='LINEAR', digits=None):
+    volume, rate = Decimal(str(volume)), Decimal(str(rate))
+    if not all(v.is_finite() and v >= 0 for v in (volume, rate)):
+        raise ValueError('INVALID_FEE_INPUT')
+    value = volume*rate
+    if model == 'LINEAR':
+        return float(value)
+    if model != 'PER_SIDE_CEILING' or not isinstance(digits, int) or not 0 <= digits <= 8:
+        raise ValueError('INVALID_FEE_MODEL_OR_PRECISION')
+    return float(2*(value/2).quantize(Decimal(1).scaleb(-digits), rounding=ROUND_CEILING))
+
+
+def fee_evidence(plans, expected_rate):
+    if not plans:
+        return dict(Model='UNOBSERVED', CurrencyDigits=None, Flags=[])
+    models = {p.get('FeeModel', 'LINEAR') for p in plans}
+    result = dict(Model=next(iter(models)) if len(models) == 1 else 'MIXED', CurrencyDigits=None, Flags=[])
+    if result['Model'] == 'LINEAR':
+        return result
+    try:
+        digits = {int(p['CurrencyDigits']) for p in plans}
+        if result['Model'] != 'PER_SIDE_CEILING' or len(digits) != 1:
+            raise ValueError('MIXED_FEE_MODEL')
+        result['CurrencyDigits'] = next(iter(digits))
+        for p in plans:
+            rate = float(p['FeeEstimateUSDPerLot'])
+            expected = estimated_fee(p['Volume'], rate, result['Model'], result['CurrencyDigits'])
+            logged = float(p['FeeBudgetUSD'])
+            if (not math.isfinite(logged) or not math.isfinite(expected_rate) or
+                    abs(rate-expected_rate) > 1e-8 or abs(expected-logged) > 1e-8):
+                raise ValueError('FEE_BUDGET_MISMATCH')
+    except (KeyError, ValueError, ArithmeticError):
+        result['Flags'].append('FEE_PLAN_MODEL_NOT_VERIFIED')
+    return result
 
 
 def native_deals(rows):
@@ -33,7 +71,7 @@ def stats(rows):
                 BreakEvenWinRatePct=abs(al)/(aw+abs(al))*100 if aw is not None and al else None)
 
 
-def audit(rows, reviews, expected_count, expected_net, fee_estimate_per_lot):
+def audit(rows, reviews, expected_count, expected_net, fee_estimate_per_lot, fee_model='LINEAR', currency_digits=None):
     deals = [d for d in native_deals(rows) if d['类型'] in ('buy', 'sell')]
     entries, exits = [d for d in deals if d['趋势'] == 'in'], [d for d in deals if d['趋势'] == 'out']
     result = dict(Status='NOT_RECONCILED', Flags=[], Positions=[],
@@ -69,12 +107,16 @@ def audit(rows, reviews, expected_count, expected_net, fee_estimate_per_lot):
             result['Flags'].append('COMPLETE_POSITION_NET_MISMATCH')
             return result
         commission = -sum(num(d['手续费']) for d in (entry, close))
-        estimated_fee = fee_estimate_per_lot*num(t['Volume'])
+        try:
+            fee_budget = estimated_fee(t['Volume'], fee_estimate_per_lot, fee_model, currency_digits)
+        except (ValueError, ArithmeticError):
+            result['Flags'].append('INVALID_FEE_MODEL_OR_PRECISION')
+            return result
         side = 1 if t['Direction'] == 'BUY' else -1
         slippage_price = max(0.0, side*(num(t['InitialSL'])-num(close['价位']))) if t['ExitReason'] == 'DEAL_REASON_SL' else None
         result['Positions'].append(dict(PositionID=t['PositionID'], Direction=t['Direction'],
                                         NetUSD=round(net, 8), Volume=num(t['Volume']), CommissionUSD=commission,
-                                        EstimatedFeeUSD=estimated_fee, FeeShortfallUSD=max(0.0,commission-estimated_fee),
+                                        EstimatedFeeUSD=fee_budget, FeeShortfallUSD=max(0.0,commission-fee_budget),
                                         StopAdversePrice=slippage_price, InitialSLRiskUSD=num(t['ActualSLRiskMoney']),
                                         LossClassification=t['LossClassification'], ChaseEntry=t['ChaseEntry'],
                                         MFEUSD=num(t['MFE_Money']), MAEUSD=num(t['MAE_Money'])))
