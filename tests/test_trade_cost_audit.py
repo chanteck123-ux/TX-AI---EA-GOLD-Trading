@@ -3,7 +3,7 @@ import unittest
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]/'scripts'))
-from trade_cost_audit import audit
+from trade_cost_audit import audit, estimated_fee, fee_evidence
 
 
 class Costs(unittest.TestCase):
@@ -50,6 +50,32 @@ class Costs(unittest.TestCase):
         result = audit([], [], 0, 0, 7)
         self.assertEqual(result['Status'], 'NO_TRADES')
         self.assertNotIn('NetStats', result)
+
+    def test_rounded_fee_reconciles_native_commission(self):
+        result = audit(self.rows, self.trades, 1, 6.92, 7, 'PER_SIDE_CEILING', 2)
+        self.assertEqual(result['Flags'], [])
+        self.assertEqual(result['MaximumFeeShortfallUSD'], 0)
+
+    def test_fee_math_and_invalid_model(self):
+        self.assertEqual(estimated_fee('.01', 7, 'PER_SIDE_CEILING', 2), .08)
+        self.assertEqual(estimated_fee('.02', 7, 'PER_SIDE_CEILING', 2), .14)
+        self.assertEqual(estimated_fee('.01', 7, 'PER_SIDE_CEILING', 3), .07)
+        with self.assertRaises(ValueError):
+            estimated_fee('.01', 7, 'UNKNOWN', 2)
+        for volume, rate in [(-1, -1), ('NaN', 7), ('.01', 'Infinity')]:
+            with self.assertRaises(ValueError):
+                estimated_fee(volume, rate)
+
+    def test_fee_proof_requires_actual_plan_fields(self):
+        p = dict(FeeModel='PER_SIDE_CEILING', CurrencyDigits='2', Volume='.01',
+                 FeeEstimateUSDPerLot='7', FeeBudgetUSD='.08')
+        self.assertEqual(fee_evidence([p], 7)['Flags'], [])
+        p['FeeBudgetUSD'] = '.07'
+        self.assertIn('FEE_PLAN_MODEL_NOT_VERIFIED', fee_evidence([p], 7)['Flags'])
+        self.assertIn('FEE_PLAN_MODEL_NOT_VERIFIED', fee_evidence([p, {}], 7)['Flags'])
+        p['FeeBudgetUSD'] = 'NaN'
+        self.assertIn('FEE_PLAN_MODEL_NOT_VERIFIED', fee_evidence([p], 7)['Flags'])
+        self.assertEqual(fee_evidence([], 7)['Model'], 'UNOBSERVED')
 
 
 if __name__ == '__main__':

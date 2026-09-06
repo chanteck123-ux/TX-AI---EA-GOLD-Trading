@@ -7,7 +7,7 @@ import json
 import re
 from html.parser import HTMLParser
 from pathlib import Path
-from trade_cost_audit import audit as audit_trade_costs
+from trade_cost_audit import audit as audit_trade_costs, fee_evidence
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -194,8 +194,11 @@ def summarize(record_path):
     technical = [float(x) for x in re.findall(r'TechnicalMinEquity=([\d.]+)', logs)]
     parser = TableParser()
     parser.feed(read(report))
-    costs = audit_trade_costs(parser.rows, trades, count, net,
-                             float(inputs.get('InpResearchRoundTripFeePerLotUSD', 7)))
+    fee_rate = float(inputs.get('InpResearchRoundTripFeePerLotUSD', 7))
+    fee_proof = fee_evidence(plans, fee_rate)
+    flags.extend(fee_proof['Flags'])
+    costs = audit_trade_costs(parser.rows, trades, count, net, fee_rate,
+                             fee_proof['Model'], fee_proof['CurrencyDigits'])
     flags.extend(costs['Flags'])
     result = dict(Run=name, Strategy=record['Lane'], CapitalUSD=record['Capital'],
                   NetProfitUSD=net, MaxEquityDDPct=dd_pct, ProfitFactor=number(f['盈利因子:']) if gross_loss else None,
@@ -220,6 +223,7 @@ def summarize(record_path):
                   SetReportAuditStatus='COMPLETE' if complete_declarations else 'PARTIAL_DECLARATIONS_ONLY',
                   Funnels=funnels, RiskPlanCount=len(plans),
                   CompleteTradeCostAudit=costs,
+                  FeeModelEvidence=fee_proof,
                   TerminalVersion=record.get('TerminalVersion'), TerminalSHA256=record.get('TerminalSHA256'),
                   Verdict='RESEARCH_FURTHER_NO_PROMOTION')
     (folder/'AUDIT.json').write_text(json.dumps(result, ensure_ascii=False, indent=2), encoding='utf-8')

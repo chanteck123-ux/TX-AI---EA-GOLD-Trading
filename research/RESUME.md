@@ -1,18 +1,23 @@
-# Resume R-C00
+# Resume FxPro research
 
-Status: FOUR_BASELINES_AND_SCALP_CAPACITY_AUDITED; S-C01 REJECTED AS CHAMPION.
-No active tester job remains after the two preregistered S-C01 runs. Recheck
-processes on resume rather than assuming this statement remains current.
+Status: R-C01 FEE CORRECTION VALIDATION RUNNING.
+Read FEE_CHECKPOINT.json and RUN_CHECKPOINT.json, then check the selected runtime
+process before any launch. Run-FeeValidation.ps1 resumes its six preregistered
+cases and reuses matching completed reports. Do not duplicate an active matrix.
+Four R-C00 baselines/capacity and rejected S-C01 remain frozen.
 
 Latest evidence:
+- research/R-C01_PREREGISTRATION.md and R-C01_REVIEW.md: isolated fee correction.
+- R-C01 source CCED6620 / EX5 F1F26A99: 0 errors, 0 warnings; full hashes in compile proof.
+- Native fee math: 25 tests, 25,824 grid comparisons, zero failures.
 - reports/R_C00_BASELINE_CN.html: four USD500 lanes plus eight Scalping capacities.
 - reports/S_C01_REPORT_CN.html and S_C01_COMPARISON.json: same-capital comparison.
 - research/rejected/S-C01_DISTANCE_ONLY_CN.md: no observed trading improvement.
 - S-C01 is frozen; do not rerun unchanged experiments or retune the same ID.
 
 Next research:
-1. Address rounded fee estimates in a separately identified risk-control revision;
-   record the impact and re-establish a fair risk-normalized reference as needed.
+1. Complete the R-C01 matrix and compare_rc01.py audit before any new Candidate.
+   This is an engineering correction, not strategy improvement or Champion proof.
 2. Audit actual Scalping filter and first-touch events before naming S-C02. A high
    rejection counter does not prove the filtered trades would have been profitable.
 3. Intraday/Swing capacity, Intraday runner, native execution/protection/restart

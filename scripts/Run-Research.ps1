@@ -41,6 +41,7 @@ foreach($property in $proof.Dependencies.PSObject.Properties){
     if((Get-FileHash -LiteralPath $property.Name).Hash -ne $property.Value){throw "COMPILE_DEPENDENCY_CHANGED: $($property.Name)"}
 }
 $candidate=if([IO.Path]::GetFileNameWithoutExtension($Source) -in @('GSM_FxPro_S_C01','ZoneRankTests')){'S_C01'}else{'R_C00'}
+if([IO.Path]::GetFileNameWithoutExtension($Source) -in @('GSM_FxPro_R_C01','FeeRiskTests')){$candidate='R_C01'}
 $run=('{0}_{1}_USD{2}_D{3}_{4}' -f $candidate,$Lane,$Capital,$DelayMs,(Get-Date -Format 'yyyyMMdd_HHmmss'))
 $out=Join-Path $root ('reports\runs\'+$run)
 New-Item -ItemType Directory -Path $out | Out-Null
