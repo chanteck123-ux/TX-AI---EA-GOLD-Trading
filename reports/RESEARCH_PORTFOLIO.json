@@ -1,0 +1,226 @@
+[
+  {
+    "Run": "C_C01_Combined_USD2000_D-1_20260907_001250",
+    "PeakPositions": 1,
+    "PeakLongPositions": 1,
+    "PeakShortPositions": 1,
+    "PeakPerMagic": {
+      "26082152": 1,
+      "26082102": 1,
+      "26082303": 1
+    },
+    "ObservedOppositeExposure": false,
+    "SimultaneousMagicPairs": [],
+    "UnclosedPositions": 0,
+    "PositionLimitPass": true,
+    "EquityCorrelation": null,
+    "PerEngineCombinedEquityDD": null,
+    "PeakTickMargin": null,
+    "Limits": "Deal snapshots verify concurrency, not tick equity, margin stress or independence."
+  },
+  {
+    "Run": "C_C01_Combined_USD2000_D0_20260906_234242",
+    "PeakPositions": 1,
+    "PeakLongPositions": 1,
+    "PeakShortPositions": 1,
+    "PeakPerMagic": {
+      "26082152": 1,
+      "26082102": 1,
+      "26082303": 1
+    },
+    "ObservedOppositeExposure": false,
+    "SimultaneousMagicPairs": [],
+    "UnclosedPositions": 0,
+    "PositionLimitPass": true,
+    "EquityCorrelation": null,
+    "PerEngineCombinedEquityDD": null,
+    "PeakTickMargin": null,
+    "Limits": "Deal snapshots verify concurrency, not tick equity, margin stress or independence."
+  },
+  {
+    "Run": "C_C01_Combined_USD2000_D10_20260906_234958",
+    "PeakPositions": 1,
+    "PeakLongPositions": 1,
+    "PeakShortPositions": 1,
+    "PeakPerMagic": {
+      "26082152": 1,
+      "26082102": 1,
+      "26082303": 1
+    },
+    "ObservedOppositeExposure": false,
+    "SimultaneousMagicPairs": [],
+    "UnclosedPositions": 0,
+    "PositionLimitPass": true,
+    "EquityCorrelation": null,
+    "PerEngineCombinedEquityDD": null,
+    "PeakTickMargin": null,
+    "Limits": "Deal snapshots verify concurrency, not tick equity, margin stress or independence."
+  },
+  {
+    "Run": "C_C01_Combined_USD2000_D25_20260906_235729",
+    "PeakPositions": 1,
+    "PeakLongPositions": 1,
+    "PeakShortPositions": 1,
+    "PeakPerMagic": {
+      "26082152": 1,
+      "26082102": 1,
+      "26082303": 1
+    },
+    "ObservedOppositeExposure": false,
+    "SimultaneousMagicPairs": [],
+    "UnclosedPositions": 0,
+    "PositionLimitPass": true,
+    "EquityCorrelation": null,
+    "PerEngineCombinedEquityDD": null,
+    "PeakTickMargin": null,
+    "Limits": "Deal snapshots verify concurrency, not tick equity, margin stress or independence."
+  },
+  {
+    "Run": "C_C01_Combined_USD2000_D50_20260907_000528",
+    "PeakPositions": 1,
+    "PeakLongPositions": 1,
+    "PeakShortPositions": 1,
+    "PeakPerMagic": {
+      "26082152": 1,
+      "26082102": 1,
+      "26082303": 1
+    },
+    "ObservedOppositeExposure": false,
+    "SimultaneousMagicPairs": [],
+    "UnclosedPositions": 0,
+    "PositionLimitPass": true,
+    "EquityCorrelation": null,
+    "PerEngineCombinedEquityDD": null,
+    "PeakTickMargin": null,
+    "Limits": "Deal snapshots verify concurrency, not tick equity, margin stress or independence."
+  },
+  {
+    "Run": "CAPACITY_500_Combined_USD500_D0_20260907_002441",
+    "PeakPositions": 0,
+    "PeakLongPositions": 0,
+    "PeakShortPositions": 0,
+    "PeakPerMagic": {},
+    "ObservedOppositeExposure": false,
+    "SimultaneousMagicPairs": [],
+    "UnclosedPositions": 0,
+    "PositionLimitPass": true,
+    "EquityCorrelation": null,
+    "PerEngineCombinedEquityDD": null,
+    "PeakTickMargin": null,
+    "Limits": "Deal snapshots verify concurrency, not tick equity, margin stress or independence."
+  },
+  {
+    "Run": "CONTROL_Combined_USD2000_D0_20260906_225916",
+    "PeakPositions": 1,
+    "PeakLongPositions": 1,
+    "PeakShortPositions": 1,
+    "PeakPerMagic": {
+      "26082152": 1,
+      "26082102": 1,
+      "26082303": 1
+    },
+    "ObservedOppositeExposure": false,
+    "SimultaneousMagicPairs": [],
+    "UnclosedPositions": 0,
+    "PositionLimitPass": true,
+    "EquityCorrelation": null,
+    "PerEngineCombinedEquityDD": null,
+    "PeakTickMargin": null,
+    "Limits": "Deal snapshots verify concurrency, not tick equity, margin stress or independence."
+  },
+  {
+    "Run": "CONTROL_FINAL_Combined_USD2000_D-1_20260907_000915",
+    "PeakPositions": 1,
+    "PeakLongPositions": 1,
+    "PeakShortPositions": 1,
+    "PeakPerMagic": {
+      "26082152": 1,
+      "26082102": 1,
+      "26082303": 1
+    },
+    "ObservedOppositeExposure": false,
+    "SimultaneousMagicPairs": [],
+    "UnclosedPositions": 0,
+    "PositionLimitPass": true,
+    "EquityCorrelation": null,
+    "PerEngineCombinedEquityDD": null,
+    "PeakTickMargin": null,
+    "Limits": "Deal snapshots verify concurrency, not tick equity, margin stress or independence."
+  },
+  {
+    "Run": "CONTROL_FINAL_Combined_USD2000_D0_20260906_233109",
+    "PeakPositions": 1,
+    "PeakLongPositions": 1,
+    "PeakShortPositions": 1,
+    "PeakPerMagic": {
+      "26082152": 1,
+      "26082102": 1,
+      "26082303": 1
+    },
+    "ObservedOppositeExposure": false,
+    "SimultaneousMagicPairs": [],
+    "UnclosedPositions": 0,
+    "PositionLimitPass": true,
+    "EquityCorrelation": null,
+    "PerEngineCombinedEquityDD": null,
+    "PeakTickMargin": null,
+    "Limits": "Deal snapshots verify concurrency, not tick equity, margin stress or independence."
+  },
+  {
+    "Run": "CONTROL_FINAL_Combined_USD2000_D10_20260906_234623",
+    "PeakPositions": 1,
+    "PeakLongPositions": 1,
+    "PeakShortPositions": 1,
+    "PeakPerMagic": {
+      "26082152": 1,
+      "26082102": 1,
+      "26082303": 1
+    },
+    "ObservedOppositeExposure": false,
+    "SimultaneousMagicPairs": [],
+    "UnclosedPositions": 0,
+    "PositionLimitPass": true,
+    "EquityCorrelation": null,
+    "PerEngineCombinedEquityDD": null,
+    "PeakTickMargin": null,
+    "Limits": "Deal snapshots verify concurrency, not tick equity, margin stress or independence."
+  },
+  {
+    "Run": "CONTROL_FINAL_Combined_USD2000_D25_20260906_235351",
+    "PeakPositions": 1,
+    "PeakLongPositions": 1,
+    "PeakShortPositions": 1,
+    "PeakPerMagic": {
+      "26082152": 1,
+      "26082102": 1,
+      "26082303": 1
+    },
+    "ObservedOppositeExposure": false,
+    "SimultaneousMagicPairs": [],
+    "UnclosedPositions": 0,
+    "PositionLimitPass": true,
+    "EquityCorrelation": null,
+    "PerEngineCombinedEquityDD": null,
+    "PeakTickMargin": null,
+    "Limits": "Deal snapshots verify concurrency, not tick equity, margin stress or independence."
+  },
+  {
+    "Run": "CONTROL_FINAL_Combined_USD2000_D50_20260907_000135",
+    "PeakPositions": 1,
+    "PeakLongPositions": 1,
+    "PeakShortPositions": 1,
+    "PeakPerMagic": {
+      "26082152": 1,
+      "26082102": 1,
+      "26082303": 1
+    },
+    "ObservedOppositeExposure": false,
+    "SimultaneousMagicPairs": [],
+    "UnclosedPositions": 0,
+    "PositionLimitPass": true,
+    "EquityCorrelation": null,
+    "PerEngineCombinedEquityDD": null,
+    "PeakTickMargin": null,
+    "Limits": "Deal snapshots verify concurrency, not tick equity, margin stress or independence."
+  }
+]

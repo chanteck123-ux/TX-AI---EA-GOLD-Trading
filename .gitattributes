@@ -6,3 +6,10 @@ reports/R_C00_BASELINE* -text
 reports/S_C01* -text
 reports/R_C01* -text
 reports/SCALP_OPPORTUNITY* -text
+reports/RESEARCH_* -text
+reports/FXPRO_RESEARCH_FINAL_CN.html -text
+research/OOS_PREREGISTRATION.json -text
+research/OOS_CALENDAR_CONFIRMATION.json -text
+research/TEST_MATRIX_*.json -text
+sets/FxPro/research-20260906/* -text
+config/backtest/research-20260906/* -text

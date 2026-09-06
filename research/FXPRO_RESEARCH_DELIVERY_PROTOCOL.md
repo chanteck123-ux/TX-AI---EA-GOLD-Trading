@@ -54,7 +54,9 @@ selecting parameters from a purported OOS result.
 
 Rank Net USD -> max relative equity DD -> PF -> complete positions -> win rate
 -> rejects. DD>30 rejects, 15-30 requires human review. Equity recovery is net /
-max monetary equity DD; native MT5 balance-recovery is separately labeled.
+max monetary equity DD; raw native MT5 Recovery is separately labeled. The
+documentation's balance-DD denominator is not assumed when observed values
+disagree. See NATIVE_STATISTICS_DISCREPANCY.md for the build6182 discrepancy.
 Require >100 complete trades per lane and genuine untouched OOS, positive
 after-cost expectancy, zero broker rejects, and portfolio audit. Partial exits
 are not new complete positions. Show low-sample/unknown evidence, never zero-fill

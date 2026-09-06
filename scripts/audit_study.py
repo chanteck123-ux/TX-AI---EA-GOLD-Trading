@@ -33,14 +33,26 @@ def audit(path):
         return None
     folder, name = path.parent, row['Run']
     record = json.loads(read(path))
+    row['ConfigSHA256'] = record['ConfigSHA256']
     fields, inputs = fields_of(folder/(name+'.htm'))
-    row['CandidateID'] = record.get('CandidateId', name.split('_')[0])
+    row['CandidateID'] = record.get('CandidateId', name.split('_'+row['Strategy']+'_')[0])
     row['NativeProfitFactor'] = row['ProfitFactor']
     row['NativeTrades'] = row['Trades']
     row['NativeWinRatePct'] = row['WinRatePct']
     row['NativeBalanceRecovery'] = number(fields['采收率:']) if '采收率:' in fields else None
     ledger_path = folder/(name+'_DEALS.csv')
     plans, logs = plans_of(folder)
+    tick_start=re.search(r'real ticks begin from ([0-9. :]+)',logs)
+    tick_count=re.search(r'(\d+) ticks, (\d+) bars generated',logs)
+    row['RealTickEvidence']=dict(Model4=record['Model']==4,
+                                NativeModelLog='generating based on real ticks' in logs,
+                                NativeCoverage=row['HistoryQuality'],
+                                RealTicksBegin=tick_start[1].strip() if tick_start else None,
+                                Ticks=int(tick_count[1]) if tick_count else None,
+                                Bars=int(tick_count[2]) if tick_count else None)
+    if not (record['Model']==4 and row['RealTickEvidence']['NativeModelLog'] and
+            row['HistoryQuality']=='100%真实报价' and tick_start and tick_count):
+        row['Flags'].append('REAL_TICK_COVERAGE_NOT_VERIFIED')
     specs = re.findall(r'SYMBOL_SPEC\|[^\r\n]+', logs)
     row['SymbolSpecification'] = dict(t.split('=', 1) for t in specs[0].split('|')[1:] if '=' in t) if specs else {}
     row['RunnerEvents'] = {key: logs.count('RUNNER_'+key+'|') for key in

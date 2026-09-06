@@ -1,6 +1,6 @@
 # Resume FxPro research
 
-Status: APPROVED FXPRO RESEARCH IMPLEMENTATION ACTIVE; NO NEW CHAMPION.
+Status: RESEARCH DELIVERY VERIFIED 2026-09-07; NO NEW CHAMPION.
 Read this update BEFORE the historical R-C01 notes below.
 
 2026-09-06 approved plan: USD2000 / 1:100 main; USD500 separate; FxPro only.
@@ -11,15 +11,51 @@ S-C02 EMA OFF was actually tested: -54.56 vs +129.18 USD, 83 vs20 positions;
 reject it, keep Scalping EMA ON. I-C01 removes daily cap but still only4 trades.
 W-C01 daily cap removal is tested; do not invent new Swing entry rules.
 
-I-C02 first native integration exposed opening-order-history timing failure.
-Keep its +7.66/1-trade result as INVALID ENGINEERING EVIDENCE, not profitability.
-See research/I-C02_ENGINEERING_FAILURE.md. A bounded recovery wait is now added.
-Latest compile and RUN_CHECKPOINT identify the exact tested binary and active
-queue; source alone does not identify dependencies. Reconcile processes first.
-Pending: corrected runner native fixture, I_C02_FIX1 real ticks/restart,
-final OFF regression, actual combined, native delays, USD500, cost sensitivity,
-report/delivery hashes/GitHub. Future six-month OOS remains unobserved/PENDING.
-Do not publish Champion ZIP. No actual account trading is enabled.
+Latest code commit: 8326fbab6ee8beb2a0db77aa1f1663e08c4bff41, draft PR #5.
+MQ5: 554B61976A0B04A152C22B33767D264D4B42925B02375702BF69608326946185.
+EX5: 4CAE44BD57FCF18BE6206741DD0FA5BBD130C6AEB03A2D94C99A645F2200106A.
+Real compile 0 errors / 0 warnings. Native runner rules20020 / integration24
+checks pass; integration uses real header but mocked server faults. Python76 pass.
+
+I-C02 initial and wait-only FIX1 failed. Actual native probe proved the root
+cause: HistoryOrderSelect is required before reading the opening SL/TP.
+Keep failed +7.66/1-trade evidence, never rank it as valid strategy performance.
+FIX2 recovered all4 positions; net21.50 vs OFF28.66, no promotion. Memory restart
+probe exactly reproduces FIX2; not an OS-level crash/restart test.
+Final OFF four lanes also match R-C01 trade paths exactly.
+C-C01 actual combined net151.34 vs158.50 at0ms. All fixed10/25/50 and native random
+paired combined runs finished; candidates remain below controls with25 trades.
+All 6 core and 17 stress-matrix cases completed. There are37 indexed development
+records including preserved invalid engineering runs, not37 promotion passes.
+USD500 all four lanes have zero fills: minimum lots exceed the1% budget.
+USD5000 runner:100.48 vs control114.80,4 complete positions, one actual .04->.02
+partial close with retcode10009. Normal partial exit verified, broker faults not.
+ATR1.8/2.2 reproduce2.0 exactly; max recorded MFE is only about0.61 initialR,
+so this is NOT evidence of an effective2R trailing stability test.
+Native queue session80357 ended with exit0; no task-owned terminal/editor remains.
+Always recheck processes and latest user instruction before any later launch.
+
+Verified delivery: outputs/FXPRO_DELIVERY/FINAL_REPORT_CN.html.
+768 files /121 local links passed; desktop1440 and mobile390 Playwright checks
+and screenshot inspection passed. Source/EX5 unchanged. Exact SHA256 manifest:
+443B4753137DE6B8D6865CBFD5D82B05D74F378A240D63CA701EC56EC1A6C43F.
+ReportSHA256:2318BE3BEC985F54902DECE813B920CD78F8EFB19839229B23694F5CB353145F.
+Verify read-only with scripts/build_study_delivery.py --verify-only
+--output outputs/FXPRO_DELIVERY. Never overwrite this verified delivery.
+Three other output directories are marked INCOMPLETE_DO_NOT_USE after packaging
+path/link failures. Cleanup was policy-blocked; they are not delivery artifacts.
+All required current matrices, audits and config exports are complete. Do not
+rerun unchanged cases. GitHub stores research sources/configs/summaries only;
+raw local evidence and EX5 are in the verified directory. No Champion ZIP.
+Report-build scripts do not alter the frozen MQ5/MQH/EX5. Unfinished acceptance:
+futureOOS/sample gates, native changed costs, OS restart and real broker fault
+tests, concurrent portfolio tick-equity/margin audit. All Champion lanes NONE.
+
+OOS rules and exact parameters are frozen in OOS_PREREGISTRATION.json. Appended
+OOS_CALENDAR_CONFIRMATION.json confirms FxPro GOLD Sep7 early close20:25 and
+Sep8 normal calendar. Official OOS [2026.09.08,2027.03.08), server dates.
+No future quote/return data viewed; no live execution. Preserve original registry
+and add any future calendar correction as evidence, never choose dates by profit.
 
 ## Historical R-C01 checkpoint (superseded queue status)
 

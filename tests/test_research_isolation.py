@@ -35,6 +35,10 @@ class ResearchIsolation(unittest.TestCase):
         self.assertNotIn('rates[0]', header)
         self.assertNotIn('POSITION_PRICE_CURRENT', header)
 
+    def test_opening_order_explicitly_selected(self):
+        for name in ('IntradayRunner.mqh','StrictRiskResearch.mqh'):
+            self.assertIn('HistoryOrderSelect(order)',source(ROOT/'src'/name))
+
     def test_split_fee_budget(self):
         self.assertAlmostEqual(runner_fee('.01', '7', 2), .08)
         self.assertAlmostEqual(runner_fee('.02', '7', 2), .15)

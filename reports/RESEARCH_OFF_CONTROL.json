@@ -1,0 +1,30 @@
+[
+  {
+    "Lane": "Scalping",
+    "Base": "R_C01_Scalping_USD2000_D0_20260906_215019",
+    "Control": "CONTROL_Scalping_USD2000_D0_20260906_225107",
+    "CompleteTradeSignaturesMatch": true,
+    "SetAndINI": "MATCH_EXCEPT_IDENTITY_AUDIT_OUTPUT"
+  },
+  {
+    "Lane": "Intraday",
+    "Base": "R_C01_Intraday_USD2000_D0_20260906_223054",
+    "Control": "CONTROL_Intraday_USD2000_D0_20260906_225323",
+    "CompleteTradeSignaturesMatch": true,
+    "SetAndINI": "MATCH_EXCEPT_IDENTITY_AUDIT_OUTPUT"
+  },
+  {
+    "Lane": "Swing",
+    "Base": "R_C01_Swing_USD2000_D0_20260906_223506",
+    "Control": "CONTROL_Swing_USD2000_D0_20260906_225700",
+    "CompleteTradeSignaturesMatch": true,
+    "SetAndINI": "MATCH_EXCEPT_IDENTITY_AUDIT_OUTPUT"
+  },
+  {
+    "Lane": "Combined",
+    "Base": "R_C01_Combined_USD2000_D0_20260906_223717",
+    "Control": "CONTROL_Combined_USD2000_D0_20260906_225916",
+    "CompleteTradeSignaturesMatch": true,
+    "SetAndINI": "MATCH_EXCEPT_IDENTITY_AUDIT_OUTPUT"
+  }
+]

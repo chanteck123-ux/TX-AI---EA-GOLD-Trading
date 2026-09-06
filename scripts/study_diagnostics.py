@@ -56,6 +56,8 @@ def diagnose(row):
                 MaxInitialMarginAtOrderCheckUSD=max((float(p['InitialMarginUsed']) for p in plans),default=None),
                 MaxRecordedMAEUSD=max((p['MAEUSD'] for p in enriched),default=None),
                 MaxRecordedMFEUSD=max((p['MFEUSD'] for p in enriched),default=None),
+                MaxRecordedMFEInInitialR=max((p['MFEUSD']/p['InitialSLRiskUSD'] for p in enriched
+                                             if p['InitialSLRiskUSD']>0),default=None),
                 LossHeuristics=dict(Counter(p['HeuristicLossClassification'] for p in enriched if p['NetUSD']<0)),
                 ChaseFlagCount=sum(p['ChaseEntry']=='YES' for p in enriched),
                 RawRequestRiskFailures=logs.count('STRICT_ACCOUNT_RISK_BLOCK|'),

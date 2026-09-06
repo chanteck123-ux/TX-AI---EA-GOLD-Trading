@@ -1,0 +1,425 @@
+[
+  {
+    "Label": "FINAL_OFF_Scalping",
+    "Base": "R_C01_Scalping_USD2000_D0_20260906_215019",
+    "Candidate": "CONTROL_FINAL_Scalping_USD2000_D0_20260906_232317",
+    "AllowedInputs": [],
+    "ActualInputChanges": {},
+    "Conditions": "VERIFIED_NATIVE_INPUTS_AND_INI",
+    "TradeSignatureMatch": true,
+    "Deltas": {
+      "NetProfitUSD": 0.0,
+      "MaxEquityDDPct": 0.0,
+      "ProfitFactor": -4.440892098500626e-16,
+      "Trades": 0,
+      "WinRatePct": 0.0,
+      "Reject": 0
+    },
+    "Note": "Same broker/date/risk/capital/leverage/model/delay."
+  },
+  {
+    "Label": "FINAL_OFF_Intraday",
+    "Base": "R_C01_Intraday_USD2000_D0_20260906_223054",
+    "Candidate": "CONTROL_FINAL_Intraday_USD2000_D0_20260906_232528",
+    "AllowedInputs": [
+      "InpIntradayMaxTradesPerDay"
+    ],
+    "ActualInputChanges": {
+      "InpIntradayMaxTradesPerDay": [
+        4.0,
+        0.0
+      ]
+    },
+    "Conditions": "VERIFIED_NATIVE_INPUTS_AND_INI",
+    "TradeSignatureMatch": true,
+    "Deltas": {
+      "NetProfitUSD": 0.0,
+      "MaxEquityDDPct": 0.0,
+      "ProfitFactor": null,
+      "Trades": 0,
+      "WinRatePct": 0.0,
+      "Reject": 0
+    },
+    "Note": "Same broker/date/risk/capital/leverage/model/delay."
+  },
+  {
+    "Label": "FINAL_OFF_Swing",
+    "Base": "R_C01_Swing_USD2000_D0_20260906_223506",
+    "Candidate": "CONTROL_FINAL_Swing_USD2000_D0_20260906_232858",
+    "AllowedInputs": [
+      "InpSwingMaxTradesPerDay"
+    ],
+    "ActualInputChanges": {
+      "InpSwingMaxTradesPerDay": [
+        2.0,
+        0.0
+      ]
+    },
+    "Conditions": "VERIFIED_NATIVE_INPUTS_AND_INI",
+    "TradeSignatureMatch": true,
+    "Deltas": {
+      "NetProfitUSD": 0.0,
+      "MaxEquityDDPct": 0.0,
+      "ProfitFactor": null,
+      "Trades": 0,
+      "WinRatePct": 0.0,
+      "Reject": 0
+    },
+    "Note": "Same broker/date/risk/capital/leverage/model/delay."
+  },
+  {
+    "Label": "FINAL_OFF_Combined",
+    "Base": "R_C01_Combined_USD2000_D0_20260906_223717",
+    "Candidate": "CONTROL_FINAL_Combined_USD2000_D0_20260906_233109",
+    "AllowedInputs": [
+      "InpIntradayMaxTradesPerDay",
+      "InpSwingMaxTradesPerDay"
+    ],
+    "ActualInputChanges": {
+      "InpSwingMaxTradesPerDay": [
+        2.0,
+        0.0
+      ],
+      "InpIntradayMaxTradesPerDay": [
+        4.0,
+        0.0
+      ]
+    },
+    "Conditions": "VERIFIED_NATIVE_INPUTS_AND_INI",
+    "TradeSignatureMatch": true,
+    "Deltas": {
+      "NetProfitUSD": 0.0,
+      "MaxEquityDDPct": 0.0,
+      "ProfitFactor": 0.0,
+      "Trades": 0,
+      "WinRatePct": 0.0,
+      "Reject": 0
+    },
+    "Note": "Same broker/date/risk/capital/leverage/model/delay."
+  },
+  {
+    "Label": "S_C02",
+    "Base": "R_C01_Scalping_USD2000_D0_20260906_215019",
+    "Candidate": "S_C02_Scalping_USD2000_D0_20260906_224145",
+    "AllowedInputs": [
+      "InpScalpUseEMAFilter"
+    ],
+    "ActualInputChanges": {
+      "InpScalpUseEMAFilter": [
+        "true",
+        "false"
+      ]
+    },
+    "Conditions": "VERIFIED_NATIVE_INPUTS_AND_INI",
+    "TradeSignatureMatch": false,
+    "Deltas": {
+      "NetProfitUSD": -183.74,
+      "MaxEquityDDPct": 6.1899999999999995,
+      "ProfitFactor": -1.637932933994044,
+      "Trades": 63,
+      "WinRatePct": -23.192771084337352,
+      "Reject": 0
+    },
+    "Note": "Same broker/date/risk/capital/leverage/model/delay."
+  },
+  {
+    "Label": "I_C01",
+    "Base": "R_C01_Intraday_USD2000_D0_20260906_223054",
+    "Candidate": "I_C01_Intraday_USD2000_D0_20260906_224404",
+    "AllowedInputs": [
+      "InpIntradayMaxTradesPerDay"
+    ],
+    "ActualInputChanges": {
+      "InpIntradayMaxTradesPerDay": [
+        4.0,
+        0.0
+      ]
+    },
+    "Conditions": "VERIFIED_NATIVE_INPUTS_AND_INI",
+    "TradeSignatureMatch": true,
+    "Deltas": {
+      "NetProfitUSD": 0.0,
+      "MaxEquityDDPct": 0.0,
+      "ProfitFactor": null,
+      "Trades": 0,
+      "WinRatePct": 0.0,
+      "Reject": 0
+    },
+    "Note": "Same broker/date/risk/capital/leverage/model/delay."
+  },
+  {
+    "Label": "W_C01",
+    "Base": "R_C01_Swing_USD2000_D0_20260906_223506",
+    "Candidate": "W_C01_Swing_USD2000_D0_20260906_230808",
+    "AllowedInputs": [
+      "InpSwingMaxTradesPerDay"
+    ],
+    "ActualInputChanges": {
+      "InpSwingMaxTradesPerDay": [
+        2.0,
+        0.0
+      ]
+    },
+    "Conditions": "VERIFIED_NATIVE_INPUTS_AND_INI",
+    "TradeSignatureMatch": true,
+    "Deltas": {
+      "NetProfitUSD": 0.0,
+      "MaxEquityDDPct": 0.0,
+      "ProfitFactor": null,
+      "Trades": 0,
+      "WinRatePct": 0.0,
+      "Reject": 0
+    },
+    "Note": "Same broker/date/risk/capital/leverage/model/delay."
+  },
+  {
+    "Label": "I_C02_RUNNER",
+    "Base": "CONTROL_FINAL_Intraday_USD2000_D0_20260906_232528",
+    "Candidate": "I_C02_FIX2_Intraday_USD2000_D0_20260906_233447",
+    "AllowedInputs": [
+      "InpIntradayRunner"
+    ],
+    "ActualInputChanges": {
+      "InpIntradayRunner": [
+        "false",
+        "true"
+      ]
+    },
+    "Conditions": "VERIFIED_NATIVE_INPUTS_AND_INI",
+    "TradeSignatureMatch": false,
+    "Deltas": {
+      "NetProfitUSD": -7.16,
+      "MaxEquityDDPct": 0.0,
+      "ProfitFactor": null,
+      "Trades": 0,
+      "WinRatePct": -25.0,
+      "Reject": 0
+    },
+    "Note": "Same broker/date/risk/capital/leverage/model/delay."
+  },
+  {
+    "Label": "MEMORY_RESTART_NOT_OS_RESTART",
+    "Base": "I_C02_FIX2_Intraday_USD2000_D0_20260906_233447",
+    "Candidate": "I_C02_FIX2_RESTART_Intraday_USD2000_D0_20260906_233839",
+    "AllowedInputs": [
+      "InpRunnerRestartProbe"
+    ],
+    "ActualInputChanges": {
+      "InpRunnerRestartProbe": [
+        "false",
+        "true"
+      ]
+    },
+    "Conditions": "VERIFIED_NATIVE_INPUTS_AND_INI",
+    "TradeSignatureMatch": true,
+    "Deltas": {
+      "NetProfitUSD": 0.0,
+      "MaxEquityDDPct": 0.0,
+      "ProfitFactor": 0.0,
+      "Trades": 0,
+      "WinRatePct": 0.0,
+      "Reject": 0
+    },
+    "Note": "Same broker/date/risk/capital/leverage/model/delay."
+  },
+  {
+    "Label": "USD5000_DIAGNOSTIC_ONLY",
+    "Base": "CONTROL_CAPACITY_Intraday_USD5000_D0_20260907_002830",
+    "Candidate": "I_C02_CAPACITY_Intraday_USD5000_D0_20260907_003206",
+    "AllowedInputs": [
+      "InpIntradayRunner"
+    ],
+    "ActualInputChanges": {
+      "InpIntradayRunner": [
+        "false",
+        "true"
+      ]
+    },
+    "Conditions": "VERIFIED_NATIVE_INPUTS_AND_INI",
+    "TradeSignatureMatch": false,
+    "Deltas": {
+      "NetProfitUSD": -14.319999999999993,
+      "MaxEquityDDPct": 0.0,
+      "ProfitFactor": null,
+      "Trades": 0,
+      "WinRatePct": 0.0,
+      "Reject": 0
+    },
+    "Note": "Same broker/date/risk/capital/leverage/model/delay."
+  },
+  {
+    "Label": "COMBINED_DELAY_0",
+    "Base": "CONTROL_FINAL_Combined_USD2000_D0_20260906_233109",
+    "Candidate": "C_C01_Combined_USD2000_D0_20260906_234242",
+    "AllowedInputs": [
+      "InpIntradayRunner"
+    ],
+    "ActualInputChanges": {
+      "InpIntradayRunner": [
+        "false",
+        "true"
+      ]
+    },
+    "Conditions": "VERIFIED_NATIVE_INPUTS_AND_INI",
+    "TradeSignatureMatch": false,
+    "Deltas": {
+      "NetProfitUSD": -7.159999999999997,
+      "MaxEquityDDPct": 0.0,
+      "ProfitFactor": -0.08642208487899561,
+      "Trades": 0,
+      "WinRatePct": -4.0,
+      "Reject": 0
+    },
+    "Note": "Same broker/date/risk/capital/leverage/model/delay."
+  },
+  {
+    "Label": "COMBINED_DELAY_10",
+    "Base": "CONTROL_FINAL_Combined_USD2000_D10_20260906_234623",
+    "Candidate": "C_C01_Combined_USD2000_D10_20260906_234958",
+    "AllowedInputs": [
+      "InpIntradayRunner"
+    ],
+    "ActualInputChanges": {
+      "InpIntradayRunner": [
+        "false",
+        "true"
+      ]
+    },
+    "Conditions": "VERIFIED_NATIVE_INPUTS_AND_INI",
+    "TradeSignatureMatch": false,
+    "Deltas": {
+      "NetProfitUSD": -7.159999999999997,
+      "MaxEquityDDPct": 0.0,
+      "ProfitFactor": -0.08671427292805811,
+      "Trades": 0,
+      "WinRatePct": -4.0,
+      "Reject": 0
+    },
+    "Note": "Same broker/date/risk/capital/leverage/model/delay."
+  },
+  {
+    "Label": "COMBINED_DELAY_25",
+    "Base": "CONTROL_FINAL_Combined_USD2000_D25_20260906_235351",
+    "Candidate": "C_C01_Combined_USD2000_D25_20260906_235729",
+    "AllowedInputs": [
+      "InpIntradayRunner"
+    ],
+    "ActualInputChanges": {
+      "InpIntradayRunner": [
+        "false",
+        "true"
+      ]
+    },
+    "Conditions": "VERIFIED_NATIVE_INPUTS_AND_INI",
+    "TradeSignatureMatch": false,
+    "Deltas": {
+      "NetProfitUSD": -7.159999999999997,
+      "MaxEquityDDPct": 0.0,
+      "ProfitFactor": -0.08671427292805811,
+      "Trades": 0,
+      "WinRatePct": -4.0,
+      "Reject": 0
+    },
+    "Note": "Same broker/date/risk/capital/leverage/model/delay."
+  },
+  {
+    "Label": "COMBINED_DELAY_50",
+    "Base": "CONTROL_FINAL_Combined_USD2000_D50_20260907_000135",
+    "Candidate": "C_C01_Combined_USD2000_D50_20260907_000528",
+    "AllowedInputs": [
+      "InpIntradayRunner"
+    ],
+    "ActualInputChanges": {
+      "InpIntradayRunner": [
+        "false",
+        "true"
+      ]
+    },
+    "Conditions": "VERIFIED_NATIVE_INPUTS_AND_INI",
+    "TradeSignatureMatch": false,
+    "Deltas": {
+      "NetProfitUSD": -7.159999999999997,
+      "MaxEquityDDPct": 0.0,
+      "ProfitFactor": -0.08671427292805811,
+      "Trades": 0,
+      "WinRatePct": -4.0,
+      "Reject": 0
+    },
+    "Note": "Same broker/date/risk/capital/leverage/model/delay."
+  },
+  {
+    "Label": "COMBINED_DELAY_-1",
+    "Base": "CONTROL_FINAL_Combined_USD2000_D-1_20260907_000915",
+    "Candidate": "C_C01_Combined_USD2000_D-1_20260907_001250",
+    "AllowedInputs": [
+      "InpIntradayRunner"
+    ],
+    "ActualInputChanges": {
+      "InpIntradayRunner": [
+        "false",
+        "true"
+      ]
+    },
+    "Conditions": "VERIFIED_NATIVE_INPUTS_AND_INI",
+    "TradeSignatureMatch": false,
+    "Deltas": {
+      "NetProfitUSD": -6.280000000000001,
+      "MaxEquityDDPct": 0.029999999999999805,
+      "ProfitFactor": -0.07877859480308169,
+      "Trades": 0,
+      "WinRatePct": -4.0,
+      "Reject": 0
+    },
+    "Note": "Native random-delay runs share mode, not a controllable identical random seed."
+  },
+  {
+    "Label": "I_C02_NEIGHBOR_18",
+    "Base": "I_C02_FIX2_Intraday_USD2000_D0_20260906_233447",
+    "Candidate": "I_C02_NEIGHBOR_18_Intraday_USD2000_D0_20260907_003545",
+    "AllowedInputs": [
+      "InpRunnerATRMultiple"
+    ],
+    "ActualInputChanges": {
+      "InpRunnerATRMultiple": [
+        2.0,
+        1.8
+      ]
+    },
+    "Conditions": "VERIFIED_NATIVE_INPUTS_AND_INI",
+    "TradeSignatureMatch": true,
+    "Deltas": {
+      "NetProfitUSD": 0.0,
+      "MaxEquityDDPct": 0.0,
+      "ProfitFactor": 0.0,
+      "Trades": 0,
+      "WinRatePct": 0.0,
+      "Reject": 0
+    },
+    "Note": "Same broker/date/risk/capital/leverage/model/delay."
+  },
+  {
+    "Label": "I_C02_NEIGHBOR_22",
+    "Base": "I_C02_FIX2_Intraday_USD2000_D0_20260906_233447",
+    "Candidate": "I_C02_NEIGHBOR_22_Intraday_USD2000_D0_20260907_003934",
+    "AllowedInputs": [
+      "InpRunnerATRMultiple"
+    ],
+    "ActualInputChanges": {
+      "InpRunnerATRMultiple": [
+        2.0,
+        2.2
+      ]
+    },
+    "Conditions": "VERIFIED_NATIVE_INPUTS_AND_INI",
+    "TradeSignatureMatch": true,
+    "Deltas": {
+      "NetProfitUSD": 0.0,
+      "MaxEquityDDPct": 0.0,
+      "ProfitFactor": 0.0,
+      "Trades": 0,
+      "WinRatePct": 0.0,
+      "Reject": 0
+    },
+    "Note": "Same broker/date/risk/capital/leverage/model/delay."
+  }
+]
