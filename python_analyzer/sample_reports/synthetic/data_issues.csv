@@ -1,0 +1,2 @@
+﻿severity,code,message
+info,OBSERVED_WINDOW_POST_READ_CHECK,已检查导入后的 1873 个时间字段；这是分析前核验，不是读取前物理隔离，最终样本需预先外部分文件。

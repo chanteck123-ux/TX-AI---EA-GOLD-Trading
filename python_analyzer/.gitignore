@@ -1,0 +1,15 @@
+__pycache__/
+*.pyc
+.venv/
+output/
+dist/
+*.egg-info/
+input/*
+!input/README_CN.md
+!input/manifest.template.json
+final_exposure_ledger.jsonl
+
+# User evidence is private to the local delivery.
+examples/fxpro_v400/
+sample_reports/fxpro_v400/
+mql5/generated_v423/

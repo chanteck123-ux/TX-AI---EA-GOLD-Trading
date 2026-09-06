@@ -1,0 +1,8 @@
+# Preserve source evidence bytes, Windows entry points and BOM CSV exports.
+* -text
+*.csv -text whitespace=cr-at-eol
+*.bat -text whitespace=cr-at-eol
+*.set -text
+*.htm -text
+examples/fxpro_v400/* -text -whitespace
+mql5/generated_v423/* -text -whitespace

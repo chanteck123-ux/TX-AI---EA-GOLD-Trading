@@ -1,0 +1,15 @@
+﻿id,kind,severity,category,strategy,message,evidence
+F0001,missing,warning,equity,Scalping,缺少该策略净值时序或明确归属的原生净值DD；不能用余额DD替代。,equity_dd_source=MISSING
+F0002,missing,warning,equity,Intraday,缺少该策略净值时序或明确归属的原生净值DD；不能用余额DD替代。,equity_dd_source=MISSING
+F0003,missing,warning,equity,Swing,缺少该策略净值时序或明确归属的原生净值DD；不能用余额DD替代。,equity_dd_source=MISSING
+F0004,confirmed,high,risk,Combined,1笔审计记录初始风险超过本次预算；不代表已核实最坏实际成交损失。,S1
+F0005,hypothesis,info,entry,Scalping,源码启发式入场标签，不能据此确认亏损因果或删除过滤。,position=S1;ChaseEntry=True;LossClassification=ENTRY_TOO_LATE
+F0006,hypothesis,info,profit_protection,Swing,观测浮盈明显高于最终净损益；可能有回吐，也含费用与采样口径差异。,position=S3;MFE=12.0;net=5.0
+F0007,hypothesis,info,entry,Intraday,源码启发式入场标签，不能据此确认亏损因果或删除过滤。,position=S5;ChaseEntry=True;LossClassification=ENTRY_TOO_LATE
+F0008,hypothesis,info,profit_protection,Swing,观测浮盈明显高于最终净损益；可能有回吐，也含费用与采样口径差异。,position=S6;MFE=7.0;net=0.0
+F0009,hypothesis,info,profit_protection,Scalping,观测浮盈明显高于最终净损益；可能有回吐，也含费用与采样口径差异。,position=S7;MFE=2.0;net=-5.0
+F0010,hypothesis,info,entry,Swing,源码启发式入场标签，不能据此确认亏损因果或删除过滤。,position=S9;ChaseEntry=True;LossClassification=ENTRY_TOO_LATE
+F0011,hypothesis,info,profit_protection,Intraday,观测浮盈明显高于最终净损益；可能有回吐，也含费用与采样口径差异。,position=S11;MFE=4.0;net=-3.0
+F0012,confirmed,info,logged_block,Intraday,原日志记录1次：RISK_LIMIT；不证明放行会盈利。,事件日志
+F0013,confirmed,info,logged_block,Scalping,原日志记录1次：RISK_LIMIT；不证明放行会盈利。,事件日志
+F0014,confirmed,info,logged_block,Swing,原日志记录1次：RISK_LIMIT；不证明放行会盈利。,事件日志
