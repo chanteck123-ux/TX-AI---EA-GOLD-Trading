@@ -1,0 +1,6 @@
+*.ex5
+__pycache__/
+reports/runs/
+reports/compile/
+*_CHECKPOINT.json
+CHECKPOINT.json

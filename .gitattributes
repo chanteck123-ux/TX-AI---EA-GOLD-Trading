@@ -1,0 +1,4 @@
+# Preserve compiled source bytes across Windows checkout and GitHub storage.
+src/*.mq5 -text
+src/*.mqh -text
+tests/*.mq5 -text

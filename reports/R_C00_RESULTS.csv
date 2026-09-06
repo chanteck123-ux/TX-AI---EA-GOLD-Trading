@@ -1,0 +1,3 @@
+﻿Strategy,CapitalUSD,NetProfitUSD,MaxEquityDDPct,ProfitFactor,Trades,WinRatePct,Reject,RecoveryEquity,MaximumActualSLRiskPct,MaximumPlannedRiskPct,Period,HistoryQuality,DelayMs,Verdict,Run
+Intraday,500,0.0,0.0,,0,,0,,,,M30 (2026.01.05 - 2026.08.26),100%真实报价,0,RESEARCH_FURTHER_NO_PROMOTION,R_C00_Intraday_USD500_D0_20260906_191123
+Scalping,500,0.0,0.0,,0,,0,,,,M5 (2026.01.05 - 2026.08.26),100%真实报价,0,RESEARCH_FURTHER_NO_PROMOTION,R_C00_Scalping_USD500_D0_20260906_190610
