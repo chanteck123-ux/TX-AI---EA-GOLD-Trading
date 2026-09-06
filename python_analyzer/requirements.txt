@@ -1,0 +1,2 @@
+# Python >= 3.10. Runtime uses only the Python standard library.
+# No pip install, paid AI API, MT5 package, account credentials or network needed.
