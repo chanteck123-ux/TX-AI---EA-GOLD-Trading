@@ -2,6 +2,7 @@
 import html
 import json
 import re
+from pathlib import Path
 
 from summarize_runs import ROOT, read, sha, summarize
 from build_baseline_report import FROZEN_EX5, FROZEN_SOURCE, FIELDS, table, evidence_links
@@ -54,9 +55,19 @@ def proof():
     compile_record = json.loads(read(folder/'COMPILE.json'))
     if (compile_record['Stage'] != 'COMPILE_PASS' or compile_record['SourceSHA256'] != SOURCE or
             compile_record['EX5SHA256'] != EX5 or sha(folder/'GSM_FxPro_R_C01.ex5') != EX5 or
-            sha(folder/'GSM_FxPro_R_C01.mq5') != SOURCE):
+            sha(folder/'GSM_FxPro_R_C01.mq5') != SOURCE or
+            sha(folder/'MetaEditor.log') != compile_record['LogSHA256']):
         raise ValueError('COMPILE_PROOF_MISMATCH')
+    for path, digest in compile_record['Dependencies'].items():
+        dependency = Path(path)
+        if dependency.parent == ROOT/'src' and (sha(dependency) != digest or sha(folder/dependency.name) != digest):
+            raise ValueError('COMPILED_HEADER_PROOF_MISMATCH')
     unit_folder = ROOT/'reports/runs/R_C01_UnitTests_USD500_D0_20260906_213344'
+    unit_record = json.loads(read(unit_folder/'RUN.json'))
+    if (unit_record['CompileEvidence']['Stage'] != 'COMPILE_PASS' or
+            sha(ROOT/'tests/FeeRiskTests.mq5') != unit_record['SourceSHA256'] or
+            sha(unit_folder/(unit_folder.name+'.htm')) != unit_record['ReportSHA256']):
+        raise ValueError('NATIVE_UNIT_HASH_PROOF_MISMATCH')
     logs = '\n'.join(read(p) for p in unit_folder.glob('*.log.txt'))
     matches = re.findall(r'FEE_RISK_TEST_SUMMARY\|Tests=(\d+)\|Failures=(\d+)\|GridCases=(\d+)', logs)
     if not matches or any(m != ('25', '0', '25824') for m in matches):

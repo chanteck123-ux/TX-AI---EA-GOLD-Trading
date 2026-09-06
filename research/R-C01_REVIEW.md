@@ -34,3 +34,21 @@
 - All tested dates are already viewed; no untouched OOS or Champion claim.
 
 Verdict before backtest: PROCEED_WITH_PREREGISTERED_ENGINEERING_VALIDATION_ONLY.
+
+## Post-test review
+
+- All six preregistered FxPro native real-tick runs completed on the same R-C01
+  source/header/EX5 revision; native report coverage is 100% real quotes.
+- Four USD500 lanes remain zero-trade risk skips. They do not establish actual
+  execution or fee robustness.
+- USD1000 and USD2000 Scalping each completed 20 positions. Native deal fees
+  reconcile with the rounded model; maximum fee shortfall is zero.
+- All six same-capital performance deltas and full trade-signature differences
+  are zero against the immutable R-C00 control. No trading improvement claimed.
+- Final local suite: 50 Python tests passed, including report links, SHA256,
+  compile/native-unit proof, complete-position fees and opportunity reconciliation.
+- Native report copies and runtime remain local; published summaries contain
+  hashes and evidence references, not terminal account data.
+
+Final verdict: ENGINEERING_CORRECTION_VALIDATED_TESTED_CASES_NOT_CHAMPION.
+Do not promote, generate a Champion ZIP, or enable live trading.

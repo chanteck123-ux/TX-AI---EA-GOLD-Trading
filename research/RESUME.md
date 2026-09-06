@@ -1,12 +1,16 @@
 # Resume FxPro research
 
-Status: R-C01 FEE CORRECTION VALIDATION RUNNING.
-Read FEE_CHECKPOINT.json and RUN_CHECKPOINT.json, then check the selected runtime
-process before any launch. Run-FeeValidation.ps1 resumes its six preregistered
-cases and reuses matching completed reports. Do not duplicate an active matrix.
+Status: R-C01 ENGINEERING VALIDATION COMPLETE; NO NEW CHAMPION.
+All six preregistered runs and their comparisons are complete. Do not rerun them
+unchanged. Read FEE_CHECKPOINT.json and RUN_CHECKPOINT.json, then check the selected
+runtime process on resume. No task-owned tester job remained at this checkpoint.
 Four R-C00 baselines/capacity and rejected S-C01 remain frozen.
 
 Latest evidence:
+- reports/R_C01_REPORT_CN.html and R_C01_COMPARISON.json: six verified pairs.
+- reports/SCALP_OPPORTUNITY_AUDIT_CN.md and JSON: 1,195 touches reconciled;
+  221 invalidated at their nominal M5 close, 974 evaluated, 205 core-qualified,
+  20 final signal passes. EMA/RSI rejects overlap; do not add counters blindly.
 - research/R-C01_PREREGISTRATION.md and R-C01_REVIEW.md: isolated fee correction.
 - R-C01 source CCED6620 / EX5 F1F26A99: 0 errors, 0 warnings; full hashes in compile proof.
 - Native fee math: 25 tests, 25,824 grid comparisons, zero failures.
@@ -16,10 +20,16 @@ Latest evidence:
 - S-C01 is frozen; do not rerun unchanged experiments or retune the same ID.
 
 Next research:
-1. Complete the R-C01 matrix and compare_rc01.py audit before any new Candidate.
-   This is an engineering correction, not strategy improvement or Champion proof.
-2. Audit actual Scalping filter and first-touch events before naming S-C02. A high
-   rejection counter does not prove the filtered trades would have been profitable.
+1. R-C01 is retained as a tested engineering correction, not a Champion. Source
+   and parameters are now frozen; R-C00 remains the immutable original reference.
+   Six same-capital performance/complete-trade-signature deltas are zero. Actual
+   fee shortfall is zero in the 20-trade USD1000 and 20-trade USD2000 cases.
+2. Before naming S-C02, read SCALP_OPPORTUNITY_AUDIT_CN.md. Seventy-three logged
+   core signals fail only the EMA stage while RSI passes. A one-variable EMA
+   ablation is a hypothesis, NOT proven profitable missed trades. Do not revive
+   the 221 already broken zones. No S-C02 has been created or tested yet.
+   USD500 affordability remains a separate constraint: current fixed SL/TP and
+   1% risk cannot force minimum lots. Do not secretly raise risk or tighten SL.
 3. Intraday/Swing capacity, Intraday runner, native execution/protection/restart
    fixtures, untouched OOS and realistic friction remain unfinished.
 4. All four qualifying Champion lanes remain NONE. Do not create a Champion ZIP.
@@ -52,6 +62,11 @@ Next research:
 9. Save every result with source, headers, EX5, SET, INI, terminal and report
    hashes. Historical viewed data cannot be relabeled untouched OOS.
 10. GitHub research branch only. No main/current replacement or Champion ZIP.
+
+R-C01 final local checks: 50 Python tests; native fee math 25 named tests plus
+25,824 grid comparisons. These do not replace native protection, execution,
+partial-fill or restart integration. Observed 0.01-lot fee budget is USD0.08;
+currency display precision is a research-estimation input, not a tariff promise.
 
 Rank Net -> Equity DD -> PF -> complete Trades -> Win Rate -> Reject.
 DD >30% rejects; 15-30% requires review; equity recovery >3; each lane >100
