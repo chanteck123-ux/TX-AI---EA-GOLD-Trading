@@ -157,7 +157,7 @@ Doji及重叠族须去重解释，不以中性标签直接指定方向。高/中
 
 [顶层规范](https://github.com/chanteck123-ux/TX-AI---EA-GOLD-Trading/blob/eb74280c53e474e0dbcb0c10c491705689922416/FINAL_CHAMPION_ITERATION_SYSTEM_CN.md)最后修改2026-09-05，必须读至§29，DD>30%已是硬否决。2026-09-06[后续研究记录](https://github.com/chanteck123-ux/TX-AI---EA-GOLD-Trading/blob/eb74280c53e474e0dbcb0c10c491705689922416/docs/EXTERNAL_GITHUB_GOLD_EA_SOURCE_RESEARCH_CN.md)记有FxPro only、1%/3%、所有线>100、Recovery>3、Scalping固定SLTP、Codex执行。其提交没有显式修订顶层§29的双券商/分策略样本/Recovery解释。
 
-本计划保留后续用户约束，先开展FxPro工作；最终报告并列两套判定，并核对新mandate。不因文档冲突降低门槛，也不因此停下已可完成的研究。
+首次审阅时，本计划保留后续用户约束，先开展FxPro工作并登记未同步事项。用户随后在本轮明确追加MT5报告要求，已解决样本数与Recovery两项：每条策略与组合的完整交易数>100、原生MT5 Recovery>3为硬门槛，详见[研发计划§11](EA_RESEARCH_DEVELOPMENT_PLAN_2026-09-06_CN.md#11-ea交易报告强制要求用户本轮追加)。原生Recovery使用余额回撤，另列净值Recovery。此次补充不改变上文固定版本的历史数值，也没有重新回测；券商范围差异仍按计划登记，当前先做FxPro。
 
 ## 7. 本轮附件身份
 
