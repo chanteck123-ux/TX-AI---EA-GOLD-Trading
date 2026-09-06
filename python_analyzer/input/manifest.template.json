@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "run_id": "REPLACE_WITH_ACTUAL_RUN_ID",
+  "data_type": "unknown",
+  "broker": "FxPro",
+  "symbol": "GOLD",
+  "symbol_aliases": [],
+  "timezone": "unknown",
+  "account_currency": "USD",
+  "initial_capital": null,
+  "ea_version": "unknown",
+  "ea_sha256": null,
+  "set_sha256": null,
+  "market_data_sha256": null,
+  "strategy_scope": "Combined",
+  "magic_map": {
+    "26082152": "Scalping",
+    "26082102": "Intraday",
+    "26082303": "Swing"
+  },
+  "contract": {
+    "contract_size": null,
+    "volume_min": null,
+    "volume_step": null,
+    "point": null,
+    "tick_size": null,
+    "tick_value": null
+  },
+  "risk": {"single_pct": 1, "total_pct": 3, "applied_in_run": "unknown"},
+  "costs": {
+    "net_profit_includes_costs": "unknown",
+    "commission_model": "unknown",
+    "swap_model": "unknown",
+    "spread_model": "unknown",
+    "slippage_model": "unknown"
+  },
+  "test": {"start": null, "end": null, "tick_model": "unknown", "delay_ms": null, "leverage": "unknown"},
+  "segment": "development",
+  "prior_use": "unknown",
+  "splits": [],
+  "inputs": [
+    {"kind": "deals", "path": "data/RUN_DEALS.csv"},
+    {"kind": "report", "path": "data/RUN.htm"},
+    {"kind": "events", "path": "data/RUN_SIGNAL_AUDIT.csv"},
+    {"kind": "funnel", "path": "data/RUN_SIGNAL_FUNNEL.csv"},
+    {"kind": "log", "path": "data/expert.log"},
+    {"kind": "equity", "path": "data/equity.csv"},
+    {"kind": "ticks", "path": "data/ticks.csv"},
+    {"kind": "evidence", "path": "data/RUN.set"},
+    {"kind": "evidence", "path": "data/RUN.ini"}
+  ]
+}
