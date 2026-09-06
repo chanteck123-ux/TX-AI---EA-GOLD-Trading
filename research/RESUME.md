@@ -1,6 +1,6 @@
 # Resume R-C00
 
-Status: WAITING_MT5_UPDATE_BASELINE_INCOMPLETE. No Champion promotion.
+Status: RUNTIME_RECOVERED_BASELINE_IN_PROGRESS. No Champion promotion.
 
 1. Read the latest user message and local CHECKPOINT.json. Do not resume if paused.
 2. Verify the immutable V4.00 package/source and current source/include/EX5 hashes.
@@ -9,11 +9,13 @@ Status: WAITING_MT5_UPDATE_BASELINE_INCOMPLETE. No Champion promotion.
    process and service-state fingerprint. A checkpoint alone is not a live job.
    UPDATE_STILL_PENDING_NO_LIVE_TEST means there is no tester run to wait on.
    A changed fingerprint is a reason to inspect, not automatic test permission.
-4. Two FxPro terminal starts stalled in LiveUpdate. Do not repeat the identical
-   launch without user confirmation of update completion or a verified change.
+4. The isolated runtime in RUNTIME_CHECKPOINT.json passed a native FxPro Demo
+   probe on build 6182. Read research/RUNTIME_RECOVERY.md for executable/data
+   provenance. Old test copies remain unchanged and are no longer selected.
    Do not stop/reconfigure the eight existing MetaTester services or elevate.
-5. After the environment recovers, freeze the terminal version and rerun all
-   four USD500 / 1:100 risk-normalized lanes on the latest compiled source.
+5. Freeze the selected terminal version and finish all four USD500 / 1:100
+   risk-normalized lanes on source 989F19C9 and binary BB77B5D9 (full hashes in
+   compile/run evidence). Reconcile RUN_CHECKPOINT.json before any new launch.
    Earlier completed diagnostics used an earlier R-C00 revision and incomplete
    dependency snapshots. They are not final proof for the current binary.
 6. Preserve the original fixed-lot results separately. Zero normalized trades

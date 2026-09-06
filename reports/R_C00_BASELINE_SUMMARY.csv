@@ -1,0 +1,5 @@
+﻿Strategy,NetProfitUSD,MaxEquityDDPct,ProfitFactor,Trades,WinRatePct,Reject,CapitalUSD,RecoveryEquity,Run
+Scalping,0.0,0.0,,0,,0,500,,R_C00_Scalping_USD500_D0_20260906_201950
+Intraday,0.0,0.0,,0,,0,500,,R_C00_Intraday_USD500_D0_20260906_202550
+Swing,0.0,0.0,,0,,0,500,,R_C00_Swing_USD500_D0_20260906_202942
+Combined,0.0,0.0,,0,,0,500,,R_C00_Combined_USD500_D0_20260906_203200

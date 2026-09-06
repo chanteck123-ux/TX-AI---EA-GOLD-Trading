@@ -3,6 +3,12 @@ $ErrorActionPreference='Stop'
 $root=Split-Path $PSScriptRoot -Parent
 $workspace=Split-Path (Split-Path $root -Parent) -Parent
 $editor=Join-Path $workspace 'work\backtest-v220\fxpro-terminal\MetaEditor64.exe'
+$runtimeCheckpoint=Join-Path $root 'RUNTIME_CHECKPOINT.json'
+if(Test-Path -LiteralPath $runtimeCheckpoint){
+    $runtime=Get-Content -LiteralPath $runtimeCheckpoint -Raw | ConvertFrom-Json
+    $editor=Join-Path $runtime.TerminalRoot 'MetaEditor64.exe'
+    if((Get-FileHash -LiteralPath $editor).Hash -ne $runtime.BinaryHashes.'MetaEditor64.exe'){throw 'EDITOR_RUNTIME_CHANGED'}
+}
 $sdk=Join-Path $workspace 'work\backtest-v220\tradona-terminal\MQL5'
 $sourcePath=Join-Path $root $Source
 $output=Join-Path $root ('reports\compile\'+[IO.Path]::GetFileNameWithoutExtension($Source)+'_'+(Get-Date -Format 'yyyyMMdd_HHmmss'))

@@ -4,3 +4,4 @@ reports/runs/
 reports/compile/
 *_CHECKPOINT.json
 CHECKPOINT.json
+runtime/

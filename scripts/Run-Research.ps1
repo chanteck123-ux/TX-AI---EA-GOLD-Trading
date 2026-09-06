@@ -16,6 +16,15 @@ if(Test-Path -LiteralPath $checkpoint){
 }
 $workspace=Split-Path (Split-Path $root -Parent) -Parent
 $terminalRoot=Join-Path $workspace 'work\backtest-v220\fxpro-terminal'
+$runtimeCheckpoint=Join-Path $root 'RUNTIME_CHECKPOINT.json'
+if(Test-Path -LiteralPath $runtimeCheckpoint){
+    $runtime=Get-Content -LiteralPath $runtimeCheckpoint -Raw | ConvertFrom-Json
+    if($runtime.BrokerServer -ne 'FxPro-MT5 Demo' -or $runtime.LiveTradingEnabled){throw 'INVALID_RESEARCH_RUNTIME'}
+    $terminalRoot=$runtime.TerminalRoot
+    foreach($entry in $runtime.BinaryHashes.PSObject.Properties){
+        if((Get-FileHash -LiteralPath (Join-Path $terminalRoot $entry.Name)).Hash -ne $entry.Value){throw 'RUNTIME_EXECUTABLE_CHANGED'}
+    }
+}
 $terminal=Join-Path $terminalRoot 'terminal64.exe'
 if(Get-Process terminal64 -ErrorAction SilentlyContinue | Where-Object {$_.Path -eq $terminal}){throw 'TERMINAL_ALREADY_RUNNING; reconcile before retry'}
 $protected=Join-Path $workspace 'work\baseline-audit-20260905\repository\champion\current\GSM_GOLD_3SOP_EA_V4.00_CURRENT_CHAMPION.zip'

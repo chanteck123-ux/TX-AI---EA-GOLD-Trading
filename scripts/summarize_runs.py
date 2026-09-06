@@ -7,6 +7,7 @@ import json
 import re
 from html.parser import HTMLParser
 from pathlib import Path
+from trade_cost_audit import audit as audit_trade_costs
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -77,6 +78,31 @@ def normalize(value):
         return value
 
 
+def verify_conditions(record, fields, report_text):
+    expected = {
+        '公司:': 'FxPro Markets Ltd.',
+        '交易品种:': record['Symbol'],
+        '货币:': 'USD',
+        '杠杆:': '1:'+str(record['Leverage']),
+        '期间:': f"{record['Period']} ({record['FromDate']} - {record['ToDate']})",
+    }
+    mismatches = {key: [value, fields.get(key)] for key, value in expected.items()
+                  if fields.get(key) != value}
+    if number(fields['初始入金:']) != record['Capital']:
+        mismatches['初始入金:'] = [record['Capital'], fields['初始入金:']]
+    parser = TableParser()
+    parser.feed(report_text)
+    headers = [cell for row in parser.rows for cell in row
+               if re.fullmatch(r'FxPro-MT5 Demo \(Build \d+\)', cell)]
+    if len(headers) != 1:
+        mismatches['ServerHeader'] = ['FxPro-MT5 Demo', headers]
+    elif record.get('TerminalVersion'):
+        build = record['TerminalVersion'].split('.')[-1]
+        if headers[0] != f'FxPro-MT5 Demo (Build {build})':
+            mismatches['Build'] = [build, headers[0]]
+    return mismatches, headers[0] if len(headers) == 1 else None
+
+
 def summarize(record_path):
     record = json.loads(read(record_path))
     if record['Lane'] == 'UnitTests' or record['Stage'] != 'REPORT_CREATED_PENDING_AUDIT':
@@ -97,6 +123,9 @@ def summarize(record_path):
     wins, win_pct = pair(f['盈利交易 (% 全部):'])
     losses, _ = pair(f['亏损交易 (% 全部):'])
     flags = ['RESEARCH_NOT_CHAMPION', 'NOT_UNTOUCHED_OOS']
+    condition_mismatches, server_header = verify_conditions(record, f, read(report))
+    if condition_mismatches:
+        flags.append('NATIVE_TEST_CONDITIONS_MISMATCH')
     archived = folder / Path(record['Source']).with_suffix('.ex5').name
     if not archived.exists() or sha(archived) != record['EX5SHA256']:
         flags.append('BINARY_ARCHIVE_MISSING')
@@ -163,6 +192,11 @@ def summarize(record_path):
     if '真实报价' not in f['质量历史:'] or not f['质量历史:'].startswith('100%'):
         flags.append('REAL_TICK_COVERAGE_NOT_100')
     technical = [float(x) for x in re.findall(r'TechnicalMinEquity=([\d.]+)', logs)]
+    parser = TableParser()
+    parser.feed(read(report))
+    costs = audit_trade_costs(parser.rows, trades, count, net,
+                             float(inputs.get('InpResearchRoundTripFeePerLotUSD', 7)))
+    flags.extend(costs['Flags'])
     result = dict(Run=name, Strategy=record['Lane'], CapitalUSD=record['Capital'],
                   NetProfitUSD=net, MaxEquityDDPct=dd_pct, ProfitFactor=number(f['盈利因子:']) if gross_loss else None,
                   Trades=count, WinRatePct=win_pct if count else None, Reject=rejected,
@@ -176,13 +210,16 @@ def summarize(record_path):
                   MaximumPlannedRiskPct=max((float(p['PlannedPct']) for p in plans), default=None),
                   MaximumAggregatePlannedRiskPct=max((float(p['TotalPct']) for p in plans), default=None),
                   MinimumTechnicalEquityAtRejectedSetups=min(technical, default=None),
-                  Broker=record['Broker'], Symbol=f['交易品种:'], Period=f['期间:'], Leverage=f['杠杆:'],
+                  Broker=record['Broker'], Company=f.get('公司:'), ServerHeader=server_header,
+                  TestConditionMismatches=condition_mismatches,
+                  Symbol=f['交易品种:'], Period=f['期间:'], Leverage=f['杠杆:'],
                   HistoryQuality=f['质量历史:'], Model=record['Model'], DelayMs=record['DelayMs'],
                   SourceSHA256=record['SourceSHA256'], EX5SHA256=record['EX5SHA256'],
                   SETSHA256=record['SETSHA256'], ReportSHA256=record['ReportSHA256'],
                   Flags=flags, SetReportMismatches=mismatches,
                   SetReportAuditStatus='COMPLETE' if complete_declarations else 'PARTIAL_DECLARATIONS_ONLY',
                   Funnels=funnels, RiskPlanCount=len(plans),
+                  CompleteTradeCostAudit=costs,
                   TerminalVersion=record.get('TerminalVersion'), TerminalSHA256=record.get('TerminalSHA256'),
                   Verdict='RESEARCH_FURTHER_NO_PROMOTION')
     (folder/'AUDIT.json').write_text(json.dumps(result, ensure_ascii=False, indent=2), encoding='utf-8')

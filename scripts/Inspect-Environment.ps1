@@ -8,6 +8,14 @@ $terminalRoots=@(
     (Join-Path $workspace 'work\backtest-v220\fxpro-terminal'),
     (Join-Path $workspace 'work\side-scalping-best-v290\fxpro-terminal-side')
 )
+$activeRoot=$null
+$runtimePath=Join-Path $root 'RUNTIME_CHECKPOINT.json'
+if(Test-Path -LiteralPath $runtimePath){
+    $runtime=Get-Content -LiteralPath $runtimePath -Raw | ConvertFrom-Json
+    if($runtime.BrokerServer -ne 'FxPro-MT5 Demo'){throw 'RUNTIME_BROKER_MISMATCH'}
+    $activeRoot=$runtime.TerminalRoot
+    $terminalRoots += $activeRoot
+}
 $records=@()
 foreach($directory in $terminalRoots){
     $path=Join-Path $directory 'terminal64.exe'
@@ -50,11 +58,12 @@ $services=@(Get-CimInstance Win32_Service -Filter "Name LIKE 'MetaTester-%'" |
     Sort-Object Name | Select-Object Name,State,ProcessId)
 $identity=[Security.Principal.WindowsIdentity]::GetCurrent()
 $isAdmin=([Security.Principal.WindowsPrincipal]::new($identity)).IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)
-$state=[ordered]@{Terminals=$records;TerminalOrEditorProcesses=$processes;MetaTesterServices=$services;Administrator=$isAdmin}
+$state=[ordered]@{Terminals=$records;SelectedRuntime=$activeRoot;TerminalOrEditorProcesses=$processes;MetaTesterServices=$services;Administrator=$isAdmin}
 $bytes=[Text.Encoding]::UTF8.GetBytes(($state | ConvertTo-Json -Depth 8 -Compress))
 $fingerprint=[Convert]::ToHexString([Security.Cryptography.SHA256]::HashData($bytes))
 $collectorHash=(Get-FileHash -LiteralPath $PSCommandPath).Hash
-$status=if($processes.Count){'PROCESS_RECONCILIATION_REQUIRED'}elseif(@($records | Where-Object {$_.UpdatePending}).Count){'UPDATE_STILL_PENDING_NO_LIVE_TEST'}else{'NO_UPDATE_PAYLOAD_DETECTED_REVIEW_REQUIRED'}
+$selected=if($activeRoot){@($records | Where-Object {$_.Terminal -eq (Join-Path $activeRoot 'terminal64.exe')})}else{$records}
+$status=if($processes.Count){'PROCESS_RECONCILIATION_REQUIRED'}elseif(@($selected | Where-Object {$_.UpdatePending}).Count){'UPDATE_STILL_PENDING_NO_LIVE_TEST'}else{'NO_UPDATE_PAYLOAD_DETECTED_REVIEW_REQUIRED'}
 $record=[ordered]@{
     Observed=(Get-Date).ToString('o');Status=$status;Fingerprint=$fingerprint
     CollectorSHA256=$collectorHash

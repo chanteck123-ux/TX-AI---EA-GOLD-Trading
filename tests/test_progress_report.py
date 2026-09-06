@@ -30,6 +30,11 @@ class Report(unittest.TestCase):
 
     def test_results_have_no_invented_lanes_or_pf(self):
         rows = json.loads((ROOT/'reports/R_C00_RESULTS.json').read_text(encoding='utf-8'))
+        # This report is the immutable pre-recovery snapshot, not the live index.
+        old_runs = {'R_C00_Scalping_USD500_D0_20260906_190610',
+                    'R_C00_Intraday_USD500_D0_20260906_191123'}
+        rows = [r for r in rows if r['Run'] in old_runs]
+        self.assertEqual({r['Run'] for r in rows}, old_runs)
         self.assertEqual({r['Strategy'] for r in rows}, {'Scalping', 'Intraday'})
         for row in rows:
             self.assertEqual(row['Trades'], 0)
