@@ -1,0 +1,14 @@
+{
+  "ReportSHA256": "2318BE3BEC985F54902DECE813B920CD78F8EFB19839229B23694F5CB353145F",
+  "ManifestSHA256": "443B4753137DE6B8D6865CBFD5D82B05D74F378A240D63CA701EC56EC1A6C43F",
+  "Method": "Actual Playwright headless Chrome plus model inspection of desktop/mobile screenshots",
+  "Viewports": [{"Width":1440,"Height":1000,"Status":"PASS"},{"Width":390,"Height":844,"Status":"PASS"}],
+  "PageOverflow": false,
+  "BrokenPrimaryImages": 0,
+  "JavaScriptErrors": 0,
+  "TableCellCountsMatch": true,
+  "VerifiedLocalLinks": 121,
+  "VerifiedFiles": 768,
+  "Screenshots": "reports/visual-qa-final/ (local only)",
+  "Note": "Wide audit tables intentionally scroll within their own containers; not a native EA panel screenshot or trading approval"
+}

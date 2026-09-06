@@ -1,0 +1,24 @@
+{
+  "SourceSHA256": "554B61976A0B04A152C22B33767D264D4B42925B02375702BF69608326946185",
+  "EX5SHA256": "4CAE44BD57FCF18BE6206741DD0FA5BBD130C6AEB03A2D94C99A645F2200106A",
+  "Purpose": "Frozen development-only combined, paired native delay, capital and ATR sensitivity; not OOS",
+  "Cases": [
+    {"ID":"C_C01","Lane":"Combined","Capital":2000,"Delay":0,"Inputs":{"InpIntradayMaxTradesPerDay":"0","InpSwingMaxTradesPerDay":"0","InpIntradayRunner":"true"}},
+    {"ID":"CONTROL_FINAL","Lane":"Combined","Capital":2000,"Delay":10,"Inputs":{"InpIntradayMaxTradesPerDay":"0","InpSwingMaxTradesPerDay":"0"}},
+    {"ID":"C_C01","Lane":"Combined","Capital":2000,"Delay":10,"Inputs":{"InpIntradayMaxTradesPerDay":"0","InpSwingMaxTradesPerDay":"0","InpIntradayRunner":"true"}},
+    {"ID":"CONTROL_FINAL","Lane":"Combined","Capital":2000,"Delay":25,"Inputs":{"InpIntradayMaxTradesPerDay":"0","InpSwingMaxTradesPerDay":"0"}},
+    {"ID":"C_C01","Lane":"Combined","Capital":2000,"Delay":25,"Inputs":{"InpIntradayMaxTradesPerDay":"0","InpSwingMaxTradesPerDay":"0","InpIntradayRunner":"true"}},
+    {"ID":"CONTROL_FINAL","Lane":"Combined","Capital":2000,"Delay":50,"Inputs":{"InpIntradayMaxTradesPerDay":"0","InpSwingMaxTradesPerDay":"0"}},
+    {"ID":"C_C01","Lane":"Combined","Capital":2000,"Delay":50,"Inputs":{"InpIntradayMaxTradesPerDay":"0","InpSwingMaxTradesPerDay":"0","InpIntradayRunner":"true"}},
+    {"ID":"CONTROL_FINAL","Lane":"Combined","Capital":2000,"Delay":-1,"Inputs":{"InpIntradayMaxTradesPerDay":"0","InpSwingMaxTradesPerDay":"0"}},
+    {"ID":"C_C01","Lane":"Combined","Capital":2000,"Delay":-1,"Inputs":{"InpIntradayMaxTradesPerDay":"0","InpSwingMaxTradesPerDay":"0","InpIntradayRunner":"true"}},
+    {"ID":"CAPACITY_500","Lane":"Scalping","Capital":500,"Delay":0,"Inputs":{}},
+    {"ID":"CAPACITY_500","Lane":"Intraday","Capital":500,"Delay":0,"Inputs":{"InpIntradayMaxTradesPerDay":"0","InpIntradayRunner":"true"}},
+    {"ID":"CAPACITY_500","Lane":"Swing","Capital":500,"Delay":0,"Inputs":{"InpSwingMaxTradesPerDay":"0"}},
+    {"ID":"CAPACITY_500","Lane":"Combined","Capital":500,"Delay":0,"Inputs":{"InpIntradayMaxTradesPerDay":"0","InpSwingMaxTradesPerDay":"0","InpIntradayRunner":"true"}},
+    {"ID":"CONTROL_CAPACITY","Lane":"Intraday","Capital":5000,"Delay":0,"Inputs":{"InpIntradayMaxTradesPerDay":"0"}},
+    {"ID":"I_C02_CAPACITY","Lane":"Intraday","Capital":5000,"Delay":0,"Inputs":{"InpIntradayMaxTradesPerDay":"0","InpIntradayRunner":"true"}},
+    {"ID":"I_C02_NEIGHBOR_18","Lane":"Intraday","Capital":2000,"Delay":0,"Inputs":{"InpIntradayMaxTradesPerDay":"0","InpIntradayRunner":"true","InpRunnerATRMultiple":"1.8"}},
+    {"ID":"I_C02_NEIGHBOR_22","Lane":"Intraday","Capital":2000,"Delay":0,"Inputs":{"InpIntradayMaxTradesPerDay":"0","InpIntradayRunner":"true","InpRunnerATRMultiple":"2.2"}}
+  ]
+}

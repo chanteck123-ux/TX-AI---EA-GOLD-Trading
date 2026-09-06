@@ -1,0 +1,16 @@
+{
+  "ConfirmedAt": "2026-09-07T00:00:00+08:00",
+  "Status": "CALENDAR_CONFIRMED_FUTURE_OOS_NOT_STARTED",
+  "OriginalPreregistrationSHA256": "080F12485CF0007492656DCFAFCAE0F880F2D6F129B180C5EF447D61C9760057",
+  "Source": "https://www.fxpro.com/trading-tools/market-holidays",
+  "Method": "Read-only browser UI: select September 7 and September 8, 2026 separately; no instrument filters applied",
+  "September7": "Labor Day: CFDs on Spot Metals GOLD has early closing at 20:25 server time",
+  "September8": "Selected 08 Sep 2026; official page reports no market holidays on this date",
+  "TimeBasis": "FxPro server GMT+2 / GMT+3 DST; schedules subject to broker change",
+  "OfficialStartInclusive": "2026.09.08",
+  "OfficialEndExclusive": "2027.03.08",
+  "CodeOrParametersChanged": false,
+  "FutureQuotesOrResultsViewed": false,
+  "AutomaticLiveTrading": false,
+  "NextAction": "Preserve frozen configurations; validate continuous six months only after data exists, with no profit-based early stopping or retuning"
+}
