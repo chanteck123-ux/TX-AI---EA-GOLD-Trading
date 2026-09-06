@@ -5,6 +5,10 @@ Status: WAITING_MT5_UPDATE_BASELINE_INCOMPLETE. No Champion promotion.
 1. Read the latest user message and local CHECKPOINT.json. Do not resume if paused.
 2. Verify the immutable V4.00 package/source and current source/include/EX5 hashes.
 3. Check task-owned processes and existing reports before starting anything.
+   Run scripts/Inspect-Environment.ps1 for a read-only executable/payload,
+   process and service-state fingerprint. A checkpoint alone is not a live job.
+   UPDATE_STILL_PENDING_NO_LIVE_TEST means there is no tester run to wait on.
+   A changed fingerprint is a reason to inspect, not automatic test permission.
 4. Two FxPro terminal starts stalled in LiveUpdate. Do not repeat the identical
    launch without user confirmation of update completion or a verified change.
    Do not stop/reconfigure the eight existing MetaTester services or elevate.
