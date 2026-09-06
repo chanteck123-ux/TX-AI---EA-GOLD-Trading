@@ -3,3 +3,4 @@ src/*.mq5 -text
 src/*.mqh -text
 tests/*.mq5 -text
 reports/R_C00_BASELINE* -text
+reports/S_C01* -text

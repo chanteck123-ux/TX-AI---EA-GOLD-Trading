@@ -29,7 +29,7 @@ $terminal=Join-Path $terminalRoot 'terminal64.exe'
 if(Get-Process terminal64 -ErrorAction SilentlyContinue | Where-Object {$_.Path -eq $terminal}){throw 'TERMINAL_ALREADY_RUNNING; reconcile before retry'}
 $protected=Join-Path $workspace 'work\baseline-audit-20260905\repository\champion\current\GSM_GOLD_3SOP_EA_V4.00_CURRENT_CHAMPION.zip'
 if((Get-FileHash -LiteralPath $protected).Hash -ne '43AF3C393B6C226211115A1A1DBC70C88F0F07250FA332D22C04C3ED64EB80E2'){throw 'CURRENT_CHAMPION_INTEGRITY_FAIL'}
-if($Lane -eq 'UnitTests'){$Source='tests\RiskMathTests.mq5'}
+if($Lane -eq 'UnitTests' -and -not $PSBoundParameters.ContainsKey('Source')){$Source='tests\RiskMathTests.mq5'}
 $sourcePath=Join-Path $root $Source
 $binary=[IO.Path]::ChangeExtension($sourcePath,'.ex5')
 $sourceHash=(Get-FileHash -LiteralPath $sourcePath).Hash
@@ -40,7 +40,8 @@ if(-not $proof){throw 'NO_MATCHING_COMPILE_PROOF'}
 foreach($property in $proof.Dependencies.PSObject.Properties){
     if((Get-FileHash -LiteralPath $property.Name).Hash -ne $property.Value){throw "COMPILE_DEPENDENCY_CHANGED: $($property.Name)"}
 }
-$run=('R_C00_{0}_USD{1}_D{2}_{3}' -f $Lane,$Capital,$DelayMs,(Get-Date -Format 'yyyyMMdd_HHmmss'))
+$candidate=if([IO.Path]::GetFileNameWithoutExtension($Source) -in @('GSM_FxPro_S_C01','ZoneRankTests')){'S_C01'}else{'R_C00'}
+$run=('{0}_{1}_USD{2}_D{3}_{4}' -f $candidate,$Lane,$Capital,$DelayMs,(Get-Date -Format 'yyyyMMdd_HHmmss'))
 $out=Join-Path $root ('reports\runs\'+$run)
 New-Item -ItemType Directory -Path $out | Out-Null
 $expertName=[IO.Path]::GetFileName($binary)

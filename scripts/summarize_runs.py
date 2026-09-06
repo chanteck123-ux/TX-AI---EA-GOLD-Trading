@@ -169,7 +169,7 @@ def summarize(record_path):
     for snapshot in snapshots:
         own_headers = [p for p in snapshot.parent.glob('*.mqh')]
         expected = {Path(k).name: v for k, v in dependencies.items()
-                    if Path(k).name in {'StrictRisk.mqh', 'RiskMath.mqh'}}
+                    if Path(k).parent == ROOT/'src'}
         if expected and all(any(p.name == name and sha(p) == digest for p in own_headers)
                             for name, digest in expected.items()):
             source_text = read(snapshot)+'\n'+'\n'.join(read(p) for p in own_headers)
