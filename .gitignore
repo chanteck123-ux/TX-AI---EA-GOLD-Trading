@@ -5,3 +5,5 @@ reports/compile/
 *_CHECKPOINT.json
 CHECKPOINT.json
 runtime/
+outputs/
+reports/visual-qa/

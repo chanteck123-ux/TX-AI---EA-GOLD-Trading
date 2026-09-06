@@ -1,6 +1,29 @@
 # Resume FxPro research
 
-Status: R-C01 ENGINEERING VALIDATION COMPLETE; NO NEW CHAMPION.
+Status: APPROVED FXPRO RESEARCH IMPLEMENTATION ACTIVE; NO NEW CHAMPION.
+Read this update BEFORE the historical R-C01 notes below.
+
+2026-09-06 approved plan: USD2000 / 1:100 main; USD500 separate; FxPro only.
+Research branch: research/combined/codex/fxpro-research-delivery.
+Current working source: src/GSM_FxPro_RESEARCH.mq5 plus local headers.
+Four R-C01 USD2000 controls and initial research-OFF runs match exactly.
+S-C02 EMA OFF was actually tested: -54.56 vs +129.18 USD, 83 vs20 positions;
+reject it, keep Scalping EMA ON. I-C01 removes daily cap but still only4 trades.
+W-C01 daily cap removal is tested; do not invent new Swing entry rules.
+
+I-C02 first native integration exposed opening-order-history timing failure.
+Keep its +7.66/1-trade result as INVALID ENGINEERING EVIDENCE, not profitability.
+See research/I-C02_ENGINEERING_FAILURE.md. A bounded recovery wait is now added.
+Latest compile and RUN_CHECKPOINT identify the exact tested binary and active
+queue; source alone does not identify dependencies. Reconcile processes first.
+Pending: corrected runner native fixture, I_C02_FIX1 real ticks/restart,
+final OFF regression, actual combined, native delays, USD500, cost sensitivity,
+report/delivery hashes/GitHub. Future six-month OOS remains unobserved/PENDING.
+Do not publish Champion ZIP. No actual account trading is enabled.
+
+## Historical R-C01 checkpoint (superseded queue status)
+
+Status then: R-C01 ENGINEERING VALIDATION COMPLETE; NO NEW CHAMPION.
 All six preregistered runs and their comparisons are complete. Do not rerun them
 unchanged. Read FEE_CHECKPOINT.json and RUN_CHECKPOINT.json, then check the selected
 runtime process on resume. No task-owned tester job remained at this checkpoint.
