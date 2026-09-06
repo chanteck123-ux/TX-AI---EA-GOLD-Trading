@@ -1,0 +1,82 @@
+{
+  "schema_version": 1,
+  "run_id": "SYNTHETIC_DEMO_ONLY",
+  "data_type": "synthetic",
+  "broker": "SYNTHETIC_NOT_FXPRO",
+  "symbol": "XAUUSD",
+  "symbol_aliases": [],
+  "timezone": "UTC",
+  "account_currency": "USD",
+  "initial_capital": 2000,
+  "ea_version": "SYNTHETIC_NO_EA",
+  "ea_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+  "set_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+  "strategy_scope": "Combined",
+  "contract": {
+    "contract_size": 100,
+    "volume_min": 0.01,
+    "volume_step": 0.01,
+    "point": 0.01,
+    "tick_size": 0.01,
+    "synthetic_only": true
+  },
+  "costs": {
+    "net_profit_includes_costs": true,
+    "commission": "synthetic signed amounts",
+    "spread": "synthetic 12 points; no extra deduction",
+    "slippage": "not modelled"
+  },
+  "risk": {
+    "single_pct": 1,
+    "total_pct": 3
+  },
+  "test": {
+    "start": "2025-01-06T00:00:00+00:00",
+    "end": "2025-01-09T00:00:00+00:00",
+    "tick_model": "synthetic_sparse_5min_quotes_NOT_real_ticks",
+    "delay_ms": 0,
+    "leverage": "synthetic_1:100"
+  },
+  "segment": "development",
+  "prior_use": "synthetic_demo",
+  "market_data_sha256": "993addd4b264131c0df892d738818f769f9430b8d038dba234b74f52c9d730b2",
+  "splits": [
+    {
+      "name": "development",
+      "start": "2025-01-06T00:00:00+00:00",
+      "end": "2025-01-09T00:00:00+00:00"
+    },
+    {
+      "name": "validation",
+      "start": "2025-01-09T00:00:00+00:00",
+      "end": "2025-01-10T00:00:00+00:00"
+    },
+    {
+      "name": "final",
+      "start": "2025-01-10T00:00:00+00:00",
+      "end": "2025-01-11T00:00:00+00:00"
+    }
+  ],
+  "inputs": [
+    {
+      "kind": "trades",
+      "path": "trades.csv"
+    },
+    {
+      "kind": "events",
+      "path": "events.csv"
+    },
+    {
+      "kind": "equity",
+      "path": "equity.csv"
+    },
+    {
+      "kind": "bars",
+      "path": "bars.csv"
+    },
+    {
+      "kind": "ticks",
+      "path": "ticks.csv"
+    }
+  ]
+}
