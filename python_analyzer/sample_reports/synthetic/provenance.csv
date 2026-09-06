@@ -1,0 +1,6 @@
+﻿path,sha256,kind,encoding,row_count,adapter,declared_path,size_bytes
+/workspace/scratch/d4d90d2548bc/gsm-analyzer-work/python_analyzer/examples/synthetic/trades.csv,268497cf98f7dc92e1a31d63bbe4c27b61659a5f4dc2ab78d08f4682a5a4e40e,trades,utf-8,12,auto,trades.csv,2338
+/workspace/scratch/d4d90d2548bc/gsm-analyzer-work/python_analyzer/examples/synthetic/events.csv,233a035350df0c9605722376040a658d5437c82a60fe35a226bb68ca4c18e80b,events,utf-8,24,auto,events.csv,2467
+/workspace/scratch/d4d90d2548bc/gsm-analyzer-work/python_analyzer/examples/synthetic/equity.csv,bcc043eccbe314e645cb352f40705e1f1fbeb81526fe6ce8188cb3acd8327c00,equity,utf-8,25,auto,equity.csv,1180
+/workspace/scratch/d4d90d2548bc/gsm-analyzer-work/python_analyzer/examples/synthetic/bars.csv,f815f570aca8da9559f36bd2a4b139d6f495644a9f6d8bcef5150c206844cf6f,bars,utf-8,600,auto,bars.csv,54266
+/workspace/scratch/d4d90d2548bc/gsm-analyzer-work/python_analyzer/examples/synthetic/ticks.csv,b4f255a2bc444e1177a91989e537a2ada01ea5a6f65cbbd54c716f26f8df7af4,ticks,utf-8,600,auto,ticks.csv,43845
