@@ -1,0 +1,10 @@
+﻿strategy,stage,reason,count,unit
+Intraday,CANDIDATE,SETUP_PRESENT,4,事件记录数；非独立候选转化率
+Intraday,GATE,RISK_LIMIT,1,事件记录数；非独立候选转化率
+Intraday,GATE,SOP_PASS,3,事件记录数；非独立候选转化率
+Scalping,CANDIDATE,SETUP_PRESENT,4,事件记录数；非独立候选转化率
+Scalping,GATE,RISK_LIMIT,1,事件记录数；非独立候选转化率
+Scalping,GATE,SOP_PASS,3,事件记录数；非独立候选转化率
+Swing,CANDIDATE,SETUP_PRESENT,4,事件记录数；非独立候选转化率
+Swing,GATE,RISK_LIMIT,1,事件记录数；非独立候选转化率
+Swing,GATE,SOP_PASS,3,事件记录数；非独立候选转化率
