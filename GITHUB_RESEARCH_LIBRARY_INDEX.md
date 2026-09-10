@@ -1,5 +1,8 @@
 # GSM GOLD 3-SOP EA GitHub Research Library Index
 
+> 2026-09-10 导航更新：本文件仍只维护外部研究知识。全部自有资料见 [记忆导航](research-memory/README_CN.md)；Champion 的历史与后续研究状态见 [当前状态](research-memory/STATE_CN.md)。下文 2026-08-31 的 NONE / 目录不存在说明保留为历史快照，不能据此推断今天的文件状态。
+
+
 ## Storage rule
 
 This index stores **external GitHub research knowledge only**. It does not define GSM SOP, and it does not store copied external source code or failed Candidate ZIPs.
