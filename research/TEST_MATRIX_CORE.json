@@ -1,0 +1,13 @@
+{
+  "SourceSHA256": "554B61976A0B04A152C22B33767D264D4B42925B02375702BF69608326946185",
+  "EX5SHA256": "4CAE44BD57FCF18BE6206741DD0FA5BBD130C6AEB03A2D94C99A645F2200106A",
+  "Purpose": "Final corrected OFF controls, runner candidate and restart; historical development only",
+  "Cases": [
+    {"ID":"CONTROL_FINAL","Lane":"Scalping","Capital":2000,"Delay":0,"Inputs":{}},
+    {"ID":"CONTROL_FINAL","Lane":"Intraday","Capital":2000,"Delay":0,"Inputs":{"InpIntradayMaxTradesPerDay":"0"}},
+    {"ID":"CONTROL_FINAL","Lane":"Swing","Capital":2000,"Delay":0,"Inputs":{"InpSwingMaxTradesPerDay":"0"}},
+    {"ID":"CONTROL_FINAL","Lane":"Combined","Capital":2000,"Delay":0,"Inputs":{"InpIntradayMaxTradesPerDay":"0","InpSwingMaxTradesPerDay":"0"}},
+    {"ID":"I_C02_FIX2","Lane":"Intraday","Capital":2000,"Delay":0,"Inputs":{"InpIntradayMaxTradesPerDay":"0","InpIntradayRunner":"true"}},
+    {"ID":"I_C02_FIX2_RESTART","Lane":"Intraday","Capital":2000,"Delay":0,"Inputs":{"InpIntradayMaxTradesPerDay":"0","InpIntradayRunner":"true","InpRunnerRestartProbe":"true"}}
+  ]
+}
