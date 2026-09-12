@@ -1,5 +1,7 @@
 # 黄金 EA记忆与资料导航
 
+当前计划以 main 的中英文文件为唯一当前入口。下方 2026-09-10 文件数量及分支提交仍是历史盘点快照，旧计划的固定链接只供追溯。
+
 更新：2026-09-10 UTC。Codex 依据用户授权自主管理这个资料入口。
 
 | 入口 | 内容 |
@@ -18,5 +20,5 @@
 | GSM 原始规则 | [SOP 目录](../gsm-sop/README.md) |
 | 外部研究知识 | [现有外部资料索引](../GITHUB_RESEARCH_LIBRARY_INDEX.md) |
 | 优先参考来源 | [来源约束](../GITHUB_PRIORITY_SOURCES.md) |
-| Champion 制文档 | [中文总体规则](../FINAL_CHAMPION_ITERATION_SYSTEM_CN.md) |
+| 当前 EA 研发计划 | [中文版](../FINAL_CHAMPION_ITERATION_SYSTEM_CN.md) · [English](../FINAL_CHAMPION_ITERATION_SYSTEM.md)；2026-09-12 完整替换旧总计划 |
 | 历史交付 | [安装与身份记录](../champion/current/INSTALL_MT5_CN.md) |

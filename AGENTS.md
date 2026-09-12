@@ -3,8 +3,9 @@
 ## 读取顺序
 
 1. 读取 `research-memory/README_CN.md` 和 `research-memory/STATE_CN.md`，确认当前任务所属项目与最新证据。
-2. 读取 `docs/GSM_EA_RESEARCH_BRAIN_CN.md`，应用用户已确认的研究规则与 GitHub 自主管理授权。
-3. 根据 `research-memory/BRANCH_INDEX_CN.md`、`FILE_INDEX_CN.md` 找到正确分支与文件，再读任务所需原始材料。
+2. EA 旧版升级研究使用当前 `FINAL_CHAMPION_ITERATION_SYSTEM_CN.md`（English: `FINAL_CHAMPION_ITERATION_SYSTEM.md`）。两份文件于 2026-09-12 按用户指定风险更新稿完整替换；旧总规范、历史分支计划及旧 §29 不再作为当前计划。保存或翻译计划本身不启动文中的开发、编译、回测或实盘步骤。
+3. 读取 `docs/GSM_EA_RESEARCH_BRAIN_CN.md` 作为通用协作参考；项目具体路线、风险研究与验收以用户当前任务和上述已选计划为准。
+4. 根据 `research-memory/BRANCH_INDEX_CN.md`、`FILE_INDEX_CN.md` 找到正确分支与文件，再读任务所需原始材料。固定历史链接是证据入口，不恢复旧计划效力。
 
 ## 已有授权
 
@@ -18,4 +19,4 @@
 
 ## EA 特定边界
 
-更改三策略引擎前读取 `gsm-sop/`。主仓库外部资料索引只存外部研究，不能改写 SOP。V4.00 历史交付身份与新研究的合格 Champion 状态按当前状态文档区分；整理不替换 `champion/current/`。Scalping 的具体保护边界以当前研究分支规则为准，不把通用出场建议直接套入。
+更改三策略引擎前读取 `gsm-sop/`。主仓库外部资料索引只存外部研究，不能改写 SOP。V4.00 历史交付身份与新研究的合格 Champion 状态按当前状态文档区分；整理不替换 `champion/current/`。Scalping 的具体保护边界以当前已选计划及已确认 SOP 为准，不把通用出场建议直接套入。

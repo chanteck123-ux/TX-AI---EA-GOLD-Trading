@@ -1,2243 +1,680 @@
-# GSM GOLD 3-SOP EA — 最终 Champion、优化制度、可选 AI 研究制度与程序治理总规范
+# FINAL_CHAMPION_ITERATION_SYSTEM — 当前 EA 研发计划（中文）
 
-## 0. 文件权威与当前假设
+[English](FINAL_CHAMPION_ITERATION_SYSTEM.md)
 
-本文件是 GSM GOLD 3-SOP EA 的**最高层开发、优化、验证、研究、程序治理与 Champion 管理规范**。
+保存更新：2026-09-12（Asia/Kuala_Lumpur）。本版按用户明确要求，以其提供的完整风险更新计划替换原中英文总计划。
 
-若旧文档的指标顺序、Candidate 命名、Combined 假设、Research 处理方式、AI 协作方式或程序流程与本文件冲突，以本文件为准。
-
-当前运行假设：已经存在经过正式验证的 `REAL CURRENT CHAMPION`：
-
-```text
-SCALPING M5 CHAMPION
-INTRADAY M30 CHAMPION
-SWING CHAMPION
-3-SOP COMBINED CHAMPION
-```
-
-从此以后：
-
-```text
-CHAMPION = 唯一正式基准
-Candidate VS Champion = 唯一晋级方式
-```
-
-最终评价顺序固定为：
-
-```text
-#1 净利润 Net Profit USD
-#2 最大净值回撤 Max Equity Drawdown
-#3 盈利因子 Profit Factor
-#4 交易数 Trade Count
-#5 胜率 Win Rate
-```
-
-`Reject` 目标必须为 0。
-
-`Max Equity Drawdown` 具有风险否决权：不能只因为 Net Profit 更高，就自动接受不可接受的回撤、保证金压力或爆仓风险。
+- 中文依据：`EA_旧版升级研究计划&codex重新研究开发计划&研究开发计划指南_CN_RISK_UPDATED.md`；SHA256：`88265662399010a383aa334dc2752fa1cba12bba912eff63f571fd8075251c66`。
+- 下方 12 个主章节完整保留源文件内容、数字、约束和历史状态；唯一正文链接调整是把相对“来源与基线审阅”地址改为已存在的固定历史提交地址。英文为逐段完整译本；发生翻译歧义时以本中文源文为准。
+- 旧中英文总计划的内容已从当前版本替换；旧分支计划、原总规范及“§29”等引用仅作历史出处，不再恢复其旧计划效力。当前项目按本计划明确条款、已确认 SOP 及用户后续明确要求处理。
+- 原文的 2026-09-06 / 2026-09-07 日期、“本次”、已完成复选框和未执行说明属于源文件当时记录。本次仅保存、翻译和同步入口，没有实施 Candidate、编译 EA、运行 MT5 回测、变更 Champion 或启用实盘。计划中的执行指令不会因保存文件而自动启动。
+- 原文涉及旧源码、教材、报告及合约规格的描述没有在本次重新验证。需要执行时核对当前项目、证据和环境，不按历史 commit 强制回退。
+- 旧版恢复依据：[替换前中文版本](https://github.com/chanteck123-ux/TX-AI---EA-GOLD-Trading/blob/b0b36546f6b938e7d64be38b9c832f24d019efeb/FINAL_CHAMPION_ITERATION_SYSTEM_CN.md)；只供历史追溯。
 
 ---
 
-# 1. 最高层系统架构
+# GSM GOLD 3-SOP EA 旧版升级研究开发计划（完整整合版·风险分档研究更新）
 
-```text
-GSM SOP 权威基础
-        ↓
-3 个独立策略引擎
-  ├─ SCALPING M5
-  ├─ INTRADAY M30
-  └─ SWING D1/H4/M30
-        ↓
-可选优化 / 研究模块
-        ↓
-信号 / 证据 / 置信度
-        ↓
-风险引擎 Risk Engine
-        ↓
-组合管理 Portfolio Manager
-        ↓
-执行引擎 Execution Engine
-        ↓
-MT5
-        ↓
-真实 Tick Real Tick
-        ↓
-训练区间 TRAIN / 样本外 OOS
-        ↓
-FxPro / Tradona
-        ↓
-需要时：Walk Forward / Stress Test
-        ↓
-交易审计 + 漏单审计
-        ↓
-Candidate VS Champion
-        ↓
-REJECT / KEEP CURRENT CHAMPION / RESEARCH FURTHER / NEW CHAMPION
-```
+原计划日期：2026-09-06。整合更新：2026-09-07。风险研究更新：2026-09-07。执行主体：Windows Codex。
 
-GSM SOP 决定“什么是有效交易逻辑”。
+**已选择开发路线：在现有 GSM Gold 3-SOP EA 项目内升级研究，不另建脱离 SOP 的新策略 EA。**
 
-GitHub、外部 EA、AI 或其它 Research 只负责提供“值得测试的 Candidate Idea”。任何 Research 逻辑未经独立验证，不得直接进入 Champion。
+状态：**完整计划已加入风险分档研究；R13、R24、R36均未在本次实现、编译或回测。本次没有修改EA源码、提交GitHub、启用实盘或产生新晋级结果。**
 
----
+原计划记载的制定依据为主仓库 `eb74280c53e474e0dbcb0c10c491705689922416`、V4.00 交付包、四本上传教材与六张课堂截图。沿用现有顶层架构，以及§11完整报告验收要求：完整交易数>100、原生 MT5 Recovery>3仍为本轮明确硬门槛，优先于旧文档较宽松的同项规则。原计划配套证据索引为 [来源与基线审阅](https://github.com/chanteck123-ux/TX-AI---EA-GOLD-Trading/blob/e634b2b966244ecc7f0aa38ef3d76ba01b0f6369/research/github/SOURCE_AND_BASELINE_AUDIT_2026-09-06_CN.md)。
 
-# 2. 四条 Champion 主线
+本文件在 `EA_RESEARCH_DEVELOPMENT_PLAN_2026-09-07_CN_MERGED.md` 完整整合版上更新；其基础仍为用户上传的 `EA_RESEARCH_DEVELOPMENT_PLAN_2026-09-06_CN(1).md` 及已合入的新方法补充稿。本次按用户“加进去”的要求，将1%/3%默认对照、2%/4%及3%/6%独立风险实验写入§2、§3、任务队列、风险接口、测试、交付和Codex指令。不是另交一份补充稿，也不是把正式风险默认改成3%/6%。
 
-系统永久维护四条独立 Champion Line：
+**本次权限界线：允许在独立研究分支和离线回测中比较已登记风险档位；不授权实盘放宽风险、增加本金、改SOP、缩止损或自动切换高风险档。** §11的净利、回撤、完整交易数、Recovery等验收门槛保留；仅同步其中连续亏损条款的风险档位口径，详见§3.2–§3.7。
 
-1. `SCALPING_CHAMPION`：M5 Scalping 单独开启。
-2. `INTRADAY_CHAMPION`：M30 Intraday 单独开启。
-3. `SWING_CHAMPION`：D1/H4/M30 Swing 单独开启。
-4. `COMBINED_CHAMPION`：三个已锁定单策略 Champion 重新组合后的完整 3-SOP EA。
+> 资料状态：正文保留的源码观察、历史数值及教材映射来自原计划记录，不表示本次重新核验了仓库或回测。配套来源审阅、顶层规范、源码和报告未随这份MD一并打包；执行时须到当前项目核对。当前项目可能已有后续提交，不因本文件列出历史commit就强制回退。
 
-任何时候必须可以明确回答：
+## 1. 本轮决定
 
-```text
-Current Scalping Champion = ?
-Current Intraday Champion = ?
-Current Swing Champion = ?
-Current Combined Champion = ?
-```
+**SOP核心策略保持不变；在旧版项目内重新研究配套方法，允许提出建议、修改候选代码与参数、测试、分析并迭代。** 先把基线、风险和进场定义校准，再逐项改善有效机会与持仓管理，不把“加更多指标”设为首要任务。
 
-同一条 Champion Line 禁止同时存在两个正式 Champion。
+旧版和Champion用于核对实现、复现历史与同风险比较，不作为新方法必须照搬的模板。既有指标不被永久禁用；可以提出新的表达、用途或组合，但必须说明与旧实验有什么实质差别。不能把新研究理解成删除SOP，也不能让新模块独立产生没有SOP资格的订单。
 
-每个 Champion 必须可追踪：
+优先顺序：
 
-- Version
-- Source SHA256
-- SET SHA256
-- Broker
-- Symbol
-- Capital
-- Risk Budget
-- Actual Risk
-- Real Tick Period
-- OOS Period
-- Metrics
-- Final Report
+1. 核对四条 Champion 的源码、SET、原始报告与适用门槛；以R13重建默认对照，另登记R24/R36的USD500可执行性与风险实验，每档保留同风险对照。
+2. 先研究已在本仓源码发现的区域选择偏差：Scalping 综合评分选区、有效旧区持续占位。
+3. 审计 First Touch、进场时机、被过滤机会与执行失败，找出可复现的问题。
+4. Intraday 与 Swing 独立研究趋势的辅助证据、进场位置和利润保护；Scalping 保留锁定的触发时机及固定 SL/TP。
+5. 将到区路径、行情状态、反转内部质量、相对尺度、执行审计和盈利回吐保护接入原P0–P6队列；先观察，再逐个启用有明确权限的候选，详见§12。
+6. 单策略胜出后，再作为 Combined Candidate 做组合回测。
 
-Combined 盈利不能证明三个 Engine 都优秀；三个 Engine 单独盈利也不能证明 Combined 一定优秀。
+目标顺序沿用：Net Profit USD → Max Equity DD → PF → 完整交易数 → Win Rate。回撤有否决权；盈利、频率与胜率的改善均需同风险、扣成本证据。
 
----
+## 2. 基准和范围
 
-# 3. Candidate 命名与来源记录
-
-标准 Candidate ID：
-
-| 策略线 | Candidate | 建议 Branch |
+| 基准线 | 包内标识 | 本轮用途 |
 |---|---|---|
-| Scalping | `S-C01` | `research/scalping/<origin>/<topic>` |
-| Intraday | `I-C01` | `research/intraday/<origin>/<topic>` |
-| Swing | `W-C01` | `research/swing/<origin>/<topic>` |
-| Combined | `C-C01` | `research/combined/<origin>/<topic>` |
+| Scalping M5 | SC-S20 | 原样保存，作为历史对照 |
+| Intraday M30 | IN-I32 | 原样保存，作为历史对照 |
+| Swing D1/H4/M30 | SW-W37 | 原样保存，作为历史对照 |
+| 三策略组合 | C-C01 / V4.00 | 独立组合基准，不能用单策略利润相加代替 |
 
-`origin` 建议：
+原计划记录：源码与 ZIP 哈希已核对，包内历史 MetaEditor 编译日志、MT5 报告、SET/INI 与审计 CSV 已被读取，但当时没有在该环境重新运行 MT5。本次仅更新计划，未重做上述核验。保留现有 Champion 的历史称谓、身份记录与原始证据；对最新 mandate 的适用状态单列 `REVALIDATION_REQUIRED`。历史名称不自动代表通过本轮门槛，缺少可核验证据的当前比较对象标“待验证基准”，不自行改写历史，也不按文件名授予新Champion。
 
-```text
-user
-standard
-codex
-claude
-single-ai
-hybrid
-external
-github
-```
-
-Candidate 来源必须记录，例如：
-
-```text
-USER_SOP_OPTIMIZATION
-STANDARD_RESEARCH
-CODEX
-CLAUDE
-SINGLE_AI
-CODEX_CLAUDE
-EXTERNAL_RESEARCH
-GITHUB_RESEARCH
-```
-
-来源不改变判定标准。
-
-Research ID 只代表研究记录，不代表源码已经实现、编译通过或回测通过。
-
----
-
-# 4. GSM SOP 与 Research 必须严格分离
-
-GSM SOP 属于：
-
-```text
-AUTHORITATIVE STRATEGY FOUNDATION
-权威策略基础
-```
-
-Research 属于：
-
-```text
-EXPERIMENTAL / EXTERNAL RESEARCH SOURCE
-实验 / 外部研究来源
-```
-
-Research 可以：
-
-- 优化 GSM SOP 的程序实现
-- 找出 SOP 实现错误
-- 找错误进场
-- 找漏单 / 不开单原因
-- 建立 Candidate
-- 提出新 Entry / Exit 假设
-- 提出指标、风控、执行、Portfolio 模块
-
-但不能：
-
-```text
-Research Idea
-→ 直接修改正式 Champion
-```
-
-必须：
-
-```text
-Research Idea
-↓
-Candidate
-↓
-Candidate VS Champion
-↓
-公平验证
-↓
-真正胜出
-↓
-才允许晋级
-```
-
-如果 Candidate 改变 GSM Base SOP，必须明确记录：
-
-```text
-GSM_BASE_SOP_CHANGED = YES / NO
-```
-
----
-
-# 5. 三个策略引擎
-
-## 5.1 SCALPING M5
-
-核心流程：
-
-```text
-M5
-↓
-按 CURRENT PRICE DISTANCE 找当前最近有效 S&D
-↓
-Fresh Zone
-↓
-Departure
-↓
-First Touch / Retest
-↓
-Reversal Confirmation
-↓
-Entry
-↓
-SL / TP
-↓
-Exit
-```
-
-关键：
-
-```text
-Nearest Zone = 当前价格距离最近的有效 Zone
-不是最近形成时间
-```
-
-BUY：
-
-```text
-Valid Demand
-+
-First Touch / Retest
-+
-Bullish Reversal
-```
-
-SELL：
-
-```text
-Valid Supply
-+
-First Touch / Retest
-+
-Bearish Reversal
-```
-
-可研究：
-
-- Candle Quality
-- Spread Cost Gate
-- Entry Quality
-- Real Tick Robustness
-- Regime Filter
-- ATR
-- Market Structure
-- Liquidity
-- Execution Timing
-- Cost-aware Exit
-
-不设人为每日硬上限；禁止为了增加 Trades 制造无效交易。
-
----
-
-## 5.2 INTRADAY M30
-
-Base / Benchmark：
-
-```text
-M30 Market Direction
-↓
-Nearest Valid M30 Supply / Demand
-↓
-Define Zone
-↓
-Wait Price Enter Zone
-↓
-Entry
-↓
-SL
-↓
-TP
-↓
-Management
-```
-
-原则：积极寻找有效机会；一天 0 单允许；禁止为了每天 1 单强迫交易。
-
-以下全部只能先作为 Candidate：
-
-- M15 Confirmation
-- M5 Confirmation
-- Any 2 of 3
-- 3 of 3
-- EMA
-- BOS
-- CHoCH
-- FVG
-- Order Block
-- Liquidity
-- Candlestick Confirmation
-- ATR Stop
-- Structure Stop
-- Session Filter
-- VWAP
-- Volume
-- AI Score
-
-全部必须 A/B Test，并与 Current Intraday Champion 公平比较。
-
----
-
-## 5.3 SWING
-
-Swing 正式 Base 以当前已验证 Champion Code / Authoritative SOP 为准；Research 不得凭空重写 Swing Base。
-
-研究范围可以包括：
-
-- D1 Framework
-- H4 Trend
-- Support / Resistance
-- Supply / Demand
-- Pullback
-- Candlestick
-- Market Structure
-- SMC
-- Trailing / Protection
-- ATR
-- Fibonacci
-
-未被研究的另外两个 Strategy Champions 必须锁定；源码与参数不得顺手修改。
-
----
-
-# 6. Candidate VS Champion 公平测试协议
-
-每个 Candidate 原则上只改变一个主要变量，并且只开启对应 Engine。
-
-Champion 与 Candidate 必须尽量保持：
-
-- Same Broker / Data Source
-- Same Symbol
-- Same Capital
-- Same Leverage
-- Same Real Tick Period
-- Same Tester Model
-- Same Spread / Commission
-- Same Slippage Assumption
-- Same Risk Budget
-- Same Position Sizing Rules
-- Same Session Conditions
-- Same Base Execution Settings
-
-每个 Broker 固定输出：
-
-| Version | Net USD | Max Equity DD | PF | Trades | Win Rate | Reject |
-|---|---:|---:|---:|---:|---:|---:|
-
-同时输出：
-
-- Delta Net
-- Delta DD
-- Delta PF
-- Delta Trades
-- Delta Win Rate
-
-Training 用于选参数；OOS 只用于验证。
-
-读取 OOS 结果后，不得回头调参，再继续把同一段称为 OOS。
-
-## 6.1 风险标准化比较
-
-禁止：
-
-```text
-Candidate 用更高 Risk / Lot
-Champion 用更低 Risk / Lot
-然后只比较 Net Profit
-```
-
-如果风险不同，必须先做：
-
-```text
-RISK-NORMALIZED COMPARISON
-```
-
-并报告：
-
-- Requested Risk
-- Actual Risk
-- Lot
-- SL Distance
-- Margin Usage
-
----
-
-# 7. Champion 核心评价制度
-
-正式优先级固定：
-
-```text
-1. Net Profit USD
-2. Max Equity Drawdown
-3. Profit Factor
-4. Trade Count
-5. Win Rate
-```
-
-辅助必须读取：
-
-- Return % on Initial Capital
-- Max Equity Drawdown USD
-- Max Equity Drawdown %
-- Balance Drawdown（只作辅助背景）
-- Relative Drawdown
-- Average Win
-- Average Loss
-- Realized Average R:R
-- Expected Payoff / Expectancy
-- Break-even Win Rate
-- Recovery Factor
-- Long Win Rate / Short Win Rate
-- BUY Performance / SELL Performance
-- Maximum Consecutive Losses
-- Spread / Commission / Slippage Sensitivity
-- OOS Performance
-- Walk Forward Stability
-- Parameter Robustness
-- Market Regime Performance
-
-Win Rate 不得独立评价。
-
-## 7.1 Net Profit 必须同时换算资金回报率
-
-不能只看绝对 Net Profit。
-
-每份报告必须计算：
-
-```text
-Return % = Net Profit USD / Initial Capital × 100
-```
-
-大资金账户赚到小金额，策略可能在统计上仍然为正，但商业意义可能很弱。因此必须同时报告 `Net Profit USD` 和 `Return %`。
-
-这不会改变正式 Champion 排名。`Net Profit USD` 仍然是 #1，`Return %` 是强制解释指标。
-
-## 7.2 Profit Factor 解释规则
-
-Profit Factor 必须结合交易样本数、DD、OOS、成本和参数稳定性一起解释。
-
-建议诊断参考区间：
-
-```text
-PF < 1.00      = 测试样本内亏损
-PF 1.00-1.20   = 边际 / 偏弱
-PF 1.20-1.50   = 可用，但必须继续验证稳健性
-PF 1.50-2.00   = 若样本充足且 OOS 支持，属于较强
-PF > 2.00      = 很强，但必须更认真检查样本数和过拟合
-PF > 2.50-3.00 = 不自动判定无效，但进入高强度审查
-```
-
-高 PF **本身不能证明过拟合**。当它同时伴随以下情况时，才需要高度怀疑：
-
-- 交易数非常少
-- 只在某一段有利行情特别强
-- OOS 明显崩溃
-- 参数轻微变化就失效
-- Spread / Commission / Slippage 设置不现实
-- Future Data / Look-ahead
-- BUY / SELL 严重单边依赖
-
-需要时标记：
-
-```text
-PF_OVERFIT_SUSPECT
-```
-
-## 7.3 Max Equity Drawdown 是主要回撤指标
-
-必须优先看 `Equity Drawdown`，不能只看 Balance Drawdown，因为浮亏是真实经济风险。
-
-强制输出：
-
-```text
-Max Equity DD USD
-Max Equity DD %
-Max Balance DD USD / %（辅助）
-```
-
-建议诊断参考区间：
-
-```text
-<= 15%     = 理想 / 控制良好
-15%-30%    = 警戒区
-> 30%      = 高风险区
-> 50%      = 严重资本风险区
-```
-
-这些是风险诊断区间，不是所有策略一刀切的固定 Pass/Fail，除非 Champion mandate 明确指定硬阈值。
-
-`Max Equity DD` 继续拥有风险否决权。
-
-如果 Balance 与 Equity 差距过大，必须标记：
-
-```text
-BALANCE_EQUITY_DIVERGENCE
-HIDDEN_FLOATING_LOSS_RISK
-```
-
-## 7.4 Trade Count 必须按策略类型判断
-
-禁止对所有策略统一硬性要求 `>100 trades`。
-
-建议证据目标：
-
-```text
-Scalping：最好 > 200；能做到 300-1000+ 更好
-Intraday：最好 > 100
-Swing：不要机械要求 > 100；应延长年份和市场状态
-```
-
-样本不足必须标记：
-
-```text
-LOW_SAMPLE_SIZE
-LOW_SAMPLE_WINRATE
-```
-
-样本越少，就越需要更长区间、更多 Regime、OOS、Walk Forward 和双 Broker 验证。
-
-## 7.5 Recovery Factor
-
-```text
-Recovery Factor = Net Profit / Maximum Drawdown Amount
-```
-
-建议解释：
-
-```text
-< 1.0   = 弱
-1.0-2.0 = 边际
-2.0-3.0 = 良好
-> 3.0   = 强
-```
-
-`Recovery Factor > 3` 是理想目标，但**不是所有策略统一硬门槛**。必须和 DD、样本数、OOS、策略类型一起判断。
-
-## 7.6 Expected Payoff 与成本覆盖
-
-Expected Payoff 必须为正，而且必须能承受真实交易成本。
-
-特别是 Scalping，必须报告：
-
-```text
-Expected Payoff / Trade
-Average Spread Cost / Trade
-Average Commission / Trade
-Estimated Slippage Cost / Trade
-Total Estimated Cost / Trade
-Edge-to-Cost Ratio
-```
-
-可行时：
-
-```text
-Edge-to-Cost Ratio = Expected Payoff / Estimated Total Cost per Trade
-```
-
-成本缓冲越大越好。对于成本敏感策略，可以把 3x-5x 成本缓冲作为强参考目标，但不能一刀切，因为 Broker、Symbol 和成本单位不同。
-
-需要时标记：
-
-```text
-EXPECTED_PAYOFF_TOO_SMALL
-SPREAD_COST_EDGE_TOO_SMALL
-```
-
-## 7.7 Balance 与 Equity 完整性检查
-
-如果 Balance 曲线很漂亮，但 Equity 多次大幅跌到 Balance 下方，必须检查：
-
-- 长时间扛大浮亏
-- Grid
-- Martingale
-- 延迟实现亏损
-- 只靠 Recovery 才退出
-- 接近 Margin Call
-
-Balance 数据漂亮但 Equity 压力严重的策略，在没有完整 Tail Risk 证据前不得通过 Champion 审核。
-
-```text
-TEST PASS
-≠
-BEAT CHAMPION
-```
-
-Candidate 自己赚钱，不等于可以替换 Champion。
-
-如果结果只是接近：
-
-```text
-KEEP CURRENT CHAMPION
-```
-
-只有证据明确：
-
-```text
-Candidate > Current Champion
-```
-
-才允许：
-
-```text
-PROMOTE TO NEW CHAMPION
-```
-
----
-
-# 8. Win Rate / Expectancy / 实际盈亏比验证标准
-
-MT5 中的胜率通常显示为：
-
-```text
-Profit Trades (% of total)
-```
-
-Win Rate 是诊断指标，不是独立证明策略质量的指标。高胜率可以同时伴随负 Expectancy、差盈亏比、隐藏 Tail Risk，或严重单边市场依赖。
-
-## 8.1 MT5 必须同时读取的指标
-
-每个 Champion 与 Candidate 报告，Win Rate 至少必须和以下字段一起读取：
-
-```text
-Profit Trades (% of total)
-Average profit trade
-Average loss trade
-Long Positions (won %)
-Short Positions (won %)
-Maximum consecutive losses
-```
-
-若报告提供，也应保留 Maximum consecutive wins、Gross Profit / Gross Loss，以及 BUY / SELL 各自交易数。
-
-## 8.2 核心公式
-
-```text
-Expectancy =
-(Win Rate × Average Win)
--
-(Loss Rate × abs(Average Loss))
-```
-
-```text
-Realized Average R:R =
-Average Profit Trade
-/
-abs(Average Loss Trade)
-```
-
-定义：
-
-```text
-R = Average Win / abs(Average Loss)
-```
-
-理论 Break-even Win Rate：
-
-```text
-Break-even Win Rate = 1 / (1 + R)
-```
-
-例子：
-
-```text
-1:1 → 50.0%
-2:1 → 33.3%
-3:1 → 25.0%
-```
-
-理论 R:R 和实际平均 R:R 如果不同，必须分别报告。Champion 评价更重视真实成交后的 Realized R:R，而不是名义 SL/TP。
-
-## 8.3 不同策略类型的胜率解释
-
-以下只作诊断参考，不是统一硬性晋级阈值：
-
-| 策略类型 | 常见胜率表现 | 常见收益结构 | 主要风险 |
-|---|---:|---:|---|
-| Trend / Breakout | 通常较低，例如 35%-45% | 常见 2:1、3:1 或更高 | 连亏、Regime 依赖 |
-| Scalping / Range | 通常较高，例如 65%-80% | 常见接近 1:1 或更低 | 点差、手续费、滑点、延迟 |
-| Grid / Martingale | 可能 85%-95%+ | 小赢很多次、偶尔一次大亏 | Tail Loss / Margin Failure |
-
-非常高的胜率不等于好。90%+ 胜率但严重负偏态的系统，可能明显差于 40%-50% 胜率但 Realized R:R 和 Expectancy 健康的系统。
-
-## 8.4 BUY / SELL 分方向审计
-
-每个 Engine 报告应分别输出：
-
-```text
-BUY Trades
-BUY Win Rate
-BUY Net Profit
-BUY Profit Factor
-SELL Trades
-SELL Win Rate
-SELL Net Profit
-SELL Profit Factor
-```
-
-BUY / SELL 差异过大时，先调查而不是自动否决。必须判断原因是否来自：
-
-- Market Regime
-- Sample 太少
-- Strategy Logic 不对称
-- Coding Defect
-- 单边结构依赖
-
-需要时标记：
-
-```text
-ONE_SIDE_DEPENDENCY
-```
-
-## 8.5 连续亏损压力测试
-
-`Maximum Consecutive Losses` 必须与 `Max Equity DD` 和 Risk per Trade 一起看。
-
-强制压力序列：
-
-```text
-Historical Max Consecutive Losses = N
-Stress Case 1 = N + 2
-Stress Case 2 = N + 4
-```
-
-检查：
-
-- projected DD
-- free margin
-- margin level
-- position sizing survival
-- recovery requirement
-- account ruin risk
-
-标记：
-
-```text
-LOSS_STREAK_RISK
-```
-
-## 8.6 Win Rate 强制诊断 Flag
-
-有证据时使用：
-
-```text
-HIGH_WINRATE_BAD_RR
-NEGATIVE_EXPECTANCY
-ONE_SIDE_DEPENDENCY
-LOSS_STREAK_RISK
-SPREAD_COST_EDGE_TOO_SMALL
-LOW_SAMPLE_WINRATE
-HIDDEN_TAIL_RISK
-```
-
-## 8.7 三个 Engine 的不同重点
-
-```text
-SCALPING
-→ Win Rate + Realized R:R + Expected Payoff + Spread + Commission + Slippage + Delay
-
-INTRADAY
-→ 中等 Win Rate 可以接受，只要 Net + DD + PF + Expectancy 强
-
-SWING
-→ 低 Win Rate 可以接受，只要 Average Win 明显大于 Average Loss，且 DD 可控
-```
-
-## 8.8 Champion 详细报告强制字段
-
-```text
-Strategy
-Net Profit USD
-Return %
-Max Equity DD USD
-Max Equity DD %
-Profit Factor
-Recovery Factor
-Trades
-Win Rate
-Average Win
-Average Loss
-Realized Average R:R
-Break-even Win Rate
-Expected Payoff / Expectancy per Trade
-Maximum Consecutive Losses
-Long Win Rate
-Short Win Rate
-BUY Net / PF
-SELL Net / PF
-Reject
-Diagnostic Flags
-```
-
-最高层正式排名仍然不变：
-
-```text
-Net Profit USD
-→ Max Equity Drawdown
-→ Profit Factor
-→ Trade Count
-→ Win Rate
-```
-
-新增字段用于判断这个排名结果是否稳健、真实、具有经济意义。
-
-## 8.9 MT5 Strategy Tester 稳健性测试规范
-
-正式 Champion 验证必须使用：
-
-```text
-Every tick based on real ticks
-```
-
-除非某个测试明确标记为低精度诊断，否则不能用低精度模型冒充正式 Real Tick 证据。
-
-Execution Robustness 必须测试现实交易摩擦。根据 Tester / Broker 能力，不能只用 `No Delay`，应加入多个 Delay / Slippage 场景。
-
-参考 Delay 场景可以包括：
-
-```text
-10 ms
-25 ms
-50 ms
-```
-
-或者采用 Broker 实际更合理的随机延迟区间。这些只是压力情景，不是固定常数。
-
-每个情景必须报告变化：
-
-- Net Profit
-- Max Equity DD
-- PF
-- Trades
-- Win Rate
-- Expected Payoff
-- Reject / execution errors
-
-需要时标记：
-
-```text
-DELAY_SLIPPAGE_FRAGILE
-```
-
-## 8.10 Train / OOS 规则
-
-Training 数据只用于模型和参数选择。
-
-OOS 数据只用于验证。
-
-示例：
-
-```text
-Train: 较早区间
-OOS: 后面完全未参与调参的区间
-```
-
-一旦读取 OOS 结果后再调参，就必须建立新实验；该已看过的区间不能继续被称为同一个 Candidate 的 untouched OOS。
-
-需要时标记：
-
-```text
-OOS_COLLAPSE
-OOS_CONTAMINATION
-```
-
-有潜力的 Candidate 还应根据需要继续做：Market Regime、Walk Forward、Cost Stress、Execution Stress、Parameter Neighborhood Stability，以及 Monte Carlo / Trade-order Randomization。
-
----
-
-# 9. Combined Candidate 与 Portfolio 规则
-
-任何 New Engine Champion 都必须触发新的 Combined Candidate。
-
-Combined 必须重新编译并重新做双经纪商 Real Tick，不得把三个独立净利润相加，当作组合结果。
-
-Portfolio Audit 至少检查：
-
-- Concurrent Positions
-- Margin Usage
-- Aggregate Risk
-- Same-direction Exposure
-- Opposite-signal Conflict
-- Hedging / Netting
-- Capital Allocation
-- Position Sizing
-- Drawdown Overlap
-- Strategy Correlation
-- Portfolio Interaction
-
-组合变差时：
-
-- 新 Engine Champion 继续保留。
-- Current Combined Champion 继续锁定。
-- 只建立新的 `C-Cxx` 研究 Portfolio Risk。
-- 不回写已经锁定的 Engine 逻辑。
-
----
-
-# 10. 外部 EA / GitHub / AI Research 边界
-
-外部 EA、GitHub 项目、截图参数、第三方模型解读、AI 新想法全部属于 Research Layer。
-
-外部来源流程：
-
-```text
-Source / Screenshot / Repository / AI Hypothesis
-        ↓
-Evidence Classification
-        ↓
-Read License / Source if available
-        ↓
-Separate FACT from HYPOTHESIS
-        ↓
-Clean-room Specification
-        ↓
-Single-module Candidate
-        ↓
-Compile
-        ↓
-Real Tick
-        ↓
-Train / OOS
-        ↓
-FxPro + Tradona
-        ↓
-Walk Forward / Stress Test if promising
-        ↓
-Candidate VS Current Champion
-```
-
-没有源码时，参数名不能被脑补成内部状态机。
-
-研究来源包括：
-
-- `docs/EXTERNAL_EA_TEST_2_41_RESEARCH_CN.md`
-- `docs/GSM_GOLD_AI_RESEARCH_LAB_CN.md`
-- `docs/GSM_GOLD_SINGLE_AI_RESEARCH_LAB_CN.md`
-
----
-
-# 11. 外部 EA 2.41 提炼出的研究模块
-
-以下全部属于 Research Candidate，不是正式 GSM SOP，也不是默认 Champion 模块。
-
-## 11.1 快速不利移动保护 Fast Adverse Move Guard
-
-目标：处理“刚进场后很短时间内就迅速证明错误”的情况，而不是机械等待固定 SL。
-
-禁止直接复制固定 `120秒 / 50点 / 20点`。
-
-Candidate 示例：
-
-```text
-MAE = 入场后的最大不利移动
-
-IF
-MAE > K × ATR
-AND elapsed_time <= FastWindow
-AND adverse_momentum_is_strengthening
-THEN
-    Freeze same-direction new entries
-    Set state = FAST_ADVERSE_MOVE
-```
-
-Scalping、Intraday、Swing 的参数必须分别测试。
-
-## 11.2 熔断后恢复 Recovery / Resume State Machine
-
-```text
-NORMAL
-  ↓
-FAST_ADVERSE_MOVE
-  ↓
-FREEZE
-  ↓
-RECOVERY_CONFIRM
-  ↓
-NORMAL
-```
-
-状态要求：
-
-- 状态尽量少
-- 状态变化必须日志化
-- 记录 trigger reason / timestamp / price / strategy / direction
-- MT5 / VPS 重启后必须可重建
-
-## 11.3 方向篮子风险 Direction Basket Risk
-
-统一计算：
-
-```text
-BUY_Basket_Floating_PnL
-SELL_Basket_Floating_PnL
-BUY_Total_Open_Risk
-SELL_Total_Open_Risk
-BUY_Total_Lots
-SELL_Total_Lots
-```
-
-一个方向达到风险上限时，可以研究只冻结该方向；另一个方向仍需经过 Portfolio Conflict Check。
-
-## 11.4 每日账户级熔断 Daily Account Circuit Breaker
-
-可以研究：
-
-- DailyProfitLimitUSD
-- DailyLossLimitUSD
-- DailyLossPercent
-- DailyEquityDrawdownPercent
-
-必须明确：
-
-- Balance / Equity 基准
-- Reset 时间
-- Broker Server Time
-- 是否只阻止 New Entry
-- Existing Positions 是否继续管理
-- 何时恢复
-
-## 11.5 可选证据投票 Optional Evidence Voting
-
-禁止把所有指标做成巨大 AND。
-
-```text
-Core GSM SOP = Trade Eligibility
-
-Optional Evidence = Quality Evidence
-  ├─ EMA
-  ├─ ADX
-  ├─ DI
-  ├─ ATR Regime
-  ├─ CCI
-  ├─ FVG
-  ├─ Candle
-  ├─ S&D Quality
-  └─ Market Structure
-
-Evidence Score / Votes
-        ↓
-Pass / Reject / Risk Multiplier / Position Size Tier
-```
-
-原则：
-
-```text
-SOP 决定有没有交易资格
-Optional Evidence 只衡量证据强弱
-```
-
-## 11.6 ADX + DI 分工
-
-- ADX = Trend Strength
-- +DI / -DI = Directional Evidence
-
-## 11.7 ATR 标准化 FVG Quality
-
-```text
-ValidFVG = FVG_Size >= ATR × MinFvgAtrRatio
-```
-
-FVG 永远属于 Optimization Layer；未经 Real Tick A/B 证明，不得替代 GSM Supply/Demand Base Zone。
-
----
-
-# 12. Point / Pip / Price / Money 换算规则
-
-禁止硬编码：
-
-```text
-100 points 永远 = 固定 X 美元
-```
-
-必须读取 Broker 实际规格：
-
-```text
-SYMBOL_POINT
-SYMBOL_DIGITS
-SYMBOL_TRADE_TICK_SIZE
-SYMBOL_TRADE_TICK_VALUE
-SYMBOL_TRADE_CONTRACT_SIZE
-SYMBOL_VOLUME_MIN
-SYMBOL_VOLUME_MAX
-SYMBOL_VOLUME_STEP
-SYMBOL_TRADE_STOPS_LEVEL
-SYMBOL_TRADE_FREEZE_LEVEL
-```
-
-程序必须记录：
-
-- Raw Points
-- Price Distance
-- Lot
-- Requested Risk USD / %
-- Actual Risk USD / %
+本轮研发边界继续采用：FxPro；Codex；USD500；三策略独立OR；Scalping固定SL/TP、不做保本/追踪/分批/runner；没有人为每日交易目标；每个新订单都必须有独立合格Setup。**风险默认对照为R13：单笔预算≤1%、组合预算≤3%；本次新增R24：≤2%/≤4%，R36：≤3%/≤6%，仅供预先登记的独立回测研究。** 档位冻结于每个run，账户级组合预算不是每个引擎各领一份。禁止马丁、网格、因浮亏而补仓，以及用“置信度100”解释加大风险；不得因不开单、连亏或回测未过而临时上调档位。
 
----
-
-# 13. EA 程序主流程与 Research Hook
-
-## 13.1 OnInit
-
-```text
-读取 Broker / Symbol / Account Mode
-↓
-读取 Contract Specs
-↓
-加载 Champion Inputs
-↓
-初始化 3 Strategy Engines
-↓
-初始化 Optional Evidence Modules
-↓
-初始化 Risk Engine
-↓
-初始化 Direction Basket Risk
-↓
-初始化 Daily Circuit Breaker
-↓
-恢复 Recovery / Freeze State
-↓
-初始化 Portfolio Manager
-↓
-初始化 Execution + Audit
-```
+旧 Aggressive/Balanced/Conservative、非农挂单 EA 和 Lewis EA 的规则不自动并入本项目。课堂截图的 OANDA/FXCM/Pepperstone 是教学图源，不能改写 FxPro 测试范围。
 
-## 13.2 OnTick
+### 2.1 需要同步的规则记录
 
-```text
-更新市场数据
-↓
-更新 Account / Equity / Margin
-↓
-更新 BUY / SELL Basket Risk
-↓
-检查 Daily Account Circuit Breaker
-↓
-管理 Existing Positions
-↓
-检查 Fast Adverse Move Guard
-↓
-更新 Recovery / Freeze State
-↓
-运行 SCALPING ENGINE
-↓
-运行 INTRADAY ENGINE
-↓
-运行 SWING ENGINE
-↓
-收集 Core GSM Signals
-↓
-可选 Evidence Score / Votes
-↓
-处理 Signal Conflict
-↓
-Portfolio Risk Check
-↓
-Broker / Spread / Cost / Margin Check
-↓
-Execution
-↓
-记录 Order + State + Block Reason
-↓
-更新 Dashboard / Audit
-```
+顶层 `FINAL_CHAMPION_ITERATION_SYSTEM_CN.md` §29 与后续研究记录存在未同步口径：
 
-所有 Research Hook 必须可以单独关闭，以便随时重新跑纯 Current Champion Baseline。
+| 项目 | 顶层 §29 | 2026-09-06 研究记录 | 本计划处理 |
+|---|---|---|---|
+| 券商 | FxPro + Tradona | FxPro only | 当前工作先做 FxPro；不擅自扩大券商范围，不宣称已过双券商门槛 |
+| 样本 | 按策略判断，Swing可少于100但需更强证据 | 每条单策略与组合均>100完整交易 | 用户本轮已明确：>100为硬门槛，建议200–500；Swing不能豁免，详见§11 |
+| Recovery | >3为目标，未达到需解释与更多证据 | >3列作项目门槛 | 用户本轮已明确：原生MT5 Recovery>3为硬门槛，并另报净值口径，详见§11 |
+| DD | >30%否决，15%–30%严格审查 | 相同风险方向 | 执行；不能只引用§7通用参考而漏读§29 |
+| 风险研究 | 旧历史风险按原文件保留 | 1%/3%原研究约束 | 用户本次新增R24、R36离线实验；R13保留默认。每档独立登记，不把实验许可改写为正式风险授权 |
 
----
+本轮用户补充已解决样本数与Recovery两项，不再为这两项等待确认。P0登记本次要求并核对其余未同步事项，特别是券商范围；当前仍先做FxPro。最终晋级前完成其余适用规范核对，资料映射、静态审计、复现实验继续推进。
 
-# 14. Trade Audit 与 Missed Opportunity Audit
+### 2.2 已选路线、SOP锁定与可修改范围（2026-09-07合并）
 
-所有新模块必须留下 `Blocked Reason / Trigger Reason`。
+本次已经选择“旧版升级研究”。继续使用当前项目的三个SOP引擎、风险与执行架构，不新开一条用独立突破、反转或新闻信号替代SOP的策略路线。允许在研究分支重做外围方法，不代表授权实盘交易、扩大资金或覆盖正式版。
 
-建议至少包括：
+执行前建立 `SOP_LOCK` 和 `IMPLEMENTATION_DIFF`，按每个引擎登记：原始SOP、当前已锁实现/SET、历史实验差异、允许扩展点、特征可用时刻，以及代码是否符合已确认要求。§4列出的原始SOP参数与历史Champion参数差异全部保留，不自动互换。
 
-```text
-FAST_ADVERSE_FREEZE
-RECOVERY_NOT_CONFIRMED
-BUY_BASKET_RISK
-SELL_BASKET_RISK
-DAILY_LOSS_CIRCUIT
-DAILY_EQUITY_DD_CIRCUIT
-EVIDENCE_SCORE_LOW
-ADX_DI_REJECT
-FVG_QUALITY_LOW
-PF_OVERFIT_SUSPECT
-BALANCE_EQUITY_DIVERGENCE
-HIDDEN_FLOATING_LOSS_RISK
-LOW_SAMPLE_SIZE
-LOW_RECOVERY_FACTOR
-EXPECTED_PAYOFF_TOO_SMALL
-DELAY_SLIPPAGE_FRAGILE
-OOS_COLLAPSE
-OOS_CONTAMINATION
-```
+| 修改类别 | 本轮处理 | 关键边界 |
+|---|---|---|
+| 实现修复 | 可在独立候选中修复，并先提供错误复现与回归测试 | 必须能证明代码偏离已确认SOP；不能把改变定义包装成修bug |
+| 配套方法研究 | 可自主提出、实现和测试；默认先OBSERVE，再在允许位置ACTIVE | 不重写SOP方向、区域资格、首触、触发时机或已锁定初始SL/TP |
+| 旧附加模块清理 | 可以逐项关闭、替换或改写非SOP研究模块 | 先分类、保留开关和回滚；不能连同必要风险/执行保护一起删除 |
+| SOP变更建议 | 登记为 `SOP_CHANGE_PROPOSAL`，本轮不实施 | 冲突方案可提出理由与预期检验，但不能默认为已授权 |
+| 风险档位实验 | 在独立候选中测试R13/R24/R36及预登记拆分对照 | 只改变已登记预算变量；SOP、初始SL/TP、资金、合约和其他安全保护不变，不与新信号方法同时调优 |
 
-必须区分：
+原始SOP是否合格与最终是否执行分开记录。扩展位置允许的过滤实验可以减少订单，但不能把被过滤的合格Setup改记为“不符合SOP”。涉及立即进场的策略，不得以辅助为名增加等待；Scalping禁止保本、追踪、分批和runner的边界继续执行。
 
-```text
-NO VALID SETUP
-VALID SETUP BLOCKED BY RESEARCH MODULE
-PROGRAM MISSED VALID SETUP
-```
+有冲突的部分只做资料核对、只读日志和不触碰冲突的工程工作，其余已明确允许的实验继续推进。不得为凑交易数放宽SOP、缩短止损、临时上调当前run的风险档位或取消安全门控。R24/R36是本次明确新增的独立研究方案，不是R13失败后自动放宽的后门；可先登记后测试，结果不好也不得再临时提高上限。
 
-否则无法判断 Candidate 是提高质量，还是单纯减少交易。
+## 3. 先解决 USD500 与真实止损风险的可行性
 
----
+历史组合 SET 使用固定0.01手、组合风险10%，另有小账户例外单笔上限5%输入，但该测试关闭了小账户Profile；固定手数路径并未始终强制单笔1%。FxPro组合25笔初始SL风险全部超过1%；独立Scalping/Intraday的总风险SET还是20%。这些成绩不能与新1%/3%预算直接按净利润排名。Tradona历史 Swing 报告还记录过一笔9.93%的初始SL风险；必须逐笔核对，不能只看输入里的 `RiskPercent=1`。
 
-# 15. AI 研究制度是可选择的，不是强制流程
+先执行以下两组基础工作；新方法研究再按§3.1建立独立的配套清理对照：
 
-AI Research 不属于 GSM Base SOP，也不是 Champion 必须经过的固定流程。
+- **历史复现组 H0：** 原源码、原 SET、原日期、原成本，目的仅验证历史结果可复现，不接实盘。
+- **预算统一组 B0：** 在单独研究分支先建立R13（1%/3%）默认对照，只做必要风控改动并记录差异。R24/R36复制相同参考逻辑，另建带 `risk_profile_id` 的同档对照，使用同一风险引擎与明确登记的手数模式；后续策略Candidate必须与同档、同手数规则的B0/K0/修复基准成对比较。这不是自动新Champion。
 
-正式参数：
+每个实际 Setup 先计算：
 
-```text
-AI_RESEARCH_MODE = OFF
-AI_RESEARCH_MODE = SINGLE_AI
-AI_RESEARCH_MODE = DUAL_AI
-```
+`最小手数止损损失 = abs(OrderCalcProfit(方向, 品种, 最小手数, 入场价, SL))`
 
-无论选择哪一种模式，以下内容都不能改变：
+`f_single = SingleRiskCapPct / 100`（R13=0.01，R24=0.02，R36=0.03）
 
-- GSM SOP 权威地位
-- Candidate VS Champion 制度
-- Fair Test Protocol
-- Real Tick
-- Train / OOS
-- FxPro / Tradona
-- Risk Rules
-- Portfolio Audit
-- Champion Evaluation Order
+`所需最低净值_单笔 = (最小手数止损损失 + 明确成本缓冲) / f_single`
 
-AI 只决定：
+上述只是单笔最低净值条件；组合剩余预算、保证金和全部执行检查仍需通过，不能据此保证某笔或某组合必可成交。
 
-```text
-研究与审查由谁、用什么方式完成
-```
+`允许手数 = 向下对齐券商 volume step(扣除成本预留后的可用预算 / 单位手数止损损失)`
 
-AI 不决定最终 Champion。
+成本随手数变化时用同一成本模型迭代下调；在SL与手数按tick size/volume step标准化后，最终重新验算“止损价差损失 + 成本缓冲 ≤ 单笔预算且≤组合剩余预算”。计算失败或超额即拒绝，不能仅凭原始公式商值放行。
 
----
+OrderCalcProfit 给出账户货币的估算盈亏；佣金、持仓成本和滑点缓冲必须另列，不能假定已全部包含。[官方定义](https://www.mql5.com/en/docs/trading/ordercalcprofit)
 
-# 16. AI_RESEARCH_MODE = OFF
+以历史 CoursePip=0.10、Scalping SL80 为例，价差是8.00；如果合约确为每手100盎司、最小0.01手，则仅止损价差损失约USD8，已超过USD500的1%预算USD5。这个例子是单位说明，实际判断必须读取当时合约与报价。
 
-不使用 Single-AI / Dual-AI Research Lab。
+若最低手数已超过本次run冻结的单笔预算，输出 `MIN_LOT_OVER_RISK` 并跳过；若单笔可行但组合剩余预算不足，另记 `PORTFOLIO_RISK_FULL`。逐档报告哪些策略/SL在USD500不可执行；不能偷偷增资、换合约、缩短SOP止损或在同一run中放宽风险。可记录小合约/资金门槛供以后选择，本轮不自动切换。某档B0无法形成足够有效交易，标该档 `CAPITAL_CONSTRAINT`；这不能证明策略好坏，也不阻止另外已登记的R24/R36独立实验。
 
-流程：
+### 3.1 H0 / B0 / K0 / Candidate：分清改善来自哪里
 
-```text
-GSM SOP
-↓
-Current Champion
-↓
-Trade Audit / Missed Audit
-↓
-Research Hypothesis
-↓
-Candidate
-↓
-Compile
-↓
-Standard Code Audit
-↓
-MT5 Real Tick
-↓
-Train / OOS
-↓
-FxPro / Tradona
-↓
-Candidate VS Champion
-```
+沿用原计划的H0、B0含义，不能采用补充稿中同名但不同含义的B0/B1。新增 `K0` 仅是研究对照标签，不占用已注册Candidate ID。
 
-此模式不强制：
+| 对照 | 保留或改变什么 | 可以说明什么 |
+|---|---|---|
+| H0 历史复现 | 原源码、原SET、原风险和成本 | 仅复现历史；不能与不同风险档位候选直接按净利判胜 |
+| B0 同风险基准 | 在H0对应版本上，只增加已列明的风控适配；R13默认，R24/R36另建同档对照 | 同档执行可行性与原逻辑表现；旧研究扩展尚未被默认清理 |
+| K0 配套清理对照 | 从B0或明确记录的修复基准出发，保留锁定SOP、必要安全和执行规则，逐项关闭非SOP扩展 | 清理旧附加限制的影响；不等于新方法有优势 |
+| 单模块Candidate | 冻结对应K0/修复基准后，仅增加一个主要研究变量 | 新方法的边际影响；与同一 `reference_id` 对照 |
 
-- Single-AI Self Review
-- Single-AI Red Team
-- Dual-AI Cross Review
+先登记 `OPTIONAL_MODULE_INVENTORY`，明确每个旧模块属于SOP、研究附加、风险、执行还是持仓管理。无法归类的模块不静默关闭。K0可以先作为只读核心信号审计层；未完成权限核对或资金可行性检查时，不能把它当作可成交的新基准。
 
-但仍必须满足代码正确、公平测试、风险审计和 Champion 晋级标准。
+从B0到K0的每个行为变化单列差异和测试。实现修复、配套清理与新增方法不混在同一个收益归因里；如果P1/P2先修复了实现，应冻结带修复记录的新 `reference_id`，后续成对实验都使用它，并保留未修复对照。
 
----
+所有可执行B0/K0/Candidate均遵守USD500、相同真实风险计算规则，以及该run预先冻结的风险档位。未声明档位时默认R13；R24/R36及拆分对照必须显式声明、独立保存SET/INI。信号研究可另输出R口径或虚拟回放，必须标 `COUNTERFACTUAL_ONLY`；不可成交信号不能计入MT5完整交易数，也不能借虚拟结果绕过该档 `CAPITAL_CONSTRAINT`。没有复现原比较对象时标 `BASELINE_NOT_REPRODUCED`，继续诊断但不得宣称已经打赢它。
 
-# 17. AI_RESEARCH_MODE = SINGLE_AI
+`B0-R13 / K0-R13 / B0-R24 / K0-R24 / B0-R36 / K0-R36`是对照角色加风险标签，不替代既有Candidate ID。所有结论附 `reference_id + risk_profile_id + sizing_mode + source_hash`；例如NR01的R24候选应与相同R24参考版本比较，不能拿R13少交易的净利作为“新方法胜出”证据。
 
-可以选择：
+### 3.2 新增风险研究档位：保留低风险对照，不预设高风险胜出
 
-```text
-Codex
-或
-Claude Code
-```
+本节依据用户在上一轮风险讨论后明确要求“加进去”的授权。**允许测试，不等于选定实盘档位。** 数字是研究预算，不是收益目标、亏损保证或每天的交易额度。
 
-架构不绑定品牌，统一角色：
+| 档位 | 单笔计划风险上限 | 账户组合计划风险上限 | 当前净值USD500时的单笔/组合预算 | 用途 |
+|---|---:|---:|---:|---|
+| R13 默认对照 | 1% | 3% | USD5 / USD15 | 保留原约束；量化最低手数和组合限制挡住多少有效机会 |
+| R24 候选A | 2% | 4% | USD10 / USD20 | 研究适度提高预算后的可执行性和回撤代价 |
+| R36 候选B | 3% | 6% | USD15 / USD30 | 研究更宽预算下的机会、并发、连亏和尾部损失 |
 
-```text
-SINGLE AI RESEARCH ENGINEER
-```
+预算每次按**当时账户净值**计算，不固定使用最初USD500。上限不要求每笔用满；同一Setup在0.01手已满足研究目标时，不因R36允许3%就主动加到最大手数。风险比例不能因浮亏、连亏、胜率高或“100%置信度”临时变化。
 
-它可以同时承担：
+三个SOP独立扫描、独立生成Setup，但共用账户级组合预算。R36并不代表三条策略各有6%；也不保证三个策略可以同时开仓。新订单仍需独立SOP资格、可用预算、保证金和执行条件。
 
-- Strategy Researcher
-- MQL5 Developer
-- Code Reviewer
-- Debugger
-- Backtest Analyst
-- Risk Reviewer
-- Optimization Researcher
+正式/部署默认参数保持R13不变。研究参数在独立目录和分支保存，明确标 `RESEARCH_ONLY`；本次不发单、不修改实盘SET。候选实现须在回测入口核对运行环境，非Tester环境不得启用本轮研究高风险配置；日后模拟盘或实盘使用另行审批，不由本计划自动授予。当前只是这一保护的实施要求，尚未写入代码或验证。
 
-单 AI 最大风险：
+### 3.3 USD500、最低手数与原止损：逐笔可行性例子
 
-```text
-自己开发
-+
-自己审查
-+
-自己宣布自己正确
-```
+以下仅沿用原计划的历史单位示例：假设合约为每手100盎司、最低0.01手、CoursePip=0.10；**不是本次读取到的FxPro当前合约规格，不用于自动回写参数。** 实际执行必须读取对应品种的真实合约、报价、tick size和volume step。原SOP与历史SET差异仍按§4保留。
 
-因此启用 `SINGLE_AI` 时，必须强制分阶段：
+| 历史示例 | 原止损价格距离 | 0.01手止损价差损失 | 占USD500 | R13单笔 | R24单笔 | R36单笔 |
+|---|---:|---:|---:|---|---|---|
+| Scalping历史SL80 | USD8 | USD8 | 1.6% | 超额 | 成本缓冲≤USD2时才可能通过 | 成本缓冲≤USD7时才可能通过 |
+| Intraday历史SL120 | USD12 | USD12 | 2.4% | 超额 | 超额 | 成本缓冲≤USD3时才可能通过 |
+| Swing实际结构SL | 按Setup计算 | 按合约计算 | 逐笔计算 | 逐笔核验 | 逐笔核验 | 逐笔核验 |
 
-```text
-PHASE 1 — RESEARCHER
-↓
-PHASE 2 — DEVELOPER
-↓
-PHASE 3 — SELF CODE REVIEWER
-↓
-PHASE 4 — RED TEAM REVIEWER
-↓
-PHASE 5 — MT5 DATA ANALYST
-↓
-PHASE 6 — CHAMPION JUDGE
-```
+表中只检查单笔风险条件；不代表一定能开仓。成本缓冲不能为通过门槛而设为0；佣金、费用、已有点差影响和新增压力成本按§11去重处理。
 
-每个阶段必须重新读取事实、代码和测试结果，不得只继承上一阶段的主观结论。
+同一时刻、两笔都准备新开且仍处初始SL状态时，以上Scalping与Intraday的价差风险合计约USD20，即500美元的4%，尚未加额外成本缓冲。R13组合预算USD15不足；R24也不能让该Intraday通过单笔USD10上限；R36在额外成本、保证金和现有敞口允许时才可能容纳两笔。拆分对照“单笔3%/组合4%”在价差风险上已用尽USD20预算，若另有正的成本预留仍不通过。持仓已有盈利、SL变化或净值变化时，必须重新按同一风险口径计算，不能一直相加旧的初始数值。
 
-## 17.1 Single-AI Research Phase
+坚持单笔1%时，USD8和USD12价差损失分别对应至少USD800、USD1,200净值；这只是**不计成本缓冲的单笔数学下限**，不是建议增加本金，也不保证组合可执行。改变杠杆不改变本例在合约、手数及入场/SL价格不变时的价差损失；保证金与止损预算分别核算。
 
-首先只研究，不改 Production。
+### 3.4 控制实验：分清“能多开单”和“手数加大”
 
-必须输出：
+先固定SOP、信号方法、初始SL/TP、持仓管理、日期、成本、合约与执行模型；不要同时调新评分、风险档位及退出参数。每个阶段预先冻结手数模式和实验数量，不把所有组合无限搜索。
 
-```text
-Research ID
-AI Model
-Engine
-Current Champion
-Observed Problem
-Evidence
-Hypothesis
-Expected Benefit
-Expected Risk
-Files Likely Affected
-SOP Impact
-Experiment Plan
-```
+**阶段一：预算门控可行性（RG）。** 对每个独立Setup使用各档相同的目标手数规则，首轮可用读取到的券商最小合法手数，而不是硬编码所有账户都是0.01。每档仍执行严格风险和保证金检查，超额就拒绝。此阶段主要回答：哪些原合格机会被新增预算允许执行、哪些仍被拦截；不是强行让每个档位用满风险。不得让3%档比1%档自动多用几倍手数，却只报告“机会改善”。
 
-## 17.2 Single-AI Development Phase
+**阶段二：实际手数管理（SZ）。** 在可执行性清楚后，固定同一手数算法、相同目标风险规则及其余参数，分别运行风险档位。若研究“按各档上限倒推手数”，明确登记为另一组仓位配置实验，报告手数变化与新增机会两部分影响；不得与阶段一混在一张表声称信号优势。固定手数和动态手数分表、同口径配对，不偷偷切换复利模式。
 
-```text
-Champion Snapshot
-↓
-Create Candidate Branch / Candidate File
-↓
-只修改实验需要内容
-↓
-保留其它测试条件
-```
+主报告必须列R13、R24、R36。由于主档之间同时改变单笔与组合上限，增加以下最多三项拆分对照，预先登记后才运行，仍不超过本次3%/6%的研究边界：
 
-要求：
-
-- 最小必要修改
-- 修改原因可追踪
-- 不偷偷改 Risk / Lot
-- 不顺便重写无关逻辑
-- 不覆盖 Current Champion
-
-## 17.3 Single-AI Self Code Review
-
-至少检查：
-
-1. 重复进场
-2. 漏单
-3. 未收盘 K 线
-4. Look-ahead
-5. CopyBuffer / CopyRates
-6. Timeframe
-7. Position / Order / Deal
-8. Magic Number
-9. Hedging / Netting
-10. SL / TP normalization
-11. Stops Level / Freeze Level
-12. Spread / Slippage
-13. Risk / Lot calculation
-14. Volume min / max / step
-15. 是否误改其它 Engine
-16. 是否改变 GSM Base SOP
-17. 是否加入隐藏风险
-18. 是否存在明显 Overfitting 路径
-19. Broker Reject / Retcode 是否完整记录
-20. Recovery / Freeze State 是否可重建
-
-Review 结果只允许：
+| 对照ID | 单笔/组合上限 | 主要比较与目的 |
+|---|---|---|
+| D23 | 2% / 3% | R13→D23只改变单笔；D23→R24只改变组合 |
+| D33 | 3% / 3% | D23→D33只改变单笔，观察原组合预算的瓶颈 |
+| D34 | 3% / 4% | R24→D34只改变单笔；D33→D34、D34→R36分别只改变组合 |
 
-```text
-PASS
-或
-FAIL + FIX LIST
-```
+这些ID是研究矩阵标签，不是新增正式运行档，也不占用旧Candidate编号。首轮每种冻结手数模式最多六种预算组合（含三个主档）；R13资金受限不需要先“调到PASS”才能进行R24/R36。若某条拆分对照因不可执行没有足够样本，保留结果，不为了画完整曲线制造订单。
 
-Critical Finding 未关闭不得进入下一阶段。
+先在同一参考逻辑上做预算实验，再冻结某个研究档位，在该档内测试新配套方法。若随后修改参考代码或信号方法，必须另建实验并重跑相关同档对照，不能沿用旧风险实验成绩替新代码背书。各档都运行S-only、I-only、W-only与实际Combined，不把独立利润相加代替组合测试。
 
-## 17.4 Single-AI Red Team
+### 3.5 风险计算、组合预留与超额处理
 
-Red Team 必须假设：
+下面是接口与公式规范，不是已完成的MQL5代码：
 
 ```text
-Candidate 可能是错的
+risk_profile_id       = R13 / R24 / R36 / 预登记拆分对照
+single_cap_fraction   = SingleRiskCapPct / 100
+portfolio_cap_fraction= PortfolioRiskCapPct / 100
+single_budget_usd    = CurrentEquity × single_cap_fraction
+portfolio_budget_usd = CurrentEquity × portfolio_cap_fraction
+remaining_budget_usd = max(0, portfolio_budget_usd - AccountRiskUsedAndReserved)
+new_setup_budget_usd = min(single_budget_usd, remaining_budget_usd)
 ```
-
-主动检查：
 
-- 利润是否来自更高 Risk
-- DD 是否恶化
-- 是否只适合某一年
-- 是否牺牲质量换 Trades
-- 是否只优化 BUY 或 SELL
-- Spread 是否过度敏感
-- Slippage 是否过度敏感
-- 参数轻微变化是否崩溃
-- 是否降低真实市场可执行性
-- 是否只是 Backtest Noise
-- 是否存在不可解释利润
-- 是否使用未来数据
+`AccountRiskUsedAndReserved`统一纳入已识别持仓、挂单和在途请求；账户已有其他EA或手动单不能静默忽略。按§6区分初始SL风险、当前净值回落至SL的风险和成本缓冲，预登记实际用于门控的口径；各档必须相同。敞口风险取非负值，不用锁定浮盈或简单多空净额抵消来制造额外预算；同向黄金多策略同时止损的可能性单独压力测试。相同订单的已成交、未成交余量和在途记录对账去重，不能重复占用或提前释放。
 
-Red Team 不是证明 Candidate 好，而是尽量把它推翻。
+手数向下对齐volume step，并最终重算SL价差损失、成本和组合剩余预算。低于最小手数不能向上取整后伪称合规；高风险档也不例外。单笔3%只允许该笔在当前净值预算内，组合6%也不是一张6%订单的许可。
 
----
+每次发送前由Portfolio串行预留预算；失败明确、部分成交、未知请求按服务器状态结算/保留，禁止三引擎各自读取旧余额同时放行。预算或数据不明时停止增加新风险，仍管理所属已有持仓，不把风险不足解释为必须强平所有订单。
 
-# 18. AI_RESEARCH_MODE = DUAL_AI
+市场移动、净值下降、跳空或成交偏差可能在持仓期间造成预算超额。记录 `RISK_BUDGET_BREACH`、发生原因及实际金额；冻结新风险，继续各引擎原有且允许的管理，不擅自放宽SL、加仓或临时提高档位。若要新增强制减仓/退出政策，另注册管理实验并核对SOP权限，不混在风险档位对比里。任何档位都不承诺实际损失绝不超过上限。
 
-Codex 与 Claude Code 都视为完整的：
+### 3.6 连亏与组合风险压力：收益不能掩盖代价
 
-```text
-MQL5 Research Engineer
-+
-MQL5 Developer
-+
-Code Reviewer
-+
-Backtest Analyst
-+
-Strategy Researcher
-```
+沿用§11要求检验6笔、8笔、历史最长连亏及更不利场景；每档使用自己的冻结预算与实际权益路径，纳入费用、最小手数、滑点、同向持仓和保证金，不只做百分比口算。
 
-禁止固定为：
+下表只是数学示例：假设没有并发持仓，每笔恰好亏损当时净值的r，且没有超额滑点或额外损失：
 
-```text
-Codex 只开发
-Claude 只审查
-```
+`连续n次损失后的净值降幅 = 1 - (1-r)^n`
 
-默认协议：先独立研究，再交换结论，避免相互锚定。
+| 每笔实际损失r | 连亏6笔的累计降幅 | 连亏8笔的累计降幅 |
+|---|---:|---:|
+| 1% | 5.85% | 7.73% |
+| 2% | 11.42% | 14.92% |
+| 3% | 16.70% | 21.63% |
 
-```text
-CURRENT CHAMPION
-        │
-        ├───────────────┐
-        │               │
-        ▼               ▼
-     CODEX            CLAUDE
-   独立研究            独立研究
- Hypothesis A       Hypothesis B
-        │               │
-        ▼               ▼
- Candidate A        Candidate B
-        │               │
-        └──────┬────────┘
-               ▼
-            交叉审查
-               │
-               ├─ Keep A
-               ├─ Keep B
-               ├─ Reject both
-               └─ Build Hybrid Candidate C
-                       ↓
-                 MetaEditor Compile
-                       ↓
-                 MT5 Real Tick
-                       ↓
-              Candidate VS Champion
-```
+这不是EA回测结果、未来连亏预测或风险概率；实际未用满档位时不等于表中数值。固定最小手数下，净值下降会使同一止损金额占比提高，之后可能被拒单，不能假设可以连续按理论小数手成交。
 
-Hybrid Candidate 必须说明每个变化来自哪里，禁止把 A+B 所有想法一次性堆叠，导致无法归因。
-
----
-
-# 19. 统一 Code Review 与量化审计清单
-
-不论 Research 来源，最低审查清单：
-
-1. 是否重复进场
-2. 是否漏单
-3. 是否错误使用未收盘 K 线
-4. 是否 Look-ahead
-5. CopyBuffer / CopyRates 是否正确
-6. Timeframe 是否正确
-7. Position / Order / Deal 是否混淆
-8. Magic Number 是否隔离
-9. Hedging / Netting 是否兼容
-10. SL / TP normalization 是否正确
-11. Stops Level / Freeze Level 是否满足 Broker 规格
-12. Spread / Slippage 是否正确处理
-13. Risk / Lot calculation 是否正确
-14. Volume min / max / step 是否正确
-15. 是否误改其它 Engine
-16. 是否改变 GSM Base SOP；若改变是否披露
-17. 是否存在 Overfitting
-18. 是否为了利润偷偷提高风险
-19. 是否改变测试条件美化结果
-20. 是否存在无法解释利润
-21. Broker Reject / Retcode 是否完整记录
-22. Freeze / Recovery 状态是否可重建
-23. Real Tick Model 是否正确
-24. Equity 与 Balance 是否异常分叉
-25. 样本数是否适合该策略类型
-26. 是否发生 OOS Contamination
-27. Delay / Slippage 是否过度敏感
-28. Expected Payoff 扣除成本后是否仍有优势
-
-任何 Critical Finding 未关闭前，不得晋级 Champion。
-
----
-
-# 20. Candidate 晋级门槛
-
-真正“打赢 Champion”至少要求：
+组合上限另作整篮子同向止损、关联持仓同时恶化与不利滑点压力，不能把“单笔连亏8次”等同“组合连续亏损8次”。至少报告预算占用峰值、最低净值、最大相对净值回撤、最长连亏及总损失、风险超额和保证金最低水平。**§11回撤目标≤15%、>15%且≤30%严格审查、>30%硬拒绝不因R24/R36而放宽。**
 
-```text
-1. Code correctness
-2. No future data / look-ahead
-3. No hidden risk increase
-4. Valid Real Tick evidence
-5. OOS does not collapse
-6. Walk Forward acceptable when required
-7. Stress test acceptable
-8. Critical risk metrics not unacceptably worse
-9. Overall evidence clearly better than Current Champion
-```
+### 3.7 报告判定与采用边界
 
-Candidate 自己盈利，只能说明有研究价值，不代表 New Champion。
-
----
-
-# 21. Automatic Reject 自动否决规则
-
-以下任一项成立：
-
-- Future Data
-- Look-ahead
-- 偷偷增加 Lot
-- 偷偷提高 Risk %
-- 删除核心 SL
-- 增加隐性 Martingale / Grid Tail Risk
-- 增加未披露最大持仓
-- 挑选回测区间美化结果
-- 删除亏损阶段
-- 降低 Commission / Spread 美化 Candidate
-- 使用不同测试条件比较 Champion
-- 用巨大 Equity DD 换 Net Profit
-- 单一区间严重 Overfitting
-- 隐藏 Broker Reject / Execution Failure
-- OOS 后重新调参并继续称同一段为 OOS
-- 无法解释的异常利润
-- 核心验证数据缺失
-- 正式 Champion 证据没有使用 Real Ticks，却没有明确标记为低精度诊断测试
-
-统一：
+风险报告须区分三个问题：**资金是否可执行、信号是否有成本后优势、承担更多风险是否值得。** 多成交、净利润变大或某档交易数>100，均不能单独证明策略改善。
 
-```text
-AUTOMATIC REJECT
-```
+同档对照主要评价新方法的边际效果；跨档对照只评价预算与仓位配置的交换。新增成交按稳定SetupID追溯：原来因单笔超额、组合满额、保证金或其他原因被挡住？现在多赚/多亏多少？原共同成交的手数、成本、路径是否变化？不能把高风险导致的资金曲线放大说成预测能力提高。
 
----
+每档独立报告：净利/回报、PF、最大净值DD、原生与净值Recovery、完整交易数、净期望及不确定性、平均与最大初始风险、当前敞口风险峰值、手数分布、风险拒绝数量、盈利/亏损新增机会、漏掉的赢家与尾部损失。某档0交易或样本少保留 `CAPITAL_CONSTRAINT / LOW_SAMPLE_SIZE` 等诊断；不可把虚拟Setup、分批Deals或不同档位的重复交易合并凑样本。
 
-# 22. Experiment Registry 实验登记制度
+正式拟晋级的配置仍须按§11完成每条独立线及真正Combined的主区间>100完整交易、原生Recovery>3、净利与风险要求，以及独立OOS和压力证据。R13仅作资金受限对照时不足样本，不自动阻断R24/R36研究，也不证明高风险候选已经胜出；拟晋级候选须有自己**同档位、同手数规则**的有效参考与完整证据。
 
-每个实验必须保存：
+档位、手数模式也属于选择参数：在开发/训练段选择后冻结，再看未用于选择的验证段。看完OOS才挑最好档位，会使该段成为选择数据；不能改叫盲测。各档压力失败、低样本和亏损结果必须同时披露，不能只保留净利最高的一档。
 
-```text
-Experiment ID
-AI Research Mode (OFF / SINGLE_AI / DUAL_AI)
-Research Source
-AI Model(s) if used
-Engine
-Candidate Version
-Candidate Origin
-Current Champion Version
-Strategy Source
-Research Hypothesis
-Observed Evidence
-Modified Files
-Modified Rules
-GSM Base SOP Changed (YES/NO)
-Initial Capital
-Return %
-Risk Budget
-Actual Risk
-Test Protocol
-Broker / Symbol / Date Range
-Tester Model
-Real Tick Used (YES/NO)
-Delay / Slippage Scenario
-Champion Metrics
-Candidate Metrics
-Delta Metrics
-Max Equity DD USD / %
-Max Balance DD USD / %
-Recovery Factor
-Expected Payoff
-Edge-to-Cost Ratio
-Sample Size
-Standard Review Result
-Self Review Result
-Red Team Result
-Codex Review
-Claude Review
-OOS Result
-Walk Forward Result
-Stress Test Result
-Audit Result
-Blocked / Trigger Reasons
-Final Verdict
-Promotion Decision
-Reason
-```
+研究结论可以建议保留R13、继续研究R24、否定R36，或全部需要更多证据；不预填最优答案。沿用原Final Verdict枚举，风险档选择说明单独记录。较高档即使有研究证据，也**不自动替代R13部署默认或获得实盘许可**；进入正式配置前须明确用户选择、适用资金和审批记录。此次授权已足够执行上述离线实验，无需为每个预登记run重复征求确认。
 
-不适用字段写：
+## 4. 教材到程序的映射
 
-```text
-N/A
-```
+| 知识层 | 已核实来源 | 程序必须明确 | 本轮定位 |
+|---|---|---|---|
+| S&D | p4–6 Long Wick/Base Break/Impulsive；p7 First Touch；p8宽区50%挂单 | 形成与确认时刻、departure、first-touch episode、失效、单位 | 核心规则与工程定义逐项对照 |
+| S/R | p2两次以上触碰；p4角色翻转；p6质量；p7假突破 | 独立触碰计数、收盘收回、翻转新对象 | 与S&D分开类型和生命周期 |
+| 8种图表 | Chart p3–10；p11确认→回测→进场 | pivot确认时间、容差、跨度、突破与回测 | 先做识别覆盖与日志，不一次全部变硬门槛 |
+| 36蜡烛标签 | Candle p2–6；p6确认及量；p8执行示例 | 形态数学定义、背景、方向、收盘确认、族内去重 | 保留多标签，策略按各自白名单/候选使用 |
+| 课堂截图 | 多空位置、三类交易员、纪律与复盘 | 与具体SOP分别记录 | 背景与流程依据，不是回测成绩 |
 
-不得伪造 Review 或 Test 结果。
+四本并未独立规定完整三引擎的全部周期/SL/TP。特别处理：
 
-Final Verdict 只允许：
+- **S&D First Touch 与 S/R 多次尊重不可合并为同一种加分规则。**
+- 教材“30点”没有定义MT5点值；现有代码两个单位输入为0.10，属于当前实现约定。教材恰好30点的边界也要登记。保留现值供复现，不能称教材已证明换算。
+- Scalping Base 文档写50/50，当前 SC-S20/组合 SET 为80/70；前者是原始SOP，后者是历史Champion参数，两个都记录，不自动改回50/50。
+- Intraday Base文档写SL120/TP240，IN-I32已锁参数为SL120/TP70；必须分别登记，不能用Base说明代替实际SET。
+- 蜡烛教材全局“下一根收盘确认”、H4/D优先和当前M5触区K收盘执行有差异。原计划曾把额外等待列为独立Candidate方向；按本次“SOP不变”的边界，凡改变已锁定触发时机的额外等待，改列 `SOP_CHANGE_PROPOSAL`，本轮不执行。反转内部质量只能使用原确认时刻已知的数据。
+- 成交量1.5倍的平均窗口/来源未在书中明确。当前 tick volume 只能作为该报价流活动代理，不能叫集中市场真实成交量；先观察，别直接增加硬过滤。
+- 宽区50%预挂、S/R Limit示例、蜡烛确认后Stop示例与即时市价执行属于不同路径；逐策略审计，不把所有3-SOP统一改成挂单。只有当前SOP已允许的可选执行路径才可作为本轮配套Candidate；改变已锁进场路径的方案只登记SOP变更建议。
+- Broken Zone、Departure阈值、影线/ATR比、pivot延迟均写成有版本的程序化定义。头肩目标文字存在歧义，本轮不改TP。
 
-```text
-REJECT
-KEEP CURRENT CHAMPION
-RESEARCH FURTHER
-NEW ENGINE CHAMPION
-NEW 3-SOP COMBINED CHAMPION
-```
+所有定义登记：`rule_id / source_page / source_text_summary / engine / current_function / current_value / proposed_definition / available_at / sop_changed / status`。
 
----
+## 5. 研发任务队列与验收
 
-# 23. Champion Lock 与历史链
+下表是新计划任务ID，**不是已注册或已通过的 Candidate ID**。执行时先读既有 registry，再分配 S-/I-/W-/C-Candidate ID，保留 SC-S20、IN-I32、SW-W37、C-C01 历史。每个子实验只改变一个主要变量。
 
-每个 Strategy Champion 与 Combined Champion 必须保留：
+| 顺序 / 任务 | 具体工作 | 必须交付与退出条件 |
+|---|---|---|
+| P0 基线与可行性 | 固定4条基线；检查当前工作区及源码/EX5/SET/INI/hash；核对合约、单位、风险、已使用数据；H0/B0对照与K0扩展清理清单 | BASELINE_MANIFEST、MANDATE_MATRIX、逐档RISK_FEASIBILITY、SOP_LOCK、OPTIONAL_MODULE_INVENTORY；不能用旧10%结果冒充R13/R24/R36结果 |
+| P0-R 风险分档研究 | R13默认对照；R24/R36及预登记拆分对照，先RG预算门控、再按需要独立SZ手数研究；参考逻辑冻结 | RISK_PROFILE_MATRIX、风险拒绝与新增Setup审计、每档S/I/W/Combined、连亏/成本/尾部压力；不要求R13先PASS、不自动启用实盘、不同时调信号 |
+| P1 区域选择 | P1a仅改Scalping排序为最近有效区，质量仅作等距tie-break；P1b另测旧区占位与候选重选 | zone候选清单+价格距离+旧新选择对照；inside=0、近弱/远强、等距、新区出现案例通过；保留首触状态 |
+| P2 首触与漏单 | 先做只读事件回放，区分形成→离区→第一轮回触→确认→消耗；技术拒单不等于允许第二次fresh | FirstTouch trace、LOST_OPPORTUNITIES；连续tick/连续K不反复计数，重启不重置fresh；每项修改另建Candidate |
+| P3 Intraday方向/位置 | 从实际损失与漏斗选主因；先做NR01到区路径、NR02行情状态的独立观察；趋势辅助表达、晚入场及SOP已允许的30点/50%路径分别实验 | I候选的单变量说明；保留M30核心趋势资格；确认时间与入场价可追溯；不加入强制2/3或3/3；与锁定规则冲突只列SOP变更建议 |
+| P4 Intraday/Swing管理 | 在各自已允许的管理扩展点，分别测试成本后保本、结构/ATR追踪或分批之一；Swing接入NR06回吐保护；先审ticket隔离与重启 | 初始R固定、SL只收紧、0.01不可合法分批则不分批；Scalping保护函数不可触达；时间退出未经权限确认不启用 |
+| P5 形态与证据 | 8图表/36蜡烛逐个覆盖；先日志观察，再按证据挑少数族测试；接入NR03反转内部质量、NR04相对尺度；BOS/CHoCH/软评分保留研究入口 | 正反例、重叠标签去重、无未来数据；原形态白名单和收盘确认不改；数量覆盖与盈利验证分别报告 |
+| P6 独立机会与组合 | 先证实持仓上限确实挡住合格Setup；再单独研究并发风险预留；按已冻结档位重跑胜出单策略的组合 | 同档风险与手数规则下组合回测；R13/R24/R36跨档单列，同向暴露、保证金、策略归属和回撤相关性审计；不把增仓当策略优势 |
 
-- Version
-- Source Hash
-- SET Hash
-- Test Protocol
-- Metrics
-- Final Report
+原计划记录的P1源码依据：`FindBestSDZone` 最终按 score 最大值选区；`UpdateSupplyDemandStates` 只在 active 无效/used/broken/expired 后搜索。`DistanceToZone` 本身已正确处理区内距离为0，应复用并检验调用语义，不作无证据重写。实施前重新核对当前commit：问题若已修复，先验证回归，不重复修改；修改还必须符合SOP_LOCK。
 
-只有同条件 Candidate 真正打赢它，才能解除锁定。
+P1a 的正式参数形态不动；P1b 不得把“被替换”当作清除历史触碰。保留独立 ZoneID 状态，已触区不得借换区重置fresh。Swing共享函数时必须通过engine参数/策略分支隔离，本实验不得顺手改变Swing。
 
-历史链：
+P2 的 Scalping 路径目前在发送前消费Zone，连无白名单/指标/门控未过也会消费。这是有意防重的现有语义，**只先统计损失机会，不直接删除**。研究可重试时区分服务器明确拒绝、超时未知、部分成交与无SOP；未知状态必须对账，不得盲重发。
 
-```text
-Previous Champion
-↓
-Candidate
-↓
-New Champion
-```
+现存标签也不能直接当因果：FxPro组合中Scalping20笔全部标`ChaseEntry=YES`，其中15笔盈利；直接过滤该标签会清空这批样本。Intraday漏斗有391次FirstTouches、380次EMARejected、最终4单，但字段不是互斥原因。Swing唯一FxPro订单MFE48.94美元、最终0.66美元，值得研究利润保留，却不足以据此调参。应逐Setup重建时间线，预先固定比较方式。
 
-旧 Champion 永不删除。
+P5 延续既有 GitHub 研究索引，保留原 GH01–GH10 来源映射。此次把原计划记录的本仓实现差异排在外部新指标之前，不代表取消BOS/CHoCH等研究。ONNX/在线AI、Footprint、庞大指标融合继续后置；规则评分不称真实成功概率。
 
----
+新增方法统一按§12登记。来源可为 `ORIGINAL_RESEARCH`、`REDEFINED_EXISTING_METHOD` 或 `EXTERNAL_REFERENCE`，不再要求每项新想法必须来自GitHub。这里的自主设计指本项目的研究假设与搭配方案，不宣称基础公式是全球首创。旧方法重新测试要说明新用途、新特征或新因果假设；仅换名称或重复搜索旧最优参数不算新研究。外部代码复用仍须记录来源并检查许可证。
 
-# 24. Git / Version 隔离制度
+## 6. 程序接口与执行纪律
 
-```text
-main / production
-└── current formal Champion reference
-
-champion/
-├── current/
-└── history/
-
-research/
-├── scalping/<origin>/<topic>
-├── intraday/<origin>/<topic>
-├── swing/<origin>/<topic>
-└── combined/<origin>/<topic>
-
-research summaries / rejected results
-└── Markdown / CSV only
-```
+依据顶层顺序：**GSM SOP → 三独立引擎 → 可选证据 → Risk → Portfolio → Execution → MT5 → Audit**。
 
-失败 Candidate 不保存大型 ZIP，只保存 Markdown / CSV 摘要。
+- 检测器输出结构化证据，不下单。引擎生成带 `engine_id, zone_id, setup_id, direction, signal_time, confirmation_time, expiry, planned_entry, SL, TP` 的候选。
+- Risk读取真实合约、当前净值、现有敞口、挂单与在途请求，以及本run冻结的 `risk_profile_id / single_cap / portfolio_cap / sizing_mode`，统一计算预算；Portfolio在发送前串行预留风险与保证金。未声明档位默认R13，高风险研究档不得由评分模块自动选择，详见§3.5。
+- 单笔预算在所有手数模式中统一强制；风险计算失败、无SL或无法归属的账户敞口不得静默忽略。新风险规范分别记录初始SL风险、从当前净值回落至SL的风险和成本缓冲；明确手动单/其他EA/挂单的纳入方式，同一风险不得重复计数。
+- 相同信号tick、延迟回报、重启、拒绝和部分成交均不能重复计风险或重复下单。净额账户不能仅靠Magic声称三策略独立；当前要求Hedging的行为要明确验证，不擅自取消。
+- `OrderSend=true`不证明已成交；记录retcode，并由交易回报和服务器Order/Deal/Position状态完成对账。[OrderSend官方说明](https://www.mql5.com/en/docs/trading/ordersend) [交易回报](https://www.mql5.com/en/docs/event_handlers/ontradetransaction)
+- 禁止新仓时，仍执行所属策略既有持仓管理；所有修改锁定目标ticket与策略，禁止只按symbol误改另一引擎。
+- Risk预算是建仓前约束，跳空/滑点可能使实际损失超过该档预算；测试必须报告超额和尾部损失，不能声称止损保证绝不超过1%、2%、3%或任何组合上限。超额时禁止新增风险并按既有管理处理，不临时提高档位，详见§3.5。
 
-新 Champion 晋级：
+建议稳定原因码：`NO_VALID_ZONE, NOT_FIRST_TOUCH, NO_REVERSAL, WRONG_TREND, LATE_ENTRY, DUPLICATE_SETUP, MIN_LOT_OVER_RISK, PORTFOLIO_RISK_FULL, MARGIN_INSUFFICIENT, SPREAD_TOO_HIGH, DATA_NOT_READY, REQUEST_UNKNOWN, BROKER_REJECT`。这是审计词汇提案，映射旧字段后再落实。
 
-```text
-Old Current Champion
-→ champion/history/
-
-Winning Candidate
-→ champion/current/
-```
+“Reject=0”专指要消除的执行拒单/故障；正常SOP、风险、点差拒绝属于有效控制，不能为了归零而删过滤，也不能改名隐藏真实broker reject。
 
-必须保留完整 lineage。
+### 6.1 新模块接口与行为隔离
 
----
+每个新模块以 `OFF / OBSERVE / ACTIVE` 三种模式管理，按Scalping、Intraday、Swing分别配置。原项目若已有ASSIST/ENFORCE命名，先映射实际权限；减手数、等待、改订单类型或提前平仓都属于行为改变，不能称为“仅观察”。
 
-# 25. Champion ZIP 交付制度
+OBSERVE只输出证据，不改变SOP资格、方向、Zone/Setup生命周期、风险预留、订单或持仓。固定相同测试条件时应能逐信号、逐成交与OFF核对；不一致先查代码副作用、计算延迟或非确定性，不能直接解释为策略改善。
 
-只有真正出现 New Combined Champion 才生成 Champion ZIP。
+ACTIVE必须在实验登记中列明允许写入的接口和所有行为变化。Scalping的立即执行和固定SL/TP不被覆盖；Intraday/Swing的管理扩展也不能越过初始风险与SOP边界。原始信号字段与模块建议字段分别保存，模块不能回写“原始SOP资格”。
 
-至少包含：
+三个引擎为独立OR，不是相互确认：一个引擎无信号、数据未就绪或局部冷却时，不得阻断其他引擎的独立有效Setup。合法的账户级风险、保证金或交易安全限制可以阻止新增订单，但需明确原因；已持仓管理继续按归属ticket执行。
 
-```text
-CODE/
-SETS/
-CONFIG/
-REPORTS/SCALPING/
-REPORTS/INTRADAY/
-REPORTS/SWING/
-REPORTS/COMBINED/
-REPORTS/OOS/
-REPORTS/STRESS/
-RESEARCH/CHAMPION_COMPARISON/
-BEST_SCALPING/
-BEST_INTRADAY/
-BEST_SWING/
-FINAL_REPORT_CN.html
-CHAMPION_MANIFEST.txt
-SHA256.txt
-```
+## 7. 回测与反证协议
 
-FINAL_REPORT 首页依次显示：
+### 7.1 数据和公平对照
 
-```text
-Best Scalping
-Best Intraday
-Best Swing
-Best Combined
-```
+1. FxPro历史数据从用户已知2024-03开始做覆盖盘点，实际可用范围以终端下载日志为准，不能把计划范围写成已下载。记录服务器时区与夏令时、品种名称、合约、缺口、Tick覆盖和终端build。
+2. 冻结每个实验的源码、EX5、SET/INI、初始资金USD500、杠杆、成本、引擎开关、起止日期和风险规则，明确risk_profile_id、单笔/组合上限、目标手数规则、RG/SZ模式。H0使用历史1:100以复现，后续改杠杆也须独立披露；档位对比不得同时改变杠杆或本金。
+3. 历史2026-05-01至08-26及Scalping旧验证段已被分析/选参，不能再次称为新一轮 untouched OOS。历史OOS字段保留原标签，并加 `REUSED_FOR_RESEARCH` 状态。
+4. P0盘点所有已看过的数据范围；只将未参与选择的后续保留段用于最终验证。若目前没有足量未用段，则输出 `OOS_PENDING`。Walk Forward在每个训练窗选参后冻结、再生成后续交易，不能只把同一份成交表切片冒充重新训练。
+5. MetaEditor 对实际交付源码编译，要求0 errors/0 warnings；MT5使用 `Every tick based on real ticks`。还须检查缺Tick时的生成回退，不能把“历史质量100%”直接当全部真实Tick证明。[MT5官方Tick说明](https://www.metatrader5.com/en/terminal/help/algotrading/tick_generation)
 
-字段顺序固定：
+每个run还必须固定预热、状态初始化与跨分段持仓处理。独立FULL与TRAIN/OOS重启会形成不同交易集，不能要求FULL机械等于两段相加，也不能把重叠报告相加凑样本。复现实验先补INI旧SET/EX5文件名与交付改名文件的映射，保持原文件不变。
 
-```text
-Net -> Max Equity DD -> PF -> Trades -> Win Rate -> Reject
-```
+### 7.2 验证矩阵
 
-详细页还必须输出 Return %、Equity DD USD/%、Recovery Factor、Expected Payoff、Realized R:R、BUY/SELL 分拆、连续亏损、成本敏感度和 Diagnostic Flags。
+| 验证 | 条件 |
+|---|---|
+| 策略拆分 | S-only、I-only、W-only、Combined分别运行；每条确认其他引擎开关 |
+| 成本/延迟 | 实际点差佣金基础；预先登记点差+25%/+50%、额外不利滑点、自定义固定10/25/50ms与原生Random Delay分别测试（详见§11.6）；无法由原生Tester表达的变更单列研究仿真 |
+| 边界正确性 | 零实体/零波幅、未就绪数据、同tick多信号、broker最小手数、部分成交、订单超时、重启、Stops/Freeze/TickSize |
+| 参数稳定性 | 只在研究/训练段检查相邻值，不因OOS结果挑回最优参数 |
+| 方向与行情 | BUY/SELL、趋势/震荡/高波动、月份分别归因，不删除不利时期 |
+| 样本与不确定性 | 完整持仓交易和Setup数量；分批deal单列；按日/Setup块估计不确定性，低样本标明结论不稳 |
+| 风险分档 | R13/R24/R36主报告与预登记拆分对照；同参考逻辑先比预算，再固定档位比新方法；每档单独运行S/I/W/Combined，沿用同一§11门槛 |
+| 晋级 | 实验前冻结接受标准；通过测试且同风险档位、同手数规则明确优于当前基准，再过OOS/压力/组合/mandate检查；研究通过不自动修改部署默认风险 |
 
-用户收到的 ZIP 与 GitHub `champion/current/` 必须是同一文件；文件名、版本、SHA256 和报告指标完全一致。
+每个实验先登记最多研究的参数组合与主要变量；失败原样归档，不反复看同一OOS“调到PASS”。无明确优势即保留原Champion。Final Verdict沿用顶层枚举：`REJECT / KEEP CURRENT CHAMPION / RESEARCH FURTHER / NEW ENGINE CHAMPION / NEW 3-SOP COMBINED CHAMPION`。资料、环境或资金可行性阻塞写入独立`execution_status=BLOCKED_BY_DATA_OR_CAPITAL`，此时Final Verdict为`RESEARCH FURTHER`，不能新增晋级结论或伪造PASS。
 
----
+### 7.3 新方法的单变量、反事实与完整账户对照
 
-# 26. 最终通用 Champion 迭代循环
+按“同风险基准 → 逐项清理旧扩展 → OFF/OBSERVE一致性 → 单模块ACTIVE → 少量预先登记组合”的顺序执行。新模块第一次启用时，不同时改手数算法、初始SL/TP、SOP触发条件和退出规则。新方法有效与旧限制清理有效必须分别给出对照。
 
-研究入口可以来自：
+以稳定 `setup_id` 记录同一机会在各版本的去向。报告过滤掉的原盈利/亏损机会、错失或节省的净金额、成交偏差、等待时间、MAE/MFE和退出差异；不把事后知道的盈亏标签作为当时的入场特征。
 
-```text
-USER
-STANDARD RESEARCH
-GITHUB
-EXTERNAL EA
-SINGLE AI
-DUAL AI
-```
+配对回放必须统一初始风险、行情、成本和原退出定义，并标为“反事实估计”，说明价格触达、成交、并发及费用假设。过滤或退出变化会改变资金占用及后续可执行交易，逐笔差额不能代替完整账户重新运行。被风险拒绝的虚拟Setup不计入真实交易样本，组合净利也不能由三条单策略或反事实利润直接相加。
 
-统一流程：
+NR04滚动尺度、NR06持仓时间分布或任何评分阈值只能从当前训练窗估计，再冻结到后续验证窗。风险档位和手数模式同样属于选择参数，执行§3.4/§3.7，不用OOS挑最佳风险档后仍称盲测。旧OOS的使用状态、全部试验次数与失败候选继续按§7.1/§7.2登记，不为了把结果“调到PASS”反复利用同一留出段。未定义分母、缺Tick或低样本保留缺失状态，不补造高分或高PF。
 
-```text
-CURRENT CHAMPION
-↓
-READ FINAL REPORT
-↓
-READ TRADE AUDIT
-↓
-READ MISSED OPPORTUNITY AUDIT
-↓
-IDENTIFY BIGGEST WEAKNESS
-↓
-SELECT RESEARCH SOURCE
-↓
-SELECT AI_RESEARCH_MODE = OFF / SINGLE_AI / DUAL_AI
-↓
-FORM TESTABLE HYPOTHESIS
-↓
-BUILD ONE CANDIDATE
-↓
-COMPILE
-↓
-REVIEW GATE
-  ├─ OFF: STANDARD CODE AUDIT
-  ├─ SINGLE_AI: SELF REVIEW + RED TEAM
-  └─ DUAL_AI: CROSS REVIEW
-↓
-MT5 REAL TICK
-↓
-TRAIN / OOS
-↓
-FXPRO / TRADONA
-↓
-WALK FORWARD / STRESS TEST when required
-↓
-RISK + PORTFOLIO AUDIT
-↓
-COMPARE WITH CURRENT ENGINE CHAMPION
-```
+## 8. 每轮交付格式
 
-失败：
+必须交付：源码差异及hash、SET/INI、真实编译日志、原始MT5报告、逐交易审计、信号漏斗、错误进场/漏单案例、对照表、OOS与压力证据、最终结论。
 
-```text
-REJECT / KEEP CURRENT CHAMPION / RESEARCH FURTHER
-↓
-SAVE RESEARCH SUMMARY
-↓
-DO NOT TOUCH CHAMPION
-```
+| Version / Engine / Segment / RiskProfile / SizingMode | Net USD | Return % | Max Equity DD USD/% | PF | Complete trades | Win rate | Execution reject |
+|---|---:|---:|---|---:|---:|---:|---:|
+| 本轮新Candidate | NOT_TESTED | NOT_TESTED | NOT_TESTED | NOT_TESTED | NOT_TESTED | NOT_TESTED | NOT_TESTED |
 
-成功：
+补充 Expected Payoff、实际平均盈亏比、Recovery定义、成本、实际风险、保证金峰值、BUY/SELL差异与相对基准变化。无亏损或无交易时PF用适当未定义状态，不填高值装作通过。
 
-```text
-NEW ENGINE CHAMPION
-↓
-LOCK IT
-↓
-REBUILD 3-SOP COMBINED CANDIDATE
-↓
-FULL COMBINED REAL TICK + OOS
-↓
-PORTFOLIO AUDIT
-↓
-COMPARE WITH CURRENT COMBINED CHAMPION
-↓
-IF BETTER → NEW 3-SOP COMBINED CHAMPION
-↓
-FINAL REPORT CN
-↓
-CHAMPION ZIP
-↓
-SHA256
-↓
-GITHUB ARCHIVE
-```
+完整报告字段、硬门槛、诊断参考、胜率/盈亏比公式、回撤和Recovery口径、压力测试及OOS要求统一执行§11。不能只交上面的一行汇总表。
 
----
+后续图表报告需包含权益与余额、回撤、月度收益、按策略和方向分布、信号漏斗；只使用实际结果。本轮是计划交付，未生成虚构权益曲线。
 
-# 27. 最终裁决权
+### 8.1 新研究追加交付物
 
-Codex、Claude Code、Single AI、Dual AI、GitHub Research、外部 EA 都没有最终裁决权。
+在原交付要求之上，增加以下记录；文件名是建议，先适配当前目录和registry，不能为了命名重构整个项目。
 
-最终裁决来自：
+| 交付物 | 必须说明 |
+|---|---|
+| `SOP_LOCK` / `IMPLEMENTATION_DIFF` | 锁定规则、实际实现、历史参数差异、修复依据、允许扩展点与冲突 |
+| `OPTIONAL_MODULE_INVENTORY` | 旧模块分类、保留/关闭/替换理由、安全边界、对应清理实验 |
+| `BASELINE_MANIFEST` | H0/B0/K0/修复基准之间的差异，源码、SET、数据、reference_id、risk_profile_id与手数模式；H0保留旧风险 |
+| `EXPERIMENT_REGISTER` | 假设、来源、所属SOP、允许变化、参数组合预算、特征可用时刻、冻结的测试与接受规则 |
+| 信号与成交对照CSV | 原SOP资格、模块建议、各阶段状态、真实成交/反事实区分、重复计数与风险拒绝 |
+| 中文研究报告 | 原计划§8/§11全部指标、单模块边际效果、清理旧模块效果、被错过的盈利、失败案例和组合影响 |
+| `SOP_CHANGE_PROPOSALS` | 本轮不执行但值得保留的核心规则变更想法；不能混入已获准配套实验 |
+| `RISK_PROFILE_MATRIX` / `RISK_FEASIBILITY` | R13/R24/R36和拆分对照、当前合约证据、USD500逐Setup最低手数风险、成本、资金门槛、预算/保证金拒绝 |
+| `RISK_PROFILE_COMPARISON_CN.md` | 同档方法比较与跨档预算比较分表；RG/SZ分开，R13受限原因、新增盈利/亏损机会、手数与实际风险、DD/Recovery/连亏/OOS/压力及档位建议 |
+| `RISK_EVENT_AUDIT.csv` | 每笔与每次预留的profile、当前净值、单笔/组合预算、已用/剩余/在途风险、目标与实际手数、拒绝原因、超额、服务器对账和配置来源 |
 
-```text
-Code Correctness
-+
-Fair Candidate VS Champion
-+
-MT5 Real Tick
-+
-OOS
-+
-Walk Forward when required
-+
-Stress Test
-+
-Risk Audit
-+
-Portfolio Audit
-+
-Champion Evaluation Order
-```
+工程检查、研究差异与最终晋级分开记录。观察实验数据齐全不等于策略PASS；从亏很多改善到亏少一些可记录研究价值，但不满足§11净利为正等要求就不能晋级。新增状态只作诊断标签，Final Verdict仍使用§7.2原枚举。
 
-最终评价顺序永久固定：
+风险比较至少保留以下主档空表，测试后填真实值；拆分对照另表：
 
-```text
-#1 Net Profit USD
-#2 Max Equity Drawdown
-#3 Profit Factor
-#4 Trade Count
-#5 Win Rate
-```
+| 档位 | 单笔/组合上限 | 有效Setup/实际完整交易 | 单笔/组合风险拒绝 | 净利/PF | 最大相对净值DD | 原生/净值Recovery | OOS/压力 | 状态 |
+|---|---|---|---|---|---|---|---|---|
+| R13 | 1% / 3% | NOT_TESTED | NOT_TESTED | NOT_TESTED | NOT_TESTED | NOT_TESTED | NOT_TESTED | NOT_TESTED |
+| R24 | 2% / 4% | NOT_TESTED | NOT_TESTED | NOT_TESTED | NOT_TESTED | NOT_TESTED | NOT_TESTED | NOT_TESTED |
+| R36 | 3% / 6% | NOT_TESTED | NOT_TESTED | NOT_TESTED | NOT_TESTED | NOT_TESTED | NOT_TESTED | NOT_TESTED |
 
-任何 Automatic Reject、Look-ahead、风险偷加、不可接受 DD、OOS 崩溃或执行异常，都可以否决晋级。
+每张表注明engine、segment、reference、手数模式、费用和完整run_id，不把不同档位或重复事件相加。
 
----
+## 9. 给 Windows Codex 的首轮指令
 
-# 28. 最终原则
+> 本次已选择旧版升级研究路线，并新增风险分档研究。读取本完整计划，特别是§2.2、§3.1–§3.7、§11及§12；同时读取当前项目的三个SOP、来源审阅、顶层规范（含§29）、最新mandate和已有registry。先确认工作目录、未提交变更、当前commit及正式MT5数据目录，不覆盖原版，不因历史版本号强制回退。
+>
+> 固定V4.00四条历史基准及其证据映射，完成P0的SOP_LOCK、逐档风险可行性、数据使用清单和H0/B0协议。逐项登记旧配套模块，建立K0清理对照。保留Scalping固定SL/TP、锁定触发时机、FxPro范围、USD500、R13默认对照，以及全部§11验收门槛。
+>
+> P0-R独立登记R13=1%/3%、R24=2%/4%、R36=3%/6%；先在同一参考逻辑和相同目标手数规则下比较预算门控，再单独研究实际手数管理。根据§3.4加入最多D23/D33/D34三项拆分对照，每个run固定档位、手数模式和其他条件。单笔/组合上限都不是每单必须用满的目标。R13因最小手数受限时保留CAPITAL_CONSTRAINT，继续其他已登记实验；不得缩止损、增资、换合约或临时切档让它有单。
+>
+> 各档保留同档B0/K0/修复基准，分别运行S-only、I-only、W-only、Combined；报告新增机会、风险拒绝、实际手数、净利润、DD、Recovery、净期望、6/8连亏和尾部压力。不同风险的净利不能证明方法胜出，档位选择也不得偷看OOS。研究配置标RESEARCH_ONLY、仅供Tester；不覆盖部署默认，不开启实盘。
+>
+> 除P0必要风险适配及独立P0-R实验外，首个策略侧行为修改仍按原P1a优先：先在当前源码复现Scalping最近区域排序问题，确认属于已锁SOP的实现修复后，注册单变量Candidate，修改、编译并测试；若已修复，输出回归证据后推进P2。不要一边修区选择一边加入新评分或换风险档；每次参考逻辑变化重新冻结相关同档对照。
+>
+> 将NR01–NR06接入原P0–P6队列，先做相应只读观察。之后可以自主提出并实现有限的、边界明确的配套Candidate，在训练阶段做单变量测试与分析；不要求每个想法来自Champion或GitHub。原SOP不变，非SOP配套方法可重新设计；以前失败的指标可以有依据地换新用法，但不得重复包装旧结果。
+>
+> 只有扩展点明确允许的模块才进入ACTIVE；与核心SOP冲突的建议单列，不在本轮执行。对每个候选预先固定问题、假设、允许变量、试验预算、验收标准与回滚条件。依次完成真实编译、FxPro Real Tick、成本与延迟压力、有效样本外、单策略和实际组合审计，再依据证据决定保留、淘汰或继续研究。
+>
+> 正常SOP/风险拒绝和执行故障分开记录；缺资金、数据或Windows测试环境时登记具体BLOCKED证据，继续完成不依赖阻塞条件的工作。禁止超出已登记档位凑单、把虚拟成交计入>100门槛、反复使用旧OOS冒充盲测或覆盖Champion。不得为高风险档放宽DD/Recovery/样本等门槛；本次允许离线实验，不等于授权正式高风险配置。没有实际产物不得写“已编译、已回测、已PASS”。
 
-GSM SOP 负责：**怎么交易**。
+## 10. 计划与执行状态
 
-Research 负责：**还有什么值得测试**。
+### 10.1 原计划记录的完成项（2026-09-06，非本次重新核验）
 
-AI Research 是：**可选择研究工具，不是强制 Champion 流程**。
+- [x] GitHub主仓库、两参考仓库与固定commit已核对。
+- [x] 四本教材与六张截图已读取，关键歧义已列出。
+- [x] V4.00 ZIP、MQ5、EX5身份已核对；已读历史回测证据及关键源码路径。
+- [x] 已提出可直接执行的优先队列、独立变量与验收条件。
+- [ ] Windows MetaEditor新编译、FxPro新回测、新OOS、压力测试。
+- [ ] 新Candidate实现与Champion晋级。
 
-当 `AI_RESEARCH_MODE = OFF`：
+### 10.2 本次整合状态（2026-09-07）
 
-```text
-不启用 AI Research Lab
-仍然可以正常研究、开发、回测、验证、产生 Champion
-```
+- [x] 已将“SOP不变、配套方法可自主建议/修改/测试”合入旧版升级路线。
+- [x] 已同步开发边界、H0/B0/K0对照、P0–P6任务、模块权限、回测与交付要求。
+- [x] 已保留§11完整报告门槛、FxPro范围、USD500、R13默认对照及历史参数差异；连续亏损条款已同步逐档口径。
+- [x] 已加入R24/R36研究档、拆分对照、最低手数可行性、RG/SZ归因、风险公式、连亏压力与研究权限。
+- [x] 已同步§2/§3/§5–§9/§11.3/§12中的风险引用，不把研究档授权改成实盘默认。
+- [x] 已登记六项待验证新方法、冲突处理表与Codex首轮执行指令。
+- [ ] 将本MD写入实际项目、创建研究分支、更新项目registry。
+- [ ] R13/R24/R36及拆分对照的候选代码、风险配置、逐Setup审计、真实回测和档位选择。
+- [ ] 当前仓库/SOP复核、Candidate代码修改、MetaEditor编译、MT5回测与晋级。
 
-当 `AI_RESEARCH_MODE = SINGLE_AI`：
+## 11. EA交易报告强制要求（用户本轮追加）
 
-```text
-使用阶段隔离 + Self Review + Red Team
-降低单模型自我确认偏差
-```
+补充日期：2026-09-06。已将用户重复粘贴的胜率内容合并，并区分“项目硬门槛”“建议目标”和“需要纠正的事实断言”。这是新一轮报告与晋级规则；不回写旧历史报告，不把旧版本重新命名为已通过新规则。
 
-当 `AI_RESEARCH_MODE = DUAL_AI`：
+### 11.1 核心指标与判定
 
-```text
-使用独立研究 + Cross Review + 可选 Hybrid Candidate
-```
+以下规则适用于Scalping、Intraday、Swing各自独立线，以及真正运行的Combined。正式主测试区间在实验前冻结，OOS和每个压力场景另表报告，禁止选一段最好看的结果代替正式主表。
 
-MetaEditor 负责：**证明源码可以正确编译**。
+| 指标 | 报告要求 | 本项目判定 |
+|---|---|---|
+| Net Profit | 净利润USD、初始资金、起止日期、总回报率；必要时另报年化方法 | `Return%=Net/InitialCapital×100`；净利需为正。低回报需解释资金效率，不能只看绝对金额 |
+| Profit Factor | 原生PF、Gross Profit、Gross Loss、样本数、OOS、成本敏感性 | 1.3–1.8作为用户诊断参考，不设1.8上限；PF≤1提示无正收益优势；>2.5或3进入高强度审查，不按PF单值自动判过拟合 |
+| Max Equity DD | 最大净值回撤金额、该金额回撤对应%、全程最大相对净值回撤% | 以全程最大相对净值回撤%执行阈值：≤15%目标；>15%且≤30%严格人工审查，不能自动晋级；>30%硬拒绝 |
+| Total Trades | 原生MT5 Trades、完整开平仓交易数、Setup数、Deals数分别报告 | 每条线在冻结主测试区间完整交易数必须>100（至少101）；建议200–500，非交易数上限；样本不足不晋级 |
+| Recovery Factor | MT5原值与计算核对；另报净值Recovery | 原生MT5 Recovery必须>3.0；等于3.0也未达标；禁止仅用余额回撤掩盖净值风险 |
+| Expected Payoff | 原生值及按完整交易计算的成本后净期望，统一USD/完整交易 | 必须显著为正且覆盖真实成本；3–5倍成本缓冲为强参考目标，不伪装统计显著性 |
+| Win Rate | Profit Trades (% of total)、平均盈利、平均亏损、实际平均盈亏比 | 不设统一胜率硬阈值，必须结合期望、方向、成本、连续亏损 |
+| 强平风险 | 最低保证金水平、Margin Call/Stop Out模式和阈值、峰值保证金占用、异常浮亏 | 触发Stop Out、无法解释的大浮亏或依赖扛单回本不得晋级；不是凭线颜色下结论 |
 
-MT5 Real Tick + OOS + Dual Broker + Walk Forward / Stress Test 负责：**提供 Candidate 的统计验证和稳健性证据**。
+例如USD10,000一年赚USD200，回报率确为2%，应标`LOW_RETURN_REVIEW`并评估成本、回撤和可比机会成本；不能不核对期限、币种和风险，就声称一定“不如存银行”。本轮没有另设统一最低年化收益率。
 
-Champion System 负责：**决定最后留下哪个版本**。
+超过100笔是用户验收要求，不是统计稳定的保证；禁止把TRAIN/FULL/OOS重叠记录、同一Setup的分批平仓Deals、同一行情跨券商重复事件加起来凑样本。Swing不足就延长可用证据、保留`LOW_SAMPLE_SIZE`，不降低门槛或强行开单。OOS单独披露样本和不确定性，不将主区间样本量充当OOS样本量。
 
-核心制度：
+### 11.2 净值回撤、Recovery与强平必须分清
 
-```text
-研究可以无限继续。
-Champion 不能随便改变。
+MT5的`STAT_EQUITY_DD`是最大金额净值回撤；`STAT_EQUITYDD_PERCENT`是该次金额回撤对应百分比；全程最大相对百分比为`STAT_EQUITY_DDREL_PERCENT`。三者不能交换，百分比风险阈值使用最后一项。[官方统计字段](https://www.mql5.com/en/docs/constants/environment_state/statistics)
 
-不是：
-新版本不错就替换。
+原生MT5：
 
-而是：
-只有在公平条件下真正打赢旧 Champion，才允许替换。
-```
+`MT5 Recovery = STAT_PROFIT / STAT_BALANCE_DD`
 
-所有 Research Source、所有 AI Mode、所有新模块、所有 Candidate 都遵守同一规则：
+本项目额外计算：
 
-```text
-Research First
-↓
-Testable Hypothesis
-↓
-Candidate
-↓
-Required Review
-↓
-Evidence
-↓
-Candidate VS Champion
-↓
-Champion Only If Proven
-```
+`Equity Recovery = 同区间净利润USD / 最大净值回撤金额USD`
 
----
+原生Recovery>3为本轮硬门；Equity Recovery同时输出，较低时需调查浮亏与收益保留，原生值再高也不能抵消净值DD否决。分母0、缺失或未定义时原样保留平台结果并注明原因，不能自填999或无穷后自动通过。[原生Recovery定义](https://www.mql5.com/en/docs/constants/environment_state/statistics)
 
-# 29. MT5 Strategy Tester 项目级强制验证门槛
+Balance只反映已结算账户变化，Equity还反映未平仓盈亏。报告以图例、字段与数值识别两线，不能照用户原文把“蓝=Equity、绿=Balance”写死；MT5官方默认Graph示例实际相反。持续或极端的Balance-Equity负向分离要追到订单、浮亏持续时间和保证金变化。[MT5测试图表与设置](https://www.metatrader5.com/en/terminal/help/algotrading/testing)
 
-本节把前面的 MT5 评估规则正式提升为**本项目 Champion 晋级强制层**。如果第 7-8 节的通用诊断范围比本节宽松，以本节作为正式 Champion 晋级标准，除非用户明确修改 mandate。
+Margin Call预警与Stop Out强制平仓是不同事件。按券商账户的百分比/货币模式读取阈值；百分比模式下记录`MarginLevel=Equity/Margin×100`，无占用保证金时不得除0。图线分叉是调查线索，不能单靠外形证明已经触发强平。[账户保证金属性](https://www.mql5.com/en/docs/constants/environment_state/accountinformation)
 
-## 29.1 MT5 核心评分表
+### 11.3 胜率、期望与平均盈亏比
 
-每一次正式 Candidate VS Champion 比较，首页必须先显示：
+每条完整交易的净收益按同一规则包含佣金、swap及适用费用。令W为盈利交易比例、L为亏损交易比例，保本交易另列；有保本单时W+L不必等于1。
 
-```text
-Net Profit USD
-Return % on Initial Capital
-Max Equity DD USD
-Max Equity DD %
-Profit Factor
-Total Trades
-Win Rate
-Expected Payoff / Expectancy
-Recovery Factor
-Reject / Execution Errors
-```
+`Net Expectancy = W×AverageNetWin − L×abs(AverageNetLoss)`
 
-正式排名仍然不变：
+`Realized Average R:R = AverageNetWin / abs(AverageNetLoss)`
 
-```text
-#1 Net Profit USD
-#2 Max Equity Drawdown
-#3 Profit Factor
-#4 Trade Count
-#5 Win Rate
-```
+无保本且忽略额外成本的简化情形：`BreakEvenWinRate=1/(1+R)`。若平均盈亏已按净额算，不得再重复扣同一笔费用；理论SL/TP比例与实际平均R:R必须分别显示。
 
-新增字段属于强制验证背景，不取代正式排名。
+| 用户提供的策略画像 | 胜率参考 | 平均盈利:平均亏损参考 | 必须解读 |
+|---|---|---|---|
+| 趋势/突破 | 35%–45% | 2:1或3:1以上 | 仅为例子，不能单看区间说健康；35%配2R的成本前期望仅0.05R |
+| 震荡/剥头皮 | 65%–80% | 1:1或0.8:1 | 成本、成交延迟和滑点会压缩小额优势；须测试净期望 |
+| 网格/马丁 | 85%–95%+ | 1:5或1:10等小赢大亏结构 | 仅用于识别尾部风险，不是本EA候选策略；高胜率本身不证明使用马丁，也不能断言每种此类策略必定一天爆仓 |
 
-## 29.2 本项目回撤强制规则
+这些范围是用户给出的诊断示例，不是MT5官方统计分布、未来胜率承诺或所有策略都适用的Pass/Fail门槛。亏损后加码、隐性网格、取消SL等仍按项目已有禁止规则处理。
 
-本项目采用：
+报告必须含`Average profit trade`、`Average loss trade`、`Long Positions (won %)`、`Short Positions (won %)`及每侧交易数、净利、PF、期望与实际R:R。若BUY80%而SELL20%，先核对两侧样本、行情与成本，不能仅用胜率差就证明没有做空能力或直接关闭SELL。[MT5报告字段](https://www.metatrader5.com/en/terminal/help/algotrading/testing_report)
 
-```text
-Preferred Max Equity DD <= 15%
-15% < Max Equity DD <= 30% = 警戒区 / 必须有强理由
-Max Equity DD > 30% = 正式 Champion 拒绝，除非用户明确修改标准
-```
+连续亏损同时列“最长连亏笔数”“该串总亏损”“最大连亏金额及其笔数”，不要混淆。至少检验6笔、8笔、历史最长连亏及更不利场景；R13沿用单笔1%/组合3%，新增R24/R36及拆分对照分别使用各自冻结的预算与实际权益路径，档位定义见§3.2–§3.6。60%历史胜率不排除连续亏损；某个特定独立8连亏序列的概率也不是整个回测期间出现8连亏的概率。压力分析需考虑同向相关持仓与滑点。
 
-Balance Drawdown 永远不能覆盖或替代 Equity Drawdown。
+### 11.4 Expected Payoff与成本的统一单位
 
-超过硬上限时：
+同时保存原生`Expected Payoff`与`净交易总收益/完整交易数`，有差异就核对交易/Deal聚合及费用分配，禁止挑较好值。
 
-```text
-EQUITY_DD_HARD_LIMIT_BREACH
-AUTOMATIC REJECT
-```
+- 点差points、黄金美元价差和USD/单不能直接比较。按该单volume、tick size/value、入出场报价，将点差、双边佣金、swap及额外不利滑点转换成USD/完整交易。
+- 实际Bid/Ask成交已包含点差影响，平台已扣的费用不能再扣第二遍；另列“已包含”和“新增压力成本”。
+- 报告`NetEdgeToCostRatio=成本后平均净收益/对应完整交易平均估算成本`，成本为0或未知时标未定义，不报无穷大。3–5倍作为用户建议的成本缓冲目标，明确基于哪种成本定义。
+- “显著大于0”不能靠主观宣称。输出样本规模、区间估计及计算方法；使用日/Setup分块估计时保留相关性假设，低样本或区间跨0标`EDGE_UNCERTAIN`，继续研究。若要把置信区间下界设为自动门槛，实验前冻结阈值，不能看完OOS再改。
 
-## 29.3 Profit Factor 高值审查规则
+### 11.5 高PF审查
 
-本项目可以把 `PF 1.3-1.8` 作为成熟策略的实用参考区间，但它**不是唯一理想范围**，也不代表 PF 越高越差。
+删除“PF>2.5/3有90%概率过拟合”的概率断言：用户材料没有给出相应统计依据，官方报告定义也不提供这种概率。保留高PF需要认真检查的原意。
 
-当：
+PF>2.5或3时登记`HIGH_PF_REVIEW`，检查样本是否极少、是否由少数赢家主导、是否使用未来K线/回填pivot、参数选择次数、成本是否缺失、买卖方向集中度、参数邻域、旧OOS是否反复使用。发现真实前视/数据泄漏或虚假成本才按证据否决；高PF本身不是罪证。PF1.3–1.8同样不能自动通过。
 
-```text
-PF > 2.5
-```
+### 11.6 MT5压力测试：真实Tick、延迟与滑点
 
-必须加强检查：
+正式证据必须使用`Every tick based on real ticks`；准确粗略模式名为`1 minute OHLC`，不是OHLV。OHLC/开盘价模式仅供开发检查。真实Tick模式仍要检查历史缺口及生成回退。[MT5真实与生成Tick](https://www.metatrader5.com/en/terminal/help/algotrading/tick_generation)
 
-- 样本数过少
-- Over-optimization
-- Parameter Cliff
-- 只集中在有利 Regime
-- Spread / Commission / Slippage 不现实
-- Future Data / Look-ahead
-- BUY / SELL 单边依赖
+延迟测试分开登记：
 
-禁止仅凭 PF 数值直接推断某个固定“过拟合概率”。
+| 场景 | 实际设置 | 作用 |
+|---|---|---|
+| 零延迟 | No Delay | 仅基准/理想诊断，不可成为唯一合格证据 |
+| 低延迟多场景 | Custom Fixed Delay：10、25、50ms，记录当前build实际支持与保存值 | 保留用户关注的10–50ms范围；不是随机模式 |
+| 实测延迟 | 当前连接测得值及更不利固定值，测试前登记 | 对应实际执行环境；10–50ms不能默认代表用户VPS |
+| 原生随机 | MT5 Random Delay：90%为0–8秒，10%为9–18秒 | 属另一种更重的压力场景，不能标成10–50ms随机 |
+| 自定义随机10–50ms | 仅在受控模拟器确实实现并记录种子/分布时使用 | 另列研究仿真，不能声称MT5原生选项或单凭其晋级 |
 
-## 29.4 Trade Count 证据要求
+官方延迟影响EA发出的请求；已放在服务器的挂单触发并不附加同一网络延迟。因此不能宣称启用Delay就完整模拟了挂单成交滑点。滑点另按请求价与成交价、不利报价压力、成交类型和流动性假设核对；允许偏差参数也不能当作必定产生固定滑点的开关。[MT5 Execution设置](https://www.metatrader5.com/en/terminal/help/algotrading/testing)
 
-一般 MT5 研究中，`>100 trades`、甚至 `200-500` 是较理想的统计样本参考，但本项目必须按策略类型执行：
+每个场景逐线报告净利、PF、最大相对净值DD、Trades、成交拒绝、成交滑点分布、实际风险及相对基础场景变化；接受标准实验前锁定，不能选过关场景隐藏失败场景。
 
-```text
-SCALPING：最好 > 200；能做到 300-1000+ 更好
-INTRADAY：最好 > 100
-SWING：允许较少交易，但必须用更长历史、多 Regime、OOS、双 Broker 补强证据
-```
+### 11.7 样本外验证
 
-不能用高 Win Rate 或高 PF 去掩盖样本太少的问题。
+训练与OOS必须时间不重叠。示例采用半开区间：TRAIN `[2020-01-01, 2025-01-01)`，OOS `[2025-01-01, 2026-01-01)`；这只是说明边界，不代表本项目已有这些年份的FxPro数据。不得把2025全年同时放进两段。
 
-## 29.5 Recovery Factor 项目目标
+在TRAIN选定源码、参数、阈值和成本后冻结，才打开OOS。预热只提供当时已知历史，不能让未来价格参与信号；跨边界订单处理双方一致。查看OOS后继续选参，则该段改为已参与研究，需要新的未用验证段。既有2026旧OOS状态继续按§7.1处理。[MT5 Forward机制](https://www.metatrader5.com/en/terminal/help/algotrading/strategy_optimization)
 
-Champion 目标：
+OOS盈利只是新增支持证据，不证明已经有稳定预测能力；仍须看样本、回撤、成本、参数稳定性、市场状态与组合影响。
 
-```text
-Recovery Factor > 3.0
-```
+### 11.8 最终交付检查表
 
-若 `Recovery Factor <= 3.0`，必须明确标记；没有额外风险解释和更强稳健性证据时，不能当作“干净晋级”。
+- [ ] 4条独立结果线；同资金、风险、日期、合约、成本、预热与执行条件对照。
+- [ ] Net USD及Return%、原生PF/Gross Profit/Gross Loss、三种净值DD字段、余额DD辅助。
+- [ ] 主区间各线>100完整交易，建议200–500；OOS/压力场景样本另列，无重复计数。
+- [ ] 原生Recovery>3；Equity Recovery单列，明确分母与任何未定义值。
+- [ ] 成本后Expected Payoff、成本USD/单、成本缓冲比例、估计不确定性。
+- [ ] 总胜率、BUY/SELL、平均盈亏、实际R:R、保本交易、最长连亏及资金承压。
+- [ ] Equity/Balance依图例核对，最低Margin Level、Margin Call/Stop Out、浮亏与保证金审计。
+- [ ] 真实Tick覆盖、实际固定延迟、原生随机延迟和额外滑点压力，各场景完整结果。
+- [ ] 未触碰且不重叠的OOS、固定参数、无未来数据或结果选择泄漏。
+- [ ] 测试通过后仍需打赢同风险Champion；不足样本/缺数据为`RESEARCH FURTHER`并说明阻塞，硬规则失败不得晋级。
 
-标记：
+本次追加只更新报告标准与计划，没有运行新回测，也没有产生新PASS或新Champion。
 
-```text
-RECOVERY_FACTOR_BELOW_TARGET
-```
+## 12. 新配套方法研究模块（已纳入旧版升级路线，2026-09-07）
 
-## 29.6 Expected Payoff 必须覆盖真实交易成本
+### 12.1 研究定位
 
-Expected Payoff 必须在扣除真实交易摩擦后仍然明显为正：
+本节整合上一份补充稿的研究想法，所有方案目前均为待验证假设，不是已证明能提高胜率、净利或交易数的策略。SOP负责产生合格Setup；新方法只在允许的外围位置提供证据或经实验验证的辅助行为。
 
-```text
-Spread
-Commission
-Slippage
-Delay / Execution Friction
-```
+旧版/Champion保留为历史及同风险对照，不复制其配套逻辑来冒充新研究。必要架构、正确实现的SOP函数、风险计算和服务器对账可以复用，不为追求“全新”而重写已经正确的公共代码。
 
-对于成本敏感的 Scalping，实用参考目标：
+不永久禁止EMA、Stochastic、MACD、ATR、VWAP等方法。新的使用方式必须说明研究问题、作用位置、与旧实验的差别和可证伪条件；SOP内原有定义不能因为“新研究”被删掉，外围指标也不能堆成全部同时满足的硬条件。独立新闻、白银追赶或新方向信号不能绕过三个SOP开单。
 
-```text
-Edge-to-Cost Ratio >= 3x-5x
-```
+### 12.2 六项方法与原任务队列映射
 
-它是安全缓冲参考，不是跨 Broker / Symbol 永远固定的数学常数。
+下列NR编号仅为本计划研究主题，不是已注册Candidate版本。实施时先读registry，另分配既有S-/I-/W-/C-ID。
 
-如果真实成本一加入，优势就消失：
+| 研究主题 | 接入原任务 | 主要适用引擎 | 首轮只记录什么 | ACTIVE边界与待验证问题 |
+|---|---|---|---|---|
+| NR01 到区路径质量 | P3；Scalping在P1/P2审计后接入 | Intraday、Scalping | 到区前推进速度、加减速、方向效率、回扫程度 | 不改区域和首触定义；在获准扩展点测试辅助质量选择，检查减少亏损是否以错过过多盈利为代价 |
+| NR02 行情状态分层 | P3；Swing后续研究入口 | Intraday优先 | 顺畅推进、来回震荡、单次冲击、压缩后扩张标签 | 不改SOP方向、不新增跨周期共振要求；研究同一SOP的环境差异，不先假定某状态必亏 |
+| NR03 反转K线内部质量 | P5，结合P2原触发时间线 | Scalping | 原合格反转K线的方向推进、收盘保留程度、反复回扫 | 不新增必需形态、不多等一根K线；只研究原确认时刻已知的质量差异 |
+| NR04 同类环境相对尺度 | P5，NR01/NR02/NR03定义冻结后 | Scalping、Intraday | 辅助特征相对过去同类时段的分位数或稳健标准化值 | 对照固定尺度版本；不改变SOP区域宽度、SL/TP或核心阈值，不与多个新模块同时启用 |
+| NR05 执行与漏单审计 | P0/P2/P6，贯穿所有实验 | 三个引擎 | 原资格、门控、风险预留、发单、回报和成交时间线 | 先证实软件延迟、错误锁、重复状态等问题，再独立修复；必要风险和执行保护不取消 |
+| NR06 盈利回吐保护 | P4，先查Swing信号漏斗 | Swing；Intraday另注册独立候选 | 真实MFE/MAE、原退出、盈利保留、持仓时间 | 仅在允许管理扩展点测试结构保护或浮盈条件保护之一；初始SOP/风险不变，Scalping不适用 |
 
-```text
-EXPECTED_PAYOFF_TOO_SMALL
-EDGE_COST_BUFFER_WEAK
-SPREAD_COST_EDGE_TOO_SMALL
-```
+### 12.3 方法定义与禁止前视
 
-该 Candidate 不允许晋级。
+**NR01：先研究价格怎样到区，而不是重新选择方向。** 观察窗口、采样频率和所用报价在实验前固定。分别记录决策前的净移动、累计绝对移动、推进速度变化及逆向回扫。到区后的完整走势不能回填到“到区前质量”；同一First Touch episode的多Tick只更新证据，不重复创造新Setup。可用方向效率 `abs(p_end-p_start)/sum(abs(delta_p))` 作为候选表达，分母为0时标记缺失或无移动，不赋高分。先分别统计“加速到区”和“减速到区”的净结果，不预先把后一类认定为好机会。
 
-## 29.7 Balance / Equity 与 Margin Call 完整性
+**NR02：市场状态是解释标签，不是额外的做多做空引擎。** 可研究路径效率、有效方向改变频率、最大一次移动占总移动的比例以及相对波动。零变动的处理、窗口长度和状态分界必须固定；重叠或无法判断时保留 `REGIME_UNCERTAIN`。先看同一SOP在各状态的完整样本，再在训练段选择有限辅助候选，不能看完验证段就删掉不利月份或方向。
 
-正式审核必须同时检查 Balance 和 Equity。
+**NR03：数据截止于原SOP确认时刻。** OHLC版和真实Tick路径版分别登记，不能把只靠OHLC推断的内部路径叫真实Tick证据。Tick版明确使用Bid/Ask中哪种序列或预先定义的报价中值，并保留可用性检查；向上报价次数不是主动买盘，向下报价次数也不是真实卖方成交量，不把代理特征命名为已证实的订单流吸收。历史路径不齐时记录 `DATA_NOT_READY`，不合成“力量耗尽”结论。
 
-如果 Balance 很平滑，但 Equity 出现深度下坠或长期明显分叉，必须检查：
+**NR04：相对尺度只替换辅助特征表达。** 固定历史同类窗口、服务器时区与夏令时映射、预热与样本下限；滚动统计只使用当时之前的资料。若基准不足、尺度分母为0或行情落在未覆盖环境，记录缺失并按预登记规则处理，不能临时给高分或为凑单放行。固定尺度与相对尺度的对照保持其他参数和行为一致，避免把新标准化与新过滤器混成一个实验。
 
-```text
-隐藏浮亏
-Martingale / Grid 暴露
-Recovery-only Exit
-Margin Stress
-Position Accumulation
-延迟实现亏损
-```
+**NR05：先审链路，再判断哪里该改。** 为每个独立Setup记录原SOP资格、可选证据、Risk、Portfolio、Execution的实际顺序和结果；以实际代码映射为准，不为日志重排架构。订单超时未知先核对服务器状态，明确拒绝、部分成交、已成交和无SOP资格分开处理。Scalping可修复可证实的不必要程序延迟，但不能等待更好价格而违背锁定时机；过期/失效信号不强行补单。`WRONG_TREND`、`LATE_ENTRY`、`SL_TOO_TIGHT`等旧标签先核对定义及时间线，不能直接当成因果结论或过滤条件。
 
-绝不能因为 Balance Drawdown 很低就直接通过。
+**NR06：保护规则分别实验，不预设“越早保本越好”。** 先审信号稀少原因、风险约束和原持仓管理，再分别登记“结构改善后保护”与“达到浮盈条件后保护”；不要第一次就同时加入追踪、分批和时间退出。初始R定义冻结，SL只能收紧，分批量必须符合最小手数及步长。达到浮盈阈值不代表能按该价成交；需记录真实触发、请求、成交和成本。分别报告减少的盈利回吐、被提前截断的大盈利、平均净R及最大净值回撤。时间衰减退出只有在管理权限明确允许时才可建候选，否则列SOP变更建议，不自动启用。
 
-## 29.8 Real Tick 是正式 Champion 的强制证据
+全部特征登记 `available_at`，验证其不晚于相应决策时刻。MAE/MFE、原交易最终结果等后验字段只能用于审计和训练标签，不能作为当时输入；当前训练之外的数据不得参与窗口、阈值或模型选择。通用公式与规则评分不等于真实胜率或成功概率。
 
-正式 Champion 证据必须使用：
+### 12.4 模块模式与逐步启用
 
-```text
-Every tick based on real ticks
-```
+| 模式 | 允许做什么 | 不允许做什么 |
+|---|---|---|
+| OFF | 维持该实验对应的原对照行为 | 不保留隐性评分门控或残余状态影响 |
+| OBSERVE | 计算、显示、写独立日志；记录数据缺失 | 不改原SOP资格、方向、触发时刻、手数、SL/TP、退出或Zone消耗 |
+| ACTIVE | 只执行候选登记表明确允许的辅助行为 | 不绕过SOP、安全门控或当前冻结风险档；默认R13，高风险研究另行登记，不把行为变化伪装成观察 |
 
-`1-minute OHLC` 等低精度模式只能作为明确标记的诊断测试，不能作为唯一晋级证据。
+同一测试条件下先做OFF/OBSERVE成对核对，检查原资格、Setup数量、计划入场、订单、成交和退出。观察模式如造成差异，先修复或完整定位原因，不能带着未知副作用进入ACTIVE。
 
-## 29.9 Delay / Slippage 压力测试
+ACTIVE第一次只启用一个主要变量。过滤、减少风险、改变退出或合法执行路径均分别注册；每个引擎独立开关和参数，不能因Intraday测试有效就自动给Scalping/Swing启用。任何过滤后的原合格Setup仍保留在机会审计表，不能通过改日志定义隐藏低交易数。
 
-对执行敏感的 Strategy，最终 Candidate 不能只依赖 `No Delay`。
+### 12.5 在旧计划中的实际执行顺序
 
-优先使用 Broker 实际合理的随机 Delay / Slippage；参考压力点可以包括：
+1. **P0先行：** 核对当前工作区、SOP_LOCK、参数版本、历史证据和数据使用状态；先检查R13，再按P0-R登记R24/R36及拆分对照的USD500可行性与预算实验。某档受限不要求先调到PASS。H0/B0/K0来源关系、每档reference和旧模块清理范围先写清，不把全部指标盲目关闭。
+2. **保留原P1/P2优先级：** 最近有效区域选择、旧区占位和First Touch状态按原计划复现与修复；NR05同步采集链路证据。修复一个问题就冻结一个可追溯reference，不把多项改动混在首个候选。
+3. **添加只读证据：** NR01/NR02接入Intraday观察，NR03接入Scalping观察；NR04在基础特征明确后加入观察。观察模块可同批记录，但必须通过无行为变化的回归核对；这不等于同时启用多个控制器。
+4. **分别启用候选：** 根据训练段可复核差异，优先测试NR01或NR02的一个允许辅助用法；Scalping在不变更原确认/立即执行的前提下另测NR03。每个候选保留OFF及OBSERVE对照，不追加临时门槛“救结果”。
+5. **独立持仓研究：** Swing先确认有效Setup、风险阻挡与样本，再研究NR06；Intraday管理按P4独立注册。Scalping不进入保本/追踪/分批/runner研究。
+6. **组合与晋级：** 只有单模块有支持证据，才登记少量二模块组合；之后重新跑S-only、I-only、W-only及实际Combined。全部执行§7和§11，不用组合掩盖某条独立线不合格。
 
-```text
-10 ms
-25 ms
-50 ms
-```
+计划首批只规定研究主题与先后，不预填最优参数、预期胜率或每天订单数量。出现低样本、资金限制或数据阻塞时，保留原因并继续可执行工作，不降低门槛，也不宣称模块已经有效。
 
-或者有记录的 Broker 实际范围。
+### 12.6 每个Candidate的登记卡
 
-必须比较：
+以下是必填字段说明，不是已完成实验结果。正式值由执行时的源码、配置、环境和产物填写。
 
-```text
-Baseline Real Tick
-vs
-Delay / Slippage Stress
-```
+| 字段 | 必填内容 |
+|---|---|
+| 身份 | `experiment_id`、实际Candidate ID、`reference_id`、engine、branch/commit、源码及SET/INI hash |
+| 来源 | `idea_origin`、旧方法的新假设或外部来源；涉及复用代码时列出路径和许可证核查 |
+| 问题与反证 | 实际案例、待验证假设、什么结果会否定它，不用事后解释替代预先判断 |
+| 允许变化 | 读写接口、锁定SOP、模块模式、行为变化、`sop_changed=false`的逐条依据；真实冲突不得虚填false |
+| 特征时序 | 窗口、时间单位、报价源、`available_at`、缺失/零分母处理、训练与更新规则 |
+| 实验预算 | 主要变量、参数范围、最多组合数、开发/验证区间及数据已使用状态 |
+| 比较口径 | FxPro、USD500、风险引擎、risk_profile_id、单笔/组合上限、RG/SZ与目标手数规则、合约、预热、成本、执行延迟、开关、完整交易/Setup聚合 |
+| 验收与回滚 | 工程一致性、信号/收益/成本差异、§11硬门槛、样本外与压力要求；冻结后不可看结果放宽 |
+| 结果证据 | 实际编译日志、原生MT5报告、完整成交及信号CSV、反事实估计边界、中文报告与原Final Verdict枚举 |
 
-如果 Net、PF、Expected Payoff 或执行可靠性明显崩溃，标记：
+应报告“减少多少亏损机会，也错过多少盈利机会”，不能只给被过滤订单的胜率。新方法提高PF但交易样本不足、净利不为正或风险超限，均不能以研究改善代替晋级。没有行为变化的观察模块本身没有收益改善成绩。
 
-```text
-NO_DELAY_ONLY_EVIDENCE
-DELAY_SLIPPAGE_FRAGILE
-```
+### 12.7 与上一份补充稿的适用差异
 
-## 29.10 Untouched OOS 规则
+以下差异明确登记，避免执行者同时读取两份文件后混用。主计划未授权改变的范围仍保留原约束；最新“SOP不变”要求收紧了涉及核心变更的旧候选建议。
 
-示例：
+| 补充稿或旧建议口径 | 本整合版处理 | 原因/适用章节 |
+|---|---|---|
+| B0=旧版、B1=纯SOP | 保留原计划H0=历史、B0=同风险；新增K0=配套清理 | 避免同名基准含义变化；§3.1 |
+| 先做FxPro及Tradona | 当前仍先做FxPro，不扩展双券商验证任务 | 上传主计划§2/§2.1范围优先；历史Tradona信息仅作原记录 |
+| 将SL50/TP50、SL120/TP240直接作为当前固定值 | 同时保留原SOP与SC-S20 80/70、IN-I32 120/70的历史差异，不自动改参数 | §4要求核对实际SET及单位；新增方法不能借机改SL/TP |
+| 全部固定0.01手研究 | RG可使用相同最小合法手数，仍受该档风险/保证金门控；SZ另组，虚拟R研究另标反事实 | §3资金可行性，不能制造虚假成交或混淆手数放大 |
+| 1%/3%是唯一允许实验的风险 | 本次用户新增R24=2%/4%、R36=3%/6%及拆分对照，R13仍是默认 | §3.2–§3.7；仅离线研究，不临时切档、不扩大SOP权限、不自动改变正式配置 |
+| v3.20问题决定当前所有优先级 | 不假定当前仍是v3.20，保留本计划P0→P1/P2主序，并按当前证据推进新模块 | 主文件已有V4.00审计记录，历史线索不替代当前核验 |
+| 无条件等待确认、回踩路由、提前退出 | 核心时机冲突改列SOP_CHANGE_PROPOSAL；允许的外围行为才注册ACTIVE候选 | 最新SOP锁定；§2.2/§4/§12.4 |
+| KEEP_RESEARCH / MORE_TESTING等新增最终判定 | 不替换原Final Verdict枚举；仅作为研究标签或说明 | §7.2与§11门槛原样沿用 |
+| 旧版或文件名含Champion就视为合格 | 历史身份保留、当前适用状态REVALIDATION_REQUIRED；无证据者作为待验证基准 | §2，不能凭名称晋级，也不重写旧历史 |
+| 时间退出作为默认利润保护 | 仅在该引擎管理权限允许时研究，否则只列建议 | 不自动给Intraday/Swing新增任意退出规则，Scalping明确排除 |
 
-```text
-2020-2025 = Train / Development
-2025-2026 = Untouched OOS Validation
-```
+### 12.8 本次文件变更摘要与来源
 
-日期只是示例；正式测试必须记录实际区间。
+**新增及同步：** 已选旧版升级路线、SOP锁定/扩展权限、K0配套清理对照、NR01–NR06研究主题、模块模式、反事实与完整账户对照、候选登记卡；本次再加入R13/R24/R36风险分档、拆分对照、最低手数可行性、RG/SZ分组、逐档风险公式、连亏压力、研究权限及同步后的Codex首轮指令。
 
-一旦 OOS 结果已经被看过，任何重新调参都必须建立新实验；对修改后的 Candidate，该区间不能继续被称为 untouched OOS。
+**保留：** 原P0–P6主队列（增加独立P0-R）、历史SC-S20/IN-I32/SW-W37/C-C01身份、实际SET与SOP参数差异、FxPro范围、USD500、R13默认单笔≤1%/组合≤3%、三策略独立OR、Scalping固定SL/TP及持仓管理禁项、真实Tick/OOS/压力纪律，以及§11完整报告门槛。§11仅同步连续亏损条款的逐档风险口径，其余正文保留。
 
-## 29.11 最终 Champion 强制门槛矩阵
+**未执行：** GitHub写入、当前源码重新审计、EA修改、Candidate注册、MetaEditor编译、MT5回测、OOS或任何Champion晋级。文件中的待完成任务是供Windows Codex执行的计划，不是本次已完成工作。
 
-Candidate 只有在以下项目全部完成后，才有资格进入最终晋级比较：
+本次合并的直接文件来源：
 
-```text
-[ ] Compile correctness 已确认
-[ ] Reject / Critical Execution Errors = 0
-[ ] No Future Data / Look-ahead
-[ ] No Hidden Risk / Lot Increase
-[ ] Risk-normalized Comparison 已完成
-[ ] 使用 Every tick based on real ticks
-[ ] Max Equity DD <= 30%
-[ ] Balance-vs-Equity Integrity 已检查
-[ ] Expected Payoff / Expectancy 扣真实成本后仍为正
-[ ] Trade Sample 对策略类型足够，或已有长期 / Regime 证据补强
-[ ] OOS untouched 且没有 Collapse
-[ ] FxPro + Tradona Cross-Broker Evidence 已完成
-[ ] 执行敏感策略已完成 Delay / Slippage Robustness
-[ ] BUY / SELL 不对称已审计
-[ ] Consecutive-Loss Stress 已完成
-[ ] Combined 已完成 Portfolio Audit
-```
+- `EA_RESEARCH_DEVELOPMENT_PLAN_2026-09-07_CN_MERGED.md`：本次直接编辑底稿；保留全套旧版升级与新方法研究内容。
+- `EA_RESEARCH_DEVELOPMENT_PLAN_2026-09-06_CN(1).md`：原主文件，提供现有架构、范围、原风险、参数差异、队列及验收规则。风险实验权限按本次用户新增要求明确更新。
+- `GSM_Upgrade_Research_Addendum_CN.md`：配套新研究要求来源；与主文件冲突处已在§12.7明确处理，没有照单覆盖。
+- 用户明确要求：把新研究要求加入所选旧版升级计划，SOP不变，允许建议、修改候选和测试；本次进一步要求加入上一轮讨论的1%/3%对照、2%/4%及3%/6%风险研究后重新交付完整MD。风险档位和数学例子是本次计划新增内容，不追溯写成旧仓库或历史测试结论。
 
-通过这张矩阵**不等于自动成为 Champion**。它只是取得进入最终比较的资格：
+原计划中的官方文档链接与项目文件索引作为原文参考保留；本次没有新增外部事实核验，也没有把未随本次上传的仓库文件、教材或旧报告描述成重新读取的资料。
 
-```text
-Candidate VS Current Champion
-↓
-Net Profit USD
-↓
-Max Equity Drawdown
-↓
-Profit Factor
-↓
-Trade Count
-↓
-Win Rate
-↓
-只有明确更好并且稳健 → NEW CHAMPION
-```
+**最终执行原则：在旧项目里继续升级；SOP核心不变，配套方法可以重新设计。R13保留默认，R24/R36只作独立风险研究；先复现问题、登记假设，再改候选。方法是否改善看同档、同手数规则对照；风险是否值得看可执行机会与回撤代价，不用加大仓位冒充策略优势，也不凭回测自动启用实盘。**

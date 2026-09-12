@@ -1,5 +1,7 @@
 # 分支、PR 与 Issue 目录
 
+2026-09-12：当前研发计划已统一到 main 的 [中文版](../FINAL_CHAMPION_ITERATION_SYSTEM_CN.md) 与 [English](../FINAL_CHAMPION_ITERATION_SYSTEM.md)。下表及 PR #4 的计划入口是历史记录，不作为当前计划；本次不改写冻结分支和原始研究证据。
+
 盘点日期：2026-09-10 UTC。记录当时状态，后续任务应核对变化。分支存在不代表已合并或已通过验收。
 
 | 分支 | 固定提交 | 文件数 | 用途 |

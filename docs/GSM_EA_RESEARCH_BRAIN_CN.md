@@ -1,5 +1,7 @@
 # GSM EA 交易研发头脑
 
+2026-09-12 项目计划入口更新：GSM 旧版升级使用 [当前中文计划](../FINAL_CHAMPION_ITERATION_SYSTEM_CN.md) / [English](../FINAL_CHAMPION_ITERATION_SYSTEM.md)。本文件保留通用协作参考用途；旧计划与旧 §29 不再作为当前计划，项目具体范围和验收以用户已选新计划及后续明确要求为准。当前项目 Python 仅用于 MCP 监控端，EA 的 MQL5 执行与本地风控独立运行。
+
 版本：1.1 · 日期：2026-09-10 · 适用：GPT / Codex，MT5 黄金 EA 研究与代码开发
 
 ## 给 Jason 的使用说明

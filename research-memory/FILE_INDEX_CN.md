@@ -1,5 +1,7 @@
 # 全文件分类索引
 
+2026-09-12 当前计划：[中文版](../FINAL_CHAMPION_ITERATION_SYSTEM_CN.md) · [English](../FINAL_CHAMPION_ITERATION_SYSTEM.md)。下方固定提交中的旧总规范和旧研发计划只供历史追溯；它们的原 blob 与快照数量不改写为本次版本。
+
 盘点日期：2026-09-10 UTC。覆盖 8 个可见分支，260 个不同文件路径，724 条分支文件记录。
 
 同一路径可以在多个分支有不同内容。下表列出所有分支对应；链接固定在盘点提交，新增目录文件单列于 JSON 的 maintenance_files_in_this_change。仅记录文件元数据不代表全文审计或策略验证。

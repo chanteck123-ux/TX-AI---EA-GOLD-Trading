@@ -1,2239 +1,680 @@
-# GSM GOLD 3-SOP EA — Final Champion, Optimization, Optional AI Research & Program Governance Standard
+# FINAL_CHAMPION_ITERATION_SYSTEM — Current EA Research and Development Plan
 
-## 0. Authority and Current Assumption
+[中文版 / Chinese](FINAL_CHAMPION_ITERATION_SYSTEM_CN.md)
 
-This file is the **highest-level development, optimization, validation, research, program-governance, and Champion-management standard** for GSM GOLD 3-SOP EA.
+Saved update: 2026-09-12 (Asia/Kuala_Lumpur). At the user's explicit request, this edition replaces the previous Chinese and English master plans with the complete supplied risk-updated plan.
 
-If any older document conflicts with this file on metric order, Candidate naming, Combined assumptions, Research handling, AI collaboration, or program flow, this file takes precedence.
-
-Current operating assumption: a formally validated `REAL CURRENT CHAMPION` already exists:
-
-```text
-SCALPING M5 CHAMPION
-INTRADAY M30 CHAMPION
-SWING CHAMPION
-3-SOP COMBINED CHAMPION
-```
-
-From this point forward:
-
-```text
-CHAMPION = the only formal baseline
-Candidate VS Champion = the only promotion path
-```
-
-Final evaluation order is fixed:
-
-```text
-#1 Net Profit USD
-#2 Max Equity Drawdown
-#3 Profit Factor
-#4 Trade Count
-#5 Win Rate
-```
-
-`Reject` target must be 0.
-
-`Max Equity Drawdown` has risk-veto authority: a higher Net Profit cannot automatically justify unacceptable drawdown, margin stress, or blow-up risk.
+- Chinese source: `EA_旧版升级研究计划&codex重新研究开发计划&研究开发计划指南_CN_RISK_UPDATED.md`; SHA256: `88265662399010a383aa334dc2752fa1cba12bba912eff63f571fd8075251c66`.
+- All 12 main sections below are translated in full, retaining the source's numbers, constraints, identifiers and historical status. The only body-link adjustment resolves the relative source-and-baseline audit link to its existing fixed historical commit. The Chinese source controls in the event of a translation ambiguity.
+- The old Chinese and English master-plan contents have been replaced in the current version. References to old branch plans, the former master standard and "§29" are historical provenance only; they do not restore the superseded plan. The project's current scope follows the explicit provisions of this plan, confirmed SOPs and the user's subsequent explicit instructions.
+- Dates 2026-09-06 / 2026-09-07, "this update", completed checkboxes and statements of work not performed belong to the source's historical record. This replacement only saves, translates and synchronizes the plan entry points. It does not implement a Candidate, compile an EA, run MT5 backtests, change a Champion or enable live trading. Saving the plan does not automatically start its embedded execution instructions.
+- Source descriptions of old code, teaching materials, reports and contract specifications were not revalidated in this update. Check the current project, evidence and environment when execution is requested; do not force a rollback to a historical commit.
+- Recovery reference: [English version before replacement](https://github.com/chanteck123-ux/TX-AI---EA-GOLD-Trading/blob/b0b36546f6b938e7d64be38b9c832f24d019efeb/FINAL_CHAMPION_ITERATION_SYSTEM.md), for historical traceability only.
 
 ---
 
-# 1. Highest-Level System Architecture
+# GSM GOLD 3-SOP EA Legacy-Version Upgrade Research and Development Plan (Fully Consolidated Edition · Risk-Tier Research Update)
 
-```text
-GSM SOP AUTHORITATIVE FOUNDATION
-        ↓
-3 INDEPENDENT STRATEGY ENGINES
-  ├─ SCALPING M5
-  ├─ INTRADAY M30
-  └─ SWING D1/H4/M30
-        ↓
-OPTIONAL OPTIMIZATION / RESEARCH MODULES
-        ↓
-SIGNAL / EVIDENCE / CONFIDENCE
-        ↓
-RISK ENGINE
-        ↓
-PORTFOLIO MANAGER
-        ↓
-EXECUTION ENGINE
-        ↓
-MT5
-        ↓
-REAL TICK
-        ↓
-TRAIN / OOS
-        ↓
-FxPro / Tradona
-        ↓
-WHEN REQUIRED: WALK FORWARD / STRESS TEST
-        ↓
-TRADE AUDIT + MISSED OPPORTUNITY AUDIT
-        ↓
-Candidate VS Champion
-        ↓
-REJECT / KEEP CURRENT CHAMPION / RESEARCH FURTHER / NEW CHAMPION
-```
+Original plan date: 2026-09-06. Consolidated update: 2026-09-07. Risk research update: 2026-09-07. Execution agent: Windows Codex.
 
-GSM SOP defines what valid trading logic is.
+**Selected development route: conduct upgrade research within the existing GSM Gold 3-SOP EA project, without creating a new strategy EA detached from the SOPs.**
 
-GitHub, external EAs, AI, or any other Research source only provides ideas worth testing. No Research logic may enter a Champion without independent validation.
+Status: **The complete plan now includes risk-tier research; R13, R24, and R36 have not been implemented, compiled, or backtested in this update. This update has not modified EA source code, submitted anything to GitHub, enabled live trading, or produced any new promotion result.**
 
----
+The original plan records its basis as main-repository commit `eb74280c53e474e0dbcb0c10c491705689922416`, the V4.00 delivery package, four uploaded textbooks, and six classroom screenshots. The existing top-level architecture and the complete report acceptance requirements in §11 remain in force: complete trade count >100 and native MT5 Recovery >3 remain explicit hard gates for this round and take precedence over more permissive rules for the same items in older documents. The original plan's supporting evidence index is [Source and Baseline Review](https://github.com/chanteck123-ux/TX-AI---EA-GOLD-Trading/blob/e634b2b966244ecc7f0aa38ef3d76ba01b0f6369/research/github/SOURCE_AND_BASELINE_AUDIT_2026-09-06_CN.md).
 
-# 2. Four Champion Lines
+This file updates the fully consolidated edition `EA_RESEARCH_DEVELOPMENT_PLAN_2026-09-07_CN_MERGED.md`; its foundations remain the user-uploaded `EA_RESEARCH_DEVELOPMENT_PLAN_2026-09-06_CN(1).md` and the already incorporated supplement on new methods. Following the user's request to “add it,” this update incorporates the 1%/3% default control and the independent 2%/4% and 3%/6% risk experiments into §2, §3, the task queue, risk interfaces, testing, delivery, and Codex instructions. It is not a separate supplement and does not change the official risk default to 3%/6%.
 
-The system permanently maintains four independent Champion lines:
+**Authorization boundary for this update: registered risk tiers may be compared in independent research branches and offline backtests; this does not authorize relaxing live-trading risk, increasing capital, changing SOPs, shortening stop losses, or automatically switching to a higher-risk tier.** The acceptance gates in §11 for net profit, drawdown, complete trade count, Recovery, and other items remain in force; only the risk-tier basis of its consecutive-loss provisions is synchronized, as detailed in §3.2–§3.7.
 
-1. `SCALPING_CHAMPION`: M5 Scalping enabled alone.
-2. `INTRADAY_CHAMPION`: M30 Intraday enabled alone.
-3. `SWING_CHAMPION`: D1/H4/M30 Swing enabled alone.
-4. `COMBINED_CHAMPION`: full 3-SOP EA rebuilt from the three locked engine Champions.
+> Material status: the source-code observations, historical figures, and textbook mappings retained in the body come from the original plan's records and do not mean that the repository or backtests have been reverified in this update. The supporting source review, top-level specification, source code, and reports are not packaged with this MD file; they must be checked in the current project during execution. The current project may have later commits; citing a historical commit in this file does not require a rollback to it.
 
-At all times the system must be able to answer:
+## 1. Decisions for This Round
 
-```text
-Current Scalping Champion = ?
-Current Intraday Champion = ?
-Current Swing Champion = ?
-Current Combined Champion = ?
-```
+**Keep the core SOP strategies unchanged; research supporting methods again within the legacy project, with permission to propose recommendations, modify candidate code and parameters, test, analyze, and iterate.** First align the baseline, risk, and entry definitions, then improve valid opportunities and position management item by item, without making “add more indicators” the primary task.
 
-A Champion line must never have two formal Champions at the same time.
+Legacy versions and Champions are used to verify implementation, reproduce history, and compare at the same risk, rather than as templates that new methods must copy. Existing indicators are not permanently prohibited; new formulations, uses, or combinations may be proposed, but their substantive differences from previous experiments must be explained. New research must not be interpreted as deleting SOPs, and new modules must not independently generate orders that lack SOP qualification.
 
-Each Champion must be traceable by:
+Priority order:
 
-- Version
-- Source SHA256
-- SET SHA256
-- Broker
-- Symbol
-- Capital
-- Risk Budget
-- Actual Risk
-- Real Tick Period
-- OOS Period
-- Metrics
-- Final Report
+1. Verify the source code, SET files, original reports, and applicable gates for the four Champion tracks; rebuild the default control with R13, separately register R24/R36 feasibility with USD500 and their risk experiments, and retain a same-risk control for each tier.
+2. First research the zone-selection biases already found in this repository's source code: composite-score zone selection in Scalping and valid older zones persistently occupying the active selection.
+3. Audit First Touch, entry timing, filtered opportunities, and execution failures to identify reproducible problems.
+4. Research supporting trend evidence, entry location, and profit protection independently for Intraday and Swing; retain the locked trigger timing and fixed SL/TP for Scalping.
+5. Incorporate the approach path to a zone, market state, internal reversal quality, relative scale, execution audit, and profit-giveback protection into the existing P0–P6 queue; observe first, then activate candidates individually where authorization is explicit, as detailed in §12.
+6. Only after a single strategy wins should it undergo a portfolio backtest as a Combined Candidate.
 
-A profitable Combined result does not prove every Engine is individually strong; profitable standalone Engines do not prove the Combined portfolio is strong.
+The objective order remains: Net Profit USD → Max Equity DD → PF → complete trade count → Win Rate. Drawdown has veto power; improvements in profit, frequency, and win rate all require same-risk evidence after costs.
 
----
+## 2. Baselines and Scope
 
-# 3. Candidate Naming and Provenance
-
-Canonical Candidate IDs:
-
-| Lane | Candidate | Suggested Branch |
+| Baseline track | In-package identifier | Purpose in this round |
 |---|---|---|
-| Scalping | `S-C01` | `research/scalping/<origin>/<topic>` |
-| Intraday | `I-C01` | `research/intraday/<origin>/<topic>` |
-| Swing | `W-C01` | `research/swing/<origin>/<topic>` |
-| Combined | `C-C01` | `research/combined/<origin>/<topic>` |
+| Scalping M5 | SC-S20 | Preserve unchanged as a historical control |
+| Intraday M30 | IN-I32 | Preserve unchanged as a historical control |
+| Swing D1/H4/M30 | SW-W37 | Preserve unchanged as a historical control |
+| Three-strategy combination | C-C01 / V4.00 | Independent combined baseline; adding single-strategy profits is not a substitute |
 
-Suggested `origin` values:
+The original plan records that source-code and ZIP hashes were checked and historical MetaEditor compile logs, MT5 reports, SET/INI files, and audit CSV files in the package were read, but MT5 was not rerun in that environment at the time. This update changes only the plan and does not repeat those checks. Retain existing Champions' historical titles, identity records, and original evidence; list their applicability under the latest mandate separately as `REVALIDATION_REQUIRED`. A historical name does not automatically mean the current round's gates have been passed. Label current comparison targets without verifiable evidence as “baseline pending verification”; do not rewrite history independently or grant new Champion status based on a filename.
 
-```text
-user
-standard
-codex
-claude
-single-ai
-hybrid
-external
-github
-```
-
-Candidate provenance must be recorded, for example:
-
-```text
-USER_SOP_OPTIMIZATION
-STANDARD_RESEARCH
-CODEX
-CLAUDE
-SINGLE_AI
-CODEX_CLAUDE
-EXTERNAL_RESEARCH
-GITHUB_RESEARCH
-```
-
-Origin does not change the promotion standard.
-
-A Research ID is only a research record; it does not mean the source code was implemented, compiled, or backtested successfully.
-
----
-
-# 4. GSM SOP and Research Must Remain Separate
-
-GSM SOP belongs to:
-
-```text
-AUTHORITATIVE STRATEGY FOUNDATION
-```
-
-Research belongs to:
-
-```text
-EXPERIMENTAL / EXTERNAL RESEARCH SOURCE
-```
-
-Research may:
-
-- improve the program implementation of GSM SOP
-- find SOP implementation mistakes
-- identify wrong entries
-- identify missed entries / no-trade causes
-- create Candidates
-- propose new Entry / Exit hypotheses
-- propose indicator, risk, execution, or Portfolio modules
-
-But never:
-
-```text
-Research Idea
-→ directly modify the formal Champion
-```
-
-Required path:
-
-```text
-Research Idea
-↓
-Candidate
-↓
-Candidate VS Champion
-↓
-Fair Validation
-↓
-Clear Win
-↓
-Promotion Only Then
-```
-
-If a Candidate changes GSM Base SOP, it must explicitly record:
-
-```text
-GSM_BASE_SOP_CHANGED = YES / NO
-```
-
----
-
-# 5. Three Strategy Engines
-
-## 5.1 SCALPING M5
-
-Core flow:
-
-```text
-M5
-↓
-Find current nearest valid S&D by CURRENT PRICE DISTANCE
-↓
-Fresh Zone
-↓
-Departure
-↓
-First Touch / Retest
-↓
-Reversal Confirmation
-↓
-Entry
-↓
-SL / TP
-↓
-Exit
-```
-
-Key rule:
-
-```text
-Nearest Zone = valid zone nearest to current price
-NOT the most recently formed zone
-```
-
-BUY:
-
-```text
-Valid Demand
-+
-First Touch / Retest
-+
-Bullish Reversal
-```
-
-SELL:
-
-```text
-Valid Supply
-+
-First Touch / Retest
-+
-Bearish Reversal
-```
-
-Research areas may include:
-
-- Candle Quality
-- Spread Cost Gate
-- Entry Quality
-- Real Tick Robustness
-- Regime Filter
-- ATR
-- Market Structure
-- Liquidity
-- Execution Timing
-- Cost-aware Exit
-
-No artificial daily trade cap. Never manufacture low-quality trades merely to increase Trades.
-
----
-
-## 5.2 INTRADAY M30
-
-Base / Benchmark:
-
-```text
-M30 Market Direction
-↓
-Nearest Valid M30 Supply / Demand
-↓
-Define Zone
-↓
-Wait Price Enter Zone
-↓
-Entry
-↓
-SL
-↓
-TP
-↓
-Management
-```
-
-Principle: actively look for valid opportunities; zero trades on a day is acceptable; never force one trade per day.
-
-The following must remain Candidate-only until proven:
-
-- M15 Confirmation
-- M5 Confirmation
-- Any 2 of 3
-- 3 of 3
-- EMA
-- BOS
-- CHoCH
-- FVG
-- Order Block
-- Liquidity
-- Candlestick Confirmation
-- ATR Stop
-- Structure Stop
-- Session Filter
-- VWAP
-- Volume
-- AI Score
-
-All must be A/B tested fairly against the Current Intraday Champion.
-
----
-
-## 5.3 SWING
-
-The formal Swing Base is defined by the currently validated Champion Code / Authoritative SOP. Research must not invent a new Swing Base without source authority.
-
-Research areas may include:
-
-- D1 Framework
-- H4 Trend
-- Support / Resistance
-- Supply / Demand
-- Pullback
-- Candlestick
-- Market Structure
-- SMC
-- Trailing / Protection
-- ATR
-- Fibonacci
-
-The other two Strategy Champions not under study must remain locked; their source code and parameters must not be casually modified.
-
----
-
-# 6. Fair Candidate VS Champion Test Protocol
-
-Each Candidate should change one major variable and enable only the corresponding Engine.
-
-Champion and Candidate should use the same:
-
-- Broker / Data Source
-- Symbol
-- Capital
-- Leverage
-- Real Tick Period
-- Tester Model
-- Spread / Commission
-- Slippage Assumption
-- Risk Budget
-- Position Sizing Rules
-- Session Conditions
-- Base Execution Settings
-
-Each Broker report must output:
-
-| Version | Net USD | Max Equity DD | PF | Trades | Win Rate | Reject |
-|---|---:|---:|---:|---:|---:|---:|
-
-Also output:
-
-- Delta Net
-- Delta DD
-- Delta PF
-- Delta Trades
-- Delta Win Rate
-
-Training is for parameter selection. OOS is for validation only.
-
-After reading an OOS result, parameters must not be retuned and the same period still called OOS.
-
-## 6.1 Risk-Normalized Comparison
-
-Forbidden:
-
-```text
-Candidate uses higher Risk / Lot
-Champion uses lower Risk / Lot
-then only Net Profit is compared
-```
-
-If risk differs, first perform:
-
-```text
-RISK-NORMALIZED COMPARISON
-```
-
-Report:
-
-- Requested Risk
-- Actual Risk
-- Lot
-- SL Distance
-- Margin Usage
-
----
-
-# 7. Champion Evaluation System
-
-Official priority is permanently fixed:
-
-```text
-1. Net Profit USD
-2. Max Equity Drawdown
-3. Profit Factor
-4. Trade Count
-5. Win Rate
-```
-
-Supporting metrics must include:
-
-- Return % on Initial Capital
-- Max Equity Drawdown USD
-- Max Equity Drawdown %
-- Balance Drawdown as secondary context only
-- Relative Drawdown
-- Average Win
-- Average Loss
-- Realized Average R:R
-- Expected Payoff / Expectancy
-- Break-even Win Rate
-- Recovery Factor
-- Long Win Rate / Short Win Rate
-- BUY Performance / SELL Performance
-- Maximum Consecutive Losses
-- Spread / Commission / Slippage Sensitivity
-- OOS Performance
-- Walk Forward Stability
-- Parameter Robustness
-- Market Regime Performance
-
-Win Rate must never be judged in isolation.
-
-## 7.1 Net Profit must be normalized by capital
-
-Absolute Net Profit alone is insufficient.
-
-Every report must calculate:
-
-```text
-Return % = Net Profit USD / Initial Capital × 100
-```
-
-A strategy that earns a small absolute amount on a large account can be statistically valid but commercially unattractive. Therefore both `Net Profit USD` and `Return %` must be reported.
-
-This does not change the official Champion ranking order. `Net Profit USD` remains #1, while `Return %` is a mandatory interpretation metric.
-
-## 7.2 Profit Factor interpretation
-
-Profit Factor must be interpreted together with sample size, drawdown, OOS, costs, and parameter stability.
-
-Useful diagnostic reference bands:
-
-```text
-PF < 1.00      = losing system on the tested sample
-PF 1.00-1.20   = weak / marginal edge
-PF 1.20-1.50   = usable but needs robustness confirmation
-PF 1.50-2.00   = strong if supported by sufficient sample and OOS
-PF > 2.00      = very strong, but inspect sample size and overfitting risk carefully
-PF > 2.50-3.00 = not automatically invalid; requires heightened scrutiny
-```
-
-A high PF is **not** proof of overfitting by itself. It becomes suspicious when combined with one or more of:
-
-- very low trade count
-- one short favorable market regime
-- sharp OOS collapse
-- parameter cliff behavior
-- unrealistic spread / commission / slippage assumptions
-- future-data or look-ahead defects
-- one-sided BUY/SELL dependence
-
-Flag when appropriate:
-
-```text
-PF_OVERFIT_SUSPECT
-```
-
-## 7.3 Max Equity Drawdown is the primary drawdown metric
-
-Always prioritize `Equity Drawdown`, not Balance Drawdown, because open-position floating losses are economically real.
-
-Required output:
-
-```text
-Max Equity DD USD
-Max Equity DD %
-Max Balance DD USD / % (secondary only)
-```
-
-Diagnostic reference bands:
-
-```text
-<= 15%     = preferred / controlled
-15%-30%    = caution zone
-> 30%      = high-risk zone
-> 50%      = severe capital-risk zone
-```
-
-These bands are risk diagnostics, not universal hard pass/fail thresholds unless explicitly configured for the Champion mandate. Max Equity DD retains veto authority.
-
-Large divergence between Balance and Equity must trigger:
-
-```text
-BALANCE_EQUITY_DIVERGENCE
-HIDDEN_FLOATING_LOSS_RISK
-```
-
-## 7.4 Trade-count adequacy is strategy-dependent
-
-Do not force one universal `>100 trades` rule across all strategies.
-
-Preferred evidence guidance:
-
-```text
-Scalping: preferably > 200; 300-1000+ is better when feasible
-Intraday: preferably > 100
-Swing: do not mechanically force > 100; extend years and market regimes instead
-```
-
-Small samples must be flagged:
-
-```text
-LOW_SAMPLE_SIZE
-LOW_SAMPLE_WINRATE
-```
-
-The lower the sample size, the stronger the requirement for longer date ranges, regime diversity, OOS, Walk Forward, and cross-broker confirmation.
-
-## 7.5 Recovery Factor
-
-```text
-Recovery Factor = Net Profit / Maximum Drawdown Amount
-```
-
-Diagnostic interpretation:
-
-```text
-< 1.0  = weak
-1.0-2.0 = marginal
-2.0-3.0 = good
-> 3.0  = strong
-```
-
-`Recovery Factor > 3` is desirable but is **not** a universal standalone hard gate. It must be interpreted with DD, sample size, OOS and strategy type.
-
-## 7.6 Expected Payoff and cost coverage
-
-Expected Payoff must be positive and must survive realistic costs.
-
-For short-horizon strategies, especially Scalping, report:
-
-```text
-Expected Payoff / Trade
-Average Spread Cost / Trade
-Average Commission / Trade
-Estimated Slippage Cost / Trade
-Total Estimated Cost / Trade
-Edge-to-Cost Ratio
-```
-
-Where practical:
-
-```text
-Edge-to-Cost Ratio = Expected Payoff / Estimated Total Cost per Trade
-```
-
-A large safety buffer is preferred. A 3x-5x cost buffer can be used as a strong reference target for cost-sensitive strategies, but it is not a universal hard threshold because units and execution models differ by broker and symbol.
-
-Flag:
-
-```text
-EXPECTED_PAYOFF_TOO_SMALL
-SPREAD_COST_EDGE_TOO_SMALL
-```
-
-## 7.7 Balance-vs-Equity integrity check
-
-If the Balance curve looks smooth while Equity repeatedly drops far below it, investigate:
-
-- holding large floating losses
-- grid behavior
-- martingale behavior
-- delayed loss realization
-- recovery-only exit logic
-- margin-call proximity
-
-A strategy with attractive Balance statistics but severe Equity stress must not pass Champion review without explicit tail-risk evidence.
-
-```text
-TEST PASS
-≠
-BEAT CHAMPION
-```
-
-A profitable Candidate does not automatically replace the Champion.
-
-If the result is only close:
-
-```text
-KEEP CURRENT CHAMPION
-```
-
-Only when evidence clearly shows:
-
-```text
-Candidate > Current Champion
-```
-
-may the result be:
-
-```text
-PROMOTE TO NEW CHAMPION
-```
-
----
-
-# 8. Win Rate / Expectancy / Realized R:R Validation Standard
-
-MT5 Win Rate is normally reported as:
-
-```text
-Profit Trades (% of total)
-```
-
-Win Rate is a diagnostic metric, not a standalone proof of strategy quality. A high Win Rate can coexist with poor expectancy, weak R:R, hidden tail risk, or one-sided market dependence.
-
-## 8.1 Mandatory MT5 companion fields
-
-Every Champion and Candidate report must read Win Rate together with at least:
-
-```text
-Profit Trades (% of total)
-Average profit trade
-Average loss trade
-Long Positions (won %)
-Short Positions (won %)
-Maximum consecutive losses
-```
-
-When available, also retain Maximum consecutive wins, gross profit/loss, and direction-specific trade counts.
-
-## 8.2 Core formulas
-
-```text
-Expectancy =
-(Win Rate × Average Win)
--
-(Loss Rate × abs(Average Loss))
-```
-
-```text
-Realized Average R:R =
-Average Profit Trade
-/
-abs(Average Loss Trade)
-```
-
-Define:
-
-```text
-R = Average Win / abs(Average Loss)
-```
-
-Theoretical break-even Win Rate:
-
-```text
-Break-even Win Rate = 1 / (1 + R)
-```
-
-Examples:
-
-```text
-1:1 → 50.0%
-2:1 → 33.3%
-3:1 → 25.0%
-```
-
-Theoretical R:R and realized average R:R must be reported separately when they differ. Champion evaluation must care more about realized results than nominal SL/TP design.
-
-## 8.3 Strategy-type interpretation
-
-Reference ranges are diagnostic, not hard universal promotion thresholds:
-
-| Strategy profile | Typical Win Rate behavior | Typical payoff structure | Main risk |
-|---|---:|---:|---|
-| Trend / Breakout | often lower, e.g. 35%-45% | often 2:1, 3:1 or higher | long losing streaks, regime dependence |
-| Scalping / Range | often higher, e.g. 65%-80% | often around 1:1 or lower | spread, commission, slippage, latency |
-| Grid / Martingale | may show 85%-95%+ | many small wins, rare large losses | catastrophic tail loss / margin failure |
-
-A very high Win Rate is not automatically good. A 90%+ system with severe negative skew can be materially worse than a 40%-50% system with strong realized R:R and positive expectancy.
-
-## 8.4 BUY / SELL direction audit
-
-Every engine report should separately show:
-
-```text
-BUY Trades
-BUY Win Rate
-BUY Net Profit
-BUY Profit Factor
-SELL Trades
-SELL Win Rate
-SELL Net Profit
-SELL Profit Factor
-```
-
-A large directional imbalance must trigger investigation rather than automatic rejection. Determine whether the cause is:
-
-- market regime
-- insufficient sample
-- asymmetric strategy logic
-- coding defect
-- one-direction structural dependency
-
-Flag where justified:
-
-```text
-ONE_SIDE_DEPENDENCY
-```
-
-## 8.5 Consecutive-loss stress
-
-Maximum Consecutive Losses must be read together with Max Equity DD and Risk per Trade.
-
-Required stress sequence:
-
-```text
-Historical Max Consecutive Losses = N
-Stress Case 1 = N + 2
-Stress Case 2 = N + 4
-```
-
-Inspect:
-
-- projected DD
-- free margin
-- margin level
-- position-sizing survival
-- recovery requirement
-- account ruin risk
-
-Flag:
-
-```text
-LOSS_STREAK_RISK
-```
-
-## 8.6 Mandatory Win Rate diagnostic flags
-
-Use when supported by evidence:
-
-```text
-HIGH_WINRATE_BAD_RR
-NEGATIVE_EXPECTANCY
-ONE_SIDE_DEPENDENCY
-LOSS_STREAK_RISK
-SPREAD_COST_EDGE_TOO_SMALL
-LOW_SAMPLE_WINRATE
-HIDDEN_TAIL_RISK
-```
-
-## 8.7 Strategy-specific emphasis
-
-```text
-SCALPING
-→ Win Rate + Realized R:R + Expected Payoff + Spread + Commission + Slippage + Delay
-
-INTRADAY
-→ medium Win Rate is acceptable when Net + DD + PF + Expectancy are strong
-
-SWING
-→ lower Win Rate is acceptable when Average Win materially exceeds Average Loss and DD is controlled
-```
-
-## 8.8 Required detailed Champion report columns
-
-```text
-Strategy
-Net Profit USD
-Return %
-Max Equity DD USD
-Max Equity DD %
-Profit Factor
-Recovery Factor
-Trades
-Win Rate
-Average Win
-Average Loss
-Realized Average R:R
-Break-even Win Rate
-Expected Payoff / Expectancy per Trade
-Maximum Consecutive Losses
-Long Win Rate
-Short Win Rate
-BUY Net / PF
-SELL Net / PF
-Reject
-Diagnostic Flags
-```
-
-The official top-level ranking remains unchanged:
-
-```text
-Net Profit USD
-→ Max Equity Drawdown
-→ Profit Factor
-→ Trade Count
-→ Win Rate
-```
-
-The additional fields explain whether that ranking result is robust and economically credible.
-
-## 8.9 MT5 Strategy Tester robustness protocol
-
-Formal Champion validation must use:
-
-```text
-Every tick based on real ticks
-```
-
-for all formal Real Tick evidence unless a specific test is explicitly labeled as a lower-fidelity diagnostic run.
-
-Execution robustness must test realistic transaction friction. Depending on tester/broker capabilities, include multiple delay/slippage conditions rather than only `No Delay`.
-
-Reference execution-delay scenarios may include approximately:
-
-```text
-10 ms
-25 ms
-50 ms
-```
-
-or broker-realistic random delay ranges. These are stress scenarios, not fixed universal constants.
-
-For each scenario report the change in:
-
-- Net Profit
-- Max Equity DD
-- PF
-- Trades
-- Win Rate
-- Expected Payoff
-- Reject / execution errors
-
-Flag:
-
-```text
-DELAY_SLIPPAGE_FRAGILE
-```
-
-## 8.10 Train / OOS protocol
-
-Training data is for model and parameter selection.
-
-OOS data is for validation only.
-
-Example structure:
-
-```text
-Train: earlier period
-OOS: later untouched period
-```
-
-After OOS results are read, any retuning creates a new experiment and the previously viewed period cannot continue to be called untouched OOS for that same Candidate.
-
-Flag:
-
-```text
-OOS_COLLAPSE
-OOS_CONTAMINATION
-```
-
-A promising Candidate should also be evaluated across market regimes and, when required, Walk Forward, cost stress, execution stress, parameter-neighborhood stability, and Monte Carlo / trade-order randomization.
-
----
-
-# 9. Combined Candidate and Portfolio Rules
-
-Any New Engine Champion must trigger a new Combined Candidate.
-
-The Combined Candidate must be recompiled and rerun on dual-broker Real Tick. Never add standalone engine Net Profits together and call that the Combined result.
-
-Portfolio Audit must include at least:
-
-- Concurrent Positions
-- Margin Usage
-- Aggregate Risk
-- Same-direction Exposure
-- Opposite-signal Conflict
-- Hedging / Netting
-- Capital Allocation
-- Position Sizing
-- Drawdown Overlap
-- Strategy Correlation
-- Portfolio Interaction
-
-If the Combined result gets worse:
-
-- keep the New Engine Champion
-- keep the Current Combined Champion locked
-- create a new `C-Cxx` Portfolio-Risk Candidate only
-- do not rewrite locked Engine logic
-
----
-
-# 10. External EA / GitHub / AI Research Boundary
-
-External EAs, GitHub projects, screenshot parameters, third-party model interpretations, and AI-generated ideas all belong to the Research Layer.
-
-External-source path:
-
-```text
-Source / Screenshot / Repository / AI Hypothesis
-        ↓
-Evidence Classification
-        ↓
-Read License / Source if available
-        ↓
-Separate FACT from HYPOTHESIS
-        ↓
-Clean-room Specification
-        ↓
-Single-module Candidate
-        ↓
-Compile
-        ↓
-Real Tick
-        ↓
-Train / OOS
-        ↓
-FxPro + Tradona
-        ↓
-Walk Forward / Stress Test if promising
-        ↓
-Candidate VS Current Champion
-```
-
-If source code is unavailable, parameter names must not be guessed into internal state-machine behavior.
-
-Research references include:
-
-- `docs/EXTERNAL_EA_TEST_2_41_RESEARCH_CN.md`
-- `docs/GSM_GOLD_AI_RESEARCH_LAB_CN.md`
-- `docs/GSM_GOLD_SINGLE_AI_RESEARCH_LAB_CN.md`
-
----
-
-# 11. Research Modules Extracted from External EA 2.41
-
-All of the following are Research Candidates only. They are not GSM SOP and are not default Champion modules.
-
-## 11.1 Fast Adverse Move Guard
-
-Goal: react when a new position is rapidly proven wrong, rather than mechanically waiting for the fixed SL.
-
-Do not directly copy fixed `120 sec / 50 points / 20 points` settings.
-
-Candidate example:
-
-```text
-MAE = maximum adverse excursion after entry
-
-IF
-MAE > K × ATR
-AND elapsed_time <= FastWindow
-AND adverse_momentum_is_strengthening
-THEN
-    Freeze same-direction new entries
-    Set state = FAST_ADVERSE_MOVE
-```
-
-Scalping, Intraday, and Swing parameters must be tested separately.
-
-## 11.2 Recovery / Resume State Machine
-
-```text
-NORMAL
-  ↓
-FAST_ADVERSE_MOVE
-  ↓
-FREEZE
-  ↓
-RECOVERY_CONFIRM
-  ↓
-NORMAL
-```
-
-Requirements:
-
-- keep states minimal
-- log every state transition
-- record trigger reason / timestamp / price / strategy / direction
-- state must be reconstructable after MT5 / VPS restart
-
-## 11.3 Direction Basket Risk
-
-Track:
-
-```text
-BUY_Basket_Floating_PnL
-SELL_Basket_Floating_PnL
-BUY_Total_Open_Risk
-SELL_Total_Open_Risk
-BUY_Total_Lots
-SELL_Total_Lots
-```
-
-If one direction reaches its risk limit, it may be frozen independently; the other direction must still pass Portfolio Conflict Check.
-
-## 11.4 Daily Account Circuit Breaker
-
-Candidate controls may include:
-
-- DailyProfitLimitUSD
-- DailyLossLimitUSD
-- DailyLossPercent
-- DailyEquityDrawdownPercent
-
-Must explicitly define:
-
-- Balance / Equity basis
-- Reset time
-- Broker Server Time
-- whether only New Entry is blocked
-- whether Existing Positions remain managed
-- resume conditions
-
-## 11.5 Optional Evidence Voting
-
-Do not combine every indicator into one giant AND condition.
-
-```text
-Core GSM SOP = Trade Eligibility
-
-Optional Evidence = Quality Evidence
-  ├─ EMA
-  ├─ ADX
-  ├─ DI
-  ├─ ATR Regime
-  ├─ CCI
-  ├─ FVG
-  ├─ Candle
-  ├─ S&D Quality
-  └─ Market Structure
-
-Evidence Score / Votes
-        ↓
-Pass / Reject / Risk Multiplier / Position Size Tier
-```
-
-Principle:
-
-```text
-SOP determines trade eligibility
-Optional Evidence only measures evidence strength
-```
-
-## 11.6 ADX + DI Roles
-
-- ADX = Trend Strength
-- +DI / -DI = Directional Evidence
-
-## 11.7 ATR-Normalized FVG Quality
-
-```text
-ValidFVG = FVG_Size >= ATR × MinFvgAtrRatio
-```
-
-FVG always remains in the Optimization Layer. It must not replace the GSM Supply/Demand Base Zone without Real Tick A/B proof.
-
----
-
-# 12. Point / Pip / Price / Money Conversion Rule
-
-Never hardcode:
-
-```text
-100 points always = fixed X USD
-```
-
-Read actual Broker specifications:
-
-```text
-SYMBOL_POINT
-SYMBOL_DIGITS
-SYMBOL_TRADE_TICK_SIZE
-SYMBOL_TRADE_TICK_VALUE
-SYMBOL_TRADE_CONTRACT_SIZE
-SYMBOL_VOLUME_MIN
-SYMBOL_VOLUME_MAX
-SYMBOL_VOLUME_STEP
-SYMBOL_TRADE_STOPS_LEVEL
-SYMBOL_TRADE_FREEZE_LEVEL
-```
-
-The program must record:
-
-- Raw Points
-- Price Distance
-- Lot
-- Requested Risk USD / %
-- Actual Risk USD / %
+The research and development boundary for this round remains: FxPro; Codex; USD500; the three strategies operate independently under OR logic; Scalping uses fixed SL/TP with no break-even, trailing, partial exits, or runner; no artificial daily trade target; every new order must have an independently qualified Setup. **The default risk control is R13: per-trade budget ≤1%, portfolio budget ≤3%; this update adds R24: ≤2%/≤4%, and R36: ≤3%/≤6%, solely for preregistered independent backtest research.** The tier is frozen for each run; the account-level portfolio budget is not allocated separately to each engine. Martingale, grids, adding positions because of floating losses, and using “100 confidence” to justify increased risk are prohibited; tiers must not be temporarily raised because no trades occur, losses are consecutive, or a backtest fails.
 
----
-
-# 13. EA Main Program Flow and Research Hooks
-
-## 13.1 OnInit
-
-```text
-Read Broker / Symbol / Account Mode
-↓
-Read Contract Specs
-↓
-Load Champion Inputs
-↓
-Initialize 3 Strategy Engines
-↓
-Initialize Optional Evidence Modules
-↓
-Initialize Risk Engine
-↓
-Initialize Direction Basket Risk
-↓
-Initialize Daily Circuit Breaker
-↓
-Restore Recovery / Freeze State
-↓
-Initialize Portfolio Manager
-↓
-Initialize Execution + Audit
-```
+Rules from the old Aggressive/Balanced/Conservative modes, the nonfarm-payroll pending-order EA, and the Lewis EA are not automatically incorporated into this project. OANDA/FXCM/Pepperstone in classroom screenshots are teaching-chart sources and cannot alter the FxPro testing scope.
 
-## 13.2 OnTick
+### 2.1 Rule Records Requiring Synchronization
 
-```text
-UPDATE MARKET DATA
-↓
-UPDATE ACCOUNT / EQUITY / MARGIN
-↓
-UPDATE BUY / SELL BASKET RISK
-↓
-CHECK DAILY ACCOUNT CIRCUIT BREAKER
-↓
-MANAGE EXISTING POSITIONS
-↓
-CHECK FAST ADVERSE MOVE GUARD
-↓
-UPDATE RECOVERY / FREEZE STATE
-↓
-RUN SCALPING ENGINE
-↓
-RUN INTRADAY ENGINE
-↓
-RUN SWING ENGINE
-↓
-COLLECT CORE GSM SIGNALS
-↓
-OPTIONAL EVIDENCE SCORE / VOTES
-↓
-RESOLVE SIGNAL CONFLICT
-↓
-PORTFOLIO RISK CHECK
-↓
-BROKER / SPREAD / COST / MARGIN CHECK
-↓
-EXECUTION
-↓
-LOG ORDER + STATE + BLOCK REASON
-↓
-UPDATE DASHBOARD / AUDIT
-```
+The top-level `FINAL_CHAMPION_ITERATION_SYSTEM_CN.md` §29 and later research records contain unsynchronized definitions:
 
-Every Research Hook must be independently switchable off so that the pure Current Champion Baseline can always be rerun.
+| Item | Top-level §29 | 2026-09-06 research record | Treatment in this plan |
+|---|---|---|---|
+| Broker | FxPro + Tradona | FxPro only | Current work starts with FxPro; do not independently expand broker scope or claim to have passed the two-broker gate |
+| Sample | Assess by strategy; Swing may have fewer than 100 trades but requires stronger evidence | Every single-strategy track and the combination must have >100 complete trades | The user has explicitly specified for this round: >100 is a hard gate, with 200–500 recommended; Swing is not exempt; see §11 |
+| Recovery | >3 is a target; falling short requires an explanation and more evidence | >3 is listed as a project gate | The user has explicitly specified for this round: native MT5 Recovery >3 is a hard gate, with an equity-based measure reported separately; see §11 |
+| DD | >30% veto; 15%–30% strict review | Same risk direction | Enforce; do not cite only the general references in §7 while overlooking §29 |
+| Risk research | Preserve historical risk as recorded in original files | Original research constraint of 1%/3% | The user adds offline R24 and R36 experiments in this update; R13 remains the default. Register each tier independently and do not turn experimental permission into official risk authorization |
 
----
+The user's additions for this round have resolved the sample-count and Recovery items; do not wait for confirmation on them again. P0 records these requirements and checks the remaining unsynchronized items, particularly broker scope; current work still starts with FxPro. Complete verification of the remaining applicable specifications before final promotion, while continuing material mapping, static audits, and reproduction experiments.
 
-# 14. Trade Audit and Missed Opportunity Audit
+### 2.2 Selected Route, SOP Lock, and Permitted Changes (Merged on 2026-09-07)
 
-Every new module must leave a `Blocked Reason / Trigger Reason`.
+“Legacy-version upgrade research” has already been selected. Continue using the current project's three SOP engines and risk and execution architecture; do not start a separate strategy route that replaces the SOPs with independent breakout, reversal, or news signals. Permission to rework supporting methods in a research branch does not authorize live trading, increased capital, or overwriting the official version.
 
-At minimum consider:
+Before execution, establish `SOP_LOCK` and `IMPLEMENTATION_DIFF`, registering for each engine: original SOP, currently locked implementation/SET, historical experimental differences, permitted extension points, feature availability time, and whether the code complies with confirmed requirements. Retain all differences between original SOP parameters and historical Champion parameters listed in §4; do not interchange them automatically.
 
-```text
-FAST_ADVERSE_FREEZE
-RECOVERY_NOT_CONFIRMED
-BUY_BASKET_RISK
-SELL_BASKET_RISK
-DAILY_LOSS_CIRCUIT
-DAILY_EQUITY_DD_CIRCUIT
-EVIDENCE_SCORE_LOW
-ADX_DI_REJECT
-FVG_QUALITY_LOW
-PF_OVERFIT_SUSPECT
-BALANCE_EQUITY_DIVERGENCE
-HIDDEN_FLOATING_LOSS_RISK
-LOW_SAMPLE_SIZE
-LOW_RECOVERY_FACTOR
-EXPECTED_PAYOFF_TOO_SMALL
-DELAY_SLIPPAGE_FRAGILE
-OOS_COLLAPSE
-OOS_CONTAMINATION
-```
+| Change category | Treatment in this round | Key boundary |
+|---|---|---|
+| Implementation fixes | May be fixed in independent candidates, with a bug reproduction and regression tests provided first | Must demonstrate that the code deviates from the confirmed SOP; do not disguise a change in definition as a bug fix |
+| Supporting-method research | May be proposed, implemented, and tested autonomously; default to OBSERVE first, then ACTIVE at permitted locations | Do not rewrite SOP direction, zone qualification, first touch, trigger timing, or locked initial SL/TP |
+| Cleanup of old add-on modules | Non-SOP research modules may be disabled, replaced, or rewritten individually | Classify first, retain switches and rollback capability; do not also delete necessary risk/execution protections |
+| SOP-change proposals | Register as `SOP_CHANGE_PROPOSAL`; do not implement in this round | Conflicting proposals may present their rationale and intended tests but must not be treated as authorized by default |
+| Risk-tier experiments | Test R13/R24/R36 and preregistered split-factor controls in independent candidates | Change only registered budget variables; leave SOPs, initial SL/TP, capital, contract, and other safety protections unchanged; do not optimize them simultaneously with new signal methods |
 
-Must distinguish:
+Record whether the original SOP qualifies separately from whether execution ultimately occurs. Filtering experiments at permitted extension points may reduce orders but must not relabel a qualified Setup that was filtered out as “noncompliant with SOP.” For strategies requiring immediate entry, do not introduce waiting in the name of support; the boundary prohibiting break-even, trailing, partial exits, and runners for Scalping remains in force.
 
-```text
-NO VALID SETUP
-VALID SETUP BLOCKED BY RESEARCH MODULE
-PROGRAM MISSED VALID SETUP
-```
+For conflicting portions, perform only material checks, read-only logging, and engineering work that does not touch the conflict; continue other explicitly permitted experiments. Do not loosen SOPs, shorten stop losses, temporarily raise the current run's risk tier, or remove safety gates to reach a trade count. R24/R36 are independent research schemes explicitly added in this update, not an automatic relaxation route after R13 fails; they may be registered first and then tested, but poor results do not permit temporarily raising their caps further.
 
-Otherwise it is impossible to tell whether a Candidate improved trade quality or merely reduced trade count.
+## 3. First Resolve USD500 Feasibility Under Actual Stop-Loss Risk
 
----
+The historical combined SET uses a fixed 0.01 lot and 10% portfolio risk, with an additional small-account exception input permitting up to 5% per trade, but that test had the small-account Profile disabled; the fixed-volume path did not consistently enforce 1% per trade. All 25 trades in the FxPro combination had initial SL risk exceeding 1%; the standalone Scalping/Intraday total-risk SET values were still 20%. These results cannot be ranked directly by net profit against the new 1%/3% budgets. The historical Tradona Swing report also recorded one trade with 9.93% initial SL risk; risk must be checked trade by trade rather than only reading `RiskPercent=1` in the inputs.
 
-# 15. AI Research Is Optional, Not Mandatory
+First carry out the following two groups of foundational work; then establish independent supporting-module cleanup controls for new-method research under §3.1:
 
-AI Research is not part of GSM Base SOP and is not a mandatory Champion certification step.
+- **Historical reproduction group H0:** original source code, original SET, original dates, and original costs; its sole purpose is to verify that historical results are reproducible, with no live-trading connection.
+- **Budget-standardization group B0:** in a separate research branch, first establish the R13 (1%/3%) default control, making only necessary risk-control changes and recording differences. R24/R36 copy the same reference logic, with separate same-tier controls carrying `risk_profile_id`, using the same risk engine and explicitly registered sizing modes; subsequent strategy Candidates must be paired against B0/K0/fixed baselines of the same tier and under the same sizing rules. This does not automatically create a new Champion.
 
-Official mode selector:
+For each actual Setup, first calculate:
 
-```text
-AI_RESEARCH_MODE = OFF
-AI_RESEARCH_MODE = SINGLE_AI
-AI_RESEARCH_MODE = DUAL_AI
-```
+`最小手数止损损失 = abs(OrderCalcProfit(方向, 品种, 最小手数, 入场价, SL))` — minimum-volume stop-loss loss = abs(OrderCalcProfit(direction, symbol, minimum volume, entry price, SL)).
 
-Regardless of mode, the following must not change:
+`f_single = SingleRiskCapPct / 100` (R13=0.01, R24=0.02, R36=0.03)
 
-- GSM SOP authority
-- Candidate VS Champion system
-- Fair Test Protocol
-- Real Tick
-- Train / OOS
-- FxPro / Tradona
-- Risk Rules
-- Portfolio Audit
-- Champion Evaluation Order
+`所需最低净值_单笔 = (最小手数止损损失 + 明确成本缓冲) / f_single` — required minimum equity per trade = (minimum-volume stop-loss loss + explicit cost buffer) / f_single.
 
-AI only determines:
+These are only minimum-equity conditions for an individual trade; the remaining portfolio budget, margin, and all execution checks must still pass. They do not guarantee that a particular trade or portfolio can be executed.
 
-```text
-who performs research/review and how that review is organized
-```
+`允许手数 = 向下对齐券商 volume step(扣除成本预留后的可用预算 / 单位手数止损损失)` — permitted volume = round down to the broker's volume step(available budget after cost reservation / stop-loss loss per unit of volume).
 
-AI does not decide the final Champion.
+When costs vary with volume, iteratively reduce volume using the same cost model; after normalizing SL and volume to tick size/volume step, recalculate and verify finally that “stop-loss price-difference loss + cost buffer ≤ per-trade budget and ≤ remaining portfolio budget.” Reject the trade if calculation fails or a cap is exceeded; do not approve solely from the raw quotient of the formula.
 
----
+OrderCalcProfit provides estimated profit/loss in the account currency; commission, holding costs, and a slippage buffer must be listed separately and must not be assumed to be fully included. [Official definition](https://www.mql5.com/en/docs/trading/ordercalcprofit)
 
-# 16. AI_RESEARCH_MODE = OFF
+Using historical CoursePip=0.10 and Scalping SL80 as an example, the price difference is 8.00; if the contract is indeed 100 ounces per lot and the minimum volume is 0.01 lot, the stop-loss price-difference loss alone is approximately USD8, already exceeding the budget for USD500 at 1%, namely USD5. This is a unit illustration; actual decisions must read the contract specifications and quotes applicable at the time.
 
-Do not use the Single-AI or Dual-AI Research Lab.
+If the minimum volume already exceeds the per-trade budget frozen for this run, output `MIN_LOT_OVER_RISK` and skip; if the individual trade is feasible but the remaining portfolio budget is insufficient, record `PORTFOLIO_RISK_FULL` separately. Report, tier by tier, which strategies/SLs cannot be executed with USD500; do not secretly add capital, switch contracts, shorten SOP stop losses, or relax risk within the same run. Smaller-contract/capital thresholds may be recorded for later selection, but this round does not switch to them automatically. If B0 at a tier cannot produce enough valid trades, label that tier `CAPITAL_CONSTRAINT`; this neither proves the strategy good or bad nor prevents the other registered independent R24/R36 experiments.
 
-Flow:
+### 3.1 H0 / B0 / K0 / Candidate: Distinguish the Source of Improvement
 
-```text
-GSM SOP
-↓
-Current Champion
-↓
-Trade Audit / Missed Audit
-↓
-Research Hypothesis
-↓
-Candidate
-↓
-Compile
-↓
-Standard Code Audit
-↓
-MT5 Real Tick
-↓
-Train / OOS
-↓
-FxPro / Tradona
-↓
-Candidate VS Champion
-```
+Retain the original plan's meanings of H0 and B0; do not adopt B0/B1 from the supplement where the same names have different meanings. The added `K0` is only a research-control label and does not consume a registered Candidate ID.
 
-This mode does not require:
+| Control | What is retained or changed | What it can establish |
+|---|---|---|
+| H0 historical reproduction | Original source code, original SET, original risk, and costs | Historical reproduction only; cannot declare a winner by directly comparing net profit with candidates at different risk tiers |
+| B0 same-risk baseline | On the version corresponding to H0, add only the listed risk-control adaptations; R13 is the default, with separate same-tier controls for R24/R36 | Execution feasibility and original-logic performance at the same tier; old research extensions have not yet been cleaned up by default |
+| K0 supporting-module cleanup control | Start from B0 or an explicitly recorded fixed baseline, retain locked SOPs and necessary safety and execution rules, and disable non-SOP extensions individually | The effect of removing old additional restrictions; does not establish an advantage for a new method |
+| Single-module Candidate | After freezing the corresponding K0/fixed baseline, add only one primary research variable | Marginal effect of the new method; compare against the same `reference_id` |
 
-- Single-AI Self Review
-- Single-AI Red Team
-- Dual-AI Cross Review
+First register `OPTIONAL_MODULE_INVENTORY`, identifying whether each old module belongs to SOP, research add-on, risk, execution, or position management. Do not silently disable modules that cannot be classified. K0 may initially serve as a read-only core-signal audit layer; until authorization checks or capital-feasibility checks are complete, it must not be treated as a new executable baseline.
 
-But code correctness, fair testing, risk audit, and Champion promotion standards still apply.
+List differences and tests separately for every behavioral change from B0 to K0. Do not combine implementation fixes, supporting-module cleanup, and new methods under a single attribution of returns; if P1/P2 first fixes implementation, freeze a new `reference_id` with its fix record, use it in all subsequent paired experiments, and retain the unfixed control.
 
----
+All executable B0/K0/Candidates must adhere to USD500, the same actual-risk calculation rules, and the risk tier frozen before that run. R13 is the default when no tier is declared; R24/R36 and split-factor controls must be explicitly declared and have their SET/INI files saved independently. Signal research may additionally report results in R units or virtual replays, which must be labeled `COUNTERFACTUAL_ONLY`; unexecutable signals cannot count as complete MT5 trades, and virtual results cannot bypass that tier's `CAPITAL_CONSTRAINT`. Where the original comparison target has not been reproduced, label it `BASELINE_NOT_REPRODUCED`; continue diagnosis but do not claim to have beaten it.
 
-# 17. AI_RESEARCH_MODE = SINGLE_AI
+`B0-R13 / K0-R13 / B0-R24 / K0-R24 / B0-R36 / K0-R36` are control roles plus risk labels and do not replace existing Candidate IDs. Attach `reference_id + risk_profile_id + sizing_mode + source_hash` to every conclusion; for example, NR01's R24 candidate must be compared against the same R24 reference version, rather than using the net profit of an R13 run with fewer trades as evidence that “the new method won.”
 
-May use:
+### 3.2 Added Risk Research Tiers: Retain the Low-Risk Control Without Presuming That Higher Risk Wins
 
-```text
-Codex
-or
-Claude Code
-```
+This section is based on the user's explicit authorization to “add it” following the previous risk discussion. **Permission to test does not mean a live-trading tier has been selected.** The figures are research budgets, not return targets, loss guarantees, or daily trading allowances.
 
-The architecture is model-agnostic. Unified role:
+| Tier | Planned per-trade risk cap | Planned account-portfolio risk cap | Per-trade/portfolio budget at current equity of USD500 | Purpose |
+|---|---:|---:|---:|---|
+| R13 default control | 1% | 3% | USD5 / USD15 | Retain the original constraints; quantify how many valid opportunities are blocked by minimum-volume and portfolio limits |
+| R24 candidate A | 2% | 4% | USD10 / USD20 | Research feasibility and the drawdown cost of a moderate budget increase |
+| R36 candidate B | 3% | 6% | USD15 / USD30 | Research opportunities, concurrency, consecutive losses, and tail losses under a wider budget |
 
-```text
-SINGLE AI RESEARCH ENGINEER
-```
+Calculate budgets from **account equity at that time** on every occasion, rather than always using the initial USD500. Caps do not require full utilization on every trade; when 0.01 lot already meets the research objective for a Setup, do not proactively increase it to the maximum merely because R36 permits 3%. Risk percentages must not change temporarily because of floating losses, consecutive losses, a high win rate, or “100% confidence.”
 
-It may perform:
+The three SOPs scan and generate Setups independently but share the account-level portfolio budget. R36 does not mean each of the three strategies has 6%; nor does it guarantee that all three can open positions simultaneously. Every new order still requires independent SOP qualification, available budget, margin, and execution conditions.
 
-- Strategy Researcher
-- MQL5 Developer
-- Code Reviewer
-- Debugger
-- Backtest Analyst
-- Risk Reviewer
-- Optimization Researcher
+Official/deployment default parameters remain R13. Save research parameters in separate directories and branches and label them explicitly `RESEARCH_ONLY`; this update places no orders and does not modify live SET files. Candidate implementations must check the runtime environment at the backtest entry point; this round's higher-risk research configurations must not be enabled outside the Tester environment. Future demo or live use requires separate approval and is not automatically granted by this plan. This is currently an implementation requirement for the protection; it has not yet been coded or verified.
 
-Main Single-AI risk:
+### 3.3 USD500, Minimum Volume, and Original Stop Losses: Trade-by-Trade Feasibility Examples
 
-```text
-same model develops
-+
-same model reviews
-+
-same model declares itself correct
-```
+The following only reuse historical unit examples from the original plan: assume a contract of 100 ounces per lot, minimum volume of 0.01 lot, and CoursePip=0.10; **these are not current FxPro contract specifications read in this update and must not automatically be written back into parameters.** Actual execution must read the relevant symbol's real contract specifications, quotes, tick size, and volume step. Preserve the differences between original SOPs and historical SETs as specified in §4.
 
-Therefore, when `SINGLE_AI` is enabled, the process must be phase-separated:
+| Historical example | Original stop-loss price distance | Stop-loss price-difference loss at 0.01 lot | Percentage of USD500 | R13 individual trade | R24 individual trade | R36 individual trade |
+|---|---:|---:|---:|---|---|---|
+| Scalping historical SL80 | USD8 | USD8 | 1.6% | Over cap | May pass only if cost buffer ≤USD2 | May pass only if cost buffer ≤USD7 |
+| Intraday historical SL120 | USD12 | USD12 | 2.4% | Over cap | Over cap | May pass only if cost buffer ≤USD3 |
+| Swing actual structural SL | Calculate by Setup | Calculate from contract | Calculate trade by trade | Verify trade by trade | Verify trade by trade | Verify trade by trade |
 
-```text
-PHASE 1 — RESEARCHER
-↓
-PHASE 2 — DEVELOPER
-↓
-PHASE 3 — SELF CODE REVIEWER
-↓
-PHASE 4 — RED TEAM REVIEWER
-↓
-PHASE 5 — MT5 DATA ANALYST
-↓
-PHASE 6 — CHAMPION JUDGE
-```
+The table checks only individual-trade risk conditions; it does not guarantee that a position can be opened. The cost buffer must not be set to 0 simply to pass a gate; commissions, fees, the effect of spread already included, and added stress costs must be deduplicated under §11.
 
-Each phase must reread facts, code, and test evidence rather than inheriting the prior phase's subjective conclusion.
+When both trades are being prepared for new entry at the same time and still use their initial SLs, the combined price-difference risk of the Scalping and Intraday examples above is approximately USD20, equivalent on a 500-dollar account to 4%, before additional cost buffers. The R13 portfolio budget of USD15 is insufficient; R24 also cannot let that Intraday trade pass its USD10 per-trade cap; R36 may accommodate both only if additional costs, margin, and existing exposure permit. The split-factor control of “3% per trade/4% portfolio” already exhausts the USD20 budget on price-difference risk, so it still fails if there is a positive additional cost reservation. When open positions have profits, SLs change, or equity changes, risk must be recalculated on the same basis rather than repeatedly adding old initial figures.
 
-## 17.1 Single-AI Research Phase
+With a strict 1% per-trade limit, USD8 and USD12 of price-difference loss correspond to at least USD800 and USD1,200 in equity, respectively; these are only **mathematical lower bounds for an individual trade excluding cost buffers**, not recommendations to increase capital or guarantees of portfolio feasibility. Changing leverage does not change price-difference loss in this example while the contract, volume, and entry/SL prices remain unchanged; margin and stop-loss budgets are calculated separately.
 
-First research only; do not modify Production.
+### 3.4 Controlled Experiments: Distinguish “More Trades Become Executable” from “Position Size Increases”
 
-Required output:
+First fix SOPs, signal methods, initial SL/TP, position management, dates, costs, contract specifications, and the execution model; do not tune new scoring, risk tiers, and exit parameters simultaneously. Freeze the sizing mode and number of experiments before each stage instead of searching all combinations without limit.
 
-```text
-Research ID
-AI Model
-Engine
-Current Champion
-Observed Problem
-Evidence
-Hypothesis
-Expected Benefit
-Expected Risk
-Files Likely Affected
-SOP Impact
-Experiment Plan
-```
+**Stage one: budget-gate feasibility (RG).** Use the same target-volume rule across tiers for every independent Setup; the first round may use the broker's minimum legal volume read from the platform rather than hard-coding 0.01 for every account. Every tier must still perform strict risk and margin checks and reject excess risk. This stage primarily answers which originally qualified opportunities the increased budget makes executable and which remain blocked; it does not force each tier to use its full risk allowance. Do not automatically use several times more volume at the 3% tier than at the 1% tier and report only “improved opportunities.”
 
-## 17.2 Single-AI Development Phase
+**Stage two: actual position sizing (SZ).** Once feasibility is clear, fix the same sizing algorithm, identical target-risk rules, and all other parameters, then run each risk tier separately. If studying “derive volume from each tier's cap,” explicitly register it as a separate position-allocation experiment and report the effects of both volume changes and additional opportunities; do not combine it with stage one in a single table to claim signal superiority. Report fixed and dynamic sizing separately, pair comparisons on the same basis, and do not silently switch compounding modes.
 
-```text
-Champion Snapshot
-↓
-Create Candidate Branch / Candidate File
-↓
-Modify only experiment-required content
-↓
-Preserve all other test conditions
-```
+The main report must list R13, R24, and R36. Because the main tiers change both per-trade and portfolio caps simultaneously, add at most the following three split-factor controls, registering them before running them and remaining within this update's 3%/6% research boundary:
 
-Requirements:
-
-- minimum necessary modification
-- traceable reason for every change
-- no hidden Risk / Lot increase
-- no unrelated rewrites
-- never overwrite Current Champion
-
-## 17.3 Single-AI Self Code Review
-
-At minimum check:
-
-1. duplicate entries
-2. missed entries
-3. unclosed-bar usage
-4. Look-ahead
-5. CopyBuffer / CopyRates
-6. Timeframe
-7. Position / Order / Deal handling
-8. Magic Number
-9. Hedging / Netting
-10. SL / TP normalization
-11. Stops Level / Freeze Level
-12. Spread / Slippage
-13. Risk / Lot calculation
-14. Volume min / max / step
-15. accidental modification of other Engines
-16. GSM Base SOP changes
-17. hidden risk
-18. obvious Overfitting path
-19. Broker Reject / Retcode logging
-20. Recovery / Freeze State reconstruction
-
-Review result may only be:
+| Control ID | Per-trade/portfolio cap | Main comparison and purpose |
+|---|---|---|
+| D23 | 2% / 3% | R13→D23 changes only the per-trade cap; D23→R24 changes only the portfolio cap |
+| D33 | 3% / 3% | D23→D33 changes only the per-trade cap to observe the bottleneck of the original portfolio budget |
+| D34 | 3% / 4% | R24→D34 changes only the per-trade cap; D33→D34 and D34→R36 each change only the portfolio cap |
 
-```text
-PASS
-or
-FAIL + FIX LIST
-```
+These IDs are research-matrix labels, not new official operating tiers, and do not consume old Candidate numbers. The first round allows at most six budget combinations per frozen sizing mode, including the three main tiers; capital-constrained R13 does not have to be “tuned to PASS” before R24/R36 may proceed. If a split-factor control lacks enough samples because trades are unexecutable, retain the result rather than manufacturing orders to complete a curve.
 
-No Critical Finding may remain open before the next phase.
+First run budget experiments on the same reference logic, then freeze a research tier and test new supporting methods within that tier. If the reference code or signal method is subsequently modified, create a separate experiment and rerun the relevant same-tier controls; do not use old risk-experiment results to endorse new code. Run S-only, I-only, W-only, and an actual Combined test for every tier; do not substitute summed independent profits for a combined test.
 
-## 17.4 Single-AI Red Team
+### 3.5 Risk Calculation, Portfolio Reservations, and Over-Budget Handling
 
-The Red Team must assume:
+The following is an interface and formula specification, not completed MQL5 code:
 
 ```text
-Candidate may be wrong
+risk_profile_id       = R13 / R24 / R36 / preregistered split-factor control
+single_cap_fraction   = SingleRiskCapPct / 100
+portfolio_cap_fraction= PortfolioRiskCapPct / 100
+single_budget_usd    = CurrentEquity × single_cap_fraction
+portfolio_budget_usd = CurrentEquity × portfolio_cap_fraction
+remaining_budget_usd = max(0, portfolio_budget_usd - AccountRiskUsedAndReserved)
+new_setup_budget_usd = min(single_budget_usd, remaining_budget_usd)
 ```
-
-Actively test whether:
 
-- profit comes from higher Risk
-- DD worsens
-- it only works in one year
-- trade quality is sacrificed to increase Trades
-- only BUY or SELL is optimized
-- Spread sensitivity is excessive
-- Slippage sensitivity is excessive
-- small parameter changes cause collapse
-- live executability is reduced
-- the result is Backtest Noise
-- profit source is unexplained
-- future data is used
+`AccountRiskUsedAndReserved` must consistently include identified positions, pending orders, and in-flight requests; existing trades from other EAs or manual trading on the account must not be silently ignored. Distinguish initial SL risk, the risk of current equity falling to the SL, and cost buffers under §6, and preregister the basis actually used for gating; it must be identical across tiers. Exposure risk must be nonnegative; do not use locked floating profit or simple long/short netting to manufacture extra budget. Stress-test separately the possibility of simultaneous stop-loss executions across same-direction gold strategies. Reconcile and deduplicate filled portions, unfilled remainders, and in-flight records of the same order; do not reserve budget twice or release it prematurely.
 
-The Red Team's purpose is not to prove the Candidate is good. Its job is to try to disprove it.
+Round volume down to volume step and finally recalculate SL price-difference loss, costs, and the remaining portfolio budget. If volume falls below the minimum, do not round up and falsely claim compliance; higher-risk tiers are no exception. A 3% per-trade cap permits that trade only within the current-equity budget, and a 6% portfolio cap does not permit a single 6% order.
 
----
+Before each send, Portfolio must reserve the budget serially; settle or retain reservations for definitive failures, partial fills, and unknown requests according to server state. The three engines must not each read a stale balance and approve simultaneously. When budget or data are unclear, stop adding new risk while continuing to manage existing positions under the system's responsibility; insufficient risk budget does not mean all orders must be forcibly closed.
 
-# 18. AI_RESEARCH_MODE = DUAL_AI
+Market movement, equity decline, gaps, or fill deviations may cause budget breaches while positions remain open. Record `RISK_BUDGET_BREACH`, its cause, and the actual amount; freeze new risk and continue each engine's existing permitted management without independently loosening SLs, adding positions, or temporarily raising tiers. Any new mandatory reduction/exit policy requires a separately registered management experiment and verification of SOP authorization; do not mix it into the risk-tier comparison. No tier promises that actual losses can never exceed its cap.
 
-Codex and Claude Code are both treated as complete:
+### 3.6 Consecutive-Loss and Portfolio-Risk Stress: Returns Must Not Hide Their Cost
 
-```text
-MQL5 Research Engineer
-+
-MQL5 Developer
-+
-Code Reviewer
-+
-Backtest Analyst
-+
-Strategy Researcher
-```
+Continue the §11 requirement to test 6 losses, 8 losses, the historically longest losing streak, and more adverse scenarios; each tier must use its own frozen budget and actual equity path, including fees, minimum volume, slippage, same-direction positions, and margin, rather than percentage-only mental arithmetic.
 
-Do not lock roles into:
+The following table is only a mathematical example: assume no concurrent positions, each trade loses exactly a fraction r of equity at that time, and there is no excess slippage or additional loss:
 
-```text
-Codex develops only
-Claude reviews only
-```
+`连续n次损失后的净值降幅 = 1 - (1-r)^n` — the left-hand side is the equity decline after n consecutive losses.
 
-Default protocol: independent research first, conclusions exchanged later, to reduce anchoring.
+| Actual loss per trade r | Cumulative decline after 6 consecutive losses | Cumulative decline after 8 consecutive losses |
+|---|---:|---:|
+| 1% | 5.85% | 7.73% |
+| 2% | 11.42% | 14.92% |
+| 3% | 16.70% | 21.63% |
 
-```text
-CURRENT CHAMPION
-        │
-        ├───────────────┐
-        │               │
-        ▼               ▼
-     CODEX            CLAUDE
- Independent        Independent
- Hypothesis A       Hypothesis B
-        │               │
-        ▼               ▼
- Candidate A        Candidate B
-        │               │
-        └──────┬────────┘
-               ▼
-          CROSS REVIEW
-               │
-               ├─ Keep A
-               ├─ Keep B
-               ├─ Reject both
-               └─ Build Hybrid Candidate C
-                       ↓
-                 MetaEditor Compile
-                       ↓
-                 MT5 Real Tick
-                       ↓
-              Candidate VS Champion
-```
+These are not EA backtest results, forecasts of future losing streaks, or risk probabilities; actual results do not equal the table values when the tier allowance is not fully used. With fixed minimum volume, falling equity increases the percentage represented by the same stop-loss amount, so later trades may be rejected; do not assume that theoretical fractional volumes can continue to be executed.
 
-A Hybrid Candidate must document the origin of every change. Do not blindly stack all A+B ideas and destroy attribution.
-
----
-
-# 19. Unified Code Review and Quantitative Audit Checklist
-
-Regardless of Research source, minimum review checklist:
-
-1. duplicate entry logic
-2. missed-entry logic
-3. incorrect use of unclosed candles
-4. Look-ahead
-5. CopyBuffer / CopyRates correctness
-6. Timeframe correctness
-7. Position / Order / Deal confusion
-8. Magic Number isolation
-9. Hedging / Netting compatibility
-10. SL / TP normalization
-11. Broker Stops Level / Freeze Level compliance
-12. Spread / Slippage handling
-13. Risk / Lot calculation
-14. Volume min / max / step
-15. accidental modification of other Engines
-16. GSM Base SOP change disclosure
-17. Overfitting
-18. hidden risk increase for profit
-19. changed test conditions used to beautify results
-20. unexplained profit source
-21. Broker Reject / Retcode logging
-22. Freeze / Recovery state reconstruction
-23. Real Tick model correctness
-24. Equity-vs-Balance divergence
-25. sample-size adequacy for the strategy type
-26. OOS contamination
-27. delay / slippage sensitivity
-28. Expected Payoff after costs
-
-No Candidate may be promoted while a Critical Finding remains open.
-
----
-
-# 20. Candidate Promotion Gate
-
-To truly beat a Champion, at minimum require:
+Separately stress the portfolio cap for same-direction stop-loss executions across an entire basket, simultaneous deterioration of correlated positions, and adverse slippage; do not equate “8 consecutive individual-trade losses” with “8 consecutive portfolio losses.” Report at least peak budget utilization, minimum equity, maximum relative equity drawdown, longest losing streak and its total loss, risk breaches, and the minimum margin level. **The §11 drawdown target of ≤15%, strict review for >15% and ≤30%, and hard rejection for >30% are not relaxed for R24/R36.**
 
-```text
-1. Code correctness
-2. No future data / look-ahead
-3. No hidden risk increase
-4. Valid Real Tick evidence
-5. OOS does not collapse
-6. Walk Forward acceptable when required
-7. Stress test acceptable
-8. Critical risk metrics not unacceptably worse
-9. Overall evidence clearly better than Current Champion
-```
+### 3.7 Report Decisions and Adoption Boundaries
 
-A profitable Candidate only proves research value, not New Champion status.
-
----
-
-# 21. Automatic Reject Rules
-
-Any one of the following triggers rejection:
-
-- Future Data
-- Look-ahead
-- hidden Lot increase
-- hidden Risk % increase
-- removal of core SL
-- hidden Martingale / Grid Tail Risk increase
-- undisclosed maximum-position increase
-- cherry-picked backtest period
-- deleted losing periods
-- reduced Commission / Spread to beautify results
-- unfair comparison conditions
-- huge Equity DD exchanged for Net Profit
-- severe single-period Overfitting
-- hidden Broker Reject / Execution Failure
-- retuning after OOS and still calling the same period OOS
-- unexplained abnormal profit
-- missing critical validation data
-- formal Champion evidence not based on Real Ticks without explicit lower-fidelity labeling
-
-Result:
+Risk reports must distinguish three questions: **whether the capital permits execution, whether the signal has an advantage after costs, and whether assuming more risk is worthwhile.** More fills, higher net profit, or >100 trades in a tier cannot individually prove strategy improvement.
 
-```text
-AUTOMATIC REJECT
-```
+Same-tier controls primarily evaluate the marginal effect of a new method; cross-tier controls evaluate only the tradeoff from budgets and position allocation. Trace additional fills through stable SetupIDs: were they originally blocked by the per-trade cap, a full portfolio budget, margin, or another reason? How much additional profit/loss occurs now? Have volume, costs, or paths changed for trades executed in both versions? Do not describe an amplified equity curve caused by higher risk as improved predictive ability.
 
----
+Report each tier independently: net profit/return, PF, maximum equity DD, native and equity-based Recovery, complete trade count, net expectancy and its uncertainty, average and maximum initial risk, peak current-exposure risk, volume distribution, number of risk rejections, profitable/loss-making additional opportunities, missed winners, and tail losses. For tiers with 0 trades or small samples, retain diagnoses such as `CAPITAL_CONSTRAINT / LOW_SAMPLE_SIZE`; do not combine virtual Setups, partial-exit Deals, or duplicate trades across different tiers to manufacture sample size.
 
-# 22. Experiment Registry
+Configurations formally proposed for promotion must still satisfy §11 for every independent track and the actual Combined test: >100 complete trades in the main period, native Recovery >3, net-profit and risk requirements, plus independent OOS and stress evidence. Insufficient samples when R13 serves only as a capital-constrained control do not automatically block R24/R36 research and do not prove that a higher-risk candidate has won; a candidate proposed for promotion must have its own valid reference under the **same tier and same sizing rules**, with complete evidence.
 
-Every experiment must record:
+Tiers and sizing modes are also selection parameters: select and freeze them on the development/training segment before examining a validation segment not used for selection. Choosing the best tier after seeing OOS results makes that segment selection data; it cannot be renamed a blind test. Stress failures, low samples, and losing results for all tiers must be disclosed together; do not retain only the tier with the highest net profit.
 
-```text
-Experiment ID
-AI Research Mode (OFF / SINGLE_AI / DUAL_AI)
-Research Source
-AI Model(s) if used
-Engine
-Candidate Version
-Candidate Origin
-Current Champion Version
-Strategy Source
-Research Hypothesis
-Observed Evidence
-Modified Files
-Modified Rules
-GSM Base SOP Changed (YES/NO)
-Initial Capital
-Return %
-Risk Budget
-Actual Risk
-Test Protocol
-Broker / Symbol / Date Range
-Tester Model
-Real Tick Used (YES/NO)
-Delay / Slippage Scenario
-Champion Metrics
-Candidate Metrics
-Delta Metrics
-Max Equity DD USD / %
-Max Balance DD USD / %
-Recovery Factor
-Expected Payoff
-Edge-to-Cost Ratio
-Sample Size
-Standard Review Result
-Self Review Result
-Red Team Result
-Codex Review
-Claude Review
-OOS Result
-Walk Forward Result
-Stress Test Result
-Audit Result
-Blocked / Trigger Reasons
-Final Verdict
-Promotion Decision
-Reason
-```
+Research conclusions may recommend retaining R13, continuing research on R24, rejecting R36, or requiring more evidence for all tiers; do not prefill an optimal answer. Retain the original Final Verdict enumeration and record the explanation for risk-tier selection separately. Even with research evidence, a higher tier **does not automatically replace the R13 deployment default or acquire live-trading permission**; formal configuration requires an explicit user selection, applicable capital, and an approval record. This authorization is sufficient to execute the offline experiments above, without repeatedly requesting confirmation for every preregistered run.
 
-Fields that do not apply must be recorded as:
+## 4. Mapping the Teaching Materials to the Program
 
-```text
-N/A
-```
+| Knowledge layer | Verified source | The program must explicitly define | Role in this round |
+|---|---|---|---|
+| S&D | p4–6 Long Wick/Base Break/Impulsive; p7 First Touch; p8 50% pending entry for wide zones | Formation and confirmation times, departure, first-touch episode, invalidation, units | Cross-check core rules and engineering definitions item by item |
+| S/R | p2 two or more touches; p4 role reversal; p6 quality; p7 false breakout | Independent touch counting, close back inside, a new object after role reversal | Keep types and lifecycles separate from S&D |
+| 8 chart patterns | Chart p3–10; p11 confirmation → retest → entry | Pivot confirmation time, tolerance, span, breakout and retest | Establish recognition coverage and logs first; do not turn all patterns into hard gates at once |
+| 36 candlestick labels | Candle p2–6; p6 confirmation and volume; p8 execution examples | Mathematical pattern definitions, context, direction, close confirmation, deduplication within each family | Retain multiple labels; strategies use their respective whitelists/candidates |
+| Classroom screenshots | Long/short positioning, three types of traders, discipline and review | Record separately against each specific SOP | Evidence for context and workflow, not backtest performance |
 
-Never fabricate Review or Test results.
+The four books do not independently specify all timeframes/SL/TP for the complete three-engine system. Special treatment:
 
-Final Verdict may only be:
+- **S&D First Touch and repeated S/R respect must not be merged into the same scoring rule.**
+- For “30 points” in the teaching materials, no MT5 point value is defined; the two unit inputs in the existing code are 0.10, which is a convention of the current implementation. Also register the boundary at exactly 30 points in the teaching materials. Preserve the current values for reproduction; do not claim that the teaching materials prove the conversion.
+- The Scalping Base document specifies 50/50, while the current SC-S20/combined SET uses 80/70; the former is the original SOP and the latter is the historical Champion parameter set. Record both; do not automatically revert to 50/50.
+- The Intraday Base document specifies SL120/TP240, while the locked IN-I32 parameters are SL120/TP70; register them separately, and do not substitute the Base description for the actual SET.
+- The candlestick teaching materials' global requirement for “confirmation at the next candle's close” and H4/D priority differs from the current execution at the close of the M5 candle that touches the zone. The original plan listed additional waiting as an independent Candidate direction; under this round's “SOP unchanged” boundary, any additional waiting that changes locked trigger timing is reclassified as `SOP_CHANGE_PROPOSAL` and is not executed in this round. Internal reversal quality may use only data known at the original confirmation time.
+- The book does not specify the averaging window/source for the 1.5-times volume requirement. Current tick volume can serve only as a proxy for activity in that quote stream and must not be called actual centralized-market traded volume; observe first, and do not directly add a hard filter.
+- Preplacing at 50% of a wide zone, the S/R Limit example, the Stop example after candlestick confirmation, and immediate market execution are different paths; audit them strategy by strategy, and do not convert all 3-SOP execution to pending orders. Only optional execution paths already permitted by the current SOP may serve as supporting Candidates in this round; proposals that change the locked entry path are registered only as SOP change proposals.
+- Write versioned programmatic definitions for Broken Zone, Departure thresholds, wick/ATR ratios, and pivot delays. The wording of the head-and-shoulders target is ambiguous; do not change TP in this round.
 
-```text
-REJECT
-KEEP CURRENT CHAMPION
-RESEARCH FURTHER
-NEW ENGINE CHAMPION
-NEW 3-SOP COMBINED CHAMPION
-```
+Register every definition using: `rule_id / source_page / source_text_summary / engine / current_function / current_value / proposed_definition / available_at / sop_changed / status`.
 
----
+## 5. Research and Development Task Queue and Acceptance
 
-# 23. Champion Lock and History
+The following table contains task IDs for the new plan, **not Candidate IDs that have already been registered or passed**. At execution time, read the existing registry first, then allocate S-/I-/W-/C-Candidate IDs, preserving the history of SC-S20, IN-I32, SW-W37, and C-C01. Each subexperiment changes only one main variable.
 
-Every Strategy Champion and Combined Champion must retain:
+| Order / Task | Specific work | Required deliverables and exit criteria |
+|---|---|---|
+| P0 Baselines and feasibility | Freeze 4 baselines; inspect the current workspace and source/EX5/SET/INI/hash; verify contracts, units, risk, and already-used data; establish H0/B0 controls and the K0 extension-cleanup list | BASELINE_MANIFEST, MANDATE_MATRIX, RISK_FEASIBILITY for each tier, SOP_LOCK, OPTIONAL_MODULE_INVENTORY; do not pass off old 10% results as R13/R24/R36 results |
+| P0-R Tiered risk research | R13 as the default control; R24/R36 and preregistered split-factor controls; first RG budget gating, then independent SZ lot-sizing research as needed; freeze the reference logic | RISK_PROFILE_MATRIX, audit of risk rejections and additional Setups, S/I/W/Combined for each tier, consecutive-loss/cost/tail stress tests; do not require R13 to PASS first, do not automatically enable live trading, and do not tune signals simultaneously |
+| P1 Zone selection | P1a changes only Scalping ranking to the nearest valid zone, with quality used only as an equal-distance tie-break; P1b separately tests old-zone occupation and candidate reselection | Zone candidate list + price distances + old/new selection comparison; pass inside=0, near-weak/far-strong, equal-distance, and new-zone-appearance cases; preserve first-touch state |
+| P2 First touch and missed trades | Start with read-only event replay, distinguishing formation → departure → first return episode → confirmation → consumption; a technical order rejection does not imply permission for a second fresh attempt | FirstTouch trace, LOST_OPPORTUNITIES; continuous ticks/continuous candles must not be counted repeatedly, and restarts must not reset fresh; create a separate Candidate for each change |
+| P3 Intraday direction/location | Select the main cause from actual losses and the funnel; first observe NR01 approach path to the zone and NR02 market state independently; test trend-assistance representation, late entry, and the SOP-permitted 30-point/50% paths separately | Single-variable description for I candidates; preserve core M30 trend eligibility; make confirmation time and entry price traceable; do not add mandatory 2/3 or 3/3; list conflicts with locked rules only as SOP change proposals |
+| P4 Intraday/Swing management | At their respective already-permitted management extension points, separately test one of cost-adjusted break-even, structure/ATR trailing, or partial exits; integrate NR06 profit-giveback protection into Swing; first audit ticket isolation and restarts | Fixed initial R, SL only tightens, and no partial exit when 0.01 cannot be split legally; Scalping protection functions must remain unreachable; do not enable time-based exits without confirmation of authorization |
+| P5 Patterns and evidence | Cover all 8 chart patterns/36 candlesticks individually; observe logs first, then select a few families for testing based on evidence; integrate NR03 internal reversal quality and NR04 relative scale; retain research entry points for BOS/CHoCH/soft scoring | Positive/negative cases, deduplication of overlapping labels, no future data; preserve original pattern whitelists and close confirmation; report numerical coverage and profitability validation separately |
+| P6 Independent opportunities and the portfolio | First establish that position limits genuinely block eligible Setups; then study concurrent risk reservation separately; rerun combinations of winning individual strategies at the frozen tiers | Combined backtests under the same-tier risk and lot-sizing rules; list cross-tier R13/R24/R36 comparisons separately; audit same-direction exposure, margin, strategy attribution, and drawdown correlation; do not treat additional positions as a strategy advantage |
 
-- Version
-- Source Hash
-- SET Hash
-- Test Protocol
-- Metrics
-- Final Report
+The P1 source-code evidence recorded in the original plan: `FindBestSDZone` ultimately selects the zone with the highest score; `UpdateSupplyDemandStates` searches only after active becomes invalid/used/broken/expired. `DistanceToZone` already correctly treats distance inside a zone as 0; reuse it and verify the semantics of its calls, rather than rewriting it without evidence. Recheck the current commit before implementation: if the issue is already fixed, verify regression behavior first and do not repeat the modification; any modification must also comply with SOP_LOCK.
 
-A Champion can only be unlocked when a Candidate under equivalent conditions clearly beats it.
+P1a leaves the formal parameter structure unchanged; P1b must not treat “being replaced” as erasing historical touches. Preserve independent ZoneID state; a zone already touched must not regain fresh status through zone switching. When Swing shares a function, isolate it through engine parameters/strategy branches; this experiment must not incidentally alter Swing.
 
-Lineage:
+The current P2 Scalping path consumes the Zone before sending, including when no whitelist matches or indicator/gating checks fail. This is the existing intentional duplicate-prevention semantics; **first count lost opportunities only, and do not remove it directly**. When researching retryability, distinguish explicit server rejection, unknown status after timeout, partial fills, and absence of SOP qualification; unknown states must be reconciled, never blindly resent.
 
-```text
-Previous Champion
-↓
-Candidate
-↓
-New Champion
-```
+Existing labels also cannot be treated directly as causes: all 20 Scalping trades in the FxPro combination are marked `ChaseEntry=YES`, and 15 are profitable; directly filtering that label would eliminate this entire sample. The Intraday funnel has 391 FirstTouches, 380 EMARejected events, and ultimately 4 trades, but the fields are not mutually exclusive reasons. The only FxPro Swing order had MFE of USD48.94 and ended at USD0.66, which warrants research into profit retention but is insufficient for parameter tuning. Reconstruct the timeline for each Setup and freeze the comparison method in advance.
 
-Old Champions are never deleted.
+P5 continues the existing GitHub research index and preserves the original GH01–GH10 source mappings. Prioritizing the local implementation differences recorded in the original plan ahead of new external indicators does not cancel research into BOS/CHoCH and related methods. ONNX/online AI, Footprint, and large-scale indicator fusion remain deferred; rule-based scores must not be called actual success probabilities.
 
----
+Register all new methods under §12. Their sources may be `ORIGINAL_RESEARCH`, `REDEFINED_EXISTING_METHOD`, or `EXTERNAL_REFERENCE`; new ideas are no longer required to originate from GitHub. Autonomous design here refers to research hypotheses and combinations for this project, not a claim that the underlying formulas are global firsts. Retesting old methods requires an explanation of a new use, new feature, or new causal hypothesis; merely renaming a method or repeating searches for the old optimum parameters does not count as new research. Reusing external code still requires recording its source and checking its license.
 
-# 24. Git / Version Isolation
+## 6. Program Interfaces and Execution Discipline
 
-```text
-main / production
-└── current formal Champion reference
-
-champion/
-├── current/
-└── history/
-
-research/
-├── scalping/<origin>/<topic>
-├── intraday/<origin>/<topic>
-├── swing/<origin>/<topic>
-└── combined/<origin>/<topic>
-
-research summaries / rejected results
-└── Markdown / CSV only
-```
+Follow the top-level sequence: **GSM SOP → Three independent engines → Optional evidence → Risk → Portfolio → Execution → MT5 → Audit**.
 
-Failed Candidates do not keep large ZIP packages; keep Markdown / CSV summaries only.
+- Detectors output structured evidence and do not place orders. Engines generate candidates containing `engine_id, zone_id, setup_id, direction, signal_time, confirmation_time, expiry, planned_entry, SL, TP`.
+- Risk reads actual contracts, current equity, existing exposure, pending orders and in-flight requests, plus the `risk_profile_id / single_cap / portfolio_cap / sizing_mode` frozen for this run, and calculates budgets consistently; Portfolio serially reserves risk and margin before sending. An undeclared tier defaults to R13; scoring modules must not automatically select higher-risk research tiers. See §3.5.
+- Enforce the single-trade budget uniformly across all lot-sizing modes; do not silently ignore failed risk calculations, exposure without SL, or account exposure that cannot be attributed. The new risk specification separately records initial-SL risk, the risk of a decline from current equity to SL, and the cost buffer; explicitly define how manual trades/other EAs/pending orders are included, and do not count the same risk twice.
+- Repeated ticks for the same signal, delayed responses, restarts, rejections, and partial fills must not duplicate risk counting or order placement. On netting accounts, Magic alone cannot establish independence of the three strategies; explicitly verify behavior that currently requires Hedging, and do not remove that requirement without authorization.
+- `OrderSend=true` does not prove a fill; record retcode and complete reconciliation using trade notifications and server Order/Deal/Position states. [Official OrderSend documentation](https://www.mql5.com/en/docs/trading/ordersend) [Trade transaction notifications](https://www.mql5.com/en/docs/event_handlers/ontradetransaction)
+- When new positions are prohibited, continue existing position management for the owning strategy; lock every modification to the target ticket and strategy, and never modify another engine's position merely by matching symbol.
+- Risk budgets are pre-entry constraints; gaps/slippage may cause actual losses to exceed the tier's budget. Tests must report overruns and tail losses, and must not claim that stop-losses guarantee losses never exceed 1%, 2%, 3%, or any portfolio cap. On an overrun, prohibit new risk and follow existing management; do not temporarily raise the tier. See §3.5.
 
-New Champion promotion:
+Suggested stable reason codes: `NO_VALID_ZONE, NOT_FIRST_TOUCH, NO_REVERSAL, WRONG_TREND, LATE_ENTRY, DUPLICATE_SETUP, MIN_LOT_OVER_RISK, PORTFOLIO_RISK_FULL, MARGIN_INSUFFICIENT, SPREAD_TOO_HIGH, DATA_NOT_READY, REQUEST_UNKNOWN, BROKER_REJECT`. This is a proposed audit vocabulary; implement it after mapping existing fields.
 
-```text
-Old Current Champion
-→ champion/history/
-
-Winning Candidate
-→ champion/current/
-```
+“Reject=0” refers specifically to execution rejections/failures to be eliminated; normal SOP, risk, and spread rejections are valid controls. Do not remove filters to force the count to zero, or rename genuine broker rejects to conceal them.
 
-Full lineage must be preserved.
+### 6.1 New Module Interfaces and Behavioral Isolation
 
----
+Manage each new module in three modes, `OFF / OBSERVE / ACTIVE`, configured separately for Scalping, Intraday, and Swing. If the original project already uses ASSIST/ENFORCE names, first map their actual permissions; reducing lot size, waiting, changing order type, or exiting early are all behavioral changes and must not be called “observation only.”
 
-# 25. Champion ZIP Delivery Standard
+OBSERVE outputs evidence only and does not change SOP eligibility, direction, Zone/Setup lifecycle, risk reservation, orders, or positions. Under identical fixed test conditions, it should reconcile with OFF signal by signal and fill by fill; investigate code side effects, computation delay, or nondeterminism first if they differ, rather than immediately interpreting the difference as strategy improvement.
 
-Generate a Champion ZIP only when a real New Combined Champion exists.
+ACTIVE must list writable interfaces and every behavioral change in the experiment registration. It must not override Scalping's immediate execution or fixed SL/TP; Intraday/Swing management extensions must also remain within initial-risk and SOP boundaries. Store original signal fields separately from module-recommendation fields; modules must not overwrite “original SOP eligibility.”
 
-Minimum contents:
+The three engines operate as independent OR paths, not as mutual confirmation: one engine having no signal, unready data, or a local cooldown must not block another engine's independently valid Setup. Valid account-level risk, margin, or trading-safety limits may prevent new orders, but require an explicit reason; existing position management continues by the owning ticket.
 
-```text
-CODE/
-SETS/
-CONFIG/
-REPORTS/SCALPING/
-REPORTS/INTRADAY/
-REPORTS/SWING/
-REPORTS/COMBINED/
-REPORTS/OOS/
-REPORTS/STRESS/
-RESEARCH/CHAMPION_COMPARISON/
-BEST_SCALPING/
-BEST_INTRADAY/
-BEST_SWING/
-FINAL_REPORT_CN.html
-CHAMPION_MANIFEST.txt
-SHA256.txt
-```
+## 7. Backtesting and Falsification Protocol
 
-The FINAL_REPORT front page must show in order:
+### 7.1 Data and Fair Controls
 
-```text
-Best Scalping
-Best Intraday
-Best Swing
-Best Combined
-```
+1. Inventory FxPro historical-data coverage starting from 2024-03, as known by the user; actual availability is determined by terminal download logs, and planned coverage must not be presented as already downloaded. Record server timezone and daylight saving time, symbol name, contract, gaps, Tick coverage, and terminal build.
+2. Freeze each experiment's source, EX5, SET/INI, initial capital of USD500, leverage, costs, engine switches, start/end dates, and risk rules, explicitly identifying risk_profile_id, single-trade/portfolio caps, target lot-sizing rules, and RG/SZ mode. H0 uses the historical 1:100 for reproduction; later leverage changes must also be disclosed separately, and tier comparisons must not simultaneously change leverage or initial capital.
+3. The historical period from 2026-05-01 to 08-26 and old Scalping validation segments have already been analyzed/used for parameter selection, and must not again be called untouched OOS for a new round. Preserve original labels in historical OOS fields and add the `REUSED_FOR_RESEARCH` status.
+4. P0 inventories all previously viewed data ranges; only subsequent reserved segments that did not participate in selection may be used for final validation. If there is currently insufficient unused data, output `OOS_PENDING`. Walk Forward must freeze parameters after selection in each training window, then generate subsequent trades; merely slicing the same trade table must not be passed off as retraining.
+5. Compile the actual source being delivered with MetaEditor, requiring 0 errors/0 warnings; MT5 must use `Every tick based on real ticks`. Also inspect generated-tick fallback where Ticks are missing; “100% history quality” must not be treated directly as proof that all Ticks are real. [Official MT5 Tick documentation](https://www.metatrader5.com/en/terminal/help/algotrading/tick_generation)
 
-Field order is fixed:
+Each run must also fix warm-up, state initialization, and handling of positions across segment boundaries. An independent FULL run and restarted TRAIN/OOS runs produce different trade sets; do not require FULL to mechanically equal the sum of the two segments, or add overlapping reports to inflate the sample. Before reproduction experiments, complete the mapping between old SET/EX5 filenames in INI files and renamed delivery files, leaving the original files unchanged.
 
-```text
-Net -> Max Equity DD -> PF -> Trades -> Win Rate -> Reject
-```
+### 7.2 Validation Matrix
 
-Detailed pages must additionally show Return %, Equity DD USD/%, Recovery Factor, Expected Payoff, Realized R:R, Buy/Sell split, consecutive-loss statistics, cost sensitivity, and diagnostic flags.
+| Validation | Conditions |
+|---|---|
+| Strategy separation | Run S-only, I-only, W-only, and Combined separately; confirm the other engines' switches for each run |
+| Costs/delay | Use actual spreads and commissions as the baseline; preregister spread +25%/+50%, additional adverse slippage, custom fixed 10/25/50ms delay, and native Random Delay as separate tests (see §11.6); list changes the native Tester cannot express separately as research simulations |
+| Boundary correctness | Zero candle body/zero range, unready data, multiple signals in the same tick, broker minimum lot, partial fills, order timeout, restart, Stops/Freeze/TickSize |
+| Parameter stability | Check neighboring values only on research/training segments, and do not use OOS results to select the optimum retrospectively |
+| Direction and market conditions | Attribute results separately by BUY/SELL, trend/range/high volatility, and month; do not remove adverse periods |
+| Sample and uncertainty | Counts of complete position trades and Setups; list partial-exit deals separately; estimate uncertainty using day/Setup blocks, and mark low-sample conclusions as unstable |
+| Risk tiers | Main R13/R24/R36 reports and preregistered split-factor controls; first compare budgets under the same reference logic, then compare new methods at a fixed tier; run S/I/W/Combined separately at each tier, applying the same §11 thresholds |
+| Promotion | Freeze acceptance criteria before the experiment; pass tests and clearly outperform the current benchmark at the same risk tier and under the same lot-sizing rules, then pass OOS/stress/portfolio/mandate checks; passing research does not automatically change the default deployment risk |
 
-The ZIP delivered to the user and GitHub `champion/current/` must be the exact same file, with matching filename, version, SHA256, and report metrics.
+Before each experiment, register the maximum number of parameter combinations to be studied and the main variables; archive failures unchanged, and do not repeatedly inspect the same OOS to “tune until PASS.” Retain the original Champion when there is no clear advantage. Final Verdict uses the top-level enumeration: `REJECT / KEEP CURRENT CHAMPION / RESEARCH FURTHER / NEW ENGINE CHAMPION / NEW 3-SOP COMBINED CHAMPION`. Record data, environment, or capital-feasibility blockers separately as `execution_status=BLOCKED_BY_DATA_OR_CAPITAL`; Final Verdict is then `RESEARCH FURTHER`, and no new promotion conclusion or fabricated PASS is allowed.
 
----
+### 7.3 Single-Variable, Counterfactual, and Full-Account Controls for New Methods
 
-# 26. Final Universal Champion Iteration Loop
+Execute in the order “same-risk benchmark → clean up old extensions individually → OFF/OBSERVE consistency → single-module ACTIVE → a few preregistered combinations.” When enabling a new module for the first time, do not simultaneously change the lot-sizing algorithm, initial SL/TP, SOP trigger conditions, or exit rules. Provide separate controls for the effectiveness of new methods and the effectiveness of removing old restrictions.
 
-Research input may come from:
+Use stable `setup_id` values to record the outcome of the same opportunity across versions. Report originally profitable/losing opportunities that were filtered out, net amounts missed or saved, execution deviation, waiting time, MAE/MFE, and exit differences; do not use profit/loss labels known only afterward as entry features at the time.
 
-```text
-USER
-STANDARD RESEARCH
-GITHUB
-EXTERNAL EA
-SINGLE AI
-DUAL AI
-```
+Paired replay must use consistent initial risk, market data, costs, and original exit definitions, and must be labeled a “counterfactual estimate,” stating assumptions about price touches, fills, concurrency, and fees. Filtering or exit changes alter capital usage and subsequently executable trades, so per-trade differences cannot replace a rerun of the full account. Virtual Setups rejected by risk controls do not count toward the actual trading sample, and combined net profit cannot be calculated by directly adding three individual-strategy profits or counterfactual profits.
 
-Unified flow:
+NR04 rolling scales, NR06 holding-time distributions, or any scoring thresholds may be estimated only from the current training window, then frozen for subsequent validation windows. Risk tiers and lot-sizing modes are also selection parameters, subject to §3.4/§3.7; do not use OOS to select the best risk tier and still call the test blind. Continue registering the usage status of old OOS data, all trial counts, and failed candidates under §7.1/§7.2; do not repeatedly reuse the same holdout segment to “tune until PASS.” Preserve missing states for undefined denominators, missing Ticks, or low samples, rather than fabricating high scores or high PF.
 
-```text
-CURRENT CHAMPION
-↓
-READ FINAL REPORT
-↓
-READ TRADE AUDIT
-↓
-READ MISSED OPPORTUNITY AUDIT
-↓
-IDENTIFY BIGGEST WEAKNESS
-↓
-SELECT RESEARCH SOURCE
-↓
-SELECT AI_RESEARCH_MODE = OFF / SINGLE_AI / DUAL_AI
-↓
-FORM TESTABLE HYPOTHESIS
-↓
-BUILD ONE CANDIDATE
-↓
-COMPILE
-↓
-REVIEW GATE
-  ├─ OFF: STANDARD CODE AUDIT
-  ├─ SINGLE_AI: SELF REVIEW + RED TEAM
-  └─ DUAL_AI: CROSS REVIEW
-↓
-MT5 REAL TICK
-↓
-TRAIN / OOS
-↓
-FXPRO / TRADONA
-↓
-WALK FORWARD / STRESS TEST when required
-↓
-RISK + PORTFOLIO AUDIT
-↓
-COMPARE WITH CURRENT ENGINE CHAMPION
-```
+## 8. Deliverable Format for Each Round
 
-Failure path:
+Required deliverables: source diff and hash, SET/INI, actual compilation logs, raw MT5 reports, per-trade audit, signal funnel, incorrect-entry/missed-trade cases, comparison tables, OOS and stress evidence, and final conclusions.
 
-```text
-REJECT / KEEP CURRENT CHAMPION / RESEARCH FURTHER
-↓
-SAVE RESEARCH SUMMARY
-↓
-DO NOT TOUCH CHAMPION
-```
+| Version / Engine / Segment / RiskProfile / SizingMode | Net USD | Return % | Max Equity DD USD/% | PF | Complete trades | Win rate | Execution reject |
+|---|---:|---:|---|---:|---:|---:|---:|
+| New Candidate for this round | NOT_TESTED | NOT_TESTED | NOT_TESTED | NOT_TESTED | NOT_TESTED | NOT_TESTED | NOT_TESTED |
 
-Success path:
+Supplement with Expected Payoff, actual average win/loss ratio, Recovery definition, costs, actual risk, peak margin, BUY/SELL differences, and changes relative to the benchmark. When there are no losses or no trades, use an appropriate undefined state for PF; do not insert a high value to pretend the test passed.
 
-```text
-NEW ENGINE CHAMPION
-↓
-LOCK IT
-↓
-REBUILD 3-SOP COMBINED CANDIDATE
-↓
-FULL COMBINED REAL TICK + OOS
-↓
-PORTFOLIO AUDIT
-↓
-COMPARE WITH CURRENT COMBINED CHAMPION
-↓
-IF BETTER → NEW 3-SOP COMBINED CHAMPION
-↓
-FINAL REPORT CN
-↓
-CHAMPION ZIP
-↓
-SHA256
-↓
-GITHUB ARCHIVE
-```
+Apply §11 uniformly for full report fields, hard thresholds, diagnostic references, win-rate/win-loss-ratio formulas, drawdown and Recovery definitions, stress tests, and OOS requirements. Delivering only the one-row summary table above is not sufficient.
 
----
+Subsequent chart reports must include equity and balance, drawdown, monthly returns, distributions by strategy and direction, and the signal funnel; use actual results only. This round delivers a plan, and no fictional equity curve has been generated.
 
-# 27. Final Decision Authority
+### 8.1 Additional Deliverables for New Research
 
-Codex, Claude Code, Single AI, Dual AI, GitHub Research, and external EAs do not have final decision authority.
+Add the following records to the original delivery requirements; filenames are suggestions and must first be adapted to the current directory and registry, without restructuring the entire project merely for naming.
 
-Final authority comes from:
+| Deliverable | Required explanation |
+|---|---|
+| `SOP_LOCK` / `IMPLEMENTATION_DIFF` | Locked rules, actual implementation, historical parameter differences, basis for fixes, permitted extension points, and conflicts |
+| `OPTIONAL_MODULE_INVENTORY` | Classification of old modules, reasons for retaining/disabling/replacing them, safety boundaries, and corresponding cleanup experiments |
+| `BASELINE_MANIFEST` | Differences among H0/B0/K0/fixed benchmarks, source, SET, data, reference_id, risk_profile_id, and lot-sizing mode; H0 retains the old risk settings |
+| `EXPERIMENT_REGISTER` | Hypothesis, source, owning SOP, permitted changes, parameter-combination budget, feature availability times, and frozen testing and acceptance rules |
+| Signal and fill comparison CSV | Original SOP eligibility, module recommendations, statuses at each stage, distinction between actual fills and counterfactuals, duplicate counting, and risk rejections |
+| Chinese research report | All metrics in original plan §8/§11, marginal effect of each module, effects of cleaning up old modules, missed profits, failure cases, and portfolio impacts |
+| `SOP_CHANGE_PROPOSALS` | Core-rule change ideas worth preserving but not executing in this round; do not mix them into authorized supporting experiments |
+| `RISK_PROFILE_MATRIX` / `RISK_FEASIBILITY` | R13/R24/R36 and split-factor controls, current contract evidence, minimum-lot risk for each Setup at USD500, costs, capital thresholds, and budget/margin rejections |
+| `RISK_PROFILE_COMPARISON_CN.md` | Separate tables for within-tier method comparisons and cross-tier budget comparisons; separate RG/SZ, reasons for R13 constraints, additional profitable/losing opportunities, lot size and actual risk, DD/Recovery/consecutive losses/OOS/stress, and tier recommendations |
+| `RISK_EVENT_AUDIT.csv` | For every trade and reservation: profile, current equity, single-trade/portfolio budgets, used/remaining/in-flight risk, target and actual lot size, rejection reason, overruns, server reconciliation, and configuration source |
 
-```text
-Code Correctness
-+
-Fair Candidate VS Champion
-+
-MT5 Real Tick
-+
-OOS
-+
-Walk Forward when required
-+
-Stress Test
-+
-Risk Audit
-+
-Portfolio Audit
-+
-Champion Evaluation Order
-```
+Record engineering checks, research differences, and final promotion separately. Complete data for an observation experiment does not mean the strategy has PASSED; reducing a large loss to a smaller loss may have research value, but cannot qualify for promotion without satisfying §11 requirements such as positive net profit. New statuses are diagnostic labels only; Final Verdict still uses the original §7.2 enumeration.
 
-Final evaluation order remains permanently fixed:
+Risk comparisons must preserve at least the following blank table of main tiers, populated with actual values after testing; put split-factor controls in a separate table:
 
-```text
-#1 Net Profit USD
-#2 Max Equity Drawdown
-#3 Profit Factor
-#4 Trade Count
-#5 Win Rate
-```
+| Tier | Single-trade/portfolio cap | Valid Setups/actual complete trades | Single-trade/portfolio risk rejections | Net profit/PF | Maximum relative equity DD | Native/equity Recovery | OOS/stress | Status |
+|---|---|---|---|---|---|---|---|---|
+| R13 | 1% / 3% | NOT_TESTED | NOT_TESTED | NOT_TESTED | NOT_TESTED | NOT_TESTED | NOT_TESTED | NOT_TESTED |
+| R24 | 2% / 4% | NOT_TESTED | NOT_TESTED | NOT_TESTED | NOT_TESTED | NOT_TESTED | NOT_TESTED | NOT_TESTED |
+| R36 | 3% / 6% | NOT_TESTED | NOT_TESTED | NOT_TESTED | NOT_TESTED | NOT_TESTED | NOT_TESTED | NOT_TESTED |
 
-Any Automatic Reject condition, Look-ahead, hidden risk increase, unacceptable DD, OOS collapse, or execution abnormality may veto promotion.
+Every table must state engine, segment, reference, lot-sizing mode, fees, and the full run_id; do not add together different tiers or duplicate events.
 
----
+## 9. First-Round Instructions for Windows Codex
 
-# 28. Final Principle
+> This round selects the legacy-version upgrade research route and adds tiered risk research. Read this complete plan, especially §2.2, §3.1–§3.7, §11, and §12; also read the current project's three SOPs, source review, top-level specification (including §29), latest mandate, and existing registry. First confirm the working directory, uncommitted changes, current commit, and official MT5 data directory. Do not overwrite the original version or force a rollback because of historical version numbers.
+>
+> Freeze the four V4.00 historical benchmarks and their evidence mappings, and complete P0's SOP_LOCK, per-tier risk feasibility, data-use inventory, and H0/B0 protocol. Register old supporting modules individually and establish the K0 cleanup control. Preserve Scalping fixed SL/TP, locked trigger timing, FxPro scope, USD500, the R13 default control, and every §11 acceptance threshold.
+>
+> Independently register P0-R tiers R13=1%/3%, R24=2%/4%, and R36=3%/6%; first compare budget gating under the same reference logic and identical target lot-sizing rules, then separately research actual lot-size management. Under §3.4, add at most the three split-factor controls D23/D33/D34, freezing the tier, lot-sizing mode, and other conditions for each run. Neither single-trade nor portfolio caps are targets that every trade must fully consume. When minimum lot size constrains R13, preserve CAPITAL_CONSTRAINT and continue other registered experiments; do not shorten stops, add capital, switch contracts, or temporarily switch tiers to force trades.
+>
+> Preserve same-tier B0/K0/fixed benchmarks at each tier, and run S-only, I-only, W-only, and Combined separately; report additional opportunities, risk rejections, actual lot sizes, net profit, DD, Recovery, net expectancy, 6/8 consecutive losses, and tail stress. Net profit at different risk levels cannot establish that a method wins, and tier selection must not peek at OOS. Label research configurations RESEARCH_ONLY, for Tester use only; do not overwrite deployment defaults or enable live trading.
+>
+> Apart from necessary P0 risk adaptations and independent P0-R experiments, the first strategy-side behavioral change retains original P1a priority: first reproduce the Scalping nearest-zone ranking issue in the current source, confirm that it is an implementation fix under the locked SOP, then register a single-variable Candidate, modify, compile, and test; if already fixed, provide regression evidence and proceed to P2. Do not add new scoring or change risk tiers while fixing zone selection; refreeze the relevant same-tier controls whenever the reference logic changes.
+>
+> Integrate NR01–NR06 into the original P0–P6 queue, starting with the corresponding read-only observations. Afterward, autonomously propose and implement a limited number of supporting Candidates with explicit boundaries, carrying out single-variable tests and analysis during training; ideas do not all need to originate from a Champion or GitHub. Preserve the original SOP; non-SOP supporting methods may be redesigned. Previously failed indicators may be repurposed with evidence, but old results must not be repackaged as new.
+>
+> Only modules explicitly permitted by extension points may enter ACTIVE; list suggestions that conflict with the core SOP separately and do not execute them in this round. For each candidate, freeze the problem, hypothesis, permitted variables, trial budget, acceptance criteria, and rollback conditions in advance. Complete actual compilation, FxPro Real Tick testing, cost and delay stress, valid out-of-sample testing, individual-strategy audits, and actual portfolio audits in sequence, then decide from the evidence whether to retain, discard, or continue research.
+>
+> Record normal SOP/risk rejections separately from execution failures; when capital, data, or the Windows test environment is missing, register specific BLOCKED evidence and continue work independent of the blocker. Do not exceed registered tiers to force trades, count virtual fills toward the >100 threshold, repeatedly use old OOS as if it were a blind test, or overwrite the Champion. Do not relax DD/Recovery/sample or other thresholds for higher-risk tiers; permission for offline experiments in this round does not authorize an official higher-risk configuration. Without actual artifacts, do not write “compiled, backtested, or PASSED.”
 
-GSM SOP is responsible for: **how to trade**.
+## 10. Plan and Execution Status
 
-Research is responsible for: **what is worth testing next**.
+### 10.1 Completed Items Recorded in the Original Plan (2026-09-06; Not Reverified This Time)
 
-AI Research is an **optional research tool, not a mandatory Champion process**.
+- [x] Verified the main GitHub repository, two reference repositories, and fixed commits.
+- [x] Read the four teaching books and six screenshots, and listed key ambiguities.
+- [x] Verified the identity of the V4.00 ZIP, MQ5, and EX5; read historical backtest evidence and key source-code paths.
+- [x] Proposed a directly executable priority queue, independent variables, and acceptance criteria.
+- [ ] New Windows MetaEditor compilation, new FxPro backtests, new OOS, and stress tests.
+- [ ] New Candidate implementation and Champion promotion.
 
-When `AI_RESEARCH_MODE = OFF`:
+### 10.2 Integration Status for This Revision (2026-09-07)
 
-```text
-Do not use the AI Research Lab
-Research, development, backtesting, validation, and Champion promotion can still proceed normally
-```
+- [x] Integrated “SOP unchanged; supporting methods may be autonomously proposed/modified/tested” into the legacy-version upgrade route.
+- [x] Synchronized development boundaries, H0/B0/K0 controls, P0–P6 tasks, module permissions, and backtest and delivery requirements.
+- [x] Preserved all §11 report thresholds, FxPro scope, USD500, the R13 default control, and historical parameter differences; synchronized consecutive-loss provisions to per-tier definitions.
+- [x] Added R24/R36 research tiers, split-factor controls, minimum-lot feasibility, RG/SZ attribution, risk formulas, consecutive-loss stress, and research permissions.
+- [x] Synchronized risk references in §2/§3/§5–§9/§11.3/§12, without turning research-tier authorization into a live-trading default.
+- [x] Registered six new methods pending validation, the conflict-handling table, and first-round Codex execution instructions.
+- [ ] Write this MD into the actual project, create a research branch, and update the project registry.
+- [ ] Candidate code, risk configurations, per-Setup audits, actual backtests, and tier selection for R13/R24/R36 and split-factor controls.
+- [ ] Current repository/SOP review, Candidate code modifications, MetaEditor compilation, MT5 backtests, and promotion.
 
-When `AI_RESEARCH_MODE = SINGLE_AI`:
+## 11. Mandatory EA Trading Report Requirements (Added by the User in This Round)
 
-```text
-Use phase separation + Self Review + Red Team
-Reduce single-model confirmation bias
-```
+Supplement date: 2026-09-06. The win-rate content repeatedly pasted by the user has been consolidated, distinguishing “project hard gates,” “suggested targets,” and “factual assertions requiring correction.” These are the reporting and promotion rules for a new round; do not rewrite old historical reports or rename old versions as having passed the new rules.
 
-When `AI_RESEARCH_MODE = DUAL_AI`:
+### 11.1 Core Metrics and Assessment
 
-```text
-Use independent research + Cross Review + optional Hybrid Candidate
-```
+The following rules apply to the separate Scalping, Intraday, and Swing lines, and to Combined when actually run. Freeze the formal main test period before the experiment. Report OOS and each stress scenario in separate tables; do not substitute the best-looking period for the formal main table.
 
-MetaEditor is responsible for: **proving that the source code compiles correctly**.
+| Metric | Reporting Requirements | Assessment for This Project |
+|---|---|---|
+| Net Profit | Net profit in USD, initial capital, start and end dates, total return; report the annualization method separately when needed | `Return%=Net/InitialCapital×100`; net profit must be positive. Explain capital efficiency when returns are low; do not consider only the absolute amount |
+| Profit Factor | Native PF, Gross Profit, Gross Loss, sample size, OOS, cost sensitivity | Use 1.3–1.8 as the user's diagnostic reference, with no upper limit of 1.8; PF≤1 indicates no positive-return edge; >2.5 or 3 triggers intensive review, without automatically classifying overfitting from PF alone |
+| Max Equity DD | Maximum equity drawdown amount, the percentage corresponding to that amount drawdown, and the maximum relative equity drawdown percentage over the entire period | Apply thresholds to the maximum relative equity drawdown percentage over the entire period: ≤15% target; >15% and ≤30% requires strict manual review and cannot be automatically promoted; >30% is a hard rejection |
+| Total Trades | Separately report native MT5 Trades, complete opened-and-closed trades, Setups, and Deals | Each line must have >100 complete trades (at least 101) in the frozen main test period; 200–500 is suggested, not an upper limit on trade count; insufficient samples prevent promotion |
+| Recovery Factor | Native MT5 value and calculation reconciliation; additionally report Equity Recovery | Native MT5 Recovery must be >3.0; exactly 3.0 also fails the requirement; do not conceal equity risk by using only balance drawdown |
+| Expected Payoff | Native value and net expectancy after costs calculated per complete trade, using consistent USD/complete-trade units | Must be significantly positive and cover real costs; a cost buffer of 3–5 times is a strong reference target, not a substitute for statistical significance |
+| Win Rate | Profit Trades (% of total), average win, average loss, realized average win/loss ratio | No universal hard win-rate threshold; consider expectancy, direction, costs, and consecutive losses together |
+| Forced-Liquidation Risk | Minimum margin level, Margin Call/Stop Out modes and thresholds, peak margin usage, abnormal floating losses | A triggered Stop Out, unexplained large floating losses, or reliance on holding losing positions until recovery prevents promotion; do not reach conclusions from line colors |
 
-MT5 Real Tick + OOS + Dual Broker + Walk Forward / Stress Test are responsible for: **providing statistical validation and robustness evidence for the Candidate**.
+For example, an initial USD10,000 earning USD200 over one year does indeed yield a 2% return. Mark it `LOW_RETURN_REVIEW` and assess costs, drawdown, and comparable opportunity costs; do not claim it is necessarily “worse than a bank deposit” without checking the term, currency, and risk. No additional universal minimum annualized return has been set in this round.
 
-Champion System is responsible for: **deciding which version remains**.
+More than 100 trades is a user acceptance requirement, not a guarantee of statistical stability. Do not pad the sample by adding overlapping TRAIN/FULL/OOS records, partial-closing Deals from the same Setup, or duplicate events from the same market conditions across brokers. If Swing has insufficient samples, extend the available evidence and retain `LOW_SAMPLE_SIZE`; do not lower the threshold or force trades. Disclose OOS samples and uncertainty separately; do not treat the main-period sample size as the OOS sample size.
 
-Core rule:
+### 11.2 Distinguish Equity Drawdown, Recovery, and Forced Liquidation
 
-```text
-Research may continue indefinitely.
-Champion must not change casually.
+MT5's `STAT_EQUITY_DD` is the maximum equity drawdown in money; `STAT_EQUITYDD_PERCENT` is the percentage corresponding to that monetary drawdown; the maximum relative percentage over the entire period is `STAT_EQUITY_DDREL_PERCENT`. These three are not interchangeable. Use the last field for percentage risk thresholds. [Official statistical fields](https://www.mql5.com/en/docs/constants/environment_state/statistics)
 
-Not:
-A new version looks good, so replace it.
+Native MT5:
 
-Instead:
-Only replace the Champion when a Candidate clearly beats it under fair conditions.
-```
+`MT5 Recovery = STAT_PROFIT / STAT_BALANCE_DD`
 
-All Research Sources, all AI Modes, all new modules, and all Candidates follow the same rule:
+Additional calculation for this project:
 
-```text
-Research First
-↓
-Testable Hypothesis
-↓
-Candidate
-↓
-Required Review
-↓
-Evidence
-↓
-Candidate VS Champion
-↓
-Champion Only If Proven
-```
+`Equity Recovery = Net profit in USD over the same period / Maximum equity drawdown amount in USD`
 
----
+Native Recovery>3 is a hard gate for this round. Also output Equity Recovery; if it is low, investigate floating losses and profit retention. No matter how high the native value is, it cannot override an equity DD rejection. When the denominator is 0, missing, or undefined, preserve the platform result as-is and explain why; do not insert 999 or infinity and automatically pass it. [Native Recovery definition](https://www.mql5.com/en/docs/constants/environment_state/statistics)
 
-# 29. MT5 Strategy Tester Project-Level Enforcement Gate
+Balance reflects only settled account changes, while Equity also reflects unrealized profit and loss. Identify the two lines using the legend, fields, and values; do not hard-code “blue=Equity, green=Balance” from the user's original text. The official MT5 default Graph example is actually the reverse. Trace persistent or extreme adverse Balance-Equity divergence to orders, the duration of floating losses, and margin changes. [MT5 test chart and settings](https://www.metatrader5.com/en/terminal/help/algotrading/testing)
 
-This section converts the MT5 evaluation guidance above into a **project-level Champion enforcement layer**. Where a generic diagnostic band in Sections 7-8 is looser than this section, this section controls formal Champion promotion unless the user explicitly changes the mandate.
+Margin Call warnings and Stop Out forced liquidations are different events. Read the thresholds according to the broker account's percentage/currency mode. In percentage mode, record `MarginLevel=Equity/Margin×100`; do not divide by 0 when no margin is in use. Diverging chart lines are an investigation clue; their shape alone cannot prove that forced liquidation has occurred. [Account margin properties](https://www.mql5.com/en/docs/constants/environment_state/accountinformation)
 
-## 29.1 Core MT5 scorecard
+### 11.3 Win Rate, Expectancy, and Average Win/Loss Ratio
 
-Every formal Candidate VS Champion comparison must present the following first-line scorecard:
+Calculate each complete trade's net return under the same rule, including commission, swap, and applicable fees. Let W be the proportion of winning trades and L the proportion of losing trades, with break-even trades listed separately; when break-even trades exist, W+L need not equal 1.
 
-```text
-Net Profit USD
-Return % on Initial Capital
-Max Equity DD USD
-Max Equity DD %
-Profit Factor
-Total Trades
-Win Rate
-Expected Payoff / Expectancy
-Recovery Factor
-Reject / Execution Errors
-```
+`Net Expectancy = W×AverageNetWin − L×abs(AverageNetLoss)`
 
-The official ranking remains:
+`Realized Average R:R = AverageNetWin / abs(AverageNetLoss)`
 
-```text
-#1 Net Profit USD
-#2 Max Equity Drawdown
-#3 Profit Factor
-#4 Trade Count
-#5 Win Rate
-```
+In the simplified case with no break-even trades and ignoring additional costs: `BreakEvenWinRate=1/(1+R)`. If average wins and losses are already net of costs, do not deduct the same fees again; display the theoretical SL/TP ratio and realized average R:R separately.
 
-The additional fields are mandatory validation context, not a replacement ranking.
+| User-Provided Strategy Profile | Win-Rate Reference | Average Win:Average Loss Reference | Required Interpretation |
+|---|---|---|---|
+| Trend/breakout | 35%–45% | 2:1 or 3:1 and above | Examples only; do not call a strategy healthy from the range alone; 35% with 2R gives a pre-cost expectancy of only 0.05R |
+| Range/scalping | 65%–80% | 1:1 or 0.8:1 | Costs, execution delay, and slippage compress small edges; test net expectancy |
+| Grid/martingale | 85%–95%+ | Small-win/large-loss structures such as 1:5 or 1:10 | Used only to identify tail risk, not as candidate strategies for this EA; high win rate alone does not prove martingale use, nor justify claiming that every such strategy must blow up within one day |
 
-## 29.2 Project drawdown mandate
+These ranges are user-provided diagnostic examples, not official MT5 statistical distributions, promises of future win rates, or Pass/Fail gates applicable to all strategies. Increasing stakes after losses, hidden grids, removing SL, and similar behavior remain subject to the project's existing prohibitions.
 
-For this project:
+Reports must include `Average profit trade`, `Average loss trade`, `Long Positions (won %)`, `Short Positions (won %)`, and each side's trade count, net profit, PF, expectancy, and realized R:R. If BUY is 80% and SELL is 20%, first check the samples, market conditions, and costs on both sides; the win-rate difference alone cannot establish a lack of short-selling ability or justify immediately disabling SELL. [MT5 report fields](https://www.metatrader5.com/en/terminal/help/algotrading/testing_report)
 
-```text
-Preferred Max Equity DD <= 15%
-15% < Max Equity DD <= 30% = caution / requires strong justification
-Max Equity DD > 30% = formal Champion rejection unless the user explicitly changes the mandate
-```
+For consecutive losses, separately list the “longest losing streak in trades,” “total loss of that streak,” and “largest consecutive loss amount and its trade count”; do not confuse them. Test at least 6 losses, 8 losses, the longest historical losing streak, and more adverse scenarios. R13 retains 1% per trade/3% portfolio; the added R24/R36 and split controls use their own frozen budgets and actual equity paths, with profile definitions in §3.2–§3.6. A historical 60% win rate does not exclude consecutive losses; the probability of one specific independent sequence of 8 losses is also not the probability of an 8-loss streak occurring anywhere in the entire backtest. Stress analysis must consider correlated same-direction positions and slippage.
 
-Balance Drawdown can never override Equity Drawdown.
+### 11.4 Consistent Units for Expected Payoff and Costs
 
-Trigger when exceeded:
+Preserve both native `Expected Payoff` and `Total net trade return/Number of complete trades`. If they differ, reconcile trade/Deal aggregation and fee allocation; do not select the better value.
 
-```text
-EQUITY_DD_HARD_LIMIT_BREACH
-AUTOMATIC REJECT
-```
+- Spread in points, gold price differences in dollars, and USD/trade cannot be compared directly. Use each trade's volume, tick size/value, and entry/exit quotes to convert the spread, round-trip commission, swap, and additional adverse slippage into USD/complete trade.
+- Actual Bid/Ask execution already incorporates the spread's effect, and fees already deducted by the platform must not be deducted a second time; separately list “already included” and “additional stress costs.”
+- Report `NetEdgeToCostRatio=Average net return after costs/Average estimated cost of the corresponding complete trades`. If costs are 0 or unknown, mark it undefined rather than reporting infinity. Use 3–5 times as the user's suggested cost-buffer target and specify the cost definition it uses.
+- “Significantly greater than 0” cannot be asserted subjectively. Output sample size, interval estimates, and the calculation method. When using day/Setup block estimation, retain the correlation assumptions; mark low samples or an interval crossing 0 as `EDGE_UNCERTAIN` and continue research. If the lower confidence bound is to become an automatic gate, freeze the threshold before the experiment; do not change it after viewing OOS.
 
-## 29.3 Profit Factor scrutiny rule
+### 11.5 High-PF Review
 
-The project may use `PF 1.3-1.8` as a practical reference zone for a mature strategy, but this is **not** an automatic optimum and does not mean higher PF is bad.
+Remove the probability assertion that “PF>2.5/3 means a 90% probability of overfitting”: the user's material provides no supporting statistical basis, and the official report definition does not supply such a probability. Retain the original intent that high PF warrants careful inspection.
 
-When:
+When PF>2.5 or 3, register `HIGH_PF_REVIEW` and check whether the sample is extremely small, a few winners dominate, future bars/backfilled pivots are used, the number of parameter-selection attempts, costs are missing, buy/sell direction concentration, parameter neighborhoods, and repeated use of old OOS data. Reject on evidence when actual look-ahead/data leakage or false costs are found; high PF alone is not proof of wrongdoing. PF1.3–1.8 likewise cannot automatically pass.
 
-```text
-PF > 2.5
-```
+### 11.6 MT5 Stress Tests: Real Ticks, Delay, and Slippage
 
-perform heightened scrutiny for:
+Formal evidence must use `Every tick based on real ticks`; the correct name of the coarse mode is `1 minute OHLC`, not OHLV. OHLC/open-price modes are only for development checks. Even real-tick mode requires checks for historical gaps and fallback to generated ticks. [MT5 real and generated ticks](https://www.metatrader5.com/en/terminal/help/algotrading/tick_generation)
 
-- low sample size
-- over-optimization
-- parameter cliffs
-- favorable-regime concentration
-- unrealistic trading costs
-- future-data / look-ahead defects
-- direction dependence
+Register delay tests separately:
 
-Do not assign a probability of overfitting from PF alone.
+| Scenario | Actual Setting | Purpose |
+|---|---|---|
+| Zero delay | No Delay | Baseline/idealized diagnosis only; cannot be the sole qualifying evidence |
+| Multiple low-delay scenarios | Custom Fixed Delay: 10, 25, 50ms; record actual support and saved values in the current build | Retains the user's 10–50ms range of interest; not random mode |
+| Measured delay | Value measured on the current connection and more adverse fixed values, registered before testing | Matches the actual execution environment; 10–50ms cannot be assumed to represent the user's VPS |
+| Native random | MT5 Random Delay: 90% at 0–8 seconds, 10% at 9–18 seconds | A separate, heavier stress scenario; must not be labeled as random 10–50ms |
+| Custom random 10–50ms | Use only when genuinely implemented in a controlled simulator with its seed/distribution recorded | List separately as research simulation; do not claim it is a native MT5 option or promote based on it alone |
 
-## 29.4 Trade-count evidence requirement
+The official delay affects requests sent by the EA; triggering pending orders already on the server does not add the same network delay. Therefore, do not claim that enabling Delay fully simulates pending-order execution slippage. Separately reconcile slippage using requested versus executed prices, adverse quote stress, execution type, and liquidity assumptions; the allowed-deviation parameter is also not a switch guaranteed to produce fixed slippage. [MT5 Execution settings](https://www.metatrader5.com/en/terminal/help/algotrading/testing)
 
-Generic MT5 guidance prefers more than 100 trades and often 200-500 for stable inference, but the project applies strategy-specific evidence targets:
+For every scenario, report each line's net profit, PF, maximum relative equity DD, Trades, execution rejections, execution-slippage distribution, actual risk, and changes from the baseline scenario. Lock acceptance criteria before the experiment; do not select passing scenarios and hide failing ones.
 
-```text
-SCALPING: preferably > 200; 300-1000+ when feasible
-INTRADAY: preferably > 100
-SWING: lower counts are allowed only with longer history, multiple regimes, OOS, and cross-broker confirmation
-```
+### 11.7 Out-of-Sample Validation
 
-A small sample cannot be compensated for by a high Win Rate or high PF alone.
+Training and OOS must not overlap in time. This example uses half-open intervals: TRAIN `[2020-01-01, 2025-01-01)`, OOS `[2025-01-01, 2026-01-01)`; it only illustrates boundaries and does not mean this project already has FxPro data for these years. Do not include all of 2025 in both periods.
 
-## 29.5 Recovery Factor project target
+Select and freeze source code, parameters, thresholds, and costs in TRAIN before opening OOS. Warm-up provides only history known at that time; future prices must not influence signals. Handle orders crossing the boundary consistently on both sides. If parameter selection continues after viewing OOS, that period becomes data already used in research, and a new unused validation period is required. Continue to handle the status of the existing old 2026 OOS according to §7.1. [MT5 Forward mechanism](https://www.metatrader5.com/en/terminal/help/algotrading/strategy_optimization)
 
-Champion target:
+OOS profitability adds supporting evidence; it does not prove stable predictive ability. Samples, drawdown, costs, parameter stability, market states, and portfolio effects still need assessment.
 
-```text
-Recovery Factor > 3.0
-```
+### 11.8 Final Delivery Checklist
 
-If `Recovery Factor <= 3.0`, the Candidate must be explicitly flagged and cannot be treated as a clean promotion without additional risk justification and stronger robustness evidence.
+- [ ] 4 separate result lines; comparisons use the same capital, risk, dates, contracts, costs, warm-up, and execution conditions.
+- [ ] Net USD and Return%, native PF/Gross Profit/Gross Loss, three equity DD fields, with balance DD as supplementary information.
+- [ ] Each line has >100 complete trades in the main period, with 200–500 suggested; list OOS/stress-scenario samples separately, without double counting.
+- [ ] Native Recovery>3; list Equity Recovery separately, specifying denominators and any undefined values.
+- [ ] Expected Payoff after costs, cost in USD/trade, cost-buffer ratio, and estimation uncertainty.
+- [ ] Overall win rate, BUY/SELL, average wins/losses, realized R:R, break-even trades, longest losing streak, and pressure on capital.
+- [ ] Check Equity/Balance against the legend; audit minimum Margin Level, Margin Call/Stop Out, floating losses, and margin.
+- [ ] Real-tick coverage, actual fixed delay, native random delay, and additional slippage stress, with complete results for every scenario.
+- [ ] Untouched, non-overlapping OOS, fixed parameters, and no future-data or result-selection leakage.
+- [ ] After passing tests, the candidate must still beat the same-risk Champion; insufficient samples/missing data receive `RESEARCH FURTHER` with the blocker explained, and failures of hard rules prevent promotion.
 
-Flag:
+This addition updates only the reporting standards and plan. No new backtest was run, and no new PASS or Champion was produced.
 
-```text
-RECOVERY_FACTOR_BELOW_TARGET
-```
+## 12. Research Modules for New Supporting Methods (Integrated into the Legacy-Version Upgrade Route, 2026-09-07)
 
-## 29.6 Expected Payoff after transaction costs
+### 12.1 Research Positioning
 
-Expected Payoff must be materially positive after realistic:
+This section integrates the research ideas from the previous addendum. All proposals are currently hypotheses awaiting validation, not strategies proven to improve win rate, net profit, or trade count. The SOP generates qualified Setups; new methods provide evidence or experimentally validated supporting behavior only at permitted peripheral points.
 
-```text
-Spread
-Commission
-Slippage
-Delay / execution friction
-```
+Retain the legacy version/Champion for history and same-risk comparison; do not copy its supporting logic and present it as new research. Necessary architecture, correctly implemented SOP functions, risk calculations, and server reconciliation may be reused; do not rewrite already-correct shared code merely to pursue something “entirely new.”
 
-For cost-sensitive Scalping, a practical target is:
+Do not permanently prohibit methods such as EMA, Stochastic, MACD, ATR, or VWAP. A new use must specify the research question, where it operates, its difference from old experiments, and falsification conditions. Existing definitions within the SOP must not be removed in the name of “new research,” and peripheral indicators must not be stacked into hard conditions that all have to be satisfied simultaneously. Independent news, silver catch-up, or new directional signals cannot bypass the three SOPs to open trades.
 
-```text
-Edge-to-Cost Ratio >= 3x-5x
-```
+### 12.2 Mapping the Six Methods to the Original Task Queue
 
-as a safety-buffer reference, not a broker-independent mathematical constant.
+The NR numbers below are research topics in this plan only, not registered Candidate versions. Before implementation, read the registry and allocate separate IDs within the existing S-/I-/W-/C-ID scheme.
 
-If the edge disappears after realistic costs:
+| Research Topic | Integration into Original Tasks | Main Applicable Engine | What to Record Only in the First Round | ACTIVE Boundaries and Questions Awaiting Validation |
+|---|---|---|---|---|
+| NR01 Quality of the path into the zone | P3; integrate Scalping after the P1/P2 audit | Intraday, Scalping | Speed of the move before reaching the zone, acceleration/deceleration, directional efficiency, and extent of retracement | Do not change zone or first-touch definitions; test supporting quality selection at authorized extension points, checking whether reduced losses come at the cost of missing too many winners |
+| NR02 Market-regime stratification | P3; entry point for later Swing research | Intraday first | Labels for smooth directional movement, back-and-forth ranging, a single shock, and expansion after compression | Do not change SOP direction or add cross-timeframe confluence requirements; study differences in conditions for the same SOP without assuming a particular regime must lose |
+| NR03 Internal quality of the reversal bar | P5, combined with the original trigger timeline from P2 | Scalping | Directional movement, movement retained at the close, and repeated retracement within the original qualified reversal bar | Do not add a required pattern or wait for an extra bar; study only quality differences known at the original confirmation time |
+| NR04 Relative scale within comparable conditions | P5, after freezing the NR01/NR02/NR03 definitions | Scalping, Intraday | Percentiles or robust standardized values of supporting features relative to comparable past periods | Compare against a fixed-scale version; do not change SOP zone width, SL/TP, or core thresholds, and do not enable alongside multiple new modules |
+| NR05 Execution and missed-trade audit | P0/P2/P6, throughout all experiments | All three engines | Timeline of original qualification, gates, risk reservation, order submission, responses, and execution | First substantiate issues such as software delays, erroneous locks, or duplicate states, then fix them independently; do not remove necessary risk and execution protections |
+| NR06 Profit giveback protection | P4, first inspect the Swing signal funnel | Swing; register a separate candidate for Intraday | Actual MFE/MAE, original exits, profit retention, and holding time | At permitted management extension points, test either structure-based protection or floating-profit-condition protection; initial SOP/risk remain unchanged; not applicable to Scalping |
 
-```text
-EXPECTED_PAYOFF_TOO_SMALL
-EDGE_COST_BUFFER_WEAK
-SPREAD_COST_EDGE_TOO_SMALL
-```
+### 12.3 Method Definitions and Prohibition of Look-Ahead
 
-and the Candidate cannot be promoted.
+**NR01: First study how price reaches the zone, rather than selecting direction again.** Fix the observation window, sampling frequency, and quotes used before the experiment. Separately record net movement, cumulative absolute movement, changes in movement speed, and reverse retracement before the decision. The full path after reaching the zone must not be backfilled into “pre-zone quality”; multiple Ticks within the same First Touch episode update evidence only and must not repeatedly create new Setups. Directional efficiency `abs(p_end-p_start)/sum(abs(delta_p))` may be used as a candidate expression; if the denominator is 0, mark missing or no movement rather than assigning a high score. First separately calculate net results for “accelerating into the zone” and “decelerating into the zone,” without presuming the latter is a good opportunity.
 
-## 29.7 Balance / Equity and margin-call integrity
+**NR02: Market regimes are explanatory labels, not an additional long/short engine.** Research may examine path efficiency, the frequency of effective direction changes, the largest single move as a proportion of total movement, and relative volatility. Fix the handling of zero changes, window length, and regime boundaries; retain `REGIME_UNCERTAIN` when regimes overlap or cannot be determined. First inspect the complete samples for the same SOP in each regime, then select a limited number of supporting candidates in the training period. Do not remove unfavorable months or directions after viewing the validation period.
 
-Formal review must inspect Balance and Equity together.
+**NR03: Data ends at the original SOP confirmation time.** Register the OHLC version and real-tick-path version separately; do not call an internal path inferred only from OHLC real-tick evidence. For the Tick version, specify which Bid/Ask series or predefined quote midpoint is used and retain availability checks. The count of upward quotes is not aggressive buying, and the count of downward quotes is not actual seller-initiated trading volume; do not label proxy features as proven order-flow absorption. If the historical path is incomplete, record `DATA_NOT_READY` rather than synthesizing a “momentum exhaustion” conclusion.
 
-If Balance remains smooth while Equity forms deep drops or persistent separation, investigate:
+**NR04: Relative scale replaces only the representation of supporting features.** Fix historical comparison windows, server-time-zone and daylight-saving mappings, warm-up, and minimum sample size; rolling statistics use only information preceding that time. If the baseline is insufficient, the scale denominator is 0, or market conditions fall outside coverage, record missing data and follow the preregistered handling rule. Do not assign high scores ad hoc or permit trades merely to increase the count. Keep all other parameters and behavior consistent in fixed-scale versus relative-scale comparisons, avoiding mixing new normalization and a new filter into one experiment.
 
-```text
-hidden floating loss
-martingale / grid exposure
-recovery-only exits
-margin stress
-position accumulation
-delayed loss realization
-```
+**NR05: Audit the process chain before deciding what needs to change.** For each independent Setup, record the actual sequence and results of original SOP qualification, optional evidence, Risk, Portfolio, and Execution. Follow the actual code mapping; do not rearrange the architecture for the logs. If order status is unknown after a timeout, first reconcile server state; explicitly handle rejection, partial fill, full fill, and lack of SOP qualification separately. Scalping may fix demonstrable unnecessary software delays, but must not wait for a better price in violation of locked timing; do not force replacement trades for expired/invalid signals. First check definitions and timelines for old labels such as `WRONG_TREND`, `LATE_ENTRY`, and `SL_TOO_TIGHT`; do not directly treat them as causal conclusions or filter conditions.
 
-A strategy must not pass solely because Balance Drawdown looks low.
+**NR06: Experiment with protection rules separately, without assuming “earlier break-even is better.”** First audit why signals are scarce, risk constraints, and original position management, then separately register “protection after structural improvement” and “protection after reaching a floating-profit condition.” Do not add trailing, partial exits, and time exits all together on the first attempt. Freeze the initial R definition; SL may only tighten, and partial-closing volume must satisfy minimum lot size and volume step. Reaching a floating-profit threshold does not mean execution is possible at that price; record actual triggers, requests, executions, and costs. Separately report reduced profit giveback, large winners cut short, average net R, and maximum equity drawdown. A time-decay exit may become a candidate only when management permissions explicitly allow it; otherwise list it as an SOP change proposal and do not enable it automatically.
 
-## 29.8 Real Tick is mandatory final evidence
+Register `available_at` for every feature and verify that it is no later than the corresponding decision time. Retrospective fields such as MAE/MFE and the original trade's final result may be used only for audits and training labels, not as inputs available at the time. Data outside the current training set must not influence window, threshold, or model selection. General formulas and rule-based scores do not equal actual win rates or success probabilities.
 
-Formal Champion evidence must use:
+### 12.4 Module Modes and Gradual Activation
 
-```text
-Every tick based on real ticks
-```
+| Mode | What Is Allowed | What Is Not Allowed |
+|---|---|---|
+| OFF | Maintain the original control behavior corresponding to the experiment | No hidden score gates or residual state effects |
+| OBSERVE | Calculate, display, and write separate logs; record missing data | Do not change original SOP qualification, direction, trigger time, lot size, SL/TP, exits, or Zone consumption |
+| ACTIVE | Execute only supporting behavior explicitly permitted by the candidate registry card | Do not bypass the SOP, safety gates, or currently frozen risk profile; R13 is the default, higher-risk research requires separate registration, and behavior changes must not be disguised as observation |
 
-A lower-fidelity mode such as 1-minute OHLC may be used only for explicitly labeled diagnostics and never as the sole promotion proof.
+Under the same test conditions, first perform paired OFF/OBSERVE checks of original qualification, Setup count, planned entries, orders, executions, and exits. If observation mode causes differences, first fix them or fully identify their cause; do not enter ACTIVE with unknown side effects.
 
-## 29.9 Delay / Slippage stress is mandatory for execution-sensitive strategies
+Enable only one main variable in the first ACTIVE test. Register filtering, risk reduction, exit changes, and valid execution paths separately. Each engine must have independent switches and parameters; a successful Intraday test does not automatically enable the feature for Scalping/Swing. Retain every original qualified Setup affected by filtering in the opportunity audit table; do not hide low trade counts by changing log definitions.
 
-A final Candidate must not rely only on `No Delay` evidence.
+### 12.5 Actual Execution Sequence Within the Old Plan
 
-Use broker-realistic random delay/slippage where available. Reference stress points may include:
+1. **P0 first:** Check the current workspace, SOP_LOCK, parameter version, historical evidence, and data-use status. First check R13, then, under P0-R, register R24/R36 and split controls for USD500 feasibility and budget experiments. A constrained profile does not have to be tuned to PASS first. Document H0/B0/K0 provenance relationships, each profile's reference, and the scope of old-module cleanup before proceeding; do not blindly disable all indicators.
+2. **Retain the original P1/P2 priority:** Reproduce and fix selection of the nearest valid zone, occupancy by old zones, and First Touch state according to the original plan; NR05 collects process-chain evidence in parallel. Freeze a traceable reference after fixing each issue; do not mix several changes into the first candidate.
+3. **Add read-only evidence:** Integrate NR01/NR02 into Intraday observation and NR03 into Scalping observation; add NR04 to observation after the underlying features are clearly defined. Observation modules may record in the same batch, but must pass regression checks confirming no behavior change; this does not mean enabling multiple controllers at once.
+4. **Activate candidates separately:** Based on verifiable differences in the training period, prioritize testing one permitted supporting use of NR01 or NR02; separately test NR03 for Scalping without changing original confirmation/immediate execution. Retain OFF and OBSERVE controls for each candidate; do not add ad hoc thresholds to “rescue results.”
+5. **Independent position-management research:** For Swing, first establish valid Setups, risk blocks, and sample size, then research NR06; register Intraday management independently under P4. Scalping does not enter break-even/trailing/partial-exit/runner research.
+6. **Combination and promotion:** Register a small number of two-module combinations only after individual modules have supporting evidence; then rerun S-only, I-only, W-only, and actual Combined. Apply §7 and §11 throughout; do not use a combination to conceal a failing individual line.
 
-```text
-10 ms
-25 ms
-50 ms
-```
+The first batch of the plan specifies only research topics and sequence, without prefilling optimal parameters, expected win rates, or daily order counts. When samples are low, capital is constrained, or data is blocked, retain the reason and continue feasible work; do not lower thresholds or claim the module has already proved effective.
 
-or a documented broker-realistic range.
+### 12.6 Registry Card for Each Candidate
 
-Required comparison:
+The following describes required fields, not completed experimental results. Fill formal values using the source code, configuration, environment, and artifacts from execution.
 
-```text
-Baseline Real Tick
-vs
-Delay / Slippage Stress
-```
+| Field | Required Content |
+|---|---|
+| Identity | `experiment_id`, actual Candidate ID, `reference_id`, engine, branch/commit, source-code and SET/INI hashes |
+| Origin | `idea_origin`, new hypothesis for an old method or external source; list paths and license checks when reusing code |
+| Problem and falsification | Actual cases, the hypothesis to validate, and results that would refute it; do not replace advance judgment with retrospective explanations |
+| Permitted changes | Read/write interfaces, locked SOP, module mode, behavior changes, and itemized evidence for `sop_changed=false`; do not falsely enter false when genuine conflicts exist |
+| Feature timing | Window, time units, quote source, `available_at`, missing-data/zero-denominator handling, and training/update rules |
+| Experiment budget | Main variable, parameter ranges, maximum number of combinations, development/validation periods, and prior data-use status |
+| Comparison basis | FxPro, USD500, risk engine, risk_profile_id, per-trade/portfolio caps, RG/SZ and target-volume rules, contract, warm-up, costs, execution delay, switches, and complete-trade/Setup aggregation |
+| Acceptance and rollback | Engineering consistency, differences in signals/returns/costs, §11 hard gates, and out-of-sample/stress requirements; do not relax them after freezing based on observed results |
+| Result evidence | Actual compilation logs, native MT5 reports, complete execution and signal CSVs, boundaries of counterfactual estimates, Chinese report, and original Final Verdict enum |
 
-If Net, PF, Expected Payoff, or execution reliability collapses materially, flag:
+Report “how many losing opportunities were avoided and how many winning opportunities were missed,” rather than only the win rate of filtered orders. If a new method improves PF but has insufficient trade samples, nonpositive net profit, or risk above limits, research improvement cannot substitute for promotion. An observation module without behavior changes has no profit-improvement result of its own.
 
-```text
-NO_DELAY_ONLY_EVIDENCE
-DELAY_SLIPPAGE_FRAGILE
-```
+### 12.7 Applicability Differences from the Previous Addendum
 
-## 29.10 Untouched OOS rule
+The differences below are explicitly registered to prevent an executor from reading both files and mixing their rules. Original constraints remain in areas where the main plan does not authorize changes; the latest “SOP unchanged” requirement tightens old candidate suggestions involving core changes.
 
-Example:
+| Addendum or Old Proposal | Treatment in This Integrated Version | Reason/Applicable Section |
+|---|---|---|
+| B0=legacy version, B1=pure SOP | Retain H0=historical and B0=same-risk from the original plan; add K0=supporting-module cleanup | Avoid changing the meaning of identically named baselines; §3.1 |
+| Start with both FxPro and Tradona | Continue to start with FxPro only, without expanding the task to dual-broker validation | Scope in the uploaded main plan §2/§2.1 takes priority; historical Tradona information remains only an original record |
+| Directly adopt SL50/TP50 and SL120/TP240 as current fixed values | Retain both the original SOP and historical differences of SC-S20 80/70 and IN-I32 120/70; do not change parameters automatically | §4 requires checking actual SET files and units; new methods must not use this as an opportunity to change SL/TP |
+| All research uses a fixed 0.01 lot | RG may use the same minimum valid lot size, still subject to that profile's risk/margin gates; SZ is a separate group, and virtual-R research is separately labeled counterfactual | §3 capital feasibility; do not fabricate executions or confuse volume increases |
+| 1%/3% is the only risk allowed for experiments | The user has now added R24=2%/4%, R36=3%/6%, and split controls; R13 remains the default | §3.2–§3.7; offline research only, with no ad hoc profile switching, expanded SOP permissions, or automatic changes to formal configurations |
+| v3.20 issues determine all current priorities | Do not assume the current version is still v3.20; retain this plan's P0→P1/P2 main sequence and advance new modules according to current evidence | The main file already contains V4.00 audit records; historical clues do not replace current verification |
+| Unconditional confirmation waits, pullback routing, and early exits | Reclassify core-timing conflicts as SOP_CHANGE_PROPOSAL; register ACTIVE candidates only for permitted peripheral behavior | Latest SOP lock; §2.2/§4/§12.4 |
+| New final verdicts such as KEEP_RESEARCH / MORE_TESTING | Do not replace the original Final Verdict enum; use only as research tags or explanations | Retain the §7.2 and §11 gates as written |
+| Treat a legacy version or a file named Champion as qualified | Retain historical identity, with current applicability status REVALIDATION_REQUIRED; baselines lacking evidence await validation | §2; do not promote based on a name or rewrite old history |
+| Time exits as default profit protection | Research only where the engine's management permissions allow; otherwise list as a suggestion only | Do not automatically add arbitrary exit rules to Intraday/Swing; Scalping is explicitly excluded |
 
-```text
-2020-2025 = Train / development
-2025-2026 = untouched OOS validation
-```
+### 12.8 Summary and Sources of This File Revision
 
-The dates are illustrative; actual periods must be explicitly recorded.
+**Added and synchronized:** The selected legacy-version upgrade route, SOP lock/extension permissions, K0 supporting-module cleanup control, NR01–NR06 research topics, module modes, counterfactual and full-account comparisons, and candidate registry card; this round additionally includes R13/R24/R36 risk profiles, split controls, minimum-lot feasibility, RG/SZ groups, risk formulas for each profile, losing-streak stress, research permissions, and synchronized first-round Codex instructions.
 
-Once OOS results have been viewed, any retuning creates a new experiment. The previously viewed segment is no longer untouched OOS for that revised Candidate.
+**Retained:** The original P0–P6 main queue (with separate P0-R added), historical SC-S20/IN-I32/SW-W37/C-C01 identities, differences between actual SET and SOP parameters, FxPro scope, USD500, the R13 default of per-trade≤1%/portfolio≤3%, independent OR logic for the three strategies, fixed Scalping SL/TP and prohibited position-management functions, real-tick/OOS/stress discipline, and the full §11 reporting gates. In §11, only the profile-specific risk basis in the consecutive-loss clause has been synchronized; the remaining text is retained.
 
-## 29.11 Mandatory final Champion gate matrix
+**Not executed:** GitHub writes, a fresh audit of current source code, EA changes, Candidate registration, MetaEditor compilation, MT5 backtests, OOS, or any Champion promotion. Pending tasks in this file are a plan for Windows Codex to execute, not work completed in this round.
 
-A Candidate may enter final promotion review only if all mandatory items below are satisfied:
+Direct file sources for this merge:
 
-```text
-[ ] Compile correctness confirmed
-[ ] Reject / critical execution errors = 0
-[ ] No future data / look-ahead
-[ ] No hidden Risk / Lot increase
-[ ] Risk-normalized comparison completed
-[ ] Every tick based on real ticks used
-[ ] Max Equity DD <= 30%
-[ ] Balance-vs-Equity integrity checked
-[ ] Expected Payoff / Expectancy positive after realistic costs
-[ ] Trade sample adequate for strategy type or explicitly compensated by longer/regime evidence
-[ ] OOS untouched and non-collapsing
-[ ] FxPro + Tradona cross-broker evidence completed
-[ ] Delay / Slippage robustness checked where execution-sensitive
-[ ] BUY / SELL asymmetry audited
-[ ] Consecutive-loss stress completed
-[ ] Portfolio audit completed for Combined
-```
+- `EA_RESEARCH_DEVELOPMENT_PLAN_2026-09-07_CN_MERGED.md`: the direct editing base for this round; retains the complete legacy-version upgrade and new-method research content.
+- `EA_RESEARCH_DEVELOPMENT_PLAN_2026-09-06_CN(1).md`: the original main file, providing the existing architecture, scope, original risk, parameter differences, queue, and acceptance rules. Risk-experiment permissions are explicitly updated according to the user's new requirements in this round.
+- `GSM_Upgrade_Research_Addendum_CN.md`: source of the new supporting-research requirements; conflicts with the main file are explicitly handled in §12.7 rather than applied as a blanket overwrite.
+- The user's explicit request: add the new research requirements to the selected legacy-version upgrade plan, keep the SOP unchanged, and allow suggestions, candidate modifications, and testing. This round further requests adding the previously discussed 1%/3% control and 2%/4% and 3%/6% risk research, then delivering the complete MD again. The risk profiles and mathematical examples are new content in this plan, not retroactively written as old-repository or historical-test conclusions.
 
-Passing this matrix does **not** automatically create a Champion. It only makes the Candidate eligible for the existing final comparison:
+Official-documentation links and project-file indexes from the original plan are retained as original references. No additional external fact verification was performed this round, and repository files, teaching materials, or old reports not included in this upload are not described as having been reread.
 
-```text
-Candidate VS Current Champion
-↓
-Net Profit USD
-↓
-Max Equity Drawdown
-↓
-Profit Factor
-↓
-Trade Count
-↓
-Win Rate
-↓
-Only if clearly better and robust → NEW CHAMPION
-```
+**Final execution principle: Continue upgrading within the old project; keep the SOP core unchanged while allowing supporting methods to be redesigned. R13 remains the default, and R24/R36 are for separate risk research only. First reproduce the problem and register the hypothesis, then modify the candidate. Judge method improvement against controls with the same profile and volume rules; judge whether risk is worthwhile by executable opportunities and the drawdown cost. Do not present larger positions as a strategy edge or automatically enable live trading based on a backtest.**
