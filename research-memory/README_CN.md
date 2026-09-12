@@ -20,5 +20,5 @@
 | GSM 原始规则 | [SOP 目录](../gsm-sop/README.md) |
 | 外部研究知识 | [现有外部资料索引](../GITHUB_RESEARCH_LIBRARY_INDEX.md) |
 | 优先参考来源 | [来源约束](../GITHUB_PRIORITY_SOURCES.md) |
-| 当前 EA 研发计划 | [中文版](../FINAL_CHAMPION_ITERATION_SYSTEM_CN.md) · [English](../FINAL_CHAMPION_ITERATION_SYSTEM.md)；2026-09-12 完整替换旧总计划 |
+| 当前 EA 研发计划 | [中文版](../FINAL_CHAMPION_ITERATION_SYSTEM_CN.md) · [English](../FINAL_CHAMPION_ITERATION_SYSTEM.md)；2026-09-12替换旧计划，更新SOP归属并新增§13动态风险与市场信息系统 |
 | 历史交付 | [安装与身份记录](../champion/current/INSTALL_MT5_CN.md) |
