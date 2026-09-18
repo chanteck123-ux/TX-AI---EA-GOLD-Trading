@@ -4,6 +4,8 @@
 
 更新：2026-09-10 UTC。Codex 依据用户授权自主管理这个资料入口。
 
+追加更新（2026-09-19）：LEAN 首批 4 个原始 C# 源码文件与许可证已实际保存到本仓库独立参考目录；下方新增源码入口。仅资料入库，未启动编译、回测或部署。
+
 | 入口 | 内容 |
 | --- | --- |
 | [研发头脑 v1.1](../docs/GSM_EA_RESEARCH_BRAIN_CN.md) | 学习、编码、验证、GitHub 自主管理规则。 |
@@ -19,7 +21,8 @@
 | --- | --- |
 | GSM 原始规则 | [SOP 目录](../gsm-sop/README.md) |
 | 外部研究知识 | [现有外部资料索引](../GITHUB_RESEARCH_LIBRARY_INDEX.md) |
-| LEAN 首批源码学习（2026-09-18） | [中文研究与双 AI 复用说明](../docs/LEAN_GOLD_EA_REFERENCE_CN_20260918.md)：固定上游提交、4 个源码副本的路径与校验、许可及移植边界；源码副本在本次交付 ZIP，未接入 EA、编译、回测或部署。 |
+| LEAN 原始源码已入库（2026-09-19） | [源码目录与中文入口](../research-library/QuantConnect-LEAN/README_CN.md) · [来源与校验清单](../research-library/QuantConnect-LEAN/SOURCE_MANIFEST.json)：4 个完整原始 C# 文件和原始许可证，固定提交，上传后 blob 核对一致；不是整库、未接入 EA。 |
+| LEAN 首批源码学习（2026-09-18） | [中文研究与双 AI 复用说明](../docs/LEAN_GOLD_EA_REFERENCE_CN_20260918.md)：首批交付时源码位于 ZIP，现已按 2026-09-19 追加要求保存到上方仓库目录；许可与移植边界仍适用，未编译、回测或部署。 |
 | 优先参考来源 | [来源约束](../GITHUB_PRIORITY_SOURCES.md) |
 | 当前 EA 研发计划 | [中文版](../FINAL_CHAMPION_ITERATION_SYSTEM_CN.md) · [English](../FINAL_CHAMPION_ITERATION_SYSTEM.md)；2026-09-12替换旧计划，更新SOP归属并新增§13动态风险与市场信息系统 |
 | 历史交付 | [安装与身份记录](../champion/current/INSTALL_MT5_CN.md) |
