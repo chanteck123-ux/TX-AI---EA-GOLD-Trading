@@ -1,0 +1,96 @@
+{
+  "schema_version": 2,
+  "project": "LEAN Gold EA reference, not an executable EA",
+  "review_date": "2026-09-18",
+  "repository": "QuantConnect/Lean",
+  "commit": "985ef30ad3ac774218c5ac516b4cb0aa2655730f",
+  "upstream_license": "Apache-2.0",
+  "scope": "4 complete, unmodified C# files and 1 unmodified LICENSE; not the full LEAN repository",
+  "review_status": "FIRST_BATCH_REVIEWED",
+  "source_integrity": "VERIFIED_UPSTREAM_AND_DESTINATION_GIT_BLOB_SHA1_WITH_LOCAL_SHA256",
+  "mql5_port": "NOT_IMPLEMENTED",
+  "compilation": "NOT_RUN",
+  "upstream_tests": "NOT_RUN",
+  "mt5_backtests": "NOT_RUN",
+  "deployment": "NOT_PERFORMED",
+  "files": [
+    {
+      "path": "Algorithm.Framework/Risk/TrailingStopRiskManagementModel.cs",
+      "git_blob_sha1": "abb6156048789046e1c7747690b86c90f533ec09",
+      "sha256": "c27a91e290fe49533dc9b3df33744d1aa1106affeec506266cc85c841e28db52",
+      "bytes": 5043,
+      "modified": false,
+      "verification": "upstream blob == locally computed blob == destination blob; byte size matched",
+      "local_path": "upstream_reference/Algorithm.Framework/Risk/TrailingStopRiskManagementModel.cs",
+      "source_url": "https://github.com/QuantConnect/Lean/blob/985ef30ad3ac774218c5ac516b4cb0aa2655730f/Algorithm.Framework/Risk/TrailingStopRiskManagementModel.cs",
+      "destination_path": "research-library/QuantConnect-LEAN/upstream_reference/Algorithm.Framework/Risk/TrailingStopRiskManagementModel.cs",
+      "destination_git_blob_sha1": "abb6156048789046e1c7747690b86c90f533ec09"
+    },
+    {
+      "path": "Algorithm.Framework/Risk/MaximumDrawdownPercentPortfolio.cs",
+      "git_blob_sha1": "dcd658844d7087d240debb1508752c025a597428",
+      "sha256": "db3ec2657d881394abc0b50fa41a27b0e7b72edfa66dd3d9bfff1fc76c268a9c",
+      "bytes": 3879,
+      "modified": false,
+      "verification": "upstream blob == locally computed blob == destination blob; byte size matched",
+      "local_path": "upstream_reference/Algorithm.Framework/Risk/MaximumDrawdownPercentPortfolio.cs",
+      "source_url": "https://github.com/QuantConnect/Lean/blob/985ef30ad3ac774218c5ac516b4cb0aa2655730f/Algorithm.Framework/Risk/MaximumDrawdownPercentPortfolio.cs",
+      "destination_path": "research-library/QuantConnect-LEAN/upstream_reference/Algorithm.Framework/Risk/MaximumDrawdownPercentPortfolio.cs",
+      "destination_git_blob_sha1": "dcd658844d7087d240debb1508752c025a597428"
+    },
+    {
+      "path": "Algorithm/Alphas/CompositeAlphaModel.cs",
+      "git_blob_sha1": "068b6d2b5503554ad8c1386cbd76c7aa015feb47",
+      "sha256": "1acd2264dfd9710a33e8fdb191f896e84329dd1c88ba81d8f6c775686c73b524",
+      "bytes": 4992,
+      "modified": false,
+      "verification": "upstream blob == locally computed blob == destination blob; byte size matched",
+      "local_path": "upstream_reference/Algorithm/Alphas/CompositeAlphaModel.cs",
+      "source_url": "https://github.com/QuantConnect/Lean/blob/985ef30ad3ac774218c5ac516b4cb0aa2655730f/Algorithm/Alphas/CompositeAlphaModel.cs",
+      "destination_path": "research-library/QuantConnect-LEAN/upstream_reference/Algorithm/Alphas/CompositeAlphaModel.cs",
+      "destination_git_blob_sha1": "068b6d2b5503554ad8c1386cbd76c7aa015feb47"
+    },
+    {
+      "path": "Algorithm.Framework/Execution/SpreadExecutionModel.cs",
+      "git_blob_sha1": "0d30fb89053e2ac47831afaf60d917ebe62a0d30",
+      "sha256": "1d67da39182ee135bfda0459c22a88147f9988fef432fe9d11f5753a0d383b43",
+      "bytes": 4607,
+      "modified": false,
+      "verification": "upstream blob == locally computed blob == destination blob; byte size matched",
+      "local_path": "upstream_reference/Algorithm.Framework/Execution/SpreadExecutionModel.cs",
+      "source_url": "https://github.com/QuantConnect/Lean/blob/985ef30ad3ac774218c5ac516b4cb0aa2655730f/Algorithm.Framework/Execution/SpreadExecutionModel.cs",
+      "destination_path": "research-library/QuantConnect-LEAN/upstream_reference/Algorithm.Framework/Execution/SpreadExecutionModel.cs",
+      "destination_git_blob_sha1": "0d30fb89053e2ac47831afaf60d917ebe62a0d30"
+    },
+    {
+      "path": "LICENSE",
+      "local_path": "LICENSE_LEAN.txt",
+      "git_blob_sha1": "6faed93d21a1a9551b11434e87c9000a393d73f2",
+      "sha256": "522cf0a716ce03f67d46f8fceb5bf78c5b84400ec5cd8d14bf9f02cddc1cb6ba",
+      "bytes": 10737,
+      "modified": false,
+      "verification": "upstream blob == locally computed blob == destination blob; byte size matched",
+      "source_url": "https://github.com/QuantConnect/Lean/blob/985ef30ad3ac774218c5ac516b4cb0aa2655730f/LICENSE",
+      "destination_path": "research-library/QuantConnect-LEAN/LICENSE_LEAN.txt",
+      "destination_git_blob_sha1": "6faed93d21a1a9551b11434e87c9000a393d73f2"
+    }
+  ],
+  "additional_read_only_review": [
+    {
+      "path": "readme.md",
+      "range": "whole file"
+    },
+    {
+      "path": "Tests/Algorithm/Framework/Risk/TrailingStopRiskManagementModelTests.cs",
+      "range": "1-220 only",
+      "full_audit": false
+    }
+  ],
+  "import_date": "2026-09-19",
+  "import_timezone": "Asia/Kuala_Lumpur",
+  "destination_repository": "chanteck123-ux/TX-AI---EA-GOLD-Trading",
+  "destination_branch": "main",
+  "destination_root": "research-library/QuantConnect-LEAN",
+  "verification_commit": "52954d2d0952b804fc849002d2967d75b6f9c902",
+  "verification_method": "Re-read upstream file blob IDs at the pinned commit; compute local ZIP byte hashes; compare destination Git tree blob IDs and byte sizes after upload."
+}
