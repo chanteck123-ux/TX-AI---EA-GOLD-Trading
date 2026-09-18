@@ -13,12 +13,13 @@
 | [机器可读目录](REPOSITORY_MANIFEST.json) | 724 条分支文件记录、blob、大小及覆盖范围。 |
 | [决定记录](DECISIONS_CN.md) | 用户授权与本次整理决定。 |
 
-这些数量对应盘点时的分支快照；本次新增维护文件另列在清单中。所有分支目录均未截断。后续任务按提交变化增量更新，并阅读真正相关的源码和证据。
+这些数量对应盘点时的分支快照；本次新增维护文件另列在清单中。后续任务按提交变化增量更新，并阅读真正相关的源码和证据。
 
 | 常用资料 | 入口 |
 | --- | --- |
 | GSM 原始规则 | [SOP 目录](../gsm-sop/README.md) |
 | 外部研究知识 | [现有外部资料索引](../GITHUB_RESEARCH_LIBRARY_INDEX.md) |
+| LEAN 首批源码学习（2026-09-18） | [中文研究与双 AI 复用说明](../docs/LEAN_GOLD_EA_REFERENCE_CN_20260918.md)：固定上游提交、4 个源码副本的路径与校验、许可及移植边界；源码副本在本次交付 ZIP，未接入 EA、编译、回测或部署。 |
 | 优先参考来源 | [来源约束](../GITHUB_PRIORITY_SOURCES.md) |
 | 当前 EA 研发计划 | [中文版](../FINAL_CHAMPION_ITERATION_SYSTEM_CN.md) · [English](../FINAL_CHAMPION_ITERATION_SYSTEM.md)；2026-09-12替换旧计划，更新SOP归属并新增§13动态风险与市场信息系统 |
 | 历史交付 | [安装与身份记录](../champion/current/INSTALL_MT5_CN.md) |
