@@ -1,0 +1,36 @@
+{
+    "announcements": [
+        {
+            "date": "2022-08-26",
+            "message": "We've added support for python 3.10 and deprecated python version 3.6."
+        },
+        {
+            "date": "2022-05-23",
+            "message": "We've added new json based approach of adding new modules to reduce the overhead and duplications."
+        },
+        {
+            "date": "2022-02-02",
+            "message": "We've added cloud live support for Samco and Zerodha brokerages for India Market"
+        },
+        {
+            "date": "2022-01-26",
+            "message": "We've added support for Samco brokerage for India Market and FTX.US Exchange"
+        },
+        {
+            "date": "2021-11-17",
+            "message": "We've added support for Kraken and FTX brokerages"
+        },
+        {
+            "date": "2021-06-21",
+            "message": "We've just released a new opening video of the CLI:\nhttps://youtube.com/watch?v=QJibe1XpP-U"
+        },
+        {
+            "date": "2021-06-21",
+            "message": "Building an Algo on Privacy Keywords using TiingoNews:\nhttps://quantconnect.com/blog/building-an-algo-on-privacy-keywords-using-tiingonews/"
+        },
+        {
+            "date": "2021-06-11",
+            "message": "Check out our mini video series on how to use the CLI:\nhttps://youtube.com/playlist?list=PLD7-B3LE6mz61Hojce6gKshv5-7Qo4y0r"
+        }
+    ]
+}

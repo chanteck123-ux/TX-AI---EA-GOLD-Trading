@@ -1,0 +1,3617 @@
+[
+  {
+    "path": ".gitignore",
+    "size": 30,
+    "sha256": "9d8415ac56da3e1cc0a53119bc81cea77428eb08f67744281acddd9164d67601"
+  },
+  {
+    "path": "00 Home/01 Home/01 Home.html",
+    "size": 2841,
+    "sha256": "94ea36b9c0d6a606844a2f688ec7f7e2034fcd9df1c6a8fb63d11320ff69bacd"
+  },
+  {
+    "path": "01 API Tutorials/00 Introduction/00 Introduction.html",
+    "size": 1969,
+    "sha256": "e9b9909ea069b5491a8c2adfe94377b90453fa8253f2ca18ea692d7e26094e3a"
+  },
+  {
+    "path": "01 API Tutorials/01 Consolidating Data to Build Bars/01 Consolidating Data to Build Bars.html",
+    "size": 4222,
+    "sha256": "ba4edd399e628ea242831004db3b2ce9a137fb56515a22df877a5e585ca1e633"
+  },
+  {
+    "path": "01 API Tutorials/02 Scheduled Events/02 Scheduled Events.html",
+    "size": 2513,
+    "sha256": "1ef8385ee0af6bf545c19ec1c6a680ee87d75b16c83e720b273bd8803e973eff"
+  },
+  {
+    "path": "01 API Tutorials/03 Tracking and Managing Orders/01 Overview.html",
+    "size": 2057,
+    "sha256": "ab2cbbe91c610b6ef6c16af405f04e363253c986a4507c1a12c6a6ecae36f1bd"
+  },
+  {
+    "path": "01 API Tutorials/03 Tracking and Managing Orders/02 Updating Orders.html",
+    "size": 1352,
+    "sha256": "34d640e14e13147adea3dbc6066fcafb2b85eb137108085692c09e3d6262ea11"
+  },
+  {
+    "path": "01 API Tutorials/03 Tracking and Managing Orders/03 Full Python Example.html",
+    "size": 2574,
+    "sha256": "fd7b9071a075afbf34e649dbcc1bef8cc36435c019116bd58df57e1a29f09127"
+  },
+  {
+    "path": "01 API Tutorials/04 Using Options in QuantConnect/01 Introduction.html",
+    "size": 298,
+    "sha256": "8119cdf881e59051d8ad5f88e044a59acf69c087cc46824ad9dcf5af690b24e5"
+  },
+  {
+    "path": "01 API Tutorials/04 Using Options in QuantConnect/02 Add Options.html",
+    "size": 1554,
+    "sha256": "183aa6ce97e1b30d62d5c7b46ebc9a943076f8facae0b75cf84c4e49d07f405f"
+  },
+  {
+    "path": "01 API Tutorials/04 Using Options in QuantConnect/03 Filter Contracts.html",
+    "size": 3406,
+    "sha256": "291dfd4bdb4d90dd9d8af5b8a5696f029a23f0acfe0e86a68e3c18f52d777a47"
+  },
+  {
+    "path": "01 API Tutorials/04 Using Options in QuantConnect/04 Select Contracts.html",
+    "size": 5868,
+    "sha256": "bff819311698ea74c70416fd9f3cc391f985f05c69cf24d907bf2b20807f4012"
+  },
+  {
+    "path": "01 API Tutorials/04 Using Options in QuantConnect/05 Algorithm.html",
+    "size": 713,
+    "sha256": "24bd12339c028daa9d738d0ad9b02cd6d8dd31bd1f710ce668e8e163c79c5793"
+  },
+  {
+    "path": "01 API Tutorials/04 Using Options in QuantConnect/06 Summary.html",
+    "size": 388,
+    "sha256": "f9ef76d19ee9d63017036dbd05be4479ec0a9c16fec702d59f563afb2d69be8e"
+  },
+  {
+    "path": "02 Tutorial Series/00 Introduction/Introduction.html",
+    "size": 1683,
+    "sha256": "0ede4845b458a1c63a9072d84b5172106203c5d4507402eb5edba5c4bc3ae278"
+  },
+  {
+    "path": "02 Tutorial Series/01 Introduction to Financial Python/00 About.html",
+    "size": 1123,
+    "sha256": "83538eccadf675903988d99b31043301147ca50a47d9cb9e46fa0eaf39259cc7"
+  },
+  {
+    "path": "02 Tutorial Series/01 Introduction to Financial Python/01 What Will I learn %3F.html",
+    "size": 443,
+    "sha256": "abcf57398f7fffcad6e8fef6cf046df0f342d6519839cbf10afbd506f5eb0330"
+  },
+  {
+    "path": "02 Tutorial Series/01 Introduction to Financial Python/02 Tutorials.html",
+    "size": 4335,
+    "sha256": "435a0c5cf808b53d67484778b494b59936686f88ed843b4808ea385b8771600a"
+  },
+  {
+    "path": "02 Tutorial Series/02 Introduction to Options/00 About.html",
+    "size": 1657,
+    "sha256": "18a0e109e2a02b2e83abb5f3f720539935613a278ad06d50813b088d44658a6e"
+  },
+  {
+    "path": "02 Tutorial Series/02 Introduction to Options/01 What Will I learn %3F.html",
+    "size": 802,
+    "sha256": "5f052279f8e65ae448d22b15225b68e55d2a5287f928f1dfc449b797404fdc29"
+  },
+  {
+    "path": "02 Tutorial Series/02 Introduction to Options/02 Tutorials.html",
+    "size": 3182,
+    "sha256": "40ab3949c46973d5320e36cb2c9ae33a525b8779b0faedcd963ae7a40eb098ab"
+  },
+  {
+    "path": "02 Tutorial Series/03 Applied Options/00 About.html",
+    "size": 1360,
+    "sha256": "948d928772a7e03ac0c8ee5f3ac1831445f85274969b38607eb0d8d58d07cb32"
+  },
+  {
+    "path": "02 Tutorial Series/03 Applied Options/01 What Will I learn %3F.html",
+    "size": 408,
+    "sha256": "c5c4b7d844b90e365fb664ce7942b2bbc16a8c80a5a3e83d443a30db9e0f88b5"
+  },
+  {
+    "path": "02 Tutorial Series/03 Applied Options/02 Tutorials.html",
+    "size": 2993,
+    "sha256": "58193959fb5eae747dd5ea1f38e56a96561c09fbcdbc2858cc317998a099244c"
+  },
+  {
+    "path": "03 Open Source/00 Introduction/Introduction.html",
+    "size": 2356,
+    "sha256": "d5565a5d11372ba7614e66ef839f1615607b04554067d2a7100b917e78a68d5b"
+  },
+  {
+    "path": "03 Open Source/01 Debugging Python/00.html",
+    "size": 113,
+    "sha256": "c2a9c8a095f37009c54704a1267c859e90e5aea3a881421323a0b896568ce14b"
+  },
+  {
+    "path": "03 Open Source/01 Debugging Python/01 Introduction.html",
+    "size": 267,
+    "sha256": "8826025b61d10537fa4bfd9ae868ec7596a332557ccc09861df6e5884027b5a4"
+  },
+  {
+    "path": "03 Open Source/01 Debugging Python/02 Installing LEAN with Python.html",
+    "size": 1297,
+    "sha256": "4393c5c305c14d4520660eb780c09cc6957c6c431e47bb7f2b51705f00487dbd"
+  },
+  {
+    "path": "03 Open Source/01 Debugging Python/03 Method 1 - PTVSD.html",
+    "size": 2679,
+    "sha256": "c883a4d2e5c322892948ab556a3ced1ac9c991d3c9441eaaa4a614ee4f85257c"
+  },
+  {
+    "path": "03 Open Source/01 Debugging Python/04 Method 2 - PDB.html",
+    "size": 899,
+    "sha256": "a8b31c507decdb552280b119bb0c7f10cad78f4598fc235278d568b6409566b6"
+  },
+  {
+    "path": "03 Open Source/01 Debugging Python/05 Method 3 - VisualStudio Debugger.html",
+    "size": 1115,
+    "sha256": "5a92903c7e9ce25fe836aa1665adb1392ee37ccfb20bab924e35acb87fe6421f"
+  },
+  {
+    "path": "03 Open Source/01 Debugging Python/06 Limitations.html",
+    "size": 641,
+    "sha256": "b572ee21135ff756ab68310ad641c63d89a72b7527d9e4a4216c3b3f3b823531"
+  },
+  {
+    "path": "03 Open Source/01 Debugging Python/07 Summary.html",
+    "size": 299,
+    "sha256": "3b2aab71362507395dc1fb69ae66d5559cef7046f305f155506261dd0eea8a60"
+  },
+  {
+    "path": "03 Open Source/03 Using the API File Provider/02 How do I use the API File Provider.html",
+    "size": 2028,
+    "sha256": "a09f3a55cbb9ac60a2c546d4425161f6a7b68983083e804929c915979c33fde9"
+  },
+  {
+    "path": "03 Open Source/04 Lean Report Creator/00.html",
+    "size": 100,
+    "sha256": "1a6d9a849e5710c7b01465a300286f511b4c211caa47748c593104681ba507c0"
+  },
+  {
+    "path": "03 Open Source/04 Lean Report Creator/01 Introduction.html",
+    "size": 1105,
+    "sha256": "860db12cc860d857337d7d0ca509cd8d95e0a95c6c86de1aeae79d0f34cef483"
+  },
+  {
+    "path": "03 Open Source/04 Lean Report Creator/02 Creating a Report.html",
+    "size": 1777,
+    "sha256": "eb341a767d8e780190c549112ee814a88f44251dc7398f725beed2c5231e2a98"
+  },
+  {
+    "path": "03 Open Source/04 Lean Report Creator/03 Source Backtest.html",
+    "size": 1986,
+    "sha256": "48a2509aa668218abed38b40057867bdd8c4fbc220d49e73d839ccfd4a5f0651"
+  },
+  {
+    "path": "03 Open Source/04 Lean Report Creator/04 Customizing Report Contents.html",
+    "size": 1168,
+    "sha256": "4e6bf99df7435151cfc7c2a604305c707809dc2e9706a57f90086558014ef295"
+  },
+  {
+    "path": "03 Open Source/04 Lean Report Creator/05 Interpreting Report Charts.html",
+    "size": 2896,
+    "sha256": "62669ff16503f3afe1d715783853c265ad76958d72550dca264a7fe9b7eb7a5b"
+  },
+  {
+    "path": "03 Open Source/05 Brokerage Development Guide/00.html",
+    "size": 816,
+    "sha256": "9023513ecbcaa067807876f73306359f4d2c32bbb6d1cdca8e0c914bee1f7c7a"
+  },
+  {
+    "path": "03 Open Source/05 Brokerage Development Guide/01 Introduction.html",
+    "size": 863,
+    "sha256": "ce66f378eeb67152a595d43e653a5a686a4c0b22c060ff676a0eb0a4481fe36c"
+  },
+  {
+    "path": "03 Open Source/05 Brokerage Development Guide/02 Guide Contents.html",
+    "size": 2656,
+    "sha256": "5a9607a26bfc6d28336a32ca6893b2fc625d019daf7025107610512fe0415ca0"
+  },
+  {
+    "path": "03 Open Source/05 Brokerage Development Guide/03 Step 1%3A Laying a Foundation.html",
+    "size": 7211,
+    "sha256": "cb5fa8d7c576d5f8c0137f30c606c145f60e24de5b4f7c5d8a52c35d22f03b85"
+  },
+  {
+    "path": "03 Open Source/05 Brokerage Development Guide/04 Step 2%3A Creating the Brokerage.html",
+    "size": 14422,
+    "sha256": "3c12a202f9315ee02c4b9fb07f00e0d5acad3a70be2c5de7c1524aeb7e9a8e0d"
+  },
+  {
+    "path": "03 Open Source/05 Brokerage Development Guide/05 Step 3%3A Translating Symbol Conventions.html",
+    "size": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "path": "03 Open Source/05 Brokerage Development Guide/06 Step 4%3A Describe Brokerage Limitations.html",
+    "size": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "path": "03 Open Source/05 Brokerage Development Guide/07 Step 5%3A Enable Live Data Streaming.html",
+    "size": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "path": "03 Open Source/05 Brokerage Development Guide/08 Step 6%3A Enable Serving Historical Data.html",
+    "size": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "path": "03 Open Source/05 Brokerage Development Guide/09 Step 7%3A Downloading Data.html",
+    "size": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "path": "03 Open Source/05 Brokerage Development Guide/10 Step 8%3A Brokerage Fee Structures.html",
+    "size": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "path": "03 Open Source/05 Brokerage Development Guide/11 Step 9%3A Updating Algorithm API.html",
+    "size": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "path": "03 Open Source/06 Generating Random Backtest Data/00.html",
+    "size": 94,
+    "sha256": "50c168ff71f1e05d1550d0935c41e26891b89976b5d0c06d0d2cd9e0bffce277"
+  },
+  {
+    "path": "03 Open Source/06 Generating Random Backtest Data/01 Introduction.html",
+    "size": 373,
+    "sha256": "a1ea144216518d27c5380fe8579f5147b13875daa6d1a2592c95305441057f43"
+  },
+  {
+    "path": "03 Open Source/06 Generating Random Backtest Data/02 Using the Random Data Generator.html",
+    "size": 1445,
+    "sha256": "2e38e23378e42ec7de3e6b50de187fe09899d8eac358b65ed42d227c5d8f55fd"
+  },
+  {
+    "path": "03 Open Source/06 Generating Random Backtest Data/03 Command Parameters.html",
+    "size": 2161,
+    "sha256": "191f12fd60b26b3301f8cff4927b5f90af447fb130e01a7bd7de83efbf63c23a"
+  },
+  {
+    "path": "03 Open Source/06 Generating Random Backtest Data/04 Supported Assets and Resolutions.html",
+    "size": 1323,
+    "sha256": "a9bf423c7b30822356fdd0a195e7ef668f24220e0d5282552fe9567f2282b3f1"
+  },
+  {
+    "path": "03 Open Source/06 Generating Random Backtest Data/05 Final Notes.html",
+    "size": 500,
+    "sha256": "5b31d2ba61023e8ee4699b267d603978291142be598d42499a966dc1d56bbabf"
+  },
+  {
+    "path": "04 Strategy Library/00 Strategy Library/01 Strategy Library.php",
+    "size": 39712,
+    "sha256": "89d200f766229403795e22ff6e5618d46675c36d911c0497e4b258f1512451ef"
+  },
+  {
+    "path": "04 Strategy Library/01 CAPM Alpha Ranking Strategy on Dow 30 Companies/01 Introduction.html",
+    "size": 1038,
+    "sha256": "17329621bfe3bd354de47dfebddfe0a6f80c065a9dc242ca7b15bdf454f4d510"
+  },
+  {
+    "path": "04 Strategy Library/01 CAPM Alpha Ranking Strategy on Dow 30 Companies/01 简介.cn.html",
+    "size": 883,
+    "sha256": "e6d6bbf84fa3abce19593521bd828efc27abe0ef58799a76c3ce83921dde19d4"
+  },
+  {
+    "path": "04 Strategy Library/01 CAPM Alpha Ranking Strategy on Dow 30 Companies/02 CAPM Theory.html",
+    "size": 1822,
+    "sha256": "4668156c6be190d82905d086f509f359900e2008b0af67539dbf573fd415cdd6"
+  },
+  {
+    "path": "04 Strategy Library/01 CAPM Alpha Ranking Strategy on Dow 30 Companies/02 资本资产定价模型（CAPM）理论.cn.html",
+    "size": 1585,
+    "sha256": "3bf00937765f7602fa390dea7a3c3f7c9e16de68cff69011ad55b1137ab1aeff"
+  },
+  {
+    "path": "04 Strategy Library/01 CAPM Alpha Ranking Strategy on Dow 30 Companies/03 Method.html",
+    "size": 4922,
+    "sha256": "f12b39c05a26815b76d3b58088cc4e199d4e2f207103a3871b01d75df33cd80f"
+  },
+  {
+    "path": "04 Strategy Library/01 CAPM Alpha Ranking Strategy on Dow 30 Companies/03 方法.cn.html",
+    "size": 4394,
+    "sha256": "960478da30269a5536942dbc2ea99aafa0c0e24dbaad27328f812f04d5f00f60"
+  },
+  {
+    "path": "04 Strategy Library/01 CAPM Alpha Ranking Strategy on Dow 30 Companies/04 Summary.html",
+    "size": 1849,
+    "sha256": "625b542c174d7a72c91a9c73b861e752eb15bb34badd4dd659ad21b85cbb90bb"
+  },
+  {
+    "path": "04 Strategy Library/01 CAPM Alpha Ranking Strategy on Dow 30 Companies/04 总结.cn.html",
+    "size": 1625,
+    "sha256": "b0cdb367b090ac74f231c945419689ea07931151b2e0252fbcf66a9f83335043"
+  },
+  {
+    "path": "04 Strategy Library/01 CAPM Alpha Ranking Strategy on Dow 30 Companies/05 Algorithm.html",
+    "size": 571,
+    "sha256": "30d91fff620b541016e1f92caa6c3307df18fccc171b8a255ec774a4b87ab10f"
+  },
+  {
+    "path": "04 Strategy Library/01 CAPM Alpha Ranking Strategy on Dow 30 Companies/05 算法.cn.html",
+    "size": 621,
+    "sha256": "73c668e79055238cdd59fe863ee871a46f2026fb26ab13d96a9e9b88963bab84"
+  },
+  {
+    "path": "04 Strategy Library/01 CAPM Alpha Ranking Strategy on Dow 30 Companies/06 References.html",
+    "size": 399,
+    "sha256": "6efe8a49a53918f1245574539d3c11837dedfa9aafd73799599281f8aa4c6864"
+  },
+  {
+    "path": "04 Strategy Library/01 CAPM Alpha Ranking Strategy on Dow 30 Companies/06 参考文献.cn.html",
+    "size": 399,
+    "sha256": "6efe8a49a53918f1245574539d3c11837dedfa9aafd73799599281f8aa4c6864"
+  },
+  {
+    "path": "04 Strategy Library/02 Combining Mean Reversion and Momentum in Forex Market/01 Abstract.html",
+    "size": 1313,
+    "sha256": "77a0605559774ffae7c7865cc419c75e0a2fc5894c2f44f028a9bc14f4258189"
+  },
+  {
+    "path": "04 Strategy Library/02 Combining Mean Reversion and Momentum in Forex Market/02 Introduction.html",
+    "size": 4569,
+    "sha256": "8d1ca7eef97ce2991049de1aad0215cda0fccaf1b9ccbe9d1924917a561e3d4d"
+  },
+  {
+    "path": "04 Strategy Library/02 Combining Mean Reversion and Momentum in Forex Market/03 Method.html",
+    "size": 8717,
+    "sha256": "84c7140a3521b7920fbe3c1ee5dee9be49002ab9abfb47d53dd021456e360e67"
+  },
+  {
+    "path": "04 Strategy Library/02 Combining Mean Reversion and Momentum in Forex Market/04 Results.html",
+    "size": 1203,
+    "sha256": "3bf48b78693128eab29d66f98ea03865c816a3b91c051bf429e0b415e3242bba"
+  },
+  {
+    "path": "04 Strategy Library/02 Combining Mean Reversion and Momentum in Forex Market/05 Summary.html",
+    "size": 762,
+    "sha256": "24003af98aefeb33b64d5901f053a0dbebfe95907f39960fae927de8e5379147"
+  },
+  {
+    "path": "04 Strategy Library/02 Combining Mean Reversion and Momentum in Forex Market/06 Algorithm.html",
+    "size": 564,
+    "sha256": "a75df59b5153b70e5b204f24234553c700e6daad144afce45d459f0295b71939"
+  },
+  {
+    "path": "04 Strategy Library/02 Combining Mean Reversion and Momentum in Forex Market/07 References.html",
+    "size": 1088,
+    "sha256": "370a7cd793abbbb5dc807a6c2fd2795e4e0e19d233a12cceb2ffa1207d852c9a"
+  },
+  {
+    "path": "04 Strategy Library/03 Pairs Trading-Copula vs Cointegration/01 Abstract.html",
+    "size": 1588,
+    "sha256": "ee647868a7909e2b9e891d9eb9b6b3793aa4af2502becf44d09603fdd4a619e6"
+  },
+  {
+    "path": "04 Strategy Library/03 Pairs Trading-Copula vs Cointegration/01 摘要.cn.html",
+    "size": 1307,
+    "sha256": "53a329327270e2b4fa2185e40c6fdc70b31ff16cc418bd8d3d76a793ef10530c"
+  },
+  {
+    "path": "04 Strategy Library/03 Pairs Trading-Copula vs Cointegration/02 Framework of Copula.html",
+    "size": 3525,
+    "sha256": "821b2bd5954db2c8443e700fcd71169ccdbd87c6ac193615a8efddadacc06263"
+  },
+  {
+    "path": "04 Strategy Library/03 Pairs Trading-Copula vs Cointegration/02 联系框架.cn.html",
+    "size": 3054,
+    "sha256": "845fbcd73560eff9e344a20a29e538b3a5c3c4c91273e2d8d0caecdec1050dd5"
+  },
+  {
+    "path": "04 Strategy Library/03 Pairs Trading-Copula vs Cointegration/03 Part I - Copula Method.html",
+    "size": 16158,
+    "sha256": "36b32051021aebe977323b2bdf12d8e00c2879b9e3738dc22ce4ab12bdc75e7c"
+  },
+  {
+    "path": "04 Strategy Library/03 Pairs Trading-Copula vs Cointegration/03 第I部分 – 联系法.cn.html",
+    "size": 14819,
+    "sha256": "938145f0b8e582ef41941e15ad37bb78d3a94c878e9dd6638df5e1066c9ae7ed"
+  },
+  {
+    "path": "04 Strategy Library/03 Pairs Trading-Copula vs Cointegration/04 Part II - Cointegration Method.html",
+    "size": 2038,
+    "sha256": "0f9fd467dbd7fe36f1044c4bdc59e6d6c15d247009f163f6313de72505c135ce"
+  },
+  {
+    "path": "04 Strategy Library/03 Pairs Trading-Copula vs Cointegration/04 第II部分 – 协整法.cn.html",
+    "size": 2391,
+    "sha256": "105baefd4daf8d0405e9cb512d6f64dc362fbfdcc01e66e9a83cb97080a98ad1"
+  },
+  {
+    "path": "04 Strategy Library/03 Pairs Trading-Copula vs Cointegration/05 Summary.html",
+    "size": 1814,
+    "sha256": "2e001092c89dca8db73915b503d626292d8d52ba082d8ad3b6c50421d7fc163b"
+  },
+  {
+    "path": "04 Strategy Library/03 Pairs Trading-Copula vs Cointegration/05 总结.cn.html",
+    "size": 1616,
+    "sha256": "62bd9a529f0f789d9eaec9202a024881237a17efd80244f34d68880205f32953"
+  },
+  {
+    "path": "04 Strategy Library/03 Pairs Trading-Copula vs Cointegration/06 Algorithm.html",
+    "size": 1228,
+    "sha256": "864bb2e885d9d2f76409b88191273ef6ef4f3e71f08c771aeea672e9e8232986"
+  },
+  {
+    "path": "04 Strategy Library/03 Pairs Trading-Copula vs Cointegration/06 算法.cn.html",
+    "size": 1201,
+    "sha256": "c384dfcacd255456408031304229d74d49714c9e7c93f1f337f0a735bf37e606"
+  },
+  {
+    "path": "04 Strategy Library/03 Pairs Trading-Copula vs Cointegration/07 References.html",
+    "size": 1921,
+    "sha256": "5fd57d280bb80d4828e196c6c82d095d82605a9612e1db48f35ad5c7371ec2c6"
+  },
+  {
+    "path": "04 Strategy Library/03 Pairs Trading-Copula vs Cointegration/07 参考文献.cn.html",
+    "size": 1921,
+    "sha256": "5fd57d280bb80d4828e196c6c82d095d82605a9612e1db48f35ad5c7371ec2c6"
+  },
+  {
+    "path": "04 Strategy Library/04 The Dynamic Breakout II Strategy/01 Abstract.html",
+    "size": 1831,
+    "sha256": "d643254cba014ec6e1ff123e902a4185c06534ed25827d7301d57fdc59d5d730"
+  },
+  {
+    "path": "04 Strategy Library/04 The Dynamic Breakout II Strategy/02 Method.html",
+    "size": 3218,
+    "sha256": "c0f6166ec424185bcbe1ffc33f393cae2f94b7ac1ac28fbe0dba4cafae7cf84b"
+  },
+  {
+    "path": "04 Strategy Library/04 The Dynamic Breakout II Strategy/03 Conclusion.html",
+    "size": 1245,
+    "sha256": "e384a38e25ee2c87b080c079793c65c6f8a0bbd83bfbfcfe274d514edfe06f51"
+  },
+  {
+    "path": "04 Strategy Library/04 The Dynamic Breakout II Strategy/04 Algorithm.html",
+    "size": 1190,
+    "sha256": "a1e05e52be65c104df5683baddd17dbcf8140e9ea289956736682e2f13f49e96"
+  },
+  {
+    "path": "04 Strategy Library/04 The Dynamic Breakout II Strategy/05 References.html",
+    "size": 512,
+    "sha256": "61181dfb0584507faa68598eb01cdde88ac751387f9a1fa6fd98a5c7fde3489e"
+  },
+  {
+    "path": "04 Strategy Library/05 Dual Thrust Trading Algorithm/01 Abstract.html",
+    "size": 1296,
+    "sha256": "eb1dbd4c20c5f73f48e615a792fc093d48a4869bf87c3594f7646229e2cbdbcb"
+  },
+  {
+    "path": "04 Strategy Library/05 Dual Thrust Trading Algorithm/02 Method.html",
+    "size": 4188,
+    "sha256": "d2fe7b5879cc0ef6d1eebf1cb469add0f89b15e76e0ae4f59888218bd3049255"
+  },
+  {
+    "path": "04 Strategy Library/05 Dual Thrust Trading Algorithm/03 Conclusion.html",
+    "size": 582,
+    "sha256": "c65dc00154726ce32178eecdcc7f46f9909d2442774e602a5889c0ca7aa4ef16"
+  },
+  {
+    "path": "04 Strategy Library/05 Dual Thrust Trading Algorithm/04 Algorithm.html",
+    "size": 630,
+    "sha256": "b1e36a64e4d16bab201a62ba73870085e027d5284c3fce1d16a5dbe176ffc70b"
+  },
+  {
+    "path": "04 Strategy Library/05 Dual Thrust Trading Algorithm/05 References.html",
+    "size": 178,
+    "sha256": "b78c92703264a7a4d0018f12e82c7f53f5fe894a8b53a5ef9418e092055bcc9d"
+  },
+  {
+    "path": "04 Strategy Library/06 Can Crude Oil Predict Equity Returns/01 Abstract.html",
+    "size": 1737,
+    "sha256": "dda04320ca6510903c6edb2ab607f9f49fefbbeb77579f7aac5d49921b6497d8"
+  },
+  {
+    "path": "04 Strategy Library/06 Can Crude Oil Predict Equity Returns/02 Background.html",
+    "size": 636,
+    "sha256": "89580aef8e9b71eb5af2b512c6b219a8f07d2050b764a11f3a2195339b29656a"
+  },
+  {
+    "path": "04 Strategy Library/06 Can Crude Oil Predict Equity Returns/03 Method.html",
+    "size": 5029,
+    "sha256": "a082212de6e20d000e7a240c522019908888a8b0560d11d1480e250fd8016f8c"
+  },
+  {
+    "path": "04 Strategy Library/06 Can Crude Oil Predict Equity Returns/04 Summary.html",
+    "size": 873,
+    "sha256": "01e89859ead8f3485ee4cc7b0bd0eb722e429efc0b8a7fdc9a8d1ed4a7b94daa"
+  },
+  {
+    "path": "04 Strategy Library/06 Can Crude Oil Predict Equity Returns/05 Algorithm.html",
+    "size": 701,
+    "sha256": "6c007f28bb116fac518314bffcdb82ef75257520d932e20db3584f81da127e24"
+  },
+  {
+    "path": "04 Strategy Library/06 Can Crude Oil Predict Equity Returns/06 References.html",
+    "size": 181,
+    "sha256": "214a665721077c87cb2db8fa73144b9f38bca57688f4d0d3348e38711d62ea1b"
+  },
+  {
+    "path": "04 Strategy Library/07 Intraday Dynamic Pairs Trading using Correlation and Cointegration Approach/01 Abstract.html",
+    "size": 1038,
+    "sha256": "4159b7a6ea77b501a3bbde1cba1dbdc67e62c3ca785faa7dcedd332137dbd96b"
+  },
+  {
+    "path": "04 Strategy Library/07 Intraday Dynamic Pairs Trading using Correlation and Cointegration Approach/01 摘要.cn.html",
+    "size": 905,
+    "sha256": "5706b8fd8dc02622d36906611e33f8d7349437e12fd30bec7bd3579b7524ad0f"
+  },
+  {
+    "path": "04 Strategy Library/07 Intraday Dynamic Pairs Trading using Correlation and Cointegration Approach/02 Introduction.html",
+    "size": 10271,
+    "sha256": "fb85f5c42aab7df562b6fc8365045f3fd2919b9e205e7374b5e3bac84e2d5363"
+  },
+  {
+    "path": "04 Strategy Library/07 Intraday Dynamic Pairs Trading using Correlation and Cointegration Approach/02 简介.cn.html",
+    "size": 8434,
+    "sha256": "e31dfc11f9cf671f32a2726f3469062862c8e76ece4794caa40167e6d559e9c6"
+  },
+  {
+    "path": "04 Strategy Library/07 Intraday Dynamic Pairs Trading using Correlation and Cointegration Approach/03 Method.html",
+    "size": 13571,
+    "sha256": "83b2218df0d91eb47448af622bfd2883683857d403649c67ff97db7a354e25aa"
+  },
+  {
+    "path": "04 Strategy Library/07 Intraday Dynamic Pairs Trading using Correlation and Cointegration Approach/03 方法.cn.html",
+    "size": 12757,
+    "sha256": "31cb4b04b88836e46ade58ccced082d15dd05e808fc9e5a45c440a427f41b8bd"
+  },
+  {
+    "path": "04 Strategy Library/07 Intraday Dynamic Pairs Trading using Correlation and Cointegration Approach/04 Result.html",
+    "size": 1354,
+    "sha256": "dbe315651a9de31f294d421dcfa4f229582e88459fd58eb06b1bbe7d5a5db783"
+  },
+  {
+    "path": "04 Strategy Library/07 Intraday Dynamic Pairs Trading using Correlation and Cointegration Approach/04 结果.cn.html",
+    "size": 1149,
+    "sha256": "026792de3f305fbdd9173be7013a0653caac52f87839d044a87dfc514f0eb3d4"
+  },
+  {
+    "path": "04 Strategy Library/07 Intraday Dynamic Pairs Trading using Correlation and Cointegration Approach/05 Summary.html",
+    "size": 1138,
+    "sha256": "3abacd70d2c410b6ac07ede4d22762f1edc01aed7e2a14fc8cdd7fd0c7848098"
+  },
+  {
+    "path": "04 Strategy Library/07 Intraday Dynamic Pairs Trading using Correlation and Cointegration Approach/05 总结.cn.html",
+    "size": 953,
+    "sha256": "108544ecbd8f299622383d1bbb55f84b6c85404e9bce7c6cc2277012318d104b"
+  },
+  {
+    "path": "04 Strategy Library/07 Intraday Dynamic Pairs Trading using Correlation and Cointegration Approach/06 Algorithm.html",
+    "size": 564,
+    "sha256": "b5a4b24468aac6f0eaf07d7a695fe4e4c11e5e1065156aaa555265b748d11c3f"
+  },
+  {
+    "path": "04 Strategy Library/07 Intraday Dynamic Pairs Trading using Correlation and Cointegration Approach/06 算法.cn.html",
+    "size": 564,
+    "sha256": "b5a4b24468aac6f0eaf07d7a695fe4e4c11e5e1065156aaa555265b748d11c3f"
+  },
+  {
+    "path": "04 Strategy Library/07 Intraday Dynamic Pairs Trading using Correlation and Cointegration Approach/07 References.html",
+    "size": 1155,
+    "sha256": "dc3bcc1475a9fab3f8f3aedacbf6b5313ccc254e9285bf78228f8e5f6784ccb4"
+  },
+  {
+    "path": "04 Strategy Library/07 Intraday Dynamic Pairs Trading using Correlation and Cointegration Approach/07 参考文献.cn.html",
+    "size": 1155,
+    "sha256": "dc3bcc1475a9fab3f8f3aedacbf6b5313ccc254e9285bf78228f8e5f6784ccb4"
+  },
+  {
+    "path": "04 Strategy Library/08 The Momentum Strategy Based on the Low Frequency Component of Forex Market/01 Abstract.html",
+    "size": 1024,
+    "sha256": "2c930f1bf6b41835082374ddd4c8af79855e762961dd10e4c48ba2cb52a7406c"
+  },
+  {
+    "path": "04 Strategy Library/08 The Momentum Strategy Based on the Low Frequency Component of Forex Market/02 Introduction.html",
+    "size": 1683,
+    "sha256": "7c69cdc4988c62f1b2fe8a3d0216df23cba25eec56f88bf79d35db9016542265"
+  },
+  {
+    "path": "04 Strategy Library/08 The Momentum Strategy Based on the Low Frequency Component of Forex Market/03 Method.html",
+    "size": 5277,
+    "sha256": "4c99f14175a718e368058050c22a4026f028dbc4ce21c79e30977afc88bbf03b"
+  },
+  {
+    "path": "04 Strategy Library/08 The Momentum Strategy Based on the Low Frequency Component of Forex Market/04 Summary.html",
+    "size": 1804,
+    "sha256": "330b8c00c64930e6c1c42629623f25bf244627ce751bd2138e4207d15e08ad24"
+  },
+  {
+    "path": "04 Strategy Library/08 The Momentum Strategy Based on the Low Frequency Component of Forex Market/05 Algorithm.html",
+    "size": 564,
+    "sha256": "0ffdcce22d925e9e5b07b1864f6d4db00201c7a3f7676b3237760270b0aed6d9"
+  },
+  {
+    "path": "04 Strategy Library/08 The Momentum Strategy Based on the Low Frequency Component of Forex Market/06 References.html",
+    "size": 485,
+    "sha256": "79065b79b83fd1527e85d1081524bd1909cfc4dc9c2b9ec24215e61e341f4e81"
+  },
+  {
+    "path": "04 Strategy Library/09 Stock Selection Strategy Based on Fundamental Factors/01 Abstract.html",
+    "size": 473,
+    "sha256": "9e68afed80c9b7256f4b544e84b90564f4b94a187f852b3855ee58c93392cfd8"
+  },
+  {
+    "path": "04 Strategy Library/09 Stock Selection Strategy Based on Fundamental Factors/01 摘要.cn.html",
+    "size": 391,
+    "sha256": "65b2086af610968f8405fbf29e819c2ec8d007eff091451c7a4c38bef4d05573"
+  },
+  {
+    "path": "04 Strategy Library/09 Stock Selection Strategy Based on Fundamental Factors/02 Factor Selection.html",
+    "size": 10422,
+    "sha256": "abc5ee65e34811af79acb805effc9dbdac033ddd5e517e74069992aa92da1a11"
+  },
+  {
+    "path": "04 Strategy Library/09 Stock Selection Strategy Based on Fundamental Factors/02 要素选择.cn.html",
+    "size": 9789,
+    "sha256": "5f7cd01ab2a16b9764e43b04b2b0be18b823fe6c225807b0174cd9b588693ddd"
+  },
+  {
+    "path": "04 Strategy Library/09 Stock Selection Strategy Based on Fundamental Factors/03 Stock Selection.html",
+    "size": 1737,
+    "sha256": "6cd258b1bb7f0af0b189a8a4586be0c39605c863bbd6e0f2c7331eb4837bda2a"
+  },
+  {
+    "path": "04 Strategy Library/09 Stock Selection Strategy Based on Fundamental Factors/03 股票选择.cn.html",
+    "size": 1550,
+    "sha256": "20e86d23bef43766f4fc6f5c989b93678720b1d417280bcdbd2e00751123ae52"
+  },
+  {
+    "path": "04 Strategy Library/09 Stock Selection Strategy Based on Fundamental Factors/04 Algorithm.html",
+    "size": 572,
+    "sha256": "a4d5451c9671467cb537b54861d026e1527b3626ff9da716f8eabd676d184262"
+  },
+  {
+    "path": "04 Strategy Library/09 Stock Selection Strategy Based on Fundamental Factors/04 算法.cn.html",
+    "size": 564,
+    "sha256": "081523a6a88aa460c6f7715babacce210b6c56e1fac0a46ffdd9a846a71f8b4b"
+  },
+  {
+    "path": "04 Strategy Library/09 Stock Selection Strategy Based on Fundamental Factors/05 References.html",
+    "size": 233,
+    "sha256": "d5f2602114da9d4c314dd4cb6e94d009ac1f4a933358a34892f1e1711fe78ddf"
+  },
+  {
+    "path": "04 Strategy Library/09 Stock Selection Strategy Based on Fundamental Factors/05 参考文献.cn.html",
+    "size": 233,
+    "sha256": "d5f2602114da9d4c314dd4cb6e94d009ac1f4a933358a34892f1e1711fe78ddf"
+  },
+  {
+    "path": "04 Strategy Library/10 Short-Term Reversal Strategy in Stocks/01 Abstract.html",
+    "size": 646,
+    "sha256": "f6c8edec3cf725af97dacf20334a900eea83190ae21dec7bb4d8e3dfe9ee8816"
+  },
+  {
+    "path": "04 Strategy Library/10 Short-Term Reversal Strategy in Stocks/02 Method.html",
+    "size": 5215,
+    "sha256": "fb88ff31fcc1fb777b84d10ee00220fdf729700e3ff7bf32910b8b4bb1521086"
+  },
+  {
+    "path": "04 Strategy Library/10 Short-Term Reversal Strategy in Stocks/04 Algorithm.html",
+    "size": 573,
+    "sha256": "0a7abef068d6b43645542b043bf3d0f13d04eee79f02d29d3f7c5bc2d3648f3d"
+  },
+  {
+    "path": "04 Strategy Library/10 Short-Term Reversal Strategy in Stocks/05 Relative Performance.html",
+    "size": 2395,
+    "sha256": "974ad813bf3ba4180fe6b87ac01f369fe372d2979f5097139e24a34688734655"
+  },
+  {
+    "path": "04 Strategy Library/10 Short-Term Reversal Strategy in Stocks/07 Market & Competition Qualification.html",
+    "size": 445,
+    "sha256": "735434b14d04b23a90abbe7660274bd3721423c26f01d3e33cbc1f4954beb164"
+  },
+  {
+    "path": "04 Strategy Library/10 Short-Term Reversal Strategy in Stocks/08 Conclusion.html",
+    "size": 987,
+    "sha256": "be5ba7ca394188e82460f6b1e6beb47ae47333cc2aadac1415a10f84a200049b"
+  },
+  {
+    "path": "04 Strategy Library/10 Short-Term Reversal Strategy in Stocks/09 References.html",
+    "size": 220,
+    "sha256": "812c7d04d61a414b0813f3f3751b9c4335f8b131b528d3cf2a94fbdcefc66472"
+  },
+  {
+    "path": "04 Strategy Library/100 Trading with WTI BRENT Spread/01 Introduction.html",
+    "size": 602,
+    "sha256": "c96a09fabe91e3f5bfd8fcd69cbc80b3863bcba1f0452bf5453b0deb62fc71f7"
+  },
+  {
+    "path": "04 Strategy Library/100 Trading with WTI BRENT Spread/01 简介.cn.html",
+    "size": 480,
+    "sha256": "30fadef313304163e600f9d1b923d9d7cb25396c24fc9b5fa8dfeca470ddcbcf"
+  },
+  {
+    "path": "04 Strategy Library/100 Trading with WTI BRENT Spread/02 Method.html",
+    "size": 5465,
+    "sha256": "269ed5810f84d93656677329d0d0ea7a7d9f9b1c7ea3d6cf9e98805e15e0d48c"
+  },
+  {
+    "path": "04 Strategy Library/100 Trading with WTI BRENT Spread/02 方法.cn.html",
+    "size": 5229,
+    "sha256": "a8bf4df8d9698a1f08c963dde32d6adff7fec9d300e2257de5f1870150f47d30"
+  },
+  {
+    "path": "04 Strategy Library/100 Trading with WTI BRENT Spread/03 Algorithm.html",
+    "size": 564,
+    "sha256": "a36453e9413f3f2bd4bb19085480548f00032132f467c77bfe8ab464af0a1cbb"
+  },
+  {
+    "path": "04 Strategy Library/100 Trading with WTI BRENT Spread/03 算法.cn.html",
+    "size": 564,
+    "sha256": "a36453e9413f3f2bd4bb19085480548f00032132f467c77bfe8ab464af0a1cbb"
+  },
+  {
+    "path": "04 Strategy Library/100 Trading with WTI BRENT Spread/04 Source.html",
+    "size": 139,
+    "sha256": "2a5604932f9e0f912e3b39585a4f1a1714d2df2f4ffdca96d31f10cf1579db5a"
+  },
+  {
+    "path": "04 Strategy Library/100 Trading with WTI BRENT Spread/04 来源.cn.html",
+    "size": 139,
+    "sha256": "2a5604932f9e0f912e3b39585a4f1a1714d2df2f4ffdca96d31f10cf1579db5a"
+  },
+  {
+    "path": "04 Strategy Library/102 Option Expiration Week Effect/01 Introduction.html",
+    "size": 1032,
+    "sha256": "49ee852b23468fb0f17f6a09666ae298cdf8bffbb88b1995459463c1433a614f"
+  },
+  {
+    "path": "04 Strategy Library/102 Option Expiration Week Effect/02 Method.html",
+    "size": 2088,
+    "sha256": "5d87dd902af06952c89f13028c3a44403dc716e08fc95911981653e87f1fb174"
+  },
+  {
+    "path": "04 Strategy Library/102 Option Expiration Week Effect/03 Algorithm.html",
+    "size": 564,
+    "sha256": "6cdf2a56b540fb678a063815e8f785d230069f9d4c5c22ea3794761af60fbbee"
+  },
+  {
+    "path": "04 Strategy Library/102 Option Expiration Week Effect/04 Source.html",
+    "size": 144,
+    "sha256": "15f7a1738b4bf09cdd0d05da87fbe7c172ae02871daaffa2136ad5da31462f7a"
+  },
+  {
+    "path": "04 Strategy Library/1023 Intraday Arbitrage Between Index ETFs/01 Abstract.html",
+    "size": 566,
+    "sha256": "b0f529f91170db33998436563514b9e949c99bd47001af5500e5714811508a78"
+  },
+  {
+    "path": "04 Strategy Library/1023 Intraday Arbitrage Between Index ETFs/02 Background.html",
+    "size": 774,
+    "sha256": "0a66c74a008b28354f6deed3c9d7989878bccdc919faf1a44e3ae368531b9c7d"
+  },
+  {
+    "path": "04 Strategy Library/1023 Intraday Arbitrage Between Index ETFs/03 Method.html",
+    "size": 5929,
+    "sha256": "0ebab82a7f785dedf882d1ab32e8bee99021cfeefc3c9cca14a3f8a92443185a"
+  },
+  {
+    "path": "04 Strategy Library/1023 Intraday Arbitrage Between Index ETFs/04 Algorithm.html",
+    "size": 571,
+    "sha256": "94dee55fe5d15579d87408532546c44a435fc2f0f20b95fa7f7ced8831c33290"
+  },
+  {
+    "path": "04 Strategy Library/1023 Intraday Arbitrage Between Index ETFs/05 Relative Performance.html",
+    "size": 4757,
+    "sha256": "71e7df5453d0e425e96a9b8532b8d18df30e7053cea9b7b94a9333f746fd8886"
+  },
+  {
+    "path": "04 Strategy Library/1023 Intraday Arbitrage Between Index ETFs/06 Market & Competition Qualification.html",
+    "size": 757,
+    "sha256": "8c2df7d62bf2a92cc923b77004a4b45b72b6d32ab6d1e43f3a726e1ea73b31dd"
+  },
+  {
+    "path": "04 Strategy Library/1023 Intraday Arbitrage Between Index ETFs/07 Conclusion.html",
+    "size": 887,
+    "sha256": "ec92eb2805788900cd0fca1036b6333a0ab2e826400e3eac11dd118712014eba"
+  },
+  {
+    "path": "04 Strategy Library/1023 Intraday Arbitrage Between Index ETFs/08 References.html",
+    "size": 563,
+    "sha256": "de9ed6a6eea7eaebbd2ed5d26511a25468ab962747b48743617f30c930a8b788"
+  },
+  {
+    "path": "04 Strategy Library/1024 Forecasting Stock Prices using a Temporal CNN Model/01 Abstract.html",
+    "size": 261,
+    "sha256": "d3810d7c758f6402f1276ad697aa0027ecbf3a91d37b36eca33c0520ce7a8607"
+  },
+  {
+    "path": "04 Strategy Library/1024 Forecasting Stock Prices using a Temporal CNN Model/02 Introduction.html",
+    "size": 667,
+    "sha256": "e27d1318ea73a80f2d632774e4e8b404d7102b92f8d593dd44756172e1509d36"
+  },
+  {
+    "path": "04 Strategy Library/1024 Forecasting Stock Prices using a Temporal CNN Model/03 Method.html",
+    "size": 10600,
+    "sha256": "14ff9a40e7bd951835e6d692119375ba4b2d60378dcad0b4a33f019214e6a2cb"
+  },
+  {
+    "path": "04 Strategy Library/1024 Forecasting Stock Prices using a Temporal CNN Model/04 Algorithm.html",
+    "size": 572,
+    "sha256": "abe64b3a93e8f3656e7c11ffe33254cf6e8748ef272261a67c10f9c89675f1c8"
+  },
+  {
+    "path": "04 Strategy Library/1024 Forecasting Stock Prices using a Temporal CNN Model/05 Results.html",
+    "size": 482,
+    "sha256": "c68b228b7122dbbe91c1cff0eac86ca7fa7a15700b81cc4edf6034173d95b117"
+  },
+  {
+    "path": "04 Strategy Library/1024 Forecasting Stock Prices using a Temporal CNN Model/06 References.html",
+    "size": 345,
+    "sha256": "ca1fbcc3f1bfca73f3355f2e1c6f89b023af03851f0666774bff641c09acd8db"
+  },
+  {
+    "path": "04 Strategy Library/1025 Leveraged ETFs with Systematic Risk Management/01 Abstract.html",
+    "size": 129,
+    "sha256": "25e5167418ebfcc493ace3070990bb77da87813ccb621be478b934dacb944540"
+  },
+  {
+    "path": "04 Strategy Library/1025 Leveraged ETFs with Systematic Risk Management/02 Introduction.html",
+    "size": 846,
+    "sha256": "390aa8d798993f8591e21f0bd5e5a692dd37b26d89c105c32837a70661f6f127"
+  },
+  {
+    "path": "04 Strategy Library/1025 Leveraged ETFs with Systematic Risk Management/03 Method.html",
+    "size": 749,
+    "sha256": "829b032d6028e1133657cc7f401d50069b38d23177cd7c7e2a5716858ff772b7"
+  },
+  {
+    "path": "04 Strategy Library/1025 Leveraged ETFs with Systematic Risk Management/04 Algorithm.html",
+    "size": 572,
+    "sha256": "1e937914f7df24bc1c0fa98c6f3e8262db62b6db2ddd6dbdca08babf91a58d6f"
+  },
+  {
+    "path": "04 Strategy Library/1025 Leveraged ETFs with Systematic Risk Management/05 Results.html",
+    "size": 241,
+    "sha256": "a66aaf576b211bf3a2437917c89656841abb9f54b18edda16f99cd25be7cb8a7"
+  },
+  {
+    "path": "04 Strategy Library/1025 Leveraged ETFs with Systematic Risk Management/06 References.html",
+    "size": 321,
+    "sha256": "9c290c76e1bce280b63727383ab42657c9fee2a645ad1bf3fedae7282fcfb35f"
+  },
+  {
+    "path": "04 Strategy Library/1026 Intraday ETF Momentum/01 Abstract.html",
+    "size": 531,
+    "sha256": "ddd009f6420880427e6782be5f5eb3353604f2641c70f2acadab6df0341bc28e"
+  },
+  {
+    "path": "04 Strategy Library/1026 Intraday ETF Momentum/02 Background.html",
+    "size": 1205,
+    "sha256": "466056bd8295e335df048b92a5c9f87ee7de6aa80a42924b2e8d7be379c45097"
+  },
+  {
+    "path": "04 Strategy Library/1026 Intraday ETF Momentum/03 Method.html",
+    "size": 6162,
+    "sha256": "5b265a21626410f78f4610e029d3345a1099b439c1b7b28a687685bd787d16f2"
+  },
+  {
+    "path": "04 Strategy Library/1026 Intraday ETF Momentum/04 Algorithm.html",
+    "size": 571,
+    "sha256": "68e149d585bd629daa95f2d884bdbb643531f935d42970c2f94566116f53c541"
+  },
+  {
+    "path": "04 Strategy Library/1026 Intraday ETF Momentum/05 Conclusion.html",
+    "size": 5310,
+    "sha256": "7f0d5dbee1025ff9ce9d1989f1eaf23b559a0f8c347be63bacf7ddbaf454c48b"
+  },
+  {
+    "path": "04 Strategy Library/1026 Intraday ETF Momentum/06 References.html",
+    "size": 227,
+    "sha256": "b4fd4d668060f23f1f559e2057592e87a5b6a9dd9f229902d4a045713abf34e7"
+  },
+  {
+    "path": "04 Strategy Library/1027 Using News Sentiment to Predict Price Direction of Drug Manufacturers/01 Abstract.html",
+    "size": 726,
+    "sha256": "63638832e7d6f4ff71b58238ec367a2979754c63d21fd21421d80c8af17e5edb"
+  },
+  {
+    "path": "04 Strategy Library/1027 Using News Sentiment to Predict Price Direction of Drug Manufacturers/02 Background.html",
+    "size": 941,
+    "sha256": "d9edbf5f719b83b6e14d821c6dc67b6cfc0ddc2642a01ef0fa63cb22085cbf76"
+  },
+  {
+    "path": "04 Strategy Library/1027 Using News Sentiment to Predict Price Direction of Drug Manufacturers/03 Method.html",
+    "size": 8366,
+    "sha256": "f1a770e6400904c23352ad84124a62dcdeca4ae962813e57f9a605ddd7852f23"
+  },
+  {
+    "path": "04 Strategy Library/1027 Using News Sentiment to Predict Price Direction of Drug Manufacturers/04 Algorithm.html",
+    "size": 571,
+    "sha256": "ebbf9055fff0aa4f1d48a0abf7139c5943de8a44245a9d3fe619daa76e253964"
+  },
+  {
+    "path": "04 Strategy Library/1027 Using News Sentiment to Predict Price Direction of Drug Manufacturers/05 Conclusion.html",
+    "size": 1390,
+    "sha256": "8ced233c29925567e35a8f1f2ba05121b362ed803f9699f3845c848e0b481813"
+  },
+  {
+    "path": "04 Strategy Library/1027 Using News Sentiment to Predict Price Direction of Drug Manufacturers/06 References.html",
+    "size": 521,
+    "sha256": "57d8881a7b0f143fd272b4bf6a8a2fce28f6145baa072a089edd94751427750c"
+  },
+  {
+    "path": "04 Strategy Library/1028 Ichimoku Clouds in the Energy Sector/01 Abstract.html",
+    "size": 619,
+    "sha256": "298aeaeffa8b5df9c16a4705b90f568a65e024d06ab46d5d509bc151bf3d8794"
+  },
+  {
+    "path": "04 Strategy Library/1028 Ichimoku Clouds in the Energy Sector/02 Introduction.html",
+    "size": 1774,
+    "sha256": "545ed4df5c6e9dbc1a143e353ec47a1023cfa8ffca14639d02490b6663a277a8"
+  },
+  {
+    "path": "04 Strategy Library/1028 Ichimoku Clouds in the Energy Sector/03 Method.html",
+    "size": 6333,
+    "sha256": "5af1786a05b49c54c93bf1e6ef19b6ac4eeb1a6d1ff7baeebabf8cd56d62b890"
+  },
+  {
+    "path": "04 Strategy Library/1028 Ichimoku Clouds in the Energy Sector/04 Algorithm.html",
+    "size": 571,
+    "sha256": "32e53fa1fdcb910b9a5752f24912a5dfdac61c4bdf6924f3e152463f47028933"
+  },
+  {
+    "path": "04 Strategy Library/1028 Ichimoku Clouds in the Energy Sector/05 Relative Performance.html",
+    "size": 4736,
+    "sha256": "bd0aeaf01ecb50954163c5ac97a07b8813a3ffe5d2697f942962ea27fa872f7c"
+  },
+  {
+    "path": "04 Strategy Library/1028 Ichimoku Clouds in the Energy Sector/06 Market & Competition Qualification.html",
+    "size": 507,
+    "sha256": "0c267dec727f30980acd5547ef56fb2b0c31bae6f4926b4568a31e1fc2502cb3"
+  },
+  {
+    "path": "04 Strategy Library/1028 Ichimoku Clouds in the Energy Sector/07 Conclusion.html",
+    "size": 1150,
+    "sha256": "17576260dbc13e07a48a9c9d7527a7f57f35bcab589238df97a333b2da261ddf"
+  },
+  {
+    "path": "04 Strategy Library/1028 Ichimoku Clouds in the Energy Sector/08 References.html",
+    "size": 206,
+    "sha256": "8317c5de3436bc46537f5d5e1ce5c04ac0d9a9384a6c8a8592dd4324c21fd1ba"
+  },
+  {
+    "path": "04 Strategy Library/1029 Optimal Pairs Trading/01 Abstract.html",
+    "size": 149,
+    "sha256": "7765572afa945c5d9f760bf140c5f8ed68836e96264f4c9e48cf787e0b18210c"
+  },
+  {
+    "path": "04 Strategy Library/1029 Optimal Pairs Trading/02 Introduction.html",
+    "size": 844,
+    "sha256": "e99960658cc6bec621e670814fe5aab41c69396cd1c2e6364ca02536b8e14692"
+  },
+  {
+    "path": "04 Strategy Library/1029 Optimal Pairs Trading/03 Method.html",
+    "size": 5328,
+    "sha256": "b2d493e0112da33fe6ba6cf51c4953e0b08e41b40f32626f424879ce2d8e6558"
+  },
+  {
+    "path": "04 Strategy Library/1029 Optimal Pairs Trading/04 Algorithm.html",
+    "size": 572,
+    "sha256": "e1643ddd05ec196844c68c95857e23f369cdf3ddc1f5ea7910c7fb33ec0358ef"
+  },
+  {
+    "path": "04 Strategy Library/1029 Optimal Pairs Trading/05 Video Walkthrough.html",
+    "size": 244,
+    "sha256": "fe3dce2c66164baf22113786a122a29c6f5c2be4c51dd8a9a4373224bf76d9d8"
+  },
+  {
+    "path": "04 Strategy Library/1029 Optimal Pairs Trading/06 Results.html",
+    "size": 626,
+    "sha256": "0a3430bd7c325dd7df6a9e86c95fe0157eac09f46bc270c6e0229cb6492e715c"
+  },
+  {
+    "path": "04 Strategy Library/1029 Optimal Pairs Trading/07 References.html",
+    "size": 311,
+    "sha256": "4d266862e1d9681acc90335be7af9556886eab9928417d6e736cefeb6e611a01"
+  },
+  {
+    "path": "04 Strategy Library/1030 G-Score Investing/01 Abstract.html",
+    "size": 103,
+    "sha256": "38be3b3bafdc987e9976d548b4633e98e19e3693a79b3ad88f968939a2262c39"
+  },
+  {
+    "path": "04 Strategy Library/1030 G-Score Investing/02 Introduction.html",
+    "size": 701,
+    "sha256": "7c4eae13a0fd65deb8e92e7e89b8a8a0ae81353c77c1408a542a13a0eb517d53"
+  },
+  {
+    "path": "04 Strategy Library/1030 G-Score Investing/03 Method.html",
+    "size": 3007,
+    "sha256": "45f8c93b2e5a28aad7dcb1f16d575c8438374b48799e6bcb01a3c424d2b19b3d"
+  },
+  {
+    "path": "04 Strategy Library/1030 G-Score Investing/04 Algorithm.html",
+    "size": 572,
+    "sha256": "ec10d347f5514f0a25f4d923426737d5f52223de2601cf1406e8a598c39685a8"
+  },
+  {
+    "path": "04 Strategy Library/1030 G-Score Investing/05 Results.html",
+    "size": 342,
+    "sha256": "b4d1383885de21dcd5626d8420d97763288c80262207bcaf9cd5c529b9309c0b"
+  },
+  {
+    "path": "04 Strategy Library/1030 G-Score Investing/06 References.html",
+    "size": 263,
+    "sha256": "b51e06de3a23ca4c38399c699d770908d15b1714c2a832ba66386c001c477016"
+  },
+  {
+    "path": "04 Strategy Library/1031 SVM Wavelet Forecasting/01 Abstract.html",
+    "size": 102,
+    "sha256": "09528de04be25562948fdaf1dcc14ab739c631efee94ea205f9bdfca967bcec1"
+  },
+  {
+    "path": "04 Strategy Library/1031 SVM Wavelet Forecasting/02 Introduction.html",
+    "size": 1016,
+    "sha256": "97c9edd83aba186deef697ba1055ea53ca781f36c8ba90286c923b749fb13c5e"
+  },
+  {
+    "path": "04 Strategy Library/1031 SVM Wavelet Forecasting/03 Method.html",
+    "size": 3201,
+    "sha256": "e9e2bfd8f6ca5b570bb48e01b4230b26a87608eb35beef714e00b416e527a85d"
+  },
+  {
+    "path": "04 Strategy Library/1031 SVM Wavelet Forecasting/04 Algorithm.html",
+    "size": 572,
+    "sha256": "2299ffd5708132140d3299adb01b93e6524dd2b6bdc7c541d43261ff3e70b060"
+  },
+  {
+    "path": "04 Strategy Library/1031 SVM Wavelet Forecasting/05 Results.html",
+    "size": 639,
+    "sha256": "074e95ab717b4495ea566ffe8c1551b3d4b0cb5b36808fa7d85574ff698b08f3"
+  },
+  {
+    "path": "04 Strategy Library/1031 SVM Wavelet Forecasting/06 References.html",
+    "size": 407,
+    "sha256": "7d0a6ba5cd51d11b76be319312bfc5c7bd8b4f266f0654248558f952a0f55ab7"
+  },
+  {
+    "path": "04 Strategy Library/1033 Gradient Boosting Model/01 Abstract.html",
+    "size": 576,
+    "sha256": "291f29e0f9ac2a1dcf14f6dd58d1f24b593b1f25290cf155c20a74e3ced1093b"
+  },
+  {
+    "path": "04 Strategy Library/1033 Gradient Boosting Model/02 Background.html",
+    "size": 1412,
+    "sha256": "01158113d435150614074aec5d8ddb6862d50f38f5e2ce68f0038948e07fdd1e"
+  },
+  {
+    "path": "04 Strategy Library/1033 Gradient Boosting Model/03 Method.html",
+    "size": 6651,
+    "sha256": "dacb4b6a1b9bfcf8be09e48e0c30a74fa5884f2bf08ee3804e16a213b317f18f"
+  },
+  {
+    "path": "04 Strategy Library/1033 Gradient Boosting Model/04 Algorithm.html",
+    "size": 571,
+    "sha256": "5eaaa3e3cb6ca035b0f7b5760f948ae7492fd1c24ab7563e0a79a30f1bac0989"
+  },
+  {
+    "path": "04 Strategy Library/1033 Gradient Boosting Model/05 Relative Performance.html",
+    "size": 2404,
+    "sha256": "975fc4fbb67fbb563ea0bd4e7e0eb5cc7bb1e4fcbaf96f62394bd2f33e60e06b"
+  },
+  {
+    "path": "04 Strategy Library/1033 Gradient Boosting Model/06 Market & Competition Qualification.html",
+    "size": 411,
+    "sha256": "3120a931a592bee27052148d78f5e1e11f199868382cbbb140b14828718765c1"
+  },
+  {
+    "path": "04 Strategy Library/1033 Gradient Boosting Model/07 Conclusion.html",
+    "size": 789,
+    "sha256": "be60eaf37ecca41b1dcce7fe27f83a3b9c4fdf6c9e89cd8445c5544f063a93ab"
+  },
+  {
+    "path": "04 Strategy Library/1033 Gradient Boosting Model/08 References.html",
+    "size": 265,
+    "sha256": "2991b4c97a9ab67f26a1c6356dc746e7e32b669c92c529f3c715d86c67dcdc6c"
+  },
+  {
+    "path": "04 Strategy Library/1036 Gaussian Naive Bayes Model/01 Abstract.html",
+    "size": 544,
+    "sha256": "47460e2892f471be3e21921d2b84e370007679a1583089f00277f07f10d7aad4"
+  },
+  {
+    "path": "04 Strategy Library/1036 Gaussian Naive Bayes Model/02 Background.html",
+    "size": 2053,
+    "sha256": "4fdbd29e9f8e0fd839cb140b512e6b48e0beafba5ce2ec400d49de7b5d03bf1e"
+  },
+  {
+    "path": "04 Strategy Library/1036 Gaussian Naive Bayes Model/03 Video Walkthrough.html",
+    "size": 264,
+    "sha256": "503d6dd7675094b29230eaafb4ba84a7f9c9cce3880a15c216f89dd09761ab6e"
+  },
+  {
+    "path": "04 Strategy Library/1036 Gaussian Naive Bayes Model/04 Method.html",
+    "size": 8860,
+    "sha256": "f8fa72a5f5b985ca9f0fa19714f283e45f98a72f4dec5c65a70a9732d8717356"
+  },
+  {
+    "path": "04 Strategy Library/1036 Gaussian Naive Bayes Model/05 Algorithm.html",
+    "size": 571,
+    "sha256": "3ee1fd4cfbbedd93ce65b9c635447cc8f4e3f614ff9cb205dca824b64847c478"
+  },
+  {
+    "path": "04 Strategy Library/1036 Gaussian Naive Bayes Model/06 Relative Performance.html",
+    "size": 2400,
+    "sha256": "445350be3ac2c2d398e3c9ef371b0927a5a46a9a28d6c1b8fbef60829810c349"
+  },
+  {
+    "path": "04 Strategy Library/1036 Gaussian Naive Bayes Model/07 Market & Competition Qualification.html",
+    "size": 433,
+    "sha256": "07d68a7abfca9386404c134492d27245f742ce6dcd6a2bae32971693401aa4eb"
+  },
+  {
+    "path": "04 Strategy Library/1036 Gaussian Naive Bayes Model/08 Conclusion.html",
+    "size": 737,
+    "sha256": "093cbedc0733444f59b786ca44233be3d503ac449fa82f35297895000cf63820"
+  },
+  {
+    "path": "04 Strategy Library/1036 Gaussian Naive Bayes Model/09 References.html",
+    "size": 674,
+    "sha256": "471ae02f43fc6bc47a92ce09cb4ef3165602d4f7d7ba7ba1852e2d95e3d88aa4"
+  },
+  {
+    "path": "04 Strategy Library/11 Fundamental Factor Long Short Strategy/01 Introduction.html",
+    "size": 2867,
+    "sha256": "7858372869bcf69cd6910b513facaf45cf3e0f2694b1e219f81f103663c71265"
+  },
+  {
+    "path": "04 Strategy Library/11 Fundamental Factor Long Short Strategy/02 Implementation.html",
+    "size": 4593,
+    "sha256": "abee14fd13cfe5459471fae96c9989973bcb9c83ed71d60f94a78917f180f150"
+  },
+  {
+    "path": "04 Strategy Library/11 Fundamental Factor Long Short Strategy/03 Summary.html",
+    "size": 435,
+    "sha256": "d9face4ac864d983b2dbae701cfc75daa26765bc1ca5e7ebcddeafb710de8369"
+  },
+  {
+    "path": "04 Strategy Library/11 Fundamental Factor Long Short Strategy/04 Algorithm.html",
+    "size": 564,
+    "sha256": "ea180f011b8107e686da57b0d6aa20de92c50a3009484345b8f2afed499c50d1"
+  },
+  {
+    "path": "04 Strategy Library/11 Fundamental Factor Long Short Strategy/05 References.html",
+    "size": 171,
+    "sha256": "d1e623dfbb9b1c2c551a16068ec343f1c045c5eede469a0b87d1afaba07b40e6"
+  },
+  {
+    "path": "04 Strategy Library/113 January Barometer/01 Introduction.html",
+    "size": 335,
+    "sha256": "7678b6dce76565159631cf427e54e6d40d28939b01cc56a55264686a4c56f3ad"
+  },
+  {
+    "path": "04 Strategy Library/113 January Barometer/02 Method.html",
+    "size": 999,
+    "sha256": "c3150d417f055e46e1d3549f028b401af71746d25c6dfd5a4f2eb53106799517"
+  },
+  {
+    "path": "04 Strategy Library/113 January Barometer/03 Algorithm.html",
+    "size": 564,
+    "sha256": "638e5d0228c9defd95169817e9e9f8dcade02161121d6177ffb6149d4485d603"
+  },
+  {
+    "path": "04 Strategy Library/113 January Barometer/04 Source.html",
+    "size": 132,
+    "sha256": "ecc35a95fbd9ca123136ff29059f7ddf1a01dc4f4cae4787244298047e31de9e"
+  },
+  {
+    "path": "04 Strategy Library/114 January Effect in Stocks/01 Introduction.html",
+    "size": 443,
+    "sha256": "ae4e8fdce3be48fac86d191c7c956ff02993138cfe86b3c2b758a8a8ed0aaf17"
+  },
+  {
+    "path": "04 Strategy Library/114 January Effect in Stocks/02 Method.html",
+    "size": 3095,
+    "sha256": "145044f97a896d513864d727bf5a20e0d3aa37a457107e16d64fea59d81ad690"
+  },
+  {
+    "path": "04 Strategy Library/114 January Effect in Stocks/03 Algorithm.html",
+    "size": 564,
+    "sha256": "cdca06799055b92739bc623c2b664b4f18a5dac3a7a826c451c430e8f8b35f5d"
+  },
+  {
+    "path": "04 Strategy Library/114 January Effect in Stocks/04 Source.html",
+    "size": 139,
+    "sha256": "ed155203155da5704c5474e2eb69695124f52fc7cd5e6df1208a7110ecf36d3d"
+  },
+  {
+    "path": "04 Strategy Library/118 Time Series Momentum Effect/01 Introduction.html",
+    "size": 1384,
+    "sha256": "f159f839dc4a7175555399adde7d74e5e1829ff299136a4d8e3a328bd75167ea"
+  },
+  {
+    "path": "04 Strategy Library/118 Time Series Momentum Effect/02 Method.html",
+    "size": 2157,
+    "sha256": "104488b117475d17343080a914d962a9af640308828e0c94dcc847edcf18c5b4"
+  },
+  {
+    "path": "04 Strategy Library/118 Time Series Momentum Effect/03 Algorithm.html",
+    "size": 580,
+    "sha256": "088b8282da033d3a69d7bc854802f2c26b836130b0ef4df3eb9a0aecfb4776cd"
+  },
+  {
+    "path": "04 Strategy Library/118 Time Series Momentum Effect/04 Source.html",
+    "size": 142,
+    "sha256": "ffa25612f3c9bd72536b4cde55db57a9641f50c40eac4b35a2dc9ac30bf4c6a7"
+  },
+  {
+    "path": "04 Strategy Library/12 Asset Class Trend Following/01 Introduction.html",
+    "size": 480,
+    "sha256": "b562a78e85f53602726d1a6f2141da9a8676e337f7caf100329c1131267cdd6e"
+  },
+  {
+    "path": "04 Strategy Library/12 Asset Class Trend Following/02 Method.html",
+    "size": 565,
+    "sha256": "8056b9b2bf253c86fc63cff4346315a705e40ea16767751e4d37cd4e0bf9a0e4"
+  },
+  {
+    "path": "04 Strategy Library/12 Asset Class Trend Following/03 Algorithm.html",
+    "size": 564,
+    "sha256": "76fdfd23d3491046ace3afa3a55d289ddac060a29832b69aae98fc2c24f29327"
+  },
+  {
+    "path": "04 Strategy Library/12 Asset Class Trend Following/04 Source.html",
+    "size": 141,
+    "sha256": "dd2c663f05daf8cbcb56f07552204b691b231e3b8c1f5b16a4a828b625b915b5"
+  },
+  {
+    "path": "04 Strategy Library/125 12 Month Cycle in Cross-Section of Stocks Returns/01 Introduction.html",
+    "size": 352,
+    "sha256": "46021aba9bc2717547674f82f772ffccc576933e787f3164497e35c61a0571d1"
+  },
+  {
+    "path": "04 Strategy Library/125 12 Month Cycle in Cross-Section of Stocks Returns/02 Method.html",
+    "size": 3396,
+    "sha256": "40ce34c681d75bae4f20b478a1fba40fb015789f08c72ce34426457c9d5b6003"
+  },
+  {
+    "path": "04 Strategy Library/125 12 Month Cycle in Cross-Section of Stocks Returns/03 Algorithm.html",
+    "size": 564,
+    "sha256": "cb9362527574ebb9d2353682fa685493232401d3ab0c43101b7df5adcbd6f343"
+  },
+  {
+    "path": "04 Strategy Library/125 12 Month Cycle in Cross-Section of Stocks Returns/04 Source.html",
+    "size": 164,
+    "sha256": "482fdc1d70a107bd7fd70f1cbea6e409667bc07e85ebd86ea7e234f994d58d7f"
+  },
+  {
+    "path": "04 Strategy Library/13 Asset Class Momentum/01 Introduction.html",
+    "size": 308,
+    "sha256": "b566e423940cee8421af8efcf877aa63eb3a3d458e5b02ffb1bac2556e151069"
+  },
+  {
+    "path": "04 Strategy Library/13 Asset Class Momentum/02 Method.html",
+    "size": 766,
+    "sha256": "3f27f360cd6723f5b95a2d3513095b2c4eace91819d08fbd64a7a8352340a79e"
+  },
+  {
+    "path": "04 Strategy Library/13 Asset Class Momentum/03 Algorithm.html",
+    "size": 564,
+    "sha256": "905ce578eaaeb73af19a341940d274a5befbc7df13fdff9d99c997b3a2f9d3d0"
+  },
+  {
+    "path": "04 Strategy Library/13 Asset Class Momentum/04 Source.html",
+    "size": 152,
+    "sha256": "99e9bcf18f2849c7b4bb98a0f26597a0135bf240c0d6f87a8cd4e2a7d03c1ac8"
+  },
+  {
+    "path": "04 Strategy Library/136 Residual Momentum/01 Introduction.html",
+    "size": 788,
+    "sha256": "ea80369a68b53e6b56149379d2d58ecdfa2a47a25f197b6961baf191dcf32b25"
+  },
+  {
+    "path": "04 Strategy Library/136 Residual Momentum/02 Method.html",
+    "size": 2338,
+    "sha256": "69b2b035473a92e71d0dfa7125681df6287a0c9a8263bc847e3633c5117522da"
+  },
+  {
+    "path": "04 Strategy Library/136 Residual Momentum/03 Algorithm.html",
+    "size": 571,
+    "sha256": "42cc53f146ab272e593838be469885688db0555f2db3366c66d2e91ef79ff2ba"
+  },
+  {
+    "path": "04 Strategy Library/136 Residual Momentum/04 References.html",
+    "size": 333,
+    "sha256": "84105fec6a780cbf026c844dc6e47f5847ae0ea86bee4f7b959d3c91031b00b8"
+  },
+  {
+    "path": "04 Strategy Library/14 Sector Momentum/01 Introduction.html",
+    "size": 156,
+    "sha256": "25a6fd16fe6f30ea438cf403335b2c0d8e9a37b391d48405d3ef5b697be49572"
+  },
+  {
+    "path": "04 Strategy Library/14 Sector Momentum/02 Method.html",
+    "size": 323,
+    "sha256": "f811699884a61a59535b460056c330c1aff1c7ed2440acccdf7ea0baaba99b60"
+  },
+  {
+    "path": "04 Strategy Library/14 Sector Momentum/03 Algorithm.html",
+    "size": 564,
+    "sha256": "c681ceef84cc0cda92eb32347d25ab84cdcb4334d6e258b16bb6f39990c4b0bc"
+  },
+  {
+    "path": "04 Strategy Library/14 Sector Momentum/04 Source.html",
+    "size": 129,
+    "sha256": "5ba6475fb92028a25f086b44c9fcf015a64cb29056adcb8a77a2a761d56d2ec1"
+  },
+  {
+    "path": "04 Strategy Library/15 Short Term Reversal/01 Introduction.html",
+    "size": 244,
+    "sha256": "2aa1de07fe3f78147cd7a6d9e69deb4e1b17811f966931de59060c51d3cc2c8b"
+  },
+  {
+    "path": "04 Strategy Library/15 Short Term Reversal/02 Method.html",
+    "size": 682,
+    "sha256": "e4a6f88ba8fe906b64f9d1c2aa648fd0bbce236b1ebdbc2ed0b984581592ace3"
+  },
+  {
+    "path": "04 Strategy Library/15 Short Term Reversal/03 Algorithm.html",
+    "size": 564,
+    "sha256": "028e5755c829cbaa23173ae14f89e80185ace558ecae132b697e3348bb9fed04"
+  },
+  {
+    "path": "04 Strategy Library/15 Short Term Reversal/04 Source.html",
+    "size": 143,
+    "sha256": "6f761504c563144ef266ff6d02e6ebc7ef238b6805e3aa1019686f9946baf48f"
+  },
+  {
+    "path": "04 Strategy Library/152 Momentum Effect in REITs/01 Introduction.html",
+    "size": 456,
+    "sha256": "6c3f227683ea5885d532868ef8ed5efa8ee1a6c134a3d80a531681acc957dc66"
+  },
+  {
+    "path": "04 Strategy Library/152 Momentum Effect in REITs/02 Method.html",
+    "size": 2655,
+    "sha256": "d31fae3a42e023414fe862a231c3b8fa03c2d69ba5ad4ea4c2ce884a3ed487c0"
+  },
+  {
+    "path": "04 Strategy Library/152 Momentum Effect in REITs/03 Algorithm.html",
+    "size": 572,
+    "sha256": "2a7f4491211469853931ea5ce5047bfdf78d7b41c183507133a041a0c0fa6b06"
+  },
+  {
+    "path": "04 Strategy Library/152 Momentum Effect in REITs/04 Source.html",
+    "size": 139,
+    "sha256": "54e005dda196b3b3ab72130021e185552e11bd1c137b5f009449f5f97dfacc32"
+  },
+  {
+    "path": "04 Strategy Library/155 Momentum and Reversal Combined with Volatility Effect in Stocks/01 Introduction.html",
+    "size": 424,
+    "sha256": "7b7c959c16e7f81881dace5b83410adcece1257b4a9046208f71cccdabf92f55"
+  },
+  {
+    "path": "04 Strategy Library/155 Momentum and Reversal Combined with Volatility Effect in Stocks/02 Method.html",
+    "size": 6389,
+    "sha256": "69f028214bcd12f2951a8876094c6c685965804a2c3e85ea479b7650a922c7ee"
+  },
+  {
+    "path": "04 Strategy Library/155 Momentum and Reversal Combined with Volatility Effect in Stocks/03 Algorithm.html",
+    "size": 564,
+    "sha256": "f8899992a24d9019f789da0873fbccfbf3fb04e8194b1e11be9fd4afd4feeacd"
+  },
+  {
+    "path": "04 Strategy Library/155 Momentum and Reversal Combined with Volatility Effect in Stocks/04 Source.html",
+    "size": 178,
+    "sha256": "15c9895cc3936d186f5fda03bfd5befcf9dd48d3ba157158bed453d6d2693b6a"
+  },
+  {
+    "path": "04 Strategy Library/16 Overnight Anomaly/01 Introduction.html",
+    "size": 129,
+    "sha256": "8ee82dc5ab877695f1c9ba254ef86e3368645f6b9621320504938f995dfd6f13"
+  },
+  {
+    "path": "04 Strategy Library/16 Overnight Anomaly/02 Method.html",
+    "size": 403,
+    "sha256": "53251b1a0fcc3ee256434dc8d2306d0f949d37671bc94b4ab4cbbdcd6a581f0a"
+  },
+  {
+    "path": "04 Strategy Library/16 Overnight Anomaly/03 Algorithm.html",
+    "size": 564,
+    "sha256": "db95a4e04ad71fc516b22a1b3038662ce6987311f8aba520a657fa866cad73d9"
+  },
+  {
+    "path": "04 Strategy Library/16 Overnight Anomaly/04 Source.html",
+    "size": 130,
+    "sha256": "d71ff7f1eb229d154b2964a7b74544abf6f93b9436dbe2f6515d5e7907f291a9"
+  },
+  {
+    "path": "04 Strategy Library/162 Momentum Effect in Stocks in Small Portfolios/01 Introduction.html",
+    "size": 517,
+    "sha256": "dfadef02cdfafdfe3aaccbdb7b440b5b86233d28c80a29f27f3489bf2d6a3aca"
+  },
+  {
+    "path": "04 Strategy Library/162 Momentum Effect in Stocks in Small Portfolios/01 简介.cn.html",
+    "size": 485,
+    "sha256": "21192d1e57fc4961fde82c9fc32da29beb025145f330ca5a2eab2b04f2c419ed"
+  },
+  {
+    "path": "04 Strategy Library/162 Momentum Effect in Stocks in Small Portfolios/02 Method.html",
+    "size": 2851,
+    "sha256": "d0c38923f69bc650a6f8f4786670217ef13aceb38ca3a2b3fbbebc2ae5a59bd1"
+  },
+  {
+    "path": "04 Strategy Library/162 Momentum Effect in Stocks in Small Portfolios/02 方法.cn.html",
+    "size": 2661,
+    "sha256": "d932fb4f5a41ed932e8996f54cf2e17fb4fa313ccbb0a826ca2a2d8431b9a27a"
+  },
+  {
+    "path": "04 Strategy Library/162 Momentum Effect in Stocks in Small Portfolios/03 Algorithm.html",
+    "size": 564,
+    "sha256": "44b7967db66eed0defef65ae88f3f79806e7506f36c9d6295b8c064797bc92b2"
+  },
+  {
+    "path": "04 Strategy Library/162 Momentum Effect in Stocks in Small Portfolios/03 算法.cn.html",
+    "size": 564,
+    "sha256": "44b7967db66eed0defef65ae88f3f79806e7506f36c9d6295b8c064797bc92b2"
+  },
+  {
+    "path": "04 Strategy Library/162 Momentum Effect in Stocks in Small Portfolios/04 Source.html",
+    "size": 160,
+    "sha256": "2baf53bed2af24bef707ab871d461a1d8a83155c8bae92e5ceb9038d16b0675f"
+  },
+  {
+    "path": "04 Strategy Library/162 Momentum Effect in Stocks in Small Portfolios/04 来源.cn.html",
+    "size": 160,
+    "sha256": "2baf53bed2af24bef707ab871d461a1d8a83155c8bae92e5ceb9038d16b0675f"
+  },
+  {
+    "path": "04 Strategy Library/17 Forex Momentum/01 Introduction.html",
+    "size": 171,
+    "sha256": "31622da840f706bcd61d92684efa50f09d4b70ef5c5491cad5a35e1b69851505"
+  },
+  {
+    "path": "04 Strategy Library/17 Forex Momentum/02 Method.html",
+    "size": 299,
+    "sha256": "c6923a608d1d879dac016a1e3abff8b56c375938a8455c6f3874962a08dff772"
+  },
+  {
+    "path": "04 Strategy Library/17 Forex Momentum/03 Algorithm.html",
+    "size": 564,
+    "sha256": "3a0cecee3561b43c9513a8af851d83d5be05a7196114d1ac9744ecec4dd85c3a"
+  },
+  {
+    "path": "04 Strategy Library/17 Forex Momentum/04 Source.html",
+    "size": 124,
+    "sha256": "b2f6421bd3239cfda6f499c65d07e6feaae40a14ecc3342c80c8450ce730760d"
+  },
+  {
+    "path": "04 Strategy Library/18 Volatility Effect in Stocks/01 Introduction.html",
+    "size": 297,
+    "sha256": "c200564fa9ceb71cc3c34da1192a9cff41d7d968508389a7a1a88993c3d24115"
+  },
+  {
+    "path": "04 Strategy Library/18 Volatility Effect in Stocks/02 Method.html",
+    "size": 1267,
+    "sha256": "c78727604ac7ec14c4f9ccaeaee40e6c586b6e68a15500a05b6e0ee1f0b7ac07"
+  },
+  {
+    "path": "04 Strategy Library/18 Volatility Effect in Stocks/03 Algorithm.html",
+    "size": 564,
+    "sha256": "982469c42f884a4fef806b8a6cd830c4d8de5ebc623ff14415a08e61a89c2176"
+  },
+  {
+    "path": "04 Strategy Library/18 Volatility Effect in Stocks/04 Source.html",
+    "size": 160,
+    "sha256": "22fbf579b2b9427aa3bfdf68598efe219be7cf454a5cd0174828c8c8ea818ea3"
+  },
+  {
+    "path": "04 Strategy Library/19 Pairs Trading with Stocks/01 Introduction.html",
+    "size": 443,
+    "sha256": "8e81eb513a47ca10aaddd07aa2056b43e5d4027b039a6ff2842a100842d9edc5"
+  },
+  {
+    "path": "04 Strategy Library/19 Pairs Trading with Stocks/02 Method.html",
+    "size": 1600,
+    "sha256": "8ee3a6ece4927c0d502ebaf92f701b95307ddf5ac9ca7d7ce7bbae0ca33b0ec4"
+  },
+  {
+    "path": "04 Strategy Library/19 Pairs Trading with Stocks/03 Algorithm.html",
+    "size": 564,
+    "sha256": "a5e218111917cb21c51e4d891e60f553420a8402a7f7c8c6f88ec8b5bca3c702"
+  },
+  {
+    "path": "04 Strategy Library/19 Pairs Trading with Stocks/04 Source.html",
+    "size": 139,
+    "sha256": "de411b4156e23b380bd6532d0ce75d0caee3415c6dca7d381197468f712a896d"
+  },
+  {
+    "path": "04 Strategy Library/198 Exploiting Term Structure of VIX Futures/01 Introduction.html",
+    "size": 1039,
+    "sha256": "b3f8740a205d4b9e3bea7d8bf9fb51151eab2ae5af0f5ed342cb2bc0bd5d2367"
+  },
+  {
+    "path": "04 Strategy Library/198 Exploiting Term Structure of VIX Futures/02 Method.html",
+    "size": 9354,
+    "sha256": "b0e099082a12324888f0a1df72ae7d4de1d75746f5b617defebaf2bd637071d6"
+  },
+  {
+    "path": "04 Strategy Library/198 Exploiting Term Structure of VIX Futures/03 Algorithm.html",
+    "size": 572,
+    "sha256": "aaeff7b66e636a4374a4a8fc93c61fe9165523ad4a4e93fd74ea7995becdaf57"
+  },
+  {
+    "path": "04 Strategy Library/198 Exploiting Term Structure of VIX Futures/04 Source.html",
+    "size": 155,
+    "sha256": "313f75ce55c4d92bd1dc1d85d84a127907c48c788455070ca2425b0ff10556f0"
+  },
+  {
+    "path": "04 Strategy Library/199 ROA Effect within Stocks/01 Introduction.html",
+    "size": 498,
+    "sha256": "2ccbf8927ff480ae4c95f19a54550eecc7c483469d367f56ad2f777a33b97a3c"
+  },
+  {
+    "path": "04 Strategy Library/199 ROA Effect within Stocks/02 Method.html",
+    "size": 3607,
+    "sha256": "fc9b29f452c9424f25e26b77a6b1dc0ce656358d098c4249ac6fc1a58c09759a"
+  },
+  {
+    "path": "04 Strategy Library/199 ROA Effect within Stocks/03 Algorithm.html",
+    "size": 564,
+    "sha256": "36206755aa3459ae033913d4b946a991172dfb5ef7343834ff592176bf922059"
+  },
+  {
+    "path": "04 Strategy Library/199 ROA Effect within Stocks/04 Source.html",
+    "size": 139,
+    "sha256": "154a555622f89bbeadc6cae8117e61d1201bf162f6e288f58034a3284b98c007"
+  },
+  {
+    "path": "04 Strategy Library/20 Forex Carry Trade/01 Introduction.html",
+    "size": 521,
+    "sha256": "2a8a96c91aa413eee3a821ec5ca401830593b32c64d6e9b0638fe2a118106d85"
+  },
+  {
+    "path": "04 Strategy Library/20 Forex Carry Trade/01 简介.cn.html",
+    "size": 409,
+    "sha256": "a9ecc8895036513b50264a36d4cd10a58541957f143fadb8c53203cdb5eaabce"
+  },
+  {
+    "path": "04 Strategy Library/20 Forex Carry Trade/02 Method.html",
+    "size": 1143,
+    "sha256": "454518e77dc09af6b894d9e3edbbdf3c89c52ae9b4b077e0f4a7ed00fb06160b"
+  },
+  {
+    "path": "04 Strategy Library/20 Forex Carry Trade/02 方法.cn.html",
+    "size": 996,
+    "sha256": "16821b7b985aabc23cf5afa4a0305da72efbb4bb28595c9a3d6ecaf892521adf"
+  },
+  {
+    "path": "04 Strategy Library/20 Forex Carry Trade/03 Algorithm.html",
+    "size": 564,
+    "sha256": "5d5a9b759f09c73dd17231d1815001cc371e1eeedaab16baf58eeb0b49c2ca53"
+  },
+  {
+    "path": "04 Strategy Library/20 Forex Carry Trade/03 算法.cn.html",
+    "size": 564,
+    "sha256": "5d5a9b759f09c73dd17231d1815001cc371e1eeedaab16baf58eeb0b49c2ca53"
+  },
+  {
+    "path": "04 Strategy Library/20 Forex Carry Trade/04 Source.html",
+    "size": 127,
+    "sha256": "dadea53babee071ce7bd92332612b8a0ecbffd252f92e886163d27ea929bcd16"
+  },
+  {
+    "path": "04 Strategy Library/20 Forex Carry Trade/04 来源.cn.html",
+    "size": 127,
+    "sha256": "dadea53babee071ce7bd92332612b8a0ecbffd252f92e886163d27ea929bcd16"
+  },
+  {
+    "path": "04 Strategy Library/207 Value Effect within Countries/01 Introduction.html",
+    "size": 450,
+    "sha256": "329f88b66e4537d5e5b8b2bb62c42182da85d007d4280f2ed98499e6d82fe487"
+  },
+  {
+    "path": "04 Strategy Library/207 Value Effect within Countries/02 Method.html",
+    "size": 5448,
+    "sha256": "3247bee9ab5e73c7c86d09a44a12d55c606e21a39f2771d010a3c593db5a2e58"
+  },
+  {
+    "path": "04 Strategy Library/207 Value Effect within Countries/03 Algorithm.html",
+    "size": 564,
+    "sha256": "fea2877e9440b4860cec82c6f55c7b18751c27bfe76a35cef36d203055c74854"
+  },
+  {
+    "path": "04 Strategy Library/207 Value Effect within Countries/04 Source.html",
+    "size": 144,
+    "sha256": "bd4b1c2a71a7103c4ad5d57331e2200be40bda20fd1af651bb0402916614c044"
+  },
+  {
+    "path": "04 Strategy Library/21 Momentum Effect in Stocks/01 Introduction.html",
+    "size": 287,
+    "sha256": "3b5bd5f119f82289253cd4336b705002268384ab6e7b38b2c8089ffe0b888fc3"
+  },
+  {
+    "path": "04 Strategy Library/21 Momentum Effect in Stocks/02 Method.html",
+    "size": 2042,
+    "sha256": "36c8d4d79ee3edbcc3c58de8865f68f7b66e3152364a165046647fcb3b6e7a00"
+  },
+  {
+    "path": "04 Strategy Library/21 Momentum Effect in Stocks/03 Algorithm.html",
+    "size": 572,
+    "sha256": "26f1906961017f618192a4ddea491b1214d57480bbc0bd7b05b7b0b79aa39778"
+  },
+  {
+    "path": "04 Strategy Library/21 Momentum Effect in Stocks/04 Source.html",
+    "size": 139,
+    "sha256": "1ff537e4c379e50916b6122eef574f63888b7390906702b34374247a5e2ecfe1"
+  },
+  {
+    "path": "04 Strategy Library/211 Mean-Reversion Statistical Arbitrage Strategy in Stocks/01 Introduction.html",
+    "size": 1069,
+    "sha256": "c0a6f142d9503e5def68a0ca833a9524e73d18bd5e50a25b8b2a840860127695"
+  },
+  {
+    "path": "04 Strategy Library/211 Mean-Reversion Statistical Arbitrage Strategy in Stocks/02 Method.html",
+    "size": 3387,
+    "sha256": "a397034e31984c7a260e67f1df179895a2661d55cd61d8b81159536d5c3af54f"
+  },
+  {
+    "path": "04 Strategy Library/211 Mean-Reversion Statistical Arbitrage Strategy in Stocks/03 Results.html",
+    "size": 655,
+    "sha256": "84f83b23ee1918b21e91c341d1d43203ab07df563c139fbf85fe47791a17df29"
+  },
+  {
+    "path": "04 Strategy Library/211 Mean-Reversion Statistical Arbitrage Strategy in Stocks/04 Algorithm.html",
+    "size": 572,
+    "sha256": "945136aa87783ee47a2a556cb32f5e36d9cbba43a69a7bf579ada4be77f0ebdf"
+  },
+  {
+    "path": "04 Strategy Library/211 Mean-Reversion Statistical Arbitrage Strategy in Stocks/05 Reference.html",
+    "size": 180,
+    "sha256": "772688f0fd685d3f65b84d5f68b905f84ba04b8a2a30cfc4928f852b6ac4ba66"
+  },
+  {
+    "path": "04 Strategy Library/22 Momentum Effect in Country Equity Indexes/01 Introduction.html",
+    "size": 97,
+    "sha256": "a7e8257db5628aefd3c9706a55427cb66c151de50f8f590de97bd15767dfbf48"
+  },
+  {
+    "path": "04 Strategy Library/22 Momentum Effect in Country Equity Indexes/01 简介.cn.html",
+    "size": 81,
+    "sha256": "99bd8249254a05e6b3e98d09daaf65efe3b3d91c0780d2fc86891b3cc932351e"
+  },
+  {
+    "path": "04 Strategy Library/22 Momentum Effect in Country Equity Indexes/02 Method.html",
+    "size": 948,
+    "sha256": "08921362fb1b6888f18e2c3421e33c154aab502d5e795e718b0212c65bf01c97"
+  },
+  {
+    "path": "04 Strategy Library/22 Momentum Effect in Country Equity Indexes/02 方法.cn.html",
+    "size": 812,
+    "sha256": "bfeacbc1c083cc5587329d15bdf6c327d3de6ea08f28a336e7e8fb55e449b207"
+  },
+  {
+    "path": "04 Strategy Library/22 Momentum Effect in Country Equity Indexes/03 Conclusion.html",
+    "size": 346,
+    "sha256": "ce25255e2e4922e0bc5c3ee21cb8f3182f28044a4f8d29baae287a09ae57805b"
+  },
+  {
+    "path": "04 Strategy Library/22 Momentum Effect in Country Equity Indexes/03 结论.cn.html",
+    "size": 264,
+    "sha256": "f03e263ec7d4b4e57ef64420380089f15ae0c846b0d981f574696af3428817b1"
+  },
+  {
+    "path": "04 Strategy Library/22 Momentum Effect in Country Equity Indexes/04 Algorithm.html",
+    "size": 1191,
+    "sha256": "705b986ff8f87d301b4c68094811ddcc1e2b20b9091d2f0ff46b5ff38df68c89"
+  },
+  {
+    "path": "04 Strategy Library/22 Momentum Effect in Country Equity Indexes/04 算法.cn.html",
+    "size": 1178,
+    "sha256": "5cc15d96a04e7de20841cbafc4f365adf96b659c4a7844a01224a54467669272"
+  },
+  {
+    "path": "04 Strategy Library/22 Momentum Effect in Country Equity Indexes/05 Source.html",
+    "size": 155,
+    "sha256": "d76a6d9494525361e56112096d04ba6687e150dacb31a6ca0ff0d79f88eaa0bf"
+  },
+  {
+    "path": "04 Strategy Library/22 Momentum Effect in Country Equity Indexes/05 来源.cn.html",
+    "size": 155,
+    "sha256": "d76a6d9494525361e56112096d04ba6687e150dacb31a6ca0ff0d79f88eaa0bf"
+  },
+  {
+    "path": "04 Strategy Library/229 Earnings Quality Factor/01 Introduction.html",
+    "size": 358,
+    "sha256": "196da68147bc449c6577d770e461e160019ae26e771bd59dbdf7a88305402fb8"
+  },
+  {
+    "path": "04 Strategy Library/229 Earnings Quality Factor/02 Method.html",
+    "size": 9685,
+    "sha256": "1a22cfb8486e4b026ed6e27fbd860064e9574591eaab657ba922487e65f93091"
+  },
+  {
+    "path": "04 Strategy Library/229 Earnings Quality Factor/03 Algorithm.html",
+    "size": 564,
+    "sha256": "fa696b6a65b23e5950bdf7b3eaf3680e4fb71b33252838b2d47cb08952222b57"
+  },
+  {
+    "path": "04 Strategy Library/229 Earnings Quality Factor/04 Source.html",
+    "size": 138,
+    "sha256": "8f6378cd3b227c324f81abe2478b94f21c4320d403ed4c2074d46a468aadc479"
+  },
+  {
+    "path": "04 Strategy Library/23 Mean Reversion Effect in Country Equity Indexes/01 Introduction.html",
+    "size": 286,
+    "sha256": "7560b573781bf711b5d74cfefb4a5690ee6a64d308dee42f513bcc23ab2602fa"
+  },
+  {
+    "path": "04 Strategy Library/23 Mean Reversion Effect in Country Equity Indexes/02 Method.html",
+    "size": 708,
+    "sha256": "eef477e091b2f8a96dd8822b150a4d5df096f552128c9b6200dd9d348aaf8e5f"
+  },
+  {
+    "path": "04 Strategy Library/23 Mean Reversion Effect in Country Equity Indexes/03 Algorithm.html",
+    "size": 564,
+    "sha256": "34c2e508439d1b886712b68ace5ffb2f9487fd0dd8b860ac24d9c54e67a3e17f"
+  },
+  {
+    "path": "04 Strategy Library/23 Mean Reversion Effect in Country Equity Indexes/04 Source.html",
+    "size": 161,
+    "sha256": "14c0fc5c245f6eceb4a421d832ac0082510d419b028c1d8780daac55b4397d31"
+  },
+  {
+    "path": "04 Strategy Library/24 Liquidity Effect in Stocks/01 Introduction.html",
+    "size": 314,
+    "sha256": "3d058a3705113b54ee0638de8c9cfae3c206a049d856f51d0c6c2b86235fcf8e"
+  },
+  {
+    "path": "04 Strategy Library/24 Liquidity Effect in Stocks/02 Method.html",
+    "size": 1598,
+    "sha256": "11c15775d72fbac0ee84373ceac0f9c48a8e2d5281ee66175ef26b7b7c87349d"
+  },
+  {
+    "path": "04 Strategy Library/24 Liquidity Effect in Stocks/03 Algorithm.html",
+    "size": 564,
+    "sha256": "56b5a6c06978a7ab52b839d58d9636ba6202b8e5f934511d919d49ca039d0302"
+  },
+  {
+    "path": "04 Strategy Library/24 Liquidity Effect in Stocks/04 Source.html",
+    "size": 140,
+    "sha256": "33c952cd6af14e654f4c10b907da07206bd687158814cf8bee8d9db82be6fe8b"
+  },
+  {
+    "path": "04 Strategy Library/25 Volatility Risk Premium Effect/01 Introduction.html",
+    "size": 560,
+    "sha256": "69e70b9bcfe35b61e55134553d0ce093ca15aee086102899e7cfb0f08e267b7e"
+  },
+  {
+    "path": "04 Strategy Library/25 Volatility Risk Premium Effect/02 Method.html",
+    "size": 2322,
+    "sha256": "b60b2c3e7e1fb900c8267df3e5f124be42db746f67dcdb5954b4343580130af1"
+  },
+  {
+    "path": "04 Strategy Library/25 Volatility Risk Premium Effect/03 Algorithm.html",
+    "size": 564,
+    "sha256": "7539f6c5dc958e8ead035abfcbdf806675bc6df583d19cea0df51bb0de46801b"
+  },
+  {
+    "path": "04 Strategy Library/25 Volatility Risk Premium Effect/04 Source.html",
+    "size": 144,
+    "sha256": "e8be5622706a2c23b3a2aaf71e58862c6c7c31086ff5bc75482a342cf959890d"
+  },
+  {
+    "path": "04 Strategy Library/26 Quantpedia/02 Quantpedia.php",
+    "size": 4834,
+    "sha256": "a12edfb4fd3ee5f1f3c9e0382e4786cbcbad452b2a74f63c58bd20a9e2e7c12a"
+  },
+  {
+    "path": "04 Strategy Library/269 Seasonality Effect based on Same-Calendar Month Returns/01 Introduction.html",
+    "size": 1462,
+    "sha256": "24b0bc504fa8670f1c3f5fa5f1d5f5b965312d6d61d7d5a844e5acdf5975f9e0"
+  },
+  {
+    "path": "04 Strategy Library/269 Seasonality Effect based on Same-Calendar Month Returns/02 Method.html",
+    "size": 3506,
+    "sha256": "64645a9186104059c3ed855003ec8b2fd23c7079fd5c7816f9c809d6bef57e4b"
+  },
+  {
+    "path": "04 Strategy Library/269 Seasonality Effect based on Same-Calendar Month Returns/03 Results.html",
+    "size": 708,
+    "sha256": "ffcde4fc5044a9453550d2e66119987cddefc6d27f4a064c8aaa5233d9e08131"
+  },
+  {
+    "path": "04 Strategy Library/269 Seasonality Effect based on Same-Calendar Month Returns/04 Algorithm.html",
+    "size": 572,
+    "sha256": "d83e836579af70a22e953ff9c3ab89df0c6c2c6f35d9774f654aa5adb032ae13"
+  },
+  {
+    "path": "04 Strategy Library/269 Seasonality Effect based on Same-Calendar Month Returns/05 Reference.html",
+    "size": 135,
+    "sha256": "101228b4c6995e2c07f86c09542edf7771d89904217e8baf2a4ecf9813ecb01c"
+  },
+  {
+    "path": "04 Strategy Library/27 Momentum Effect in Commodities Futures/01 Introduction.html",
+    "size": 222,
+    "sha256": "fd60d186fbe3d1503c4993c5f647ae3ebba91f7fb197ce0ccd017e0d2563e83c"
+  },
+  {
+    "path": "04 Strategy Library/27 Momentum Effect in Commodities Futures/02 Method.html",
+    "size": 1883,
+    "sha256": "dc04a7fceab947f305cb732215d300d9dc916316d40577e1cbd83b3fe27da6b3"
+  },
+  {
+    "path": "04 Strategy Library/27 Momentum Effect in Commodities Futures/03 Algorithm.html",
+    "size": 572,
+    "sha256": "da78e6138834d609abff182fef4dee5bd0c66b1549910f1f830f64eabfccb0d1"
+  },
+  {
+    "path": "04 Strategy Library/27 Momentum Effect in Commodities Futures/04 Source.html",
+    "size": 144,
+    "sha256": "ff016857480e05fe68ac59f624bb65d794c5177e14d250911f248ddd34b1b23a"
+  },
+  {
+    "path": "04 Strategy Library/270 Risk Premia in Forex Markets/01 Introduction.html",
+    "size": 952,
+    "sha256": "01a8c12bb7c79de06c60fd2eff0410f8fb1bcfd307fff1c165b4617b1ba06311"
+  },
+  {
+    "path": "04 Strategy Library/270 Risk Premia in Forex Markets/02 Method.html",
+    "size": 3124,
+    "sha256": "58c5d64101117a543ae63974ecf2fc60d51a634b9b90c1b3e7c317c81b11a0a6"
+  },
+  {
+    "path": "04 Strategy Library/270 Risk Premia in Forex Markets/03 Results.html",
+    "size": 632,
+    "sha256": "b583351971765870e1f3d43156c1f92c637ddc2b0e0966bc42cdc6db77b652e2"
+  },
+  {
+    "path": "04 Strategy Library/270 Risk Premia in Forex Markets/04 Algorithm.html",
+    "size": 572,
+    "sha256": "8f3450f23436e519bf9fedbb50df28a5da3d9d1c2e614e3da34481c3fffbb2eb"
+  },
+  {
+    "path": "04 Strategy Library/270 Risk Premia in Forex Markets/05 Reference.html",
+    "size": 147,
+    "sha256": "a94bfda8897801bd9d979603ad949ec7e1217d4ed1fd52121e984a9ddb268e16"
+  },
+  {
+    "path": "04 Strategy Library/271 Price and Earning Momentum/01 Introduction.html",
+    "size": 878,
+    "sha256": "d383109dcad7b25e65d9c75452eb7f7586ecd63f7cd15f70718d0f7274fea732"
+  },
+  {
+    "path": "04 Strategy Library/271 Price and Earning Momentum/02 Method.html",
+    "size": 7802,
+    "sha256": "50c2d2c74bc2b9361fa34b5b79e4c132ccba4dda6128e4d87257e907ca060622"
+  },
+  {
+    "path": "04 Strategy Library/271 Price and Earning Momentum/03 Results.html",
+    "size": 674,
+    "sha256": "12ea5af98737014cff9b8ad7e903b7493c6f9a08da8d9f933084742116197bd5"
+  },
+  {
+    "path": "04 Strategy Library/271 Price and Earning Momentum/04 Algorithm.html",
+    "size": 572,
+    "sha256": "911091bd33fd5e9c0a3514e5e4b8c9efccf61202a93147553e62cdc49979b515"
+  },
+  {
+    "path": "04 Strategy Library/271 Price and Earning Momentum/05 Reference.html",
+    "size": 149,
+    "sha256": "27988131ea68778722ae9b56079c44f4eca79e4400b2789accaaf64de243a692"
+  },
+  {
+    "path": "04 Strategy Library/28 Small Capitalization Stocks Premium Anomaly/01 Introduction.html",
+    "size": 422,
+    "sha256": "1c7c36f050cc383c1d684d0c93c88fec49ff02e043236814a4c9d0b0967a8e17"
+  },
+  {
+    "path": "04 Strategy Library/28 Small Capitalization Stocks Premium Anomaly/02 Method.html",
+    "size": 919,
+    "sha256": "8b23ea1fab6d75503f00ec4fc2ea460dfd852d0f98302275bf1326720910db88"
+  },
+  {
+    "path": "04 Strategy Library/28 Small Capitalization Stocks Premium Anomaly/03 Algorithm.html",
+    "size": 572,
+    "sha256": "1af205359762d92bd9c1f354ca663a59c5f38b7f79eb708308271d71e15b25af"
+  },
+  {
+    "path": "04 Strategy Library/28 Small Capitalization Stocks Premium Anomaly/04 Source.html",
+    "size": 157,
+    "sha256": "3ae3f7ebd4cf9590dcf6a6ef2a15d726e30c9ab329b30fe7340752006e00f8ed"
+  },
+  {
+    "path": "04 Strategy Library/29 Term Structure Effect in Commodities/01 Introduction.html",
+    "size": 523,
+    "sha256": "56b7b243ff3bff889dab3c7ac00043a74eef6d9a082bbfa8d946befc62b039fe"
+  },
+  {
+    "path": "04 Strategy Library/29 Term Structure Effect in Commodities/02 Method.html",
+    "size": 4002,
+    "sha256": "460cc5ab5aacb18be73749c7adf2e1cea12c17a642fa4e7ec301f6cf372ad680"
+  },
+  {
+    "path": "04 Strategy Library/29 Term Structure Effect in Commodities/03 Algorithm.html",
+    "size": 1205,
+    "sha256": "cc6a70f78b13802f913eb157e801bafa46a9ffbe3c5889f75d5a54984e8733ab"
+  },
+  {
+    "path": "04 Strategy Library/29 Term Structure Effect in Commodities/04 References.html",
+    "size": 527,
+    "sha256": "59891fb7dec03ca549e0e6acf5d646b12f12334e83a95bfb68a4203017dfe9c5"
+  },
+  {
+    "path": "04 Strategy Library/29 Term Structure Effect in Commodities/05 Source.html",
+    "size": 150,
+    "sha256": "77a877dd4df5dfced2fff0f171d957e3f6d237679cce43d036790982828c1dfc"
+  },
+  {
+    "path": "04 Strategy Library/30 Momentum Effect Combined with Term Structure in Commodities/01 Introduction.html",
+    "size": 784,
+    "sha256": "ad03f0cb6a900e904cd24f0006f905afb36e77056c3e741aab552ad3f0e07995"
+  },
+  {
+    "path": "04 Strategy Library/30 Momentum Effect Combined with Term Structure in Commodities/02 Method.html",
+    "size": 3591,
+    "sha256": "c59a9992c1e9abb2ffb4e66712d72cda89d7b25538b28bd217041fb05bc556b9"
+  },
+  {
+    "path": "04 Strategy Library/30 Momentum Effect Combined with Term Structure in Commodities/03 Algorithm.html",
+    "size": 564,
+    "sha256": "347d9bc140b8151bd50f18787a4cf694314124b50079e1ddb338e3c9a85dfd60"
+  },
+  {
+    "path": "04 Strategy Library/30 Momentum Effect Combined with Term Structure in Commodities/04 Source.html",
+    "size": 173,
+    "sha256": "8f590141fa5ce754336b7224579e7e95b2e103e0d945191cf499818747ab4505"
+  },
+  {
+    "path": "04 Strategy Library/31 Book-to-Market Value Anomaly/01 Introduction.html",
+    "size": 921,
+    "sha256": "e5190f6a2f843a2dee5713d0e510f0fde31d1c4f301849e7b81c0808d7f7dd8b"
+  },
+  {
+    "path": "04 Strategy Library/31 Book-to-Market Value Anomaly/02 Method.html",
+    "size": 1526,
+    "sha256": "91c80963af653703f1953180bf470e22c1912bf0a6e005490662afd0dade8991"
+  },
+  {
+    "path": "04 Strategy Library/31 Book-to-Market Value Anomaly/03 Algorithm.html",
+    "size": 564,
+    "sha256": "88067489fe09df630dd63c32b989eeac000e167b079cf7c246e1cb886b86749c"
+  },
+  {
+    "path": "04 Strategy Library/31 Book-to-Market Value Anomaly/04 Summary.html",
+    "size": 455,
+    "sha256": "ae031e9c652c6b62483925db6c2cc0c6d96d9053019b429e3f4618b8f47b04dd"
+  },
+  {
+    "path": "04 Strategy Library/31 Book-to-Market Value Anomaly/05 Source.html",
+    "size": 144,
+    "sha256": "56604e6c6ff73233db4f4b710211183aae97ca832853fdc7cf7200ce07275afe"
+  },
+  {
+    "path": "04 Strategy Library/32 Gold Market Timing/01 Introduction.html",
+    "size": 293,
+    "sha256": "fab1c94b27dc8eebaabb8ae3e185465e80fe40aac91ebe9b07a721325f52618d"
+  },
+  {
+    "path": "04 Strategy Library/32 Gold Market Timing/02 Method.html",
+    "size": 2834,
+    "sha256": "41a61a7c33def348a15310a072776832275ccc992dfa5fe7aa5c90e6e7e28f82"
+  },
+  {
+    "path": "04 Strategy Library/32 Gold Market Timing/03 Algorithm.html",
+    "size": 564,
+    "sha256": "eb1f1eaf1e2e955980b86e4f93f70a813c3c2ae3208cf7cf6ad7030d1d1da31c"
+  },
+  {
+    "path": "04 Strategy Library/32 Gold Market Timing/04 Source.html",
+    "size": 132,
+    "sha256": "7aeb5c99768ec3a2ab218093c9bc9e69e83269e71d742260c30c3d5f406e2dd5"
+  },
+  {
+    "path": "04 Strategy Library/33 Paired Switching/01 Introduction.html",
+    "size": 527,
+    "sha256": "a77f4145534fed5dfbece1160590c7c5dfe6e8a1dccc81f1965a8867c2476a30"
+  },
+  {
+    "path": "04 Strategy Library/33 Paired Switching/02 Method.html",
+    "size": 1615,
+    "sha256": "305c96b71bf7a8197864951c7df7e9dea327329933734bdb547c6854e977ebf2"
+  },
+  {
+    "path": "04 Strategy Library/33 Paired Switching/03 Algorithm.html",
+    "size": 572,
+    "sha256": "b09284ce24eda62f50f63f419de3fa56d1c44b642167e7e30b313ec34e1376b9"
+  },
+  {
+    "path": "04 Strategy Library/33 Paired Switching/04 Source.html",
+    "size": 130,
+    "sha256": "c29de6c053aed97f2eff0daaf18f4e37feeef5835f6830cb2f2258a2bbcb78b2"
+  },
+  {
+    "path": "04 Strategy Library/34 Momentum-Short Term Reversal Strategy/01 Introduction.html",
+    "size": 623,
+    "sha256": "3004f053f0a165f9d71b84eb87cef053abff2777dedf22b73d112c1fe0120890"
+  },
+  {
+    "path": "04 Strategy Library/34 Momentum-Short Term Reversal Strategy/02 Method.html",
+    "size": 4697,
+    "sha256": "2adc6f64efa2058dd9cd44dcfcfbbfdd0b9bc1ea714573003d2545164740e03a"
+  },
+  {
+    "path": "04 Strategy Library/34 Momentum-Short Term Reversal Strategy/03 Algorithm.html",
+    "size": 564,
+    "sha256": "ff94436224f5cc4981a2b1567eef7f5e7c37862e5128f3077d0a7dd20962a2b5"
+  },
+  {
+    "path": "04 Strategy Library/34 Momentum-Short Term Reversal Strategy/04 Source.html",
+    "size": 153,
+    "sha256": "dfb36bec692f179dc664226c180ccc217cdb8ccb16294fe94c4a3b5f21b2f7d5"
+  },
+  {
+    "path": "04 Strategy Library/35 Turn of the Month in Equity Indexes/01 Introduction.html",
+    "size": 487,
+    "sha256": "15a6374d5d94e0c72142ee418170ba647b562f4cd4a00ffba72e64b061a21f95"
+  },
+  {
+    "path": "04 Strategy Library/35 Turn of the Month in Equity Indexes/02 Method.html",
+    "size": 1044,
+    "sha256": "5e54ca1eda88c87af557f952631ff2b0d7a1653641e4fec5bc029b7c81ef8cc1"
+  },
+  {
+    "path": "04 Strategy Library/35 Turn of the Month in Equity Indexes/03 Algorithm.html",
+    "size": 572,
+    "sha256": "2d141bf9170fe05470a7a21a666d2fbec3b24aa9111233d0a9cba4185bc2c213"
+  },
+  {
+    "path": "04 Strategy Library/35 Turn of the Month in Equity Indexes/04 Source.html",
+    "size": 150,
+    "sha256": "92ba3aa292aedfe555743d96082a866f530b7f01f1c09d15274daeb797e19b85"
+  },
+  {
+    "path": "04 Strategy Library/353 Fama French Five Factors/01 Introduction.html",
+    "size": 450,
+    "sha256": "a9ec61c73f1532e4afe78cb924d6c0e08dd0e9c586fb87c68a64bd4b52929cb0"
+  },
+  {
+    "path": "04 Strategy Library/353 Fama French Five Factors/02 Method.html",
+    "size": 5063,
+    "sha256": "449313c681d3f23b3f686ca5f1f8249a274b24ec4bffcabfcbfe7dd99b1858ad"
+  },
+  {
+    "path": "04 Strategy Library/353 Fama French Five Factors/03 Results.html",
+    "size": 910,
+    "sha256": "6d9162dccb6663ee8f90da96ffe4a67145d6a1978a28c86d707cacef20a1bab9"
+  },
+  {
+    "path": "04 Strategy Library/353 Fama French Five Factors/04 Algorithm.html",
+    "size": 572,
+    "sha256": "d5107d4c9638aea7846831e2fa39daf6dd0f5f99696a592b2f552bd7a320af4f"
+  },
+  {
+    "path": "04 Strategy Library/353 Fama French Five Factors/05 References.html",
+    "size": 166,
+    "sha256": "79a7a7b105b707a93da49d02a697626c8442afb626f2ed92bcafffbb2d169abb"
+  },
+  {
+    "path": "04 Strategy Library/354 Expected Idiosyncratic Skewness/01 Abstract.html",
+    "size": 775,
+    "sha256": "ac8946fc803fd3b213fd0880ef86146f88438d71c294425e1de856a9fa86e3b1"
+  },
+  {
+    "path": "04 Strategy Library/354 Expected Idiosyncratic Skewness/02 Theory.html",
+    "size": 1648,
+    "sha256": "c0d4ef1dbfafbdbf7ec474be4b8e617e81d73443bcea854099973c65b4dc0421"
+  },
+  {
+    "path": "04 Strategy Library/354 Expected Idiosyncratic Skewness/03 Data Description.html",
+    "size": 901,
+    "sha256": "aae576340a632b65d9cab0b8755a1320e7f07388d5be6450f7ee0ce90d9c2b7c"
+  },
+  {
+    "path": "04 Strategy Library/354 Expected Idiosyncratic Skewness/04 Method.html",
+    "size": 2835,
+    "sha256": "35e301104e17a824918280ba413b8585dd13b8bba38bf8d1a2dd74e10cc6dfe0"
+  },
+  {
+    "path": "04 Strategy Library/354 Expected Idiosyncratic Skewness/05 Conclusion and Future Work.html",
+    "size": 1033,
+    "sha256": "82459721ba0d1a65d213504d752f9fb6bb7d4e4a2a757c75112a14cc3e18b348"
+  },
+  {
+    "path": "04 Strategy Library/354 Expected Idiosyncratic Skewness/06 Algorithm.html",
+    "size": 571,
+    "sha256": "261e489892188ab0229e937f39966984aaad8c12e72e137038fdbb918de8ce64"
+  },
+  {
+    "path": "04 Strategy Library/354 Expected Idiosyncratic Skewness/07 References.html",
+    "size": 942,
+    "sha256": "c8c29118da4a13f6a711804ce0a774c32e7a78ae3991809184f6d5f592b2e642"
+  },
+  {
+    "path": "04 Strategy Library/354 Expected Idiosyncratic Skewness/F-F_Research_Data_Factors_daily.CSV",
+    "size": 1103470,
+    "sha256": "41893a77e5c6932562b317a8949fac036e00df5ae3d6e7d2acf6a8d8f7267945"
+  },
+  {
+    "path": "04 Strategy Library/355 Standardized Unexpected Earnings/01 Abstract.html",
+    "size": 770,
+    "sha256": "3abdf363f742bc1d14c61a8d49cfa1e022581f6b2d8b23aa8eefa398de656e92"
+  },
+  {
+    "path": "04 Strategy Library/355 Standardized Unexpected Earnings/02 Theory.html",
+    "size": 561,
+    "sha256": "ccc52d1f84924534421f18b02763f3c3d122e51aa698224bbc9710a8c3b6424f"
+  },
+  {
+    "path": "04 Strategy Library/355 Standardized Unexpected Earnings/03 Method.html",
+    "size": 5739,
+    "sha256": "844e05575a4811bd8c346e290407e7317eb3254a2155cd1b2a7a3b90b75f5edf"
+  },
+  {
+    "path": "04 Strategy Library/355 Standardized Unexpected Earnings/04 Conclusion and Future Work.html",
+    "size": 1175,
+    "sha256": "13630158b4024ae0d5b0fcc69477e3b92e6e8da0bbcecec88f1f2c5f13f59038"
+  },
+  {
+    "path": "04 Strategy Library/355 Standardized Unexpected Earnings/05 Algorithm.html",
+    "size": 571,
+    "sha256": "80e341733fa8298d5127546ed9d7efac673bd51813c82c0297141059a065e4f6"
+  },
+  {
+    "path": "04 Strategy Library/355 Standardized Unexpected Earnings/06 References.html",
+    "size": 407,
+    "sha256": "68b8b90b06c3c01a4a6073e8a7277d64287e890f0ea00af08bc92a93506c1bd8"
+  },
+  {
+    "path": "04 Strategy Library/356 Improved Momentum Strategy on Commodities Futures/01 Abstract.html",
+    "size": 643,
+    "sha256": "b69f0ea5c946127e30b0c686719d6277c29a0d5e678b77192ee0deba29d4e7a8"
+  },
+  {
+    "path": "04 Strategy Library/356 Improved Momentum Strategy on Commodities Futures/02 Introduction.html",
+    "size": 2242,
+    "sha256": "f14f3048b77e32dea9003dfeca2daabd637387c813722cbd3962e58431656922"
+  },
+  {
+    "path": "04 Strategy Library/356 Improved Momentum Strategy on Commodities Futures/03 TSMOM-CF Theory.html",
+    "size": 4118,
+    "sha256": "3f8255c30b942b7ae71860db2e38c8236854234e93f9dc96d2f0b5dba8d0138e"
+  },
+  {
+    "path": "04 Strategy Library/356 Improved Momentum Strategy on Commodities Futures/04 Method.html",
+    "size": 7950,
+    "sha256": "c71ca37740e4759d2bb1c41028ea9b67bda8a79a39c3db5d0085267b5f88f566"
+  },
+  {
+    "path": "04 Strategy Library/356 Improved Momentum Strategy on Commodities Futures/05 Summary.html",
+    "size": 463,
+    "sha256": "6ceaa2101bbd77048b2cdb6922bcb38181e3cfe7a3af227698d22c4c85cfd42c"
+  },
+  {
+    "path": "04 Strategy Library/356 Improved Momentum Strategy on Commodities Futures/06 Algorithm.html",
+    "size": 572,
+    "sha256": "b82e1b3db29a76f86674675e92f23ea31c7f788b4eae25b6e620240f7da49ab5"
+  },
+  {
+    "path": "04 Strategy Library/356 Improved Momentum Strategy on Commodities Futures/07 References.html",
+    "size": 591,
+    "sha256": "47f8ecc8cac6b66b78afd6efd3c0b57326bceb5bd5c2f0afa0f8ceb90e33c86f"
+  },
+  {
+    "path": "04 Strategy Library/357 Commodities Futures Trend Following/01 Abstract.html",
+    "size": 272,
+    "sha256": "afcceba042b686d56dd1ffe11f6263066f43d1f0a7826fd1a18512f949ad3c4f"
+  },
+  {
+    "path": "04 Strategy Library/357 Commodities Futures Trend Following/02 Introduction.html",
+    "size": 1769,
+    "sha256": "56d63a2cbb910c9bb435aa035304f9a1cbdc45b780f24219398dc935e15c9e26"
+  },
+  {
+    "path": "04 Strategy Library/357 Commodities Futures Trend Following/03 Method.html",
+    "size": 5504,
+    "sha256": "9065c3779f5daa6383f25a914fbd43c6843be5a3988f6dec395491316f3fc3bf"
+  },
+  {
+    "path": "04 Strategy Library/357 Commodities Futures Trend Following/04 Summary.html",
+    "size": 805,
+    "sha256": "111f2368b69fd505b8094f036b9decc66ccb31bf71499a31dc292a1d1ce1322a"
+  },
+  {
+    "path": "04 Strategy Library/357 Commodities Futures Trend Following/05 Algorithm.html",
+    "size": 572,
+    "sha256": "80b37110678660c8369423917f69b1c1ea131bd2db30e9bdf93c769701d1b5c6"
+  },
+  {
+    "path": "04 Strategy Library/357 Commodities Futures Trend Following/06 References.html",
+    "size": 200,
+    "sha256": "e7f5b90b479c7fa6ec42821a6d58ced4de9601de10531b11be3af2fe1816ae7f"
+  },
+  {
+    "path": "04 Strategy Library/36 Sentiment and Style Rotation Effect in Stocks/01 Introduction.html",
+    "size": 687,
+    "sha256": "5ec13e0f8b738f9aebc0e0ab5080a48d037491b359818dab1794526474d3e85b"
+  },
+  {
+    "path": "04 Strategy Library/36 Sentiment and Style Rotation Effect in Stocks/01 简介.cn.html",
+    "size": 511,
+    "sha256": "7b20dc283e6d94acdd2baedd776433a5c72d27e7861d49034947319398a72290"
+  },
+  {
+    "path": "04 Strategy Library/36 Sentiment and Style Rotation Effect in Stocks/02 Method.html",
+    "size": 7503,
+    "sha256": "adc23714da6c1afe7126321332616f9e256cffec35a727c9d6cdabbcd5d76c99"
+  },
+  {
+    "path": "04 Strategy Library/36 Sentiment and Style Rotation Effect in Stocks/02 方法.cn.html",
+    "size": 7341,
+    "sha256": "401f24e1a65d4279cfd8e887ca76c37bfe61576344089955f6f98306f2782772"
+  },
+  {
+    "path": "04 Strategy Library/36 Sentiment and Style Rotation Effect in Stocks/03 Algorithm.html",
+    "size": 564,
+    "sha256": "bd63785b039a77eb94e35d98e53ac6db07c2bcd6051e7d6f27b61fa62151dd97"
+  },
+  {
+    "path": "04 Strategy Library/36 Sentiment and Style Rotation Effect in Stocks/03 算法.cn.html",
+    "size": 564,
+    "sha256": "bd63785b039a77eb94e35d98e53ac6db07c2bcd6051e7d6f27b61fa62151dd97"
+  },
+  {
+    "path": "04 Strategy Library/36 Sentiment and Style Rotation Effect in Stocks/04 Source.html",
+    "size": 159,
+    "sha256": "6e9ca2a8797cea9bb029404b044a77e9563eb6cf9438325935c183a29574c659"
+  },
+  {
+    "path": "04 Strategy Library/36 Sentiment and Style Rotation Effect in Stocks/04 来源.cn.html",
+    "size": 159,
+    "sha256": "6e9ca2a8797cea9bb029404b044a77e9563eb6cf9438325935c183a29574c659"
+  },
+  {
+    "path": "04 Strategy Library/37 Momentum and State of Market Filters/01 Introduction.html",
+    "size": 643,
+    "sha256": "8cc2a76ea1beaac6bb1fc2dd5e880c8e436af26a524dd6b295e61d2fcee3b1f7"
+  },
+  {
+    "path": "04 Strategy Library/37 Momentum and State of Market Filters/02 Method.html",
+    "size": 6209,
+    "sha256": "7a977c7e68d0e6cc90affada1e19b6ad45b7af7d87d1fe7a8ba0185bc1b00f3e"
+  },
+  {
+    "path": "04 Strategy Library/37 Momentum and State of Market Filters/03 Algorithm.html",
+    "size": 564,
+    "sha256": "a8e9eb6ed6bc1de1814919a8ef0eed47048654e424b98f5d15e1ca6dcf5cec5b"
+  },
+  {
+    "path": "04 Strategy Library/37 Momentum and State of Market Filters/04 Source.html",
+    "size": 162,
+    "sha256": "027bf7813ec4f28f377e708eba8f3387d9ac6f9b1b0bc6a048018097a3703fc2"
+  },
+  {
+    "path": "04 Strategy Library/38 Accrual Anomaly/01 Introduction.html",
+    "size": 642,
+    "sha256": "170fce2ea8aae4a7c0de62678fbec08aee202e6620c71285f65c80739938a671"
+  },
+  {
+    "path": "04 Strategy Library/38 Accrual Anomaly/02 Method.html",
+    "size": 4232,
+    "sha256": "f2e86511d9aab9b198bb91b536e5a64bbfa333fdc32482a059140783255a49d9"
+  },
+  {
+    "path": "04 Strategy Library/38 Accrual Anomaly/03 Algorithm.html",
+    "size": 572,
+    "sha256": "922b8a15433df3eb995ed5bf5f2f418d88407df012545173608c0b966f702a6d"
+  },
+  {
+    "path": "04 Strategy Library/38 Accrual Anomaly/04 Source.html",
+    "size": 129,
+    "sha256": "3eebd6d7b5219edeae5a66103b4a998a6c8ca8e3395a014d8c2db7163b31d595"
+  },
+  {
+    "path": "04 Strategy Library/39 Asset Growth Effect/01 Introduction.html",
+    "size": 1018,
+    "sha256": "0ce70d4da950e3999c1042376732376ae5da6bb54d53c93f757bf35a31e8ce59"
+  },
+  {
+    "path": "04 Strategy Library/39 Asset Growth Effect/01 简介.cn.html",
+    "size": 810,
+    "sha256": "b6811c3b590cd41d4357205472d16af141d0672c15741cc31be8df194d06a235"
+  },
+  {
+    "path": "04 Strategy Library/39 Asset Growth Effect/02 Method.html",
+    "size": 2925,
+    "sha256": "5105e00f9afaada16f17b0932a46eac08623a9650445cb50c0edee6d91f4d630"
+  },
+  {
+    "path": "04 Strategy Library/39 Asset Growth Effect/02 方法.cn.html",
+    "size": 2859,
+    "sha256": "246b2f2776531f39a8bfb4542474e808a702ad3d130f01727c8572b9a1bb186c"
+  },
+  {
+    "path": "04 Strategy Library/39 Asset Growth Effect/03 Algorithm.html",
+    "size": 572,
+    "sha256": "7415643da63376d9ddc7008cf999fa8cbc21a632f5ab9bd145fa72e25222898a"
+  },
+  {
+    "path": "04 Strategy Library/39 Asset Growth Effect/03 算法.cn.html",
+    "size": 572,
+    "sha256": "7415643da63376d9ddc7008cf999fa8cbc21a632f5ab9bd145fa72e25222898a"
+  },
+  {
+    "path": "04 Strategy Library/39 Asset Growth Effect/04 Source.html",
+    "size": 133,
+    "sha256": "152a28759bc3fe2c3a7eb1d32607c0adf88dc7fd14172c88d4c6ce61e5c74c7f"
+  },
+  {
+    "path": "04 Strategy Library/39 Asset Growth Effect/04 来源.cn.html",
+    "size": 133,
+    "sha256": "152a28759bc3fe2c3a7eb1d32607c0adf88dc7fd14172c88d4c6ce61e5c74c7f"
+  },
+  {
+    "path": "04 Strategy Library/40 Pairs Trading with Country ETFs/01 Introduction.html",
+    "size": 642,
+    "sha256": "54bbd42cb19077e3a3d257e3c9befc111091c2a7b5717cb0e194cbdd1d50eccf"
+  },
+  {
+    "path": "04 Strategy Library/40 Pairs Trading with Country ETFs/02 Method.html",
+    "size": 4201,
+    "sha256": "784539f8897c56268152a13222c7d88838353d8062d3b91da1afdf1297bbece7"
+  },
+  {
+    "path": "04 Strategy Library/40 Pairs Trading with Country ETFs/03 Algorithm.html",
+    "size": 564,
+    "sha256": "f9dd9f3aa6e09b645519484df42d1167e6eba7ab24bf441e62cdf189bf35c0e2"
+  },
+  {
+    "path": "04 Strategy Library/40 Pairs Trading with Country ETFs/04 Source.html",
+    "size": 145,
+    "sha256": "1a759d0c5a2a4ac8cace8a29f5b9433543a8ba71353a2d85828576ff77dbccb1"
+  },
+  {
+    "path": "04 Strategy Library/58 VIX Predicts Stock Index Returns/01 Introduction.html",
+    "size": 618,
+    "sha256": "bc9fa74393b1d71a64a980645121f1e77204af769958afebea1bc8495dd6e611"
+  },
+  {
+    "path": "04 Strategy Library/58 VIX Predicts Stock Index Returns/02 Method.html",
+    "size": 2430,
+    "sha256": "bf2d97c74ccd629e83aa4fba7cbe49cb94ab5fa633f6c9d59b8d6a155d313269"
+  },
+  {
+    "path": "04 Strategy Library/58 VIX Predicts Stock Index Returns/03 Algorithm.html",
+    "size": 564,
+    "sha256": "74a0e211ee19db501cd8bb49274ebf0694cb3311ffaeb7cb1c5a262c9595ff34"
+  },
+  {
+    "path": "04 Strategy Library/58 VIX Predicts Stock Index Returns/04 Source.html",
+    "size": 146,
+    "sha256": "56c0cffcd32d48d95c9ff345d18620b1015ef62983325c067f9c0a62200666be"
+  },
+  {
+    "path": "04 Strategy Library/61 Lunar Cycle in Equity Market/01 Introduction.html",
+    "size": 536,
+    "sha256": "94784c6db7eaf557c0b439b06b8f754eee9d95577df438bb073f934fa6470605"
+  },
+  {
+    "path": "04 Strategy Library/61 Lunar Cycle in Equity Market/02 Method.html",
+    "size": 2721,
+    "sha256": "fef5a28532851f8a6d4b2528e3ef97bb55a5498ef858c4ea766f3aa2c296b3f8"
+  },
+  {
+    "path": "04 Strategy Library/61 Lunar Cycle in Equity Market/03 Algorithm.html",
+    "size": 564,
+    "sha256": "447e8c8ba217ccc5e2fa2d35435f590708517eb1cfb9fde98f6ad3537f3d56d2"
+  },
+  {
+    "path": "04 Strategy Library/61 Lunar Cycle in Equity Market/04 Source.html",
+    "size": 142,
+    "sha256": "523467020b844aecb29e957b45c8d6a01db218b610eeaacf4521d346c68e8442"
+  },
+  {
+    "path": "04 Strategy Library/66 Combining Momentum Effect with Volume/01 Introduction.html",
+    "size": 369,
+    "sha256": "a7a02e38126bdb815330392fa7d2c71c2ca6ceeb4a56afccf5d8199fec11140a"
+  },
+  {
+    "path": "04 Strategy Library/66 Combining Momentum Effect with Volume/02 Method.html",
+    "size": 5373,
+    "sha256": "2b2b1c53feca5dda2f65d10a39e42c8551e181afbbcaff647ef82f7ee66094c8"
+  },
+  {
+    "path": "04 Strategy Library/66 Combining Momentum Effect with Volume/03 Algorithm.html",
+    "size": 564,
+    "sha256": "65b5124bac4fe03ab66d4fc108ab98218e271a9ff0f9aef986be3014cc6af94d"
+  },
+  {
+    "path": "04 Strategy Library/66 Combining Momentum Effect with Volume/04 Source.html",
+    "size": 151,
+    "sha256": "1db173f6e9c544e5c98f10b5979d264f75696275689bb3a29c27b436187854ed"
+  },
+  {
+    "path": "04 Strategy Library/71 Short Term Reversal with Futures/01 Introduction.html",
+    "size": 416,
+    "sha256": "6e4122a8b156d5008fcce2bace7db1cb1a9382e18d97c72aaa342d2b793ca531"
+  },
+  {
+    "path": "04 Strategy Library/71 Short Term Reversal with Futures/02 Method.html",
+    "size": 5629,
+    "sha256": "1fcdff963a28dbdfe81e7f81cd8993055cc89ff25835d113fcd3fdd46cf5a362"
+  },
+  {
+    "path": "04 Strategy Library/71 Short Term Reversal with Futures/03 Algorithm.html",
+    "size": 564,
+    "sha256": "a9941d1f463eb75422638226fab3ffde1ba7917226dedb89dccd922269ae2ba5"
+  },
+  {
+    "path": "04 Strategy Library/71 Short Term Reversal with Futures/04 Source.html",
+    "size": 146,
+    "sha256": "4c87147235471c6d79f987ea959bf2ffedd7b63acc6ff3f3f62133311288b6b7"
+  },
+  {
+    "path": "04 Strategy Library/77 Beta Factors in Stocks/01 Introduction.html",
+    "size": 964,
+    "sha256": "da926576da785126582e7be4df55112fe1c96ac280fd027505bc69bb4d5b52f0"
+  },
+  {
+    "path": "04 Strategy Library/77 Beta Factors in Stocks/02 Method.html",
+    "size": 5114,
+    "sha256": "ccd6d03168058dec6798c167bbd2d735bc123f558fba562103c98318fcbcae41"
+  },
+  {
+    "path": "04 Strategy Library/77 Beta Factors in Stocks/03 Algorithm.html",
+    "size": 564,
+    "sha256": "cd4e5f99c93a6bca2a4c2080d39d16a41f8724967aeaf794b387f1c929df0381"
+  },
+  {
+    "path": "04 Strategy Library/77 Beta Factors in Stocks/04 Source.html",
+    "size": 135,
+    "sha256": "ae51e358b2732924cf8aa7f4ab51db0739c277eb2c27dc92b064aacb35c30588"
+  },
+  {
+    "path": "04 Strategy Library/78 Beta Factor in Country Equity Indexes/01 Introduction.html",
+    "size": 455,
+    "sha256": "b8ea4b1fc114233dbe4b84fe02524bfab145928cd58de2c7ae422e58baebce7f"
+  },
+  {
+    "path": "04 Strategy Library/78 Beta Factor in Country Equity Indexes/02 Method.html",
+    "size": 5851,
+    "sha256": "6c4bccfe8de13a1337bc84f5f59734ca8f9577ed78c066acb4897359aafcc3aa"
+  },
+  {
+    "path": "04 Strategy Library/78 Beta Factor in Country Equity Indexes/03 Algorithm.html",
+    "size": 564,
+    "sha256": "f9aa7bdf797309bca353aa6aa8acaac52eef744a4b3ea48c1bcc3086d1f1d339"
+  },
+  {
+    "path": "04 Strategy Library/78 Beta Factor in Country Equity Indexes/04 Source.html",
+    "size": 151,
+    "sha256": "6f59cec04ef7b40378dd0270da00af47c6870e08714d3aa16778e35e2d6c43fd"
+  },
+  {
+    "path": "04 Strategy Library/83 Pre-Holiday Effect/01 Introduction.html",
+    "size": 602,
+    "sha256": "4faf8e8e2d0a2a85f5a2186e04b78f4e41d053b6066eaf1f7ff8f7de12c40439"
+  },
+  {
+    "path": "04 Strategy Library/83 Pre-Holiday Effect/02 Method.html",
+    "size": 1441,
+    "sha256": "5f637002be237fcc1cf53ef1a7401f6a3ca931d08a75a335ef6fde716261978d"
+  },
+  {
+    "path": "04 Strategy Library/83 Pre-Holiday Effect/03 Algorithm.html",
+    "size": 564,
+    "sha256": "c9ebf136445cf454cc5cad1e1155d913e931a8ace556ea0629457221e1f95e2f"
+  },
+  {
+    "path": "04 Strategy Library/83 Pre-Holiday Effect/04 Source.html",
+    "size": 132,
+    "sha256": "2e45335863c8fc0c01d20f9e4b39f95c46c92a829f35ad8616ab0647b1840524"
+  },
+  {
+    "path": "04 Strategy Library/85 Momentum in Mutual Fund Returns/01 Introduction.html",
+    "size": 752,
+    "sha256": "6fb55c0f2dd70aab91547c4ff8d7988a6ae925a1126f08d557f160d577115df4"
+  },
+  {
+    "path": "04 Strategy Library/85 Momentum in Mutual Fund Returns/02 Method.html",
+    "size": 7281,
+    "sha256": "99236e4aa1990d1b9031b0e7aa58b7524f85d19dfa28ab1f6cdba88d7fd894ad"
+  },
+  {
+    "path": "04 Strategy Library/85 Momentum in Mutual Fund Returns/03 Algorithm.html",
+    "size": 572,
+    "sha256": "1213873d85e00df227d390aeb887fd021592ff8a4ebc8f73bdcc112777622df5"
+  },
+  {
+    "path": "04 Strategy Library/85 Momentum in Mutual Fund Returns/04 Relative Performance.html",
+    "size": 4051,
+    "sha256": "0115d365cdfb977ef6477ac8e20b0c2ee51f3b3eb675b3ec7c5f17d60c187f9f"
+  },
+  {
+    "path": "04 Strategy Library/85 Momentum in Mutual Fund Returns/05 Market & Competition Qualification.html",
+    "size": 586,
+    "sha256": "7dc0e3355900a411cb666e806e315babe97e5fbafd8b7a9b76dc8973d65d3748"
+  },
+  {
+    "path": "04 Strategy Library/85 Momentum in Mutual Fund Returns/06 Conclusion.html",
+    "size": 862,
+    "sha256": "786735a2a1ca0b75dc4b399c773a8d6ab77b87b7c212b080a752a83ebab9db18"
+  },
+  {
+    "path": "04 Strategy Library/85 Momentum in Mutual Fund Returns/07 References.html",
+    "size": 246,
+    "sha256": "d59f439258439f59b1b427831ba9e63c7c180cb28456f12f1ff3f09c9ab1305b"
+  },
+  {
+    "path": "04 Strategy Library/91 Momentum and Style Rotation Effect/01 Introduction.html",
+    "size": 618,
+    "sha256": "9de18de7f60daf2deb440841db956e8168fb681049f0a93cd9ac7b9cbef9c0e1"
+  },
+  {
+    "path": "04 Strategy Library/91 Momentum and Style Rotation Effect/02 Method.html",
+    "size": 1995,
+    "sha256": "458889588aef19623760bb9e0943f24df59bae2bd6f3ee6ca13630b06dda2268"
+  },
+  {
+    "path": "04 Strategy Library/91 Momentum and Style Rotation Effect/03 Algorithm.html",
+    "size": 572,
+    "sha256": "6d57aec17f67c220e04d6bf08588811550b387487cb7940ea966f14af69294c8"
+  },
+  {
+    "path": "04 Strategy Library/91 Momentum and Style Rotation Effect/04 Source.html",
+    "size": 148,
+    "sha256": "df8bbeb8d665ea19e6980146d1b7330e4620bf639df50cfdf5e8b5a10ee02a69"
+  },
+  {
+    "path": "04 Strategy Library/92 Price Earnings Anomaly/01 Introduction.html",
+    "size": 576,
+    "sha256": "e24d7ef3db1881666aa68b13d775084f92bd425ce2d1c5104cacca962e191a0a"
+  },
+  {
+    "path": "04 Strategy Library/92 Price Earnings Anomaly/02 Method.html",
+    "size": 1764,
+    "sha256": "ec1bc575bdc9eb509cf096db04f8e4e35eee856a9a1e86e1f96c2bf697d9a6ca"
+  },
+  {
+    "path": "04 Strategy Library/92 Price Earnings Anomaly/03 Algorithm.html",
+    "size": 572,
+    "sha256": "1b1dd324fc93a9ddf69ee9de173e6da02dfff87e6e21ea8a13b9839d293eadd2"
+  },
+  {
+    "path": "04 Strategy Library/92 Price Earnings Anomaly/04 Summary.html",
+    "size": 1223,
+    "sha256": "10c0dc5b2c525f8f8f51da391f471bc613dd565fcdbe04027e58212b39ca291f"
+  },
+  {
+    "path": "04 Strategy Library/92 Price Earnings Anomaly/05 References.html",
+    "size": 476,
+    "sha256": "7e24785fd3711e56f47178b2aa8690dc9cb4a8923c64b59ff7b739557f7250ad"
+  },
+  {
+    "path": "05 Introduction to Financial Python[]/01 Data Types and Data Structures/01 Data Types and Data Structures.ipynb",
+    "size": 9143,
+    "sha256": "b39fa78131824934f9c8d3a0000ec5e9cd8c8a970b4d26a08d54633f367ac225"
+  },
+  {
+    "path": "05 Introduction to Financial Python[]/01 Data Types and Data Structures/01 Introduction.html",
+    "size": 261,
+    "sha256": "83898b23f6ddb552a5b95f1b8e59f1fa94a1116dac87d7f8db8d29eb790933d1"
+  },
+  {
+    "path": "05 Introduction to Financial Python[]/01 Data Types and Data Structures/02 Basic Variable Types.html",
+    "size": 2047,
+    "sha256": "e644248645b5fd1c50b942b433e6aea95e27ae561d0f45e634f3bb3c503eaa78"
+  },
+  {
+    "path": "05 Introduction to Financial Python[]/01 Data Types and Data Structures/03 Basic Math Operations.html",
+    "size": 372,
+    "sha256": "ab3966355117a7cf9ca505a0a2774043512c8c7f99c6282bcd10713ef3cad3d2"
+  },
+  {
+    "path": "05 Introduction to Financial Python[]/01 Data Types and Data Structures/04 Data Collections.html",
+    "size": 4919,
+    "sha256": "df0353a40a881b91f6e1347faa35966d480ee057eb5c5103661cedafbf8cdd97"
+  },
+  {
+    "path": "05 Introduction to Financial Python[]/01 Data Types and Data Structures/05 Common String Operations.html",
+    "size": 1937,
+    "sha256": "864bd4f7325261ee69961a564e1e0729f4d9065750b189ecba15072731d83ee2"
+  },
+  {
+    "path": "05 Introduction to Financial Python[]/01 Data Types and Data Structures/06 Summary.html",
+    "size": 253,
+    "sha256": "01be9a2ac8fca6312370353f1c1a00cb20363c5bc35ba38014bd1af31ef003e4"
+  },
+  {
+    "path": "05 Introduction to Financial Python[]/02 Logical Operations and Loops/01 Introduction.html",
+    "size": 199,
+    "sha256": "d3a60cafc715a00216703b6c2b355ea8bbd502c1d88ae028ab64a20a0a6af6e5"
+  },
+  {
+    "path": "05 Introduction to Financial Python[]/02 Logical Operations and Loops/02 Logical Operations and Loops.ipynb",
+    "size": 7376,
+    "sha256": "45d1ca99a3b7a1d1c4e6a610b385490fecc5d20ae424107710399a9fbc1ec4df"
+  },
+  {
+    "path": "05 Introduction to Financial Python[]/02 Logical Operations and Loops/02 Logical Operations.html",
+    "size": 1734,
+    "sha256": "7669a9743fcd1ac0ca75f10b740553e3c889fb157a3a22b6656ec4646de543a4"
+  },
+  {
+    "path": "05 Introduction to Financial Python[]/02 Logical Operations and Loops/03 If Statement.html",
+    "size": 1403,
+    "sha256": "dea8da8128e87d84349c98b3e4207c1785e08235ba131f80603fdba211c146ab"
+  },
+  {
+    "path": "05 Introduction to Financial Python[]/02 Logical Operations and Loops/04 Loop Structure.html",
+    "size": 2504,
+    "sha256": "7e90ffdf05870021bf3de735db662a65b1e49ce37f1e1a582f9dcdf5dde98d8c"
+  },
+  {
+    "path": "05 Introduction to Financial Python[]/02 Logical Operations and Loops/05 List Comprehension.html",
+    "size": 2006,
+    "sha256": "1ff11900b6d13018d0486d29a886c937e8564ba04f45156dc4f48bdbf69c7a5e"
+  },
+  {
+    "path": "05 Introduction to Financial Python[]/02 Logical Operations and Loops/06 Summary.html",
+    "size": 235,
+    "sha256": "3aa11cc91b5ec24a5d6a0ac425a86851172637c9196b25dde38579a744d1b69e"
+  },
+  {
+    "path": "05 Introduction to Financial Python[]/03 Functions and Objective-Oriented Programming/01 Introduction.html",
+    "size": 248,
+    "sha256": "a2f02e0a9ec80d572f119679b991432fb385f874f8637b2e594b212d19047d9a"
+  },
+  {
+    "path": "05 Introduction to Financial Python[]/03 Functions and Objective-Oriented Programming/02 Functions.html",
+    "size": 893,
+    "sha256": "14e15b0a10a1e6be22e8724b38942883318288d161ff4685ecf6a181217895e5"
+  },
+  {
+    "path": "05 Introduction to Financial Python[]/03 Functions and Objective-Oriented Programming/03 Built-in Function.html",
+    "size": 3693,
+    "sha256": "d3c04aadc81f119383c879a225ad8f5ab5b0cfd8f5add0e9254eaa8084a55c32"
+  },
+  {
+    "path": "05 Introduction to Financial Python[]/03 Functions and Objective-Oriented Programming/03 Functions and Objective-Oriented Programming.ipynb",
+    "size": 8338,
+    "sha256": "f5c029a9c762a930cf92bbb11fa006de51c72f09531e52ce6bc37a5d379cff6d"
+  },
+  {
+    "path": "05 Introduction to Financial Python[]/03 Functions and Objective-Oriented Programming/04 Object-Oriented Programming.html",
+    "size": 4308,
+    "sha256": "cc6b609341c3abdf1748294f414c37613228e7764fc15dbd38f99b28f3f86b90"
+  },
+  {
+    "path": "05 Introduction to Financial Python[]/03 Functions and Objective-Oriented Programming/05 Summary.html",
+    "size": 381,
+    "sha256": "a1d938f22aae9c0ca7431043983c328d70a2195e8d9904531ea7d7b839e1d8cc"
+  },
+  {
+    "path": "05 Introduction to Financial Python[]/04 NumPy and Basic Pandas/01 Introduction.html",
+    "size": 113,
+    "sha256": "fb66fcb16530e30f59f76ac55040aeeb579f1bb823640364d64905eab6547cf9"
+  },
+  {
+    "path": "05 Introduction to Financial Python[]/04 NumPy and Basic Pandas/02 NumPy.html",
+    "size": 2885,
+    "sha256": "830e1b99d58581c22f5ce5536fbf2c74c0e4290f03522b2e3d6bb00b58bf4e03"
+  },
+  {
+    "path": "05 Introduction to Financial Python[]/04 NumPy and Basic Pandas/03 Pandas.html",
+    "size": 5505,
+    "sha256": "9c08c3d3007c9759787a23722944d472966ebdeb2dbb0cf15b652b215f139760"
+  },
+  {
+    "path": "05 Introduction to Financial Python[]/04 NumPy and Basic Pandas/04 NumPy and Basic Pandas.ipynb",
+    "size": 9033,
+    "sha256": "a1a93392830b01f982ba6c406218f45667df294606afcaf914bce8274cc322e7"
+  },
+  {
+    "path": "05 Introduction to Financial Python[]/04 NumPy and Basic Pandas/04 Summary.html",
+    "size": 244,
+    "sha256": "65866a6200addaeea0bf167770bf632a8143ea54ed087d410a4ee46f0ba8c68e"
+  },
+  {
+    "path": "05 Introduction to Financial Python[]/05 Pandas-Resampling and DataFrame/01 Introduction.html",
+    "size": 197,
+    "sha256": "7dff27c5440a9759c678af0f7d47d51157c2556b6a8192551fb8b69e6c786a3f"
+  },
+  {
+    "path": "05 Introduction to Financial Python[]/05 Pandas-Resampling and DataFrame/02 Fetching Data.html",
+    "size": 2234,
+    "sha256": "7a974bfd9f6c8bcbf6d1b375f287ce3547423c329cead4865bc86366b049d595"
+  },
+  {
+    "path": "05 Introduction to Financial Python[]/05 Pandas-Resampling and DataFrame/03 Resampling.html",
+    "size": 5691,
+    "sha256": "da77eab9b0bc68936bb0a1ca4c7b7a844f8b00c504cc102d8e3a33d20b5a188a"
+  },
+  {
+    "path": "05 Introduction to Financial Python[]/05 Pandas-Resampling and DataFrame/04 DataFrame.html",
+    "size": 22750,
+    "sha256": "7775275b945a1cb43a3251f80a0b8416521c16f85513998d325f8a5c848ad685"
+  },
+  {
+    "path": "05 Introduction to Financial Python[]/05 Pandas-Resampling and DataFrame/05 Pandas-Resampling and DataFrame.ipynb",
+    "size": 49655,
+    "sha256": "070fffaf3d12706af11bb43e43848bda7280d26026a8e45cee9e5ead68996632"
+  },
+  {
+    "path": "05 Introduction to Financial Python[]/05 Pandas-Resampling and DataFrame/05 Summary.html",
+    "size": 395,
+    "sha256": "c238fcba33d7c2f1d1c59126c0655d65282ec4adac03b7583aa9a14a6ddf7d60"
+  },
+  {
+    "path": "05 Introduction to Financial Python[]/06 Rate of Return, Mean and Variance/01 Introduction.html",
+    "size": 341,
+    "sha256": "f5267bb748cb541c179a926dfb01bd53dd2a95d890e35ad80ad588f49745bf08"
+  },
+  {
+    "path": "05 Introduction to Financial Python[]/06 Rate of Return, Mean and Variance/02 Rate of Return.html",
+    "size": 6865,
+    "sha256": "87ffc7240411d20b26516df4c8af1372e318f8352e8977a891094e99da9709fc"
+  },
+  {
+    "path": "05 Introduction to Financial Python[]/06 Rate of Return, Mean and Variance/03 Mean.html",
+    "size": 1296,
+    "sha256": "cacbcdf7d33ac12125b73d65422e52edcd36a87c0462efff1e89452c96ff700d"
+  },
+  {
+    "path": "05 Introduction to Financial Python[]/06 Rate of Return, Mean and Variance/04 Variance and Standard Deviation.html",
+    "size": 1043,
+    "sha256": "5c4d729aef0ed471d10a6db6b2c86b30459b128684ffc1f47d351aff69330419"
+  },
+  {
+    "path": "05 Introduction to Financial Python[]/06 Rate of Return, Mean and Variance/05 Summary.html",
+    "size": 334,
+    "sha256": "c458de1307c7324c650439e8c9df3b6fc737a7c0e15392d9bc5b519ee6d96322"
+  },
+  {
+    "path": "05 Introduction to Financial Python[]/06 Rate of Return, Mean and Variance/06 Rate of Return, Mean and Variance.ipynb",
+    "size": 3759,
+    "sha256": "baf25818b509a6a086ee7cd91ae754eb4cc85eff93ccace6045ba93051f3a1be"
+  },
+  {
+    "path": "05 Introduction to Financial Python[]/07 Random Variables and Distributions/01 Introduction.html",
+    "size": 610,
+    "sha256": "d47cd50aac5a24b82d6c63b437fa0fbc3378b07354533758f77e244e2e2ef188"
+  },
+  {
+    "path": "05 Introduction to Financial Python[]/07 Random Variables and Distributions/02 Random Variables.html",
+    "size": 860,
+    "sha256": "d9d8d564cf12c05634c3708f24b46779b3201bba857fe49e6835adf9edc115ac"
+  },
+  {
+    "path": "05 Introduction to Financial Python[]/07 Random Variables and Distributions/03 Distributions.html",
+    "size": 7821,
+    "sha256": "88a23e2923c1eab21edfca817c7962cfcd8a3e95a0b60982b4aacceb048e7dd8"
+  },
+  {
+    "path": "05 Introduction to Financial Python[]/07 Random Variables and Distributions/04 Normal Distribution.html",
+    "size": 3722,
+    "sha256": "30f69ce6b452bafae763f8f117af4116c54ae78cd0c746ad6b7beff0f9b65d8f"
+  },
+  {
+    "path": "05 Introduction to Financial Python[]/07 Random Variables and Distributions/05 Summary.html",
+    "size": 306,
+    "sha256": "dfac96ec1895292119e38ed19c2e945a6d84aea0d870956dddfd42dc7abfd27a"
+  },
+  {
+    "path": "05 Introduction to Financial Python[]/07 Random Variables and Distributions/07 Random Variable and Distributions.ipynb",
+    "size": 275309,
+    "sha256": "f86b0bb494834a1093ccf04abf285a0dd0541c90672a0f3cdea4c073b3cdfad3"
+  },
+  {
+    "path": "05 Introduction to Financial Python[]/08 Confidence Interval and Hypothesis Testing/01 Introduction.html",
+    "size": 1006,
+    "sha256": "567f1c2f00c0eef1a22450fbf3468d62d1865929901e753464f3ff15c51d7510"
+  },
+  {
+    "path": "05 Introduction to Financial Python[]/08 Confidence Interval and Hypothesis Testing/02 Confidence Interval.html",
+    "size": 5854,
+    "sha256": "8d65333141fc88a4e6ba6390543b48941dfc7682aaec49a07908725cc53ba1bb"
+  },
+  {
+    "path": "05 Introduction to Financial Python[]/08 Confidence Interval and Hypothesis Testing/03 Hypothesis testing.html",
+    "size": 6113,
+    "sha256": "7aa2e132b0e8aefb94ff5f3ba64131473ef57a74bbac1f684957258a5a7ea181"
+  },
+  {
+    "path": "05 Introduction to Financial Python[]/08 Confidence Interval and Hypothesis Testing/04 Summary.html",
+    "size": 330,
+    "sha256": "a559ff6f7760d293fc6a50ac0d8d9ac54e2301d463d3b97387f4574af5269fd8"
+  },
+  {
+    "path": "05 Introduction to Financial Python[]/08 Confidence Interval and Hypothesis Testing/08 Confidence Interval and Hypothesis Testing.ipynb",
+    "size": 5635,
+    "sha256": "1f3d7fe0093d833b810163263c94e6156c8e2a41fb08da198e4de349c2f94128"
+  },
+  {
+    "path": "05 Introduction to Financial Python[]/09 Simple Linear Regression/01 Introduction.html",
+    "size": 2840,
+    "sha256": "722399cda83f91387aafc037b80bfc230e817c5de8f6a7a8d29fa78bdeb0b19d"
+  },
+  {
+    "path": "05 Introduction to Financial Python[]/09 Simple Linear Regression/02 Slope and Intercept.html",
+    "size": 1522,
+    "sha256": "2f9600c0b24c8433a113576c84b3f871aa69f2677943b6610ff2dd81b33d6645"
+  },
+  {
+    "path": "05 Introduction to Financial Python[]/09 Simple Linear Regression/03 Python Implementation.html",
+    "size": 1894,
+    "sha256": "46bbd8b70a40e796dd7361f979a8e06e73be5eca88f99a3430006ae5af9f7785"
+  },
+  {
+    "path": "05 Introduction to Financial Python[]/09 Simple Linear Regression/04 Parameter Significance.html",
+    "size": 1307,
+    "sha256": "65f84d47913abb1bd6b77219f21ea45b707d6119028ffc9bf7b59e7b5fabedf3"
+  },
+  {
+    "path": "05 Introduction to Financial Python[]/09 Simple Linear Regression/05 Model Significance.html",
+    "size": 1595,
+    "sha256": "e53e9ebcee8947956c898e3b578a80b7b85c0ec6fa8fb5a6a3fb8a9d3927352b"
+  },
+  {
+    "path": "05 Introduction to Financial Python[]/09 Simple Linear Regression/06 Summary.html",
+    "size": 258,
+    "sha256": "18c3e6da32d429c6ad8e806f9efa1528f424360a6a79b14a9833e1be126f1838"
+  },
+  {
+    "path": "05 Introduction to Financial Python[]/09 Simple Linear Regression/09 Simple Linear Regression.ipynb",
+    "size": 62919,
+    "sha256": "c6bac17137a8528a86c41f27251c26a9ee223a0f178d424518ca61afb6e577f8"
+  },
+  {
+    "path": "05 Introduction to Financial Python[]/10 Multiple Linear Regression/01 Introduction.html",
+    "size": 515,
+    "sha256": "e76d32f61270819dfeef7dbf688bfe50bd9a14a38022e05733cfb5f4261967a3"
+  },
+  {
+    "path": "05 Introduction to Financial Python[]/10 Multiple Linear Regression/02 Python Implementation.html",
+    "size": 9728,
+    "sha256": "acb769489464a6bc696cb8097f3dceb856e24c1958c30e576a5a93bf4f2ef7b3"
+  },
+  {
+    "path": "05 Introduction to Financial Python[]/10 Multiple Linear Regression/03 Model Significance Test.html",
+    "size": 947,
+    "sha256": "73f90599fe52a4c743e30d1a0729942eb125ab8144f88edb5b7e3b323d59afa8"
+  },
+  {
+    "path": "05 Introduction to Financial Python[]/10 Multiple Linear Regression/04 Residual Analysis.html",
+    "size": 2774,
+    "sha256": "54ad46b69dc9adfdc72494560816a6fcd61ca9f1acf5b9fd855b9771523e9f16"
+  },
+  {
+    "path": "05 Introduction to Financial Python[]/10 Multiple Linear Regression/05 Summary.html",
+    "size": 266,
+    "sha256": "054d928db02c87713cd8d6aa03e77dd167c59aaf118ad1990b740506050f4676"
+  },
+  {
+    "path": "05 Introduction to Financial Python[]/10 Multiple Linear Regression/06 References.html",
+    "size": 223,
+    "sha256": "8ba82f0fe9d3e6c66d079c04d428b47801eb0af3522bdf3ddf38544f5ebf72ba"
+  },
+  {
+    "path": "05 Introduction to Financial Python[]/10 Multiple Linear Regression/10 Multiple Linear Regression.ipynb",
+    "size": 151055,
+    "sha256": "2d1096f4811a79cbe0743360d9429595781ab4f3735896c4c716c6cbf9f6915d"
+  },
+  {
+    "path": "05 Introduction to Financial Python[]/11 Linear Algebra/01 Introduction.html",
+    "size": 194,
+    "sha256": "b921ead2b8ed868ed6a63422a3ee4e7f4fa123b8361b4de7d94971aec0aaa950"
+  },
+  {
+    "path": "05 Introduction to Financial Python[]/11 Linear Algebra/02 Vectors.html",
+    "size": 850,
+    "sha256": "225c95d56b14c5e9ec7836e1e88eeff3c6b825f6f2c4da77a05db79d6951e37d"
+  },
+  {
+    "path": "05 Introduction to Financial Python[]/11 Linear Algebra/03 Matrices.html",
+    "size": 1864,
+    "sha256": "a57f527bd4bc3171860216572a876ad02d309dec73546330d9defcac0345cead"
+  },
+  {
+    "path": "05 Introduction to Financial Python[]/11 Linear Algebra/04 Matrix Multiplication.html",
+    "size": 2065,
+    "sha256": "1c2a382b455dc4f7da1d9e7d0642db03fc4fd975e7fa42c6d5f28a57be7418a1"
+  },
+  {
+    "path": "05 Introduction to Financial Python[]/11 Linear Algebra/05 Inverse.html",
+    "size": 2645,
+    "sha256": "f4bfeef637fbb5520794c13c49ddee0b5e4f47b1ea9822a8946104b870b2d185"
+  },
+  {
+    "path": "05 Introduction to Financial Python[]/11 Linear Algebra/06 Linear Equations.html",
+    "size": 1828,
+    "sha256": "3ddc816ba650aa65021012ab88f56140849f049c57219aa862e38d5b9f8ea152"
+  },
+  {
+    "path": "05 Introduction to Financial Python[]/11 Linear Algebra/07 Summary.html",
+    "size": 314,
+    "sha256": "f5de1450eb51fb2bdbc29ee121c1d66d0ab7a6644520c8b7177987c78bc692ab"
+  },
+  {
+    "path": "05 Introduction to Financial Python[]/11 Linear Algebra/11 Linear Algebra.ipynb",
+    "size": 5222,
+    "sha256": "ac619e9a274272da2080b3a1946004159961265de70dadc94217ed2eedf88271"
+  },
+  {
+    "path": "05 Introduction to Financial Python[]/12 Modern Portfolio Theory/01 Introduction.html",
+    "size": 280,
+    "sha256": "d926ac7a5c2c6bb8024a8b904510cfd2cc79af8bf875a6e7a5d9e78fa06b748c"
+  },
+  {
+    "path": "05 Introduction to Financial Python[]/12 Modern Portfolio Theory/02 Risk Aversion.html",
+    "size": 1096,
+    "sha256": "d0ef678775e63270eabce45f00ca3756ed4e6617aac2d719f8d9ae5aadb8908f"
+  },
+  {
+    "path": "05 Introduction to Financial Python[]/12 Modern Portfolio Theory/03 Portfolio.html",
+    "size": 4053,
+    "sha256": "541feff7845b46ec911eb6b5ba7e9d0024526b333617f2f5c5a65cc84f68ee07"
+  },
+  {
+    "path": "05 Introduction to Financial Python[]/12 Modern Portfolio Theory/04 Mean-Variance Analysis.html",
+    "size": 3425,
+    "sha256": "339a5c1107db88423bc4c8b5d3b821bb076865e0644ec8736533a68a546d9800"
+  },
+  {
+    "path": "05 Introduction to Financial Python[]/12 Modern Portfolio Theory/05 Summary.html",
+    "size": 271,
+    "sha256": "cd6ca21633b9c7416f954e7f74c23de03a8ae7df69b90f5c23ce7c492e595a1e"
+  },
+  {
+    "path": "05 Introduction to Financial Python[]/12 Modern Portfolio Theory/06 Algorithm.html",
+    "size": 755,
+    "sha256": "9bc698becb3a4c509511ee178562a52c747a96349c371043eb1438f935143ba9"
+  },
+  {
+    "path": "05 Introduction to Financial Python[]/12 Modern Portfolio Theory/12 Modern Portfolio Theory.ipynb",
+    "size": 320210,
+    "sha256": "0c55547462a7e0141fe58a302a155e3d38a7bac74c657e5ac52d692e14c7b62c"
+  },
+  {
+    "path": "05 Introduction to Financial Python[]/13 Market Risk/01 Introduction.html",
+    "size": 193,
+    "sha256": "b76bc08d942ca4ccf59940dff09c3b8436f4caf3ee899bf22459521e6a1e04a5"
+  },
+  {
+    "path": "05 Introduction to Financial Python[]/13 Market Risk/02 Capital Asset Pricing Model.html",
+    "size": 1546,
+    "sha256": "32a542f7aa8937707e40bf749daeaded107e9013d4433d367256781a73067dbf"
+  },
+  {
+    "path": "05 Introduction to Financial Python[]/13 Market Risk/03 Computing beta in Practice.html",
+    "size": 1343,
+    "sha256": "930960a12dc53bec0ab9e51335f0bef4b0d377df6e30b4cba4241f71af5b3d58"
+  },
+  {
+    "path": "05 Introduction to Financial Python[]/13 Market Risk/04 Market-Neutral.html",
+    "size": 2487,
+    "sha256": "5bf859e1eddf0ab832010e9eb11e1bcdfaf762b01ffab8fdaa7db04c2512c2c7"
+  },
+  {
+    "path": "05 Introduction to Financial Python[]/13 Market Risk/05 Summary.html",
+    "size": 224,
+    "sha256": "daf2cfd622dfd2282165b9653aae268eb6ffdf54cbb77bcaddd7eaf6402e7641"
+  },
+  {
+    "path": "05 Introduction to Financial Python[]/13 Market Risk/06 Algorithm.html",
+    "size": 1129,
+    "sha256": "9c502f403b905d4e7e848e07e3394839aa9255b22e3a617bc7184e4243c769cb"
+  },
+  {
+    "path": "05 Introduction to Financial Python[]/13 Market Risk/13 Market Risk.ipynb",
+    "size": 512400,
+    "sha256": "1950300b99de25d87afca474aaaeee0c8d386c22723444c23ad08a5e3b13cd4c"
+  },
+  {
+    "path": "05 Introduction to Financial Python[]/14 Fama-French Multi-Factor Models/01 Introduction.html",
+    "size": 366,
+    "sha256": "e175e083e51e3189c4921612c614555a9bdcea715f29ddef376aaa17baa83710"
+  },
+  {
+    "path": "05 Introduction to Financial Python[]/14 Fama-French Multi-Factor Models/02 Fama-French Three-Factor Model.html",
+    "size": 960,
+    "sha256": "beb1ca462d3add431e6a93a79bdbb9214d8c2b497b340136bc7fb37ff1217c93"
+  },
+  {
+    "path": "05 Introduction to Financial Python[]/14 Fama-French Multi-Factor Models/03 Model Test.html",
+    "size": 1091,
+    "sha256": "b67880ca51719fd4c5cf4d820f2720a9654935743eef297c004635136c602ee2"
+  },
+  {
+    "path": "05 Introduction to Financial Python[]/14 Fama-French Multi-Factor Models/04 Factor Returns.html",
+    "size": 1036,
+    "sha256": "9f4ce4381b1b6a7ef29c066c444bf5491f328119022a1c9b37d57e41d8e8b061"
+  },
+  {
+    "path": "05 Introduction to Financial Python[]/14 Fama-French Multi-Factor Models/05 Summary.html",
+    "size": 250,
+    "sha256": "3986c2f94a544bdacc0c578a9fd67bda3a5d11013fb41a67016f213bbeca82cd"
+  },
+  {
+    "path": "05 Introduction to Financial Python[]/14 Fama-French Multi-Factor Models/06 Algorithm.html",
+    "size": 1750,
+    "sha256": "2992085ce0798bb43db15dc3f9376e2f82eacdb6470820082d671998dd0f748b"
+  },
+  {
+    "path": "05 Introduction to Financial Python[]/14 Fama-French Multi-Factor Models/07 References.html",
+    "size": 1834,
+    "sha256": "9d88039bd7e46c4064427891dede6c600ee0d1980e3ade644cddbe0284d1cbf9"
+  },
+  {
+    "path": "05 Introduction to Financial Python[]/14 Fama-French Multi-Factor Models/14 Fama-French Multi-Factor Models.ipynb",
+    "size": 13454,
+    "sha256": "60c258e79d97a143ee785671e73b183d822d3910930c3f9135c75e600386093e"
+  },
+  {
+    "path": "06 Introduction to Options[]/01 General Features of Options/01 Introduction.html",
+    "size": 281,
+    "sha256": "c6a5c5a931670693e7b13d80c31f7e01bbfc1c49965b9b9f631e7592c2cedcad"
+  },
+  {
+    "path": "06 Introduction to Options[]/01 General Features of Options/02 Definition.html",
+    "size": 2983,
+    "sha256": "0d50e26791adc47b6f66eb422ebc54e3a3c1461914d2c1ee679d1cbeae9a4ad2"
+  },
+  {
+    "path": "06 Introduction to Options[]/01 General Features of Options/03 Options Contract.html",
+    "size": 1627,
+    "sha256": "780d45d0bbadbc1873b3d3abf550e4afeb2f7f73df17e11ccc6afc784d00ac3c"
+  },
+  {
+    "path": "06 Introduction to Options[]/01 General Features of Options/04 The Value of Options.html",
+    "size": 992,
+    "sha256": "88df7076607e8048fe39b7eb294dd7e560bcff1821ab6a88ee2d33b616cbce31"
+  },
+  {
+    "path": "06 Introduction to Options[]/01 General Features of Options/05 Options Moneyness.html",
+    "size": 2532,
+    "sha256": "fd8a16a5044ee9e78b7ccab27d2e428cd65429a030db51b76a77f5e5158a0f3c"
+  },
+  {
+    "path": "06 Introduction to Options[]/01 General Features of Options/06 Exercise and Assignment.html",
+    "size": 1849,
+    "sha256": "9bb7fb68404b3bea1f0e5204ee6f64d7afca38cb35b3852400fffaccc43cd51e"
+  },
+  {
+    "path": "06 Introduction to Options[]/01 General Features of Options/07 Summary.html",
+    "size": 564,
+    "sha256": "0255129cad3510e67c68ba3925adc9127feb4980183220fd3d5d2b7d0f3bf86f"
+  },
+  {
+    "path": "06 Introduction to Options[]/02 QuantConnect Options API/01 Introduction.html",
+    "size": 298,
+    "sha256": "8119cdf881e59051d8ad5f88e044a59acf69c087cc46824ad9dcf5af690b24e5"
+  },
+  {
+    "path": "06 Introduction to Options[]/02 QuantConnect Options API/02 Add Options.html",
+    "size": 1553,
+    "sha256": "aca910d7a7eccc44451b99630a33e9ba0adfd28329b1315b840d95f4ad744835"
+  },
+  {
+    "path": "06 Introduction to Options[]/02 QuantConnect Options API/03 Filter Contracts.html",
+    "size": 3465,
+    "sha256": "e326b560b79e1aa7411d2353bc73eb42e8d85aa0fe88041059111f84cb81fce6"
+  },
+  {
+    "path": "06 Introduction to Options[]/02 QuantConnect Options API/04 Select Contracts.html",
+    "size": 5895,
+    "sha256": "2a4347b2c4972ae21fb0181e91bff92fccbba7c5995d381093edb12806daab99"
+  },
+  {
+    "path": "06 Introduction to Options[]/02 QuantConnect Options API/05 Algorithm.html",
+    "size": 690,
+    "sha256": "61890370d09ecff5d3f75e279ad8028d23cdcd7515c79f59f96e2f7beee22f60"
+  },
+  {
+    "path": "06 Introduction to Options[]/02 QuantConnect Options API/06 Summary.html",
+    "size": 611,
+    "sha256": "e3108bd53e9a1da9f598192c11574f5706ddfcb5fbf4f13391d748a1e0e5f089"
+  },
+  {
+    "path": "06 Introduction to Options[]/03 Put-Call Parity and Arbitrage Strategies/01 Introduction.html",
+    "size": 368,
+    "sha256": "a5879a6931bc5eefa270b0f2e69912952c23c4a3116fc91d99f3404dde7e85f5"
+  },
+  {
+    "path": "06 Introduction to Options[]/03 Put-Call Parity and Arbitrage Strategies/02 Option Payoff.html",
+    "size": 3803,
+    "sha256": "13927a2bd33412592f6a6039518eec070445617a931f1403599a99928f42706c"
+  },
+  {
+    "path": "06 Introduction to Options[]/03 Put-Call Parity and Arbitrage Strategies/02 Put-Call Parity and Arbitrage Strategies.ipynb",
+    "size": 32094,
+    "sha256": "1401730ef46d325c573946e8dc46542ba6c023ae606836fcd1ba3319ac34ef2e"
+  },
+  {
+    "path": "06 Introduction to Options[]/03 Put-Call Parity and Arbitrage Strategies/03 Put-Call Parity.html",
+    "size": 1762,
+    "sha256": "244f8ed2c086cb8ce309c1131dde7f2f11fd6047bdab39cc4d19a92e9b9bfa76"
+  },
+  {
+    "path": "06 Introduction to Options[]/03 Put-Call Parity and Arbitrage Strategies/04 Synthetic Positions.html",
+    "size": 1537,
+    "sha256": "4419f509b502983c9fe65c32fff840a435852f0f958292a9ea0dbf24bd1d0c13"
+  },
+  {
+    "path": "06 Introduction to Options[]/03 Put-Call Parity and Arbitrage Strategies/05 Algorithm.html",
+    "size": 564,
+    "sha256": "9af9513c5079de49973298f481d1d31217b1a985d3ff3c71ddd633ba42d51c53"
+  },
+  {
+    "path": "06 Introduction to Options[]/03 Put-Call Parity and Arbitrage Strategies/06 Summary.html",
+    "size": 669,
+    "sha256": "0c89ec7c5817b71f25e7066f58c91857f97028a75e5312dd70526162b46e2ee2"
+  },
+  {
+    "path": "06 Introduction to Options[]/03 Put-Call Parity and Arbitrage Strategies/07 References.html",
+    "size": 347,
+    "sha256": "4654571902d2c092a345f6b2845dd42e5a0bbf701213e64b55eb3f14db1a4636"
+  },
+  {
+    "path": "06 Introduction to Options[]/04 Stochastic Processes and Monte Carlo Method/01 Introduction.html",
+    "size": 384,
+    "sha256": "5c6ebb8c793a6e8b8b883fe6ac00956d8c42d002731415a4f164b0ea8e3c139e"
+  },
+  {
+    "path": "06 Introduction to Options[]/04 Stochastic Processes and Monte Carlo Method/02 Brownian motion.html",
+    "size": 4359,
+    "sha256": "cdb40ea393bf56387f3675b23497200a2cb13dbae451ae449f03c3ff304a6b68"
+  },
+  {
+    "path": "06 Introduction to Options[]/04 Stochastic Processes and Monte Carlo Method/03 Modeling Stock Price as a Stochastic Process.html",
+    "size": 3647,
+    "sha256": "9ac55ba34782d47b7559e813fc2fe519bd9d647e4b17b747e107f5af37920ad9"
+  },
+  {
+    "path": "06 Introduction to Options[]/04 Stochastic Processes and Monte Carlo Method/04 Monte Carlo Simulation of Stock Price.html",
+    "size": 1977,
+    "sha256": "4f6f43f955dd0d5a45ce58e66ad7a7092e690466d61fef63150dd0c17a85c619"
+  },
+  {
+    "path": "06 Introduction to Options[]/04 Stochastic Processes and Monte Carlo Method/04 Stochastic Processes and Monte Carlo Method.ipynb",
+    "size": 1087016,
+    "sha256": "5a4e194e45a00c57c598a99a1ae189098842a14bcb2a830e65e6905ea2e23be2"
+  },
+  {
+    "path": "06 Introduction to Options[]/04 Stochastic Processes and Monte Carlo Method/05 Monte Carlo Simulation of European Options.html",
+    "size": 2197,
+    "sha256": "542e6aec85b10f1460b74ff25b393f0adc2179e8b42888aeb745e9c2ac25c6d3"
+  },
+  {
+    "path": "06 Introduction to Options[]/04 Stochastic Processes and Monte Carlo Method/06 Summary.html",
+    "size": 764,
+    "sha256": "5ed7320eeede579c9da09bec3ba198768e393bed25d8c6e60aa77185003059a8"
+  },
+  {
+    "path": "06 Introduction to Options[]/04 Stochastic Processes and Monte Carlo Method/07 References.html",
+    "size": 115,
+    "sha256": "f804fa5dab31f3908b248dca6f82ea0a4bca330cb95578682b6713710aeb4cd9"
+  },
+  {
+    "path": "06 Introduction to Options[]/05 Options Pricing Black Scholes Merton Model/01 Introduction.html",
+    "size": 495,
+    "sha256": "a12d354862b5c7236befda5f8707196e3e209225540ae07ba1afa7bbd4da002e"
+  },
+  {
+    "path": "06 Introduction to Options[]/05 Options Pricing Black Scholes Merton Model/02 Determinants of Option Price.html",
+    "size": 3063,
+    "sha256": "1d9e8d11b3d8dd90d8949c14cc4c9f972cd59428c46e9a6a82d4a1600eca56cc"
+  },
+  {
+    "path": "06 Introduction to Options[]/05 Options Pricing Black Scholes Merton Model/03 Factors in BSM model.html",
+    "size": 1903,
+    "sha256": "0345cda93ff73bc90401d7c156d20fdbed9ae988fbb71345bf04be4c3752560f"
+  },
+  {
+    "path": "06 Introduction to Options[]/05 Options Pricing Black Scholes Merton Model/04 Model Assumptions.html",
+    "size": 886,
+    "sha256": "2c5d3134ee0b7c896accc5c439a168b999d7435c3107cc539660d8498b5e48f0"
+  },
+  {
+    "path": "06 Introduction to Options[]/05 Options Pricing Black Scholes Merton Model/05 Model Equations.html",
+    "size": 3031,
+    "sha256": "bea780a7d94c254e11fbe5a059fc9a49874fbb805a3315353563b5d989332798"
+  },
+  {
+    "path": "06 Introduction to Options[]/05 Options Pricing Black Scholes Merton Model/05 Option Pricing Black Scholes Merton Model.ipynb",
+    "size": 3086,
+    "sha256": "9a72633f1ae70c9ebaf1c58528f62dbcca8ac1560247f8daa4dccaa52f633a56"
+  },
+  {
+    "path": "06 Introduction to Options[]/05 Options Pricing Black Scholes Merton Model/06 Summary.html",
+    "size": 173,
+    "sha256": "252a36effade24b6282e6e7578552416107078925298bb1da428fe4ae81981af"
+  },
+  {
+    "path": "06 Introduction to Options[]/06 The Greek Letters/01 Introduction.html",
+    "size": 302,
+    "sha256": "e9c2477665cd9ac37d84d3aab4aeb081d929ec74151b070c58ff3b10b8f53791"
+  },
+  {
+    "path": "06 Introduction to Options[]/06 The Greek Letters/02 Delta.html",
+    "size": 4083,
+    "sha256": "1cf1e5ee8552b59953ed65103cd46ca1889a5e691146c05c421891d989e2803a"
+  },
+  {
+    "path": "06 Introduction to Options[]/06 The Greek Letters/03 gamma.html",
+    "size": 1693,
+    "sha256": "1e68d94d0d57ace4a85a69d503f3c37ae5646030ba17474bde77b8126fc406ad"
+  },
+  {
+    "path": "06 Introduction to Options[]/06 The Greek Letters/04 vega.html",
+    "size": 1333,
+    "sha256": "f678648885568764f29f511012259b46412f2e71d125a64714390bab9e75e32a"
+  },
+  {
+    "path": "06 Introduction to Options[]/06 The Greek Letters/05 Theta.html",
+    "size": 2416,
+    "sha256": "eb5f0c56862b74dfa8f409c066151059bf20c5afba8a5a8d3786f3db2e4880f5"
+  },
+  {
+    "path": "06 Introduction to Options[]/06 The Greek Letters/06 Rho.html",
+    "size": 1422,
+    "sha256": "85b45adb0f8d2d660aaa3fdfd53e26c05f4516f65e0c7cf62cca09097445eefb"
+  },
+  {
+    "path": "06 Introduction to Options[]/06 The Greek Letters/06 The Greek Letters.ipynb",
+    "size": 1267419,
+    "sha256": "5acef69f610a70ea4f71709f58b414df6ee0968d4013d7db2ecb3469010e34d8"
+  },
+  {
+    "path": "06 Introduction to Options[]/06 The Greek Letters/07 Delta, Gamma and Vega Hedging.html",
+    "size": 996,
+    "sha256": "34098ebb1b5be6d152f31b0cf27cb7b38d808cadb5a8524658f6a34b50b56e2d"
+  },
+  {
+    "path": "06 Introduction to Options[]/06 The Greek Letters/08 Summary.html",
+    "size": 473,
+    "sha256": "bd76c2cc2b619a5840362d4e4db395bb61f63913f17f845a08ae07bb260198fe"
+  },
+  {
+    "path": "06 Introduction to Options[]/07 Historical Volatility and Implied Volatility/01 Introduction.html",
+    "size": 356,
+    "sha256": "abceca19daa7edc94fcb0229979a55e37c43af9be22d2cc1a3cd9678360ab412"
+  },
+  {
+    "path": "06 Introduction to Options[]/07 Historical Volatility and Implied Volatility/02 Historical Volatility.html",
+    "size": 1696,
+    "sha256": "a464b21a7228a741cca4e6f02392bcfa2a5e77d357c081931c0b710314b384b6"
+  },
+  {
+    "path": "06 Introduction to Options[]/07 Historical Volatility and Implied Volatility/03 Implied Volatility.html",
+    "size": 4072,
+    "sha256": "f354e1b8004b482156b6ddcee0183aa5130e13d570fa9b3912e567bfa9241d33"
+  },
+  {
+    "path": "06 Introduction to Options[]/07 Historical Volatility and Implied Volatility/04 Volatility Skew.html",
+    "size": 6117,
+    "sha256": "aa90ae7292107c08e740e72960a3340a7b61ebfad6ddee70a14c7a16de1e027e"
+  },
+  {
+    "path": "06 Introduction to Options[]/07 Historical Volatility and Implied Volatility/05 Volatility Surface.html",
+    "size": 824,
+    "sha256": "7300b5619979967084946363d80637cbd76d3e65d57702ff1832ee6502e6beb1"
+  },
+  {
+    "path": "06 Introduction to Options[]/07 Historical Volatility and Implied Volatility/06 The Reason for Volatility Skew.html",
+    "size": 1093,
+    "sha256": "bfcb7a9b28d96346dd346e1f4a67e8108c6faa1b23d519eb0129f6bbcbd83549"
+  },
+  {
+    "path": "06 Introduction to Options[]/07 Historical Volatility and Implied Volatility/07 Historical Volatility and Implied Volatility.ipynb",
+    "size": 338488,
+    "sha256": "d1d6cc16b58cfd852068af53cf3d095a07c509030d63546d0cfdfb85d6c5f025"
+  },
+  {
+    "path": "06 Introduction to Options[]/07 Historical Volatility and Implied Volatility/07 Summary.html",
+    "size": 901,
+    "sha256": "64515aa0e73fdc1b8feddca27bc490cc696657af5d17204344e607c189399d60"
+  },
+  {
+    "path": "06 Introduction to Options[]/07 Historical Volatility and Implied Volatility/08 References.html",
+    "size": 233,
+    "sha256": "28589488c051191e2571ceffb7830cb0adbf68ee41d89197cab9da623010808d"
+  },
+  {
+    "path": "06 Introduction to Options[]/08 Local Volatility and Stochastic Volatility/01 Introduction.html",
+    "size": 245,
+    "sha256": "0732641db4ef5393b2eb2ae6bbe6d542d99007235ee732d4a2fa122788507424"
+  },
+  {
+    "path": "06 Introduction to Options[]/08 Local Volatility and Stochastic Volatility/02 Motivation.html",
+    "size": 1572,
+    "sha256": "de1b303f688ad48a3071a4f09da2dc7cf63b59e636f6dafb6d9f1e55192fedbd"
+  },
+  {
+    "path": "06 Introduction to Options[]/08 Local Volatility and Stochastic Volatility/03 Local Volatility.html",
+    "size": 2827,
+    "sha256": "e8070f9d64f9d27725f81aff848f8c44b8aa10b523f6bb1f7dd703a9ce15ad39"
+  },
+  {
+    "path": "06 Introduction to Options[]/08 Local Volatility and Stochastic Volatility/04 Stochastic Volatility.html",
+    "size": 9523,
+    "sha256": "8afc7fbc412c809cbb3096adad2da582e7322a0a593d0c799a49ba891b4fa7bb"
+  },
+  {
+    "path": "06 Introduction to Options[]/08 Local Volatility and Stochastic Volatility/05 Summary.html",
+    "size": 762,
+    "sha256": "a3c6fe20e12fcaa88ca361fb4cd134d84f2ae581c5333aaac895172b03297560"
+  },
+  {
+    "path": "06 Introduction to Options[]/08 Local Volatility and Stochastic Volatility/06 References.html",
+    "size": 947,
+    "sha256": "71b79199909fe2558bda2cea8c1bd681903cd91ff5d44c9e7d2bba5bbfa5ff3b"
+  },
+  {
+    "path": "06 Introduction to Options[]/08 Local Volatility and Stochastic Volatility/08 Local Volatility and Stochastic Volatility.ipynb",
+    "size": 13310,
+    "sha256": "aecf900e5a2200e6294f9a1ea402657440e0dc899ab553623f069213bfe6b2f3"
+  },
+  {
+    "path": "07 Applied Options[]/01 Covered Call/01 Definition.html",
+    "size": 1963,
+    "sha256": "ac0631ca886a4699531f326e8b8788ed8cef081044781fe96ec9bcd8a6df116a"
+  },
+  {
+    "path": "07 Applied Options[]/01 Covered Call/02 Implementation.html",
+    "size": 3212,
+    "sha256": "4b225549728c046dbad65642d222b7f3c44bfe1200705d71906f5a1730b8b22c"
+  },
+  {
+    "path": "07 Applied Options[]/01 Covered Call/03 Summary.html",
+    "size": 593,
+    "sha256": "429c247d0a178e46d1052cd51ed409032b8d512209ff8c4816539421fb4836e8"
+  },
+  {
+    "path": "07 Applied Options[]/01 Covered Call/04 Algorithm.html",
+    "size": 1206,
+    "sha256": "4ebb0133cbd9d1fc9b0859c8b945dfa6b77a656e34a549cd275b946f9a494d53"
+  },
+  {
+    "path": "07 Applied Options[]/02 Bull Call Spread/01 Definition.html",
+    "size": 2326,
+    "sha256": "0000c066afa43a6efd8d6c9a24bcb967e6cc1dabc2c2b97346f7c99aaa5c5c6e"
+  },
+  {
+    "path": "07 Applied Options[]/02 Bull Call Spread/02 Implementation.html",
+    "size": 2758,
+    "sha256": "5bc7622cc22749110c8b263819250ad1308edc16a1bb6e9556769dd631b1ff4e"
+  },
+  {
+    "path": "07 Applied Options[]/02 Bull Call Spread/03 Summary.html",
+    "size": 331,
+    "sha256": "e660361aa166828464004c8d3e6e96514b228e38f81d33c0fa2c137ca3b7b878"
+  },
+  {
+    "path": "07 Applied Options[]/02 Bull Call Spread/04 Algorithm.html",
+    "size": 1198,
+    "sha256": "3ebe662a139d5e7d6bc0802b6013a2fd30d54708a1dbb0aeba161d8ef56b98dc"
+  },
+  {
+    "path": "07 Applied Options[]/03 Long Straddle/01 Definition.html",
+    "size": 1885,
+    "sha256": "b09846042d2e4f49d4bbe8a0c1b7991a6d3f08e9412da4b5ac4d97f8276739a5"
+  },
+  {
+    "path": "07 Applied Options[]/03 Long Straddle/02 Implementation.html",
+    "size": 1961,
+    "sha256": "f642c6dc7efb72ca6b15931cf72de65e2597fcc24bc90f406bcdda0df8d4ebfe"
+  },
+  {
+    "path": "07 Applied Options[]/03 Long Straddle/03 Summary.html",
+    "size": 940,
+    "sha256": "5ad9c9c0f88a6983d88c3e65ae4aa8eda97619059c8e7c63ee36a4dead5dbc2a"
+  },
+  {
+    "path": "07 Applied Options[]/03 Long Straddle/04 Algorithm.html",
+    "size": 1211,
+    "sha256": "743ae9079c2fd1e79b4b45bb1b01765137fdee11192d2a48f9bed3fc3a5e9a0b"
+  },
+  {
+    "path": "07 Applied Options[]/04 Long Strangle/01 Definition.html",
+    "size": 2005,
+    "sha256": "f873573a0d71a15d0e0770d797d58cbba38c242a77d0815e08f73e821bf39463"
+  },
+  {
+    "path": "07 Applied Options[]/04 Long Strangle/02 Implementation.html",
+    "size": 2749,
+    "sha256": "925ade4f16bf86faa5461b51262574b595e9ffff1508ba91f6bdd847a4237fb3"
+  },
+  {
+    "path": "07 Applied Options[]/04 Long Strangle/03 Summary.html",
+    "size": 768,
+    "sha256": "6bdbfcee62e63de9748e0092f8ae0e336f52c83c23f22cb55ac4f198d311eafa"
+  },
+  {
+    "path": "07 Applied Options[]/04 Long Strangle/04 Algorithm.html",
+    "size": 1209,
+    "sha256": "a71593da4711f3c05c01178b6e38438b1538027ecd8ab803f97efffbf2111a45"
+  },
+  {
+    "path": "07 Applied Options[]/05 Butterfly Spread/01 Definition.html",
+    "size": 2721,
+    "sha256": "5816a114be4b093104c55076473db2ca770720d8f9c65d81c21bf7514f9c5dfa"
+  },
+  {
+    "path": "07 Applied Options[]/05 Butterfly Spread/02 Implementation.html",
+    "size": 2750,
+    "sha256": "eb691c4ad9252a736e4f1177971b716a24c95e65df4db4a16e7cd12dd5d8e91f"
+  },
+  {
+    "path": "07 Applied Options[]/05 Butterfly Spread/03 Summary.html",
+    "size": 753,
+    "sha256": "76d0b136fae1f66c48022d280808c1c3d97db63208da423ea2a616e8aeb6fc37"
+  },
+  {
+    "path": "07 Applied Options[]/05 Butterfly Spread/04 Algorithm.html",
+    "size": 1209,
+    "sha256": "0e4b57aa7485722f8fa57f4bac4323c1f6fbc70bd9a90982dc435d144fdfe4b5"
+  },
+  {
+    "path": "07 Applied Options[]/06 Iron Condor/01 Definition.html",
+    "size": 3583,
+    "sha256": "a0df71b47319ce2a09a592609563ebe357c459575db8a86e8607d5b7a7c89561"
+  },
+  {
+    "path": "07 Applied Options[]/06 Iron Condor/02 Implementation.html",
+    "size": 2310,
+    "sha256": "738f069bfe8aaa1fe8958924d41996e558c5e6e46a5774d8f5c8b96fb336c8bc"
+  },
+  {
+    "path": "07 Applied Options[]/06 Iron Condor/03 Summary.html",
+    "size": 626,
+    "sha256": "fecbefdc58a47f4405e71a684a3bd0446ebbe3993f71cff2f97c93a0b42c081f"
+  },
+  {
+    "path": "07 Applied Options[]/06 Iron Condor/04 Algorithm.html",
+    "size": 1211,
+    "sha256": "77d7b1eb25c45edabe14421cfd893c661d6eb7ff2b941c95fd8167d32f8ad07b"
+  },
+  {
+    "path": "07 Applied Options[]/07 Iron Butterfly/01 Definition.html",
+    "size": 3335,
+    "sha256": "ea195309e352ceba0aa030289f12f32a429a5e48cc283bcde3ec62becc8b9774"
+  },
+  {
+    "path": "07 Applied Options[]/07 Iron Butterfly/02 Implementation.html",
+    "size": 2482,
+    "sha256": "8c29dfdd617527d54872f593823a3183e5617c4d205f1b7704fb13cb8b197cc0"
+  },
+  {
+    "path": "07 Applied Options[]/07 Iron Butterfly/03 Summary.html",
+    "size": 402,
+    "sha256": "e8915af4312e7a05f80e9a52d2bfc9aa3608e5089c871311939a139e5627a42d"
+  },
+  {
+    "path": "07 Applied Options[]/07 Iron Butterfly/04 Algorithm.html",
+    "size": 1209,
+    "sha256": "40eebc90d7738bafdfdbfa867f88d4e5be6a2c50a92031fa908ab782bd2fef5d"
+  },
+  {
+    "path": "07 Applied Options[]/08 Protective Collar/01 Definition.html",
+    "size": 2585,
+    "sha256": "3aa404533665bb2a0288313087833541558981f83b89a829555e9653c7195c40"
+  },
+  {
+    "path": "07 Applied Options[]/08 Protective Collar/02 Implementation.html",
+    "size": 2705,
+    "sha256": "ee31e8d00988773d425d29fad7d53f932d7365da2d38b95f3519d9c08f4156aa"
+  },
+  {
+    "path": "07 Applied Options[]/08 Protective Collar/03 Summary.html",
+    "size": 504,
+    "sha256": "f75cbbb7e933fc56b6818100dd14a9d16dd0b0f0d68b181e374e07997b156c92"
+  },
+  {
+    "path": "07 Applied Options[]/08 Protective Collar/04 Algorithm.html",
+    "size": 1209,
+    "sha256": "170a48662920131355dea991ecbd60a335b50c106e042d6abd4a5a311e768a37"
+  },
+  {
+    "path": "08 Meta/01 Creating BootCamp Tutorials/00.html",
+    "size": 700,
+    "sha256": "e902f0d3185dfb8887262cfea2ed49f99e702e10f2fdc73fe6b8d8d989a2912d"
+  },
+  {
+    "path": "08 Meta/01 Creating BootCamp Tutorials/01 Introduction.html",
+    "size": 595,
+    "sha256": "a6c8a6df72ce22efc42cc6b2bd1c36327ed9515ea014b35bc83f6045723b60aa"
+  },
+  {
+    "path": "08 Meta/01 Creating BootCamp Tutorials/02 Requirements.html",
+    "size": 1119,
+    "sha256": "ecc18dd81c698a25375a4874cb2588ad122d0179f359948d7d69aa69c31a990a"
+  },
+  {
+    "path": "08 Meta/01 Creating BootCamp Tutorials/03 Compensation.html",
+    "size": 1149,
+    "sha256": "f7ef3977e3f75e579c276004daf67b653b57f9a6fff209dffe9ce5f5abbc49a2"
+  },
+  {
+    "path": "08 Meta/01 Creating BootCamp Tutorials/04 Content Structure.html",
+    "size": 2000,
+    "sha256": "8b4fb0beb592e9bd57f4de7b2cac28c9068f997d6e80e859ffd705b2c2882dba"
+  },
+  {
+    "path": "08 Meta/01 Creating BootCamp Tutorials/05 Planning Your Lesson.html",
+    "size": 9023,
+    "sha256": "45edfac8f8fb375d52d6ce6392f31df590c3766a839f39d4481add7b569d05a0"
+  },
+  {
+    "path": "08 Meta/01 Creating BootCamp Tutorials/06 Writing a Lesson.html",
+    "size": 4845,
+    "sha256": "3f4c6320a6dbcb46cc6fec591ceade4ce23929b013759542329655799670c862"
+  },
+  {
+    "path": "08 Meta/01 Creating BootCamp Tutorials/07 Building Code Validators.html",
+    "size": 94,
+    "sha256": "1ef9d026957e524d523e69de10d716896509a4df92dfe9e6ca410b1c25d06bff"
+  },
+  {
+    "path": "08 Meta/01 Creating BootCamp Tutorials/08 Style Guide.html",
+    "size": 206,
+    "sha256": "a52db918802602161e31bf7fc1d0f235b995288937e816222fb82aaa91b81420"
+  },
+  {
+    "path": "08 Meta/01 Creating BootCamp Tutorials/09 Submitting Lesson for Review.html",
+    "size": 27,
+    "sha256": "6cd3703ea98860b4fb66e5bc7e489d3a9da00e49a59a249a66faaf753677b043"
+  },
+  {
+    "path": "08 Meta/01 Creating BootCamp Tutorials/10 Summary.html",
+    "size": 10,
+    "sha256": "0c0dab795768f056ecf4e9534d63c2993a9c250271fa23c2370ee55552f838e2"
+  },
+  {
+    "path": "Data/F-F_Research_Data_5_Factors_2x3.CSV",
+    "size": 45436,
+    "sha256": "93131597036d17d0c54775dfbfe06a70515ef7e8291aff313e371a797a775906"
+  },
+  {
+    "path": "Data/F-F_Research_Data_5_Factors_2x3_daily.CSV",
+    "size": 905489,
+    "sha256": "67a46ccb2e7ba3afdc66c89ff5c2996d90b632b10703a7c95172bd74ffa87551"
+  },
+  {
+    "path": "Data/F-F_Research_Data_Factors.CSV",
+    "size": 52793,
+    "sha256": "91be0f4d862f945d6d81a0e736284a219683092a4d83fdf9d422a4be678c0601"
+  },
+  {
+    "path": "Data/F-F_Research_Data_Factors_daily.CSV",
+    "size": 1115845,
+    "sha256": "f0b97b6272c0756b83203538a3453d047809bbc5ed552da4a42c870ef0d4063f"
+  },
+  {
+    "path": "Data/F-F_Research_Data_Factors_weekly.CSV",
+    "size": 221167,
+    "sha256": "81d43a8bbec0a8bcb672ded6da3bf2318c22ac5b5ebd3419c5ebee1c8767c3fe"
+  },
+  {
+    "path": "LICENSE",
+    "size": 11357,
+    "sha256": "b40930bbcf80744c86c46a12bc9da056641d722716c378f5659b9e555ef833e1"
+  },
+  {
+    "path": "README.md",
+    "size": 2088,
+    "sha256": "7228fe85a10a1c9879614102676da1ae39246062606e01a6ab64b1d8d3b3505a"
+  },
+  {
+    "path": "quantpedia.json",
+    "size": 2267,
+    "sha256": "629364175501d1f074998de637a315e956b3d0281820d96b88ee1823418202aa"
+  }
+]

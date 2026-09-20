@@ -1,0 +1,27 @@
+name: Syntax Tests
+
+on:
+  push:
+    branches: ['*']
+    tags: ['*']
+  pull_request:
+    branches: [master]
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: self-hosted
+    container:
+        image: quantconnect/lean:foundation
+        options: --cpus 12 --memory 12g
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Run Syntax Test
+        run: |
+          pip install --no-cache-dir quantconnect-stubs types-requests==2.32.* types-pytz==2025.2.0.* mypy==2.1.0
+          python run_syntax_check.py

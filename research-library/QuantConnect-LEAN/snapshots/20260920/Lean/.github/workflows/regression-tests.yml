@@ -1,0 +1,32 @@
+name: Regression Tests
+
+on:
+  push:
+    branches: ['*']
+    tags: ['*']
+  pull_request:
+    branches: [master]
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: self-hosted
+    container:
+        image: quantconnect/lean:foundation
+        options: --cpus 12 --memory 12g
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Build
+        run: dotnet build /p:Configuration=Release /v:quiet /p:WarningLevel=1 QuantConnect.Lean.sln
+
+      - name: Run Tests
+        run: |
+          dotnet test ./Tests/bin/Release/QuantConnect.Tests.dll \
+            --filter TestCategory=RegressionTests \
+            -- TestRunParameters.Parameter\(name=\"log-handler\", value=\"ConsoleErrorLogHandler\"\) \
+            TestRunParameters.Parameter\(name=\"reduced-disk-size\", value=\"true\"\)

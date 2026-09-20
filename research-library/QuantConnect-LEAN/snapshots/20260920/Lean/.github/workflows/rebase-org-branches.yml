@@ -1,0 +1,24 @@
+name: Rebase Organization Branches
+
+on:
+  push:
+    branches:
+      - 'master'
+
+jobs:
+  build:
+    runs-on: self-hosted
+    container:
+        image: quantconnect/lean:foundation
+        options: --cpus 12 --memory 12g
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
+      - name: Rebase Organization Branches
+        run: |
+          chmod +x rebase_organization_branches.sh
+          ./rebase_organization_branches.sh
+        env:
+          QC_GIT_TOKEN: ${{ secrets.QC_GIT_TOKEN }}

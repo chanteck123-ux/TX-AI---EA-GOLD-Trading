@@ -1,0 +1,128 @@
+{
+  "date_utc": "2026-09-20T07:18:16.024847+00:00",
+  "scope": "four user-uploaded source snapshots; not all QuantConnect organization repositories",
+  "results": [
+    {
+      "repository": "QuantConnect/Lean",
+      "commit": "985ef30ad3ac774218c5ac516b4cb0aa2655730f",
+      "source_url": "https://codeload.github.com/QuantConnect/Lean/zip/985ef30ad3ac774218c5ac516b4cb0aa2655730f",
+      "uploaded_archive_sha256": "6a09188d345a9970946ae7d63e704cae7f270edc1659c9f9d00bd0b4688abd83",
+      "downloaded_archive_sha256": "3708fc9656139e74d5efd58f32bcc40cd9305ce6125933c876f5bb2f07c33e69",
+      "retained_files": 6315,
+      "retained_bytes": 286409192,
+      "manifest_sha256": "86f6c81e0f8ad498e4c6065007b490e95b944205dbd53386e2f02bc3ce2586f7",
+      "excluded": [],
+      "verification": "ALL_RETAINED_FILE_BYTES_MATCH_UPLOADED_SNAPSHOT",
+      "upstream_code_executed": false
+    },
+    {
+      "repository": "QuantConnect/lean-cli",
+      "commit": "20e58aa65c3c504a6a585e1d4eb1b2e56b233c48",
+      "source_url": "https://codeload.github.com/QuantConnect/lean-cli/zip/20e58aa65c3c504a6a585e1d4eb1b2e56b233c48",
+      "uploaded_archive_sha256": "157525f4e948f62f76ac2a9d02b713bb4be6a09c7a9e3d98ccbf63ae68448772",
+      "downloaded_archive_sha256": "95a3c1b028e52786462cfbb20ab63ffa1e2e8f453f2f3daa3188df716b8f40d6",
+      "retained_files": 265,
+      "retained_bytes": 1804765,
+      "manifest_sha256": "561b66937d36c354402d8b94dc3ffe2c405275b503903838c7eca05e24337544",
+      "excluded": [],
+      "verification": "ALL_RETAINED_FILE_BYTES_MATCH_UPLOADED_SNAPSHOT",
+      "upstream_code_executed": false
+    },
+    {
+      "repository": "QuantConnect/Research",
+      "commit": "d89cf67bc37bc032f0de47089e16d825bcd8a65f",
+      "source_url": "https://codeload.github.com/QuantConnect/Research/zip/d89cf67bc37bc032f0de47089e16d825bcd8a65f",
+      "uploaded_archive_sha256": "21ba97a60432c0abf3bddd870b56c102e4c9d61c0237767f560a51e5ac05a92f",
+      "downloaded_archive_sha256": "f74f614f944e32354fdf13480dc949bb8c6953288bdc829f8db128a1dfbdf461",
+      "retained_files": 37,
+      "retained_bytes": 6804633,
+      "manifest_sha256": "0e83bbeebc3ef2d2cbbff61932086dbbc04683186386280cc646cff67c139cd9",
+      "excluded": [
+        {
+          "path": "Explore/Inter font/Inter-VariableFont_slnt,wght.ttf",
+          "size": 803384,
+          "sha256": "b9a8e5e213977665be2a56db66945a16c686da3d9861af1e7851322cf15495ea",
+          "reason": "non-trading font asset omitted"
+        },
+        {
+          "path": "Explore/Inter font/static/Inter-Black.ttf",
+          "size": 316372,
+          "sha256": "3afb2b056547597bb7917bf754bd42f3ebbf4b32560902e556b16f1b6e66b758",
+          "reason": "non-trading font asset omitted"
+        },
+        {
+          "path": "Explore/Inter font/static/Inter-Bold.ttf",
+          "size": 316100,
+          "sha256": "790c108befe859dac2ddbd20af3fbb6917c601b3d544c8a05761519f3b5508fe",
+          "reason": "non-trading font asset omitted"
+        },
+        {
+          "path": "Explore/Inter font/static/Inter-ExtraBold.ttf",
+          "size": 316716,
+          "sha256": "4e2473b9fe75c068e3f3b9ba2325c62da9d1be7428db308fd85df30b5025e145",
+          "reason": "non-trading font asset omitted"
+        },
+        {
+          "path": "Explore/Inter font/static/Inter-ExtraLight.ttf",
+          "size": 310808,
+          "sha256": "edba5be0f139ce5f43d8a4486a766688120bac357641b84c61d164003f31527d",
+          "reason": "non-trading font asset omitted"
+        },
+        {
+          "path": "Explore/Inter font/static/Inter-Light.ttf",
+          "size": 310420,
+          "sha256": "c44ff7a5fde4816f94fc1e5e232b021a812a411339ddd08b0a475ca6e21db810",
+          "reason": "non-trading font asset omitted"
+        },
+        {
+          "path": "Explore/Inter font/static/Inter-Medium.ttf",
+          "size": 314712,
+          "sha256": "10d48331f5b3c7362ca357b00c17ac4863ad35199b13b0eceb0962c8c1ad7dc9",
+          "reason": "non-trading font asset omitted"
+        },
+        {
+          "path": "Explore/Inter font/static/Inter-Regular.ttf",
+          "size": 309828,
+          "sha256": "41ab0f707a2bfab8133ccdfcdab52282f5f79e5751f43a264805451c7bb95fb8",
+          "reason": "non-trading font asset omitted"
+        },
+        {
+          "path": "Explore/Inter font/static/Inter-SemiBold.ttf",
+          "size": 315756,
+          "sha256": "e8cbc2b88bc4268237ff5e251776d3c54edcb14e015a9e66e4883bde4b55f13f",
+          "reason": "non-trading font asset omitted"
+        },
+        {
+          "path": "Explore/Inter font/static/Inter-Thin.ttf",
+          "size": 310516,
+          "sha256": "b778a52b84f39ba1d3b08553a246643573b33453b5481b4d09c604bccced930d",
+          "reason": "non-trading font asset omitted"
+        }
+      ],
+      "verification": "ALL_RETAINED_FILE_BYTES_MATCH_UPLOADED_SNAPSHOT",
+      "upstream_code_executed": false
+    },
+    {
+      "repository": "QuantConnect/Tutorials",
+      "commit": "4a341890296f7e79e095508f06170c72ccaa629c",
+      "source_url": "https://codeload.github.com/QuantConnect/Tutorials/zip/4a341890296f7e79e095508f06170c72ccaa629c",
+      "uploaded_archive_sha256": "be02d18ce8ebc60c7c46d6abf9280788be3e99781e0adf38ae09770398e1803c",
+      "downloaded_archive_sha256": "35e7b33445c9e081e7c77d94f9b82fcc901340e17d242fac5687898473022395",
+      "retained_files": 723,
+      "retained_bytes": 8807353,
+      "manifest_sha256": "0779993838caf5a2286497fdc204007b31196332d0d19d4be34efd0f2a820aba",
+      "excluded": [],
+      "verification": "ALL_RETAINED_FILE_BYTES_MATCH_UPLOADED_SNAPSHOT",
+      "upstream_code_executed": false
+    }
+  ],
+  "total_retained_files": 7340,
+  "status": "SOURCE_ARCHIVE_VERIFIED",
+  "lean_compiled": false,
+  "lean_backtested": false,
+  "mql5_ported": false,
+  "mt5_compiled": false,
+  "mt5_backtested": false,
+  "live_settings_changed": false,
+  "workflow_run_id": "35496488222"
+}

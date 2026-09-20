@@ -1,0 +1,61 @@
+name: Build & Test Lean
+
+on:
+  push:
+    branches: ['*']
+    tags: ['*']
+  pull_request:
+    branches: [master]
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: self-hosted
+    container:
+        image: quantconnect/lean:foundation
+        options: --cpus 12 --memory 12g
+        env:
+          PYPI_API_TOKEN: ${{ secrets.PYPI_API_TOKEN }}
+          QC_GIT_TOKEN: ${{ secrets.QC_GIT_TOKEN }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0  # Ensures we fetch all history
+
+      - name: Run build and tests
+        run: |
+          # Add exception
+          git config --global --add safe.directory $GITHUB_WORKSPACE
+
+          # Get Last Commit of the Current Tag
+          TAG_COMMIT=$(git rev-parse HEAD) && echo "CURRENT BRANCH LAST COMMIT $TAG_COMMIT"
+
+          # Get Last Commit of the master
+          MASTER_COMMIT=$(git rev-parse origin/master) && echo "MASTER BRANCH LAST COMMIT $MASTER_COMMIT"
+
+          # Build
+          dotnet build /p:Configuration=Release /v:quiet /p:WarningLevel=1 QuantConnect.Lean.sln
+
+          # Run Tests
+          dotnet test ./Tests/bin/Release/QuantConnect.Tests.dll --blame-hang-timeout 300seconds --blame-crash --filter "TestCategory!=TravisExclude&TestCategory!=ResearchRegressionTests" -- TestRunParameters.Parameter\(name=\"log-handler\", value=\"ConsoleErrorLogHandler\"\)
+
+          # Generate & Publish python stubs
+          echo "GITHUB_REF ${{ github.ref }}"
+          case "${{ github.ref }}" in
+            refs/tags/*)
+              if [ "$TAG_COMMIT" = "$MASTER_COMMIT" ]; then
+                echo "Generating stubs"
+                chmod +x ci_build_stubs.sh
+                export ADDITIONAL_STUBS_REPOS=$(python find_datasource_repos.py) && ./ci_build_stubs.sh -t -g -p
+              else
+                echo "Skipping stub generation"
+              fi
+              ;;
+            *)
+              echo "Skipping stub generation"
+              ;;
+          esac

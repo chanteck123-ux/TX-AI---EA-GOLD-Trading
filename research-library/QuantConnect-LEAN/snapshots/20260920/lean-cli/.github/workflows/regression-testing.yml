@@ -1,0 +1,77 @@
+name: Regression Testing
+
+on:
+  push:
+    branches: ['*']
+    tags: ['*']
+  pull_request:
+    branches: [ master ]
+  schedule:
+    - cron: 0 0 * * *
+
+jobs:
+  load-matrix:
+    runs-on: ubuntu-latest
+    outputs:
+      python: ${{ steps.set-matrix.outputs.python }}
+      os: ${{ steps.set-matrix.outputs.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - id: set-matrix
+        run: |
+          if [ "${{ github.event_name }}" == "schedule" ]; then
+            echo "python=$(jq -Rsc 'split("\n") | map(select(length > 0))' .github/workflows-config/python-versions.txt)" >> $GITHUB_OUTPUT
+            echo "os=$(jq -Rsc 'split("\n") | map(select(length > 0))' .github/workflows-config/os-versions.txt)" >> $GITHUB_OUTPUT
+          else
+            echo 'python=["3.14"]' >> $GITHUB_OUTPUT
+            echo 'os=["ubuntu-24.04","macos-15","windows-latest"]' >> $GITHUB_OUTPUT
+          fi
+
+  test:
+    needs: load-matrix
+    runs-on: ${{ matrix.os }}
+
+    strategy:
+      max-parallel: 1
+      matrix:
+        os: ${{ fromJson(needs.load-matrix.outputs.os) }}
+        python-version: ${{ fromJson(needs.load-matrix.outputs.python) }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - name: Install dependencies
+        run: |
+          pip install setuptools wheel
+          pip install -r requirements.txt
+
+      - name: Run normal tests
+        run: python -m pytest -s -rs
+
+      - name: Run API tests
+        run: python -m pytest -s tests/components/api/test_clients.py
+        env:
+          QC_USER_ID: ${{ secrets.QC_USER_ID }}
+          QC_API_TOKEN: ${{ secrets.QC_API_TOKEN }}
+
+      # CLI tests call the CLI itself, which requires Docker, so we can only run it on Linux because:
+      # - GitHub Actions doesn't support Docker on macOS:
+      #   https://github.community/t/is-it-possible-to-install-and-configure-docker-on-macos-runner/16981/7
+      # - GitHub Actions only supports Windows-based Docker containers on Windows:
+      #   https://github.com/actions/virtual-environments/issues/1143
+      #
+      # Before running the tests we free up some disk space to prevent issues.
+      # Removing /usr/local/lib/android frees up ~10GB, which we can safely do because we don't use Android.
+      - name: Run CLI tests
+        run: sudo rm -rf /usr/local/lib/android && python -m pytest -s tests/test_cli.py
+        if: runner.os == 'Linux'
+        env:
+          QC_USER_ID: ${{ secrets.QC_USER_ID }}
+          QC_API_TOKEN: ${{ secrets.QC_API_TOKEN }}
+          QC_ORGANIZATION_ID: ${{ secrets.QC_ORGANIZATION_ID }}

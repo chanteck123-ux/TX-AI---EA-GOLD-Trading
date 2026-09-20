@@ -1,0 +1,187 @@
+[
+  {
+    "path": ".github/workflows/gh-actions.yml",
+    "size": 1222,
+    "sha256": "ef16bf8bd444c254c7ca03cdbcdf4c36f6aa27d39692c5d49aeb0ae383651fb0"
+  },
+  {
+    "path": "Analysis/01 Fundamental Factor Analysis.ipynb",
+    "size": 751334,
+    "sha256": "210ccffc1f3fad58175f710ec04bd1788ff77c79d8824b44e1517eea2497734e"
+  },
+  {
+    "path": "Analysis/02 Kalman Filter Based Pairs Trading.ipynb",
+    "size": 913100,
+    "sha256": "d7d92bc5af0f69e89c0390b0bfb87a116fff722165d37360c16c268d39585ba4"
+  },
+  {
+    "path": "Analysis/03 Mean-Variance Portfolio Optimization .ipynb",
+    "size": 127873,
+    "sha256": "380ce9beb8a4a328e549f3215b2fdf6efe7b840bb148dbed87dd9e17c5802582"
+  },
+  {
+    "path": "Analysis/04 EMA Cross Strategy Based on VXX.ipynb",
+    "size": 77301,
+    "sha256": "b3f7ac1395e3bea6226b027462849d842f6d94b1210742c99d4ecc5b47668fc6"
+  },
+  {
+    "path": "Analysis/05 Pairs Trading Strategy Based on Cointegration.ipynb",
+    "size": 186669,
+    "sha256": "f991fa13631e824ffaae36120066feb3f136d406cb7ab86e92991ebee4b50f82"
+  },
+  {
+    "path": "Documentation/Python/Plotting-Price-Data-Using-Matplotlib.ipynb",
+    "size": 6846,
+    "sha256": "9ae80c656905defc336fd5565707e8f763c4e368a799943840c4df0691799f48"
+  },
+  {
+    "path": "Documentation/Python/Plotting-Price-Data-Using-Plotly.ipynb",
+    "size": 6815,
+    "sha256": "f53e07d22602098c9640bb7f4bdc9c80e96f95fab8acb25356df9e9712668fe4"
+  },
+  {
+    "path": "Documentation/Python/Plotting-Price-Data-Using-Seaborn.ipynb",
+    "size": 3602,
+    "sha256": "a6de9bb63470e9de672a2d2bab7c447c6793117971901f2fece9c028dfb8d473"
+  },
+  {
+    "path": "Documentation/Python/Predicting-Future-Prices-With-Keras.ipynb",
+    "size": 6989,
+    "sha256": "5c91ea620a9a6a66f1069e11ef624dd0624b44396c15e638b7e259a1d9ebcc43"
+  },
+  {
+    "path": "Documentation/Python/Predicting-Future-Prices-With-Sklearn.ipynb",
+    "size": 10219,
+    "sha256": "4061f5a8cf7f0ec761dc0cef005b60e60ebd8e851492f3b35f16f6ed92c33fbf"
+  },
+  {
+    "path": "Documentation/Python/Predicting-Future-Prices-With-TensorFlow.ipynb",
+    "size": 10469,
+    "sha256": "e58198432cc547e4b3e3402384c6d6a3fba35416a09f8ebbc74e9f05cbc03a15"
+  },
+  {
+    "path": "Documentation/Python/Stock-Picking-With-Fundamental-Data.ipynb",
+    "size": 4322,
+    "sha256": "61130f8313fecca2716756fe8c1bcc91d414da1997929b3833a0fd74b16c0f6e"
+  },
+  {
+    "path": "Explore/Inter font/OFL.txt",
+    "size": 4376,
+    "sha256": "6e6410f2892d61813f54654098dc9654d0a3af2e92172999bee07eec13b0a75a"
+  },
+  {
+    "path": "Explore/Inter font/README.txt",
+    "size": 2254,
+    "sha256": "d2e3580c30aa815f52b08111cb27e5d960600d9adeb08e4e29d5d3a485ec659e"
+  },
+  {
+    "path": "Explore/default_photo.png",
+    "size": 9653,
+    "sha256": "f430d8f71722f4eb2fa204355e63fbc44d12e579dd90296db059dce9b756a10d"
+  },
+  {
+    "path": "Explore/generate_social_media_thumbnails.py",
+    "size": 6670,
+    "sha256": "0309838d507307748a12f50a2bc792c51a93271705ed39570781849827aecae7"
+  },
+  {
+    "path": "Explore/template_landscape.png",
+    "size": 30062,
+    "sha256": "b4b4114cac6d5044f49de5e0ee7e9bee6d07f7ff407c5c65c489a20678cc60ff"
+  },
+  {
+    "path": "Explore/template_square.png",
+    "size": 42584,
+    "sha256": "bc3617a092e172aa386c13ddea0ddd9d5e8df9d48b490385e450586da2bf5793"
+  },
+  {
+    "path": "LICENSE",
+    "size": 11357,
+    "sha256": "b40930bbcf80744c86c46a12bc9da056641d722716c378f5659b9e555ef833e1"
+  },
+  {
+    "path": "README.md",
+    "size": 3931,
+    "sha256": "95a3334ca3eeae974a535c72cf377311b44cfb1153816340ed66083a35466653"
+  },
+  {
+    "path": "Research2Production/CSharp/01 Mean Reversion CSharp.ipynb",
+    "size": 4554,
+    "sha256": "3b3ff668bf337887c8f32f8a69b02129b546d51ebd2b344a33b02b058d2a42fc"
+  },
+  {
+    "path": "Research2Production/CSharp/03 Uncorrelated Assets CSharp.ipynb",
+    "size": 4990,
+    "sha256": "aa7dfce6f35689fd6976391537ffda9d9eae1d089dfed056dc29f0b58f6a9eff"
+  },
+  {
+    "path": "Research2Production/CSharp/04 Kalman Filters and Pairs Trading CSharp.ipynb",
+    "size": 8180,
+    "sha256": "1f7943ff19f8b8ed119c1ac4a67764a91fa4c2e36b26208720944f92cbfe583d"
+  },
+  {
+    "path": "Research2Production/CSharp/05 Stationary Processes and Z-Scores CSharp.ipynb",
+    "size": 3796,
+    "sha256": "1f50a9a5f820308bb49c80ce64e27ecc069ef79d896efb9cdcda6bc546b71568"
+  },
+  {
+    "path": "Research2Production/Python/01 Mean Reversion.ipynb",
+    "size": 3599,
+    "sha256": "f90d2b84c9b4511bafd7828298c20351a09343136ac205047684548a37f2e58a"
+  },
+  {
+    "path": "Research2Production/Python/02 Random Forest Regression.ipynb",
+    "size": 5242,
+    "sha256": "98f6fe782a003be6bbd1a5ee4bcb51f10ce09754025e8ed4f3d5653dbcdaebfd"
+  },
+  {
+    "path": "Research2Production/Python/03 Uncorrelated Assets.ipynb",
+    "size": 3762,
+    "sha256": "0384f0341fbc68f02d8b386ab7f935f614b1d491df7616873ea5983903e18cf3"
+  },
+  {
+    "path": "Research2Production/Python/04 Kalman Filters and Pairs Trading.ipynb",
+    "size": 7700,
+    "sha256": "a9ad016314393b02d52f3f329c64e8ab6b738db2b999715ac6e022c0ed0407c0"
+  },
+  {
+    "path": "Research2Production/Python/05 Stationary Processes and Z-Scores.ipynb",
+    "size": 52397,
+    "sha256": "fa85e28cf5cff89ee606109a08b1f2b3495430c156e1fb8481b24d98935da009"
+  },
+  {
+    "path": "Research2Production/Python/06 Principle Compenent Analysis.ipynb",
+    "size": 16491,
+    "sha256": "01a0d6a0aa6c1170fd2a8062fdc0026f20b6f40e9323be3946baa612a6390c6b"
+  },
+  {
+    "path": "Research2Production/Python/07 Hidden Markov Models.ipynb",
+    "size": 40468,
+    "sha256": "7cd4f7d459be5c83c571e481940efe8baa616941ebf98e31e3971f7eec9d98c4"
+  },
+  {
+    "path": "Research2Production/Python/08 Long Short-Term Memory.ipynb",
+    "size": 48010,
+    "sha256": "4a461afd53420c7de4e418b2dcdf581d846ff7fe78dd11d3caaaa64b657c9e2b"
+  },
+  {
+    "path": "Scratch Notebooks/Optimization Analysis - Draft.ipynb",
+    "size": 730709,
+    "sha256": "607518e3e0fec089d48f199508b8b4e29503a8af7e96d73ea720415ae4276534"
+  },
+  {
+    "path": "Topical/20200507_hopevfear_research.ipynb",
+    "size": 61149,
+    "sha256": "4b3760bdde08b093e94538ceb92f0b2fed64e5c66ca733684f1adee6edafb405"
+  },
+  {
+    "path": "Topical/20200601_airlinebuybacks_research.ipynb",
+    "size": 3582964,
+    "sha256": "2dbdd4f9d00788d299be4b192b4a3ffd4265ace4e5b84586c912d2deeab3d2fc"
+  },
+  {
+    "path": "flask.png",
+    "size": 12974,
+    "sha256": "650ae4f6073e4432844f9e1e5d4b9f57f0ce7eaa1f024388b2cfc9ac80544313"
+  }
+]
