@@ -1,0 +1,8 @@
+{
+  "Scope": "STATIC_SOURCE_BOUNDARIES_ONLY",
+  "Tests": 4,
+  "Failures": 0,
+  "Errors": 0,
+  "SourceSHA256": "989F19C997F5B095A67727BF0C88492B3777F2CCF2682A02D954DBBE18CAE19A",
+  "NativeProtectionIntegration": "NOT_EXECUTED"
+}
