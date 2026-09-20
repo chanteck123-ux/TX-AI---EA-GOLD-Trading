@@ -39,7 +39,6 @@ namespace IndependentLeanGold
         private string _output, _runId;
         private readonly List<TradeRecord> _trades = new();
         private readonly List<EquityRecord> _equity = new();
-
         private decimal Parameter(string key, decimal fallback)
         {
             var text = GetParameter(key);
@@ -67,7 +66,7 @@ namespace IndependentLeanGold
             SetCash(_initialCash);
             SetStartDate(start);
             SetEndDate(endExclusive.AddDays(-1));
-            SetBrokerageModel(BrokerageName.Oanda, AccountType.Margin);
+            SetBrokerageModel(BrokerageName.OandaBrokerage, AccountType.Margin);
             Settings.SeedInitialPrices = false;
             var security = AddCfd("XAUUSD", Resolution.Hour, Market.Oanda, false, 20m);
             _symbol = security.Symbol;
@@ -89,7 +88,6 @@ namespace IndependentLeanGold
                 $"cash={_initialCash} risk={_riskFraction} targetR={_targetR} multiplier={_multiplier} " +
                 $"unitStep={_lotStep} tick={_priceTick} fee={_feePerUnit} slip={_slipPrice}");
         }
-
         public override void OnData(Slice data)
         {
             if (!data.QuoteBars.TryGetValue(_symbol, out var bar) || bar.IsFillForward || bar.EndTime == _lastBar) return;
@@ -107,7 +105,6 @@ namespace IndependentLeanGold
             _previousDataDate = Time.Date;
             SampleEquity(bar);
             if (!_fast.IsReady || !_slow.IsReady || !_atr.IsReady || _atr.Current.Value <= 0) return;
-
             // Risk management precedes all new-entry gates. A native stop remains active between bars.
             if (Portfolio[_symbol].Invested)
             {
@@ -152,7 +149,6 @@ namespace IndependentLeanGold
             if (_stop.Status == OrderStatus.Invalid) throw new InvalidOperationException("Protective stop rejected.");
             SampleEquity(bar);
         }
-
         private void ExitAtMarket(string reason)
         {
             if (_stop != null && _stop.Status != OrderStatus.Filled && _stop.Status != OrderStatus.Canceled)
@@ -168,7 +164,6 @@ namespace IndependentLeanGold
                 if (ticket.Status != OrderStatus.Filled) throw new InvalidOperationException("Exit was not filled.");
             }
         }
-
         public override void OnOrderEvent(OrderEvent e)
         {
             if (e.Status == OrderStatus.Invalid) { _rejections++; Log("ORDER_REJECTED " + e); return; }
@@ -201,7 +196,6 @@ namespace IndependentLeanGold
             _stop = null;
             _lastExitTime = UtcTime;
         }
-
         private void SampleEquity(QuoteBar bar)
         {
             var security = Securities[_symbol];
@@ -214,7 +208,6 @@ namespace IndependentLeanGold
             if (_peakEquity > 0) _maxDdFraction = Math.Max(_maxDdFraction, (_peakEquity - value) / _peakEquity);
             _equity.Add(new EquityRecord { Utc = UtcTime, EquityUsd = value });
         }
-
         public override void OnEndOfAlgorithm()
         {
             var positive = _trades.Where(t => t.NetUsd > 0).Sum(t => t.NetUsd);
@@ -263,7 +256,6 @@ namespace IndependentLeanGold
             Log("GOLD_RESULT " + JsonSerializer.Serialize(result));
             if (!reconciled) throw new InvalidOperationException("Backtest completed with unclosed or unreconciled exposure.");
         }
-
         public class UnitFeeModel : FeeModel
         {
             private readonly decimal _fee;
