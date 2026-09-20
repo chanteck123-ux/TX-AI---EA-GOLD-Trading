@@ -1,0 +1,71 @@
+name: Independent LEAN Gold Native Backtests 20260920
+on:
+  push:
+    branches: ['research/lean-gold/native-backtest-20260920']
+    paths: ['research/lean-gold/**', '.github/workflows/lean-gold-native-backtest-20260920.yml']
+permissions:
+  contents: read
+concurrency:
+  group: independent-lean-gold-20260920
+  cancel-in-progress: false
+jobs:
+  native-gold:
+    if: github.repository == 'chanteck123-ux/TX-AI---EA-GOLD-Trading' && github.ref == 'refs/heads/research/lean-gold/native-backtest-20260920'
+    runs-on: windows-2025
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          fetch-depth: 1
+          sparse-checkout: research/lean-gold
+          path: candidate
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          repository: QuantConnect/Lean
+          ref: 985ef30ad3ac774218c5ac516b4cb0aa2655730f
+          fetch-depth: 1
+          path: Lean
+      - uses: actions/setup-dotnet@v5
+        with:
+          dotnet-version: '10.0.x'
+      - name: Prepare Windows 5.1 UTF-8 source and validate PowerShell grammar
+        shell: pwsh
+        run: |
+          $path = Join-Path $env:GITHUB_WORKSPACE 'candidate/research/lean-gold/Run-GoldBacktest.ps1'
+          $text = [IO.File]::ReadAllText($path,[Text.Encoding]::UTF8)
+          [IO.File]::WriteAllText($path,$text,[Text.UTF8Encoding]::new($true))
+          $tokens=$null; $errors=$null
+          [void][System.Management.Automation.Language.Parser]::ParseFile($path,[ref]$tokens,[ref]$errors)
+          if ($errors.Count) { $errors | ForEach-Object { Write-Error $_.Message }; exit 1 }
+      - name: Compile actual engine and candidate, audit data, execute all four runs
+        shell: powershell
+        run: |
+          $root = Join-Path $env:GITHUB_WORKSPACE 'Lean'
+          $out = Join-Path $env:RUNNER_TEMP 'GoldEvidence'
+          & "$env:GITHUB_WORKSPACE/candidate/research/lean-gold/Run-GoldBacktest.ps1" -LeanRoot $root -OutputRoot $out -BuildEngine
+          exit $LASTEXITCODE
+      - name: Collect immutable evidence and replay package
+        if: always()
+        shell: pwsh
+        run: |
+          $delivery = Join-Path $env:RUNNER_TEMP 'GoldDelivery'
+          New-Item -ItemType Directory -Path $delivery -Force | Out-Null
+          Copy-Item "$env:GITHUB_WORKSPACE/candidate/research/lean-gold/*" $delivery -Recurse -Force
+          $out = Join-Path $env:RUNNER_TEMP 'GoldEvidence'
+          if (Test-Path $out) { Copy-Item $out (Join-Path $delivery 'evidence') -Recurse -Force }
+          $hashes = Get-ChildItem $delivery -File -Recurse | ForEach-Object {
+            @{ path=[IO.Path]::GetRelativePath($delivery,$_.FullName); bytes=$_.Length; sha256=(Get-FileHash $_.FullName -Algorithm SHA256).Hash.ToLowerInvariant() }
+          }
+          @{repository=$env:GITHUB_REPOSITORY;candidate_commit=$env:GITHUB_SHA;run_id=$env:GITHUB_RUN_ID;runner_os=$env:RUNNER_OS;files=@($hashes)} |
+            ConvertTo-Json -Depth 10 | Set-Content (Join-Path $delivery 'DELIVERY_MANIFEST.json') -Encoding utf8
+          $report = Join-Path $out '回测结果_CN.md'
+          if (Test-Path $report) { Get-Content $report -Raw | Out-File $env:GITHUB_STEP_SUMMARY -Append -Encoding utf8 }
+          $receipt=Join-Path $out 'completion_receipt.json'
+          if (Test-Path $receipt) { Get-Content $receipt -Raw | Write-Host }
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: LEAN-Gold-Native-Evidence-${{ github.run_id }}
+          path: ${{ runner.temp }}/GoldDelivery
+          retention-days: 3
+          if-no-files-found: error
