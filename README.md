@@ -11,5 +11,9 @@
 | [Codex 读取规则](AGENTS.md) | 每次进入项目时的工作顺序与授权。 |
 | [GSM SOP](gsm-sop/README.md) | 已确认的交易规则来源。 |
 | [外部知识库](GITHUB_RESEARCH_LIBRARY_INDEX.md) | 外部参考方法及研究来源。 |
+| [QuantConnect Python／C# 原始源码与学习资料](research-library/QuantConnect-LEAN/README_CN.md) | 2026-09-20 四份源码快照、7,340 文件校验、代码阅读与组织仓库索引。 |
+| [开发交易头脑EA（交易头脑v1.2）学习入口](开发交易头脑EA/交易头脑v1.2/QUANTCONNECT_LEARNING_CN.md) | 六策略项目的 QuantConnect 知识接续；原 EA 工作区未修改，不与旧三 SOP 设置混用。 |
 
 当前研发计划统一使用上方 main 中英文入口。旧计划、Python 分析器、候选代码及失败实验作为历史资料保存在研究分支，详见 [分支目录](research-memory/BRANCH_INDEX_CN.md)。分支存档或报告名称不代表已经通过当前策略验收。
+
+交易头脑 v1.2 是单独的六策略研究上下文：本页新增的是知识导航，不把旧 GSM 三 SOP 总计划自动变成它的执行配置。QuantConnect 本轮完成与未完成事项见 [入库记录](research-memory/QUANTCONNECT_IMPORT_20260920_CN.md)。
