@@ -19,6 +19,7 @@
 
 | 常用资料 | 入口 |
 | --- | --- |
+| AI Alpha架构（2026-09-20） | 当前中英文计划§13.11；[原始参考草案](../docs/reference/AI_ALPHA_RESEARCH_SYSTEM_MT5_ORIGINAL_CN_20260920.txt)。采用规则以修正版为准，保存不等于已实现或部署。 |
 | GSM 原始规则 | [SOP 目录](../gsm-sop/README.md) |
 | 外部研究知识 | [现有外部资料索引](../GITHUB_RESEARCH_LIBRARY_INDEX.md) |
 | LEAN 原始源码已入库（2026-09-19） | [源码目录与中文入口](../research-library/QuantConnect-LEAN/README_CN.md) · [来源与校验清单](../research-library/QuantConnect-LEAN/SOURCE_MANIFEST.json)：4 个完整原始 C# 文件和原始许可证，固定提交，上传后 blob 核对一致；不是整库、未接入 EA。 |

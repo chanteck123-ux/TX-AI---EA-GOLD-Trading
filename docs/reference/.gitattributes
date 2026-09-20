@@ -1,0 +1,3 @@
+# Preserve the uploaded reference bytes, including CRLF and original whitespace.
+# Validate this immutable source by hash; edited plan documents retain normal lint.
+AI_ALPHA_RESEARCH_SYSTEM_MT5_ORIGINAL_CN_20260920.txt -text -whitespace

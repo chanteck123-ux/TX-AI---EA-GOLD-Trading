@@ -2,6 +2,8 @@
 
 [中文版 / Chinese](FINAL_CHAMPION_ITERATION_SYSTEM_CN.md)
 
+Architecture addition: 2026-09-20, §13.11 records AI Alpha orchestration and independent MT5 EA execution. This is a design save; existing scoring, SOP and project acceptance rules continue to apply.
+
 Saved update: 2026-09-12 (Asia/Kuala_Lumpur). Building on the user's selected risk-updated plan and SOP-ownership clarification, this edition adds the §13 research system for dynamic risk, trend/range identification, gold/USD related markets, and news and the economic calendar.
 
 - Chinese source: `EA_旧版升级研究计划&codex重新研究开发计划&研究开发计划指南_CN_RISK_UPDATED.md`; SHA256: `88265662399010a383aa334dc2752fa1cba12bba912eff63f571fd8075251c66`.
@@ -913,3 +915,49 @@ flowchart TD
     F -->|Passed| G["Retain the best validated version and continue the next research round"]
     G --> A
 ```
+
+### 13.11 AI Alpha Research Orchestration and Independent MT5 EA Execution (Saved 2026-09-20)
+
+The user supplied an AI Alpha Research System draft and requested saving it after the corrections reviewed in this conversation. This section records the adopted architecture. The [original draft](docs/reference/AI_ALPHA_RESEARCH_SYSTEM_MT5_ORIGINAL_CN_20260920.txt) is provenance only: its Python scope, illustrative scoring and flow order are not direct execution requirements. Original SHA256: `fbf504cdcdf5cc4fef5a194868f9679f0f5e39c1e190b39411a9295a5e6e9a87`.
+
+**Responsibilities and handoffs.** AI Agents formulate research hypotheses, produce candidate strategies and MQL5, invoke actual compilation / MT5 tests, compare results and iterate. The MQL5 EA independently reads execution configuration, makes trading decisions, manages orders and enforces local risk controls. Python remains limited to this project's MCP monitoring side; references to Python training or live scoring in the draft do not expand that scope. The following are responsibilities, not a requirement for separate persistent services or a claim that multiple independent Agents are online.
+
+| Role | Required output |
+|---|---|
+| Research / Strategy | Problem and falsifiable hypothesis; strategy origin, purpose, valid location, trigger / invalidation and permitted changes |
+| Indicator / Risk | Library interfaces and time semantics; indicator responsibilities, risk budget, volume constraints and risk policy |
+| EA Coding / Backtest | Matching source, actual build result, EX5, SET / INI, test conditions, decision trace and report |
+| Critic / Optimization | Review of implementation, look-ahead, costs, overfitting and weaknesses; registered next change and control, returning to the test loop |
+| Forward / Release / Monitor | Demo evidence for the frozen version, release identity and recovery basis; monitoring status and research feedback |
+
+Handoffs share `candidate_id / run_id` and a version manifest, preserving matching evidence under §13.9. A role's PASS statement cannot replace artifacts. Iterate autonomously within existing authorization; strategy origin and the user's Scalping SOP remain governed by §2.2, without requiring manual approval for every round of every strategy. Reuse the indicator library under §13.8–§13.9 and record purpose / location / trigger. An AI / model filter is a candidate module for controlled comparison, not a mandatory enabled filter or a requirement for unanimous indicator agreement. Distinguish rule scores from trained and validated models; an illustrative AI Score of 0.81 is not automatically an 81% win rate, profit probability or reason to add exposure.
+
+**Entry gates must not bypass position management.** On each applicable event, first refresh available account / order state and handle existing-position protection and registered emergency management, then evaluate permission for new risk. Spread, Session, News, New Bar and AI filters control new entries / additions within their registered scope; early returns must not stop existing-position break-even, trailing, protective-stop maintenance or trade reconciliation. Management remains subject to each strategy's authorized rules; no exit module is automatically activated. Signal frequency follows the strategy's trigger semantics rather than a universal new-bar-only rule. Existing-risk accounting, account / engine authority, degradation, pauses, recovery and emergency exits continue under §13.5–§13.6. Core trading events do not wait for AI / MCP replies.
+
+`OnTick` does not guarantee processing every arriving market tick individually: a new NewTick is not queued while one is already queued or processing. Keep handlers short; use suitable events / timer checks and timestamped data reads as the strategy requires, without claiming that no quotes can be missed. On startup or recovery, reconcile actual positions, pending orders, in-flight requests and versions; Magic Number alone does not establish complete recovered state. [Official OnTick documentation](https://www.mql5.com/en/docs/event_handlers/ontick)
+
+Wrap actual trading interfaces such as `CTrade`; a true return does not prove a fill. Check `ResultRetcode()`, relevant results and `OnTradeTransaction`, handling partial fills, rejection, unknown outcomes and restart reconciliation. Transaction arrival order is not guaranteed; do not model one request as one event with a fixed arrival sequence. Strategy ownership, the account's netting / hedging mode and trade identifiers jointly determine management scope; do not take over unknown ownership. [CTrade Buy](https://www.mql5.com/en/docs/standardlibrary/tradeclasses/ctrade/ctradebuy), [Trade transactions](https://www.mql5.com/en/docs/event_handlers/ontradetransaction)
+
+**Optimization stays inside the change–test–review loop.** Every optimized configuration returns to backtesting and Critic review. Recompile changed source; parameter-only changes may reuse verified EX5 under §13.9 but require new configuration and reports. Freeze the selected candidate before the cross-period, cost / delay, applicable engine / Combined and unused-sample validation required by §7, §11 and §13.9. Failed promotion returns to development, marking consumed validation data as exposed. Demo Forward must identify the frozen EX5 / configuration / dependencies actually intended for release; a pre-optimization Demo result cannot validate a post-optimization version. Later changes must identify invalidated evidence and repeat the corresponding validation. If unused data is temporarily unavailable, record pending validation and continue other executable research.
+
+Formal evidence retains `Every tick based on real ticks` with checks for historical gaps and fallback to generated ticks; ordinary `Every Tick` is not automatically real-tick evidence. Audit spread, commission, swap, delay and slippage against actual settings and §11, without duplicate costs. Scoring remains exactly under §11.1 / §13.10 with the 35 / 25 / 20 / 10 / 10 weights and fixed scales. Sharpe, parameter sensitivity and stability are diagnostics, not an alternative additive score. Unregistered formal targets remain `N/A / SCORE_TARGETS_UNSET`, while raw-metric diagnostics and authorized research continue. The draft's 0.5% risk and similar values are examples, not default configuration or new caps. [MT5 testing modes and real ticks](https://www.mql5.com/en/docs/runtime/testing)
+
+```mermaid
+flowchart TD
+    A["Research hypothesis, origin and permitted changes"] --> B["Integrate or modify candidate source / parameters"]
+    B --> C["Compile as needed → development backtest → comparable results and Critic review"]
+    C -->|Adjust, replace or reject| B
+    C -->|Preregistered research criteria met| D["Freeze source, EX5, configuration, policy and reports"]
+    D --> E["Independent samples, periods, cost / delay and applicable project validation"]
+    E -->|Feed back problems and record data exposure| B
+    E -->|Passed| F["Demo Forward of the same frozen version"]
+    F -->|Problems found| B
+    F -->|Requirements met| G["Review exact release package and recovery point under existing live authorization"]
+    G --> H["Deploy and verify the version actually running"]
+    H --> I["Monitoring and research feedback"]
+    I --> A
+```
+
+**Version identity and release.** Record pending candidates, the eligible best under comparable conditions, versions completing required validation, Champions and actually deployed versions separately. A higher score does not automatically change identity; diagnostic scores for ineligible candidates remain governed by §13.10. Releases identify exact source, EX5, configuration, dependencies, hashes, acceptance evidence and recovery points, operate within existing live authorization, and require separate verification of the version actually running. Monitor findings about drift / decay become research inputs; new scores or hypotheses do not hot-update a running EA. The EA continues enforcing its preregistered local risk policy.
+
+Save status: `DESIGN_SAVED / NOT_IMPLEMENTED / NOT_TESTED`. This update started no Agent service, model training, EA development / compilation / backtest, Demo or live operation and selected no new Champion. Draft module filenames are proposed interfaces, not evidence of existing implementation. This section supplements the current legacy-upgrade plan. Other projects, such as TradingBrain v1.2, retain their own selected capital, risk and acceptance rules; this plan's numbers must not become their defaults.

@@ -1,0 +1,805 @@
+# AI Alpha Research System
+
+## MT5 EA 自动交易版
+
+整体目标：
+
+```text
+AI 发现交易机会
+        ↓
+生成交易逻辑
+        ↓
+自动验证策略
+        ↓
+生成 MQL5 EA
+        ↓
+MT5 Strategy Tester 回测
+        ↓
+风险审核
+        ↓
+Demo Forward Test
+        ↓
+MT5 EA 实盘自动交易
+        ↓
+监控 / 优化 / 更新 EA
+```
+
+---
+
+# 一、完整 Agented Flow
+
+```text
+                 AI ALPHA RESEARCH SYSTEM
+                     FOR MT5 EA
+
+                         │
+                         ▼
+              ┌────────────────────┐
+              │ 1. Research Agent  │
+              │ 市场研究 / Alpha发现│
+              └─────────┬──────────┘
+                        │
+                        ▼
+              ┌────────────────────┐
+              │ 2. Strategy Agent  │
+              │ 生成交易策略逻辑    │
+              └─────────┬──────────┘
+                        │
+                        ▼
+              ┌────────────────────┐
+              │ 3. Indicator Agent │
+              │ 指标 / Price Action │
+              │ Market Structure   │
+              └─────────┬──────────┘
+                        │
+                        ▼
+              ┌────────────────────┐
+              │ 4. Risk Agent      │
+              │ SL / TP / Lot      │
+              │ DD / Exposure      │
+              └─────────┬──────────┘
+                        │
+                        ▼
+              ┌────────────────────┐
+              │ 5. EA Coding Agent │
+              │ 生成 MQL5          │
+              │ Expert Advisor     │
+              └─────────┬──────────┘
+                        │
+                        ▼
+             ┌──────────────────────┐
+             │ 6. MT5 Backtest Agent│
+             │ Strategy Tester      │
+             │ Every Tick           │
+             └─────────┬────────────┘
+                       │
+                       ▼
+              ┌────────────────────┐
+              │ 7. Critic Agent    │
+              │ 检测过拟合 / Bug   │
+              │ Lookahead / 风险   │
+              └─────────┬──────────┘
+                        │
+              FAIL ─────┴─────► Strategy Agent
+                        │
+                       PASS
+                        ▼
+             ┌─────────────────────┐
+             │ 8. Optimization     │
+             │ 参数优化            │
+             │ Walk Forward        │
+             └─────────┬───────────┘
+                       │
+                       ▼
+             ┌─────────────────────┐
+             │ 9. Forward Test     │
+             │ MT5 Demo Account    │
+             └─────────┬───────────┘
+                       │
+                       ▼
+             ┌─────────────────────┐
+             │ 10. Approval Gate   │
+             │ 人工审核 / 风险批准  │
+             └─────────┬───────────┘
+                       │
+                       ▼
+              ╔═══════════════════╗
+              ║ 11. MT5 LIVE EA   ║
+              ║ 自动实盘交易       ║
+              ╚═════════╤═════════╝
+                        │
+                        ▼
+             ┌─────────────────────┐
+             │ 12. Monitor Agent   │
+             │ Profit / DD / Drift │
+             │ Alpha Decay         │
+             └─────────┬───────────┘
+                       │
+                       └──────────► AI Research
+```
+
+---
+
+# 二、MT5 EA 才是最终执行核心
+
+AI 不建议直接：
+
+```text
+ChatGPT
+   ↓
+BUY XAUUSD
+   ↓
+Broker
+```
+
+更合理的是：
+
+```text
+AI Research
+    ↓
+Strategy Specification
+    ↓
+MQL5 Code
+    ↓
+MT5 Expert Advisor
+    ↓
+Risk Engine
+    ↓
+Order Manager
+    ↓
+Broker
+```
+
+即：
+
+**AI 负责研究、生成策略和优化。**
+
+**EA 负责实时执行。**
+
+这样即使 AI 服务暂时不可用，已经部署到 MT5 的 EA 仍然可以按照既定交易规则运行。
+
+---
+
+# 三、MT5 EA Runtime Architecture
+
+一个正式 EA 建议拆成：
+
+```text
+                    MT5 EA
+                      │
+          ┌───────────┴───────────┐
+          │                       │
+     Market Data              Account Data
+          │                       │
+          └───────────┬───────────┘
+                      ▼
+               Indicator Engine
+                      │
+                      ▼
+                Signal Engine
+                      │
+                      ▼
+                 AI / Model
+                  Filter
+                      │
+                      ▼
+                 Risk Engine
+                      │
+                      ▼
+              Position Manager
+                      │
+                      ▼
+               Order Manager
+                      │
+                      ▼
+                   CTrade
+                      │
+                      ▼
+               MT5 Trade Server
+                      │
+                      ▼
+                   Broker
+```
+
+---
+
+# 四、EA 内部核心模块
+
+建议一个 EA 至少包含以下模块：
+
+```text
+EA_MAIN.mq5
+│
+├── SignalEngine.mqh
+│
+├── Indicators.mqh
+│
+├── MarketStructure.mqh
+│
+├── AIModel.mqh
+│
+├── RiskManager.mqh
+│
+├── MoneyManager.mqh
+│
+├── PositionManager.mqh
+│
+├── TradeManager.mqh
+│
+├── SessionFilter.mqh
+│
+├── SpreadFilter.mqh
+│
+├── NewsFilter.mqh
+│
+├── DrawdownGuard.mqh
+│
+└── Logger.mqh
+```
+
+MQL5 官方提供 `CTrade` 类用于访问交易功能，因此订单执行层可以直接围绕 `CTrade` 进行封装。
+
+---
+
+# 五、EA Event Flow
+
+EA 启动：
+
+```text
+OnInit()
+   │
+   ├── 初始化指标
+   ├── 初始化交易参数
+   ├── 设置 Magic Number
+   ├── 加载 AI 参数
+   ├── 加载交易时间
+   └── 检查账户状态
+```
+
+MQL5 官方定义 `OnInit()` 为 EA 初始化事件处理函数，并推荐使用返回状态码的版本，以便初始化失败时正确终止 EA。
+
+之后进入：
+
+```text
+OnTick()
+   │
+   ▼
+New Tick
+   │
+   ▼
+Spread Filter
+   │
+   ▼
+Trading Session Filter
+   │
+   ▼
+New Bar?
+   │
+   ▼
+Indicators
+   │
+   ▼
+Market Structure
+   │
+   ▼
+Strategy Signal
+   │
+   ▼
+AI Filter
+   │
+   ▼
+Risk Check
+   │
+   ▼
+Position Check
+   │
+   ▼
+BUY / SELL / HOLD
+```
+
+对很多 M15、M30、H1、H4 类型策略，不一定需要每一个 Tick 都重新计算复杂模型，可以：
+
+```text
+OnTick
+  ↓
+检测 New Bar
+  ↓
+新 K 线才生成 Signal
+```
+
+而已有持仓的：
+
+```text
+Trailing Stop
+Break Even
+Emergency Risk
+```
+
+仍然可以 Tick-by-Tick 管理。
+
+---
+
+# 六、Signal Engine
+
+例如：
+
+```text
+Trend Filter
+     +
+Market Structure
+     +
+Momentum
+     +
+Volatility
+     +
+AI Score
+     ↓
+Final Signal
+```
+
+EA 内部输出：
+
+```text
+SIGNAL_BUY
+SIGNAL_SELL
+SIGNAL_NONE
+```
+
+例如：
+
+```text
+Trend       = BUY
+Structure   = BUY
+Momentum    = BUY
+Volatility  = OK
+AI Score    = 0.81
+
+Final:
+BUY
+```
+
+---
+
+# 七、AI 不直接决定 Lot
+
+AI 可以产生：
+
+```text
+AI Confidence = 0.82
+```
+
+但最终 Lot 建议交给：
+
+**RiskManager**
+
+例如：
+
+```text
+Account Equity
+      ↓
+Risk = 0.5%
+      ↓
+Stop Loss Distance
+      ↓
+Symbol Tick Value
+      ↓
+Calculate Lot
+```
+
+因此：
+
+```text
+Lot Size =
+Risk Money
+÷
+SL Monetary Distance
+```
+
+例如：
+
+```text
+Equity = $10,000
+
+Risk = 0.5%
+
+Maximum Risk = $50
+
+SL = 500 points
+
+EA 自动计算 Lot
+```
+
+这样 AI 无法突然决定：
+
+```text
+100% Equity
+ALL IN
+```
+
+---
+
+# 八、EA 风险引擎
+
+建议加入：
+
+```text
+Max Risk Per Trade
+Max Daily Loss
+Max Weekly Loss
+Max Drawdown
+Max Open Positions
+Max Symbol Exposure
+Max Spread
+Min Margin Level
+Maximum Consecutive Loss
+Trading Session
+Cooldown
+```
+
+逻辑：
+
+```text
+Signal = BUY
+     ↓
+RiskManager
+     ↓
+Daily Loss exceeded?
+     │
+YES ─┴─► BLOCK
+     │
+NO
+     ↓
+Drawdown exceeded?
+     │
+YES ─┴─► BLOCK
+     │
+NO
+     ↓
+Spread too high?
+     │
+YES ─┴─► BLOCK
+     │
+NO
+     ↓
+Position Limit?
+     │
+YES ─┴─► BLOCK
+     │
+NO
+     ↓
+EXECUTE BUY
+```
+
+---
+
+# 九、交易执行系统
+
+订单层：
+
+```text
+Signal Engine
+      ↓
+Risk Manager
+      ↓
+Trade Manager
+      ↓
+CTrade
+      ↓
+Buy()
+Sell()
+PositionClose()
+PositionModify()
+```
+
+所有订单建议使用独立：
+
+```text
+Magic Number
+```
+
+例如：
+
+```text
+XAUUSD Trend EA
+Magic = 260001
+
+EURUSD Mean Reversion
+Magic = 260002
+
+BTCUSD Momentum
+Magic = 260003
+```
+
+避免不同 EA 相互管理错误的仓位。
+
+---
+
+# 十、交易成交监控
+
+建议使用：
+
+```text
+OnTradeTransaction()
+```
+
+记录：
+
+```text
+Order Sent
+Order Accepted
+Order Rejected
+Deal Created
+Position Opened
+Position Closed
+SL Triggered
+TP Triggered
+```
+
+MQL5 官方说明 `OnTradeTransaction()` 专门用于处理交易请求及服务器返回的交易事务；一次请求可能产生一系列交易事务，因此不能简单假设“一次下单 = 一个交易事件”。
+
+因此 EA 应该有独立的：
+
+```text
+Trade State Machine
+```
+
+而不是单纯：
+
+```text
+Buy();
+然后假设已经成交
+```
+
+---
+
+# 十一、MT5 Strategy Tester
+
+AI Strategy Agent 创建策略之后：
+
+```text
+Strategy
+    ↓
+MQL5 EA
+    ↓
+Compile
+    ↓
+Strategy Tester
+```
+
+正式测试可以使用：
+
+```text
+Every Tick
+```
+
+并加入：
+
+```text
+Spread
+Commission
+Slippage assumptions
+Stop Loss
+Take Profit
+Trailing
+Trading Sessions
+```
+
+MT5 Strategy Tester 支持 EA 历史回测、参数优化及多品种策略测试；官方文档也说明 `Every Tick` 是三类 Tick 测试模式中最细致的一种。
+
+---
+
+# 十二、AI 自动参数优化
+
+参数可以写成：
+
+```mql5
+input int FastEMA = 20;
+input int SlowEMA = 50;
+
+input int ATRPeriod = 14;
+
+input double SL_ATR = 2.0;
+input double TP_ATR = 3.0;
+
+input double RiskPercent = 0.5;
+```
+
+AI Optimization Agent 可以搜索：
+
+```text
+Fast EMA
+10 → 50
+
+Slow EMA
+30 → 200
+
+SL ATR
+1.0 → 4.0
+
+TP ATR
+1.0 → 8.0
+
+Risk
+0.25 → 1.0%
+```
+
+但是不要单纯优化：
+
+```text
+Maximum Net Profit
+```
+
+更合理的是建立自定义评分：
+
+```text
+EA SCORE
+
+Profit
++
+Sharpe
++
+Profit Factor
++
+Trade Count
+-
+Drawdown
+-
+Instability
+-
+Parameter Sensitivity
+```
+
+MQL5 的 `OnTester()` 可以返回自定义优化指标，并作为 Strategy Tester 的 Custom Max 优化标准。
+
+---
+
+# 十三、AI + Python + MT5
+
+如果 AI 模型比较复杂，可以采用：
+
+```text
+              Python AI Engine
+                    │
+          Feature Engineering
+                    │
+            ML / AI Model
+                    │
+              Signal Score
+                    │
+                    ▼
+                  MT5
+                    │
+                    ▼
+                   EA
+                    │
+              Risk Engine
+                    │
+                    ▼
+                 Broker
+```
+
+MetaTrader 官方提供 Python 集成模块，可以直接与 MT5 Terminal 建立连接并获取账户、持仓、历史订单和市场数据，因此 Python 很适合作为研究、机器学习和数据处理层。
+
+但如果目标是：
+
+**长期稳定运行的 MT5 EA**
+
+我更建议最终生产版本采用：
+
+```text
+Python / AI
+      ↓
+训练模型
+      ↓
+产生模型参数
+      ↓
+Export Model
+      ↓
+MQL5 EA
+      ↓
+独立运行
+```
+
+而不是：
+
+```text
+每个 Tick
+MT5 → Internet → LLM → MT5
+```
+
+这样延迟、网络断线、API 故障都不会直接影响交易执行。
+
+---
+
+# 十四、最终系统结构
+
+```text
+┌────────────────────────────────────────────┐
+│       AI ALPHA RESEARCH SYSTEM             │
+│                                            │
+│ Research Agent                             │
+│ Strategy Agent                             │
+│ Quant Agent                                │
+│ Critic Agent                               │
+│ Optimization Agent                         │
+└──────────────────────┬─────────────────────┘
+                       │
+                       ▼
+               Strategy Specification
+                       │
+                       ▼
+┌────────────────────────────────────────────┐
+│            MQL5 EA GENERATOR               │
+│                                            │
+│ Signal Engine                              │
+│ AI Model                                   │
+│ Risk Manager                               │
+│ Money Manager                              │
+│ Trade Manager                              │
+└──────────────────────┬─────────────────────┘
+                       │
+                       ▼
+                 EA_xxx.mq5
+                       │
+                       ▼
+                    Compile
+                       │
+                       ▼
+                  EA_xxx.ex5
+                       │
+          ┌────────────┴────────────┐
+          ▼                         ▼
+   Strategy Tester              Demo MT5
+          │                         │
+          ▼                         ▼
+     Optimization              Forward Test
+          │                         │
+          └────────────┬────────────┘
+                       ▼
+                  Risk Approval
+                       │
+                       ▼
+              ╔════════════════╗
+              ║   MT5 LIVE EA  ║
+              ╚═══════╤════════╝
+                      │
+                      ▼
+                   Broker
+                      │
+                      ▼
+              Trade Transactions
+                      │
+                      ▼
+              Monitoring System
+                      │
+                      ▼
+              AI Alpha Research
+```
+
+## 最终定位
+
+这个系统不是：
+
+```text
+AI 股票分析系统
+```
+
+而是：
+
+```text
+AI Quant Research
+        +
+AI Strategy Generator
+        +
+MQL5 EA Generator
+        +
+MT5 Backtesting
+        +
+Risk Management
+        +
+MT5 Automated Execution
+```
+
+最终目标：
+
+**AI 自动研究 → AI 生成策略 → 自动生成 EA → MT5 自动回测 → 自动优化 → Forward Test → MT5 实盘 EA。**
