@@ -19,6 +19,7 @@
 
 | 常用资料 | 入口 |
 | --- | --- |
+| EA成绩评估口径（2026-09-27） | [中文计划§11.9](../FINAL_CHAMPION_ITERATION_SYSTEM_CN.md) · [English §11.9](../FINAL_CHAMPION_ITERATION_SYSTEM.md)：夏普、历史回撤、PF／胜率／成本、Recovery与恢复时长、样本和历史质量；保留评分及项目边界。 |
 | AI Alpha架构（2026-09-20） | 当前中英文计划§13.11；[原始参考草案](../docs/reference/AI_ALPHA_RESEARCH_SYSTEM_MT5_ORIGINAL_CN_20260920.txt)。采用规则以修正版为准，保存不等于已实现或部署。 |
 | GSM 原始规则 | [SOP 目录](../gsm-sop/README.md) |
 | 外部研究知识 | [现有外部资料索引](../GITHUB_RESEARCH_LIBRARY_INDEX.md) |

@@ -2,6 +2,8 @@
 
 [中文版 / Chinese](FINAL_CHAMPION_ITERATION_SYSTEM_CN.md)
 
+Evaluation update: 2026-09-27. Section 11.1 and new §11.9 distinguish performance metrics, statistical interpretation and project acceptance. Personalization is synchronized; §13.10 weights and confirmed project boundaries remain in place. This update saves rules only.
+
 Architecture addition: 2026-09-20, §13.11 records AI Alpha orchestration and independent MT5 EA execution. This is a design save; existing scoring, SOP and project acceptance rules continue to apply.
 
 Saved update: 2026-09-12 (Asia/Kuala_Lumpur). Building on the user's selected risk-updated plan and SOP-ownership clarification, this edition adds the §13 research system for dynamic risk, trend/range identification, gold/USD related markets, and news and the economic calendar.
@@ -472,15 +474,18 @@ Supplement date: 2026-09-06. The win-rate content repeatedly pasted by the user 
 
 The following rules apply to the separate Scalping, Intraday, and Swing lines, and to Combined when actually run. Freeze the formal main test period before the experiment. Report OOS and each stress scenario in separate tables; do not substitute the best-looking period for the formal main table.
 
+**Conventions and scope (2026-09-27):** This section evaluates EA performance, rather than designing EMA/ATR trading signals. Separate metric definitions, diagnostic references, selected project acceptance rules and scoring anchors. External claims such as “Sharpe 1.5 permits live trading,” “30% drawdown causes liquidation” or “200 trades establishes reliability” do not automatically become standards. The explicitly adopted project DD, complete-trade count and Recovery gates below remain the current legacy-upgrade policy, not universal statistical laws. This update neither adds, removes nor relaxes those gates, nor transfers them to other projects. See §11.9 for definitions and interpretation limits.
+
 | Metric | Reporting Requirements | Assessment for This Project |
 |---|---|---|
 | Net Profit | Net profit in USD, initial capital, start and end dates, total return; report the annualization method separately when needed | `Return%=Net/InitialCapital×100`; net profit must be positive. Explain capital efficiency when returns are low; do not consider only the absolute amount |
-| Profit Factor | Native PF, Gross Profit, Gross Loss, sample size, OOS, cost sensitivity | Use 1.3–1.8 as the user's diagnostic reference, with no upper limit of 1.8; PF≤1 indicates no positive-return edge; >2.5 or 3 triggers intensive review, without automatically classifying overfitting from PF alone |
+| Profit Factor | Native PF, Gross Profit, Gross Loss, sample size, OOS, cost sensitivity | Use 1.3–1.8 as the user's diagnostic reference, with no upper limit of 1.8; valid PF≤1 means this batch's gross profits do not exceed absolute gross losses under that convention, not inevitable long-term losses; >2.5 or 3 triggers intensive review, without automatically classifying overfitting from PF alone |
 | Max Equity DD | Maximum equity drawdown amount, the percentage corresponding to that amount drawdown, and the maximum relative equity drawdown percentage over the entire period | Apply thresholds to the maximum relative equity drawdown percentage over the entire period: ≤15% target; >15% and ≤30% requires strict manual review and cannot be automatically promoted; >30% is a hard rejection |
 | Total Trades | Separately report native MT5 Trades, complete opened-and-closed trades, Setups, and Deals | Each line must have >100 complete trades (at least 101) in the frozen main test period; 200–500 is suggested, not an upper limit on trade count; insufficient samples prevent promotion |
 | Recovery Factor | Native MT5 value and calculation reconciliation; additionally report Equity Recovery | Native MT5 Recovery must be >3.0; exactly 3.0 also fails the requirement; do not conceal equity risk by using only balance drawdown |
 | Expected Payoff | Native value and net expectancy after costs calculated per complete trade, using consistent USD/complete-trade units | Must be significantly positive and cover real costs; a cost buffer of 3–5 times is a strong reference target, not a substitute for statistical significance |
 | Win Rate | Profit Trades (% of total), average win, average loss, realized average win/loss ratio | No universal hard win-rate threshold; consider expectancy, direction, costs, and consecutive losses together |
+| Sharpe Ratio | Retain native MT5 values; for recalculations state return series, sampling frequency, risk-free rate, annualization and missing-data handling | Auxiliary return-quality diagnostic with no separate score weight or universal live-trading pass line; not survival or profit probability; no cross-platform ranking with unknown conventions |
 | Forced-Liquidation Risk | Minimum margin level, Margin Call/Stop Out modes and thresholds, peak margin usage, abnormal floating losses | A triggered Stop Out, unexplained large floating losses, or reliance on holding losing positions until recovery prevents promotion; do not reach conclusions from line colors |
 
 For example, an initial USD10,000 earning USD200 over one year does indeed yield a 2% return. Mark it `LOW_RETURN_REVIEW` and assess costs, drawdown, and comparable opportunity costs; do not claim it is necessarily “worse than a bank deposit” without checking the term, currency, and risk. No additional universal minimum annualized return has been set in this round.
@@ -578,10 +583,59 @@ OOS profitability adds supporting evidence; it does not prove stable predictive 
 - [ ] Overall win rate, BUY/SELL, average wins/losses, realized R:R, break-even trades, longest losing streak, and pressure on capital.
 - [ ] Check Equity/Balance against the legend; audit minimum Margin Level, Margin Call/Stop Out, floating losses, and margin.
 - [ ] Real-tick coverage, actual fixed delay, native random delay, and additional slippage stress, with complete results for every scenario.
+- [ ] Under §11.9, disclose Sharpe conventions, return/sample dependence and research trial counts; report recovery duration and unrecovered status separately, without treating History Quality as real-tick coverage.
 - [ ] Untouched, non-overlapping OOS, fixed parameters, and no future-data or result-selection leakage.
 - [ ] After passing tests, the candidate must still beat the same-risk Champion; insufficient samples/missing data receive `RESEARCH FURTHER` with the blocker explained, and failures of hard rules prevent promotion.
 
 This addition updates only the reporting standards and plan. No new backtest was run, and no new PASS or Champion was produced.
+
+### 11.9 EA Performance Metrics and Conditional Interpretation (Saved 2026-09-27)
+
+This section adopts the user's performance-evaluation guidance and connects §§11.1–11.8 with §13.10. Priorities remain net profit USD, continued account operation and capital resilience after withdrawals. Auxiliary metrics such as Sharpe explain return structure; they do not replace those objectives. All numerical examples are calculations only, not this EA's results or new defaults. Citation placeholders in the pasted text are not evidence; verified primary sources are linked below.
+
+**1. Sharpe: an auxiliary diagnostic with consistent conventions.** The basic expression is `Sharpe = mean(r_t − rf_t) / stdev(r_t − rf_t)`, with returns and risk-free returns sampled at the same frequency. It measures excess return relative to variability, not win rate, survival probability or complete tail risk. Mean and variance do not capture every relevant risk difference. [Sharpe's original paper](https://stanford.edu/~wfsharpe/art/sr/sr.htm)
+
+Retain native MT5 Sharpe and any recalculation separately. Identify platform/build, dates, equity or other return series, frequency, cash-flow treatment, risk-free rate, standard-deviation convention and annualization. Do not directly rank daily-equity Sharpe, per-trade Sharpe and unknown conventions together. Square-root annualization depends on assumptions; explain treatment of serial correlation. Insufficient samples, zero standard deviation or missing inputs are undefined, never full marks. [Sharpe on time dependence](https://stanford.edu/~wfsharpe/art/sr/sr.htm)
+
+The MT5 strategy tester assumes a zero risk-free rate; this alone does not establish compatibility with other platforms. Neither “1.0–1.5 is live-ready” nor “above 3.5 means overfitting” is universal. Examine sample duration, distribution, parameter trials and independent validation. Selection bias from multiple trials does not begin only above a Sharpe threshold. Register assumptions and inputs before researching diagnostics such as DSR; their names do not prove that overfitting has been excluded. [MT5 optimization statistics](https://www.metatrader5.com/en/terminal/help/algotrading/strategy_optimization), [Bailey and López de Prado: Deflated Sharpe Ratio](https://www.davidhbailey.com/dhbpapers/deflated-sharpe.pdf)
+
+**2. Maximum drawdown: an observed path, not a future worst-loss bound.** Maximum drawdown describes the largest peak-to-trough decline observed in the measured period. Separate balance from equity; equity includes unrealized position PnL. The maximum monetary and maximum relative drawdowns may occur at different times, so report them separately under §11.2. For identical capital, periods and base risk, compare additional net profit with additional drawdown USD, relative drawdown, margin pressure and recovery time. [MT5 drawdown fields](https://www.metatrader5.com/en/terminal/help/algotrading/testing_report)
+
+There is no universal mapping from “30% drawdown” to likely forced liquidation. Stop Out depends on equity, margin use, and the broker's account mode and thresholds. Do not divide by zero when margin use is zero. Record minimum margin level, actual stop-out events, losing streaks and whether remaining capital after withdrawals can sustain the registered strategy. Project DD limits are policies, not guarantees of future maximum loss. [Account margin and Stop Out properties](https://www.mql5.com/en/docs/constants/environment_state/accountinformation)
+
+**3. PF, win rate, realized payoff ratio and costs must share a convention.** For the same complete-trade sample, `PF = sum(positive PnL) / abs(sum(negative PnL))`. Preserve native values and reconcile trade aggregation and cost allocation. A separately calculated net PF needs its own name and definition; it does not replace native PF in §13.10. Valid PF<1 describes this sample's profits failing to cover its losses under that convention. PF>1 neither covers omitted costs automatically nor guarantees future profitability. No losses, a zero denominator or a platform sentinel is not reliable full-score evidence; retain §13.10 handling. [Native MT5 statistics](https://www.mql5.com/en/docs/constants/environment_state/statistics)
+
+Win rate contains information but cannot establish profitability on its own. With `p_win + p_loss + p_zero = 1` and a positive average-loss magnitude, `MeanPnL = p_win × AvgWin − p_loss × AvgLoss`. Only when the zero-PnL proportion is zero can `p_loss = 1 − p_win` be assumed. A price break-even exit can be a losing trade after costs. Calculate realized average win/loss ratio from executions, not planned TP/SL. Do not subtract included fees again; disclose and consistently allocate any omitted costs.
+
+The following examples assume no zero-PnL trades, average loss of USD100 and no costs. They follow directly from the identities above:
+
+| Hypothetical combination | Average win USD | Sample mean PnL per trade USD | Corresponding PF |
+|---|---:|---:|---:|
+| 70% win rate, realized win/loss ratio 0.6 | 60 | `0.7×60 − 0.3×100 = 12` | 1.40 |
+| 35% win rate, realized win/loss ratio 2.5 | 250 | `0.35×250 − 0.65×100 = 22.50` | Approximately 1.3462 |
+
+Both means are positive under these assumptions. This alone neither identifies range/trend strategies nor ranks overall quality: frequency, holding duration, loss concentration and equity paths are missing. A sample identity is not proof of positive future expectancy.
+
+**4. Recovery: separate denominators from recovery duration.** Native MT5 `STAT_RECOVERY_FACTOR = STAT_PROFIT / STAT_BALANCE_DD`. The project separately reports `Equity Recovery = Net Profit USD / Max Equity DD USD`; do not mix them. [Official Recovery definition](https://www.mql5.com/en/docs/constants/environment_state/statistics)
+
+For example, USD3,000 net profit, USD500 maximum balance drawdown and USD2,000 maximum equity drawdown yield native Recovery=6 and Equity Recovery=1.5. Neither formula contains time. Do not infer fast or difficult recovery from a ratio alone. Separately report equity peaks, troughs, time to recover the prior peak, and unrecovered status at period end; define the duration's starting point and incomplete intervals, never recording unrecovered drawdowns as zero days. Apply §13 cash-flow adjustments so withdrawals are not automatically trading losses. Preserve and explain zero-denominator or missing native values under §11.2 without automatically passing them.
+
+**5. Sample count and history quality describe different evidence.** Neither “fewer than 100 trades has no statistical meaning” nor “over 200 trades is reliable” holds universally. Information depends on effect size, return distribution, dependence, market coverage and the selection process. Registered project count gates still govern project acceptance, but do not guarantee statistical reliability. Report complete trades, Setups and Deals separately. Additions, partial exits or correlated positions within one market episode are not automatically independent observations. Retain all candidate trials and data-exposure records; disclose suitable uncertainty estimates under §11.4. [Multiple testing and sample-length research](https://www.davidhbailey.com/dhbpapers/deflated-sharpe.pdf)
+
+MT5 History Quality is based on one-minute data correctness and gaps; 99% does not mean 99% of ticks are real. In real-tick mode, a minute with a bar but missing ticks can still use generated ticks. Separately retain report history quality, testing mode, verifiable real-tick coverage and fallback/gaps, execution delay, cost/slippage stress and validation unused for selection. Mark unverifiable coverage unknown; do not derive it from 99%. [History Quality definition](https://www.metatrader5.com/en/terminal/help/algotrading/testing_report), [Real and generated ticks](https://www.metatrader5.com/en/terminal/help/algotrading/tick_generation)
+
+**6. Reporting order and iteration decisions.** Verify test conditions, data and statistical conventions first, then assess jointly:
+
+| Evaluation focus | Questions to answer each round |
+|---|---|
+| Net profit USD and costs | With identical capital, period, contract and base risk, how much more/less profit and how much cost change? |
+| Equity pressure and continued operation | How do DD USD and relative DD, margin, losing streaks, recovery time and remaining capital after withdrawals change? |
+| Return structure and quality | Why did PF, after-cost expectancy, win rate, realized win/loss ratio, Sharpe and both Recovery measures change? |
+| Evidence strength | Do regime coverage, sample dependence, trial count, real ticks, cost/delay stress and independent validation support the improvement? |
+
+Retain §13.10's 35/25/20/10/10 weights, fixed comparison conditions and anchors, N/A and SCORE_TARGETS_UNSET handling. Sharpe and Recovery receive no additional weight. Replace unconditional labels such as “excellent,” “healthy,” “certain to lose” and “statistically meaningless” with conditions, evidence and limitations. Distinguish strategy improvement from returns purchased through greater risk. Report scoring, acceptance and independent validation separately; address weaknesses through the authorized modify/test/compare loop.
+
+Save status: `RULES_SAVED / NOT_IMPLEMENTED / NOT_TESTED`, describing this update's delivery only. No scorer implementation, EA compilation, backtest, new performance result or Champion/live change occurred.
 
 ## 12. Research Modules for New Supporting Methods (Integrated into the Legacy-Version Upgrade Route, 2026-09-07)
 
