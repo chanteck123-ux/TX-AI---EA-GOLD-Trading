@@ -1,0 +1,1357 @@
+{
+  "Run": "R_C00_Scalping_USD1000_D0_20260906_203616",
+  "SourceSHA256": "989F19C997F5B095A67727BF0C88492B3777F2CCF2682A02D954DBBE18CAE19A",
+  "EX5SHA256": "BB77B5D947614A9D1796E02E2F3382945C1FCAFD5DF68EFF1FF8D387368957EB",
+  "SignalFileSHA256": "C71F150071F0A925B31DCBAEBE8CF9CF206E6E69BD9A8110F484B8150701DCBD",
+  "LogSHA256": {
+    "Agent-127.0.0.1-3000_20260906.log.txt": "9DFF9FF55F42B5F3AFB02D35114568D36B74E4488B13F0A8A7AD55829AA92204"
+  },
+  "FirstTouches": 1195,
+  "EvaluatedUniqueZones": 974,
+  "Groups": {
+    "CORE_REVERSAL_FAILED": 769,
+    "HTF_REJECTED": 24,
+    "EMA_FAIL_RSI_FAIL": 74,
+    "EMA_FAIL_RSI_PASS": 73,
+    "EMA_PASS_RSI_FAIL": 14,
+    "ACCEPTED_BEFORE_ORDER_RISK": 20
+  },
+  "TouchesNotEvaluated": [
+    {
+      "ZoneID": "GOLD_PERIOD_M5_DEMAND_IMPULSE_1767795600",
+      "FirstTouch": "2026.01.07 15:06:10",
+      "BrokenAfterTouch": "2026.01.07 15:10:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_DEMAND_IMPULSE_1767799200",
+      "FirstTouch": "2026.01.07 17:11:02",
+      "BrokenAfterTouch": "2026.01.07 17:15:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_DEMAND_IMPULSE_1768266900",
+      "FirstTouch": "2026.01.13 03:30:02",
+      "BrokenAfterTouch": "2026.01.13 03:35:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_DEMAND_IMPULSE_1768536900",
+      "FirstTouch": "2026.01.16 04:30:00",
+      "BrokenAfterTouch": "2026.01.16 04:35:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_DEMAND_IMPULSE_1768548900",
+      "FirstTouch": "2026.01.16 08:41:54",
+      "BrokenAfterTouch": "2026.01.16 08:45:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_DEMAND_IMPULSE_1768577400",
+      "FirstTouch": "2026.01.16 17:25:00",
+      "BrokenAfterTouch": "2026.01.16 17:30:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_DEMAND_IMPULSE_1769620200",
+      "FirstTouch": "2026.01.29 17:26:36",
+      "BrokenAfterTouch": "2026.01.29 17:30:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_DEMAND_IMPULSE_1769714100",
+      "FirstTouch": "2026.01.29 21:30:46",
+      "BrokenAfterTouch": "2026.01.29 21:35:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_DEMAND_IMPULSE_1769726100",
+      "FirstTouch": "2026.01.30 03:14:22",
+      "BrokenAfterTouch": "2026.01.30 03:15:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_DEMAND_IMPULSE_1769742900",
+      "FirstTouch": "2026.01.30 03:57:43",
+      "BrokenAfterTouch": "2026.01.30 04:00:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_DEMAND_IMPULSE_1769747700",
+      "FirstTouch": "2026.01.30 05:43:45",
+      "BrokenAfterTouch": "2026.01.30 05:45:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_DEMAND_IMPULSE_1769757000",
+      "FirstTouch": "2026.01.30 07:56:20",
+      "BrokenAfterTouch": "2026.01.30 08:00:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_DEMAND_IMPULSE_1769760000",
+      "FirstTouch": "2026.01.30 08:15:47",
+      "BrokenAfterTouch": "2026.01.30 08:20:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_DEMAND_IMPULSE_1769766900",
+      "FirstTouch": "2026.01.30 10:11:23",
+      "BrokenAfterTouch": "2026.01.30 10:15:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_DEMAND_IMPULSE_1769768100",
+      "FirstTouch": "2026.01.30 10:31:29",
+      "BrokenAfterTouch": "2026.01.30 10:35:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_DEMAND_IMPULSE_1769777700",
+      "FirstTouch": "2026.01.30 14:46:29",
+      "BrokenAfterTouch": "2026.01.30 14:50:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_DEMAND_IMPULSE_1769793000",
+      "FirstTouch": "2026.01.30 18:22:06",
+      "BrokenAfterTouch": "2026.01.30 18:25:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_DEMAND_IMPULSE_1769805600",
+      "FirstTouch": "2026.02.02 03:08:05",
+      "BrokenAfterTouch": "2026.02.02 03:10:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_DEMAND_IMPULSE_1770153000",
+      "FirstTouch": "2026.02.04 18:46:43",
+      "BrokenAfterTouch": "2026.02.04 18:50:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_DEMAND_IMPULSE_1770244500",
+      "FirstTouch": "2026.02.05 04:11:26",
+      "BrokenAfterTouch": "2026.02.05 04:15:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_DEMAND_IMPULSE_1770265200",
+      "FirstTouch": "2026.02.05 04:40:28",
+      "BrokenAfterTouch": "2026.02.05 04:45:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_DEMAND_IMPULSE_1770267600",
+      "FirstTouch": "2026.02.05 23:33:47",
+      "BrokenAfterTouch": "2026.02.05 23:35:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_DEMAND_IMPULSE_1770654600",
+      "FirstTouch": "2026.02.10 01:15:01",
+      "BrokenAfterTouch": "2026.02.10 01:20:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_DEMAND_IMPULSE_1770737400",
+      "FirstTouch": "2026.02.10 16:47:35",
+      "BrokenAfterTouch": "2026.02.10 16:50:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_DEMAND_IMPULSE_1770829500",
+      "FirstTouch": "2026.02.11 17:20:00",
+      "BrokenAfterTouch": "2026.02.11 17:25:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_DEMAND_IMPULSE_1770913800",
+      "FirstTouch": "2026.02.12 16:45:29",
+      "BrokenAfterTouch": "2026.02.12 16:50:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_DEMAND_IMPULSE_1770915600",
+      "FirstTouch": "2026.02.12 18:10:39",
+      "BrokenAfterTouch": "2026.02.12 18:15:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_DEMAND_IMPULSE_1770921000",
+      "FirstTouch": "2026.02.13 01:00:35",
+      "BrokenAfterTouch": "2026.02.13 01:05:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_DEMAND_IMPULSE_1771266300",
+      "FirstTouch": "2026.02.17 02:06:36",
+      "BrokenAfterTouch": "2026.02.17 02:10:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_DEMAND_IMPULSE_1771297500",
+      "FirstTouch": "2026.02.17 07:12:48",
+      "BrokenAfterTouch": "2026.02.17 07:15:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_DEMAND_IMPULSE_1771342800",
+      "FirstTouch": "2026.02.17 15:55:09",
+      "BrokenAfterTouch": "2026.02.17 16:00:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_DEMAND_IMPULSE_1771864200",
+      "FirstTouch": "2026.02.24 03:20:20",
+      "BrokenAfterTouch": "2026.02.24 03:25:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_DEMAND_IMPULSE_1771864500",
+      "FirstTouch": "2026.02.24 03:15:16",
+      "BrokenAfterTouch": "2026.02.24 03:20:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_DEMAND_IMPULSE_1771942800",
+      "FirstTouch": "2026.02.24 14:50:13",
+      "BrokenAfterTouch": "2026.02.24 14:55:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_DEMAND_IMPULSE_1771948200",
+      "FirstTouch": "2026.02.24 16:06:15",
+      "BrokenAfterTouch": "2026.02.24 16:10:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_DEMAND_IMPULSE_1772111100",
+      "FirstTouch": "2026.02.26 13:20:02",
+      "BrokenAfterTouch": "2026.02.26 13:25:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_DEMAND_IMPULSE_1772543400",
+      "FirstTouch": "2026.03.03 13:28:05",
+      "BrokenAfterTouch": "2026.03.03 13:30:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_DEMAND_IMPULSE_1772576400",
+      "FirstTouch": "2026.03.03 22:35:00",
+      "BrokenAfterTouch": "2026.03.03 22:40:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_DEMAND_IMPULSE_1772706000",
+      "FirstTouch": "2026.03.05 15:16:57",
+      "BrokenAfterTouch": "2026.03.05 15:20:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_DEMAND_IMPULSE_1772724300",
+      "FirstTouch": "2026.03.05 16:39:11",
+      "BrokenAfterTouch": "2026.03.05 16:40:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_DEMAND_IMPULSE_1773241200",
+      "FirstTouch": "2026.03.11 15:45:02",
+      "BrokenAfterTouch": "2026.03.11 15:50:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_DEMAND_IMPULSE_1773393900",
+      "FirstTouch": "2026.03.13 10:01:47",
+      "BrokenAfterTouch": "2026.03.13 10:05:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_DEMAND_IMPULSE_1773421500",
+      "FirstTouch": "2026.03.13 17:40:57",
+      "BrokenAfterTouch": "2026.03.13 17:45:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_DEMAND_IMPULSE_1773425100",
+      "FirstTouch": "2026.03.13 21:46:25",
+      "BrokenAfterTouch": "2026.03.13 21:50:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_DEMAND_IMPULSE_1773619200",
+      "FirstTouch": "2026.03.16 01:20:13",
+      "BrokenAfterTouch": "2026.03.16 01:25:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_DEMAND_IMPULSE_1773626400",
+      "FirstTouch": "2026.03.16 03:13:28",
+      "BrokenAfterTouch": "2026.03.16 03:15:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_DEMAND_IMPULSE_1773839400",
+      "FirstTouch": "2026.03.18 13:26:44",
+      "BrokenAfterTouch": "2026.03.18 13:30:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_DEMAND_IMPULSE_1773890700",
+      "FirstTouch": "2026.03.19 07:38:20",
+      "BrokenAfterTouch": "2026.03.19 07:40:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_DEMAND_IMPULSE_1773907200",
+      "FirstTouch": "2026.03.19 08:16:05",
+      "BrokenAfterTouch": "2026.03.19 08:20:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_DEMAND_IMPULSE_1773915300",
+      "FirstTouch": "2026.03.19 10:30:11",
+      "BrokenAfterTouch": "2026.03.19 10:35:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_DEMAND_IMPULSE_1774253400",
+      "FirstTouch": "2026.03.23 08:25:01",
+      "BrokenAfterTouch": "2026.03.23 08:30:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_DEMAND_IMPULSE_1774255500",
+      "FirstTouch": "2026.03.23 09:06:24",
+      "BrokenAfterTouch": "2026.03.23 09:10:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_DEMAND_IMPULSE_1774402500",
+      "FirstTouch": "2026.03.25 21:09:31",
+      "BrokenAfterTouch": "2026.03.25 21:10:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_DEMAND_IMPULSE_1774474800",
+      "FirstTouch": "2026.03.25 22:37:05",
+      "BrokenAfterTouch": "2026.03.25 22:40:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_DEMAND_IMPULSE_1774483200",
+      "FirstTouch": "2026.03.26 00:15:00",
+      "BrokenAfterTouch": "2026.03.26 00:20:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_DEMAND_IMPULSE_1774485000",
+      "FirstTouch": "2026.03.26 01:02:15",
+      "BrokenAfterTouch": "2026.03.26 01:05:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_DEMAND_IMPULSE_1774538400",
+      "FirstTouch": "2026.03.26 15:35:00",
+      "BrokenAfterTouch": "2026.03.26 15:40:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_DEMAND_IMPULSE_1774859400",
+      "FirstTouch": "2026.03.30 21:55:15",
+      "BrokenAfterTouch": "2026.03.30 22:00:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_DEMAND_IMPULSE_1774923300",
+      "FirstTouch": "2026.03.31 03:16:46",
+      "BrokenAfterTouch": "2026.03.31 03:20:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_DEMAND_IMPULSE_1775116500",
+      "FirstTouch": "2026.04.02 08:30:34",
+      "BrokenAfterTouch": "2026.04.02 08:35:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_DEMAND_IMPULSE_1775119800",
+      "FirstTouch": "2026.04.02 09:05:06",
+      "BrokenAfterTouch": "2026.04.02 09:10:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_DEMAND_IMPULSE_1775547000",
+      "FirstTouch": "2026.04.07 08:23:00",
+      "BrokenAfterTouch": "2026.04.07 08:25:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_DEMAND_IMPULSE_1776284400",
+      "FirstTouch": "2026.04.15 20:35:06",
+      "BrokenAfterTouch": "2026.04.15 20:40:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_DEMAND_IMPULSE_1776436800",
+      "FirstTouch": "2026.04.20 01:10:00",
+      "BrokenAfterTouch": "2026.04.20 01:15:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_DEMAND_IMPULSE_1776768000",
+      "FirstTouch": "2026.04.21 11:06:41",
+      "BrokenAfterTouch": "2026.04.21 11:10:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_DEMAND_IMPULSE_1776793800",
+      "FirstTouch": "2026.04.21 19:25:35",
+      "BrokenAfterTouch": "2026.04.21 19:30:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_DEMAND_IMPULSE_1776803400",
+      "FirstTouch": "2026.04.21 21:16:32",
+      "BrokenAfterTouch": "2026.04.21 21:20:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_DEMAND_IMPULSE_1776951000",
+      "FirstTouch": "2026.04.23 20:48:10",
+      "BrokenAfterTouch": "2026.04.23 20:50:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_DEMAND_IMPULSE_1776976200",
+      "FirstTouch": "2026.04.23 20:53:21",
+      "BrokenAfterTouch": "2026.04.23 20:55:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_DEMAND_IMPULSE_1777375800",
+      "FirstTouch": "2026.04.28 11:45:00",
+      "BrokenAfterTouch": "2026.04.28 11:50:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_DEMAND_IMPULSE_1777901400",
+      "FirstTouch": "2026.05.04 18:18:10",
+      "BrokenAfterTouch": "2026.05.04 18:20:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_DEMAND_IMPULSE_1778123400",
+      "FirstTouch": "2026.05.07 03:25:13",
+      "BrokenAfterTouch": "2026.05.07 03:30:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_DEMAND_IMPULSE_1778194800",
+      "FirstTouch": "2026.05.07 23:37:36",
+      "BrokenAfterTouch": "2026.05.07 23:40:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_DEMAND_IMPULSE_1778828700",
+      "FirstTouch": "2026.05.15 07:20:00",
+      "BrokenAfterTouch": "2026.05.15 07:25:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_DEMAND_IMPULSE_1779252600",
+      "FirstTouch": "2026.05.20 05:31:13",
+      "BrokenAfterTouch": "2026.05.20 05:35:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_DEMAND_IMPULSE_1779867000",
+      "FirstTouch": "2026.05.27 08:32:40",
+      "BrokenAfterTouch": "2026.05.27 08:35:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_DEMAND_IMPULSE_1779974700",
+      "FirstTouch": "2026.05.28 13:40:00",
+      "BrokenAfterTouch": "2026.05.28 13:45:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_DEMAND_IMPULSE_1780314000",
+      "FirstTouch": "2026.06.01 12:30:31",
+      "BrokenAfterTouch": "2026.06.01 12:35:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_DEMAND_IMPULSE_1780317300",
+      "FirstTouch": "2026.06.01 16:11:02",
+      "BrokenAfterTouch": "2026.06.01 16:15:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_DEMAND_IMPULSE_1780485900",
+      "FirstTouch": "2026.06.03 11:51:09",
+      "BrokenAfterTouch": "2026.06.03 11:55:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_DEMAND_IMPULSE_1780488000",
+      "FirstTouch": "2026.06.03 12:29:09",
+      "BrokenAfterTouch": "2026.06.03 12:30:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_DEMAND_IMPULSE_1780648500",
+      "FirstTouch": "2026.06.05 08:55:00",
+      "BrokenAfterTouch": "2026.06.05 09:00:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_DEMAND_IMPULSE_1780649100",
+      "FirstTouch": "2026.06.05 09:00:09",
+      "BrokenAfterTouch": "2026.06.05 09:05:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_DEMAND_IMPULSE_1780651200",
+      "FirstTouch": "2026.06.05 15:50:19",
+      "BrokenAfterTouch": "2026.06.05 15:55:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_DEMAND_IMPULSE_1780688700",
+      "FirstTouch": "2026.06.05 21:12:31",
+      "BrokenAfterTouch": "2026.06.05 21:15:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_DEMAND_IMPULSE_1780703100",
+      "FirstTouch": "2026.06.08 01:01:30",
+      "BrokenAfterTouch": "2026.06.08 01:05:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_DEMAND_IMPULSE_1780906500",
+      "FirstTouch": "2026.06.08 08:30:10",
+      "BrokenAfterTouch": "2026.06.08 08:35:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_DEMAND_IMPULSE_1781056800",
+      "FirstTouch": "2026.06.10 02:15:00",
+      "BrokenAfterTouch": "2026.06.10 02:20:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_DEMAND_IMPULSE_1781059800",
+      "FirstTouch": "2026.06.10 03:30:49",
+      "BrokenAfterTouch": "2026.06.10 03:35:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_DEMAND_IMPULSE_1781079000",
+      "FirstTouch": "2026.06.10 11:01:00",
+      "BrokenAfterTouch": "2026.06.10 11:05:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_DEMAND_IMPULSE_1781109300",
+      "FirstTouch": "2026.06.10 17:48:18",
+      "BrokenAfterTouch": "2026.06.10 17:50:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_DEMAND_IMPULSE_1781607000",
+      "FirstTouch": "2026.06.16 17:16:21",
+      "BrokenAfterTouch": "2026.06.16 17:20:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_DEMAND_IMPULSE_1781712600",
+      "FirstTouch": "2026.06.17 21:03:00",
+      "BrokenAfterTouch": "2026.06.17 21:05:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_DEMAND_IMPULSE_1781730900",
+      "FirstTouch": "2026.06.17 21:30:35",
+      "BrokenAfterTouch": "2026.06.17 21:35:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_DEMAND_IMPULSE_1781795400",
+      "FirstTouch": "2026.06.18 15:39:13",
+      "BrokenAfterTouch": "2026.06.18 15:40:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_DEMAND_IMPULSE_1781800200",
+      "FirstTouch": "2026.06.18 16:45:00",
+      "BrokenAfterTouch": "2026.06.18 16:50:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_DEMAND_IMPULSE_1781818800",
+      "FirstTouch": "2026.06.18 21:55:00",
+      "BrokenAfterTouch": "2026.06.18 22:00:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_DEMAND_IMPULSE_1781833500",
+      "FirstTouch": "2026.06.19 02:01:20",
+      "BrokenAfterTouch": "2026.06.19 02:05:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_DEMAND_IMPULSE_1781856600",
+      "FirstTouch": "2026.06.23 07:58:07",
+      "BrokenAfterTouch": "2026.06.23 08:00:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_DEMAND_IMPULSE_1782269100",
+      "FirstTouch": "2026.06.24 04:01:20",
+      "BrokenAfterTouch": "2026.06.24 04:05:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_DEMAND_IMPULSE_1782308400",
+      "FirstTouch": "2026.06.24 13:55:00",
+      "BrokenAfterTouch": "2026.06.24 14:00:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_DEMAND_IMPULSE_1782312600",
+      "FirstTouch": "2026.06.24 15:05:00",
+      "BrokenAfterTouch": "2026.06.24 15:10:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_DEMAND_IMPULSE_1782335100",
+      "FirstTouch": "2026.06.25 05:08:15",
+      "BrokenAfterTouch": "2026.06.25 05:10:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_DEMAND_IMPULSE_1782734700",
+      "FirstTouch": "2026.06.29 12:20:00",
+      "BrokenAfterTouch": "2026.06.29 12:25:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_DEMAND_IMPULSE_1782750600",
+      "FirstTouch": "2026.06.29 16:45:00",
+      "BrokenAfterTouch": "2026.06.29 16:50:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_DEMAND_IMPULSE_1782891900",
+      "FirstTouch": "2026.07.01 08:00:00",
+      "BrokenAfterTouch": "2026.07.01 08:05:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_DEMAND_IMPULSE_1782898800",
+      "FirstTouch": "2026.07.01 10:00:49",
+      "BrokenAfterTouch": "2026.07.01 10:05:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_DEMAND_IMPULSE_1782910800",
+      "FirstTouch": "2026.07.01 13:15:00",
+      "BrokenAfterTouch": "2026.07.01 13:20:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_DEMAND_IMPULSE_1783069500",
+      "FirstTouch": "2026.07.03 09:20:00",
+      "BrokenAfterTouch": "2026.07.03 09:25:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_DEMAND_IMPULSE_1783412400",
+      "FirstTouch": "2026.07.07 08:35:00",
+      "BrokenAfterTouch": "2026.07.07 08:40:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_DEMAND_IMPULSE_1783485900",
+      "FirstTouch": "2026.07.08 11:16:58",
+      "BrokenAfterTouch": "2026.07.08 11:20:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_DEMAND_IMPULSE_1784864100",
+      "FirstTouch": "2026.07.24 04:00:02",
+      "BrokenAfterTouch": "2026.07.24 04:05:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_DEMAND_IMPULSE_1784880000",
+      "FirstTouch": "2026.07.24 08:15:00",
+      "BrokenAfterTouch": "2026.07.24 08:20:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_DEMAND_IMPULSE_1784881800",
+      "FirstTouch": "2026.07.24 08:50:00",
+      "BrokenAfterTouch": "2026.07.24 08:55:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_DEMAND_IMPULSE_1785510000",
+      "FirstTouch": "2026.07.31 15:20:33",
+      "BrokenAfterTouch": "2026.07.31 15:25:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_DEMAND_IMPULSE_1785514800",
+      "FirstTouch": "2026.07.31 16:37:31",
+      "BrokenAfterTouch": "2026.07.31 16:40:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_DEMAND_IMPULSE_1785746400",
+      "FirstTouch": "2026.08.03 10:16:53",
+      "BrokenAfterTouch": "2026.08.03 10:20:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_DEMAND_IMPULSE_1786678200",
+      "FirstTouch": "2026.08.14 03:45:00",
+      "BrokenAfterTouch": "2026.08.14 03:50:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_DEMAND_IMPULSE_1787073300",
+      "FirstTouch": "2026.08.18 17:30:00",
+      "BrokenAfterTouch": "2026.08.18 17:35:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_DEMAND_IMPULSE_1787127900",
+      "FirstTouch": "2026.08.19 08:45:00",
+      "BrokenAfterTouch": "2026.08.19 08:50:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_DEMAND_IMPULSE_1787128500",
+      "FirstTouch": "2026.08.19 08:50:00",
+      "BrokenAfterTouch": "2026.08.19 08:55:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_DEMAND_IMPULSE_1787661000",
+      "FirstTouch": "2026.08.25 16:14:11",
+      "BrokenAfterTouch": "2026.08.25 16:15:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_DEMAND_IMPULSE_1787675400",
+      "FirstTouch": "2026.08.25 16:45:14",
+      "BrokenAfterTouch": "2026.08.25 16:50:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_SUPPLY_IMPULSE_1767576600",
+      "FirstTouch": "2026.01.05 01:45:38",
+      "BrokenAfterTouch": "2026.01.05 01:50:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_SUPPLY_IMPULSE_1767639300",
+      "FirstTouch": "2026.01.06 01:00:06",
+      "BrokenAfterTouch": "2026.01.06 01:05:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_SUPPLY_IMPULSE_1767902400",
+      "FirstTouch": "2026.01.08 22:21:40",
+      "BrokenAfterTouch": "2026.01.08 22:25:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_SUPPLY_IMPULSE_1768242000",
+      "FirstTouch": "2026.01.13 16:45:10",
+      "BrokenAfterTouch": "2026.01.13 16:50:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_SUPPLY_IMPULSE_1768323000",
+      "FirstTouch": "2026.01.14 07:01:24",
+      "BrokenAfterTouch": "2026.01.14 07:05:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_SUPPLY_IMPULSE_1768404300",
+      "FirstTouch": "2026.01.14 15:40:00",
+      "BrokenAfterTouch": "2026.01.14 15:45:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_SUPPLY_IMPULSE_1768935600",
+      "FirstTouch": "2026.01.20 19:15:01",
+      "BrokenAfterTouch": "2026.01.20 19:20:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_SUPPLY_IMPULSE_1768966200",
+      "FirstTouch": "2026.01.21 03:54:12",
+      "BrokenAfterTouch": "2026.01.21 03:55:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_SUPPLY_IMPULSE_1768978800",
+      "FirstTouch": "2026.01.21 07:15:05",
+      "BrokenAfterTouch": "2026.01.21 07:20:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_SUPPLY_IMPULSE_1769118300",
+      "FirstTouch": "2026.01.22 22:00:00",
+      "BrokenAfterTouch": "2026.01.22 22:05:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_SUPPLY_IMPULSE_1769197200",
+      "FirstTouch": "2026.01.23 21:52:50",
+      "BrokenAfterTouch": "2026.01.23 21:55:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_SUPPLY_IMPULSE_1769398500",
+      "FirstTouch": "2026.01.26 04:21:51",
+      "BrokenAfterTouch": "2026.01.26 04:25:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_SUPPLY_IMPULSE_1769417400",
+      "FirstTouch": "2026.01.27 22:03:25",
+      "BrokenAfterTouch": "2026.01.27 22:05:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_SUPPLY_IMPULSE_1769568900",
+      "FirstTouch": "2026.01.28 03:11:39",
+      "BrokenAfterTouch": "2026.01.28 03:15:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_SUPPLY_IMPULSE_1769628900",
+      "FirstTouch": "2026.01.28 19:51:02",
+      "BrokenAfterTouch": "2026.01.28 19:55:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_SUPPLY_IMPULSE_1769631900",
+      "FirstTouch": "2026.01.28 21:56:11",
+      "BrokenAfterTouch": "2026.01.28 22:00:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_SUPPLY_IMPULSE_1769640600",
+      "FirstTouch": "2026.01.28 23:05:01",
+      "BrokenAfterTouch": "2026.01.28 23:10:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_SUPPLY_IMPULSE_1770000000",
+      "FirstTouch": "2026.02.03 03:15:03",
+      "BrokenAfterTouch": "2026.02.03 03:20:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_SUPPLY_IMPULSE_1770103800",
+      "FirstTouch": "2026.02.03 08:11:39",
+      "BrokenAfterTouch": "2026.02.03 08:15:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_SUPPLY_IMPULSE_1770144600",
+      "FirstTouch": "2026.02.04 02:13:13",
+      "BrokenAfterTouch": "2026.02.04 02:15:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_SUPPLY_IMPULSE_1770180600",
+      "FirstTouch": "2026.02.04 05:31:43",
+      "BrokenAfterTouch": "2026.02.04 05:35:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_SUPPLY_IMPULSE_1770186000",
+      "FirstTouch": "2026.02.04 06:35:02",
+      "BrokenAfterTouch": "2026.02.04 06:40:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_SUPPLY_IMPULSE_1770191700",
+      "FirstTouch": "2026.02.04 09:26:07",
+      "BrokenAfterTouch": "2026.02.04 09:30:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_SUPPLY_IMPULSE_1770390300",
+      "FirstTouch": "2026.02.06 15:22:32",
+      "BrokenAfterTouch": "2026.02.06 15:25:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_SUPPLY_IMPULSE_1770409200",
+      "FirstTouch": "2026.02.06 20:36:11",
+      "BrokenAfterTouch": "2026.02.06 20:40:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_SUPPLY_IMPULSE_1770678000",
+      "FirstTouch": "2026.02.11 12:40:52",
+      "BrokenAfterTouch": "2026.02.11 12:45:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_SUPPLY_IMPULSE_1771403400",
+      "FirstTouch": "2026.02.18 08:45:00",
+      "BrokenAfterTouch": "2026.02.18 08:50:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_SUPPLY_IMPULSE_1771499700",
+      "FirstTouch": "2026.02.19 17:30:04",
+      "BrokenAfterTouch": "2026.02.19 17:35:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_SUPPLY_IMPULSE_1771549800",
+      "FirstTouch": "2026.02.20 02:55:25",
+      "BrokenAfterTouch": "2026.02.20 03:00:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_SUPPLY_IMPULSE_1771606800",
+      "FirstTouch": "2026.02.20 18:32:37",
+      "BrokenAfterTouch": "2026.02.20 18:35:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_SUPPLY_IMPULSE_1772052300",
+      "FirstTouch": "2026.02.25 21:13:26",
+      "BrokenAfterTouch": "2026.02.25 21:15:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_SUPPLY_IMPULSE_1772464200",
+      "FirstTouch": "2026.03.02 15:27:21",
+      "BrokenAfterTouch": "2026.03.02 15:30:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_SUPPLY_IMPULSE_1772644200",
+      "FirstTouch": "2026.03.04 17:25:00",
+      "BrokenAfterTouch": "2026.03.04 17:30:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_SUPPLY_IMPULSE_1773156600",
+      "FirstTouch": "2026.03.10 17:10:30",
+      "BrokenAfterTouch": "2026.03.10 17:15:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_SUPPLY_IMPULSE_1773669000",
+      "FirstTouch": "2026.03.16 14:17:51",
+      "BrokenAfterTouch": "2026.03.16 14:20:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_SUPPLY_IMPULSE_1773674700",
+      "FirstTouch": "2026.03.16 15:40:00",
+      "BrokenAfterTouch": "2026.03.16 15:45:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_SUPPLY_IMPULSE_1773677400",
+      "FirstTouch": "2026.03.17 06:44:38",
+      "BrokenAfterTouch": "2026.03.17 06:45:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_SUPPLY_IMPULSE_1774466100",
+      "FirstTouch": "2026.03.25 19:31:44",
+      "BrokenAfterTouch": "2026.03.25 19:35:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_SUPPLY_IMPULSE_1774483500",
+      "FirstTouch": "2026.03.26 00:41:43",
+      "BrokenAfterTouch": "2026.03.26 00:45:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_SUPPLY_IMPULSE_1774859100",
+      "FirstTouch": "2026.03.30 08:45:07",
+      "BrokenAfterTouch": "2026.03.30 08:50:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_SUPPLY_IMPULSE_1774888200",
+      "FirstTouch": "2026.03.31 04:21:04",
+      "BrokenAfterTouch": "2026.03.31 04:25:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_SUPPLY_IMPULSE_1774888800",
+      "FirstTouch": "2026.03.31 04:18:47",
+      "BrokenAfterTouch": "2026.03.31 04:20:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_SUPPLY_IMPULSE_1774989300",
+      "FirstTouch": "2026.03.31 20:52:29",
+      "BrokenAfterTouch": "2026.03.31 20:55:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_SUPPLY_IMPULSE_1775017800",
+      "FirstTouch": "2026.04.01 09:24:34",
+      "BrokenAfterTouch": "2026.04.01 09:25:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_SUPPLY_IMPULSE_1775046600",
+      "FirstTouch": "2026.04.01 12:45:00",
+      "BrokenAfterTouch": "2026.04.01 12:50:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_SUPPLY_IMPULSE_1775051400",
+      "FirstTouch": "2026.04.01 14:05:45",
+      "BrokenAfterTouch": "2026.04.01 14:10:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_SUPPLY_IMPULSE_1775598300",
+      "FirstTouch": "2026.04.07 22:18:21",
+      "BrokenAfterTouch": "2026.04.07 22:20:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_SUPPLY_IMPULSE_1775610600",
+      "FirstTouch": "2026.04.08 01:32:28",
+      "BrokenAfterTouch": "2026.04.08 01:35:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_SUPPLY_IMPULSE_1775769600",
+      "FirstTouch": "2026.04.10 17:15:42",
+      "BrokenAfterTouch": "2026.04.10 17:20:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_SUPPLY_IMPULSE_1775845500",
+      "FirstTouch": "2026.04.14 10:00:26",
+      "BrokenAfterTouch": "2026.04.14 10:05:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_SUPPLY_IMPULSE_1776183900",
+      "FirstTouch": "2026.04.14 16:40:00",
+      "BrokenAfterTouch": "2026.04.14 16:45:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_SUPPLY_IMPULSE_1776215400",
+      "FirstTouch": "2026.04.15 04:11:19",
+      "BrokenAfterTouch": "2026.04.15 04:15:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_SUPPLY_IMPULSE_1777674600",
+      "FirstTouch": "2026.05.04 01:00:51",
+      "BrokenAfterTouch": "2026.05.04 01:05:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_SUPPLY_IMPULSE_1778158500",
+      "FirstTouch": "2026.05.07 13:10:00",
+      "BrokenAfterTouch": "2026.05.07 13:15:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_SUPPLY_IMPULSE_1778169600",
+      "FirstTouch": "2026.05.07 16:30:46",
+      "BrokenAfterTouch": "2026.05.07 16:35:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_SUPPLY_IMPULSE_1778517900",
+      "FirstTouch": "2026.05.12 01:46:05",
+      "BrokenAfterTouch": "2026.05.12 01:50:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_SUPPLY_IMPULSE_1778727600",
+      "FirstTouch": "2026.05.14 03:15:00",
+      "BrokenAfterTouch": "2026.05.14 03:20:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_SUPPLY_IMPULSE_1779120000",
+      "FirstTouch": "2026.05.18 16:31:43",
+      "BrokenAfterTouch": "2026.05.18 16:35:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_SUPPLY_IMPULSE_1779718800",
+      "FirstTouch": "2026.05.25 14:35:00",
+      "BrokenAfterTouch": "2026.05.25 14:40:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_SUPPLY_IMPULSE_1780057200",
+      "FirstTouch": "2026.05.29 12:35:17",
+      "BrokenAfterTouch": "2026.05.29 12:40:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_SUPPLY_IMPULSE_1780074600",
+      "FirstTouch": "2026.05.29 17:52:10",
+      "BrokenAfterTouch": "2026.05.29 17:55:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_SUPPLY_IMPULSE_1780583400",
+      "FirstTouch": "2026.06.04 14:45:00",
+      "BrokenAfterTouch": "2026.06.04 14:50:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_SUPPLY_IMPULSE_1780903800",
+      "FirstTouch": "2026.06.08 14:15:00",
+      "BrokenAfterTouch": "2026.06.08 14:20:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_SUPPLY_IMPULSE_1780914300",
+      "FirstTouch": "2026.06.08 14:14:54",
+      "BrokenAfterTouch": "2026.06.08 14:15:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_SUPPLY_IMPULSE_1781021700",
+      "FirstTouch": "2026.06.09 16:47:29",
+      "BrokenAfterTouch": "2026.06.09 16:50:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_SUPPLY_IMPULSE_1781176200",
+      "FirstTouch": "2026.06.11 20:30:08",
+      "BrokenAfterTouch": "2026.06.11 20:35:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_SUPPLY_IMPULSE_1781211600",
+      "FirstTouch": "2026.06.11 21:16:03",
+      "BrokenAfterTouch": "2026.06.11 21:20:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_SUPPLY_IMPULSE_1781226000",
+      "FirstTouch": "2026.06.12 01:40:36",
+      "BrokenAfterTouch": "2026.06.12 01:45:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_SUPPLY_IMPULSE_1781884800",
+      "FirstTouch": "2026.06.22 03:45:42",
+      "BrokenAfterTouch": "2026.06.22 03:50:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_SUPPLY_IMPULSE_1782183900",
+      "FirstTouch": "2026.06.23 03:43:19",
+      "BrokenAfterTouch": "2026.06.23 03:45:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_SUPPLY_IMPULSE_1782421200",
+      "FirstTouch": "2026.06.25 21:15:00",
+      "BrokenAfterTouch": "2026.06.25 21:20:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_SUPPLY_IMPULSE_1782436200",
+      "FirstTouch": "2026.06.26 01:30:00",
+      "BrokenAfterTouch": "2026.06.26 01:35:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_SUPPLY_IMPULSE_1782479700",
+      "FirstTouch": "2026.06.26 13:30:01",
+      "BrokenAfterTouch": "2026.06.26 13:35:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_SUPPLY_IMPULSE_1782489900",
+      "FirstTouch": "2026.06.26 16:20:00",
+      "BrokenAfterTouch": "2026.06.26 16:25:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_SUPPLY_IMPULSE_1782934200",
+      "FirstTouch": "2026.07.02 15:30:02",
+      "BrokenAfterTouch": "2026.07.02 15:35:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_SUPPLY_IMPULSE_1783007100",
+      "FirstTouch": "2026.07.02 16:35:17",
+      "BrokenAfterTouch": "2026.07.02 16:40:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_SUPPLY_IMPULSE_1783015500",
+      "FirstTouch": "2026.07.02 18:21:16",
+      "BrokenAfterTouch": "2026.07.02 18:25:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_SUPPLY_IMPULSE_1783046100",
+      "FirstTouch": "2026.07.03 02:51:51",
+      "BrokenAfterTouch": "2026.07.03 02:55:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_SUPPLY_IMPULSE_1783067700",
+      "FirstTouch": "2026.07.03 10:05:32",
+      "BrokenAfterTouch": "2026.07.03 10:10:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_SUPPLY_IMPULSE_1783461900",
+      "FirstTouch": "2026.07.08 03:38:44",
+      "BrokenAfterTouch": "2026.07.08 03:40:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_SUPPLY_IMPULSE_1784520600",
+      "FirstTouch": "2026.07.20 05:46:27",
+      "BrokenAfterTouch": "2026.07.20 05:50:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_SUPPLY_IMPULSE_1784544300",
+      "FirstTouch": "2026.07.20 11:00:09",
+      "BrokenAfterTouch": "2026.07.20 11:05:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_SUPPLY_IMPULSE_1784647500",
+      "FirstTouch": "2026.07.21 17:12:16",
+      "BrokenAfterTouch": "2026.07.21 17:15:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_SUPPLY_IMPULSE_1785431100",
+      "FirstTouch": "2026.07.30 17:40:02",
+      "BrokenAfterTouch": "2026.07.30 17:45:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_SUPPLY_IMPULSE_1785859200",
+      "FirstTouch": "2026.08.04 16:20:44",
+      "BrokenAfterTouch": "2026.08.04 16:25:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_SUPPLY_IMPULSE_1785875100",
+      "FirstTouch": "2026.08.05 04:55:13",
+      "BrokenAfterTouch": "2026.08.05 05:00:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_SUPPLY_IMPULSE_1785920100",
+      "FirstTouch": "2026.08.05 09:10:00",
+      "BrokenAfterTouch": "2026.08.05 09:15:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_SUPPLY_IMPULSE_1785986700",
+      "FirstTouch": "2026.08.06 03:42:52",
+      "BrokenAfterTouch": "2026.08.06 03:45:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_SUPPLY_IMPULSE_1786102500",
+      "FirstTouch": "2026.08.07 12:42:44",
+      "BrokenAfterTouch": "2026.08.07 12:45:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_SUPPLY_IMPULSE_1786118400",
+      "FirstTouch": "2026.08.07 16:38:23",
+      "BrokenAfterTouch": "2026.08.07 16:40:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_SUPPLY_IMPULSE_1786357500",
+      "FirstTouch": "2026.08.10 10:40:00",
+      "BrokenAfterTouch": "2026.08.10 10:45:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_SUPPLY_IMPULSE_1786546800",
+      "FirstTouch": "2026.08.12 15:27:18",
+      "BrokenAfterTouch": "2026.08.12 15:30:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_SUPPLY_IMPULSE_1787022300",
+      "FirstTouch": "2026.08.18 03:20:13",
+      "BrokenAfterTouch": "2026.08.18 03:25:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_SUPPLY_IMPULSE_1787025600",
+      "FirstTouch": "2026.08.19 15:56:32",
+      "BrokenAfterTouch": "2026.08.19 16:00:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_SUPPLY_IMPULSE_1787178900",
+      "FirstTouch": "2026.08.19 22:51:39",
+      "BrokenAfterTouch": "2026.08.19 22:55:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_SUPPLY_IMPULSE_1787302800",
+      "FirstTouch": "2026.08.21 09:15:09",
+      "BrokenAfterTouch": "2026.08.21 09:20:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_SUPPLY_IMPULSE_1787343000",
+      "FirstTouch": "2026.08.24 03:05:08",
+      "BrokenAfterTouch": "2026.08.24 03:10:00",
+      "SecondsAfterNominalM5Close": 0.0
+    },
+    {
+      "ZoneID": "GOLD_PERIOD_M5_SUPPLY_IMPULSE_1787563200",
+      "FirstTouch": "2026.08.24 14:35:04",
+      "BrokenAfterTouch": "2026.08.24 14:40:00",
+      "SecondsAfterNominalM5Close": 0.0
+    }
+  ],
+  "MissingWithBrokenAfterTouch": 221,
+  "MissingBrokenBeforeNominalClose": 0,
+  "NominalCloseLagDistribution": {
+    "0.0": 221
+  },
+  "UntradedCounterfactualNet": "NOT_MEASURED",
+  "MissedProfitableTrades": "UNKNOWN",
+  "Inference": "EMA-only ablation may increase candidate opportunity count, not proven trading profit.",
+  "NoEAOrParameterChange": true,
+  "NewChampion": false
+}

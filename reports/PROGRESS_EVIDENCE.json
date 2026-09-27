@@ -1,0 +1,32 @@
+{
+  "Updated": "2026-09-06T19:24:59.860359+08:00",
+  "Stage": "WAITING_MT5_UPDATE_BASELINE_INCOMPLETE",
+  "NewChampion": {
+    "Scalping": "NONE",
+    "Intraday": "NONE",
+    "Swing": "NONE",
+    "Combined": "NONE"
+  },
+  "SourceSHA256": "989F19C997F5B095A67727BF0C88492B3777F2CCF2682A02D954DBBE18CAE19A",
+  "EX5SHA256": "462D4E590781C3607CC968FB3D6C8437A439871443F251DEC3D8FBC41D97C1CC",
+  "HeaderHashes": {
+    "StrictRisk.mqh": "1BC00A2E53A37F9633705B4A8391169B8C2F7844770F1E07A9EC836B0BD46C65",
+    "RiskMath.mqh": "E3F453FC321F5EBDFFBDAB9061C6380F93F4B100AA5689444CCD48EB5A289E22"
+  },
+  "CompileResult": "Result: 0 errors, 0 warnings, 2327 ms elapsed, cpu='X64 Regular'",
+  "CompileLogSHA256": "CC83D7DE97E0453E85F115E5D66283446EB8BBBDC7AEF9D481C1FCE8CB0AE918",
+  "LatestRevisionBacktest": "NOT_COMPLETED",
+  "NativeRiskArithmeticChecks": 25,
+  "NativeArithmeticFailures": 0,
+  "ArithmeticSweepCases": 770,
+  "StaticSourceChecks": 4,
+  "ProfitProtectionIntegration": "NOT_EXECUTED",
+  "ReportVisualQA": "NOT_EXECUTED_BROWSER_LOCAL_URL_POLICY_BLOCKED",
+  "BaselineZIP": "43AF3C393B6C226211115A1A1DBC70C88F0F07250FA332D22C04C3ED64EB80E2",
+  "BaselineMQ5": "AC9826E6EF4959562B9079A1FF9B8CBB35E5E8C2A913E431488CA5C900D1FF60",
+  "CompletedDiagnosticRuns": [
+    "R_C00_Intraday_USD500_D0_20260906_191123",
+    "R_C00_Scalping_USD500_D0_20260906_190610"
+  ],
+  "Next": "Verify MT5 update, freeze executable, rerun four lanes, capacity audit, then S-C01."
+}
