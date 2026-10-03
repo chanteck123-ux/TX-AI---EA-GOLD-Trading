@@ -1,0 +1,25 @@
+{
+  "schema": "I8_ZIP_DELIVERY_RECEIPT_V1",
+  "status": "ZIP_ALL_MEMBERS_HASH_VERIFIED_NO_CHART_DEPLOYMENT",
+  "completed_utc": "2026-10-03T16:57:40.2627632Z",
+  "package": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\outputs\\TradingBrain_S5_RequestFinality_20261004",
+  "zip": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\outputs\\TradingBrain_S5_RequestFinality_20261004.zip",
+  "zip_sha256": "ffcbb2b5b667a2185dbf05f1203f4666f446adaf339dc68323329cf022905764",
+  "zip_bytes": 7639708,
+  "verified_zip_members": 252,
+  "manifest_sha256": "2ad63bffbbaa59bff7511834e986cb4f43ef55dc8b0cf1e0c0953f90f2818025",
+  "native_runs": 5,
+  "new_ea_pairs": 1,
+  "recovery_ea_pairs": 1,
+  "indicator_pairs": 6,
+  "tester_only": true,
+  "chart_deployed": false,
+  "live_ready": false,
+  "recovery_files_preserved": true,
+  "source_sha256": "631ef2c3ce325fa2ec279766ce4c907f4d5a107509688f247fd2e3d99c2d99a1",
+  "ex5_sha256": "e519d018f0732d92063ea75ffe9c84ed7cd5fdd0bcf5606677043890b984e9dc",
+  "generator": {
+    "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration8_20261003\\deliver_i8.ps1",
+    "sha256": "cefa81f524574fd28535bd2e242c36026941cdf953ade6440a6b1b35ba770217"
+  }
+}

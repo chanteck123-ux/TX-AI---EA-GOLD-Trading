@@ -1,0 +1,123 @@
+{
+  "schema": "I8_ROOT_FINAL_REVIEW_V1",
+  "created_utc": "2026-10-03T16:52:18.844Z",
+  "status": "PASS_WITH_LIMITATIONS_NO_PROMOTION",
+  "results": {
+    "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration8_20261003\\FINAL_RESULTS.json",
+    "sha256": "9b467ec40f8104e5b8ad3c0239113453a4ec1f65ac5dd1d0445544ffc0e2e390"
+  },
+  "report": {
+    "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration8_20261003\\S5第八轮修复与测试成绩_20261004.txt",
+    "sha256": "d54459029dbf425e622bed468c24dba5313065ed3f0f8cdb7c96f0d4f99e4ba2"
+  },
+  "compiled_source": {
+    "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration8_20261003\\TB500_S5_REQUEST_FINALITY_V1\\source\\TB500_S5_REQUEST_FINALITY_V1.mq5",
+    "sha256": "631ef2c3ce325fa2ec279766ce4c907f4d5a107509688f247fd2e3d99c2d99a1"
+  },
+  "build": {
+    "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration8_20261003\\BUILD\\session\\private\\builds\\1449d60d424a457b813527558868ad1f\\build.json",
+    "sha256": "f7e19fa95edb36e7b0af8a8e96d64e3e1f2cecb3d87e74332347ce4427c082a6"
+  },
+  "shared_ex5": {
+    "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration8_20261003\\BUILD\\session\\private\\builds\\1449d60d424a457b813527558868ad1f\\TB500_S5_REQUEST_FINALITY_V1.ex5",
+    "sha256": "e519d018f0732d92063ea75ffe9c84ed7cd5fdd0bcf5606677043890b984e9dc"
+  },
+  "native_runs": 5,
+  "strict_accepted": 5,
+  "main_runs": 4,
+  "extra_fault_reproduction": 1,
+  "compile_count": 1,
+  "compile_errors": 0,
+  "compile_warnings": 0,
+  "used_reserve": 0,
+  "elapsed_native_batch_minutes": 21.031816666666668,
+  "planned_native_minutes": 120,
+  "non_success_finality_terminals": 1,
+  "extra1000_branch_occurred": true,
+  "successful_requests_added": 0,
+  "native_restart_fault_injection": false,
+  "source_defaults_preserved": true,
+  "other_strategies_changed": false,
+  "reviews": [
+    {
+      "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration8_20261003\\S5_JUNE_DELAY0_L1000_INDEPENDENT_REVIEW.json",
+      "sha256": "219f304b47a33a037afd2ec501f7ffdc7f9fdd8ac9272e1d66d2366ac9f2f40c"
+    },
+    {
+      "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration8_20261003\\S5_JUNE_DELAY250_L1000_INDEPENDENT_REVIEW.json",
+      "sha256": "8f182e38ddcbe9c03b9b6ddcd3dabe0c33bb0204d2219063e0bab5dbc55fb856"
+    },
+    {
+      "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration8_20261003\\S5_AUGUST_DELAY0_L1000_INDEPENDENT_REVIEW.json",
+      "sha256": "b23487c101ee0e5952f947e8c1333e3ca574639bbc19aedc4ec094d62ba81912"
+    },
+    {
+      "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration8_20261003\\S5_AUGUST_DELAY250_L1000_INDEPENDENT_REVIEW.json",
+      "sha256": "358c1f3ffe7c58d0a83562b04a41d85fba1e1ab89fcdc90c051d80c9e8ed2a98"
+    },
+    {
+      "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration8_20261003\\S5_AUGUST_DELAY1000_L1000_REPRO_INDEPENDENT_REVIEW.json",
+      "sha256": "b6763b2f6657cf9da226da386535acc9e99e0402b2b685cd686299fa8fe17003"
+    },
+    {
+      "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration8_20261003\\I8_NATIVE_INDEPENDENT_REVIEW.json",
+      "sha256": "40861f9a310232cf09430c1d888f23e76712219c6dd68584640634b281eafd66"
+    },
+    {
+      "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration8_20261003\\I8_CONDITION_COMPARISON.json",
+      "sha256": "d81c45aa59cf3ee249b72456c080aecc577a7f1cdcb88d9b4d0c1d3d4cb07e77"
+    },
+    {
+      "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration8_20261003\\POST_COMPILE_RESOURCE_CURRENT_SNAPSHOT.json",
+      "sha256": "f98b29aa73f1e49ce246317871147cdc02d4db33335feda4cd8e5197fd0bbd22"
+    },
+    {
+      "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration8_20261003\\S5_SOURCE_INDEPENDENT_REVIEW.json",
+      "sha256": "6d24aa92b087fe1836d258cb46f32026105230de6756c993028a87e5cffa0ea6"
+    },
+    {
+      "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration8_20261003\\I8_TOOLCHAIN_INDEPENDENT_REVIEW.json",
+      "sha256": "f2ae16c18e9df7a77a205a5cfa478da637f2173c0f10171214777d49c0f9efdb"
+    },
+    {
+      "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration8_20261003\\I8_PACKAGE_V3_INDEPENDENT_REVIEW.json",
+      "sha256": "79debf49096445d19307213d70f4c62a64beb1e724fdf162941d920842b706f6"
+    }
+  ],
+  "boundary_fixtures": {
+    "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration8_20261003\\FINALITY_BOUNDARY_TESTS_V2.json",
+    "sha256": "400265146a3100f9c316a19ea155f28b74b3f554090c9162b84a8c622039515f"
+  },
+  "resource_capture_timing": "POST_COMPILE_CURRENT_BYTES_ONLY",
+  "historical_I7_audit_invalid_preserved": true,
+  "same_condition_delay_comparison": true,
+  "historical_old_leverage100_is_source_only_control": false,
+  "decisions": [
+    "Retain new S5 candidate as a tested execution/audit repair with old S5 source/EX5 recovery point.",
+    "No signal or risk upgrade inferred from this repair. Report all five raw outcomes; keep old failed I7 metrics unaccepted.",
+    "Continue C# LEAN/MT5 contract/time/cost parity under current plan. Actual tester margin/Stop Out remain uncalibrated."
+  ],
+  "score": {
+    "total": null,
+    "status": "SCORE_TARGETS_UNSET"
+  },
+  "champion": false,
+  "independent_oos": false,
+  "withdrawal_verified": false,
+  "demo_forward": false,
+  "chart_or_live_deployed": false,
+  "limitations": [
+    "June/August already-used development, independently reset USD500 each; do not sum as an account curve or label OOS.",
+    "Recorded explicit commission/swap/fee included in net; embedded spread/slippage not double-subtracted and remain uncalibrated.",
+    "Nominal leverage verified; abnormal small GOLD margin rate and Stop Out behavior need same-broker calibration before live capacity claims.",
+    "Indicator dependency snapshot was taken post-compile. Current12 source/binary files match the registered library/I6 package and predate compilation, but this is not a precompile captured resource hash or extracted embedded EX5 hash.",
+    "No native crash/restart fault injection, only reviewed recovery logic and parser boundary fixtures.",
+    "No new C# LEAN strategy migration, portfolio, withdrawal, demo or live evidence."
+  ],
+  "report_matches_bound_metrics": true,
+  "blockers_for_packaging": [],
+  "generator": {
+    "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration8_20261003\\review_i8_final.mjs",
+    "sha256": "2ced9fc5c8f60e45cfa040b7c0d40ec8cfca59969acffe284091f43c5c59936d"
+  }
+}

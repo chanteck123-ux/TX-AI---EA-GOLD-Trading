@@ -22,10 +22,10 @@
 └── QUANTCONNECT_LEARNING_CN.md  可选参考入口
 ```
 
-一套主计划支持两种协作模式。LEAN（C#）承担离线研究，MQL5承担独立执行，候选经两端差异核对和MT5原生验证后再进入后续验证。复用现有运行时和资料库，不要求LEAN或其他辅助服务常驻。旧P1/P2保留原证据身份，原cTrader执行路线仍为历史；本轮只确认架构，未完成新的迁移或联接。
+一套主计划支持两种协作模式。LEAN（C#）承担离线研究，MQL5承担独立执行，候选经两端差异核对和MT5原生验证后再进入后续验证。复用现有运行时和资料库，不要求LEAN或其他辅助服务常驻。旧P1/P2保留原证据身份，原cTrader执行路线仍为历史；架构更新本身未完成新的迁移或联接；后续已执行的原生修复与测试另列于下方。
 
 后续实际开发沿用原 `v1-2-ea-mt5` 工作区及固定 MT5 终端。本次没有把本地全部 EA 源码、EX5 或大包重新公开到 GitHub，没有创建空壳交易程序。跨电脑协作先取得已授权的匹配交付包并核对哈希；仅拿到这份骨架时，可审计划与报告，不声称已能编译 EA。
 
-2026-10-03 最新实际测试证据（早于本次架构更新）：第七轮冻结版本延迟测试完成10次原生运行，9次严格核验通过；S5八月1次审计无效、成绩N/A。S1/S3/S4/S5/S6各月独立500 USD，对照250/1000ms；S2只做诊断，Scalping复核既有证据。本轮没有改EA源码、重新编译、部署或晋级，原9组版本保留。
+2026-10-04 最新实际测试：第八轮S5请求终态修复已完成，编译0错误/0警告，5场原生测试全部严格核账通过。交易逻辑与1%风险未改；四场为六月/八月0、250ms，八月1000ms另列故障复现。当前测试杠杆1:1000；保证金率/Stop Out及真实成本仍未校准，不能据此证明500美元实盘承受能力。
 
-查看[第七轮成绩](research/evidence/MT5_ITERATION7_DELAY_20261003_CN.md)、[复审与下一步](research/evidence/MT5_ITERATION7_REVIEW_ADDENDUM_20261003_CN.md)及[第六轮恢复依据](research/evidence/MT5_ITERATION6_20261002_CN.md)。第七轮交付包1,124个文件已逐个核对哈希；包和MQ5/EX5在原本地工作区，身份见[证据索引](research/EVIDENCE_INDEX.json)。这些均为已用开发数据，尚未证明稳定盈利、提款或实盘可用。
+查看[第八轮成绩](research/evidence/MT5_ITERATION8_S5_RESULTS_20261004_CN.txt)、[复审](research/evidence/MT5_ITERATION8_FINAL_REVIEW_20261004.json)和[交付身份](research/evidence/MT5_ITERATION8_DELIVERY_RECEIPT_20261004.json)。旧[第七轮失败与延迟证据](research/evidence/MT5_ITERATION7_DELAY_20261003_CN.md)和[第六轮恢复依据](research/evidence/MT5_ITERATION6_20261002_CN.md)保留。新旧MQ5/EX5和完整包在本地工作区；本次不公开重传EA源码、二进制或原始成交。均为已用开发数据，尚无独立验证、连续组合、提款或实盘盈利证明。
