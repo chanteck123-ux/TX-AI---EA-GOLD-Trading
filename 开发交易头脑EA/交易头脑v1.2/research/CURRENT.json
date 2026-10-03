@@ -5,23 +5,28 @@
   "project": "TradingBrain V1.2 GOLD EA",
   "plan": "../docs/PLAN_CN.md",
   "architecture": {
-    "active_route": "FXPRO_MT5_MQL5",
+    "active_route": "LEAN_CSHARP_RESEARCH_MT5_MQL5_EXECUTION",
     "research_modes_available_in_plan": [
       "CODEX_ONLY",
       "CODEX_AND_CLAUDE"
     ],
     "claude_connection_verified": true,
     "python_scope": "MCP_MONITOR_ONLY",
-    "lean_route": "HISTORICAL_CSHARP_P1P2_ENGINEERING_REPLAY",
+    "lean_route": "PRIMARY_OFFLINE_CSHARP_RESEARCH_ENGINE",
     "railway_required": false,
     "remote_desktop_commander_required": false,
     "claude_connection_scope": "DESKTOP_CHAT_MESSAGES_DESIGN_AND_RESULT_SUMMARY_ONLY",
     "claude_cli_or_background_verified": false,
     "mode_selection_required_before_each_new_or_resumed_task": true,
-    "mode_selection_for_next_task": null
+    "mode_selection_for_next_task": null,
+    "research_engine": "QUANTCONNECT_LEAN_CSHARP",
+    "execution_engine": "FXPRO_MT5_MQL5",
+    "route_status": "ADOPTED_NEW_INTEGRATION_NOT_IMPLEMENTED_OR_TESTED",
+    "mt5_independent_of_lean": true,
+    "live_signal_bridge_required": false
   },
   "this_change": {
-    "scope": "EXECUTION_LATENCY_METRIC_REFERENCES_AND_FIXED_TABLE_SIZING_PLAN_ONLY",
+    "scope": "LEAN_RESEARCH_MT5_EXECUTION_ARCHITECTURE_AND_TEMPLATE_ONLY",
     "new_strategy_implementation": false,
     "new_compile": false,
     "new_backtest": false,
@@ -66,7 +71,8 @@
     "valid_runs": 4,
     "native_parity": "NOT_ASSERTED",
     "ctrader_formal_validation": "NOT_STARTED",
-    "route_reactivation_requires_specific_task": true
+    "route_reactivation_requires_specific_task": true,
+    "route_reactivation_scope": "ORIGINAL_LEAN_CTRADER_EXECUTION_PROJECT_ONLY"
   },
   "challenge": {
     "initial_capital_usd": 500,
@@ -77,6 +83,7 @@
     "score_anchor": false
   },
   "next_research_priority": [
+    "Before new development, obtain Claude or Codex-only mode; audit existing C# LEAN/runtime and fixed MT5 evidence, register same-source data/time/contract/cost definitions and choose one supported strategy for research-to-MQL5 parity; native execution defects may be repaired and tested first",
     "First obtain the user's Claude or Codex-only choice, then give the selected implementer matched source and original evidence for a new candidate resolving management requests after other confirmed exits; review shared S1-S6 branch, retain old S5 failure and run new-version paired 0/250ms plus behavior regression under the new main latency range; reproducing the prior 1000ms fault is a separately registered extra test, and old failure is not marked resolved without matching evidence",
     "Calibrate broker contract, actual margin/Stop Out and historical costs; resolve 0.01 USD margin snapshots before claiming USD500 live feasibility",
     "Implement and test S2 independent next-closed-M5 progress confirmation after source review; local specification exists but no code task submitted or implementation yet",
@@ -422,5 +429,38 @@
         "sha256": "13efd879b334922d1fc28ec77043cc353338086dec660759e12027643e942f3b"
       }
     ]
+  },
+  "adopted_lean_mt5_architecture_20261003": {
+    "status": "PLAN_ADOPTED_NOT_IMPLEMENTED_OR_TESTED",
+    "plan_section": "../docs/PLAN_CN.md#21-lean研究与mt5执行的衔接",
+    "research_language": "CSHARP",
+    "execution_language": "MQL5",
+    "python_scope": "MCP_MONITOR_ONLY",
+    "reused_evidence": "Prior LEAN P1/P2 and MT5 iterations retain original dates, exposure and verification limits",
+    "original_ctrader_execution_project": "HISTORICAL_NOT_REACTIVATED",
+    "source_pipeline": "FXPRO_MT5_BID_ASK_TICKS_PLUS_CONTRACT_COST_AND_TIME_MAPPING_TO_LEAN",
+    "handoff": "VERSIONED_STRATEGY_SPEC_AND_PARAMETERS_TO_MATCHING_MQL5_IMPLEMENTATION",
+    "candidate_identity": "ONE_CANDIDATE_WITH_PLATFORM_SPECIFIC_RUN_IDS",
+    "required_parity_layers": [
+      "DATA_AND_BAR_TIME",
+      "INDICATOR_MATH_AND_WARMUP",
+      "SIGNAL_ZONE_TRIGGER_AND_INVALIDATION",
+      "SIZING_RISK_AND_SERVER_DAY_PAUSE",
+      "EXPLAINED_FILL_COST_AND_LEDGER_DIFFERENCES"
+    ],
+    "score_native_input_platform": "MT5",
+    "lean_score_without_required_inputs": "N/A",
+    "main_latency_ms": [
+      0,
+      250
+    ],
+    "latency_models_require_separate_verification": true,
+    "shared_data_exposure_register": true,
+    "mt5_local_protection_independent": true,
+    "automatic_live_config_updates": false,
+    "new_data_adapter_verified": false,
+    "new_strategy_port_verified": false,
+    "new_parity_verified": false,
+    "new_live_bridge_verified": false
   }
 }

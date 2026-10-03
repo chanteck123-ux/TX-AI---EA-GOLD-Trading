@@ -1,5 +1,5 @@
 {
-  "schema": "TRADINGBRAIN_CANDIDATE_TEMPLATE_V1",
+  "schema": "TRADINGBRAIN_CANDIDATE_TEMPLATE_V2",
   "status": "TEMPLATE_NOT_REGISTERED_NOT_RUN",
   "candidate_id": null,
   "batch_id": null,
@@ -8,13 +8,196 @@
   "strategy": null,
   "strategy_ownership": "UNKNOWN",
   "authorization_reference": null,
-  "collaboration": {"mode": null, "implementer": null, "reviewer": null, "terminal_owner": null, "terminal_started_at": null, "terminal_released_at": null},
-  "hypothesis": {"problem_evidence": null, "purpose": null, "price_location": null, "trigger_and_confirmation": null, "changed_variables": [], "held_constant": [], "failure_criterion": null, "indicator_commit": null, "indicator_buffers_and_time_semantics": null},
-  "conditions": {"initial_capital_usd": 500, "account_spec_snapshot": null, "symbol": null, "timeframe": null, "date_windows": [], "data_usage_status": null, "tick_model": null, "risk_policy_id": null, "risk_pct": null, "initial_sl_tp": null, "portfolio_limits": null, "cost_model": null, "execution_delay_ms": null, "cash_flow_path": null},
-  "budget": {"max_new_candidates_per_batch": 4, "registered_total_runs": null, "completed_runs": 0, "failed_runs_count_toward_budget": true, "allow_automatic_budget_reset": false},
-  "acceptance": {"project_applicability_table": null, "policy_frozen_at": null, "eligibility_status": "NOT_EVALUATED", "validation_status": "NOT_RUN"},
-  "score_policy": {"weights": {"net_profit_usd": 35, "relative_equity_drawdown": 25, "native_mt5_pf": 20, "complete_trades": 10, "cost_usd_per_round_turn_standard_lot": 10}, "P_target": null, "D_good": null, "D_bad": null, "F_target": null, "N_target": null, "C_good": null, "C_bad": null, "policy_id": null, "policy_frozen_at": null, "score": null, "status": "SCORE_TARGETS_UNSET"},
+  "collaboration": {
+    "mode": null,
+    "implementer": null,
+    "reviewer": null,
+    "terminal_owner": null,
+    "terminal_started_at": null,
+    "terminal_released_at": null
+  },
+  "hypothesis": {
+    "problem_evidence": null,
+    "purpose": null,
+    "price_location": null,
+    "trigger_and_confirmation": null,
+    "changed_variables": [],
+    "held_constant": [],
+    "failure_criterion": null,
+    "indicator_commit": null,
+    "indicator_buffers_and_time_semantics": null
+  },
+  "conditions": {
+    "initial_capital_usd": 500,
+    "account_spec_snapshot": null,
+    "symbol": null,
+    "timeframe": null,
+    "date_windows": [],
+    "data_usage_status": null,
+    "tick_model": null,
+    "risk_policy_id": null,
+    "risk_pct": null,
+    "initial_sl_tp": null,
+    "portfolio_limits": null,
+    "cost_model": null,
+    "execution_delay_ms": null,
+    "cash_flow_path": null,
+    "lean_execution_model_id": null,
+    "mt5_tester_delay_setting": null,
+    "server_time_mapping": null,
+    "sizing_scheme": null,
+    "lot_table_rule_id": null,
+    "scalping_daily_policy_id": null
+  },
+  "budget": {
+    "max_new_candidates_per_batch": 4,
+    "registered_total_runs": null,
+    "completed_runs": 0,
+    "failed_runs_count_toward_budget": true,
+    "allow_automatic_budget_reset": false,
+    "platform_run_budgets": {
+      "LEAN": null,
+      "MT5": null,
+      "PARITY_CHECKS": null
+    },
+    "count_each_platform_run_separately": true
+  },
+  "acceptance": {
+    "policy_frozen_at": null,
+    "eligibility_status": "NOT_EVALUATED",
+    "validation_status": "NOT_RUN",
+    "criteria_id": null
+  },
+  "score_policy": {
+    "weights": {
+      "net_profit_usd": 35,
+      "relative_equity_drawdown": 25,
+      "native_mt5_pf": 20,
+      "complete_trades": 10,
+      "cost_usd_per_round_turn_standard_lot": 10
+    },
+    "P_target": null,
+    "D_good": null,
+    "D_bad": null,
+    "F_target": null,
+    "N_target": null,
+    "C_good": null,
+    "C_bad": null,
+    "policy_id": null,
+    "policy_frozen_at": null,
+    "score": null,
+    "status": "SCORE_TARGETS_UNSET",
+    "native_input_platform": "MT5",
+    "lean_missing_native_inputs": "N/A_NO_SUBSTITUTION"
+  },
   "runs": [],
-  "required_run_fields": ["run_id", "source_path", "source_sha256", "ex5_path", "ex5_sha256", "default_input_comparison", "set_ini_hashes", "indicator_hashes", "compile_log", "native_report", "audit_logs", "data_manifest", "verification_receipt", "net_profit_usd", "equity_dd_usd", "max_relative_equity_dd_pct", "native_mt5_pf", "net_pf", "complete_trades", "setup_count", "deal_count", "cost_usd", "cost_usd_per_round_turn_standard_lot", "margin_and_stopout", "pause_and_recovery", "withdrawal_cash_flow", "score_components", "score", "delta_vs_fixed_control", "delta_vs_current_eligible_best"],
-  "outcome": {"decision": null, "reason": null, "failure_retained_at": null, "recovery_point": null, "reviewer_findings": [], "next_step": null}
+  "required_run_fields": [
+    "run_id",
+    "platform",
+    "status",
+    "candidate_id",
+    "source_path",
+    "source_sha256",
+    "strategy_spec_sha256",
+    "parameter_hash",
+    "data_manifest",
+    "time_mapping",
+    "audit_logs",
+    "verification_receipt"
+  ],
+  "outcome": {
+    "decision": null,
+    "reason": null,
+    "failure_retained_at": null,
+    "recovery_point": null,
+    "reviewer_findings": [],
+    "next_step": null
+  },
+  "template_scope": "LEAN_RESEARCH_AND_MT5_EXECUTION; schema declaration only, no validator implemented by this update",
+  "strategy_contract": {
+    "spec_id": null,
+    "spec_version": null,
+    "spec_sha256": null,
+    "parameter_schema_version": null,
+    "units_and_time_semantics": null,
+    "engine_parity_tolerances": null,
+    "data_exposure_record": null
+  },
+  "allowed_run_platforms": [
+    "LEAN",
+    "MT5"
+  ],
+  "required_run_fields_by_platform": {
+    "LEAN": [
+      "csharp_source_manifest",
+      "dll_path",
+      "dll_sha256",
+      "lean_runtime_commit",
+      "runtime_dependency_hashes",
+      "build_log",
+      "lean_config_hash",
+      "reality_model_ids_and_hashes",
+      "lean_report",
+      "signal_audit",
+      "order_fill_and_ledger_audit"
+    ],
+    "MT5": [
+      "ex5_path",
+      "ex5_sha256",
+      "default_input_comparison",
+      "set_ini_hashes",
+      "indicator_hashes",
+      "compile_log",
+      "mt5_build",
+      "native_report",
+      "broker_symbol_spec"
+    ]
+  },
+  "economic_run_fields": [
+    "metric_definitions",
+    "net_profit_usd",
+    "equity_dd_usd",
+    "max_relative_equity_dd_pct",
+    "native_platform_pf",
+    "net_pf",
+    "complete_trades",
+    "setup_count",
+    "deal_count",
+    "cost_usd",
+    "cost_usd_per_round_turn_standard_lot",
+    "margin_and_stopout",
+    "pause_and_recovery",
+    "withdrawal_cash_flow",
+    "score_components",
+    "score",
+    "score_status",
+    "delta_vs_fixed_control",
+    "delta_vs_current_eligible_best"
+  ],
+  "platform_metric_fields": {
+    "LEAN": [
+      "native_lean_metrics_with_definitions"
+    ],
+    "MT5": [
+      "native_mt5_pf",
+      "native_mt5_recovery"
+    ]
+  },
+  "missing_evidence_policy": "Failed or engineering-only runs retain status and reason; economic fields unavailable are null with reason, never fabricated. Platform-specific artifacts are not required for the other engine. Reused validated builds link original compile evidence. Prior V1 records remain historical and are not relabeled. If compilation or a later stage fails, DLL/EX5/reports not produced are null with a stage-specific failure reason; required fields do not require fabricated files or reuse of a mismatched old binary.",
+  "paired_runs": [],
+  "required_pair_fields": [
+    "parity_id",
+    "lean_run_id",
+    "mt5_run_id",
+    "strategy_spec_sha256",
+    "parameter_mapping",
+    "data_identity_comparison",
+    "registered_tolerances",
+    "indicator_and_signal_diff",
+    "risk_and_pause_diff",
+    "fill_cost_and_ledger_diff",
+    "unexplained_difference_count",
+    "status",
+    "review_findings"
+  ]
 }

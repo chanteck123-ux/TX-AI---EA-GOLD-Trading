@@ -27,13 +27,15 @@
 
 同一文件同一时间只交给一位实现者。并行候选用独立分支或 worktree；合并前核对基线提交与冲突。两位 AI 意见一致不等于策略已通过验证；不同意见按证据解决，不用投票或高置信度替代回测。
 
+当前架构为C# LEAN离线研究＋MQL5独立执行。所选代码责任人负责两端实现；Codex组织C#／MQL5编译、LEAN／MT5运行和跨引擎核对。具体按主计划第2.1节执行，不把单一平台通过记成两端通过。
+
 ## 每次交接只带一份记录
 
-以 [candidate.template.json](../research/candidate.template.json) 为起点，每个实际候选独立保存。至少交接：任务目标、策略归属、允许改变与必须固定的项、父版本提交、候选和运行编号、源码/EX5/参数哈希、已运行测试及失败原因、待解决问题和下一步。
+以 [candidate.template.json](../research/candidate.template.json) 为起点，每个实际候选独立保存。至少交接：任务目标、策略归属、允许改变与必须固定的项、父版本提交、候选和运行编号、两端源码/DLL/EX5/参数及运行时哈希、共同规范、分平台run_id、配对差异、已运行测试及失败原因、待解决问题和下一步。
 
 本次已选择使用 Claude 并获授权交接时，可使用以下任务文字：
 
-> 请先读取相对仓库根目录的 AGENTS.md、docs/GSM_EA_RESEARCH_BRAIN_CN.md、research-memory/README_CN.md 和 research-memory/STATE_CN.md；再以 开发交易头脑EA/交易头脑v1.2/ 为项目根目录，读取其 README.md、docs/PLAN_CN.md、research/CURRENT.json 和本轮候选记录。按用户指定分工共同讨论方案，代码由 Claude 写改，双方复审，Codex 编译／测试并提供原始证据。先核对源码与证据哈希，检查工作树是否有他人修改；只推进已授权任务。保护用户 Scalping SOP，保持 MQL5 独立交易和风控，不把历史报告当本轮新成绩。结束时更新同一候选记录，写清完成项、未完成项及恢复点。
+> 请先读取相对仓库根目录的 AGENTS.md、docs/GSM_EA_RESEARCH_BRAIN_CN.md、research-memory/README_CN.md 和 research-memory/STATE_CN.md；再以 开发交易头脑EA/交易头脑v1.2/ 为项目根目录，读取其 README.md、docs/PLAN_CN.md、research/CURRENT.json 和本轮候选记录。按用户指定分工共同讨论方案，C#研究端和MQL5执行端代码由 Claude 写改，双方复审，Codex 分平台编译／测试及差异核对并提供原始证据。先核对源码与证据哈希，检查工作树是否有他人修改；只推进已授权任务。保护用户 Scalping SOP，保持 MQL5 独立交易和风控，不把历史报告当本轮新成绩。结束时更新同一候选记录，写清完成项、未完成项及恢复点。
 
 知识大脑位于本仓库 [docs/GSM_EA_RESEARCH_BRAIN_CN.md](../../../docs/GSM_EA_RESEARCH_BRAIN_CN.md)，长期资料入口为 [research-memory/README_CN.md](../../../research-memory/README_CN.md) 和 [STATE_CN.md](../../../research-memory/STATE_CN.md)。用户指标库为 [gsm-mt5-indicators](https://github.com/chanteck123-ux/gsm-mt5-indicators)，优先读取其 README.md、indicator_manifest.json 及对应接口／验证说明。要求 Claude 记住两个仓库的用途和这些入口，每次实际任务仍核对最新内容；无法访问时报告具体缺口，不声称已读取。
 
