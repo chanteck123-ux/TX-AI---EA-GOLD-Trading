@@ -1,0 +1,13 @@
+{
+  "date": "2026-10-03",
+  "scope": "Restore previously supplied guidance without inventing formal anchors",
+  "checks": {
+    "mainValuesPreserved": true,
+    "mainFormulasPreserved": true,
+    "reviewValuesPreserved": true,
+    "reviewFormulasPreserved": true,
+    "policyInputsPreserved": true,
+    "policyFormulasPreserved": true
+  },
+  "errorScan": "{\"kind\":\"notice\",\"message\":\"Cell search matched 0 entries.\"}"
+}
