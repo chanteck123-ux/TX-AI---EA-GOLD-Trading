@@ -44,7 +44,7 @@
 
 固定终端目录为 C:\Users\A\AppData\Roaming\MetaQuotes\Terminal\523FF71FCA93BC15AC28868379E0D478，沿用 /portable。同一时刻只由一个任务持有编译和测试权限；并行研究隔离候选文件，终端执行串行。
 
-复用已有本地LEAN运行时、C#研究工程、MT5实现及指标库；原P1/P2工程回放和DLL保留原日期与验证范围。LEAN现在进入研究主流程，原cTrader执行路线不随之恢复。Railway、Remote Desktop Commander、Data等按实际用途选用；不要求LEAN常驻，也不新增同用途仓库或复制整套源码快照。
+复用已有本地LEAN运行时、C#研究工程、MT5实现及指标库；原P1/P2工程回放和DLL保留原日期与验证范围。LEAN现在进入研究主流程，原cTrader执行路线不随之恢复。Railway、Remote Desktop Commander、Data、PDF等按实际用途选用；不要求LEAN常驻，也不新增同用途仓库或复制整套源码快照。
 
 ### 2.1 LEAN研究与MT5执行的衔接
 
