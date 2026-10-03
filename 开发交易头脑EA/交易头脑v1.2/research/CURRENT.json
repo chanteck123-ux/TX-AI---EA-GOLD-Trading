@@ -8,7 +8,6 @@
     "active_route": "FXPRO_MT5_MQL5",
     "research_modes_available_in_plan": [
       "CODEX_ONLY",
-      "CLAUDE_ONLY",
       "CODEX_AND_CLAUDE"
     ],
     "claude_connection_verified": true,
@@ -17,19 +16,18 @@
     "railway_required": false,
     "remote_desktop_commander_required": false,
     "claude_connection_scope": "DESKTOP_CHAT_MESSAGES_DESIGN_AND_RESULT_SUMMARY_ONLY",
-    "claude_cli_or_background_verified": false
+    "claude_cli_or_background_verified": false,
+    "mode_selection_required_before_each_new_or_resumed_task": true,
+    "mode_selection_for_next_task": null
   },
   "this_change": {
-    "scope": "FROZEN_EX5_DELAY_RESEARCH_AND_STATUS_UPDATE",
+    "scope": "SCALPING_LOGIC_AUTHORIZATION_DAILY_PAUSE_AND_PLAN_ONLY",
     "new_strategy_implementation": false,
     "new_compile": false,
-    "new_backtest": true,
-    "new_native_attempts": 10,
-    "strict_verified": 9,
-    "audit_invalid": 1,
+    "new_backtest": false,
+    "new_native_attempts": 0,
     "new_deployment": false,
-    "new_live_authorization": false,
-    "source_and_ex5_pairs_hash_checked": 9
+    "new_live_authorization": false
   },
   "historical_mt5": {
     "evidence": "evidence/MT5_ITERATION6_20261002_CN.md",
@@ -79,12 +77,13 @@
     "score_anchor": false
   },
   "next_research_priority": [
-    "Give Claude matched source and original evidence for a new candidate resolving management requests after other confirmed exits; review shared S1-S6 branch, retain old S5 failure and run new-version paired 250/1000ms plus behavior regression",
+    "First obtain the user's Claude or Codex-only choice, then give the selected implementer matched source and original evidence for a new candidate resolving management requests after other confirmed exits; review shared S1-S6 branch, retain old S5 failure and run new-version paired 250/1000ms plus behavior regression",
     "Calibrate broker contract, actual margin/Stop Out and historical costs; resolve 0.01 USD margin snapshots before claiming USD500 live feasibility",
     "Implement and test S2 independent next-closed-M5 progress confirmation after source review; local specification exists but no code task submitted or implementation yet",
     "Investigate S4 post-fill budget correction and protection timing without disabling risk controls; report June and August together",
     "Keep S1 recovery versions and examine concentrated cross-week gains; investigate S3 sparse/concentrated outcomes",
-    "Register finite next-batch budget and applicable score anchors before results; freeze candidate before unused independent validation"
+    "Register finite next-batch budget and applicable score anchors before results; freeze candidate before unused independent validation",
+    "For the next authorized Scalping batch, apply PLAN_CN.md section 4.1: reconcile source baseline with prior EA, preserve the M5/nearest-zone/retest/closed-reversal core, research entry and exit details, and implement plus test cumulative 6 wins OR 6 losses per FxPro server day; retain old evidence"
   ],
   "latest_mt5_iteration7": {
     "status": "BATCH_COMPLETE_WITH_ONE_AUDIT_INVALID_RUN",
@@ -310,5 +309,52 @@
     },
     "terminal_configs_restored": true,
     "native_batch_finished": true
+  },
+  "documentation_update_20261003": {
+    "scope": "SCALPING_LOGIC_AUTHORIZATION_DAILY_PAUSE_AND_PLAN_ONLY",
+    "plan_section": "../docs/PLAN_CN.md#41-用户-scalping-sop",
+    "source_files": 7,
+    "pdf_pages_visually_checked": 7,
+    "ownership": "USER_OWNED",
+    "preserved_core": [
+      "GOLD_M5",
+      "NEAREST_VALID_SUPPLY_DEMAND_ZONE",
+      "PRICE_RETEST",
+      "CLOSED_REVERSAL_CANDLE_CONFIRMATION"
+    ],
+    "entry_exit_detail_optimization_authorized": true,
+    "core_replacement_requires_further_authorization": true,
+    "daily_rule": {
+      "scope": "ACCOUNT_USER_SCALPING_ACROSS_INSTANCES",
+      "basis": "COMPLETE_SETUP_SETTLED_NET_RESULT",
+      "win_limit": 6,
+      "loss_limit": 6,
+      "operator": "OR",
+      "consecutive": false,
+      "timezone": "FXPRO_MT5_SERVER_TIME",
+      "reset_time": "00:00",
+      "zero_result": "SEPARATE_NOT_WIN_OR_LOSS",
+      "cross_day_assignment": "FINAL_CLOSURE_SERVER_DATE",
+      "stop_new_entries": true,
+      "continue_existing_position_management": true
+    },
+    "implementation_status": "DOCUMENTED_NOT_IMPLEMENTED_OR_TESTED_IN_THIS_UPDATE",
+    "new_strategy_implementation": false,
+    "new_compile": false,
+    "new_backtest": false,
+    "new_deployment": false,
+    "historical_iteration6_and_iteration7_evidence": "PRESERVED_UNCHANGED",
+    "prior_research_change": {
+      "scope": "FROZEN_EX5_DELAY_RESEARCH_AND_STATUS_UPDATE",
+      "new_strategy_implementation": false,
+      "new_compile": false,
+      "new_backtest": true,
+      "new_native_attempts": 10,
+      "strict_verified": 9,
+      "audit_invalid": 1,
+      "new_deployment": false,
+      "new_live_authorization": false,
+      "source_and_ex5_pairs_hash_checked": 9
+    }
   }
 }
