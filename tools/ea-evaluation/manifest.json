@@ -1,0 +1,10 @@
+{
+  "created": "2026-10-03",
+  "file": "GSM_EA_综合评估工具表_v1.0.xlsx",
+  "sha256": "03FB56915EAA9215B00CCFE5ECC284BB71A42DED6696CF8932D99BA91F66B746",
+  "source_commit": "7f322c4329079b8c99bac60383cc39beedc63d29",
+  "formula_test_count": 30,
+  "actual_ea_results_loaded": false,
+  "native_excel_tested": false,
+  "ea_backtest_executed": false
+}

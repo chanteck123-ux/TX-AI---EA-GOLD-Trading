@@ -1,0 +1,216 @@
+{
+  "date": "2026-10-03",
+  "planCommit": "7f322c4329079b8c99bac60383cc39beedc63d29",
+  "tests": [
+    {
+      "name": "Unregistered policy is unavailable",
+      "passed": true,
+      "observed": "SCORE_TARGETS_UNSET"
+    },
+    {
+      "name": "Blank workbook total is N/A",
+      "passed": true,
+      "observed": "N/A"
+    },
+    {
+      "name": "Policy ready",
+      "passed": true,
+      "observed": "READY"
+    },
+    {
+      "name": "Five 80-point components",
+      "passed": true,
+      "observed": [
+        [
+          80
+        ],
+        [
+          80
+        ],
+        [
+          80
+        ],
+        [
+          80
+        ],
+        [
+          80
+        ]
+      ]
+    },
+    {
+      "name": "Weighted 80 percent",
+      "passed": true,
+      "observed": 0.8
+    },
+    {
+      "name": "E candidate formula and delta",
+      "passed": true,
+      "observed": [
+        0.835,
+        100,
+        3.499999999999992
+      ]
+    },
+    {
+      "name": "F candidate formula and delta",
+      "passed": true,
+      "observed": [
+        0.835,
+        100,
+        3.499999999999992
+      ]
+    },
+    {
+      "name": "G candidate formula and delta",
+      "passed": true,
+      "observed": [
+        0.835,
+        100,
+        3.499999999999992
+      ]
+    },
+    {
+      "name": "DD 15 boundary",
+      "passed": true,
+      "observed": "数值达标，待完整复核"
+    },
+    {
+      "name": "DD 30 requires review",
+      "passed": true,
+      "observed": "回撤需严格复核"
+    },
+    {
+      "name": "100 trades fail old main gate",
+      "passed": true,
+      "observed": "未达标，继续研究"
+    },
+    {
+      "name": "101 trades meets quantity condition",
+      "passed": true,
+      "observed": "数值达标，待完整复核"
+    },
+    {
+      "name": "Other project does not inherit old gates",
+      "passed": true,
+      "observed": "核对所选项目标准"
+    },
+    {
+      "name": "PF sentinel or mismatch unavailable",
+      "passed": true,
+      "observed": "N/A"
+    },
+    {
+      "name": "Cost uses one matched RT lot",
+      "passed": true,
+      "observed": 14
+    },
+    {
+      "name": "Zero PnL counted in win denominator",
+      "passed": true,
+      "observed": 0.5
+    },
+    {
+      "name": "Equity recovery separate",
+      "passed": true,
+      "observed": 8
+    },
+    {
+      "name": "Withdrawal static arithmetic",
+      "passed": true,
+      "observed": [
+        1300,
+        1300,
+        300
+      ]
+    },
+    {
+      "name": "Zero profit scores zero and fails gate",
+      "passed": true,
+      "observed": [
+        0,
+        "未达标，继续研究"
+      ]
+    },
+    {
+      "name": "No loss PF blocks total",
+      "passed": true,
+      "observed": "N/A"
+    },
+    {
+      "name": "Missing costs not zero",
+      "passed": true,
+      "observed": "N/A"
+    },
+    {
+      "name": "No RT volume unavailable",
+      "passed": true,
+      "observed": "N/A"
+    },
+    {
+      "name": "No trades unavailable",
+      "passed": true,
+      "observed": "N/A"
+    },
+    {
+      "name": "Trade score capped",
+      "passed": true,
+      "observed": 100
+    },
+    {
+      "name": "High DD cannot pass",
+      "passed": true,
+      "observed": "未达标，继续研究"
+    },
+    {
+      "name": "Recovery 3 fails strict gate",
+      "passed": true,
+      "observed": "未达标，继续研究"
+    },
+    {
+      "name": "Equal DD anchors invalid",
+      "passed": true,
+      "observed": "INVALID_TARGETS"
+    },
+    {
+      "name": "Duplicate identifiers blocked",
+      "passed": true,
+      "observed": "DUPLICATE_ID"
+    },
+    {
+      "name": "Final policy targets restored blank",
+      "passed": true,
+      "observed": [
+        [
+          null
+        ],
+        [
+          null
+        ],
+        [
+          null
+        ],
+        [
+          null
+        ],
+        [
+          null
+        ],
+        [
+          null
+        ],
+        [
+          null
+        ]
+      ]
+    },
+    {
+      "name": "Final total restored N/A",
+      "passed": true,
+      "observed": "N/A"
+    }
+  ],
+  "engine": "Artifact Tool",
+  "nativeExcelVerification": false,
+  "eaBacktestExecuted": false
+}

@@ -6,6 +6,7 @@
 | --- | --- |
 | [开发交易头脑 V1.2 黄金 EA](开发交易头脑EA/交易头脑v1.2/README.md) | 500 USD 起步计划、现有版本、下一步与协作方式 |
 | [指标库](https://github.com/chanteck123-ux/gsm-mt5-indicators) | 复用现有指标，按接口和时间语义接入 |
+| [EA 综合评估工具表](tools/ea-evaluation/README_CN.md) | 可填写的 Excel：固定权重评分、同条件比较、策略验证和提款情景；先选适用项目 |
 | [旧版 GSM 三 SOP 项目](FINAL_CHAMPION_ITERATION_SYSTEM_CN.md) · [English](FINAL_CHAMPION_ITERATION_SYSTEM.md) | 独立项目的当前计划，不把其资金和验收数字自动套给 V1.2 |
 | [知识大脑](docs/GSM_EA_RESEARCH_BRAIN_CN.md) | 长期研究规则与 GitHub 记忆入口；当前协作分工见 AGENTS.md |
 | [历史与参考资料](research-memory/README_CN.md) | SOP、旧交付、失败记录、LEAN 学习资料和恢复入口 |
