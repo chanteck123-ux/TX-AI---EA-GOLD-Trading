@@ -334,6 +334,12 @@
     "core_replacement_requires_further_authorization": true,
     "daily_rule": {
       "scope": "ACCOUNT_USER_SCALPING_ACROSS_INSTANCES",
+      "applies_only_to": "USER_SCALPING",
+      "entry_and_pending_order_gate_scope": "USER_SCALPING_ONLY_INCLUDING_COMBINED_RUNS",
+      "other_strategies_counted": false,
+      "stop_other_strategies_new_entries": false,
+      "cancel_other_strategies_pending_orders": false,
+      "account_risk_controls": "SEPARATE_UNCHANGED",
       "basis": "COMPLETE_SETUP_SETTLED_NET_RESULT",
       "win_limit": 6,
       "loss_limit": 6,
@@ -445,7 +451,8 @@
       "DATA_AND_BAR_TIME",
       "INDICATOR_MATH_AND_WARMUP",
       "SIGNAL_ZONE_TRIGGER_AND_INVALIDATION",
-      "SIZING_RISK_AND_SERVER_DAY_PAUSE",
+      "SIZING_RISK_AND_APPLICABLE_STRATEGY_PAUSE_POLICIES",
+      "SERVER_DAY_6_WINS_OR_6_LOSSES_USER_SCALPING_ONLY",
       "EXPLAINED_FILL_COST_AND_LEDGER_DIFFERENCES"
     ],
     "score_native_input_platform": "MT5",

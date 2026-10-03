@@ -47,7 +47,8 @@
     "server_time_mapping": null,
     "sizing_scheme": null,
     "lot_table_rule_id": null,
-    "scalping_daily_policy_id": null
+    "scalping_daily_policy_id": null,
+    "scalping_daily_policy_applicability": "USER_SCALPING_ONLY; other strategies use null for scalping_daily_policy_id. In combined runs, counts and entry/pending-order gates remain scoped to USER_SCALPING; account risk controls remain separate."
   },
   "budget": {
     "max_new_candidates_per_batch": 4,
