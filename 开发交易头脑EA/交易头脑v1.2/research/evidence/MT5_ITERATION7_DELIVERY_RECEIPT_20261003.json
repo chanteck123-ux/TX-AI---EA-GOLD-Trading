@@ -1,0 +1,22 @@
+{
+  "status": "ZIP_HASH_VERIFIED_NO_INSTALL",
+  "created_utc": "2026-10-03T13:21:10.4900731Z",
+  "delivery": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\outputs\\TradingBrain_MT5_Iteration7_Delay_20261003",
+  "zip": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\outputs\\TradingBrain_MT5_Iteration7_Delay_20261003.zip",
+  "zip_bytes": 65746955,
+  "zip_sha256": "a16f5e22140a97d3fbe8674678453746747f370f2dc7931d3265c029d88ad4c5",
+  "manifest_sha256": "f7c88829750ba9905e6a9c18b12cd124f5b57ddc9b3031665516d86982ead3f9",
+  "verified_zip_members": 1124,
+  "new_native_runs": 10,
+  "matched_baseline_runs": 10,
+  "unchanged_ea_pairs": 9,
+  "new_strategy_code": false,
+  "new_compile": false,
+  "terminal_install_performed": false,
+  "charts_attached": false,
+  "algorithmic_trading_enabled": false,
+  "demo_orders_sent": false,
+  "live_orders_sent": false,
+  "old_delivery_preserved": true,
+  "sealer_sha256": "4e648ac9e27d5d352f47ece5aee71d34346fceb8582a3657128fa1025499ec80"
+}

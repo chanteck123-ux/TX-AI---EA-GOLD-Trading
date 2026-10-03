@@ -6,18 +6,27 @@
   "plan": "../docs/PLAN_CN.md",
   "architecture": {
     "active_route": "FXPRO_MT5_MQL5",
-    "research_modes_available_in_plan": ["CODEX_ONLY", "CLAUDE_ONLY", "CODEX_AND_CLAUDE"],
-    "claude_connection_verified": false,
+    "research_modes_available_in_plan": [
+      "CODEX_ONLY",
+      "CLAUDE_ONLY",
+      "CODEX_AND_CLAUDE"
+    ],
+    "claude_connection_verified": true,
     "python_scope": "MCP_MONITOR_ONLY",
     "lean_route": "HISTORICAL_CSHARP_P1P2_ENGINEERING_REPLAY",
     "railway_required": false,
-    "remote_desktop_commander_required": false
+    "remote_desktop_commander_required": false,
+    "claude_connection_scope": "DESKTOP_CHAT_MESSAGES_DESIGN_AND_RESULT_SUMMARY_ONLY",
+    "claude_cli_or_background_verified": false
   },
   "this_change": {
-    "scope": "PLAN_AND_REPOSITORY_SCAFFOLD",
+    "scope": "FROZEN_EX5_DELAY_RESEARCH_AND_STATUS_UPDATE",
     "new_strategy_implementation": false,
     "new_compile": false,
-    "new_backtest": false,
+    "new_backtest": true,
+    "new_native_attempts": 10,
+    "strict_verified": 9,
+    "audit_invalid": 1,
     "new_deployment": false,
     "new_live_authorization": false,
     "source_and_ex5_pairs_hash_checked": 9
@@ -25,12 +34,23 @@
   "historical_mt5": {
     "evidence": "evidence/MT5_ITERATION6_20261002_CN.md",
     "initial_capital_per_strategy_per_month_usd": 500,
-    "development_windows": ["2026-06-01/2026-07-01", "2026-08-01/2026-09-01"],
+    "development_windows": [
+      "2026-06-01/2026-07-01",
+      "2026-08-01/2026-09-01"
+    ],
     "data_status": "USED_DEVELOPMENT",
     "valid_native_runs_in_iteration6": 13,
     "invalid_native_runs_retained": 1,
     "selected_versions": 9,
-    "selection": {"S1": "DIAGNOSTIC_NEW_AND_OLD_RECOVERY", "S2": "DIAGNOSTIC_RETAINED", "S3": "RESEARCH_NEW_RETAINED", "S4": "RESEARCH_BE125_RETAINED", "S5": "RESEARCH_NEW_PLUS_M15_REFERENCE", "S6": "RESEARCH_NEW_RETAINED", "Scalping": "USER_SOP_UNCHANGED"},
+    "selection": {
+      "S1": "DIAGNOSTIC_NEW_AND_OLD_RECOVERY",
+      "S2": "DIAGNOSTIC_RETAINED",
+      "S3": "RESEARCH_NEW_RETAINED",
+      "S4": "RESEARCH_BE125_RETAINED",
+      "S5": "RESEARCH_NEW_PLUS_M15_REFERENCE",
+      "S6": "RESEARCH_NEW_RETAINED",
+      "Scalping": "USER_SOP_UNCHANGED"
+    },
     "cost_model": "UNCALIBRATED",
     "score": null,
     "score_status": "SCORE_TARGETS_UNSET",
@@ -59,11 +79,236 @@
     "score_anchor": false
   },
   "next_research_priority": [
-    "Reconcile source, contract, historical costs, stop-out fields, and MT5 versus EA drawdown differences",
-    "Investigate S2 zone qualification and confirmation quality",
-    "Investigate S4 protection updates, available risk, and post-fill budget exits",
-    "Keep both S1 versions; examine concentration in one cross-week winner",
-    "Preregister applicable acceptance rules and finite batch budget before new runs",
-    "Freeze candidates before using new independent validation data"
-  ]
+    "Give Claude matched source and original evidence for a new candidate resolving management requests after other confirmed exits; review shared S1-S6 branch, retain old S5 failure and run new-version paired 250/1000ms plus behavior regression",
+    "Calibrate broker contract, actual margin/Stop Out and historical costs; resolve 0.01 USD margin snapshots before claiming USD500 live feasibility",
+    "Implement and test S2 independent next-closed-M5 progress confirmation after source review; local specification exists but no code task submitted or implementation yet",
+    "Investigate S4 post-fill budget correction and protection timing without disabling risk controls; report June and August together",
+    "Keep S1 recovery versions and examine concentrated cross-week gains; investigate S3 sparse/concentrated outcomes",
+    "Register finite next-batch budget and applicable score anchors before results; freeze candidate before unused independent validation"
+  ],
+  "latest_mt5_iteration7": {
+    "status": "BATCH_COMPLETE_WITH_ONE_AUDIT_INVALID_RUN",
+    "evidence": "evidence/MT5_ITERATION7_DELAY_20261003_CN.md",
+    "review_addendum": "evidence/MT5_ITERATION7_REVIEW_ADDENDUM_20261003_CN.md",
+    "native_attempts": 10,
+    "strict_verified": 9,
+    "audit_invalid": 1,
+    "engineering_reserve_used": 0,
+    "failed_arm": "S5_AUGUST_DELAY1000",
+    "failed_run_id": "1A6A42FD",
+    "failed_economic_metrics": null,
+    "new_tests": [
+      "S1",
+      "S3",
+      "S4",
+      "S5",
+      "S6"
+    ],
+    "S2": "DIAGNOSIS_ONLY",
+    "Scalping": "PRIOR_EVIDENCE_RECHECKED_USER_SOP_UNCHANGED",
+    "initial_capital_per_strategy_per_month_usd": 500,
+    "development_windows": [
+      "2026-06-01/2026-07-01",
+      "2026-08-01/2026-09-01"
+    ],
+    "data_status": "USED_DEVELOPMENT",
+    "comparison": "Original monthly source/defaults/EX5: 250ms baseline versus new 1000ms; historical EX5 may differ between months",
+    "source_changes": 0,
+    "compilations": 0,
+    "retained_ea_pairs": 9,
+    "promotion": false,
+    "results": [
+      {
+        "arm": "S1_JUNE_DELAY1000",
+        "run_id": "18984A23",
+        "status": "VERIFIED_WITH_DIAGNOSTIC",
+        "net_usd": 47.94,
+        "native_equity_dd_usd": 30.99,
+        "native_relative_equity_dd_pct": 6.1931693279,
+        "native_pf": 1.7235134319,
+        "complete_position_net_pf": 1.7296803652968036,
+        "complete_positions": 27,
+        "explicit_cost_usd": 3.1,
+        "delta_vs_250ms": {
+          "net_usd": -1.48,
+          "equity_dd_usd": 3.9,
+          "explicit_cost_usd": 0.01
+        }
+      },
+      {
+        "arm": "S1_AUGUST_DELAY1000",
+        "run_id": "DE159D0D",
+        "status": "VERIFIED_WITH_DIAGNOSTIC",
+        "net_usd": 45.18,
+        "native_equity_dd_usd": 27.55,
+        "native_relative_equity_dd_pct": 4.8102945542,
+        "native_pf": 1.6426742532,
+        "complete_position_net_pf": 1.6504463000287937,
+        "complete_positions": 45,
+        "explicit_cost_usd": 4.79,
+        "delta_vs_250ms": {
+          "net_usd": -0.06,
+          "equity_dd_usd": -0.49,
+          "explicit_cost_usd": 0
+        }
+      },
+      {
+        "arm": "S3_JUNE_DELAY1000",
+        "run_id": "E8176673",
+        "status": "VERIFIED_WITH_DIAGNOSTIC",
+        "net_usd": 7.3,
+        "native_equity_dd_usd": 9.38,
+        "native_relative_equity_dd_pct": 1.8562495053,
+        "native_pf": 1.9592641261,
+        "complete_position_net_pf": 1.9694555112881806,
+        "complete_positions": 4,
+        "explicit_cost_usd": 0.32,
+        "delta_vs_250ms": {
+          "net_usd": 0.27,
+          "equity_dd_usd": -0.28,
+          "explicit_cost_usd": 0
+        }
+      },
+      {
+        "arm": "S3_AUGUST_DELAY1000",
+        "run_id": "195F3990",
+        "status": "VERIFIED_WITH_DIAGNOSTIC",
+        "net_usd": 4.32,
+        "native_equity_dd_usd": 11.93,
+        "native_relative_equity_dd_pct": 2.3108958838,
+        "native_pf": 1.375,
+        "complete_position_net_pf": 1.3776223776223777,
+        "complete_positions": 6,
+        "explicit_cost_usd": 0.48,
+        "delta_vs_250ms": {
+          "net_usd": -0.25,
+          "equity_dd_usd": -0.1,
+          "explicit_cost_usd": 0
+        }
+      },
+      {
+        "arm": "S4_JUNE_DELAY1000",
+        "run_id": "45C6D480",
+        "status": "VERIFIED_WITH_DIAGNOSTIC",
+        "net_usd": 95.55,
+        "native_equity_dd_usd": 45.26,
+        "native_relative_equity_dd_pct": 7.6718365963,
+        "native_pf": 1.5440724291,
+        "complete_position_net_pf": 1.5475017190006874,
+        "complete_positions": 50,
+        "explicit_cost_usd": 4.3,
+        "delta_vs_250ms": {
+          "net_usd": 29.41,
+          "equity_dd_usd": 3.79,
+          "explicit_cost_usd": 0
+        }
+      },
+      {
+        "arm": "S4_AUGUST_DELAY1000",
+        "run_id": "7BF644D9",
+        "status": "VERIFIED_WITH_DIAGNOSTIC",
+        "net_usd": 42.1,
+        "native_equity_dd_usd": 41.9,
+        "native_relative_equity_dd_pct": 7.1746575342,
+        "native_pf": 1.2019378358,
+        "complete_position_net_pf": 1.2029209042271172,
+        "complete_positions": 54,
+        "explicit_cost_usd": 4.93,
+        "delta_vs_250ms": {
+          "net_usd": -59.93,
+          "equity_dd_usd": 8.68,
+          "explicit_cost_usd": -0.21
+        }
+      },
+      {
+        "arm": "S5_JUNE_DELAY1000",
+        "run_id": "09AFDE36",
+        "status": "VERIFIED_WITH_DIAGNOSTIC",
+        "net_usd": 4.05,
+        "native_equity_dd_usd": 3.61,
+        "native_relative_equity_dd_pct": 0.7193384477,
+        "native_pf": 2.0714285714,
+        "complete_position_net_pf": 2.131284916201117,
+        "complete_positions": 7,
+        "explicit_cost_usd": 0.56,
+        "delta_vs_250ms": {
+          "net_usd": -2.54,
+          "equity_dd_usd": 1.54,
+          "explicit_cost_usd": 0
+        }
+      },
+      {
+        "arm": "S5_AUGUST_DELAY1000",
+        "run_id": "1A6A42FD",
+        "status": "AUDIT_INVALID_EXCLUDED_FROM_ECONOMIC_COMPARISON",
+        "net_usd": null,
+        "native_equity_dd_usd": null,
+        "native_relative_equity_dd_pct": null,
+        "native_pf": null,
+        "complete_position_net_pf": null,
+        "complete_positions": null,
+        "explicit_cost_usd": null,
+        "delta_vs_250ms": null
+      },
+      {
+        "arm": "S6_JUNE_DELAY1000",
+        "run_id": "312CB86C",
+        "status": "VERIFIED_WITH_DIAGNOSTIC",
+        "net_usd": 24.57,
+        "native_equity_dd_usd": 14.83,
+        "native_relative_equity_dd_pct": 2.8788849417,
+        "native_pf": 2.2139328063,
+        "complete_position_net_pf": 2.235915492957747,
+        "complete_positions": 16,
+        "explicit_cost_usd": 0.94,
+        "delta_vs_250ms": {
+          "net_usd": 7.26,
+          "equity_dd_usd": -3.8,
+          "explicit_cost_usd": 0.08
+        }
+      },
+      {
+        "arm": "S6_AUGUST_DELAY1000",
+        "run_id": "DCC4A264",
+        "status": "VERIFIED_WITH_DIAGNOSTIC",
+        "net_usd": 32.54,
+        "native_equity_dd_usd": 7.22,
+        "native_relative_equity_dd_pct": 1.3699929793,
+        "native_pf": 5.4032476319,
+        "complete_position_net_pf": 5.570224719101123,
+        "complete_positions": 11,
+        "explicit_cost_usd": 0.88,
+        "delta_vs_250ms": {
+          "net_usd": 10.52,
+          "equity_dd_usd": -8.83,
+          "explicit_cost_usd": 0.08
+        }
+      }
+    ],
+    "historical_tick_identity": "Recorded build/settings/tick counts matched; complete ordered historical tick stream SHA not captured",
+    "costs": "UNCALIBRATED",
+    "margin_and_stop_out": "UNVERIFIED; some raw ACCOUNT_MARGIN snapshots are 0.01 USD, not evidence of live capacity",
+    "claude_review": "Design and supplied result-summary disposition only; no raw source/log independent review and no code delivered",
+    "known_issue": "10036 management-request final reconciliation gap observed in S5 August; shared branch found in six selected S1-S6 sources",
+    "next_code_task_submitted": false,
+    "score": null,
+    "score_status": "SCORE_TARGETS_UNSET",
+    "independent_oos_verified": false,
+    "combined_account_verified": false,
+    "withdrawal_path_verified": false,
+    "cost_stress_verified": false,
+    "demo_forward_verified": false,
+    "champion": null,
+    "live_ready": false,
+    "delivery": {
+      "file": "TradingBrain_MT5_Iteration7_Delay_20261003.zip",
+      "sha256": "a16f5e22140a97d3fbe8674678453746747f370f2dc7931d3265c029d88ad4c5",
+      "bytes": 65746955,
+      "verified_members": 1124,
+      "manifest_sha256": "f7c88829750ba9905e6a9c18b12cd124f5b57ddc9b3031665516d86982ead3f9",
+      "installed": false
+    },
+    "terminal_configs_restored": true,
+    "native_batch_finished": true
+  }
 }

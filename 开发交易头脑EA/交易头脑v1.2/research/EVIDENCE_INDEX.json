@@ -2,8 +2,8 @@
   "schema": "TRADINGBRAIN_PLAN_EVIDENCE_V1",
   "checked_on": "2026-10-03",
   "timezone": "Asia/Kuala_Lumpur",
-  "base_repository_commit": "d88448e7b374e67e0c5b705a90af84006152236f",
-  "scope": "DOCUMENTATION_RESTRUCTURE_AND_EXISTING_EVIDENCE_HASH_CHECK_ONLY",
+  "base_repository_commit": "05b4089d571108f60a9a715701ec05e16d6a14d0",
+  "scope": "HISTORICAL_EVIDENCE_PRESERVED_PLUS_ITERATION7_NEW_DELAY_TESTS_AND_VERIFIED_DELIVERY",
   "source_workspace_local": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5",
   "source_reports": [
     {
@@ -32,6 +32,41 @@
       "repository_project_relative_path": "research/evidence/MT5_ITERATION6_20261002_CN.md",
       "sha256": "8d10bfe1493ccc96eaa39314f4e546dfe381cb746cc66c2d219a01ca3fc75ad7",
       "scope": "Historical native MT5 development evidence; not rerun this turn",
+      "verified_on": "2026-10-03"
+    },
+    {
+      "original_workspace_relative_path": "work/repair_research/mt5_iteration7_20261003/七策略第七轮冻结延迟验证结果_含审计失败.md",
+      "repository_project_relative_path": "research/evidence/MT5_ITERATION7_DELAY_20261003_CN.md",
+      "sha256": "8ef5515e3823a18a4878ca3891de2b38facb7766fe0c1dbae5994aeafefdf1ec",
+      "scope": "New delay research: 10 native attempts, 9 strict accepted, 1 audit invalid; no EA source change or compilation",
+      "verified_on": "2026-10-03"
+    },
+    {
+      "original_workspace_relative_path": "work/repair_research/mt5_iteration7_20261003/复审补充与下一步.md",
+      "repository_project_relative_path": "research/evidence/MT5_ITERATION7_REVIEW_ADDENDUM_20261003_CN.md",
+      "sha256": "95e232a9e72dab3cbf06345175e7bc998a6466bb92dec075d2d2d86c36c0cb35",
+      "scope": "Shared management branch, uncalibrated margin and pending implementation scope",
+      "verified_on": "2026-10-03"
+    },
+    {
+      "original_workspace_relative_path": "work/repair_research/mt5_iteration7_20261003/FINAL_REVIEW.json",
+      "repository_project_relative_path": "research/evidence/MT5_ITERATION7_FINAL_REVIEW_20261003.json",
+      "sha256": "c1222afe8ef0e6777b961e98dc59734a3aad1330d3fa09d2a15090feba05a952",
+      "scope": "Codex final evidence review, not strategy promotion",
+      "verified_on": "2026-10-03"
+    },
+    {
+      "original_workspace_relative_path": "work/repair_research/mt5_iteration7_20261003/DELIVERY_RECEIPT.json",
+      "repository_project_relative_path": "research/evidence/MT5_ITERATION7_DELIVERY_RECEIPT_20261003.json",
+      "sha256": "c5ce176bd35189bd6e99faf1fa41e151c914dd5727b772ad8ea0609a15e9eb12",
+      "scope": "1124 ZIP members hash verified; no installation",
+      "verified_on": "2026-10-03"
+    },
+    {
+      "original_workspace_relative_path": "work/repair_research/mt5_iteration7_20261003/CLAUDE_S5_CLOSED_REQUEST_AUDIT_HANDOFF_CN_v2.md",
+      "repository_project_relative_path": "research/evidence/MT5_ITERATION7_S5_HANDOFF_20261003_CN.md",
+      "sha256": "0c3f998bac94332fb1f27113f5bb93d485b1c7874ab71cea5423a4592f0fcf28",
+      "scope": "Pending implementation specification, not yet submitted as a Claude code task",
       "verified_on": "2026-10-03"
     }
   ],
@@ -155,5 +190,28 @@
     "sha256_from_original_manifest": "3ce551cb819748ade5a11cbca9084b516024a3083c61fb24ac48cb3ad3ba352a",
     "rechecked_this_turn": false
   },
-  "warning": "Reports contain original machine-local links. Public repository holds these reports and hashes, not the complete EA builds or tester evidence. Historical results were not rerun."
+  "warning": "Reports preserve original machine-local links. This public repository holds reports and hashes, not full EA binaries or native audit files. I6 250ms baselines were reused, not rerun. I7 added 10 native 1000ms attempts: 9 accepted and 1 audit-invalid. The ZIP preserves all attempts. No independent OOS, withdrawal, Demo or live validation.",
+  "iteration7": {
+    "results": {
+      "original_workspace_relative_path": "work/repair_research/mt5_iteration7_20261003/FINAL_DATA_WITH_FAILURE.json",
+      "sha256": "6316009e31958f429a3ab80cf00b08375aa971b2f091f8d42f77fe944d71d874",
+      "published_in_repository": false
+    },
+    "native_attempts": 10,
+    "strict_verified": 9,
+    "audit_invalid": 1,
+    "failed_run_id": "1A6A42FD",
+    "failed_economic_metrics": null,
+    "package": {
+      "file": "TradingBrain_MT5_Iteration7_Delay_20261003.zip",
+      "sha256": "a16f5e22140a97d3fbe8674678453746747f370f2dc7931d3265c029d88ad4c5",
+      "bytes": 65746955,
+      "manifest_sha256": "f7c88829750ba9905e6a9c18b12cd124f5b57ddc9b3031665516d86982ead3f9",
+      "verified_members": 1124,
+      "published_in_repository": false
+    },
+    "source_and_ex5_pairs": "Same nine selected I6 pairs above; no source/default change or new compilation",
+    "deployment": false,
+    "champion": false
+  }
 }

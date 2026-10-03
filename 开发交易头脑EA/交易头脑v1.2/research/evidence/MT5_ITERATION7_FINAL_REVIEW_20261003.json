@@ -1,0 +1,62 @@
+{
+  "schema": "I7_ROOT_FINAL_REVIEW_V1",
+  "created_utc": "2026-10-03T13:14:39.1509290Z",
+  "status": "PASS_FOR_RESEARCH_EVIDENCE_DELIVERY_WITH_ONE_KNOWN_AUDIT_FAILURE",
+  "results": {
+    "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration7_20261003\\FINAL_DATA_WITH_FAILURE.json",
+    "sha256": "6316009e31958f429a3ab80cf00b08375aa971b2f091f8d42f77fe944d71d874"
+  },
+  "report": {
+    "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration7_20261003\\七策略第七轮冻结延迟验证结果_含审计失败.md",
+    "sha256": "8ef5515e3823a18a4878ca3891de2b38facb7766fe0c1dbae5994aeafefdf1ec"
+  },
+  "report_receipt": {
+    "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration7_20261003\\REPORT_WITH_FAILURE_RECEIPT.json",
+    "sha256": "2d876b1be2ce9d72f70d8fc9bd298c87680599d38f7e5594a8870ce12d7a6eff"
+  },
+  "native_attempts": 10,
+  "strict_verified": 9,
+  "audit_invalid": 1,
+  "failed_arm": "S5_AUGUST_DELAY1000",
+  "failed_economic_metrics": null,
+  "new_strategy_source": false,
+  "new_compile": false,
+  "source_default_and_binary_identity": "Same original tested source/defaults/EX5 within each monthly comparison; exact selected I6 delivery unchanged",
+  "independent_reviews": [
+    {
+      "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration7_20261003\\independent_review\\INDEX.json",
+      "sha256": "5071e704cc6c489f178b410582d086b28336a7e92e6d3a55702e9ef9e09be869"
+    },
+    {
+      "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration7_20261003\\PACKAGING_WITH_FAILURE_INDEPENDENT_REVIEW.json",
+      "sha256": "56a978a739d001227a03a797acafe5b8d25e79d0ef31a2cfe131258e71a91dd0"
+    },
+    {
+      "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration7_20261003\\BASELINE_DATA_COMPARABILITY_REVIEW.json",
+      "sha256": "9b489c2c515c89de1c21a7a6d01b579a45b980733b4b4b3923fbd638d598c3ba"
+    },
+    {
+      "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration7_20261003\\COMMON_MANAGEMENT_SCOPE_REVIEW.json",
+      "sha256": "e2c06770dbd71b968c08eaa23885855ee264f9086fc28f4af679413e309660af"
+    }
+  ],
+  "addendum": {
+    "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration7_20261003\\复审补充与下一步.md",
+    "sha256": "95e232a9e72dab3cbf06345175e7bc998a6466bb92dec075d2d2d86c36c0cb35"
+  },
+  "claude_scope": "Actual design and result-summary disposition responses received; no raw-source/raw-log review and no EA code supplied",
+  "limits": [
+    "Used June/Aug development, separate USD500 accounts, not continuous/combined/withdrawal/OOS",
+    "Historical tick-count/settings quality matched; exact full historical tick bytes unproven",
+    "Cost and broker margin/Stop Out calibration incomplete; raw0.01USD margin snapshots not live capacity",
+    "S1 and S3 concentrated profits; S4 execution sensitive; S5 unresolved request retained as invalid",
+    "Common management branch exposure in six selected EA sources; no claim all branches/cases tested"
+  ],
+  "score": {
+    "total": null,
+    "status": "SCORE_TARGETS_UNSET"
+  },
+  "champion": false,
+  "demo_forward_verified": false,
+  "live_ready": false
+}

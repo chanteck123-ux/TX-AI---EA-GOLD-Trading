@@ -26,4 +26,6 @@
 
 后续实际开发沿用原 `v1-2-ea-mt5` 工作区及固定 MT5 终端。本次没有把本地全部 EA 源码、EX5 或大包重新公开到 GitHub，没有创建空壳交易程序。跨电脑协作先取得已授权的匹配交付包并核对哈希；仅拿到这份骨架时，可审计划与报告，不声称已能编译 EA。
 
-2026-10-03 状态：新计划已整理，新增研发和部署未启动。已有第六轮结果是开发样本证据，见 [原报告](research/evidence/MT5_ITERATION6_20261002_CN.md)。
+2026-10-03 最新状态：第七轮冻结版本延迟测试完成10次原生运行，9次严格核验通过；S5八月1次审计无效、成绩N/A。S1/S3/S4/S5/S6各月独立500 USD，对照250/1000ms；S2只做诊断，Scalping复核既有证据。本轮没有改EA源码、重新编译、部署或晋级，原9组版本保留。
+
+查看[第七轮成绩](research/evidence/MT5_ITERATION7_DELAY_20261003_CN.md)、[复审与下一步](research/evidence/MT5_ITERATION7_REVIEW_ADDENDUM_20261003_CN.md)及[第六轮恢复依据](research/evidence/MT5_ITERATION6_20261002_CN.md)。第七轮交付包1,124个文件已逐个核对哈希；包和MQ5/EX5在原本地工作区，身份见[证据索引](research/EVIDENCE_INDEX.json)。这些均为已用开发数据，尚未证明稳定盈利、提款或实盘可用。
