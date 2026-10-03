@@ -21,7 +21,7 @@
     "mode_selection_for_next_task": null
   },
   "this_change": {
-    "scope": "SCALPING_LOGIC_AUTHORIZATION_DAILY_PAUSE_AND_PLAN_ONLY",
+    "scope": "EXECUTION_LATENCY_METRIC_REFERENCES_AND_FIXED_TABLE_SIZING_PLAN_ONLY",
     "new_strategy_implementation": false,
     "new_compile": false,
     "new_backtest": false,
@@ -77,13 +77,14 @@
     "score_anchor": false
   },
   "next_research_priority": [
-    "First obtain the user's Claude or Codex-only choice, then give the selected implementer matched source and original evidence for a new candidate resolving management requests after other confirmed exits; review shared S1-S6 branch, retain old S5 failure and run new-version paired 250/1000ms plus behavior regression",
+    "First obtain the user's Claude or Codex-only choice, then give the selected implementer matched source and original evidence for a new candidate resolving management requests after other confirmed exits; review shared S1-S6 branch, retain old S5 failure and run new-version paired 0/250ms plus behavior regression under the new main latency range; reproducing the prior 1000ms fault is a separately registered extra test, and old failure is not marked resolved without matching evidence",
     "Calibrate broker contract, actual margin/Stop Out and historical costs; resolve 0.01 USD margin snapshots before claiming USD500 live feasibility",
     "Implement and test S2 independent next-closed-M5 progress confirmation after source review; local specification exists but no code task submitted or implementation yet",
     "Investigate S4 post-fill budget correction and protection timing without disabling risk controls; report June and August together",
     "Keep S1 recovery versions and examine concentrated cross-week gains; investigate S3 sparse/concentrated outcomes",
     "Register finite next-batch budget and applicable score anchors before results; freeze candidate before unused independent validation",
-    "For the next authorized Scalping batch, apply PLAN_CN.md section 4.1: reconcile source baseline with prior EA, preserve the M5/nearest-zone/retest/closed-reversal core, research entry and exit details, and implement plus test cumulative 6 wins OR 6 losses per FxPro server day; retain old evidence"
+    "For the next authorized Scalping batch, apply PLAN_CN.md section 4.1: reconcile source baseline with prior EA, preserve the M5/nearest-zone/retest/closed-reversal core, research entry and exit details, and implement plus test cumulative 6 wins OR 6 losses per FxPro server day; retain old evidence",
+    "When a sizing batch is authorized, compare the fixed-table lower-bound standard/light schemes with registered risk-percent schemes under the same strategy, SL/exit, data, costs and 0/250ms conditions; follow PLAN 6.1 boundary rules and report actual risk differences"
   ],
   "latest_mt5_iteration7": {
     "status": "BATCH_COMPLETE_WITH_ONE_AUDIT_INVALID_RUN",
@@ -356,5 +357,70 @@
       "new_live_authorization": false,
       "source_and_ex5_pairs_hash_checked": 9
     }
+  },
+  "planned_execution_and_sizing_update_20261003": {
+    "status": "DOCUMENTED_NOT_IMPLEMENTED_OR_TESTED",
+    "user_confirmed_sizing_mode": "FIXED_TABLE_SCHEME_VERSUS_RISK_PERCENT_SCHEME",
+    "main_execution_delay_ms": {
+      "min": 0,
+      "max": 250
+    },
+    "registered_endpoint_comparison_ms": [
+      0,
+      250
+    ],
+    "extra_delay_above_250": "SEPARATE_PURPOSE_AND_BUDGET_NOT_DEFAULT_REQUIRED",
+    "historical_iteration7_1000ms": "PRESERVED_UNCHANGED_NOT_RECLASSIFIED",
+    "lot_table_policy": {
+      "plan_section": "../docs/PLAN_CN.md#61-固定表与风险比例两套仓位方案",
+      "definition_origin": "REPRODUCIBLE_RESEARCH_CONVENTION_NOT_IMAGE_ORIGINAL",
+      "capital_basis": "PRE_ORDER_ACCOUNT_EQUITY_USD",
+      "brackets": "LOWER_EXCLUSIVE_UPPER_INCLUSIVE_FIRST_INCLUDES_100",
+      "overlapping_boundaries": "LOWER_CAPITAL_BRACKET",
+      "selection": "REGISTER_STANDARD_LOWER_BOUND_AND_LIGHT_LOWER_BOUND_SEPARATELY",
+      "initial_scope": "ONE_STRATEGY_ONE_POSITION_TOTAL_NEW_ORDER_VOLUME",
+      "unsupported_capital": "TABLE_RANGE_UNDEFINED_NO_NEW_RISK",
+      "constraint_breach": "SKIP_AND_RECORD_NOT_SILENT_RISK_BASED_RESIZING",
+      "at_500_usd": {
+        "standard_lots": 0.03,
+        "light_lots": 0.01
+      },
+      "live_defaults_changed": false
+    },
+    "metric_reference_policy": {
+      "plan_section": "../docs/PLAN_CN.md#81-图片中的成绩参考",
+      "native_pf_reference": [
+        1.3,
+        1.8
+      ],
+      "max_relative_equity_drawdown_reference_pct": 15,
+      "complete_trade_reference": [
+        200,
+        500
+      ],
+      "native_recovery_reference_gt": 3,
+      "net_expectancy_to_average_cost_reference": [
+        3,
+        5
+      ],
+      "role": "RESEARCH_REFERENCE_NOT_AUTOMATIC_SCORE_ANCHORS_OR_PROMOTION",
+      "weights_unchanged": [
+        35,
+        25,
+        20,
+        10,
+        10
+      ]
+    },
+    "source_images": [
+      {
+        "file": "屏幕截图 2026-10-03 223121.png",
+        "sha256": "2444d926148e0b8bcf570d2ce8c29a37768011b9b3ee8addc92e463e36055d28"
+      },
+      {
+        "file": "Screenshot_20260602_164529_rednote.jpg",
+        "sha256": "13efd879b334922d1fc28ec77043cc353338086dec660759e12027643e942f3b"
+      }
+    ]
   }
 }
