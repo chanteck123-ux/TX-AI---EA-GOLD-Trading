@@ -1,0 +1,95 @@
+{
+  "schema_version": 1,
+  "plan_id": "TB_LEAN_FXPRO_500_20260927_V1",
+  "checked_utc": "2026-09-27T07:36:39.206671Z",
+  "scope": "PLAN_AND_READONLY_INTAKE",
+  "plan_file": "执行计划_CN.md",
+  "plan_sha256": "99bfe0dc24c82df6b9138869fef9af4875a01be6f42cd520327733b7546f2657",
+  "new_strategy_source_changed": false,
+  "new_compile_performed": false,
+  "new_backtest_performed": false,
+  "account_connected": false,
+  "demo_orders_placed": false,
+  "live_orders_placed": false,
+  "score_status": "SCORE_TARGETS_UNSET",
+  "score": null,
+  "main_plan_commit": "fb4c752563d4d1714e32d590bb2b28635ef2e85d",
+  "lean_commit": "985ef30ad3ac774218c5ac516b4cb0aa2655730f",
+  "initial_capital_usd": 500,
+  "challenge_months": 12,
+  "challenge_total_net_usd": 12000,
+  "challenge_average_monthly_net_usd": 1000,
+  "emergency_dd_trigger_pct": 15,
+  "diagnostic_data_status": "MT5_FXPRO_AUGUST2026_USED_DEVELOPMENT_NOT_CTRADER",
+  "formal_validation_blockers": [
+    "cTrader same-source quote and bar history not verified",
+    "cTrader account contract and historical cost model not calibrated",
+    "cTrader Brokerage not implemented",
+    "12-month eligible data window not registered"
+  ],
+  "planned_first_batch": [
+    {
+      "strategy": "S4",
+      "candidate_id": "TB500_S4_F1_SINGLE",
+      "risk_pct": 1
+    },
+    {
+      "strategy": "S4",
+      "candidate_id": "TB500_S4_F2_SINGLE",
+      "risk_pct": 2
+    },
+    {
+      "strategy": "S1",
+      "candidate_id": "TB500_S1_F1_SINGLE",
+      "risk_pct": 1
+    },
+    {
+      "strategy": "S1",
+      "candidate_id": "TB500_S1_F2_SINGLE",
+      "risk_pct": 2
+    }
+  ],
+  "evidence": [
+    {
+      "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\quantconnect_20260920\\REGISTRATION.json",
+      "sha256": "66753e7128e1309c928e7a47aed62011c7a855da892506d4ca51bee47aa3b0ca"
+    },
+    {
+      "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\quantconnect_20260920\\algorithm\\TradingBrainAlgorithm.cs",
+      "sha256": "8f3158c9547608f0766698a6a8d6b2ed39c4f72a464ada4893ab4e20b4f41248"
+    },
+    {
+      "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\quantconnect_20260920\\algorithm\\C7Signals.cs",
+      "sha256": "4ba10f19baa0d846dc558c28cdb61a5914f6c044722852c274cf0d7f979af416"
+    },
+    {
+      "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\quantconnect_20260920\\algorithm\\TradingBrain.Lean.csproj",
+      "sha256": "ecf4d297699623684d025d58609c4501aad1ddba3b3018213613d4ef3627a3d7"
+    },
+    {
+      "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\quantconnect_20260920\\run_c7_lean.ps1",
+      "sha256": "eafd653e408a6bb17157df4c16280313e8f035c9744f685d90922d9ce7a92ef3"
+    },
+    {
+      "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\quantconnect_20260920\\verify_lean_runs.mjs",
+      "sha256": "44ad17243c2723a3f3016e173a5cd3f578479035019bc7b721c679a098b60cb2"
+    },
+    {
+      "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\quantconnect_20260920\\data\\EXPORT_MANIFEST.json",
+      "sha256": "9024018027104db19e53f238c8479cb249255b336c0a6f9b51cf2d43a0aeb581"
+    },
+    {
+      "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\quantconnect_20260920\\data\\LEAN_TICK_MANIFEST.json",
+      "sha256": "9a3926c75890be2a0d54537cfe1b31f37fd1209ca04291ce9064172551cd117f"
+    },
+    {
+      "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\quantconnect_20260920\\data\\raw\\contract.csv",
+      "sha256": "d205b5c166ae0c67c2130b4de079f80fdf2ee4db0dc2600c7201f1db3d5af317"
+    },
+    {
+      "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\quantconnect_20260920\\verification\\FINAL_VERIFICATION_POINTER.json",
+      "sha256": "f7f8b596abbea62eb461d530292d56bece0c32fad1b8673703f9bbef9948acc7"
+    }
+  ],
+  "plan_review": "Independent read-only review completed; five execution issues clarified. This is document verification, not strategy testing."
+}

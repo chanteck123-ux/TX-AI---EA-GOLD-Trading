@@ -1,0 +1,69 @@
+{
+  "schema": "TRADINGBRAIN_CURRENT_V1",
+  "updated_on": "2026-10-03",
+  "timezone": "Asia/Kuala_Lumpur",
+  "project": "TradingBrain V1.2 GOLD EA",
+  "plan": "../docs/PLAN_CN.md",
+  "architecture": {
+    "active_route": "FXPRO_MT5_MQL5",
+    "research_modes_available_in_plan": ["CODEX_ONLY", "CLAUDE_ONLY", "CODEX_AND_CLAUDE"],
+    "claude_connection_verified": false,
+    "python_scope": "MCP_MONITOR_ONLY",
+    "lean_route": "HISTORICAL_CSHARP_P1P2_ENGINEERING_REPLAY",
+    "railway_required": false,
+    "remote_desktop_commander_required": false
+  },
+  "this_change": {
+    "scope": "PLAN_AND_REPOSITORY_SCAFFOLD",
+    "new_strategy_implementation": false,
+    "new_compile": false,
+    "new_backtest": false,
+    "new_deployment": false,
+    "new_live_authorization": false,
+    "source_and_ex5_pairs_hash_checked": 9
+  },
+  "historical_mt5": {
+    "evidence": "evidence/MT5_ITERATION6_20261002_CN.md",
+    "initial_capital_per_strategy_per_month_usd": 500,
+    "development_windows": ["2026-06-01/2026-07-01", "2026-08-01/2026-09-01"],
+    "data_status": "USED_DEVELOPMENT",
+    "valid_native_runs_in_iteration6": 13,
+    "invalid_native_runs_retained": 1,
+    "selected_versions": 9,
+    "selection": {"S1": "DIAGNOSTIC_NEW_AND_OLD_RECOVERY", "S2": "DIAGNOSTIC_RETAINED", "S3": "RESEARCH_NEW_RETAINED", "S4": "RESEARCH_BE125_RETAINED", "S5": "RESEARCH_NEW_PLUS_M15_REFERENCE", "S6": "RESEARCH_NEW_RETAINED", "Scalping": "USER_SOP_UNCHANGED"},
+    "cost_model": "UNCALIBRATED",
+    "score": null,
+    "score_status": "SCORE_TARGETS_UNSET",
+    "independent_oos_verified": false,
+    "combined_account_verified": false,
+    "withdrawal_path_verified": false,
+    "demo_forward_verified": false,
+    "champion": null,
+    "live_ready": false
+  },
+  "historical_lean": {
+    "evidence": "evidence/LEAN_P1P2_20260927_CN.md",
+    "scope": "ENGINEERING_DIAGNOSTIC_MT5_SOURCE_USED_DEVELOPMENT",
+    "p1_p2_status": "COMPLETED_HISTORICALLY_NOT_RERUN",
+    "valid_runs": 4,
+    "native_parity": "NOT_ASSERTED",
+    "ctrader_formal_validation": "NOT_STARTED",
+    "route_reactivation_requires_specific_task": true
+  },
+  "challenge": {
+    "initial_capital_usd": 500,
+    "consecutive_full_calendar_months": 12,
+    "total_net_profit_usd": 12000,
+    "average_monthly_net_profit_usd": 1000,
+    "verified": false,
+    "score_anchor": false
+  },
+  "next_research_priority": [
+    "Reconcile source, contract, historical costs, stop-out fields, and MT5 versus EA drawdown differences",
+    "Investigate S2 zone qualification and confirmation quality",
+    "Investigate S4 protection updates, available risk, and post-fill budget exits",
+    "Keep both S1 versions; examine concentration in one cross-week winner",
+    "Preregister applicable acceptance rules and finite batch budget before new runs",
+    "Freeze candidates before using new independent validation data"
+  ]
+}

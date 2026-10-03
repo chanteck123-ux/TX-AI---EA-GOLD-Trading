@@ -1,0 +1,120 @@
+name: Archive QuantConnect source snapshots 20260920
+on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/archive-quantconnect-20260920.yml']
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: quantconnect-archive-20260920
+  cancel-in-progress: false
+jobs:
+  archive:
+    if: github.repository == 'chanteck123-ux/TX-AI---EA-GOLD-Trading' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          fetch-depth: 1
+      - name: Import static source only and verify against uploaded snapshots
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import hashlib, json, os, pathlib, shutil, stat, tempfile, urllib.request, zipfile
+          from datetime import datetime, timezone
+          base = pathlib.Path('research-library/QuantConnect-LEAN')
+          dest = base / 'snapshots/20260920'
+          manifest_dir = dest / '_provenance'
+          specs = [
+            ('Lean','985ef30ad3ac774218c5ac516b4cb0aa2655730f',6315,'86f6c81e0f8ad498e4c6065007b490e95b944205dbd53386e2f02bc3ce2586f7','6a09188d345a9970946ae7d63e704cae7f270edc1659c9f9d00bd0b4688abd83'),
+            ('lean-cli','20e58aa65c3c504a6a585e1d4eb1b2e56b233c48',265,'561b66937d36c354402d8b94dc3ffe2c405275b503903838c7eca05e24337544','157525f4e948f62f76ac2a9d02b713bb4be6a09c7a9e3d98ccbf63ae68448772'),
+            ('Research','d89cf67bc37bc032f0de47089e16d825bcd8a65f',37,'0e83bbeebc3ef2d2cbbff61932086dbbc04683186386280cc646cff67c139cd9','21ba97a60432c0abf3bddd870b56c102e4c9d61c0237767f560a51e5ac05a92f'),
+            ('Tutorials','4a341890296f7e79e095508f06170c72ccaa629c',723,'0779993838caf5a2286497fdc204007b31196332d0d19d4be34efd0f2a820aba','be02d18ce8ebc60c7c46d6abf9280788be3e99781e0adf38ae09770398e1803c')]
+          omitted = {'.ttf','.otf','.woff','.woff2','.eot','.fon','.ttc'}
+          results = []
+          manifest_dir.mkdir(parents=True, exist_ok=True)
+          for name, commit, count, expected, uploaded_hash in specs:
+              url = f'https://codeload.github.com/QuantConnect/{name}/zip/{commit}'
+              with tempfile.TemporaryDirectory() as tmp:
+                  archive = pathlib.Path(tmp)/'source.zip'
+                  req = urllib.request.Request(url, headers={'User-Agent':'GSM-Research-Archive'})
+                  with urllib.request.urlopen(req, timeout=180) as r, archive.open('wb') as f:
+                      shutil.copyfileobj(r,f)
+                  rows, excluded, seen = [], [], set()
+                  with zipfile.ZipFile(archive) as z:
+                      if z.comment.decode('ascii') != commit:
+                          raise RuntimeError(f'{name}: archive commit mismatch')
+                      for info in z.infolist():
+                          if info.is_dir():
+                              continue
+                          rel = info.filename.split('/',1)[1]
+                          path = pathlib.PurePosixPath(rel)
+                          if path.is_absolute() or '..' in path.parts or '.git' in path.parts or '\\' in rel or rel in seen:
+                              raise RuntimeError(f'Unsafe or duplicate archive path: {rel}')
+                          seen.add(rel)
+                          if stat.S_ISLNK(info.external_attr >> 16):
+                              raise RuntimeError(f'Symlink needs explicit archival handling: {rel}')
+                          data = z.read(info)
+                          row = {'path':rel,'size':len(data),'sha256':hashlib.sha256(data).hexdigest()}
+                          if path.suffix.lower() in omitted:
+                              excluded.append(dict(row, reason='non-trading font asset omitted'))
+                              continue
+                          target = dest/name/rel
+                          target.parent.mkdir(parents=True, exist_ok=True)
+                          if target.exists() and target.read_bytes() != data:
+                              raise RuntimeError(f'Refusing to replace differing archived source: {target}')
+                          target.write_bytes(data)
+                          if info.external_attr >> 16 & 0o111:
+                              target.chmod(0o755)
+                          rows.append(row)
+                  rows.sort(key=lambda r:r['path'])
+                  actual = hashlib.sha256(json.dumps(rows,ensure_ascii=False,separators=(',',':')).encode()).hexdigest()
+                  if actual != expected or len(rows) != count:
+                      raise RuntimeError(f'{name}: uploaded-source manifest mismatch {actual} {len(rows)}')
+                  license_path = dest/name/'LICENSE'
+                  if not license_path.is_file() or b'Apache License' not in license_path.read_bytes():
+                      raise RuntimeError(f'{name}: expected root license absent')
+                  (manifest_dir/f'{name}_FILES.json').write_text(json.dumps(rows,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+                  results.append({'repository':f'QuantConnect/{name}','commit':commit,'source_url':url,'uploaded_archive_sha256':uploaded_hash,'downloaded_archive_sha256':hashlib.file_digest(archive.open('rb'),'sha256').hexdigest(),'retained_files':len(rows),'retained_bytes':sum(r['size'] for r in rows),'manifest_sha256':actual,'excluded':excluded,'verification':'ALL_RETAINED_FILE_BYTES_MATCH_UPLOADED_SNAPSHOT','upstream_code_executed':False})
+          receipt = {'date_utc':datetime.now(timezone.utc).isoformat(),'scope':'four user-uploaded source snapshots; not all QuantConnect organization repositories','results':results,'total_retained_files':sum(r['retained_files'] for r in results),'status':'SOURCE_ARCHIVE_VERIFIED','lean_compiled':False,'lean_backtested':False,'mql5_ported':False,'mt5_compiled':False,'mt5_backtested':False,'live_settings_changed':False,'workflow_run_id':os.environ['GITHUB_RUN_ID']}
+          (manifest_dir/'IMPORT_RECEIPT.json').write_text(json.dumps(receipt,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+          (dest/'README_CN.md').write_text('# QuantConnect 四仓库固定源码快照\n\n来源为用户于2026-09-20提供的四份ZIP。按ZIP内提交版本从官方仓库取回，逐文件内容摘要与上传包核对。\n\n保留7,340个原始文件：Lean 6,315；lean-cli 265；Research 37；Tutorials 723。Research中10个非交易字体素材不分发，排除清单在_provenance/IMPORT_RECEIPT.json。各仓库LICENSE、版权说明、测试和数据示例均保留。嵌套.github工作流仅存档，不执行；不安装依赖，不运行上游程序、回测或实盘。\n\n本目录用于可追溯研究，不是已移植的MT5 EA，也不代表黄金盈利验证。历史教程接口需与当前官方文档及固定引擎版本交叉检查；示例数据不是FxPro黄金真实Tick验收数据。\n\n逐文件路径、字节数、SHA-256见_provenance/*_FILES.json；导入证据见IMPORT_RECEIPT.json。\n',encoding='utf-8')
+          print(json.dumps({'retained_files':receipt['total_retained_files'],'status':receipt['status']}))
+          PY
+      - name: Commit archives without changing EA code or live configuration
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'GSM Research Library'
+          git config user.email 'github-actions[bot]@users.noreply.github.com'
+          git config core.autocrlf false
+          mkdir -p .git/info
+          printf '\nresearch-library/QuantConnect-LEAN/snapshots/20260920/** -text -filter\n' >> .git/info/attributes
+          git add -f -- research-library/QuantConnect-LEAN/snapshots/20260920
+          python3 - <<'PY'
+          import hashlib,json,pathlib,subprocess
+          root=pathlib.Path('research-library/QuantConnect-LEAN/snapshots/20260920')
+          raw=subprocess.check_output(['git','ls-files','-s','-z','--',str(root)])
+          staged={}
+          for rec in raw.split(b'\0'):
+              if not rec:continue
+              meta,path=rec.split(b'\t',1)
+              staged[path.decode()]=meta.split()[1].decode()
+          for manifest in (root/'_provenance').glob('*_FILES.json'):
+              name=manifest.name.removesuffix('_FILES.json')
+              for row in json.loads(manifest.read_text()):
+                  p=root/name/row['path']; data=p.read_bytes()
+                  blob=hashlib.sha1(b'blob '+str(len(data)).encode()+b'\0'+data).hexdigest()
+                  if staged.get(str(p)) != blob:
+                      raise RuntimeError(f'Staged bytes differ from snapshot: {p}')
+          print('Every archived source blob matches the uploaded snapshot byte-for-byte.')
+          PY
+          if git diff --cached --quiet; then
+            echo 'Archive already present; no commit needed.'
+            exit 0
+          fi
+          git commit -m 'research: archive and verify all four QuantConnect source snapshots (7340 files)'
+          git pull --rebase origin main
+          git push origin HEAD:main

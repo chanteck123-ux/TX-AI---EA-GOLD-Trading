@@ -1,0 +1,4 @@
+# Preserve archived evidence bytes and their recorded SHA256 values.
+docs/history/** -text -filter
+开发交易头脑EA/交易头脑v1.2/docs/history/** -text -filter
+开发交易头脑EA/交易头脑v1.2/research/evidence/** -text -filter

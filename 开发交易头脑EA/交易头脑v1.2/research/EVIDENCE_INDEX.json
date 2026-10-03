@@ -1,0 +1,159 @@
+{
+  "schema": "TRADINGBRAIN_PLAN_EVIDENCE_V1",
+  "checked_on": "2026-10-03",
+  "timezone": "Asia/Kuala_Lumpur",
+  "base_repository_commit": "d88448e7b374e67e0c5b705a90af84006152236f",
+  "scope": "DOCUMENTATION_RESTRUCTURE_AND_EXISTING_EVIDENCE_HASH_CHECK_ONLY",
+  "source_workspace_local": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5",
+  "source_reports": [
+    {
+      "original_workspace_relative_path": "outputs/TradingBrain_LEAN_500_Plan_20260927/执行计划_CN.md",
+      "repository_project_relative_path": "docs/history/LEAN_500_PLAN_20260927.md",
+      "sha256": "99bfe0dc24c82df6b9138869fef9af4875a01be6f42cd520327733b7546f2657",
+      "scope": "Original plan, superseded route; source bytes preserved",
+      "verified_on": "2026-10-03"
+    },
+    {
+      "original_workspace_relative_path": "outputs/TradingBrain_LEAN_500_Plan_20260927/盘点与状态.json",
+      "repository_project_relative_path": "docs/history/LEAN_500_INTAKE_20260927.json",
+      "sha256": "21f60e5a3fefc66dee24a442faa105f3d4012a9a44cbf21071ac30715e9f6412",
+      "scope": "Historical intake only; later P1/P2 results supersede its unimplemented status",
+      "verified_on": "2026-10-03"
+    },
+    {
+      "original_workspace_relative_path": "outputs/TradingBrain_LEAN_500_P1P2_20260927/测试成绩_CN.md",
+      "repository_project_relative_path": "research/evidence/LEAN_P1P2_20260927_CN.md",
+      "sha256": "1e3312cf837d3a727ea82a0a28ea6d0334909038aa29e61cb2bcc731e7370d54",
+      "scope": "Historical C# engineering replay; MT5_SOURCE; not cTrader validation",
+      "verified_on": "2026-10-03"
+    },
+    {
+      "original_workspace_relative_path": "outputs/TradingBrain_MT5_Iteration6_500_20261002/evidence/iteration6/七策略第六轮结果与保留版本.md",
+      "repository_project_relative_path": "research/evidence/MT5_ITERATION6_20261002_CN.md",
+      "sha256": "8d10bfe1493ccc96eaa39314f4e546dfe381cb746cc66c2d219a01ca3fc75ad7",
+      "scope": "Historical native MT5 development evidence; not rerun this turn",
+      "verified_on": "2026-10-03"
+    }
+  ],
+  "archived_repository_files": [
+    {
+      "old_path": "docs/GSM_GOLD_AI_RESEARCH_LAB_CN.md",
+      "archive_path": "docs/history/GSM_GOLD_AI_RESEARCH_LAB_CN.md",
+      "sha256": "88007ac53dc629d0507ecdd530a12bec5c7ba57150b7153fcfdd629cc703efb4"
+    },
+    {
+      "old_path": "docs/GSM_GOLD_SINGLE_AI_RESEARCH_LAB_CN.md",
+      "archive_path": "docs/history/GSM_GOLD_SINGLE_AI_RESEARCH_LAB_CN.md",
+      "sha256": "ec508e8cf7e7ae45d7d0d2a1960613269b54cb29d764e511f80031b41466f47a"
+    },
+    {
+      "old_path": ".github/workflows/archive-quantconnect-20260920.yml",
+      "archive_path": "docs/history/archive-quantconnect-20260920.yml.txt",
+      "sha256": "8f2877554264c56f0808f97697a7ecaadcfc5d1cdfc6f980615870bcdf5057df"
+    }
+  ],
+  "mt5_original_manifest_sha256": "ca0a021f0d08dc9d8882433381f2fea104ca47ca71a8f260cdc5c7addd55e3dd",
+  "selected_mt5_versions": [
+    {
+      "candidate_id": "TB500_S1_TRIGGER_M5_SL_R2",
+      "source_sha256": "05d1efc953ae8ef24779e738e4cde7b37095bede5217576cb301c8185f85eb67",
+      "ex5_sha256": "3a4bc73c5c4d2e9350090a5566672451724856c5033e808ce472d06502da7175",
+      "evidence_run_id": "C70AC4D7",
+      "evidence_prefix": "evidence/runs/TB500_S1_TRIGGER_M5_SL_R2/S1_TRIGGER_M5_SL_R2_AUG_C70AC4D7",
+      "source_defaults_verified_in_original_receipt": true,
+      "bytes_rechecked_on": "2026-10-03",
+      "recompiled_this_turn": false
+    },
+    {
+      "candidate_id": "TB500_S1_STOCH_EXTREME_EXIT",
+      "source_sha256": "480f3a3d0c1bc59107e9c397c30a6cca7e53a50504cfff401f4e5672679ca3b1",
+      "ex5_sha256": "53b7c7501b87a0473b3fde3b259a7faed117e2417ac923bc535d46780905b034",
+      "evidence_run_id": "830659D1",
+      "evidence_prefix": "evidence/runs/TB500_S1_STOCH_EXTREME_EXIT/S1_STOCH_EXTREME_EXIT_AUG_830659D1",
+      "source_defaults_verified_in_original_receipt": true,
+      "bytes_rechecked_on": "2026-10-03",
+      "recompiled_this_turn": false
+    },
+    {
+      "candidate_id": "TB500_S2_SND_SAME_CLOSE",
+      "source_sha256": "9103c1eac2343c7db98f6f62859a23aa1a5d6bdd227dae1d347d08d7add9a191",
+      "ex5_sha256": "8330b968a00a1edc66ad3f606231fd639c8d5d6893f07af0117eae3bfe799970",
+      "evidence_run_id": "7F526D63",
+      "evidence_prefix": "evidence/runs/TB500_S2_SND_SAME_CLOSE/S2_SND_SAME_CLOSE_7F526D63",
+      "source_defaults_verified_in_original_receipt": true,
+      "bytes_rechecked_on": "2026-10-03",
+      "recompiled_this_turn": false
+    },
+    {
+      "candidate_id": "TB500_S3_H1_SLOPE_PRICE",
+      "source_sha256": "0f2901565718506bbdb3f344ceaab572bfef01e08efef8e28b12fcedff728f54",
+      "ex5_sha256": "fb9c30c97feb993ce115e6f225bc8097b7e664958ad03a0ce3d2f75aa6ee9615",
+      "evidence_run_id": "4AC16150",
+      "evidence_prefix": "evidence/runs/TB500_S3_H1_SLOPE_PRICE/S3_H1_SLOPE_PRICE_AUG_4AC16150",
+      "source_defaults_verified_in_original_receipt": true,
+      "bytes_rechecked_on": "2026-10-03",
+      "recompiled_this_turn": false
+    },
+    {
+      "candidate_id": "TB500_S4_BE125",
+      "source_sha256": "f6abe1abc8d9cfca27e6483f344aab03110b9df11b8d1b458e3fce432d63be47",
+      "ex5_sha256": "dfc67a50a6fe7cc4ec297ad4d59017409bafe4244dadcbf18d410568d474bbfc",
+      "evidence_run_id": "F02E8445",
+      "evidence_prefix": "evidence/runs/TB500_S4_BE125/S4_BE125_AUG_R2_F02E8445",
+      "source_defaults_verified_in_original_receipt": true,
+      "bytes_rechecked_on": "2026-10-03",
+      "recompiled_this_turn": false
+    },
+    {
+      "candidate_id": "TB500_S5_M5_FIRST_PROGRESS",
+      "source_sha256": "d9bcb8e386574c9b66c8895b881e1b12ba47aac88e9d154fc2ab419efe582b08",
+      "ex5_sha256": "ab9a9a530ae98351ef9e128784fe18fa020abf7989451f1b87424ef03d76071a",
+      "evidence_run_id": "3ED00A2A",
+      "evidence_prefix": "evidence/runs/TB500_S5_M5_FIRST_PROGRESS/S5_M5_FIRST_PROGRESS_3ED00A2A",
+      "source_defaults_verified_in_original_receipt": true,
+      "bytes_rechecked_on": "2026-10-03",
+      "recompiled_this_turn": false
+    },
+    {
+      "candidate_id": "TB500_S5_TRIGGER_INVALIDATION",
+      "source_sha256": "821ef33fe2a1025c602be59860495680bca7900723c297bed20b4f8475e61a3f",
+      "ex5_sha256": "76b08ce96fc53e23615a72c5bea0ccf21aacf07fa7506e4a56b1f353883a4171",
+      "evidence_run_id": "9E02F18A",
+      "evidence_prefix": "evidence/runs/TB500_S5_TRIGGER_INVALIDATION/S5_CONTROL_JUNE_9E02F18A",
+      "source_defaults_verified_in_original_receipt": true,
+      "bytes_rechecked_on": "2026-10-03",
+      "recompiled_this_turn": false
+    },
+    {
+      "candidate_id": "TB500_S6_DISTINCT_TRIGGER_BE1",
+      "source_sha256": "956d2fec9c809b8cb60b879a7868e08b3b2114e8e7b384347777617becaf4bdf",
+      "ex5_sha256": "47c2a6d51306f6465746f274a52164a76dec1fc6264386cef1734cfe631ae3d0",
+      "evidence_run_id": "426ECD64",
+      "evidence_prefix": "evidence/runs/TB500_S6_DISTINCT_TRIGGER_BE1/S6_DISTINCT_TRIGGER_BE1_AUG_426ECD64",
+      "source_defaults_verified_in_original_receipt": true,
+      "bytes_rechecked_on": "2026-10-03",
+      "recompiled_this_turn": false
+    },
+    {
+      "candidate_id": "Scalping_P1C_R2_Risk2_Fix",
+      "source_sha256": "44e695d46263c0e47d87ce36b9134fef7f1da6a53352e439e4555792343127d9",
+      "ex5_sha256": "25ddf4a2fd5647fb10f8534a02e59c92474b70a5e631f9c64a9faa7d72b86bb4",
+      "evidence_run_id": "SCALPI520260927_RISK2_FIX_JUNE500_e627ad95",
+      "evidence_prefix": "evidence/scalping_followups/JUNE500_SCALPI520260927_RISK2_FIX_JUNE500_e627ad95",
+      "source_defaults_verified_in_original_receipt": true,
+      "bytes_rechecked_on": "2026-10-03",
+      "recompiled_this_turn": false
+    }
+  ],
+  "quick_package": {
+    "file": "TradingBrain_7EA_QuickTest_20261002.zip",
+    "sha256": "13235ff20111207c77ee6a7a0ea7b8b6ff351154a71f9303d74bfd95ec0e9835",
+    "scope": "ZIP_FILE_BYTES_RECHECKED_ONLY_NOT_MEMBER_REAUDIT"
+  },
+  "full_package": {
+    "file": "TradingBrain_MT5_Iteration6_500_20261002.zip",
+    "sha256_from_original_manifest": "3ce551cb819748ade5a11cbca9084b516024a3083c61fb24ac48cb3ad3ba352a",
+    "rechecked_this_turn": false
+  },
+  "warning": "Reports contain original machine-local links. Public repository holds these reports and hashes, not the complete EA builds or tester evidence. Historical results were not rerun."
+}

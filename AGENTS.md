@@ -1,5 +1,15 @@
-# Codex 项目工作指引
+# Codex 与 Claude 项目工作指引
 
+## 项目分流与共用协作规则
+
+Codex 与 Claude 共用本文件，根目录 CLAUDE.md 仅导入 AGENTS.md；不要维护内容不同的两套规则。任务可由任一 AI 单独处理，也可一方实现、一方复核。用户授权范围及项目证据优先于旧框架中的角色描述。
+
+- 交易头脑 V1.2 / 500 USD 项目：先读 `开发交易头脑EA/交易头脑v1.2/README.md`、`docs/PLAN_CN.md`、`research/CURRENT.json`（后两者相对此项目目录），再读候选与原始证据。本次 2026-10-03 路线调整选 FxPro MT5/MQL5 为主线；旧 C# LEAN 专项已有 P1/P2 工程结果，作为独立历史路线保留。
+- GSM 三 SOP 旧版升级：继续使用根目录中英文 FINAL_CHAMPION_ITERATION_SYSTEM；其资金、风险、101笔和Recovery等验收不能自动套给 V1.2。
+- 当前修改只是计划和骨架；没有启动新开发、回测、部署或常驻 Agent。后续按实际任务授权执行，不因读到计划就自行启动整套研究。
+- 修改与测试由明确责任人持有；并行代码用分支/worktree，固定 MT5 编译和测试串行，不能新建终端数据目录绕开占用。相同候选保留同一份交接记录；分歧以diff和原证据解决。
+
+两份旧单/双 AI 实验室草案已移到 `docs/history/`，其中“当前已有正式 Champion”等假设不是现状。参考源码、失败记录、原交付与许可证继续保留。
 ## 读取顺序
 
 1. 读取 `research-memory/README_CN.md` 和 `research-memory/STATE_CN.md`，确认当前任务所属项目与最新证据。

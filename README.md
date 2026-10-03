@@ -1,19 +1,14 @@
-# GSM 黄金 EA 研发记忆与图书馆
+# GSM 黄金 EA
 
-这里保存黄金 EA 的长期研究资料、历史交付、SOP 入口和分支研究记录。Codex 按用户授权自主整理和维护。
+一个仓库管理研究计划、协作和证据。交易头脑 V1.2 当前主线是 **FxPro MT5 / MQL5**，可选择 Codex、Claude Code，或两者合作。
 
-| 从这里开始 | 内容 |
+| 入口 | 用途 |
 | --- | --- |
-| [资料导航](research-memory/README_CN.md) | 全文件、分支、研究和交付入口。 |
-| [当前状态](research-memory/STATE_CN.md) | 历史 V4.00 身份与后续研究状态。 |
-| [当前研发计划（中文）](FINAL_CHAMPION_ITERATION_SYSTEM_CN.md) · [English](FINAL_CHAMPION_ITERATION_SYSTEM.md) | 2026-09-12 替换旧计划并加入SOP归属及§13动态风险与市场信息；2026-09-13补充§13.9的13项指标自主搭配与反复验证、§13.10的百分比综合评分。当前为已保存研究设计，尚未实现或回测新增模块。 |
-| [研发头脑 v1.1](docs/GSM_EA_RESEARCH_BRAIN_CN.md) | 开放学习、代码、验证、GitHub 自主管理。 |
-| [Codex 读取规则](AGENTS.md) | 每次进入项目时的工作顺序与授权。 |
-| [GSM SOP](gsm-sop/README.md) | 已确认的交易规则来源。 |
-| [外部知识库](GITHUB_RESEARCH_LIBRARY_INDEX.md) | 外部参考方法及研究来源。 |
-| [QuantConnect Python／C# 原始源码与学习资料](research-library/QuantConnect-LEAN/README_CN.md) | 2026-09-20 四份源码快照、7,340 文件校验、代码阅读与组织仓库索引。 |
-| [开发交易头脑EA（交易头脑v1.2）学习入口](开发交易头脑EA/交易头脑v1.2/QUANTCONNECT_LEARNING_CN.md) | 六策略项目的 QuantConnect 知识接续；原 EA 工作区未修改，不与旧三 SOP 设置混用。 |
+| [开发交易头脑 V1.2 黄金 EA](开发交易头脑EA/交易头脑v1.2/README.md) | 500 USD 起步计划、现有版本、下一步与协作方式 |
+| [指标库](https://github.com/chanteck123-ux/gsm-mt5-indicators) | 复用现有指标，按接口和时间语义接入 |
+| [旧版 GSM 三 SOP 项目](FINAL_CHAMPION_ITERATION_SYSTEM_CN.md) · [English](FINAL_CHAMPION_ITERATION_SYSTEM.md) | 独立项目的当前计划，不把其资金和验收数字自动套给 V1.2 |
+| [历史与参考资料](research-memory/README_CN.md) | SOP、旧交付、失败记录、LEAN 学习资料和恢复入口 |
 
-当前研发计划统一使用上方 main 中英文入口。旧计划、Python 分析器、候选代码及失败实验作为历史资料保存在研究分支，详见 [分支目录](research-memory/BRANCH_INDEX_CN.md)。分支存档或报告名称不代表已经通过当前策略验收。
+当前完成的是计划和仓库骨架整理。已有 MT5 开发回测及 C# LEAN 工程回放分别留证；500 USD 连续 12 个月月均净利 1,000 USD、独立样本外、组合及提款路径均尚未证实。没有因整理仓库产生新 Champion 或实盘许可。
 
-交易头脑 v1.2 是单独的六策略研究上下文：本页新增的是知识导航，不把旧 GSM 三 SOP 总计划自动变成它的执行配置。QuantConnect 本轮完成与未完成事项见 [入库记录](research-memory/QUANTCONNECT_IMPORT_20260920_CN.md)。
+协作只维护一份 [AGENTS.md](AGENTS.md)；[CLAUDE.md](CLAUDE.md) 导入同一份规则。当前 EA 源码和完整交付仍在原本地工作区，本仓库此入口提供计划、报告和哈希索引，克隆它不等于已安装可运行 EA。
