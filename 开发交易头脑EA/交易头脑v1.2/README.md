@@ -1,11 +1,11 @@
 # 开发交易头脑 V1.2 黄金 EA
 
-500 USD 起步，先验证成本后盈利、账户持续运作与提款可行性。**MQL5 EA 独立执行交易和本地风控；Codex / Claude 负责研究、代码和证据复核。**
+500 USD 起步，先验证成本后盈利、账户持续运作与提款可行性。**MQL5 EA 独立执行交易和本地风控；Codex 与 Claude 共同讨论和复审，Claude 负责代码，Codex 负责测试验证与证据整理。**
 
 | 现在要做什么 | 打开这里 |
 | --- | --- |
 | 看完整新计划 | [开发计划](docs/PLAN_CN.md) |
-| 选择单 AI 或与 Claude 合作 | [协作与交接](docs/COLLABORATION_CN.md) |
+| 查看当前 Codex／Claude 分工 | [协作与交接](docs/COLLABORATION_CN.md) |
 | 看目前做到哪一步 | [当前状态](research/CURRENT.json) · [证据与哈希](research/EVIDENCE_INDEX.json) |
 | 登记下一轮候选 | [统一候选模板](research/candidate.template.json) |
 | 看原计划及本次清理 | [路线调整与恢复](docs/CHANGELOG_CN.md) |

@@ -1,16 +1,20 @@
 # Codex 与 Claude 协作
 
-可以选择 Codex 单独、Claude Code 单独，或两者合作。切换 AI 不切换交易引擎、验收标准或当前有证据的版本；本次只准备协作文件，没有连接 Claude、购买 API 或启动后台服务。
+当前用户指定 Codex 与 Claude 共同讨论方案、双方复审；代码由 Claude 负责，Codex 负责协调、编译／测试与证据整理。完整分工以根目录 AGENTS.md 为准，不默认互换代码职责。切换工具不切换交易引擎、验收标准或当前有证据的版本。
+
+2026-10-03 补充核实：已通过 Claude 桌面版完成消息收发和协作流程讨论；尚未验证 Claude Code CLI、后台自动协作或跨聊天记忆持久化。未购买 API、启动后台服务或开展新 EA 研发。
 
 ## 共用规则和分工
 
 仓库根目录的 [AGENTS.md](../../../AGENTS.md) 是共用规则；[CLAUDE.md](../../../CLAUDE.md) 只用 `@AGENTS.md` 导入。Claude Code 的导入方式见 [官方文档](https://code.claude.com/docs/en/memory)；启动后用 `/context` 核对实际加载情况，不能只凭文件存在就说已连接成功。
 
-| 模式 | 实现 | 复核 |
+| 环节 | 当前负责人 | 交接与核验 |
 | --- | --- | --- |
-| Codex 单独 | Codex | 单独一次按清单重读 diff 与原始证据；不冒充独立模型审查 |
-| Claude 单独 | Claude Code | 同样重读 diff 与原始证据，遵守相同编译和测试要求 |
-| 合作 | 当轮明确指定一方 | 另一方核对逻辑、SOP、数据时点、风险与测试；下轮可互换 |
+| 方案 | Codex 与 Claude | 共同讨论和完善，重要方案先独立分析再交叉检查 |
+| 代码 | Claude | 编写、修改、自查，列明未验证假设和影响范围 |
+| 复审 | Codex 与 Claude | 双方检查方案、需求、接口、受影响完整逻辑和原始证据 |
+| 编译／测试 | Codex | 在已有环境与授权内执行，保留版本、哈希、原始日志与报告，双方核对结果 |
+| 修正与复验 | Claude 修正；双方复审；Codex 验证 | 每次修改重做受影响验证，不把意见一致当作测试通过 |
 
 同一文件同一时间只交给一位实现者。并行候选用独立分支或 worktree；合并前核对基线提交与冲突。两位 AI 意见一致不等于策略已通过验证；不同意见按证据解决，不用投票或高置信度替代回测。
 
@@ -20,9 +24,11 @@
 
 可直接给另一位 AI 的任务文字：
 
-> 请先读根目录 AGENTS.md，再读本项目 README、docs/PLAN_CN.md、research/CURRENT.json 和本轮候选记录。仅执行候选记录列明的授权工作；先核对本机源码与证据哈希，检查工作树是否有他人修改。实现者修改并验证；复核者检查具体差异与原始结果。保护用户 Scalping SOP，保持 MQL5 独立交易和风控，不把历史报告当本轮新成绩。结束时更新同一候选记录，写清完成项、未完成项及恢复点。
+> 请先读取相对仓库根目录的 AGENTS.md、docs/GSM_EA_RESEARCH_BRAIN_CN.md、research-memory/README_CN.md 和 research-memory/STATE_CN.md；再以 开发交易头脑EA/交易头脑v1.2/ 为项目根目录，读取其 README.md、docs/PLAN_CN.md、research/CURRENT.json 和本轮候选记录。按用户指定分工共同讨论方案，代码由 Claude 写改，双方复审，Codex 编译／测试并提供原始证据。先核对源码与证据哈希，检查工作树是否有他人修改；只推进已授权任务。保护用户 Scalping SOP，保持 MQL5 独立交易和风控，不把历史报告当本轮新成绩。结束时更新同一候选记录，写清完成项、未完成项及恢复点。
 
-GitHub 记录不自动共享聊天、账户权限、API key 或本地路径。Claude 云端若无法访问 Windows 编译器和固定 MT5，只能如实提交代码/审查；编译与原生测试由拥有该环境的一方完成。
+知识大脑位于本仓库 [docs/GSM_EA_RESEARCH_BRAIN_CN.md](../../../docs/GSM_EA_RESEARCH_BRAIN_CN.md)，长期资料入口为 [research-memory/README_CN.md](../../../research-memory/README_CN.md) 和 [STATE_CN.md](../../../research-memory/STATE_CN.md)。用户指标库为 [gsm-mt5-indicators](https://github.com/chanteck123-ux/gsm-mt5-indicators)，优先读取其 README.md、indicator_manifest.json 及对应接口／验证说明。要求 Claude 记住两个仓库的用途和这些入口，每次实际任务仍核对最新内容；无法访问时报告具体缺口，不声称已读取。
+
+GitHub 记录不自动共享聊天、账户权限、API key 或本地路径，也不自动创建 Claude 产品的跨聊天记忆。Claude 云端若无法访问 Windows 编译器和固定 MT5，只能如实提交代码/审查；编译与原生测试由 Codex 在可用且获授权的环境执行；环境不可用时记录未执行项，不冒充验证完成。
 
 ## 固定终端只允许一个测试任务
 
@@ -38,6 +44,7 @@ MetaEditor 编译、MT5 Tester 和安装由当轮单一执行者串行操作。�
 | Data | 研究上下文与报告核对 | 本次用于证据和定义梳理，无新绩效计算 |
 | Remote Desktop Commander | 未来操作 Windows 研究环境 | 未发现已连接设备；本次使用现有本地文件工具 |
 | Railway | 未来可选监控或报告展示 | 未发现项目；未部署 |
-| Claude Code | 可选实现或复核 | 仅准备共享规则，未验证本机安装或账号连接 |
+| Claude 桌面版 | 共同讨论与复审，承担代码任务 | 已验证消息收发与流程讨论；本轮未下发代码开发任务 |
+| Claude Code | 可用时按相同分工承担代码与复审 | CLI 安装／账号连接未验证；CLAUDE.md 导入不等于桌面版自动加载 |
 
 这些状态只描述本次检查，后续使用前重新核对。MQL5 的已有仓位保护、对账和风控不能等待任何 AI、MCP、远程桌面或云服务。

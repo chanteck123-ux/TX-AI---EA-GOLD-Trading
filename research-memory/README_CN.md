@@ -8,7 +8,9 @@ GSM 三 SOP 旧版升级以 main 的中英文文件为当前入口。交易头�
 
 | 入口 | 内容 |
 | --- | --- |
-| [研发头脑 v1.1](../docs/GSM_EA_RESEARCH_BRAIN_CN.md) | 学习、编码、验证、GitHub 自主管理规则。 |
+| [知识大脑](../docs/GSM_EA_RESEARCH_BRAIN_CN.md) | 学习、验证和 GitHub 长期记忆；每次读取最新版本。 |
+| [Codex／Claude 当前分工](../AGENTS.md) | 2026-10-03 用户指定：双方讨论、Claude 写改代码、双方复审、Codex 测试验证；CLAUDE.md 导入同一规则。 |
+| [用户指标库](https://github.com/chanteck123-ux/gsm-mt5-indicators) | 先读取 README、indicator_manifest.json、接口和验证说明，再复用指标。 |
 | [当前状态](STATE_CN.md) | 当前事实、证据范围和下一步。 |
 | [全部文件](FILE_INDEX_CN.md) | 260 个文件路径及各分支固定位置。 |
 | [分支 / PR / Issue](BRANCH_INDEX_CN.md) | 8 个分支、讨论与交付状态。 |
