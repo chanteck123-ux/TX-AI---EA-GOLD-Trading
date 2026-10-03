@@ -10,7 +10,11 @@
     "scope": "NEW_PROJECT_RESEARCH_CONFIGURATIONS",
     "actual_account_leverage_verified": false,
     "gold_margin_rules_verified": false,
-    "platforms_to_verify": ["LEAN_MARGIN_MODEL", "MT5_TEST_ACCOUNT", "BROKER_ACCOUNT_AND_GOLD_MARGIN_RULES"],
+    "platforms_to_verify": [
+      "LEAN_MARGIN_MODEL",
+      "MT5_TEST_ACCOUNT",
+      "BROKER_ACCOUNT_AND_GOLD_MARGIN_RULES"
+    ],
     "unavailable_policy": "RECORD_CONSTRAINT_NO_SILENT_SUBSTITUTION",
     "historical_1_to_100_evidence": "PRESERVED_NOT_RELABELED",
     "automatic_lot_or_risk_increase": false,
@@ -30,12 +34,13 @@
     "claude_connection_scope": "DESKTOP_CHAT_MESSAGES_DESIGN_AND_RESULT_SUMMARY_ONLY",
     "claude_cli_or_background_verified": false,
     "mode_selection_required_before_each_new_or_resumed_task": true,
-    "mode_selection_for_next_task": null,
+    "mode_selection_for_next_task": "CODEX_ONLY",
     "research_engine": "QUANTCONNECT_LEAN_CSHARP",
     "execution_engine": "FXPRO_MT5_MQL5",
     "route_status": "ADOPTED_NEW_INTEGRATION_NOT_IMPLEMENTED_OR_TESTED",
     "mt5_independent_of_lean": true,
-    "live_signal_bridge_required": false
+    "live_signal_bridge_required": false,
+    "selected_mode_scope": "USER_CONFIRMED_CURRENT_RESEARCH_CONTINUATION_20261003"
   },
   "this_change": {
     "scope": "LEAN_RESEARCH_MT5_EXECUTION_ARCHITECTURE_AND_TEMPLATE_ONLY",
@@ -481,5 +486,36 @@
     "new_strategy_port_verified": false,
     "new_parity_verified": false,
     "new_live_bridge_verified": false
+  },
+  "active_research": {
+    "batch_id": "MT5_ITERATION8_REQUEST_FINALITY",
+    "status": "IMPLEMENTATION_AND_REVIEW_IN_PROGRESS_NOT_TESTED",
+    "started_utc": "2026-10-03T16:04:05.016Z",
+    "directory_date": "20261003",
+    "current_mode": "CODEX_ONLY",
+    "user_confirmations": [
+      "现在我只要codex执行",
+      "按照计划"
+    ],
+    "plan_commit": "06ee8c8373051a0c4101c81eaa84e1a4a59f31cc",
+    "scope": "Native S5 execution/audit defect; current PLAN 2.1 permits native repair first",
+    "candidate_id": "TB500_S5_REQUEST_FINALITY_V1",
+    "formal_tests_planned": 4,
+    "extra_fault_reproduction_planned": 1,
+    "reserve": 2,
+    "native_attempts": 0,
+    "leverage": 1000,
+    "main_delays_ms": [
+      0,
+      250
+    ],
+    "extra_august_delay_ms": 1000,
+    "S5_risk_percent": 1,
+    "strategy_input_defaults_changed": false,
+    "score": null,
+    "score_status": "SCORE_TARGETS_UNSET",
+    "claude_contact_or_upload_this_task": false,
+    "lean_strategy_port_started": false,
+    "live_deployment": false
   }
 }
