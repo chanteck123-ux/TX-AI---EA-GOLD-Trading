@@ -4,6 +4,18 @@
   "timezone": "Asia/Kuala_Lumpur",
   "project": "TradingBrain V1.2 GOLD EA",
   "plan": "../docs/PLAN_CN.md",
+  "planned_account_leverage": {
+    "requested_ratio": "1:1000",
+    "requested_denominator": 1000,
+    "scope": "NEW_PROJECT_RESEARCH_CONFIGURATIONS",
+    "actual_account_leverage_verified": false,
+    "gold_margin_rules_verified": false,
+    "platforms_to_verify": ["LEAN_MARGIN_MODEL", "MT5_TEST_ACCOUNT", "BROKER_ACCOUNT_AND_GOLD_MARGIN_RULES"],
+    "unavailable_policy": "RECORD_CONSTRAINT_NO_SILENT_SUBSTITUTION",
+    "historical_1_to_100_evidence": "PRESERVED_NOT_RELABELED",
+    "automatic_lot_or_risk_increase": false,
+    "status": "DOCUMENTED_NOT_APPLIED_OR_TESTED"
+  },
   "architecture": {
     "active_route": "LEAN_CSHARP_RESEARCH_MT5_MQL5_EXECUTION",
     "research_modes_available_in_plan": [

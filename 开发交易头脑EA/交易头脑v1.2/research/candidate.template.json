@@ -29,6 +29,8 @@
   },
   "conditions": {
     "initial_capital_usd": 500,
+    "requested_account_leverage_ratio": 1000,
+    "account_margin_evidence_policy": "Record actual account/model leverage, GOLD margin rules and Stop Out separately in each platform run; unverified values remain null with reason. No automatic lot or risk increase.",
     "account_spec_snapshot": null,
     "symbol": null,
     "timeframe": null,
@@ -103,6 +105,7 @@
     "parameter_hash",
     "data_manifest",
     "time_mapping",
+    "account_leverage_and_symbol_margin_evidence",
     "audit_logs",
     "verification_receipt"
   ],
