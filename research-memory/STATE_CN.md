@@ -1,6 +1,6 @@
 # 当前研究状态与历史身份
 
-协作分工保存（2026-10-03）：用户指定双方讨论方案、Claude 写改代码、双方复审、Codex 组织和执行测试验证，已同步到 [共用规则](../AGENTS.md)、[知识大脑](../docs/GSM_EA_RESEARCH_BRAIN_CN.md) 与 V1.2 协作入口。Claude 桌面版已完成消息收发和一轮流程讨论；这是桌面交互证据，不等于 Claude Code CLI、Remote Desktop Commander、后台自动协作或 Claude 跨聊天记忆已配置。当前保存状态为 RULES_SAVED；本轮没有修改交易源码、编译或回测，也未改变部署／Champion 身份。
+协作分工保存（2026-10-03）：用户指定双方讨论方案、Claude 写改代码、双方复审、Codex 组织和执行测试验证，已同步到 [共用规则](../AGENTS.md)、[知识大脑](../docs/GSM_EA_RESEARCH_BRAIN_CN.md) 与 V1.2 协作入口。Claude 桌面版已完成消息收发与流程讨论，随后实际显示 Added 2 memories，更新 gsm-ea-gold-trading.md 与 preferences.md，Claude 确认保存两仓库入口及分工到持久记忆。其回复同时说明尚未实际读取或验证仓库访问。此为桌面交互和记忆更新证据，不等于 Claude Code CLI、Remote Desktop Commander 或后台自动协作已配置。当前保存状态为 RULES_SAVED；本轮没有修改交易源码、编译或回测，也未改变部署／Champion 身份。
 
 交易头脑 V1.2 路线整理（2026-10-03）：[当前入口](../开发交易头脑EA/交易头脑v1.2/README.md)新增500 USD MT5计划、可选Claude协作与证据索引，旧LEAN计划和已完成的P1/P2 C#工程回放另档保留。此轮仅文档与骨架，未重新编译、回测、部署或评选Champion。下方旧版升级的历史身份独立保留；不与V1.2混用。
 
