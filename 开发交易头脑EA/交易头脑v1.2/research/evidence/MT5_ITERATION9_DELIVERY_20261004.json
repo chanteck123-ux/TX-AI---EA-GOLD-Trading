@@ -1,0 +1,38 @@
+{
+  "schema": "I9_ZIP_DELIVERY_RECEIPT_V1",
+  "status": "ZIP_ALL_MEMBERS_HASH_VERIFIED_NO_CHART_DEPLOYMENT",
+  "completed_utc": "2026-10-04T05:52:27.3354819Z",
+  "package": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\outputs\\TradingBrain_I9_Seven_Strategies_20261004",
+  "zip": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\outputs\\TradingBrain_I9_Seven_Strategies_20261004.zip",
+  "zip_sha256": "deb2166b0dc77c2e1fe9ea6e5fa06f114b564a51da2deb0a54b11ffb94d092db",
+  "zip_bytes": 24106341,
+  "verified_zip_members": 800,
+  "manifest_sha256": "47455ab5241288ff339d5cd3d0520a6d8fdc6ae35fc59bbc0975be2830f89ffd",
+  "ea_pairs": 11,
+  "new_verified_native_runs": 18,
+  "reused_native_runs": 2,
+  "indicator_pairs": 6,
+  "chart_deployed": false,
+  "live_ready": false,
+  "recovery_files_preserved": true,
+  "validation": {
+    "native_source_defaults_accounting": true,
+    "csharp_compiled": true,
+    "csharp_pure_assertions": 67,
+    "lean_replay": "BLOCKED_WINDOWS_APPLICATION_CONTROL_0x800711C7",
+    "full_risk_fill_exit_migration": false,
+    "cross_engine_acceptance": false,
+    "independent_oos": false,
+    "new_double_cost_stress": false,
+    "portfolio": false,
+    "withdrawals": false,
+    "demo_forward": false,
+    "champion": false,
+    "chart_deployed": false,
+    "live_ready": false
+  },
+  "generator": {
+    "sha256": "bcfcee3c5318c282a1dde93e4753a58f2446956ed146b14307efc9ebd8051998",
+    "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration9_20261004\\deliver_i9.ps1"
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "schema": "I9_ROOT_FINAL_REVIEW_V1",
+  "created_utc": "2026-10-04T05:51:55.161Z",
+  "status": "BOUND_SOURCE_DEFAULTS_COMPILE_NATIVE_ACCOUNTING_AND_DELIVERY_INPUT_REVIEWED_NO_PROMOTION",
+  "mode": "CODEX_ONLY",
+  "results": {
+    "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration9_20261004\\FINAL_RESULTS.json",
+    "sha256": "934cd35c246588dd5bc1e0fc99373e484a3a2a2ac8e79ccb4e0742f1441e8487"
+  },
+  "package_input": {
+    "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration9_20261004\\PACKAGE_INPUT.json",
+    "sha256": "8f9fa353106b22ccd2b3bf38ea9a30b6e9569f68ec7d0f46d594f814d54ae1de"
+  },
+  "reports": {
+    "cn": {
+      "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration9_20261004\\REPORT_CN.md",
+      "sha256": "16fd636d38f29ffa8d14dd28c7d612d3deb713785fc7be8f58953bbebdd916ce"
+    },
+    "en": {
+      "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration9_20261004\\REPORT_EN.md",
+      "sha256": "bf369c0d56cb68608292cd6320ad1c657cab831648eae18f7dfaab73c0ad4d34"
+    }
+  },
+  "counts": {
+    "new_native_verified": 18,
+    "reused_same_condition_S5": 2,
+    "total_reported": 20
+  },
+  "ea_pairs": {
+    "current": 10,
+    "historical_scalping_recovery": 1,
+    "total": 11
+  },
+  "new_mql_candidates": [
+    "TB500_S1_TRIGGER_M5_SL_RISK2_I9",
+    "TB500_S1_DYNAMIC_RISK_I9",
+    "TB500_S2_NEXT_M5_PROGRESS",
+    "TB500_Scalping_Handbook_Daily6_V1"
+  ],
+  "scoring": {
+    "weights_percent": {
+      "net_usd": 35,
+      "equity_dd": 25,
+      "pf": 20,
+      "complete_trades": 10,
+      "cost_per_round_trip_lot": 10
+    },
+    "anchors": null,
+    "components": null,
+    "total": null,
+    "status": "SCORE_TARGETS_UNSET"
+  },
+  "validation": {
+    "native_source_defaults_accounting": true,
+    "csharp_compiled": true,
+    "csharp_pure_assertions": 67,
+    "lean_replay": "BLOCKED_WINDOWS_APPLICATION_CONTROL_0x800711C7",
+    "full_risk_fill_exit_migration": false,
+    "cross_engine_acceptance": false,
+    "independent_oos": false,
+    "new_double_cost_stress": false,
+    "portfolio": false,
+    "withdrawals": false,
+    "demo_forward": false,
+    "champion": false,
+    "chart_deployed": false,
+    "live_ready": false
+  },
+  "retention": {
+    "S1": "Keep1% reference; fixed2% persistent-stop and dynamic trade-off research separately archived. No claim of best future risk.",
+    "S2": "Retained same-close diagnostic; next-M5 progress did not improve this comparison.",
+    "S3": "Retain research reference; delayed actual-fill overrun explains reduced net.",
+    "S4": "Retain2% research reference; two daily locks resumed; no emergency observed.",
+    "S5": "Retain I8 request-finality repaired1% source; exact tests reused.",
+    "S6": "Retain1% research reference; small sample remains.",
+    "Scalping": "Current handbook research version and old-rule recovery both preserved; native6/6 threshold/restart faults still untested."
+  },
+  "scope_limits": [
+    "Single already-used month for current comparison; no average-monthly profitability proof.",
+    "Independent account P/L cannot be summed as a USD500 portfolio.",
+    "Uncalibrated broker cost, margin and stop-out constrain financial interpretation.",
+    "Dynamic recovery health was sampled on received quotes; no restart/IO fault injection.",
+    "LEAN replay is OS-blocked; pure semantic assertions are not execution parity."
+  ],
+  "packaging_status": "INPUT_REVIEWED_ACTUAL_ZIP_VERIFICATION_IN_SEPARATE_DELIVERY_RECEIPT",
+  "generator": {
+    "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration9_20261004\\final_review.mjs",
+    "sha256": "46f65db7c913ec5580d6a484f4f7a1031f03e38d9a17eaa1e623ebeeef12ceca"
+  }
+}

@@ -26,6 +26,10 @@
 
 后续实际开发沿用原 `v1-2-ea-mt5` 工作区及固定 MT5 终端。本次没有把本地全部 EA 源码、EX5 或大包重新公开到 GitHub，没有创建空壳交易程序。跨电脑协作先取得已授权的匹配交付包并核对哈希；仅拿到这份骨架时，可审计划与报告，不声称已能编译 EA。
 
-2026-10-04 最新实际测试：第八轮S5请求终态修复已完成，编译0错误/0警告，5场原生测试全部严格核账通过。交易逻辑与1%风险未改；四场为六月/八月0、250ms，八月1000ms另列故障复现。当前测试杠杆1:1000；保证金率/Stop Out及真实成本仍未校准，不能据此证明500美元实盘承受能力。
+2026-10-04 最新实际测试：第九轮七策略研究完成18场新MT5原生测试，另复用S5完全同版同条件的2场；八月、独立500美元账户、GOLD/M5、模型4、名义杠杆1:1000、0/250ms。新增S1风险对照／动态降风险、S2推进确认和当前手册Scalping候选；失败及持续停机如实保留，未晋级Champion。
+
+七套C#信号层已编译、67项边界断言通过；LEAN实际运行遭Windows应用控制拦截，跨引擎回放和风险／成交／退出迁移尚未通过。详见[第九轮中文成绩](research/evidence/MT5_ITERATION9_SEVEN_20261004_CN.md)、[English results](research/evidence/MT5_ITERATION9_SEVEN_20261004_EN.md)、[复审](research/evidence/MT5_ITERATION9_REVIEW_20261004.json)和[交付身份](research/evidence/MT5_ITERATION9_DELIVERY_20261004.json)。源码默认值、匹配EX5和完整回测包保留在本地；本仓只同步研究报告与哈希，不公开EA源码、EX5和原始成交。
+
+历史第八轮测试：第八轮S5请求终态修复已完成，编译0错误/0警告，5场原生测试全部严格核账通过。交易逻辑与1%风险未改；四场为六月/八月0、250ms，八月1000ms另列故障复现。当前测试杠杆1:1000；保证金率/Stop Out及真实成本仍未校准，不能据此证明500美元实盘承受能力。
 
 查看[第八轮成绩](research/evidence/MT5_ITERATION8_S5_RESULTS_20261004_CN.txt)、[复审](research/evidence/MT5_ITERATION8_FINAL_REVIEW_20261004.json)和[交付身份](research/evidence/MT5_ITERATION8_DELIVERY_RECEIPT_20261004.json)。旧[第七轮失败与延迟证据](research/evidence/MT5_ITERATION7_DELAY_20261003_CN.md)和[第六轮恢复依据](research/evidence/MT5_ITERATION6_20261002_CN.md)保留。新旧MQ5/EX5和完整包在本地工作区；本次不公开重传EA源码、二进制或原始成交。均为已用开发数据，尚无独立验证、连续组合、提款或实盘盈利证明。

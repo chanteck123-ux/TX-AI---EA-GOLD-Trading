@@ -1,0 +1,66 @@
+{
+  "schema": "I9_CURRENT_CSHARP_BUILD_FIXTURE_BINDING_V1",
+  "created_utc": "2026-10-04T05:05:33.094Z",
+  "status": "COMPILED_AND_67_SEMANTIC_FIXTURES_PASSED_NO_LEAN_EXECUTION",
+  "sources": [
+    {
+      "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration9_20261004\\algorithm\\C7Signals.Core.cs",
+      "sha256": "261b96eb242267aa7471b89c9d73b3f8076b816b020fbecd41dc8239f55dd595"
+    },
+    {
+      "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration9_20261004\\algorithm\\Strategy123.cs",
+      "sha256": "1be13bfe8ceda032430bdd3cb087f5b474e6ceaec9efba650767aabd246e3bd9"
+    },
+    {
+      "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration9_20261004\\algorithm\\Strategy456.cs",
+      "sha256": "cffb2b726971c6d5088c1e0285191b8e01a4f4b77ae5e3c6d79a7e881f12e2fb"
+    },
+    {
+      "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration9_20261004\\algorithm\\StrategyScalping.cs",
+      "sha256": "1576cd1e3993201541fb941943ba287a0fbfaa4afbd306b071ecbab092fcde09"
+    }
+  ],
+  "driver": {
+    "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration9_20261004\\algorithm\\SevenSignalsAlgorithm.cs",
+    "sha256": "aa22efd12f77a80bde8d887b80beea5ab98051cc24bf88b37a151855767885ff"
+  },
+  "fixture_program": {
+    "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration9_20261004\\fixtures\\Program.cs",
+    "sha256": "29d103153d26344b123b380d9ddeb04f42113512190ed37d5d75d482767df9b7"
+  },
+  "fixture_project": {
+    "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration9_20261004\\fixtures\\Fixtures.csproj",
+    "sha256": "51e86d73b68deb004a7803711a293bb1b6175af7caa0ba10503461323b57d719"
+  },
+  "fixture_assembly": {
+    "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration9_20261004\\fixtures\\bin\\Release\\net10.0\\Fixtures.dll",
+    "sha256": "9f02afa39a3dc3f9617a3eedd2ba77d4da0530d3628acdec59bb2a1abc6a1ac4"
+  },
+  "fixture_log": {
+    "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration9_20261004\\fixtures\\compile_test_04.log",
+    "sha256": "4610a5398ef3e6bfa99fe5c0a9ad1f6cb9c64f65b81f2bb7995c7b1b0f718ec5"
+  },
+  "suite_counts": {
+    "legacy": 27,
+    "S123": 6,
+    "S456": 10,
+    "Scalping": 24
+  },
+  "build": {
+    "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration9_20261004\\lean_runs\\I9_2026-08-03_78e40304f8e7487c8690eff6e3f32c50\\RUN_RECEIPT.json",
+    "sha256": "1ca4b78409750c650a9366c9638777a40802e1dd29aa2bdba98931fc81e3f429"
+  },
+  "compile_log": {
+    "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration9_20261004\\lean_runs\\I9_2026-08-03_78e40304f8e7487c8690eff6e3f32c50\\compile.log",
+    "sha256": "34e14ec5b1b383b8579204a6f8823114f5be4ba5f8470d875985490fc8a50887"
+  },
+  "algorithm_dll": {
+    "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration9_20261004\\lean_runs\\I9_2026-08-03_78e40304f8e7487c8690eff6e3f32c50\\compiled\\bin\\Release\\net10.0\\TradingBrain.I9.dll",
+    "sha256": "b6d53745fdedc53e8b9bc17ac09dbd3aa7d9d39f7ceadb187f4fe4a7cb935ff8"
+  },
+  "limitations": [
+    "Pure boundary tests are not historical P/L, injected restart or partial-fill evidence.",
+    "LEAN run was blocked by Windows application control; no successful full-engine replay or cross-engine acceptance.",
+    "No order/risk/exit model in signal driver."
+  ]
+}

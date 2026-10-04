@@ -1,0 +1,21 @@
+{
+  "schema": "I9_SCORE_POLICY_V1",
+  "weights": {
+    "net_profit_usd": 35,
+    "equity_drawdown": 25,
+    "profit_factor": 20,
+    "complete_trades": 10,
+    "cost_per_round_trip_standard_lot": 10
+  },
+  "P_target": null,
+  "D_good": null,
+  "D_bad": null,
+  "F_target": null,
+  "N_target": null,
+  "C_good": null,
+  "C_bad": null,
+  "status": "SCORE_TARGETS_UNSET",
+  "components": null,
+  "total": null,
+  "notes": "No formal anchors registered. USD1000 monthly challenge and external PF examples are not scoring targets. Explicit commission/swap/fee per matched opening lot is reported; uncalibrated spread/slippage/cost completeness prevents silently using it as total friction. No reweighting or automatic promotion."
+}

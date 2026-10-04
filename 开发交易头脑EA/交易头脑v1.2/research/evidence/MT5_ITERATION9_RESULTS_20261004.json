@@ -1,0 +1,1476 @@
+{
+  "schema": "I9_FINAL_NATIVE_RESULTS_V1",
+  "created_utc": "2026-10-04T05:48:42.724Z",
+  "status": "REGISTERED_NATIVE_BATCH_COMPLETE_NO_PROMOTION",
+  "protocol": {
+    "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration9_20261004\\BATCH_PROTOCOL.json",
+    "sha256": "ed4ae10c2bca0465dad07e17356ed04653acee5557f55f4797b2cc73535a305b"
+  },
+  "counts": {
+    "new_native_verified": 18,
+    "reused_same_condition_S5": 2,
+    "total_reported": 20
+  },
+  "conditions": {
+    "capital_per_independent_account_usd": 500,
+    "window": "2026.08.01 <= server time < 2026.09.01",
+    "market": "GOLD",
+    "chart": "M5",
+    "mode": 4,
+    "nominal_tester_leverage": 1000,
+    "delays_ms": [
+      0,
+      250
+    ],
+    "data_role": "ALREADY_USED_DEVELOPMENT",
+    "cost_model": "UNCALIBRATED",
+    "portfolio": "INDEPENDENT_ACCOUNTS_NOT_ADDITIVE"
+  },
+  "rows": [
+    {
+      "arm": "S1_BASE_AUG_D0",
+      "sid": "S1",
+      "candidate_id": "TB500_S1_TRIGGER_M5_SL_R2",
+      "origin": "NEW_I9",
+      "risk_percent": 1,
+      "risk_policy": "1% fixed ceiling",
+      "run_id": "C9BA9437",
+      "conditions": {
+        "name": "I9_S1_BASE_AUG_D0",
+        "from_date": "2026.08.01",
+        "to_date": "2026.09.01",
+        "model": 4,
+        "deposit": 500,
+        "currency": "USD",
+        "symbol": "GOLD",
+        "leverage": 1000,
+        "execution_delay_ms": 0,
+        "period": "M5"
+      },
+      "account": {
+        "net_usd": 32.3,
+        "equity_dd_usd": 32.08,
+        "max_relative_equity_dd_pct": 5.6841135405,
+        "native_pf": 1.4295784014,
+        "complete_position_net_pf": 1.4343733189887036,
+        "complete_positions": 45,
+        "native_exit_trades": 45,
+        "win_rate_pct": 42.22222222222222,
+        "cost_usd": 4.79,
+        "cost_breakdown_signed": {
+          "profit": 37.09,
+          "commission": -4.1,
+          "swap": -0.69,
+          "fee": 0
+        },
+        "matched_round_trip_standard_lots": 0.5300000000000002,
+        "recorded_cost_usd_per_round_trip_standard_lot": 9.037735849056599,
+        "average_net_win": 5.613684210526316,
+        "average_net_loss_absolute": 2.86,
+        "average_win_loss_ratio": 1.9628266470371734,
+        "longest_loss_streak": 8,
+        "final_balance": 532.3,
+        "dd_definition": "Native maximum equity drawdown amount and native maximum relative equity drawdown percent; their peaks may differ.",
+        "cost_definition": "Commission+swap+fees from matched full lifecycles, divided by opening standard lots. Actual bid/ask spread is already in net and is not subtracted again. This is recorded explicit cost, not an independently estimated spread/slippage total."
+      },
+      "proof": {
+        "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration9_20261004\\S1_BASE_AUG_D0\\verification\\2026-10-04T04-53-05-305Z\\VERIFICATION.json",
+        "sha256": "7f6f47ddee92f815453e1d1eafc4dbfcd6604a80f6d32d0ea741dce699c2d5e2"
+      },
+      "source": {
+        "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration9_20261004\\S1_BASE_AUG_D0\\source\\TB500_S1_TRIGGER_M5_SL_R2.mq5",
+        "sha256": "05d1efc953ae8ef24779e738e4cde7b37095bede5217576cb301c8185f85eb67"
+      },
+      "ex5": {
+        "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration6_20261002\\S1_TRIGGER_M5_SL_R2_AUG\\session\\private\\builds\\00bc3fe1f75d4151aad323105e61f055\\TB500_S1_TRIGGER_M5_SL_R2.ex5",
+        "sha256": "3a4bc73c5c4d2e9350090a5566672451724856c5033e808ce472d06502da7175"
+      },
+      "score": {
+        "status": "SCORE_TARGETS_UNSET",
+        "total": null
+      }
+    },
+    {
+      "arm": "S1_BASE_AUG_D250",
+      "sid": "S1",
+      "candidate_id": "TB500_S1_TRIGGER_M5_SL_R2",
+      "origin": "NEW_I9",
+      "risk_percent": 1,
+      "risk_policy": "1% fixed ceiling",
+      "run_id": "CCB07121",
+      "conditions": {
+        "name": "I9_S1_BASE_AUG_D250",
+        "from_date": "2026.08.01",
+        "to_date": "2026.09.01",
+        "model": 4,
+        "deposit": 500,
+        "currency": "USD",
+        "symbol": "GOLD",
+        "leverage": 1000,
+        "execution_delay_ms": 250,
+        "period": "M5"
+      },
+      "account": {
+        "net_usd": 45.24,
+        "equity_dd_usd": 28.04,
+        "max_relative_equity_dd_pct": 4.8911526654,
+        "native_pf": 1.6376321353,
+        "complete_position_net_pf": 1.6457322295175563,
+        "complete_positions": 45,
+        "native_exit_trades": 45,
+        "win_rate_pct": 40,
+        "cost_usd": 4.79,
+        "cost_breakdown_signed": {
+          "profit": 50.03,
+          "commission": -4.1,
+          "swap": -0.69,
+          "fee": 0
+        },
+        "matched_round_trip_standard_lots": 0.5300000000000002,
+        "recorded_cost_usd_per_round_trip_standard_lot": 9.037735849056599,
+        "average_net_win": 6.405555555555555,
+        "average_net_loss_absolute": 2.6946153846153846,
+        "average_win_loss_ratio": 2.3771687759698032,
+        "longest_loss_streak": 8,
+        "final_balance": 545.24,
+        "dd_definition": "Native maximum equity drawdown amount and native maximum relative equity drawdown percent; their peaks may differ.",
+        "cost_definition": "Commission+swap+fees from matched full lifecycles, divided by opening standard lots. Actual bid/ask spread is already in net and is not subtracted again. This is recorded explicit cost, not an independently estimated spread/slippage total."
+      },
+      "proof": {
+        "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration9_20261004\\S1_BASE_AUG_D250\\verification\\2026-10-04T04-57-50-395Z\\VERIFICATION.json",
+        "sha256": "a1963082a5e79356af310be8867e8fee43306cca3720a6259ffaa0c7637835b6"
+      },
+      "source": {
+        "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration9_20261004\\S1_BASE_AUG_D250\\source\\TB500_S1_TRIGGER_M5_SL_R2.mq5",
+        "sha256": "05d1efc953ae8ef24779e738e4cde7b37095bede5217576cb301c8185f85eb67"
+      },
+      "ex5": {
+        "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration6_20261002\\S1_TRIGGER_M5_SL_R2_AUG\\session\\private\\builds\\00bc3fe1f75d4151aad323105e61f055\\TB500_S1_TRIGGER_M5_SL_R2.ex5",
+        "sha256": "3a4bc73c5c4d2e9350090a5566672451724856c5033e808ce472d06502da7175"
+      },
+      "score": {
+        "status": "SCORE_TARGETS_UNSET",
+        "total": null
+      }
+    },
+    {
+      "arm": "S1_DYNAMIC_AUG_D0",
+      "sid": "S1",
+      "candidate_id": "TB500_S1_DYNAMIC_RISK_I9",
+      "origin": "NEW_I9",
+      "risk_percent": 2,
+      "risk_policy": "2/1/0.5% dynamic new risk",
+      "run_id": "58401510",
+      "conditions": {
+        "name": "I9_S1_DYNAMIC_AUG_D0",
+        "from_date": "2026.08.01",
+        "to_date": "2026.09.01",
+        "model": 4,
+        "deposit": 500,
+        "currency": "USD",
+        "symbol": "GOLD",
+        "leverage": 1000,
+        "execution_delay_ms": 0,
+        "period": "M5"
+      },
+      "account": {
+        "net_usd": 55.95,
+        "equity_dd_usd": 46.27,
+        "max_relative_equity_dd_pct": 7.6832386835,
+        "native_pf": 1.4345968619,
+        "complete_position_net_pf": 1.4385483618121964,
+        "complete_positions": 52,
+        "native_exit_trades": 52,
+        "win_rate_pct": 36.53846153846154,
+        "cost_usd": 6.47,
+        "cost_breakdown_signed": {
+          "profit": 62.42,
+          "commission": -5.78,
+          "swap": -0.69,
+          "fee": 0
+        },
+        "matched_round_trip_standard_lots": 0.7700000000000005,
+        "recorded_cost_usd_per_round_trip_standard_lot": 8.402597402597397,
+        "average_net_win": 9.659473684210527,
+        "average_net_loss_absolute": 3.866060606060606,
+        "average_win_loss_ratio": 2.498531365252762,
+        "longest_loss_streak": 9,
+        "final_balance": 555.95,
+        "dd_definition": "Native maximum equity drawdown amount and native maximum relative equity drawdown percent; their peaks may differ.",
+        "cost_definition": "Commission+swap+fees from matched full lifecycles, divided by opening standard lots. Actual bid/ask spread is already in net and is not subtracted again. This is recorded explicit cost, not an independently estimated spread/slippage total."
+      },
+      "proof": {
+        "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration9_20261004\\S1_DYNAMIC_AUG_D0\\verification\\2026-10-04T05-42-42-964Z\\VERIFICATION.json",
+        "sha256": "bce4b0ece71446994bb637c78714053aff83296494f00c1a57f4eda386990f3d"
+      },
+      "source": {
+        "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration9_20261004\\S1_DYNAMIC_AUG_D0\\source\\TB500_S1_DYNAMIC_RISK_I9.mq5",
+        "sha256": "67bd631149d8ea3e155ffcb8ee6502b3370fa7723e16b8254ad1d97a64bce8cd"
+      },
+      "ex5": {
+        "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration9_20261004\\S1_DYNAMIC\\BUILD\\session\\private\\builds\\4bfeb23dc04b44169684669c89fac321\\TB500_S1_DYNAMIC_RISK_I9.ex5",
+        "sha256": "0b77d9d216db29d3cd7ef54428bca37abe038368233ebcf581f503f7662c7c4d"
+      },
+      "score": {
+        "status": "SCORE_TARGETS_UNSET",
+        "total": null
+      }
+    },
+    {
+      "arm": "S1_DYNAMIC_AUG_D250",
+      "sid": "S1",
+      "candidate_id": "TB500_S1_DYNAMIC_RISK_I9",
+      "origin": "NEW_I9",
+      "risk_percent": 2,
+      "risk_policy": "2/1/0.5% dynamic new risk",
+      "run_id": "DF2664A1",
+      "conditions": {
+        "name": "I9_S1_DYNAMIC_AUG_D250",
+        "from_date": "2026.08.01",
+        "to_date": "2026.09.01",
+        "model": 4,
+        "deposit": 500,
+        "currency": "USD",
+        "symbol": "GOLD",
+        "leverage": 1000,
+        "execution_delay_ms": 250,
+        "period": "M5"
+      },
+      "account": {
+        "net_usd": 73.33,
+        "equity_dd_usd": 42.07,
+        "max_relative_equity_dd_pct": 6.8362040949,
+        "native_pf": 1.5972471086,
+        "complete_position_net_pf": 1.605732694531637,
+        "complete_positions": 53,
+        "native_exit_trades": 54,
+        "win_rate_pct": 41.509433962264154,
+        "cost_usd": 6.56,
+        "cost_breakdown_signed": {
+          "profit": 79.89,
+          "commission": -5.87,
+          "swap": -0.69,
+          "fee": 0
+        },
+        "matched_round_trip_standard_lots": 0.7800000000000005,
+        "recorded_cost_usd_per_round_trip_standard_lot": 8.410256410256405,
+        "average_net_win": 8.835909090909091,
+        "average_net_loss_absolute": 4.035333333333333,
+        "average_win_loss_ratio": 2.189635492543142,
+        "longest_loss_streak": 9,
+        "final_balance": 573.33,
+        "dd_definition": "Native maximum equity drawdown amount and native maximum relative equity drawdown percent; their peaks may differ.",
+        "cost_definition": "Commission+swap+fees from matched full lifecycles, divided by opening standard lots. Actual bid/ask spread is already in net and is not subtracted again. This is recorded explicit cost, not an independently estimated spread/slippage total."
+      },
+      "proof": {
+        "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration9_20261004\\S1_DYNAMIC_AUG_D250\\verification\\2026-10-04T05-48-14-460Z\\VERIFICATION.json",
+        "sha256": "2024b91878ad2944b7f1c64f42ba6a7cce0a609fa75a1a34150c9ffd7c63e4f9"
+      },
+      "source": {
+        "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration9_20261004\\S1_DYNAMIC_AUG_D250\\source\\TB500_S1_DYNAMIC_RISK_I9.mq5",
+        "sha256": "67bd631149d8ea3e155ffcb8ee6502b3370fa7723e16b8254ad1d97a64bce8cd"
+      },
+      "ex5": {
+        "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration9_20261004\\S1_DYNAMIC\\BUILD\\session\\private\\builds\\4bfeb23dc04b44169684669c89fac321\\TB500_S1_DYNAMIC_RISK_I9.ex5",
+        "sha256": "0b77d9d216db29d3cd7ef54428bca37abe038368233ebcf581f503f7662c7c4d"
+      },
+      "score": {
+        "status": "SCORE_TARGETS_UNSET",
+        "total": null
+      }
+    },
+    {
+      "arm": "S1_RISK2_AUG_D0",
+      "sid": "S1",
+      "candidate_id": "TB500_S1_TRIGGER_M5_SL_RISK2_I9",
+      "origin": "NEW_I9",
+      "risk_percent": 2,
+      "risk_policy": "2% fixed ceiling",
+      "run_id": "BCE4898E",
+      "conditions": {
+        "name": "I9_S1_RISK2_AUG_D0",
+        "from_date": "2026.08.01",
+        "to_date": "2026.09.01",
+        "model": 4,
+        "deposit": 500,
+        "currency": "USD",
+        "symbol": "GOLD",
+        "leverage": 1000,
+        "execution_delay_ms": 0,
+        "period": "M5"
+      },
+      "account": {
+        "net_usd": 102.56,
+        "equity_dd_usd": 67.37,
+        "max_relative_equity_dd_pct": 10.0562745361,
+        "native_pf": 1.4828625235,
+        "complete_position_net_pf": 1.486527514231499,
+        "complete_positions": 54,
+        "native_exit_trades": 54,
+        "win_rate_pct": 37.03703703703704,
+        "cost_usd": 8.54,
+        "cost_breakdown_signed": {
+          "profit": 111.1,
+          "commission": -8.54,
+          "swap": 0,
+          "fee": 0
+        },
+        "matched_round_trip_standard_lots": 1.1800000000000008,
+        "recorded_cost_usd_per_round_trip_standard_lot": 7.237288135593214,
+        "average_net_win": 15.668000000000001,
+        "average_net_loss_absolute": 6.2,
+        "average_win_loss_ratio": 2.5270967741935486,
+        "longest_loss_streak": 8,
+        "final_balance": 602.56,
+        "dd_definition": "Native maximum equity drawdown amount and native maximum relative equity drawdown percent; their peaks may differ.",
+        "cost_definition": "Commission+swap+fees from matched full lifecycles, divided by opening standard lots. Actual bid/ask spread is already in net and is not subtracted again. This is recorded explicit cost, not an independently estimated spread/slippage total."
+      },
+      "proof": {
+        "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration9_20261004\\S1_RISK2_AUG_D0\\verification\\2026-10-04T05-00-45-015Z\\VERIFICATION.json",
+        "sha256": "f81ff3b5666b32fe53bd750ee8ab09f67fba46ea0c5185bdc599caf5a08da9f1"
+      },
+      "source": {
+        "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration9_20261004\\S1_RISK2_AUG_D0\\source\\TB500_S1_TRIGGER_M5_SL_RISK2_I9.mq5",
+        "sha256": "d36415ba868f24256ba34670d1d81655bec4e801ad4a75fdafc458754197460a"
+      },
+      "ex5": {
+        "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration9_20261004\\S1_RISK2\\BUILD\\session\\private\\builds\\8578bf18140f4eeeaf7be9a67a9b20ee\\TB500_S1_TRIGGER_M5_SL_RISK2_I9.ex5",
+        "sha256": "4bc3c08b15f042b982c29913f8d21b5256c2d84bef36bb8de175ca0d60f793e8"
+      },
+      "score": {
+        "status": "SCORE_TARGETS_UNSET",
+        "total": null
+      }
+    },
+    {
+      "arm": "S1_RISK2_AUG_D250",
+      "sid": "S1",
+      "candidate_id": "TB500_S1_TRIGGER_M5_SL_RISK2_I9",
+      "origin": "NEW_I9",
+      "risk_percent": 2,
+      "risk_policy": "2% fixed ceiling",
+      "run_id": "4FB72A4F",
+      "conditions": {
+        "name": "I9_S1_RISK2_AUG_D250",
+        "from_date": "2026.08.01",
+        "to_date": "2026.09.01",
+        "model": 4,
+        "deposit": 500,
+        "currency": "USD",
+        "symbol": "GOLD",
+        "leverage": 1000,
+        "execution_delay_ms": 250,
+        "period": "M5"
+      },
+      "account": {
+        "net_usd": 91.32,
+        "equity_dd_usd": 61.95,
+        "max_relative_equity_dd_pct": 9.4830621336,
+        "native_pf": 1.5955004891,
+        "complete_position_net_pf": 1.6038085162655382,
+        "complete_positions": 43,
+        "native_exit_trades": 44,
+        "win_rate_pct": 46.51162790697674,
+        "cost_usd": 7.47,
+        "cost_breakdown_signed": {
+          "profit": 98.79,
+          "commission": -7.47,
+          "swap": 0,
+          "fee": 0
+        },
+        "matched_round_trip_standard_lots": 1.0300000000000007,
+        "recorded_cost_usd_per_round_trip_standard_lot": 7.252427184466014,
+        "average_net_win": 12.128,
+        "average_net_loss_absolute": 6.575652173913044,
+        "average_win_loss_ratio": 1.844379793705369,
+        "longest_loss_streak": 6,
+        "final_balance": 591.32,
+        "dd_definition": "Native maximum equity drawdown amount and native maximum relative equity drawdown percent; their peaks may differ.",
+        "cost_definition": "Commission+swap+fees from matched full lifecycles, divided by opening standard lots. Actual bid/ask spread is already in net and is not subtracted again. This is recorded explicit cost, not an independently estimated spread/slippage total."
+      },
+      "proof": {
+        "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration9_20261004\\S1_RISK2_AUG_D250\\verification\\2026-10-04T05-03-36-721Z\\VERIFICATION.json",
+        "sha256": "decf0cc607b0a3fbacf6282649b0d0f43f0ebc88b2474a584b744fb5c5c88e63"
+      },
+      "source": {
+        "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration9_20261004\\S1_RISK2_AUG_D250\\source\\TB500_S1_TRIGGER_M5_SL_RISK2_I9.mq5",
+        "sha256": "d36415ba868f24256ba34670d1d81655bec4e801ad4a75fdafc458754197460a"
+      },
+      "ex5": {
+        "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration9_20261004\\S1_RISK2\\BUILD\\session\\private\\builds\\8578bf18140f4eeeaf7be9a67a9b20ee\\TB500_S1_TRIGGER_M5_SL_RISK2_I9.ex5",
+        "sha256": "4bc3c08b15f042b982c29913f8d21b5256c2d84bef36bb8de175ca0d60f793e8"
+      },
+      "score": {
+        "status": "SCORE_TARGETS_UNSET",
+        "total": null
+      }
+    },
+    {
+      "arm": "S2_BASE_AUG_D0",
+      "sid": "S2",
+      "candidate_id": "TB500_S2_SND_SAME_CLOSE",
+      "origin": "NEW_I9",
+      "risk_percent": 1,
+      "risk_policy": "1% fixed ceiling",
+      "run_id": "098E394E",
+      "conditions": {
+        "name": "I9_S2_BASE_AUG_D0",
+        "from_date": "2026.08.01",
+        "to_date": "2026.09.01",
+        "model": 4,
+        "deposit": 500,
+        "currency": "USD",
+        "symbol": "GOLD",
+        "leverage": 1000,
+        "execution_delay_ms": 0,
+        "period": "M5"
+      },
+      "account": {
+        "net_usd": -4.15,
+        "equity_dd_usd": 6.63,
+        "max_relative_equity_dd_pct": 1.3194555007,
+        "native_pf": 0,
+        "complete_position_net_pf": 0,
+        "complete_positions": 1,
+        "native_exit_trades": 1,
+        "win_rate_pct": 0,
+        "cost_usd": 0.08,
+        "cost_breakdown_signed": {
+          "profit": -4.07,
+          "commission": -0.08,
+          "swap": 0,
+          "fee": 0
+        },
+        "matched_round_trip_standard_lots": 0.01,
+        "recorded_cost_usd_per_round_trip_standard_lot": 8,
+        "average_net_win": null,
+        "average_net_loss_absolute": 4.15,
+        "average_win_loss_ratio": null,
+        "longest_loss_streak": 1,
+        "final_balance": 495.85,
+        "dd_definition": "Native maximum equity drawdown amount and native maximum relative equity drawdown percent; their peaks may differ.",
+        "cost_definition": "Commission+swap+fees from matched full lifecycles, divided by opening standard lots. Actual bid/ask spread is already in net and is not subtracted again. This is recorded explicit cost, not an independently estimated spread/slippage total."
+      },
+      "proof": {
+        "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration9_20261004\\S2_BASE_AUG_D0\\verification\\2026-10-04T05-13-10-078Z\\VERIFICATION.json",
+        "sha256": "0b6a0025b497e45d61ffca4768edfdc4080fabc532b30131ee45c0631ee6d496"
+      },
+      "source": {
+        "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration9_20261004\\S2_BASE_AUG_D0\\source\\TB500_S2_SND_SAME_CLOSE.mq5",
+        "sha256": "9103c1eac2343c7db98f6f62859a23aa1a5d6bdd227dae1d347d08d7add9a191"
+      },
+      "ex5": {
+        "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration5_20260927\\S2_SND_SAME_CLOSE\\session\\private\\builds\\5b838eaab56a47a0b65f997952f7078f\\TB500_S2_SND_SAME_CLOSE.ex5",
+        "sha256": "8330b968a00a1edc66ad3f606231fd639c8d5d6893f07af0117eae3bfe799970"
+      },
+      "score": {
+        "status": "SCORE_TARGETS_UNSET",
+        "total": null
+      }
+    },
+    {
+      "arm": "S2_BASE_AUG_D250",
+      "sid": "S2",
+      "candidate_id": "TB500_S2_SND_SAME_CLOSE",
+      "origin": "NEW_I9",
+      "risk_percent": 1,
+      "risk_policy": "1% fixed ceiling",
+      "run_id": "E91319EE",
+      "conditions": {
+        "name": "I9_S2_BASE_AUG_D250",
+        "from_date": "2026.08.01",
+        "to_date": "2026.09.01",
+        "model": 4,
+        "deposit": 500,
+        "currency": "USD",
+        "symbol": "GOLD",
+        "leverage": 1000,
+        "execution_delay_ms": 250,
+        "period": "M5"
+      },
+      "account": {
+        "net_usd": -3.88,
+        "equity_dd_usd": 6.63,
+        "max_relative_equity_dd_pct": 1.3187468921,
+        "native_pf": 0,
+        "complete_position_net_pf": 0,
+        "complete_positions": 1,
+        "native_exit_trades": 1,
+        "win_rate_pct": 0,
+        "cost_usd": 0.08,
+        "cost_breakdown_signed": {
+          "profit": -3.8,
+          "commission": -0.08,
+          "swap": 0,
+          "fee": 0
+        },
+        "matched_round_trip_standard_lots": 0.01,
+        "recorded_cost_usd_per_round_trip_standard_lot": 8,
+        "average_net_win": null,
+        "average_net_loss_absolute": 3.88,
+        "average_win_loss_ratio": null,
+        "longest_loss_streak": 1,
+        "final_balance": 496.12,
+        "dd_definition": "Native maximum equity drawdown amount and native maximum relative equity drawdown percent; their peaks may differ.",
+        "cost_definition": "Commission+swap+fees from matched full lifecycles, divided by opening standard lots. Actual bid/ask spread is already in net and is not subtracted again. This is recorded explicit cost, not an independently estimated spread/slippage total."
+      },
+      "proof": {
+        "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration9_20261004\\S2_BASE_AUG_D250\\verification\\2026-10-04T05-15-39-098Z\\VERIFICATION.json",
+        "sha256": "fcfa483e1e5f2baf3b7defa29fe9c48e7c85b1d98f69c98a54d26f1235e28ffe"
+      },
+      "source": {
+        "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration9_20261004\\S2_BASE_AUG_D250\\source\\TB500_S2_SND_SAME_CLOSE.mq5",
+        "sha256": "9103c1eac2343c7db98f6f62859a23aa1a5d6bdd227dae1d347d08d7add9a191"
+      },
+      "ex5": {
+        "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration5_20260927\\S2_SND_SAME_CLOSE\\session\\private\\builds\\5b838eaab56a47a0b65f997952f7078f\\TB500_S2_SND_SAME_CLOSE.ex5",
+        "sha256": "8330b968a00a1edc66ad3f606231fd639c8d5d6893f07af0117eae3bfe799970"
+      },
+      "score": {
+        "status": "SCORE_TARGETS_UNSET",
+        "total": null
+      }
+    },
+    {
+      "arm": "S2_PROGRESS_AUG_D0",
+      "sid": "S2",
+      "candidate_id": "TB500_S2_NEXT_M5_PROGRESS",
+      "origin": "NEW_I9",
+      "risk_percent": 1,
+      "risk_policy": "1% fixed ceiling",
+      "run_id": "29DD8F0A",
+      "conditions": {
+        "name": "I9_S2_PROGRESS_AUG_D0",
+        "from_date": "2026.08.01",
+        "to_date": "2026.09.01",
+        "model": 4,
+        "deposit": 500,
+        "currency": "USD",
+        "symbol": "GOLD",
+        "leverage": 1000,
+        "execution_delay_ms": 0,
+        "period": "M5"
+      },
+      "account": {
+        "net_usd": -4.66,
+        "equity_dd_usd": 10.67,
+        "max_relative_equity_dd_pct": 2.1086539792,
+        "native_pf": 0,
+        "complete_position_net_pf": 0,
+        "complete_positions": 1,
+        "native_exit_trades": 1,
+        "win_rate_pct": 0,
+        "cost_usd": 0.08,
+        "cost_breakdown_signed": {
+          "profit": -4.58,
+          "commission": -0.08,
+          "swap": 0,
+          "fee": 0
+        },
+        "matched_round_trip_standard_lots": 0.01,
+        "recorded_cost_usd_per_round_trip_standard_lot": 8,
+        "average_net_win": null,
+        "average_net_loss_absolute": 4.66,
+        "average_win_loss_ratio": null,
+        "longest_loss_streak": 1,
+        "final_balance": 495.34,
+        "dd_definition": "Native maximum equity drawdown amount and native maximum relative equity drawdown percent; their peaks may differ.",
+        "cost_definition": "Commission+swap+fees from matched full lifecycles, divided by opening standard lots. Actual bid/ask spread is already in net and is not subtracted again. This is recorded explicit cost, not an independently estimated spread/slippage total."
+      },
+      "proof": {
+        "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration9_20261004\\S2_PROGRESS_AUG_D0\\verification\\2026-10-04T05-18-08-213Z\\VERIFICATION.json",
+        "sha256": "d5e2f1ce1150c98ff2a03b0f83b1e0ebf9e8e0606275fe631c00b6f6df0f77e3"
+      },
+      "source": {
+        "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration9_20261004\\S2_PROGRESS_AUG_D0\\source\\TB500_S2_NEXT_M5_PROGRESS.mq5",
+        "sha256": "e25fac2f1cf3ae33b963af3fae43a534fba8b47cf3ccd9a057684c4cb2cc1591"
+      },
+      "ex5": {
+        "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration9_20261004\\S123\\TB500_S2_NEXT_M5_PROGRESS\\BUILD\\session\\private\\builds\\8fb3aa5c699e4ad8b0ec6c6398da1246\\TB500_S2_NEXT_M5_PROGRESS.ex5",
+        "sha256": "86e5dc16a0f7373771115106300c7d699acb1d6a03b73c310f35b0181b970ec0"
+      },
+      "score": {
+        "status": "SCORE_TARGETS_UNSET",
+        "total": null
+      }
+    },
+    {
+      "arm": "S2_PROGRESS_AUG_D250",
+      "sid": "S2",
+      "candidate_id": "TB500_S2_NEXT_M5_PROGRESS",
+      "origin": "NEW_I9",
+      "risk_percent": 1,
+      "risk_policy": "1% fixed ceiling",
+      "run_id": "F2944189",
+      "conditions": {
+        "name": "I9_S2_PROGRESS_AUG_D250",
+        "from_date": "2026.08.01",
+        "to_date": "2026.09.01",
+        "model": 4,
+        "deposit": 500,
+        "currency": "USD",
+        "symbol": "GOLD",
+        "leverage": 1000,
+        "execution_delay_ms": 250,
+        "period": "M5"
+      },
+      "account": {
+        "net_usd": -4.63,
+        "equity_dd_usd": 10.67,
+        "max_relative_equity_dd_pct": 2.10852897,
+        "native_pf": 0,
+        "complete_position_net_pf": 0,
+        "complete_positions": 1,
+        "native_exit_trades": 1,
+        "win_rate_pct": 0,
+        "cost_usd": 0.08,
+        "cost_breakdown_signed": {
+          "profit": -4.55,
+          "commission": -0.08,
+          "swap": 0,
+          "fee": 0
+        },
+        "matched_round_trip_standard_lots": 0.01,
+        "recorded_cost_usd_per_round_trip_standard_lot": 8,
+        "average_net_win": null,
+        "average_net_loss_absolute": 4.63,
+        "average_win_loss_ratio": null,
+        "longest_loss_streak": 1,
+        "final_balance": 495.37,
+        "dd_definition": "Native maximum equity drawdown amount and native maximum relative equity drawdown percent; their peaks may differ.",
+        "cost_definition": "Commission+swap+fees from matched full lifecycles, divided by opening standard lots. Actual bid/ask spread is already in net and is not subtracted again. This is recorded explicit cost, not an independently estimated spread/slippage total."
+      },
+      "proof": {
+        "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration9_20261004\\S2_PROGRESS_AUG_D250\\verification\\2026-10-04T05-20-37-327Z\\VERIFICATION.json",
+        "sha256": "76eabe448bf44ee84edb117f2bfd9994725cc6f573f06d04bf0e6fa65b275f4c"
+      },
+      "source": {
+        "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration9_20261004\\S2_PROGRESS_AUG_D250\\source\\TB500_S2_NEXT_M5_PROGRESS.mq5",
+        "sha256": "e25fac2f1cf3ae33b963af3fae43a534fba8b47cf3ccd9a057684c4cb2cc1591"
+      },
+      "ex5": {
+        "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration9_20261004\\S123\\TB500_S2_NEXT_M5_PROGRESS\\BUILD\\session\\private\\builds\\8fb3aa5c699e4ad8b0ec6c6398da1246\\TB500_S2_NEXT_M5_PROGRESS.ex5",
+        "sha256": "86e5dc16a0f7373771115106300c7d699acb1d6a03b73c310f35b0181b970ec0"
+      },
+      "score": {
+        "status": "SCORE_TARGETS_UNSET",
+        "total": null
+      }
+    },
+    {
+      "arm": "S3_BASE_AUG_D0",
+      "sid": "S3",
+      "candidate_id": "TB500_S3_H1_SLOPE_PRICE",
+      "origin": "NEW_I9",
+      "risk_percent": 1,
+      "risk_policy": "1% fixed ceiling",
+      "run_id": "64B8BF82",
+      "conditions": {
+        "name": "I9_S3_BASE_AUG_D0",
+        "from_date": "2026.08.01",
+        "to_date": "2026.09.01",
+        "model": 4,
+        "deposit": 500,
+        "currency": "USD",
+        "symbol": "GOLD",
+        "leverage": 1000,
+        "execution_delay_ms": 0,
+        "period": "M5"
+      },
+      "account": {
+        "net_usd": 14.02,
+        "equity_dd_usd": 12.16,
+        "max_relative_equity_dd_pct": 2.3554023167,
+        "native_pf": 2.2212543554,
+        "complete_position_net_pf": 2.234154929577465,
+        "complete_positions": 6,
+        "native_exit_trades": 6,
+        "win_rate_pct": 50,
+        "cost_usd": 0.48,
+        "cost_breakdown_signed": {
+          "profit": 14.5,
+          "commission": -0.48,
+          "swap": 0,
+          "fee": 0
+        },
+        "matched_round_trip_standard_lots": 0.060000000000000005,
+        "recorded_cost_usd_per_round_trip_standard_lot": 7.999999999999999,
+        "average_net_win": 8.459999999999999,
+        "average_net_loss_absolute": 3.7866666666666666,
+        "average_win_loss_ratio": 2.2341549295774645,
+        "longest_loss_streak": 2,
+        "final_balance": 514.02,
+        "dd_definition": "Native maximum equity drawdown amount and native maximum relative equity drawdown percent; their peaks may differ.",
+        "cost_definition": "Commission+swap+fees from matched full lifecycles, divided by opening standard lots. Actual bid/ask spread is already in net and is not subtracted again. This is recorded explicit cost, not an independently estimated spread/slippage total."
+      },
+      "proof": {
+        "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration9_20261004\\S3_BASE_AUG_D0\\verification\\2026-10-04T05-22-44-167Z\\VERIFICATION.json",
+        "sha256": "8b61169f15f08b0423aba6f4ecaf8f637cbd279a8e4b1cbba82c625df2e180ea"
+      },
+      "source": {
+        "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration9_20261004\\S3_BASE_AUG_D0\\source\\TB500_S3_H1_SLOPE_PRICE.mq5",
+        "sha256": "0f2901565718506bbdb3f344ceaab572bfef01e08efef8e28b12fcedff728f54"
+      },
+      "ex5": {
+        "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration6_20261002\\S3_H1_SLOPE_PRICE_AUG\\session\\private\\builds\\6074aed909274d35b1088a5510d092c8\\TB500_S3_H1_SLOPE_PRICE.ex5",
+        "sha256": "fb9c30c97feb993ce115e6f225bc8097b7e664958ad03a0ce3d2f75aa6ee9615"
+      },
+      "score": {
+        "status": "SCORE_TARGETS_UNSET",
+        "total": null
+      }
+    },
+    {
+      "arm": "S3_BASE_AUG_D250",
+      "sid": "S3",
+      "candidate_id": "TB500_S3_H1_SLOPE_PRICE",
+      "origin": "NEW_I9",
+      "risk_percent": 1,
+      "risk_policy": "1% fixed ceiling",
+      "run_id": "97D518BF",
+      "conditions": {
+        "name": "I9_S3_BASE_AUG_D250",
+        "from_date": "2026.08.01",
+        "to_date": "2026.09.01",
+        "model": 4,
+        "deposit": 500,
+        "currency": "USD",
+        "symbol": "GOLD",
+        "leverage": 1000,
+        "execution_delay_ms": 250,
+        "period": "M5"
+      },
+      "account": {
+        "net_usd": 4.57,
+        "equity_dd_usd": 12.03,
+        "max_relative_equity_dd_pct": 2.3293639268,
+        "native_pf": 1.3977371628,
+        "complete_position_net_pf": 1.4005258545135846,
+        "complete_positions": 6,
+        "native_exit_trades": 6,
+        "win_rate_pct": 33.333333333333336,
+        "cost_usd": 0.48,
+        "cost_breakdown_signed": {
+          "profit": 5.05,
+          "commission": -0.48,
+          "swap": 0,
+          "fee": 0
+        },
+        "matched_round_trip_standard_lots": 0.060000000000000005,
+        "recorded_cost_usd_per_round_trip_standard_lot": 7.999999999999999,
+        "average_net_win": 7.99,
+        "average_net_loss_absolute": 2.8525,
+        "average_win_loss_ratio": 2.801051709027169,
+        "longest_loss_streak": 3,
+        "final_balance": 504.57,
+        "dd_definition": "Native maximum equity drawdown amount and native maximum relative equity drawdown percent; their peaks may differ.",
+        "cost_definition": "Commission+swap+fees from matched full lifecycles, divided by opening standard lots. Actual bid/ask spread is already in net and is not subtracted again. This is recorded explicit cost, not an independently estimated spread/slippage total."
+      },
+      "proof": {
+        "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration9_20261004\\S3_BASE_AUG_D250\\verification\\2026-10-04T05-24-52-057Z\\VERIFICATION.json",
+        "sha256": "e2bba80a3c577e9b1e3d5bc82e06750d00a1e2a6db071ef351ca30079894b29b"
+      },
+      "source": {
+        "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration9_20261004\\S3_BASE_AUG_D250\\source\\TB500_S3_H1_SLOPE_PRICE.mq5",
+        "sha256": "0f2901565718506bbdb3f344ceaab572bfef01e08efef8e28b12fcedff728f54"
+      },
+      "ex5": {
+        "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration6_20261002\\S3_H1_SLOPE_PRICE_AUG\\session\\private\\builds\\6074aed909274d35b1088a5510d092c8\\TB500_S3_H1_SLOPE_PRICE.ex5",
+        "sha256": "fb9c30c97feb993ce115e6f225bc8097b7e664958ad03a0ce3d2f75aa6ee9615"
+      },
+      "score": {
+        "status": "SCORE_TARGETS_UNSET",
+        "total": null
+      }
+    },
+    {
+      "arm": "S4_BASE_AUG_D0",
+      "sid": "S4",
+      "candidate_id": "TB500_S4_BE125",
+      "origin": "NEW_I9",
+      "risk_percent": 2,
+      "risk_policy": "2% fixed ceiling",
+      "run_id": "A87B3287",
+      "conditions": {
+        "name": "I9_S4_BASE_AUG_D0",
+        "from_date": "2026.08.01",
+        "to_date": "2026.09.01",
+        "model": 4,
+        "deposit": 500,
+        "currency": "USD",
+        "symbol": "GOLD",
+        "leverage": 1000,
+        "execution_delay_ms": 0,
+        "period": "M5"
+      },
+      "account": {
+        "net_usd": 95.54,
+        "equity_dd_usd": 33.09,
+        "max_relative_equity_dd_pct": 5.7064601106,
+        "native_pf": 1.4393451669,
+        "complete_position_net_pf": 1.4419056429232193,
+        "complete_positions": 55,
+        "native_exit_trades": 55,
+        "win_rate_pct": 49.09090909090909,
+        "cost_usd": 5.06,
+        "cost_breakdown_signed": {
+          "profit": 100.6,
+          "commission": -5.06,
+          "swap": 0,
+          "fee": 0
+        },
+        "matched_round_trip_standard_lots": 0.6600000000000004,
+        "recorded_cost_usd_per_round_trip_standard_lot": 7.666666666666662,
+        "average_net_win": 11.545925925925927,
+        "average_net_loss_absolute": 7.721428571428571,
+        "average_win_loss_ratio": 1.4953095556240794,
+        "longest_loss_streak": 3,
+        "final_balance": 595.54,
+        "dd_definition": "Native maximum equity drawdown amount and native maximum relative equity drawdown percent; their peaks may differ.",
+        "cost_definition": "Commission+swap+fees from matched full lifecycles, divided by opening standard lots. Actual bid/ask spread is already in net and is not subtracted again. This is recorded explicit cost, not an independently estimated spread/slippage total."
+      },
+      "proof": {
+        "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration9_20261004\\S4_BASE_AUG_D0\\verification\\2026-10-04T05-27-43-488Z\\VERIFICATION.json",
+        "sha256": "f6ae029724b616eb4fa9f9b168bd646eec0f932222ca4d916c6d0de95d33c80d"
+      },
+      "source": {
+        "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration9_20261004\\S4_BASE_AUG_D0\\source\\TB500_S4_BE125.mq5",
+        "sha256": "f6abe1abc8d9cfca27e6483f344aab03110b9df11b8d1b458e3fce432d63be47"
+      },
+      "ex5": {
+        "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration5_20260927\\S4_BE125_AUG_R2\\session\\private\\builds\\ecb22e7a182b405393241c51a8e82016\\TB500_S4_BE125.ex5",
+        "sha256": "dfc67a50a6fe7cc4ec297ad4d59017409bafe4244dadcbf18d410568d474bbfc"
+      },
+      "score": {
+        "status": "SCORE_TARGETS_UNSET",
+        "total": null
+      }
+    },
+    {
+      "arm": "S4_BASE_AUG_D250",
+      "sid": "S4",
+      "candidate_id": "TB500_S4_BE125",
+      "origin": "NEW_I9",
+      "risk_percent": 2,
+      "risk_policy": "2% fixed ceiling",
+      "run_id": "D4BF2385",
+      "conditions": {
+        "name": "I9_S4_BASE_AUG_D250",
+        "from_date": "2026.08.01",
+        "to_date": "2026.09.01",
+        "model": 4,
+        "deposit": 500,
+        "currency": "USD",
+        "symbol": "GOLD",
+        "leverage": 1000,
+        "execution_delay_ms": 250,
+        "period": "M5"
+      },
+      "account": {
+        "net_usd": 102.03,
+        "equity_dd_usd": 33.22,
+        "max_relative_equity_dd_pct": 5.5903205117,
+        "native_pf": 1.4616115459,
+        "complete_position_net_pf": 1.464342602284622,
+        "complete_positions": 56,
+        "native_exit_trades": 56,
+        "win_rate_pct": 50,
+        "cost_usd": 5.14,
+        "cost_breakdown_signed": {
+          "profit": 107.17,
+          "commission": -5.14,
+          "swap": 0,
+          "fee": 0
+        },
+        "matched_round_trip_standard_lots": 0.6700000000000004,
+        "recorded_cost_usd_per_round_trip_standard_lot": 7.671641791044771,
+        "average_net_win": 11.491428571428571,
+        "average_net_loss_absolute": 7.847499999999999,
+        "average_win_loss_ratio": 1.4643426022846222,
+        "longest_loss_streak": 3,
+        "final_balance": 602.03,
+        "dd_definition": "Native maximum equity drawdown amount and native maximum relative equity drawdown percent; their peaks may differ.",
+        "cost_definition": "Commission+swap+fees from matched full lifecycles, divided by opening standard lots. Actual bid/ask spread is already in net and is not subtracted again. This is recorded explicit cost, not an independently estimated spread/slippage total."
+      },
+      "proof": {
+        "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration9_20261004\\S4_BASE_AUG_D250\\verification\\2026-10-04T05-30-34-949Z\\VERIFICATION.json",
+        "sha256": "00b0a546edd00d0b56ee074074e2a945e527011cba8df418e5453d1bf02d00af"
+      },
+      "source": {
+        "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration9_20261004\\S4_BASE_AUG_D250\\source\\TB500_S4_BE125.mq5",
+        "sha256": "f6abe1abc8d9cfca27e6483f344aab03110b9df11b8d1b458e3fce432d63be47"
+      },
+      "ex5": {
+        "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration5_20260927\\S4_BE125_AUG_R2\\session\\private\\builds\\ecb22e7a182b405393241c51a8e82016\\TB500_S4_BE125.ex5",
+        "sha256": "dfc67a50a6fe7cc4ec297ad4d59017409bafe4244dadcbf18d410568d474bbfc"
+      },
+      "score": {
+        "status": "SCORE_TARGETS_UNSET",
+        "total": null
+      }
+    },
+    {
+      "arm": "S6_BASE_AUG_D0",
+      "sid": "S6",
+      "candidate_id": "TB500_S6_DISTINCT_TRIGGER_BE1",
+      "origin": "NEW_I9",
+      "risk_percent": 1,
+      "risk_policy": "1% fixed ceiling",
+      "run_id": "C8206042",
+      "conditions": {
+        "name": "I9_S6_BASE_AUG_D0",
+        "from_date": "2026.08.01",
+        "to_date": "2026.09.01",
+        "model": 4,
+        "deposit": 500,
+        "currency": "USD",
+        "symbol": "GOLD",
+        "leverage": 1000,
+        "execution_delay_ms": 0,
+        "period": "M5"
+      },
+      "account": {
+        "net_usd": 23.07,
+        "equity_dd_usd": 16.83,
+        "max_relative_equity_dd_pct": 3.1172439341,
+        "native_pf": 2.3342972817,
+        "complete_position_net_pf": 2.3530791788856305,
+        "complete_positions": 11,
+        "native_exit_trades": 11,
+        "win_rate_pct": 54.54545454545455,
+        "cost_usd": 0.88,
+        "cost_breakdown_signed": {
+          "profit": 23.95,
+          "commission": -0.88,
+          "swap": 0,
+          "fee": 0
+        },
+        "matched_round_trip_standard_lots": 0.10999999999999999,
+        "recorded_cost_usd_per_round_trip_standard_lot": 8.000000000000002,
+        "average_net_win": 6.6866666666666665,
+        "average_net_loss_absolute": 3.41,
+        "average_win_loss_ratio": 1.9608993157380252,
+        "longest_loss_streak": 4,
+        "final_balance": 523.07,
+        "dd_definition": "Native maximum equity drawdown amount and native maximum relative equity drawdown percent; their peaks may differ.",
+        "cost_definition": "Commission+swap+fees from matched full lifecycles, divided by opening standard lots. Actual bid/ask spread is already in net and is not subtracted again. This is recorded explicit cost, not an independently estimated spread/slippage total."
+      },
+      "proof": {
+        "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration9_20261004\\S6_BASE_AUG_D0\\verification\\2026-10-04T05-32-52-965Z\\VERIFICATION.json",
+        "sha256": "c4885b66dea64ab5c33cf53dc0f9f146b54662859464ce2e826060aaadab3b1b"
+      },
+      "source": {
+        "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration9_20261004\\S6_BASE_AUG_D0\\source\\TB500_S6_DISTINCT_TRIGGER_BE1.mq5",
+        "sha256": "956d2fec9c809b8cb60b879a7868e08b3b2114e8e7b384347777617becaf4bdf"
+      },
+      "ex5": {
+        "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration6_20261002\\S6_DISTINCT_TRIGGER_BE1_AUG\\session\\private\\builds\\e0d81b36d8d24a7fa89bcbefc3f681b4\\TB500_S6_DISTINCT_TRIGGER_BE1.ex5",
+        "sha256": "47c2a6d51306f6465746f274a52164a76dec1fc6264386cef1734cfe631ae3d0"
+      },
+      "score": {
+        "status": "SCORE_TARGETS_UNSET",
+        "total": null
+      }
+    },
+    {
+      "arm": "S6_BASE_AUG_D250",
+      "sid": "S6",
+      "candidate_id": "TB500_S6_DISTINCT_TRIGGER_BE1",
+      "origin": "NEW_I9",
+      "risk_percent": 1,
+      "risk_policy": "1% fixed ceiling",
+      "run_id": "242CFC86",
+      "conditions": {
+        "name": "I9_S6_BASE_AUG_D250",
+        "from_date": "2026.08.01",
+        "to_date": "2026.09.01",
+        "model": 4,
+        "deposit": 500,
+        "currency": "USD",
+        "symbol": "GOLD",
+        "leverage": 1000,
+        "execution_delay_ms": 250,
+        "period": "M5"
+      },
+      "account": {
+        "net_usd": 22.02,
+        "equity_dd_usd": 16.05,
+        "max_relative_equity_dd_pct": 2.982883268,
+        "native_pf": 2.9081455806,
+        "complete_position_net_pf": 2.941798941798942,
+        "complete_positions": 10,
+        "native_exit_trades": 10,
+        "win_rate_pct": 50,
+        "cost_usd": 0.8,
+        "cost_breakdown_signed": {
+          "profit": 22.82,
+          "commission": -0.8,
+          "swap": 0,
+          "fee": 0
+        },
+        "matched_round_trip_standard_lots": 0.09999999999999999,
+        "recorded_cost_usd_per_round_trip_standard_lot": 8.000000000000002,
+        "average_net_win": 6.672,
+        "average_net_loss_absolute": 2.268,
+        "average_win_loss_ratio": 2.941798941798942,
+        "longest_loss_streak": 5,
+        "final_balance": 522.02,
+        "dd_definition": "Native maximum equity drawdown amount and native maximum relative equity drawdown percent; their peaks may differ.",
+        "cost_definition": "Commission+swap+fees from matched full lifecycles, divided by opening standard lots. Actual bid/ask spread is already in net and is not subtracted again. This is recorded explicit cost, not an independently estimated spread/slippage total."
+      },
+      "proof": {
+        "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration9_20261004\\S6_BASE_AUG_D250\\verification\\2026-10-04T05-35-10-917Z\\VERIFICATION.json",
+        "sha256": "a150efbb689f2b1a18349c459e7c1b1e340f7dcdb1bf9fddc6b1bd4889ddbf56"
+      },
+      "source": {
+        "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration9_20261004\\S6_BASE_AUG_D250\\source\\TB500_S6_DISTINCT_TRIGGER_BE1.mq5",
+        "sha256": "956d2fec9c809b8cb60b879a7868e08b3b2114e8e7b384347777617becaf4bdf"
+      },
+      "ex5": {
+        "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration6_20261002\\S6_DISTINCT_TRIGGER_BE1_AUG\\session\\private\\builds\\e0d81b36d8d24a7fa89bcbefc3f681b4\\TB500_S6_DISTINCT_TRIGGER_BE1.ex5",
+        "sha256": "47c2a6d51306f6465746f274a52164a76dec1fc6264386cef1734cfe631ae3d0"
+      },
+      "score": {
+        "status": "SCORE_TARGETS_UNSET",
+        "total": null
+      }
+    },
+    {
+      "arm": "S5_AUGUST_DELAY0_L1000",
+      "month": "AUGUST",
+      "role": "MAIN",
+      "status": "ACCEPTED",
+      "run_id": "CCD0AAC1",
+      "conditions": {
+        "name": "I8_S5_AUGUST_DELAY0_L1000",
+        "from_date": "2026.08.01",
+        "to_date": "2026.09.01",
+        "model": 4,
+        "deposit": 500,
+        "currency": "USD",
+        "symbol": "GOLD",
+        "leverage": 1000,
+        "execution_delay_ms": 0,
+        "period": "M5"
+      },
+      "risk_percent": 1,
+      "account": {
+        "net_usd": 10.99,
+        "equity_dd_usd": 6.78,
+        "max_relative_equity_dd_pct": 1.346761218,
+        "native_pf": 2.4254215305,
+        "complete_position_net_pf": 2.487144790257104,
+        "complete_positions": 11,
+        "native_exit_trades": 11,
+        "win_rate_pct": 72.72727272727273,
+        "cost_usd": 0.88,
+        "cost_breakdown_signed": {
+          "profit": 11.87,
+          "commission": -0.88,
+          "swap": 0,
+          "fee": 0
+        },
+        "matched_round_trip_standard_lots": 0.10999999999999999,
+        "recorded_cost_usd_per_round_trip_standard_lot": 8.000000000000002,
+        "average_net_win": 2.2975,
+        "average_net_loss_absolute": 2.4633333333333334,
+        "average_win_loss_ratio": 0.932679296346414,
+        "longest_loss_streak": 2,
+        "final_balance": 510.99,
+        "dd_definition": "Native maximum equity drawdown amount and native maximum relative equity drawdown percent; their peaks may differ.",
+        "cost_definition": "Commission+swap+fees from matched full lifecycles, divided by opening standard lots. Actual bid/ask spread is already in net and is not subtracted again. This is recorded explicit cost, not an independently estimated spread/slippage total."
+      },
+      "contract": {
+        "currency": "USD",
+        "initial_balance": "500.0000000000",
+        "enabled_strategies": "S5",
+        "equity_sampling": "tick_extrema_and_1min_curve",
+        "strategy_id_base": "1",
+        "cost_model": "UNCALIBRATED",
+        "time_mapping": "USER_CONFIRMED",
+        "build": "6230",
+        "symbol": "GOLD",
+        "point": "0.0100000000",
+        "tick_size": "0.0100000000",
+        "volume_min": "0.0100000000",
+        "volume_step": "0.0100000000",
+        "contract_size": "100.0000000000",
+        "contract_audit": "I8_MARGIN_RUNTIME_V1",
+        "margin_buy_ok": "1",
+        "margin_buy_error": "0",
+        "margin_buy_initial": "0.0000010000",
+        "margin_buy_maintenance": "0.0000010000",
+        "margin_sell_ok": "1",
+        "margin_sell_error": "0",
+        "margin_sell_initial": "0.0000010000",
+        "margin_sell_maintenance": "0.0000010000",
+        "trade_calc_mode_ok": "1",
+        "trade_calc_mode_error": "0",
+        "trade_calc_mode": "2",
+        "account_margin_properties_ok": "1",
+        "account_margin_properties_error": "0",
+        "account_currency_digits": "2",
+        "account_margin_so_mode": "0",
+        "account_margin_so_call": "10.0000000000",
+        "account_margin_so_so": "0.0000000000",
+        "account_leverage": "1000",
+        "tester": "1"
+      },
+      "configured_delay_evidence": "CONFIGURATION_0MS_AGENT_LINE_ABSENT",
+      "finality": {
+        "schema": "I8_INDEPENDENT_NON_SUCCESS_MANAGEMENT_TERMINALS_V1",
+        "count": 0,
+        "duplicate_terminal_events_ignored": 0,
+        "successful_requests_added": 0,
+        "proofs": []
+      },
+      "reject_count": 0,
+      "execution_error_events": {},
+      "score": {
+        "total": null,
+        "status": "SCORE_TARGETS_UNSET"
+      },
+      "proof": {
+        "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration8_20261003\\S5_AUGUST_DELAY0_L1000\\verification\\2026-10-03T16-37-36-090Z\\VERIFICATION.json",
+        "sha256": "436683cabcadb543aefb7320cc0d3e90350fc8152f256be00fcd1f47d05668a1"
+      },
+      "native_receipt": {
+        "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration8_20261003\\S5_AUGUST_DELAY0_L1000\\session\\run\\native_result.json",
+        "sha256": "810afc2eec01d62f52329bdfbb2ffb25a522ef56b1d473389b9d94f6b231ba51"
+      },
+      "registration": {
+        "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration8_20261003\\S5_AUGUST_DELAY0_L1000\\REGISTRATION.json",
+        "sha256": "7adaaed5dd47fa7f99d000edbb5e6caf030095dd2d27a339b9a6e2e9024326e3"
+      },
+      "sid": "S5",
+      "candidate_id": "TB500_S5_REQUEST_FINALITY_V1",
+      "origin": "REUSED_I8_EXACT_VERSION_CONDITIONS",
+      "risk_policy": "1% fixed ceiling"
+    },
+    {
+      "arm": "S5_AUGUST_DELAY250_L1000",
+      "month": "AUGUST",
+      "role": "MAIN",
+      "status": "ACCEPTED",
+      "run_id": "10B55775",
+      "conditions": {
+        "name": "I8_S5_AUGUST_DELAY250_L1000",
+        "from_date": "2026.08.01",
+        "to_date": "2026.09.01",
+        "model": 4,
+        "deposit": 500,
+        "currency": "USD",
+        "symbol": "GOLD",
+        "leverage": 1000,
+        "execution_delay_ms": 250,
+        "period": "M5"
+      },
+      "risk_percent": 1,
+      "account": {
+        "net_usd": 11.53,
+        "equity_dd_usd": 6.83,
+        "max_relative_equity_dd_pct": 1.3561004666,
+        "native_pf": 2.535286285,
+        "complete_position_net_pf": 2.6036161335187757,
+        "complete_positions": 11,
+        "native_exit_trades": 11,
+        "win_rate_pct": 72.72727272727273,
+        "cost_usd": 0.88,
+        "cost_breakdown_signed": {
+          "profit": 12.41,
+          "commission": -0.88,
+          "swap": 0,
+          "fee": 0
+        },
+        "matched_round_trip_standard_lots": 0.10999999999999999,
+        "recorded_cost_usd_per_round_trip_standard_lot": 8.000000000000002,
+        "average_net_win": 2.34,
+        "average_net_loss_absolute": 2.396666666666667,
+        "average_win_loss_ratio": 0.9763560500695408,
+        "longest_loss_streak": 2,
+        "final_balance": 511.53,
+        "dd_definition": "Native maximum equity drawdown amount and native maximum relative equity drawdown percent; their peaks may differ.",
+        "cost_definition": "Commission+swap+fees from matched full lifecycles, divided by opening standard lots. Actual bid/ask spread is already in net and is not subtracted again. This is recorded explicit cost, not an independently estimated spread/slippage total."
+      },
+      "contract": {
+        "currency": "USD",
+        "initial_balance": "500.0000000000",
+        "enabled_strategies": "S5",
+        "equity_sampling": "tick_extrema_and_1min_curve",
+        "strategy_id_base": "1",
+        "cost_model": "UNCALIBRATED",
+        "time_mapping": "USER_CONFIRMED",
+        "build": "6230",
+        "symbol": "GOLD",
+        "point": "0.0100000000",
+        "tick_size": "0.0100000000",
+        "volume_min": "0.0100000000",
+        "volume_step": "0.0100000000",
+        "contract_size": "100.0000000000",
+        "contract_audit": "I8_MARGIN_RUNTIME_V1",
+        "margin_buy_ok": "1",
+        "margin_buy_error": "0",
+        "margin_buy_initial": "0.0000010000",
+        "margin_buy_maintenance": "0.0000010000",
+        "margin_sell_ok": "1",
+        "margin_sell_error": "0",
+        "margin_sell_initial": "0.0000010000",
+        "margin_sell_maintenance": "0.0000010000",
+        "trade_calc_mode_ok": "1",
+        "trade_calc_mode_error": "0",
+        "trade_calc_mode": "2",
+        "account_margin_properties_ok": "1",
+        "account_margin_properties_error": "0",
+        "account_currency_digits": "2",
+        "account_margin_so_mode": "0",
+        "account_margin_so_call": "10.0000000000",
+        "account_margin_so_so": "0.0000000000",
+        "account_leverage": "1000",
+        "tester": "1"
+      },
+      "configured_delay_evidence": "BOUND_NATIVE_AGENT_SETTING_250MS",
+      "finality": {
+        "schema": "I8_INDEPENDENT_NON_SUCCESS_MANAGEMENT_TERMINALS_V1",
+        "count": 0,
+        "duplicate_terminal_events_ignored": 0,
+        "successful_requests_added": 0,
+        "proofs": []
+      },
+      "reject_count": 0,
+      "execution_error_events": {},
+      "score": {
+        "total": null,
+        "status": "SCORE_TARGETS_UNSET"
+      },
+      "proof": {
+        "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration8_20261003\\S5_AUGUST_DELAY250_L1000\\verification\\2026-10-03T16-41-06-315Z\\VERIFICATION.json",
+        "sha256": "666f6ab58899cd25157997b07113a4bda35950829573f7ba41673e4fbb8ab0fa"
+      },
+      "native_receipt": {
+        "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration8_20261003\\S5_AUGUST_DELAY250_L1000\\session\\run\\native_result.json",
+        "sha256": "2643f44494eed093e1ef1367de46c0012ab6dae6e6e0905abb56cb6c24e231ae"
+      },
+      "registration": {
+        "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration8_20261003\\S5_AUGUST_DELAY250_L1000\\REGISTRATION.json",
+        "sha256": "29a3c553115595a20722ee6e61f4b899a3e7169fd3a28a813180386e6f91cd1d"
+      },
+      "sid": "S5",
+      "candidate_id": "TB500_S5_REQUEST_FINALITY_V1",
+      "origin": "REUSED_I8_EXACT_VERSION_CONDITIONS",
+      "risk_policy": "1% fixed ceiling"
+    },
+    {
+      "arm": "SCALP_AUGUST_DELAY0",
+      "sid": "Scalping",
+      "candidate_id": "TB500_Scalping_Handbook_Daily6_V1",
+      "origin": "NEW_I9",
+      "risk_percent": 2,
+      "risk_policy": "2% research; single position",
+      "run_id": "SCALPI920261004_RISK2_FIX_AUGUST_DELAY0_41fdb903",
+      "conditions": {
+        "from_date": "2026.08.01",
+        "to_date": "2026.09.01",
+        "deposit": 500,
+        "leverage": 1000,
+        "execution_delay_ms": 0
+      },
+      "account": {
+        "initial_capital_usd": 500,
+        "ending_balance_usd": 541.74,
+        "net_usd": 41.739999999999995,
+        "equity_dd_usd": 29.44,
+        "max_relative_equity_dd_pct": 5.35,
+        "complete_position_net_pf": 1.382584784601283,
+        "pf_status": "DEFINED",
+        "native_pf_report": "1.38",
+        "complete_positions": 42,
+        "wins": 27,
+        "losses": 15,
+        "gross_usd": 45.63999999999999,
+        "commission_usd": 3.900000000000002,
+        "swap_usd": 0,
+        "cost_usd": 3.900000000000002,
+        "round_trip_lots": 0.5100000000000002,
+        "cost_usd_per_round_trip_lot": 7.647058823529412,
+        "native_pf": 1.38,
+        "win_rate_pct": 64.28571428571429,
+        "matched_round_trip_standard_lots": 0.5100000000000002,
+        "recorded_cost_usd_per_round_trip_standard_lot": 7.647058823529412
+      },
+      "proof": {
+        "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration9_20261004\\Scalping\\VERIFICATION_AUGUST_DELAY0.json",
+        "sha256": "65ce5f0414bc4be3205f66e90ec3a235f0540dc36391915ef90a6160c1f0d5b5"
+      },
+      "source": {
+        "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration9_20261004\\Scalping\\source\\TB500_Scalping_Handbook_Daily6_V1.mq5",
+        "sha256": "79faf1f66caf71d5bba88c657810ca582b611c402708b113531460554ebcdc1a"
+      },
+      "ex5": {
+        "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration9_20261004\\Scalping\\source\\TB500_Scalping_Handbook_Daily6_V1.ex5",
+        "sha256": "7839163353de60b5c8534f9443600875366fb6a094d80a2b54435065842295ce"
+      },
+      "score": {
+        "status": "SCORE_TARGETS_UNSET",
+        "total": null
+      }
+    },
+    {
+      "arm": "SCALP_AUGUST_DELAY250",
+      "sid": "Scalping",
+      "candidate_id": "TB500_Scalping_Handbook_Daily6_V1",
+      "origin": "NEW_I9",
+      "risk_percent": 2,
+      "risk_policy": "2% research; single position",
+      "run_id": "SCALPI920261004_RISK2_FIX_AUGUST_DELAY250_33018e57",
+      "conditions": {
+        "from_date": "2026.08.01",
+        "to_date": "2026.09.01",
+        "deposit": 500,
+        "leverage": 1000,
+        "execution_delay_ms": 250
+      },
+      "account": {
+        "initial_capital_usd": 500,
+        "ending_balance_usd": 548.05,
+        "net_usd": 48.050000000000004,
+        "equity_dd_usd": 29.21,
+        "max_relative_equity_dd_pct": 5.3,
+        "complete_position_net_pf": 1.4399780239904774,
+        "pf_status": "DEFINED",
+        "native_pf_report": "1.44",
+        "complete_positions": 42,
+        "wins": 27,
+        "losses": 15,
+        "gross_usd": 52.01,
+        "commission_usd": 3.960000000000002,
+        "swap_usd": 0,
+        "cost_usd": 3.960000000000002,
+        "round_trip_lots": 0.5200000000000002,
+        "cost_usd_per_round_trip_lot": 7.615384615384616,
+        "native_pf": 1.44,
+        "win_rate_pct": 64.28571428571429,
+        "matched_round_trip_standard_lots": 0.5200000000000002,
+        "recorded_cost_usd_per_round_trip_standard_lot": 7.615384615384616
+      },
+      "proof": {
+        "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration9_20261004\\Scalping\\VERIFICATION_AUGUST_DELAY250.json",
+        "sha256": "d9c3cd283cc22a2683337d15955d8c617f008d1ab28269ef305d3dd5cf89bcd8"
+      },
+      "source": {
+        "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration9_20261004\\Scalping\\source\\TB500_Scalping_Handbook_Daily6_V1.mq5",
+        "sha256": "79faf1f66caf71d5bba88c657810ca582b611c402708b113531460554ebcdc1a"
+      },
+      "ex5": {
+        "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration9_20261004\\Scalping\\source\\TB500_Scalping_Handbook_Daily6_V1.ex5",
+        "sha256": "7839163353de60b5c8534f9443600875366fb6a094d80a2b54435065842295ce"
+      },
+      "score": {
+        "status": "SCORE_TARGETS_UNSET",
+        "total": null
+      }
+    }
+  ],
+  "comparisons": [
+    {
+      "candidate": "S1_RISK2_AUG_D0",
+      "reference": "S1_BASE_AUG_D0",
+      "net_usd": 70.26,
+      "equity_dd_usd": 35.290000000000006,
+      "max_relative_dd_percentage_points": 4.3721609956,
+      "cost_usd": 3.749999999999999,
+      "complete_positions": 9
+    },
+    {
+      "candidate": "S1_DYNAMIC_AUG_D0",
+      "reference": "S1_RISK2_AUG_D0",
+      "net_usd": -46.61,
+      "equity_dd_usd": -21.1,
+      "max_relative_dd_percentage_points": -2.3730358526,
+      "cost_usd": -2.0699999999999994,
+      "complete_positions": -2
+    },
+    {
+      "candidate": "S1_DYNAMIC_AUG_D0",
+      "reference": "S1_BASE_AUG_D0",
+      "net_usd": 23.650000000000006,
+      "equity_dd_usd": 14.190000000000005,
+      "max_relative_dd_percentage_points": 1.9991251429999997,
+      "cost_usd": 1.6799999999999997,
+      "complete_positions": 7
+    },
+    {
+      "candidate": "S2_PROGRESS_AUG_D0",
+      "reference": "S2_BASE_AUG_D0",
+      "net_usd": -0.5099999999999998,
+      "equity_dd_usd": 4.04,
+      "max_relative_dd_percentage_points": 0.7891984785000001,
+      "cost_usd": 0,
+      "complete_positions": 0
+    },
+    {
+      "candidate": "S1_RISK2_AUG_D250",
+      "reference": "S1_BASE_AUG_D250",
+      "net_usd": 46.07999999999999,
+      "equity_dd_usd": 33.910000000000004,
+      "max_relative_dd_percentage_points": 4.591909468200001,
+      "cost_usd": 2.6799999999999997,
+      "complete_positions": -2
+    },
+    {
+      "candidate": "S1_DYNAMIC_AUG_D250",
+      "reference": "S1_RISK2_AUG_D250",
+      "net_usd": -17.989999999999995,
+      "equity_dd_usd": -19.880000000000003,
+      "max_relative_dd_percentage_points": -2.6468580387000005,
+      "cost_usd": -0.9100000000000001,
+      "complete_positions": 10
+    },
+    {
+      "candidate": "S1_DYNAMIC_AUG_D250",
+      "reference": "S1_BASE_AUG_D250",
+      "net_usd": 28.089999999999996,
+      "equity_dd_usd": 14.030000000000001,
+      "max_relative_dd_percentage_points": 1.9450514295000003,
+      "cost_usd": 1.7699999999999996,
+      "complete_positions": 8
+    },
+    {
+      "candidate": "S2_PROGRESS_AUG_D250",
+      "reference": "S2_BASE_AUG_D250",
+      "net_usd": -0.75,
+      "equity_dd_usd": 4.04,
+      "max_relative_dd_percentage_points": 0.7897820779,
+      "cost_usd": 0,
+      "complete_positions": 0
+    }
+  ],
+  "score": {
+    "weights_percent": {
+      "net_usd": 35,
+      "equity_dd": 25,
+      "pf": 20,
+      "complete_trades": 10,
+      "cost_per_round_trip_lot": 10
+    },
+    "anchors": null,
+    "components": null,
+    "total": null,
+    "status": "SCORE_TARGETS_UNSET"
+  },
+  "validation": {
+    "native_source_defaults_accounting": true,
+    "csharp_compiled": true,
+    "csharp_pure_assertions": 67,
+    "lean_replay": "BLOCKED_WINDOWS_APPLICATION_CONTROL_0x800711C7",
+    "full_risk_fill_exit_migration": false,
+    "cross_engine_acceptance": false,
+    "independent_oos": false,
+    "new_double_cost_stress": false,
+    "portfolio": false,
+    "withdrawals": false,
+    "demo_forward": false,
+    "champion": false,
+    "chart_deployed": false,
+    "live_ready": false
+  }
+}
