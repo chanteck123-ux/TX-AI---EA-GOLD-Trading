@@ -1,0 +1,130 @@
+{
+  "schema": "I11_ROOT_FINAL_BOUNDED_RESEARCH_REVIEW",
+  "status": "PASS_BOUNDED_RESEARCH_DELIVERY",
+  "created_utc": "2026-10-04T10:32:19.469Z",
+  "results": {
+    "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration11_20261004\\FINAL_RESULTS.json",
+    "sha256": "74ff01aedcc3577248563763984ab587476fe8980e64e312e03c392662fa723b"
+  },
+  "decisions": {
+    "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration11_20261004\\DECISIONS.json",
+    "sha256": "ebeab8b8eb64e6661e233b82a26b7313c2c8d7b982e4e7a847e16e9348cb5fd1"
+  },
+  "builds": {
+    "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration11_20261004\\BUILD_INDEX.json",
+    "sha256": "21970e36bc2a9dd852d857227aa34b82b85cdd2e58fc2e46ea0d93f5a6c80007"
+  },
+  "reports": {
+    "cn": {
+      "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration11_20261004\\REPORT_CN.md",
+      "sha256": "dc9a212f7818038907bfeebe131259bd02f8e52282e9afe1013e6b9d16532666"
+    },
+    "en": {
+      "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration11_20261004\\REPORT_EN.md",
+      "sha256": "eba22d0c5938ef95fc518ff16bf1380f25a5a72d2e314e3c9e480b7c4427bb48"
+    }
+  },
+  "independent_reviews": [
+    {
+      "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration11_20261004\\Review\\FINAL_REPORT_INDEPENDENT_REVIEW.json",
+      "sha256": "b2999346fa286858ca51e5a8a1dc805a3510dea9ca888099d47eb55d01ebf403",
+      "status": "PASS_FINAL_NUMBERS_AND_STATUS_NO_BLOCKER"
+    },
+    {
+      "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration11_20261004\\Review\\COLLECTOR_V2_INDEPENDENT_REVIEW.json",
+      "sha256": "d0f7a7af8edf5fc986f32be7d7e984621665aa3bde1c88203c6bbe8975ec9d5a",
+      "status": "PASS_BOUNDED_AGGREGATION_REVIEW"
+    },
+    {
+      "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration11_20261004\\Review\\PACKAGING_TOOLS_INDEPENDENT_REVIEW.json",
+      "sha256": "a1e3ee6d475dab29018456d0d58952dc131398fba06295df0707076ec3d1bfe4",
+      "status": "PASS_WITH_LIMITATIONS"
+    },
+    {
+      "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration11_20261004\\Review\\SCALP_DD_RUNTIME_FINAL_RECEIPT.json",
+      "sha256": "e35a66bb8031f5f8b6dce8f2cb9e7fe42dfde73e050446950ac1e6ace0cd126a",
+      "status": "PASS_THREE_NATIVE_DD_RESEARCH_ARMS"
+    },
+    {
+      "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration11_20261004\\Review\\SCALP_DD15_INDEPENDENT_SOURCE_REVIEW.json",
+      "sha256": "be42cf41bde17590fa5b870408fad23fc7886ec3d8e9d7b014d8396441604112",
+      "status": "PASS_WITH_LIMITATIONS"
+    },
+    {
+      "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration11_20261004\\Review\\S2_STAGE_B_STATIC_REVIEW.json",
+      "sha256": "90f63892beee85de5133d9180196833ed25fba1dba447396e0c9ab0752e5d62a",
+      "status": "PASS_STATIC_SOURCE_AND_DEFAULTS_NOT_NATIVE_VALIDATION"
+    },
+    {
+      "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration11_20261004\\Review\\S2_SAMECLOSE_RISK2_INDEPENDENT_STATIC_REVIEW.json",
+      "sha256": "dccb6c153a158baceabeb53fc25499412317f8c0a4537b9814cb43852a654563",
+      "status": "PASS_WITH_LIMITATIONS"
+    },
+    {
+      "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration11_20261004\\S2\\STAGE_B_FINAL_REVIEW_RECEIPT.json",
+      "sha256": "5d5e4503371e3825e7caaf7f4d7faa4a587fc4508b8f0bdf9c2626be3afe4c3a",
+      "status": "PASS_READONLY_FINAL_NATIVE_AND_EXIT_CHAIN_REVIEW"
+    },
+    {
+      "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration11_20261004\\S2\\STAGE_A_SELECTION_RECOMMENDATION.json",
+      "sha256": "0e0bc2bc693dc941d5dbf200a5e4ae244508e7f9978acf696ea2d0f227599611",
+      "status": "ALL_STAGE_A_EVIDENCE_REVIEWED_RECOMMEND_INCUMBENT_NOT_PROMOTION"
+    }
+  ],
+  "native_idle": {
+    "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration11_20261004\\NATIVE_IDLE_FINAL.json",
+    "sha256": "763e1ef213f22961ad192a082f500a11f4fb9ad76249aee1525a96a40084145b"
+  },
+  "counts": {
+    "expected_new_native": 9,
+    "new_native_verified": 9,
+    "reused_verified": 19,
+    "total_reported": 28,
+    "pending_new": 0,
+    "invalid": 0,
+    "shared_native_attempts": 9,
+    "max_native_budget": 12
+  },
+  "score": {
+    "weights": [
+      35,
+      25,
+      20,
+      10,
+      10
+    ],
+    "total": null,
+    "status": "SCORE_TARGETS_UNSET",
+    "anchors": {
+      "P_target": null,
+      "D_good": null,
+      "D_bad": null,
+      "F_target": null,
+      "N_target": null,
+      "C_good": null,
+      "C_bad": null
+    }
+  },
+  "validation": {
+    "independent_oos": false,
+    "cost_stress": false,
+    "portfolio": false,
+    "withdrawals": false,
+    "lean_new_runs": 0,
+    "full_cross_engine_migration": false,
+    "demo_forward": false,
+    "champion": false,
+    "chart_deployed": false,
+    "live_ready": false
+  },
+  "limits": [
+    "Research selection is not project acceptance or live permission.",
+    "Only32 pure MQL DD policy assertions perScalp run; real native close observed inJune, no native fault/restart coverage.",
+    "S2 result improvement has only1/2 complete trades per primary window; do not infer future win probability.",
+    "EA-recorded DD threshold arithmetic and native DD statistics are separate witnesses; no full equity-sample replay."
+  ],
+  "generator": {
+    "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration11_20261004\\create_final_review.mjs",
+    "sha256": "a3e320c016c71fa263b5e4f704011e0d781f060485aa133e0e7ca540b77b366c"
+  }
+}

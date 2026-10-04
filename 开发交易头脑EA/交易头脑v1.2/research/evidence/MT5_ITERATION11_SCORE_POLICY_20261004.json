@@ -1,0 +1,20 @@
+{
+  "weights": [
+    35,
+    25,
+    20,
+    10,
+    10
+  ],
+  "total": null,
+  "status": "SCORE_TARGETS_UNSET",
+  "anchors": {
+    "P_target": null,
+    "D_good": null,
+    "D_bad": null,
+    "F_target": null,
+    "N_target": null,
+    "C_good": null,
+    "C_bad": null
+  }
+}

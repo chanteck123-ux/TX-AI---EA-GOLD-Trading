@@ -1,0 +1,124 @@
+{
+  "schema": "I11_ROOT_RESEARCH_DECISIONS",
+  "created_utc": "2026-10-04T10:23:49.859Z",
+  "results": {
+    "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration11_20261004\\FINAL_RESULTS.json",
+    "sha256": "74ff01aedcc3577248563763984ab587476fe8980e64e312e03c392662fa723b"
+  },
+  "scope": "RESEARCH_SELECTION_ONLY_NO_CHAMPION_OR_DEPLOYMENT",
+  "conclusion_cn": "本轮有改善的是S2：推进确认2%加原有1R保本后，六月净利仍14.84美元；八月250ms从14.28升至19.40美元，最大净值回撤从17.17降至12.05美元，显式费用不变。列为后续研究主候选，但两个月只有1／2笔，不能认定稳定盈利。改成同收盘确认的2%候选未胜出。Scalping新增15%累计回撤管理已实际触发、平仓并保持锁定；六月净亏65.85美元，比原版多亏2.06，原生最大净值回撤减少5.88美元，八月不变。S1、S3、S4、S5、S6保留原研究版本，七套都没有晋级Champion或部署实盘。",
+  "conclusion_en": "S2 improves in this development comparison: progress confirmation at2% with existing1R BE keeps June netUSD14.84 and increases August250ms net from14.28 to19.40, while maximum equityDD falls from17.17 to12.05 at unchanged explicit cost. Retain as the next research lead with only1/2 trades, not stable-profit acceptance. Same-close2% did not beat the incumbent. Scalping DD15 triggered, closed and stayed locked: June net−65.85,2.06 worse than parent, native equityDD5.88 lower; August unchanged. S1/S3/S4/S5/S6 remain prior research references. No Champion or live deployment.",
+  "s2_exit_conclusion_cn": "新保本组合在八月250ms把原短单−5.11美元改成＋0.01美元：请求SL4333.95，实际4333.97成交，毛利0.09减佣金0.08；滑点仍会影响净保本。H4多单仍赚19.39美元，两笔费用合计0.16不变。八月0ms净利19.34美元，另作同版延迟对照。六月唯一单和八月两单都有保本请求及服务器接受后的SL读回，六月单和八月多单仍按原TP离场。风险比例算法、初始SL／TP和实际手数保持；第二笔预算会因先前损益不同而改变（八月250ms为9.8978→10.0002美元），不能说所有实际预算金额都相同。保本触发报价未作独立逐Tick重放；历史费用读取失败的旧模块局限仍在，不宣称净收益绝不亏。",
+  "s2_exit_conclusion_en": "At August250ms the short changes from−5.11 to+0.01USD: requestedSL4333.95, actualexit4333.97, gross0.09 minus0.08 commission. The H4 long remains+19.39 and total fees0.16. August0ms net is19.34USD. All three June/August250ms positions show accepted BE modifications with EA SL readback; June and the August long still exit at originalTP. Risk-percentage policy and initialSL/TP/actual lots stay fixed, while path-dependent second-trade budget changes9.8978→10.0002USD. No independent tick-by-tick trigger-quote replay or guaranteed net breakeven; the inherited fee-history failure limitation remains.",
+  "strategies": [
+    {
+      "sid": "S1",
+      "profile_cn": "原1%，原保本退出",
+      "profile_en": "Original1%, existing BE exit",
+      "june_arm": "S1_BASE_JUNE_D250",
+      "aug_arm": "S1_BASE_AUG_D250",
+      "decision_cn": "保留；新动态恢复版未稳定改善",
+      "decision_en": "Retain; new recovery candidate not consistently better",
+      "status": "RETAINED_RESEARCH_REFERENCE_NOT_LIVE_READY"
+    },
+    {
+      "sid": "S2",
+      "profile_cn": "推进确认2%上限＋1R成本估算保本",
+      "profile_en": "Progress2% ceiling plus existing cost-estimated BE at1R",
+      "june_arm": "S2_PROGRESS_RISK2_BE1_JUNE_D250",
+      "aug_arm": "S2_PROGRESS_RISK2_BE1_AUG_D250",
+      "decision_cn": "列为新研究主候选；六月不变、八月净利及回撤改善，仍仅1／2笔。原推进2%及1%源／EX5保留，未晋级。",
+      "decision_en": "New development lead: unchanged June and improved August net/DD at equal count/cost; only1/2 trades. Original progress2% and1% rollback preserved; not promoted.",
+      "status": "NEW_RESEARCH_LEAD_SAMPLE_LIMITED_NOT_PROMOTED"
+    },
+    {
+      "sid": "S3",
+      "profile_cn": "原1%，保留成交超风险修正",
+      "profile_en": "Original1%, retain fill-risk overrun correction",
+      "june_arm": "S3_BASE_JUNE_D250",
+      "aug_arm": "S3_BASE_AUG_D250",
+      "decision_cn": "保留；不按单笔历史结果调入场缓冲",
+      "decision_en": "Retain; no buffer fitted to one historical trade",
+      "status": "RETAINED_RESEARCH_REFERENCE_NOT_LIVE_READY"
+    },
+    {
+      "sid": "S4",
+      "profile_cn": "原2%",
+      "profile_en": "Original2%",
+      "june_arm": "S4_BASE_JUNE_D250",
+      "aug_arm": "S4_BASE_AUG_D250",
+      "decision_cn": "保留；六月3次日暂停均恢复",
+      "decision_en": "Retain; all3 June daily pauses resumed",
+      "status": "RETAINED_RESEARCH_REFERENCE_NOT_LIVE_READY"
+    },
+    {
+      "sid": "S5",
+      "profile_cn": "原1%",
+      "profile_en": "Original1%",
+      "june_arm": "S5_JUNE_DELAY250_L1000",
+      "aug_arm": "S5_AUGUST_DELAY250_L1000",
+      "decision_cn": "同源同条件复用；样本仍少",
+      "decision_en": "Exact-version evidence reused; few trades",
+      "status": "RETAINED_RESEARCH_REFERENCE_NOT_LIVE_READY"
+    },
+    {
+      "sid": "S6",
+      "profile_cn": "原1%",
+      "profile_en": "Original1%",
+      "june_arm": "S6_BASE_JUNE_D250",
+      "aug_arm": "S6_BASE_AUG_D250",
+      "decision_cn": "保留；六月无日暂停／紧急锁",
+      "decision_en": "Retain; no June daily pause/emergency lock",
+      "status": "RETAINED_RESEARCH_REFERENCE_NOT_LIVE_READY"
+    },
+    {
+      "sid": "Scalping",
+      "profile_cn": "原手册2%／亏损基线，DD15候选另存",
+      "profile_en": "Original handbook2% losing reference; DD15 risk candidate retained separately",
+      "june_arm": "SCALP_JUN_D250",
+      "aug_arm": "SCALP_AUGUST_DELAY250",
+      "decision_cn": "原版保留作净利基线；DD15降低六月回撤但多亏2.06，两者均未通过跨期盈利复查。",
+      "decision_en": "Keep the original net-profit reference. DD15 lowers June DD but loses2.06 more; neither passes cross-period profitability review.",
+      "status": "FAILED_CROSS_PERIOD_PROFITABILITY_REFERENCE"
+    }
+  ],
+  "additional_risk_candidate": {
+    "sid": "Scalping",
+    "candidate_id": "TB500_Scalping_DD15_I11",
+    "status": "OBSERVED_RISK_GUARD_NOT_PROFIT_IMPROVEMENT",
+    "june_arm": "SCALP_DD15_JUN_D250",
+    "aug_arm": "SCALP_DD15_AUG_D250",
+    "reason": "Keep original net-profit baseline and separate DD15 candidate; protection reduces observed native DD but June profitability remains negative."
+  },
+  "next_research_priority": [
+    "冻结S2推进2%＋1R保本候选，先盘点哪些数据未参与选择，再登记跨期与成本／延迟验证；保留原2%退出回退",
+    "Scalping先按行情与位置归因六月亏损，下一批只登记有依据的单项对照；不靠继续抬风险或事后改DD阈值制造盈利",
+    "S1核查单笔盈利集中度，S3／S5／S6扩展已登记样本覆盖和触发漏斗；S4保留同条件净利参考，七策略并发及提款另测"
+  ],
+  "score": {
+    "weights": [
+      35,
+      25,
+      20,
+      10,
+      10
+    ],
+    "total": null,
+    "status": "SCORE_TARGETS_UNSET",
+    "anchors": {
+      "P_target": null,
+      "D_good": null,
+      "D_bad": null,
+      "F_target": null,
+      "N_target": null,
+      "C_good": null,
+      "C_bad": null
+    }
+  },
+  "champion": false,
+  "live_deployment": false,
+  "generator": {
+    "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration11_20261004\\create_decisions.mjs",
+    "sha256": "62a7885e39c8fb8c69d84c21b52786beb50693dc647f8515890833a22c521f61"
+  }
+}

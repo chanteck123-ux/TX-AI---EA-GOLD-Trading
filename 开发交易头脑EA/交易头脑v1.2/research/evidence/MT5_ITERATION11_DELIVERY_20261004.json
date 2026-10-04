@@ -1,0 +1,20 @@
+{
+  "members": 955,
+  "demo_forward": false,
+  "schema": "I11_DELIVERY_RECEIPT",
+  "ea_pairs": 11,
+  "compiler_new_candidates": 3,
+  "zip_bytes": 28014361,
+  "chart_installed": false,
+  "zip": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\outputs\\TradingBrain_I11_Seven_Strategies_20261004.zip",
+  "verified_utc": "2026-10-04T10:32:37.6034306Z",
+  "manifest_sha256": "16988632a02cc1ac17c04ea077167225e266b560cf172e5d3ed0ea3aa1b2d188",
+  "new_native_runs": 9,
+  "results_sha256": "74ff01aedcc3577248563763984ab587476fe8980e64e312e03c392662fa723b",
+  "live_ready": false,
+  "reused_results": 19,
+  "directory": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\outputs\\TradingBrain_I11_Seven_Strategies_20261004",
+  "zip_sha256": "aaaae4071d2837eb94b6db1aeeb2f04f8cd2378995e1f053bf6f5788c264e37b",
+  "status": "ZIP_ALL_DECOMPRESSED_MEMBERS_HASH_VERIFIED_NO_DEPLOYMENT",
+  "review_sha256": "55e9f229d6489e25b8d2252090552bf2d7a5c47fb006486cf80f79cc46fa3731"
+}

@@ -1,0 +1,123 @@
+{
+  "schema": "I11_SEVEN_STRATEGY_PROTOCOL_V1",
+  "created_utc": "2026-10-04T09:57:13.001Z",
+  "batch_id": "I11_S2_EQUAL_RISK_ENTRY_AND_SCALP_EQUITY_LOCK",
+  "mode": "CODEX_ONLY",
+  "authorization": "Current continuing seven-strategy task; user explicitly requested Codex only and flexible research risk. No live or Demo changes.",
+  "plan": {
+    "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\new-chat\\work\\plan-replacement\\repository\\开发交易头脑EA\\交易头脑v1.2\\docs\\PLAN_CN.md",
+    "sha256": "61fc4a7ea46a673b7afdb713673083c983260d5cc14e20d28b43e8bf2e69e4c2"
+  },
+  "plan_repository_commit": "5718ef82fab53f6a97e047b5b6330cb6636508ff",
+  "indicator_repository_commit": "c1a0021f2a6db562f9e791e620c08352a743e6ca",
+  "parent_result": {
+    "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration10_20261004\\FINAL_RESULTS.json",
+    "sha256": "85d3df9240a056ae8f303fb0182ef6e2879f714d89743ae7c1bf1eb4cb8ac1f1"
+  },
+  "parent_recovery_delivery": {
+    "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration10_20261004\\DELIVERY_RECEIPT.json",
+    "sha256": "1866a9066c4ae4e251d1e02bd4f2eb83ec3652160ead16f3ace42f27609771fc"
+  },
+  "conditions": {
+    "deposit": 500,
+    "currency": "USD",
+    "symbol": "GOLD",
+    "period": "M5",
+    "model": 4,
+    "leverage": 1000,
+    "main_delay_ms": 250,
+    "diagnostic_delay_ms": 0,
+    "data_role": "ALREADY_USED_DEVELOPMENT",
+    "windows": {
+      "JUNE": {
+        "from_date": "2026.06.01",
+        "to_date": "2026.07.01",
+        "expected_ticks": 23679824,
+        "expected_bars": 6023,
+        "identity_evidence": {
+          "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration8_20261003\\S5_JUNE_DELAY250_L1000\\session\\run\\data_quality.json",
+          "sha256": "6e5218a11d92f7e5a6568da7113f8ca8c8345f7287ef77e858b1f940d0234b95"
+        },
+        "journal": {
+          "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration8_20261003\\S5_JUNE_DELAY250_L1000\\session\\run\\tester_journal.log",
+          "sha256": "6c047a992ca67f21f661335db104b48ee4cfde90e0d5243c93a54787201178b6"
+        }
+      },
+      "AUG": {
+        "from_date": "2026.08.01",
+        "to_date": "2026.09.01",
+        "expected_ticks": 20513403,
+        "expected_bars": 5796
+      }
+    }
+  },
+  "objectives": [
+    "S2: compare retained same-close entry profile at2% with already-tested progress2% under identical conditions; original1% remains separate risk reference.",
+    "Scalping: independently compare cumulative peak-equity15% emergency lock with unchanged handbook parent; retain M5 SND retest/closed reversal,5price SL/TP,2% single risk,3% account risk,one position and server-day6win OR6loss.",
+    "Conditional S2 exit study: after stageA freeze one2% entry profile then compare existing BE-only1R to its unchanged exit baseline; never add prior1% BE benefit to2% result.",
+    "Retain frozen S1/S3/S4/S5/S6 and exact previous evidence; no redundant reruns."
+  ],
+  "candidate_limit": 3,
+  "registered_candidates": [
+    "S2_SAMECLOSE_RISK2",
+    "SCALP_PEAK_DD15_ZERO_FLOW"
+  ],
+  "conditional_candidate": "S2_SELECTED_RISK2_BE1 only after separately hashed stageB selection/registration before native launch",
+  "comparison_policy": {
+    "main": "June250ms andAugust250ms each compared to exact source parent/equal-risk entry control. August0ms is delay diagnostic, not a selection substitute.",
+    "s2_selection": "Prefer existing progress2% if challenger is inferior in either development month without compensating overall risk/cost evidence. Consider both month netUSD, DDUSD/relative, costs and lifecycle count; sparse samples are diagnostic only. If mixed or no clear advantage, preserve incumbent and mark inconclusive.",
+    "scalp": "Threshold fixed15% before tests; no post-result threshold sweep. Equity lock may reduce/increase realized loss and remaining opportunity; actual emergency exit and whole-window lock must be verified. No future maximum-loss guarantee.",
+    "reuse": "Exact source/EX5/defaults/scenario identity only; all reused result IDs explicit.",
+    "decision": "No candidate promotion on only one month or gross profit. Report netUSD, native/netPF, equityDDUSD and relative%, complete lifecycles, explicit cost per matched roundtrip lot, emergency/day operation, and per-month deltas. Sparse samples remain diagnostic.",
+    "score": {
+      "weights": [
+        35,
+        25,
+        20,
+        10,
+        10
+      ],
+      "total": null,
+      "status": "SCORE_TARGETS_UNSET",
+      "anchors": {
+        "P_target": null,
+        "D_good": null,
+        "D_bad": null,
+        "F_target": null,
+        "N_target": null,
+        "C_good": null,
+        "C_bad": null
+      }
+    }
+  },
+  "scalp_scope": {
+    "threshold_percent": 15,
+    "cashflow": "Zero-external-cash-flow independentUSD500. Unique initial500 deposit accepted; later deposit/withdrawal/credit/unknown cash adjustment sets persistent CASHFLOW_UNSUPPORTED_LOCK, does not reset peak. This is not a complete cashflow-adjusted or withdrawal implementation.",
+    "priority": "Existing protection/reconciliation and DD emergency management run ahead of all entry filters. DD lock may cancel/close only owned orders/positions; whole-account equity is observed.",
+    "lock": "DD emergency lock persists to end of frozen window; source state loss/corruption fails closed; no automatic recovery.",
+    "failure": "Unknown/rejected cancellation or exit remains locked, reconciled before retry. Native fault/restart behavior reported separately from embedded policy assertions."
+  },
+  "budget": {
+    "native_main_runs_max": 9,
+    "native_engineering_reserve": 3,
+    "native_total_max": 12,
+    "source_candidates_max": 3,
+    "wall_clock_minutes": 150,
+    "failed_attempts_count": true,
+    "lean_new_runs": 0
+  },
+  "terminal": "C:/Users/A/AppData/Roaming/MetaQuotes/Terminal/523FF71FCA93BC15AC28868379E0D478",
+  "terminal_mode": "/portable",
+  "terminal_owner": "root serial only",
+  "limitations": [
+    "LEAN blocked0x800711C7; this batch native risk/exit execution research, signal C# layer unchanged; not cross-engine accepted.",
+    "Tester margin rate1e-6/StopOut0 and full historical friction not calibrated.",
+    "No new independentOOS/coststress/portfolio/withdrawal/Demo/live claims.",
+    "Independent500 accounts and reset windows cannot be summed into an account path.",
+    "Scalping zero-external-cash-flow DD candidate is not withdrawal validation;15% is an action trigger, not a hard future loss cap."
+  ],
+  "generator": {
+    "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration11_20261004\\bootstrap_i11.mjs",
+    "sha256": "64e25f6a3b4372478da5c3ee070eb73f4e26c3c1575200fa4865fe25c6aec5d2"
+  }
+}
