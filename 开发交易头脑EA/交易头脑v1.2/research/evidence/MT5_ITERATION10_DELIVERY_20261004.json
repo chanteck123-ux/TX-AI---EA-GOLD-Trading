@@ -1,0 +1,20 @@
+{
+  "zip": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\outputs\\TradingBrain_I10_Seven_Strategies_20261004.zip",
+  "zip_sha256": "5913098788f038519e654ed7add274b28bbd945b58e414b1fb4bf24d3af138f4",
+  "schema": "I10_DELIVERY_RECEIPT",
+  "status": "ZIP_ALL_DECOMPRESSED_MEMBERS_HASH_VERIFIED_NO_DEPLOYMENT",
+  "review_sha256": "0d915181023924dde2d70471d30043f95f1b074a9e8e4d306168ef39759bd0a4",
+  "manifest_sha256": "84c65f096be6db8f652410a72c69d813329e0f354da6ce36d88f3c3a70386296",
+  "demo_forward": false,
+  "reused_results": 12,
+  "directory": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\outputs\\TradingBrain_I10_Seven_Strategies_20261004",
+  "members": 1040,
+  "chart_installed": false,
+  "compiler_new_candidates": 3,
+  "ea_pairs": 12,
+  "verified_utc": "2026-10-04T08:40:46.5353757Z",
+  "results_sha256": "85d3df9240a056ae8f303fb0182ef6e2879f714d89743ae7c1bf1eb4cb8ac1f1",
+  "live_ready": false,
+  "new_native_runs": 17,
+  "zip_bytes": 32275227
+}

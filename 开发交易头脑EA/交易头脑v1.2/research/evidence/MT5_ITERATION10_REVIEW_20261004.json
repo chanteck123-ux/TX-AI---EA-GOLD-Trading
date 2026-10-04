@@ -1,0 +1,258 @@
+{
+  "schema": "I10_FINAL_ROOT_REVIEW_V1",
+  "created_utc": "2026-10-04T08:40:34.955Z",
+  "status": "PASS_BOUNDED_RESEARCH_DELIVERY",
+  "results": {
+    "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration10_20261004\\FINAL_RESULTS.json",
+    "sha256": "85d3df9240a056ae8f303fb0182ef6e2879f714d89743ae7c1bf1eb4cb8ac1f1"
+  },
+  "decisions": {
+    "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration10_20261004\\DECISIONS.json",
+    "sha256": "121cd187a8d61dd51ed3edc339e021a5e419ed8bc7fe1d0b6b885eae0d77327f"
+  },
+  "reports": {
+    "cn": {
+      "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration10_20261004\\REPORT_CN.md",
+      "sha256": "3dcc67eab131269fdf837490b3c183625c7ca7e56943aa6f0b41293301ad8197"
+    },
+    "en": {
+      "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration10_20261004\\REPORT_EN.md",
+      "sha256": "e6039ae671f8c0920dc56d30d28103d65e87950b5e4434b95d2c694e4b8caae0"
+    }
+  },
+  "independent_report_review": {
+    "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration10_20261004\\S13\\FINAL_CONTENT_INDEPENDENT_REVIEW.json",
+    "sha256": "d985a58652a10ef87c969986b77d0c601cdef3b3e6ba48832c57aaa540f579f8"
+  },
+  "reviews": [
+    {
+      "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration10_20261004\\ROOT_PRECOMPILE_REVIEW.json",
+      "sha256": "f9aa0ea4babc0c5c710514c8d4166dc7a64658250e397c16a96a3718a5f98319",
+      "status": "PASS_REGISTERED_NATIVE_RESEARCH_SCOPE_ONLY"
+    },
+    {
+      "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration10_20261004\\VERIFIER_INDEPENDENT_REVIEW.json",
+      "sha256": "e3d3dd7f73a14c4619e9499408a2ad8a829daeefa619c49d294fb6f538018442",
+      "status": "PASS_EXACT_DECLARED_DERIVATION_AND_STATIC_SCOPE_NO_NATIVE"
+    },
+    {
+      "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration10_20261004\\FINALIZE_RESULTS_V2_GUARD_TESTS.json",
+      "sha256": "4848a8e97fd2448f851da3e8a9d702e74dfc3433ebafab2b52fd1a7dfd3bb1c6",
+      "status": "PASS"
+    },
+    {
+      "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration10_20261004\\S13\\COLLECTOR_V2_INDEPENDENT_REVIEW.json",
+      "sha256": "a659958728f5ce8265ff286e4afe4b0e51613b5f9aceafa1b12708d570a41bf8",
+      "status": "PASS_READONLY_SCOPE_NO_BLOCKER"
+    },
+    {
+      "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration10_20261004\\S13\\result_snapshots\\2026-10-04T08-16-42-024Z\\S1_ACTIVE_INDEPENDENT_REVIEW.json",
+      "sha256": "ab24d88788ce7a65eed9e6d756109535a3a007a0e257659ecc24c122c4b820d8",
+      "status": "PASS_SUPPLEMENTAL_POLICY_AND_ACCOUNTING_REVIEW"
+    },
+    {
+      "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration10_20261004\\S13\\attribution_snapshots\\2026-10-04T08-16-57-133Z\\S1_ACTIVE_TRADE_ATTRIBUTION.json",
+      "sha256": "e66123cf16cb85632594b76c663e2c750eb45e74f4e2dc5e54a59620d46b20e5",
+      "status": "PASS_PAIRED_NATIVE_LIFECYCLE_DECOMPOSITION"
+    },
+    {
+      "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration10_20261004\\S13\\operation_snapshots\\2026-10-04T08-01-06-650Z\\S4_S6_JUNE_OPERATIONS_REVIEW.json",
+      "sha256": "d8667b99878e0449295ccc5e63c90a5df0a7f3701a65f0499713e055635e79cb",
+      "status": "PASS_SUPPLEMENTAL_READONLY_OPERATIONS_AND_ACCOUNTING_REVIEW"
+    },
+    {
+      "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration10_20261004\\S2\\S2_FINAL_REVIEW_RECEIPT.json",
+      "sha256": "38199d515a0251191d87fdcc62812365691a19ddedc218c26d7a94741ba31f03",
+      "status": "PASS_FINAL_READONLY_REVIEW_WITH_RESEARCH_LIMITS"
+    },
+    {
+      "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration10_20261004\\S2\\result_snapshots\\2026-10-04T08-34-04-898Z\\S2_RESULTS_REVIEW.json",
+      "sha256": "7ed96afc4f57cd58d166ce5967f11400872d267ad6e9b0ee97bde306a8bc8730",
+      "status": "ALL_S2_ARMS_REVIEWED"
+    },
+    {
+      "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration10_20261004\\Scalping\\observed_review\\JUNE_DELAY250\\RESULT.json",
+      "sha256": "1934b4e2a14895c50fcf143058cda30e46fcfd6bc81467114404dafcb9f63959",
+      "status": "PASS_OBSERVED_PROTECTION_DAILY_COUNTER_AND_FEES"
+    },
+    {
+      "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration10_20261004\\Scalping\\SCALPING_RISK_SCOPE_REVIEW.json",
+      "sha256": "8e87eb60281e1af6a592161f29d17ee7d3728f14dda9fd2e563242a066bf4564",
+      "status": "PASS_SOURCE_SCOPE_AND_OBSERVED_BEHAVIOR_REVIEW_FAILED_PROFITABILITY_SCREEN"
+    }
+  ],
+  "new_compilations": [
+    {
+      "candidate_id": "TB500_S1_ACTIVE_RECOVERY_I10",
+      "registration": {
+        "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration10_20261004\\S13\\S1_ACTIVE_RECOVERY\\COMPILED_REGISTRATION.json",
+        "sha256": "857fb38c5834186c4a6862a0614bb05986410c76e6938b2f51fd9d323f1ce4ce"
+      },
+      "source": {
+        "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration10_20261004\\S13\\S1_ACTIVE_RECOVERY\\source\\TB500_S1_ACTIVE_RECOVERY_I10.mq5",
+        "sha256": "1c0f49c8005f0deaab38e0f9f2b4d10e06c77e99b9ec388172eb32c7f1ca78db"
+      },
+      "ex5": {
+        "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration10_20261004\\S13\\S1_ACTIVE_RECOVERY\\BUILD\\session\\private\\builds\\eadecb1bf4db41e0ba30111efca8730a\\TB500_S1_ACTIVE_RECOVERY_I10.ex5",
+        "sha256": "750e4778609149743c5c867a40c34813c597e1f6e0e17ac2df6a5c4eb34b700f"
+      },
+      "compile_log": {
+        "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration10_20261004\\S13\\S1_ACTIVE_RECOVERY\\BUILD\\session\\private\\builds\\eadecb1bf4db41e0ba30111efca8730a\\compile.log",
+        "sha256": "925dd62ca5ba48dd1639011e31404f26e58ac1fe0635af1c9babcd874bddb522"
+      },
+      "build": {
+        "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration10_20261004\\S13\\S1_ACTIVE_RECOVERY\\BUILD\\session\\private\\builds\\eadecb1bf4db41e0ba30111efca8730a\\build.json",
+        "sha256": "3548839e771b0f6a38251d62a1417b62c9ad5256ef6a82e9dd72aa4277fc5f06"
+      },
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "candidate_id": "TB500_S2_PROGRESS_RISK2_I10",
+      "registration": {
+        "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration10_20261004\\S2\\TB500_S2_PROGRESS_RISK2_I10\\COMPILED_REGISTRATION.json",
+        "sha256": "c686873527f627aa8bb8ff96bed2d5e117bf8881ca0e4db71a8f6b1ac408f993"
+      },
+      "source": {
+        "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration10_20261004\\S2\\TB500_S2_PROGRESS_RISK2_I10\\source\\TB500_S2_PROGRESS_RISK2_I10.mq5",
+        "sha256": "332a9e637f4b7beef63bb8f93ddefb597f3f7646a039ead48c020b044b5de5ed"
+      },
+      "ex5": {
+        "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration10_20261004\\S2\\TB500_S2_PROGRESS_RISK2_I10\\BUILD\\session\\private\\builds\\4236dbb5e4b842b591a1500c06a0c7de\\TB500_S2_PROGRESS_RISK2_I10.ex5",
+        "sha256": "c264a6e1cf42e7172590c57ce6d9dfbd99e1f78631b61fb331cf26bace2b287b"
+      },
+      "compile_log": {
+        "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration10_20261004\\S2\\TB500_S2_PROGRESS_RISK2_I10\\BUILD\\session\\private\\builds\\4236dbb5e4b842b591a1500c06a0c7de\\compile.log",
+        "sha256": "ad1af7f3d8ca470cc08f368d2deb77782777aa3f09d388a780baef2c3657b2ce"
+      },
+      "build": {
+        "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration10_20261004\\S2\\TB500_S2_PROGRESS_RISK2_I10\\BUILD\\session\\private\\builds\\4236dbb5e4b842b591a1500c06a0c7de\\build.json",
+        "sha256": "6fc6762d7be65133006c1108ba3224d2b3f1d72b723cc840959b32ac027312ff"
+      },
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "candidate_id": "TB500_S2_PROGRESS_BE1_I10",
+      "registration": {
+        "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration10_20261004\\S2\\TB500_S2_PROGRESS_BE1_I10\\COMPILED_REGISTRATION.json",
+        "sha256": "1f45793e3f9a535178330f8795d78196d2d2f9a6c1669b93bd51cd395bd94ae4"
+      },
+      "source": {
+        "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration10_20261004\\S2\\TB500_S2_PROGRESS_BE1_I10\\source\\TB500_S2_PROGRESS_BE1_I10.mq5",
+        "sha256": "ea4a9285ef24fdb3e4d84ba612db2e8eead676422ceda23e63a369f8f53951bf"
+      },
+      "ex5": {
+        "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration10_20261004\\S2\\TB500_S2_PROGRESS_BE1_I10\\BUILD\\session\\private\\builds\\98f267ed4d5e48f48f18b5af2a21f083\\TB500_S2_PROGRESS_BE1_I10.ex5",
+        "sha256": "53d96d15386af2b7e63e2145a366acd02b4811d0329855d6398d84f49d7b3777"
+      },
+      "compile_log": {
+        "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration10_20261004\\S2\\TB500_S2_PROGRESS_BE1_I10\\BUILD\\session\\private\\builds\\98f267ed4d5e48f48f18b5af2a21f083\\compile.log",
+        "sha256": "e90e432b1f5b89a44f9ee1a887ad72c2ad3c32f166cbc5ca222675e5f3e11d1e"
+      },
+      "build": {
+        "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration10_20261004\\S2\\TB500_S2_PROGRESS_BE1_I10\\BUILD\\session\\private\\builds\\98f267ed4d5e48f48f18b5af2a21f083\\build.json",
+        "sha256": "134f964c1820d4b23f07a629c4b35b8e84904fd2365e02dd2c6fc0d97b29009d"
+      },
+      "errors": 0,
+      "warnings": 0
+    }
+  ],
+  "counts": {
+    "expected_new_native": 17,
+    "new_native_verified": 17,
+    "expected_reused": 12,
+    "reused_verified": 12,
+    "reused": 12,
+    "total_reported": 29,
+    "pending_new": 0,
+    "invalid": 0,
+    "shared_native_attempts": 17,
+    "max_native_budget": 20
+  },
+  "score": {
+    "status": "SCORE_TARGETS_UNSET",
+    "weights_percent": {
+      "net_usd": 35,
+      "equity_dd": 25,
+      "pf": 20,
+      "complete_trades": 10,
+      "cost_per_round_trip_lot": 10
+    },
+    "anchors": null,
+    "components": null,
+    "total": null
+  },
+  "validation": {
+    "native_source_defaults_accounting": true,
+    "lean_replay": "BLOCKED_WINDOWS_APPLICATION_CONTROL_0x800711C7",
+    "full_risk_fill_exit_migration": false,
+    "cross_engine_acceptance": false,
+    "independent_oos": false,
+    "new_double_cost_stress": false,
+    "portfolio": false,
+    "withdrawals": false,
+    "demo_forward": false,
+    "champion": false,
+    "chart_deployed": false,
+    "live_ready": false
+  },
+  "selection": [
+    {
+      "sid": "S1",
+      "status": "RETAINED_RESEARCH_REFERENCE_NOT_LIVE_READY",
+      "june_arm": "S1_BASE_JUNE_D250",
+      "aug_arm": "S1_BASE_AUG_D250"
+    },
+    {
+      "sid": "S2",
+      "status": "NEW_RESEARCH_LEAD_SAMPLE_LIMITED_NOT_PROMOTED",
+      "june_arm": "S2_RISK2_JUNE_D250",
+      "aug_arm": "S2_RISK2_AUG_D250"
+    },
+    {
+      "sid": "S3",
+      "status": "RETAINED_RESEARCH_REFERENCE_NOT_LIVE_READY",
+      "june_arm": "S3_BASE_JUNE_D250",
+      "aug_arm": "S3_BASE_AUG_D250"
+    },
+    {
+      "sid": "S4",
+      "status": "RETAINED_RESEARCH_REFERENCE_NOT_LIVE_READY",
+      "june_arm": "S4_BASE_JUNE_D250",
+      "aug_arm": "S4_BASE_AUG_D250"
+    },
+    {
+      "sid": "S5",
+      "status": "RETAINED_RESEARCH_REFERENCE_NOT_LIVE_READY",
+      "june_arm": "S5_JUNE_DELAY250_L1000",
+      "aug_arm": "S5_AUGUST_DELAY250_L1000"
+    },
+    {
+      "sid": "S6",
+      "status": "RETAINED_RESEARCH_REFERENCE_NOT_LIVE_READY",
+      "june_arm": "S6_BASE_JUNE_D250",
+      "aug_arm": "S6_BASE_AUG_D250"
+    },
+    {
+      "sid": "Scalping",
+      "status": "FAILED_CROSS_PERIOD_PROFITABILITY_RESEARCH_ONLY",
+      "june_arm": "SCALP_JUN_D250",
+      "aug_arm": "SCALP_AUGUST_DELAY250"
+    }
+  ],
+  "material_limits": [
+    "S2 risk2 is a sample-limited capacity candidate, not proven entry alpha; BE1 was tested separately. No combined2%+BE result.",
+    "S1 recovery does not consistently improve the same-condition parent; retain1% reference and failed candidate evidence.",
+    "Scalping June failed profitability screening and its source has no peak-equity drawdown stop;3% is open-risk capacity. No daily6 threshold observed.",
+    "Three actualScalping swaps were matched to native rows; supplementary v1 zero-swap assumption failed and was replaced by a documented v2 review. Frozen EA/native verifier/proof unchanged.",
+    "All June/August windows were used development; independent500 starts are not a continuous portfolio or withdrawal path.",
+    "Historical full costs, GOLD effective margin andStopOut remain uncalibrated; LEAN runtime blocked, no security bypass.",
+    "Normal historical paths and embedded assertions are not comprehensive restart/partial/multi-instance/fault testing.",
+    "Package/ZIP byte verification is recorded separately after assembly; this review authorizes only bounded research packaging, no deployment."
+  ],
+  "reviewer": {
+    "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration10_20261004\\create_final_review.mjs",
+    "sha256": "0510d11464d45627e0fc9de28e126049ac35f432ef859b69ce13aea1fb9b3f4a"
+  }
+}

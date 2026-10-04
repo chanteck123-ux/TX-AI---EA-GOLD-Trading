@@ -19,7 +19,7 @@
     "automatic_lot_or_risk_increase": false,
     "status": "MT5_TESTER_1000_VERIFIED_BROKER_AND_LEAN_MARGIN_UNCALIBRATED",
     "mt5_tester_account_leverage_verified": true,
-    "mt5_tester_scope": "I9 eighteen fresh and I8 two reused native August runs; HTML/INI/bound actual-start evidence, current new sources also runtime contract field"
+    "mt5_tester_scope": "I10 seventeen fresh plus twelve exact-version reused June/August native rows; nominal 1:1000, actual GOLD margin and Stop Out still uncalibrated"
   },
   "architecture": {
     "active_route": "LEAN_CSHARP_RESEARCH_MT5_MQL5_EXECUTION",
@@ -48,18 +48,19 @@
     "cross_engine_acceptance": false
   },
   "this_change": {
-    "scope": "I9_SEVEN_SIGNAL_LAYER_AND_NATIVE_RISK_SCALPING_CONTINUATION",
+    "scope": "I10_SEVEN_STRATEGY_CROSS_PERIOD_RECOVERY_CAPACITY_EXIT",
     "mode": "CODEX_ONLY",
-    "new_strategy_implementation": true,
-    "new_execution_audit_code": true,
+    "new_strategy_implementation": false,
+    "new_risk_recovery_code": true,
+    "new_exit_configuration": true,
     "new_compile": true,
-    "new_native_candidate_compilations": 4,
-    "csharp_current_build_compiled": true,
-    "csharp_pure_assertions": 67,
+    "new_native_candidate_compilations": 3,
+    "new_csharp_compile": false,
+    "new_lean_execution": false,
     "new_backtest": true,
-    "new_native_attempts": 18,
-    "strict_verified": 18,
-    "reused_same_condition_S5": 2,
+    "new_native_attempts": 17,
+    "strict_verified": 17,
+    "reused_results": 12,
     "audit_invalid": 0,
     "new_chart_or_live_deployment": false,
     "new_deployment": false,
@@ -114,14 +115,14 @@
     "score_anchor": false
   },
   "next_research_priority": [
-    "Continue Codex-only. Resolve the LEAN application-control rejection through authorized environment administration; do not bypass it. Then run the implemented signal layer against same-source native data before claiming cross-engine acceptance.",
-    "Calibrate historical broker costs, actual GOLD margin and Stop Out; nominal tester leverage1000 and rate0.000001 are not real-account capacity proof.",
-    "S1 fixed2% triggered persistent emergency locks; use observed dynamic candidate results and quote-gap recovery limits to preregister the next policy rather than disable the emergency cap.",
-    "S2 progress did not improve retained same-close; one armed opportunity is minimum-lot constrained. Separate a preregistered risk-only comparison from entry/exit changes; no automatic assumption that more size creates edge.",
-    "S3 final delayed fill exceeded its original budget and was fully closed. Preserve overrun correction while researching fill sensitivity; six trades in one month do not establish robust profitability.",
-    "S4/S6 retain the verified references and review normal daily pauses/resumption, setup coverage and cost/latency sensitivity in subsequent registered windows.",
-    "Scalping current-handbook source compiled and normal daily accounting/SL confirmations verified in two runs; actual6-win/6-loss lock, restart, pending-cancel and partial-fill fault injection remain outstanding.",
-    "Freeze any candidate before new cost/delay stress and unused OOS, continuous portfolio and withdrawal validation. Current August/previous June development windows remain used. No live deployment authorized."
+    "Continue Codex-only. Retain every I10/I9 recovery pair and frozen hashes; no automated live update.",
+    "S2: prioritize the2% progress candidate as sample-limited capacity research. At a preregistered equal2% ceiling compare same-close versus progress before attributing differences to entry logic; only2 new native main250ms arms(June/August) are needed for the same-close2% candidate against existing progress2%. Keep SND, EMA, original stops/exits and all other risk rules fixed. Current2% admitted all3 final qualified setups; do not increase risk again to manufacture trades. June/Aug first-touch46/38, EMA-reject31/22, T0 4/8, initial-SL-invalid1/4, T1-no-progress2/2, ARMED1/2. Do not revive invalid structures or label EMA rejections false negatives without price/closed-bar evidence.",
+    "S1: retain the1% reference; account for concentrated June profits and0.5% minimum-lot rejection. Do not retune only the recovery clock or choose only the positive latency arm. Preregister a genuinely different affordability/entry hypothesis before another test.",
+    "S3: preserve fill-overrun correction; do not fit the reserve to exclude the single August adverse fill. S4/S5/S6: continue registered coverage/cost checks against retained sources.",
+    "Scalping: June failed the cross-period profit check. Preserve the failed source and user handbook core entries, do not raise risk. No account peak-equity DD stop exists in this source; preregister a separate cumulative-DD policy/implementation candidate before any advancement. Then complete daily threshold/restart/partial/multi-instance/abnormal-cancel coverage separately; normal backtests are not fault injection.",
+    "Calibrate actual broker GOLD margin, Stop Out and historical costs; tester nominal1:1000 and rate1e-6 are not live capacity proof. Explicit fees are not total calibrated friction.",
+    "Resolve the LEAN application-control rejection only through authorized environment administration, then verify the same-source signal replay; no bypass and no full risk/fill/exit parity claim.",
+    "Freeze a selected candidate before cost/latency stress and validation on data proven unused for selection. June/August are used development. No continuous portfolio, withdrawal sustainability, Demo or live acceptance yet. No USD1000/month proof."
   ],
   "latest_mt5_iteration7": {
     "status": "BATCH_COMPLETE_WITH_ONE_AUDIT_INVALID_RUN",
@@ -895,5 +896,88 @@
     "ea_pairs": 11,
     "zip_sha256": "deb2166b0dc77c2e1fe9ea6e5fa06f114b564a51da2deb0a54b11ffb94d092db",
     "selection": "Retain S1-S6 research references; archive failed S2 progress, S1 fixed2 and dynamic experiments with their evidence; new Scalping handbook remains research. No Champion promotion."
+  },
+  "latest_mt5_iteration10": {
+    "updated_utc": "2026-10-04T08:41:13.616Z",
+    "status": "RESEARCH_BATCH_COMPLETE_WITH_BOUNDED_CANDIDATE_SELECTION_NO_PROMOTION",
+    "evidence": "evidence/MT5_ITERATION10_SEVEN_20261004_CN.md",
+    "english": "evidence/MT5_ITERATION10_SEVEN_20261004_EN.md",
+    "results": "evidence/MT5_ITERATION10_RESULTS_20261004.json",
+    "review": "evidence/MT5_ITERATION10_REVIEW_20261004.json",
+    "delivery": "evidence/MT5_ITERATION10_DELIVERY_20261004.json",
+    "decisions": "evidence/MT5_ITERATION10_DECISIONS_20261004.json",
+    "counts": {
+      "expected_new_native": 17,
+      "new_native_verified": 17,
+      "expected_reused": 12,
+      "reused_verified": 12,
+      "reused": 12,
+      "total_reported": 29,
+      "pending_new": 0,
+      "invalid": 0,
+      "shared_native_attempts": 17,
+      "max_native_budget": 20
+    },
+    "conditions": {
+      "capital_per_independent_account_usd": 500,
+      "months": [
+        "2026.06.01 <= server time < 2026.07.01",
+        "2026.08.01 <= server time < 2026.09.01"
+      ],
+      "market": "GOLD",
+      "chart": "M5",
+      "mode": 4,
+      "nominal_tester_leverage": 1000,
+      "main_delay_ms": 250,
+      "diagnostic_delay_ms": 0,
+      "data_role": "ALREADY_USED_DEVELOPMENT",
+      "cost_model": "UNCALIBRATED",
+      "portfolio": "INDEPENDENT_ACCOUNTS_NOT_ADDITIVE_NO_CONTINUOUS_CURVE"
+    },
+    "validation": {
+      "native_source_defaults_accounting": true,
+      "lean_replay": "BLOCKED_WINDOWS_APPLICATION_CONTROL_0x800711C7",
+      "full_risk_fill_exit_migration": false,
+      "cross_engine_acceptance": false,
+      "independent_oos": false,
+      "new_double_cost_stress": false,
+      "portfolio": false,
+      "withdrawals": false,
+      "demo_forward": false,
+      "champion": false,
+      "chart_deployed": false,
+      "live_ready": false
+    },
+    "score": {
+      "status": "SCORE_TARGETS_UNSET",
+      "weights_percent": {
+        "net_usd": 35,
+        "equity_dd": 25,
+        "pf": 20,
+        "complete_trades": 10,
+        "cost_per_round_trip_lot": 10
+      },
+      "anchors": null,
+      "components": null,
+      "total": null
+    },
+    "ea_pairs": 12,
+    "zip_sha256": "5913098788f038519e654ed7add274b28bbd945b58e414b1fb4bf24d3af138f4",
+    "conclusion_cn": "本轮有实际进展的是S2：只把推进版风险上限从1%调到2%，六月净利14.84美元、八月14.28美元（250ms），解除部分最小手数限制；列为下一轮研究主候选，原1%源码／EX5留作回退。两个月仅1／2笔交易，不能认定稳定盈利。S1恢复机制收益改善不一致，保留原1%版；S3、S4、S5、S6保留研究参考；Scalping六月亏63.79美元、最大相对净值回撤15.96%，保留失败对照，未通过跨期盈利检查。全组没有晋级Champion。",
+    "conclusion_en": "S2 is the useful new research lead: changing only the progress variant risk ceiling from1% to2% admitted previously unaffordable minimum-lot setups, yielding USD14.84 in June and14.28 in August at250ms. It is the next research candidate with the original1% source/EX5 retained for rollback, not stable-profit acceptance: there are only1/2 trades. S1 recovery changes were inconsistent, so retain the1% reference. S3/S4/S5/S6 remain research references. Scalping lost63.79 in June with15.96% maximum relative equityDD; retain the failed reference, not cross-period profitability acceptance. No Champion promotion.",
+    "collector_status": "REGISTERED_NATIVE_BATCH_COMPLETE_NO_SELECTION_OR_PROMOTION"
+  },
+  "latest_execution_completed": {
+    "prior_delivery_retained": true,
+    "mode": "CODEX_ONLY",
+    "no_live_deployment": true,
+    "native_budget": 20,
+    "started_on": "2026-10-04",
+    "new_candidates": 3,
+    "status": "COMPLETE_RESEARCH_BATCH_NOT_PROMOTION",
+    "protocol_sha256": "359ed4c24158b5dee22018214ec8618f11f04548c2a1cb5e312422d1ecc575b3",
+    "batch": "I10_RECOVERY_S2_CAPACITY_EXIT_AND_CROSS_PERIOD",
+    "completed_utc": "2026-10-04T08:41:13.616Z",
+    "results": "evidence/MT5_ITERATION10_RESULTS_20261004.json"
   }
 }

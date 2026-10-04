@@ -1,0 +1,125 @@
+{
+  "schema": "I10_ROOT_RESEARCH_DECISIONS",
+  "created_utc": "2026-10-04T08:37:56.193Z",
+  "results": {
+    "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration10_20261004\\FINAL_RESULTS.json",
+    "sha256": "85d3df9240a056ae8f303fb0182ef6e2879f714d89743ae7c1bf1eb4cb8ac1f1"
+  },
+  "scope": "RESEARCH_SELECTION_ONLY_NO_CHAMPION_OR_DEPLOYMENT",
+  "conclusion_cn": "本轮有实际进展的是S2：只把推进版风险上限从1%调到2%，六月净利14.84美元、八月14.28美元（250ms），解除部分最小手数限制；列为下一轮研究主候选，原1%源码／EX5留作回退。两个月仅1／2笔交易，不能认定稳定盈利。S1恢复机制收益改善不一致，保留原1%版；S3、S4、S5、S6保留研究参考；Scalping六月亏63.79美元、最大相对净值回撤15.96%，保留失败对照，未通过跨期盈利检查。全组没有晋级Champion。",
+  "conclusion_en": "S2 is the useful new research lead: changing only the progress variant risk ceiling from1% to2% admitted previously unaffordable minimum-lot setups, yielding USD14.84 in June and14.28 in August at250ms. It is the next research candidate with the original1% source/EX5 retained for rollback, not stable-profit acceptance: there are only1/2 trades. S1 recovery changes were inconsistent, so retain the1% reference. S3/S4/S5/S6 remain research references. Scalping lost63.79 in June with15.96% maximum relative equityDD; retain the failed reference, not cross-period profitability acceptance. No Champion promotion.",
+  "strategies": [
+    {
+      "sid": "S1",
+      "profile_cn": "原1%，原保本退出",
+      "profile_en": "Original1%, existing BE exit",
+      "june_arm": "S1_BASE_JUNE_D250",
+      "aug_arm": "S1_BASE_AUG_D250",
+      "decision_cn": "保留；新动态恢复版未稳定改善",
+      "decision_en": "Retain; new recovery candidate not consistently better",
+      "status": "RETAINED_RESEARCH_REFERENCE_NOT_LIVE_READY"
+    },
+    {
+      "sid": "S2",
+      "profile_cn": "推进确认2%上限，研究候选",
+      "profile_en": "Progress confirmation,2% ceiling, research candidate",
+      "june_arm": "S2_RISK2_JUNE_D250",
+      "aug_arm": "S2_RISK2_AUG_D250",
+      "decision_cn": "新研究主候选；仅1／2笔，原1%源码／EX5留作回退",
+      "decision_en": "New research lead; only1/2 trades, original1% rollback retained",
+      "status": "NEW_RESEARCH_LEAD_SAMPLE_LIMITED_NOT_PROMOTED"
+    },
+    {
+      "sid": "S3",
+      "profile_cn": "原1%，保留成交超风险修正",
+      "profile_en": "Original1%, retain fill-risk overrun correction",
+      "june_arm": "S3_BASE_JUNE_D250",
+      "aug_arm": "S3_BASE_AUG_D250",
+      "decision_cn": "保留；不按单笔历史结果调入场缓冲",
+      "decision_en": "Retain; no buffer fitted to one historical trade",
+      "status": "RETAINED_RESEARCH_REFERENCE_NOT_LIVE_READY"
+    },
+    {
+      "sid": "S4",
+      "profile_cn": "原2%",
+      "profile_en": "Original2%",
+      "june_arm": "S4_BASE_JUNE_D250",
+      "aug_arm": "S4_BASE_AUG_D250",
+      "decision_cn": "保留；六月3次日暂停均恢复",
+      "decision_en": "Retain; all3 June daily pauses resumed",
+      "status": "RETAINED_RESEARCH_REFERENCE_NOT_LIVE_READY"
+    },
+    {
+      "sid": "S5",
+      "profile_cn": "原1%",
+      "profile_en": "Original1%",
+      "june_arm": "S5_JUNE_DELAY250_L1000",
+      "aug_arm": "S5_AUGUST_DELAY250_L1000",
+      "decision_cn": "同源同条件复用；样本仍少",
+      "decision_en": "Exact-version evidence reused; few trades",
+      "status": "RETAINED_RESEARCH_REFERENCE_NOT_LIVE_READY"
+    },
+    {
+      "sid": "S6",
+      "profile_cn": "原1%",
+      "profile_en": "Original1%",
+      "june_arm": "S6_BASE_JUNE_D250",
+      "aug_arm": "S6_BASE_AUG_D250",
+      "decision_cn": "保留；六月无日暂停／紧急锁",
+      "decision_en": "Retain; no June daily pause/emergency lock",
+      "status": "RETAINED_RESEARCH_REFERENCE_NOT_LIVE_READY"
+    },
+    {
+      "sid": "Scalping",
+      "profile_cn": "当前手册2%，失败对照",
+      "profile_en": "Current handbook2%, failed reference",
+      "june_arm": "SCALP_JUN_D250",
+      "aug_arm": "SCALP_AUGUST_DELAY250",
+      "decision_cn": "六月亏损，保留失败对照；不提高风险",
+      "decision_en": "June loss; retain failed research reference, no risk increase",
+      "status": "FAILED_CROSS_PERIOD_PROFITABILITY_RESEARCH_ONLY"
+    }
+  ],
+  "findings": [
+    {
+      "title_cn": "S1：恢复规则改善了运作路径，未证明改善策略",
+      "title_en": "S1: recovery changed exposure, not proven signal improvement",
+      "text_cn": "六月新恢复版与旧动态版均为-44.86美元／净值DD46.18美元，没有恢复资格，降到0.5%后仍开出2仓，但多次信号继续受最小手数限制。原1%版六月+49.42、八月+45.24；但六月单笔+58.45，其余26笔合计-9.03，这只是收益集中诊断，不是删掉赢家后的另一套策略成绩。八月250ms新恢复版+80.63，较旧动态多7.30，DD多0.59、显式费用多0.96；差额由7个同setup仓位变化+7.29及新增仓+0.01构成，净PF反降。八月0ms为+53.21，比父版少2.74，DD多2.74、费用多1.65。因此保留原1%参考，不按较漂亮的250ms一场晋级。三场各通过25条MQL政策断言，八月两场实际各恢复一次；六月未恢复，不把断言等同全部实盘故障路径。250ms既有部分退出在新旧版完全相同，是恢复前的成交风险超预算修正，不算恢复收益。",
+      "text_en": "June new recovery and old dynamic both returned-44.86 with equityDD46.18: no recovery eligibility and minimum-lot constraints persisted at0.5%. The1% reference returned49.42/45.24 in June/August; its June58.45 winner versus-9.03 from the other26 trades shows concentration, not a counterfactual strategy. At August250ms the new candidate returned80.63, up7.30 with DD+0.59 and explicit costs+0.96: seven shared-setup position-size changes explain+7.29 and one extra position+0.01; netPF decreased. At0ms it returned53.21, down2.74, DD+2.74 and costs+1.65. Retain the1% reference. Each run passed25 policy assertions; each August path restored risk once, June never did. The250ms partial overrun reduction was identical in both versions and preceded recovery; it is not recovery benefit."
+    },
+    {
+      "title_cn": "S2：2%解除容量限制，但仍只有很少交易",
+      "title_en": "S2:2% removes a capacity constraint, with very few observations",
+      "text_cn": "六月原推进1%版0成交；2%版开出同一被7.54美元预计最小手风险挡住的信号，预算由5变10美元，实际0.01手、记录初始风险7.34美元（本金1.468%），并非每笔硬用满2%。净利+14.84，DD+8.70、费用+0.08。八月250ms由父版-4.63变为+14.28，净利差+18.91、DD差+6.50、费用差+0.08；完整交易1变2。新增多单+19.39来自原9.68美元最小手风险超预算；原亏单仍0.01手，但提早135秒入场、做空价格低0.48，净亏-4.63变-5.11，因此改善为19.39−0.48=18.91。八月0ms候选净利14.26、DD17.22、2笔。风险档改变了可成交信号集合和路径，不能称新增指标或信号优势；下一轮需同2%档比较原同闭柱确认与推进确认，并检查成本和跨期覆盖。",
+      "text_en": "June progress1% made no trades;2% admitted the identical setup whose minimum-lot planned risk7.54 exceeded5. The new ceiling10 allowed0.01lot, recorded initial risk7.34(1.468% of start capital), not forced use of2%. Net/DD/cost deltas were+14.84/+8.70/+0.08. August250ms changed-4.63 to14.28, with deltas+18.91/+6.50/+0.08 and1to2 complete trades. A new long contributed19.39 after the old9.68 minimum-lot budget constraint was removed; the shared losing short was still0.01lot but entered135seconds earlier at a0.48 lower sell price, changing-4.63 to-5.11. The net difference is19.39 minus0.48. August0ms produced14.26 net,17.22 DD and2 trades. Capacity and path changed, not the signal logic. Next compare same-close versus progress at the same2% ceiling and assess costs/cross-period coverage."
+    },
+    {
+      "title_cn": "S2保本：与风险对照分别评估",
+      "title_en": "S2 breakeven is evaluated separately from the risk study",
+      "text_cn": "保本候选维持推进父版1%预算、原初始SL／TP和入场，只启用现有1R成本偏移保本；没有同时提高风险。六月仍0成交，不能覆盖退出路径。八月250ms原亏单-4.63变+0.03，DD从10.67降到6.01，显式费用仍0.08：02:33:01请求SL4334.43并有同仓EA读取POSITION_SL的确认，02:54:26原生成交及注释确认按SL4334.43平空，价格盈利0.11减佣金0.08。原入场4334.54、0.01手、初始SL4338.96、预算5、记录初始风险4.59均与父版相同，没有因保本减少原始风险账。八月0ms净利0.00、DD6.01。这是一笔退出改善证据，不是稳定有效结论；2%加保本的组合尚未测试，不能把各自好处相加。",
+      "text_en": "The BE candidate keeps the progress parent1% budget, entry and initialSL/TP, enabling only existing1R cost-offset BE. June still made0 trades. August250ms changed-4.63 to+0.03 and DD10.67 to6.01 with the same0.08 explicit cost: at02:33:01 SL4334.43 was requested and confirmed by EA POSITION_SL readback, then the02:54:26 native exit and comment show SL4334.43. Price profit0.11 minus commission0.08 gives0.03 net. Entry4334.54/0.01lot, originalSL4338.96, budget5 and recorded initial risk4.59 remained identical to the parent. August0ms net0.00, DD6.01. This is one observed exit improvement, not stable efficacy. Risk2 plusBE has not been tested; separate benefits cannot be added."
+    },
+    {
+      "title_cn": "S3／S4／S5／S6：补跨期证据，不按单笔改条件",
+      "title_en": "S3/S4/S5/S6: cross-period coverage without fitting one trade",
+      "text_cn": "S3原来已有0.02价格单位储备；另扩大到0.20会挡掉八月6次原报价中的3次，较小缓冲又容易只筛掉单一不利成交，因此本批未追加这个事后拟合候选。继续保留成交超预算纠正。S4六月+66.14／DD41.47／50笔，八月+102.03／DD33.22／56笔；六月3次日暂停均次日恢复，暂停内没有新增风险预留。S6六月+17.31／DD18.63／15笔，八月+22.02／DD16.05／10笔。S5复用第八轮两场同源证据，六月+6.59／7笔、八月+11.53／11笔；没有冒充新跑。",
+      "text_en": "S3 already reserves0.02 price units; increasing to0.20 excludes3of6 original August quotes, while a smaller fitted buffer risks screening only one adverse fill. No such new candidate was run; fill-risk remediation remains. S4 June66.14/DD41.47/50trades versus August102.03/DD33.22/56; all3 June daily pauses resumed next day and no reservation appeared while locked. S6 June17.31/DD18.63/15 versus August22.02/DD16.05/10. S5 exact I8 June6.59/7 and August11.53/11 were reused, not rerun."
+    },
+    {
+      "title_cn": "Scalping：原规则六月补测，独立核日锁与保护",
+      "title_en": "Scalping: unchanged-source June check and independent protection/day-lock review",
+      "text_cn": "六月250ms净利-63.79、DD81.35（最大相对净值DD15.96%）、44笔，16赢28亏；八月同版复用净利48.05、DD29.21、42笔。保留失败对照，不提高风险、不通过跨期盈利检查。这版只有2%单笔／3%在途风险、单仓、保证金入场检查及服务器日6净赢OR6净亏；没有账户净值高点回撤停机模块，不能套用S1等EA的10%紧急线。六月每天最多4笔净亏，日锁未触发；固定SL/TP在开仓与成交后修正，ManageScalpingPosition直接return，未运行持续保本或追踪。旧UpdateScalpPause定义无调用，不代表运行6连亏暂停。具体保护及费用对账见专项复审；账户累计回撤保护须独立登记候选补齐并测试，不改用户手册核心入场规则。",
+      "text_en": "June250ms net-63.79, DD81.35(max relative15.96%),44 trades,16wins/28losses; reused August48.05,DD29.21,42 trades. Retain the failed reference, no risk increase or cross-period profit acceptance. This source has2% per-trade/3% aggregate open risk, one-position and margin admission checks, and server-day6net wins OR6net losses; no account peak-equity drawdown stop exists, so generic10% emergency rules do not apply. Maximum June daily net losses were4; the lock was not triggered. InitialSL/TP and post-fill recenter protection exist, while ManageScalpingPosition returns directly with no ongoingBE/trail. The unused UpdateScalpPause definition is not an active6-consecutive-loss pause. Preregister and test cumulative account-DD protection separately while preserving handbook core entries."
+    }
+  ],
+  "next_research_priority": [
+    "Continue Codex-only. Retain every I10/I9 recovery pair and frozen hashes; no automated live update.",
+    "S2: prioritize the2% progress candidate as sample-limited capacity research. At a preregistered equal2% ceiling compare same-close versus progress before attributing differences to entry logic; only2 new native main250ms arms(June/August) are needed for the same-close2% candidate against existing progress2%. Keep SND, EMA, original stops/exits and all other risk rules fixed. Current2% admitted all3 final qualified setups; do not increase risk again to manufacture trades. June/Aug first-touch46/38, EMA-reject31/22, T0 4/8, initial-SL-invalid1/4, T1-no-progress2/2, ARMED1/2. Do not revive invalid structures or label EMA rejections false negatives without price/closed-bar evidence.",
+    "S1: retain the1% reference; account for concentrated June profits and0.5% minimum-lot rejection. Do not retune only the recovery clock or choose only the positive latency arm. Preregister a genuinely different affordability/entry hypothesis before another test.",
+    "S3: preserve fill-overrun correction; do not fit the reserve to exclude the single August adverse fill. S4/S5/S6: continue registered coverage/cost checks against retained sources.",
+    "Scalping: June failed the cross-period profit check. Preserve the failed source and user handbook core entries, do not raise risk. No account peak-equity DD stop exists in this source; preregister a separate cumulative-DD policy/implementation candidate before any advancement. Then complete daily threshold/restart/partial/multi-instance/abnormal-cancel coverage separately; normal backtests are not fault injection.",
+    "Calibrate actual broker GOLD margin, Stop Out and historical costs; tester nominal1:1000 and rate1e-6 are not live capacity proof. Explicit fees are not total calibrated friction.",
+    "Resolve the LEAN application-control rejection only through authorized environment administration, then verify the same-source signal replay; no bypass and no full risk/fill/exit parity claim.",
+    "Freeze a selected candidate before cost/latency stress and validation on data proven unused for selection. June/August are used development. No continuous portfolio, withdrawal sustainability, Demo or live acceptance yet. No USD1000/month proof."
+  ]
+}

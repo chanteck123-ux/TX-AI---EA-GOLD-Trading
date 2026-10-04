@@ -2,8 +2,8 @@
   "schema": "TRADINGBRAIN_PLAN_EVIDENCE_V1",
   "checked_on": "2026-10-04",
   "timezone": "Asia/Kuala_Lumpur",
-  "base_repository_commit": "710a900d37be5fe909db22a5a320d319278cb246",
-  "scope": "HISTORICAL_EVIDENCE_PRESERVED_PLUS_ITERATION9_SEVEN_SIGNAL_IMPLEMENTATION_NATIVE_RESEARCH_AND_VERIFIED_LOCAL_DELIVERY",
+  "base_repository_commit": "798bb441c67b022a4514a7312ebd10c42d26d85b",
+  "scope": "HISTORICAL_EVIDENCE_PRESERVED_PLUS_I10_USED_DEVELOPMENT_RESEARCH_AND_VERIFIED_LOCAL_DELIVERY",
   "source_workspace_local": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5",
   "source_reports": [
     {
@@ -137,6 +137,62 @@
       "repository_project_relative_path": "research/evidence/MT5_ITERATION9_SCORE_POLICY_20261004.json",
       "sha256": "df7480a5f48d623a74cb571bc8f27f2accde431784228a3ef931b08e4cd69291",
       "scope": "I9 Codex-only seven-strategy used-development research;18 fresh native tests plus2 exact S5 reuse; C# signal-only compile67 assertions; LEAN runtime blocked; no promotion/deployment",
+      "verified_on": "2026-10-04"
+    },
+    {
+      "original_workspace_relative_path": "work/repair_research/mt5_iteration10_20261004/REPORT_CN.md",
+      "repository_project_relative_path": "research/evidence/MT5_ITERATION10_SEVEN_20261004_CN.md",
+      "sha256": "3dcc67eab131269fdf837490b3c183625c7ca7e56943aa6f0b41293301ad8197",
+      "scope": "I10:17 new native runs,12 exact reuse,3 clean new source builds; used-development research only, no promotion/deployment",
+      "verified_on": "2026-10-04"
+    },
+    {
+      "original_workspace_relative_path": "work/repair_research/mt5_iteration10_20261004/REPORT_EN.md",
+      "repository_project_relative_path": "research/evidence/MT5_ITERATION10_SEVEN_20261004_EN.md",
+      "sha256": "e6039ae671f8c0920dc56d30d28103d65e87950b5e4434b95d2c694e4b8caae0",
+      "scope": "I10:17 new native runs,12 exact reuse,3 clean new source builds; used-development research only, no promotion/deployment",
+      "verified_on": "2026-10-04"
+    },
+    {
+      "original_workspace_relative_path": "work/repair_research/mt5_iteration10_20261004/FINAL_RESULTS.json",
+      "repository_project_relative_path": "research/evidence/MT5_ITERATION10_RESULTS_20261004.json",
+      "sha256": "85d3df9240a056ae8f303fb0182ef6e2879f714d89743ae7c1bf1eb4cb8ac1f1",
+      "scope": "I10:17 new native runs,12 exact reuse,3 clean new source builds; used-development research only, no promotion/deployment",
+      "verified_on": "2026-10-04"
+    },
+    {
+      "original_workspace_relative_path": "work/repair_research/mt5_iteration10_20261004/FINAL_REVIEW.json",
+      "repository_project_relative_path": "research/evidence/MT5_ITERATION10_REVIEW_20261004.json",
+      "sha256": "0d915181023924dde2d70471d30043f95f1b074a9e8e4d306168ef39759bd0a4",
+      "scope": "I10:17 new native runs,12 exact reuse,3 clean new source builds; used-development research only, no promotion/deployment",
+      "verified_on": "2026-10-04"
+    },
+    {
+      "original_workspace_relative_path": "work/repair_research/mt5_iteration10_20261004/DELIVERY_RECEIPT.json",
+      "repository_project_relative_path": "research/evidence/MT5_ITERATION10_DELIVERY_20261004.json",
+      "sha256": "1866a9066c4ae4e251d1e02bd4f2eb83ec3652160ead16f3ace42f27609771fc",
+      "scope": "I10:17 new native runs,12 exact reuse,3 clean new source builds; used-development research only, no promotion/deployment",
+      "verified_on": "2026-10-04"
+    },
+    {
+      "original_workspace_relative_path": "work/repair_research/mt5_iteration10_20261004/BATCH_PROTOCOL.json",
+      "repository_project_relative_path": "research/evidence/MT5_ITERATION10_PROTOCOL_20261004.json",
+      "sha256": "359ed4c24158b5dee22018214ec8618f11f04548c2a1cb5e312422d1ecc575b3",
+      "scope": "I10:17 new native runs,12 exact reuse,3 clean new source builds; used-development research only, no promotion/deployment",
+      "verified_on": "2026-10-04"
+    },
+    {
+      "original_workspace_relative_path": "work/repair_research/mt5_iteration10_20261004/SCORE_POLICY.json",
+      "repository_project_relative_path": "research/evidence/MT5_ITERATION10_SCORE_POLICY_20261004.json",
+      "sha256": "fa97c86847097bd42fffa8c760c2b523500ffb949a33e249dea00a37dc3ad6a1",
+      "scope": "I10:17 new native runs,12 exact reuse,3 clean new source builds; used-development research only, no promotion/deployment",
+      "verified_on": "2026-10-04"
+    },
+    {
+      "original_workspace_relative_path": "work/repair_research/mt5_iteration10_20261004/DECISIONS.json",
+      "repository_project_relative_path": "research/evidence/MT5_ITERATION10_DECISIONS_20261004.json",
+      "sha256": "121cd187a8d61dd51ed3edc339e021a5e419ed8bc7fe1d0b6b885eae0d77327f",
+      "scope": "I10:17 new native runs,12 exact reuse,3 clean new source builds; used-development research only, no promotion/deployment",
       "verified_on": "2026-10-04"
     }
   ],

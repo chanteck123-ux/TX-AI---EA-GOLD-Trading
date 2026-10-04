@@ -1,0 +1,118 @@
+{
+  "schema": "I10_SEVEN_STRATEGY_PROTOCOL_V1",
+  "created_utc": "2026-10-04T07:37:33.251Z",
+  "batch_id": "I10_RECOVERY_S2_CAPACITY_EXIT_AND_CROSS_PERIOD",
+  "mode": "CODEX_ONLY",
+  "authorization": "Current continuing seven-strategy task; user explicitly requested Codex only and flexible research risk. No live or Demo changes.",
+  "plan": {
+    "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\new-chat\\work\\plan-replacement\\repository\\开发交易头脑EA\\交易头脑v1.2\\docs\\PLAN_CN.md",
+    "sha256": "61fc4a7ea46a673b7afdb713673083c983260d5cc14e20d28b43e8bf2e69e4c2"
+  },
+  "plan_repository_commit": "798bb441c67b022a4514a7312ebd10c42d26d85b",
+  "indicator_repository_commit": "c1a0021f2a6db562f9e791e620c08352a743e6ca",
+  "parent_result": {
+    "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration9_20261004\\FINAL_RESULTS.json",
+    "sha256": "934cd35c246588dd5bc1e0fc99373e484a3a2a2ac8e79ccb4e0742f1441e8487"
+  },
+  "parent_recovery_delivery": {
+    "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration9_20261004\\DELIVERY_RECEIPT.json",
+    "sha256": "5a550d016179c6d0186af9622dd33fd4a86a5867f1ef6a1f85c9dd67546be23e"
+  },
+  "objectives": [
+    "S1: test accumulated observed eligible trading seconds for recovery without lowering old exposure or changing thresholds/entries/exits.",
+    "S2 A: risk-only 1 to2% capacity study on exact I9 progress parent; no signal-edge claim.",
+    "S2 B: existing cost-aware breakeven at1R, same I9 progress parent1% and unchanged initial SL/TP.",
+    "S3: keep original buffer and fill-risk remediation; adding0.18price to existing0.02 would exclude3/6 original August quotes, no new candidate fitted to Aug28.",
+    "S4/S5/S6/current handbook Scalping: frozen-source June250ms cross-period check; exact S5 I8 evidence reused."
+  ],
+  "candidate_limit": 3,
+  "registered_candidates": [
+    "S1_ELIGIBLE_RECOVERY",
+    "S2_PROGRESS_RISK2",
+    "S2_PROGRESS_BE1"
+  ],
+  "conditions": {
+    "deposit": 500,
+    "currency": "USD",
+    "symbol": "GOLD",
+    "period": "M5",
+    "model": 4,
+    "leverage": 1000,
+    "main_delay_ms": 250,
+    "diagnostic_delay_ms": 0,
+    "data_role": "ALREADY_USED_DEVELOPMENT",
+    "windows": {
+      "JUNE": {
+        "from_date": "2026.06.01",
+        "to_date": "2026.07.01",
+        "expected_ticks": 23679824,
+        "expected_bars": 6023,
+        "identity_evidence": {
+          "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration8_20261003\\S5_JUNE_DELAY250_L1000\\session\\run\\data_quality.json",
+          "sha256": "6e5218a11d92f7e5a6568da7113f8ca8c8345f7287ef77e858b1f940d0234b95"
+        },
+        "journal": {
+          "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration8_20261003\\S5_JUNE_DELAY250_L1000\\session\\run\\tester_journal.log",
+          "sha256": "6c047a992ca67f21f661335db104b48ee4cfde90e0d5243c93a54787201178b6"
+        }
+      },
+      "AUG": {
+        "from_date": "2026.08.01",
+        "to_date": "2026.09.01",
+        "expected_ticks": 20513403,
+        "expected_bars": 5796
+      }
+    }
+  },
+  "comparison_policy": {
+    "main": "Each new candidate June/Aug250ms versus exact source parent same conditions. August0ms diagnostic adds delay endpoint; no ranking solely on0ms.",
+    "s1_parent": "I9 dynamic2/1/.5; unchanged1% retained reference separately.",
+    "s2_parent": "I9 next-M5-progress1%, retained same-close1% separately.",
+    "s3": "No new code; frozen baseline June/Aug250.",
+    "reuse": "Exact source/EX5/defaults/scenario identity only; all reused result IDs explicit.",
+    "decision": "No candidate promotion on only one month or gross profit. Report netUSD, native/netPF, equityDDUSD and relative%, complete lifecycles, explicit cost per matched roundtrip lot, emergency/day operation, and per-month deltas. Sparse samples remain diagnostic.",
+    "score": {
+      "weights": [
+        35,
+        25,
+        20,
+        10,
+        10
+      ],
+      "total": null,
+      "status": "SCORE_TARGETS_UNSET",
+      "anchors": {
+        "P_target": null,
+        "D_good": null,
+        "D_bad": null,
+        "F_target": null,
+        "N_target": null,
+        "C_good": null,
+        "C_bad": null
+      }
+    }
+  },
+  "budget": {
+    "native_main_runs_max": 18,
+    "native_engineering_reserve": 2,
+    "native_total_max": 20,
+    "source_candidates_max": 3,
+    "wall_clock_minutes": 180,
+    "failed_attempts_count": true,
+    "lean_new_runs": 0
+  },
+  "terminal": "C:/Users/A/AppData/Roaming/MetaQuotes/Terminal/523FF71FCA93BC15AC28868379E0D478",
+  "terminal_mode": "/portable",
+  "terminal_owner": "root serial only",
+  "sop": "Current PLAN4.1 preserved; no Scalping signal/risk change this batch.",
+  "limitations": [
+    "LEAN blocked0x800711C7; this batch native risk/exit execution research, signal C# layer unchanged; not cross-engine accepted.",
+    "Tester margin rate1e-6/StopOut0 and full historical friction not calibrated.",
+    "No new independentOOS/coststress/portfolio/withdrawal/Demo/live claims.",
+    "Independent500 accounts and reset windows cannot be summed into an account path."
+  ],
+  "generator": {
+    "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration10_20261004\\bootstrap.mjs",
+    "sha256": "1678eacc61ab8d23ec451fcd2ce03ced78539db597d6167fe11b9515f68cf166"
+  }
+}

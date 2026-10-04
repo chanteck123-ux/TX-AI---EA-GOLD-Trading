@@ -26,7 +26,13 @@
 
 后续实际开发沿用原 `v1-2-ea-mt5` 工作区及固定 MT5 终端。本次没有把本地全部 EA 源码、EX5 或大包重新公开到 GitHub，没有创建空壳交易程序。跨电脑协作先取得已授权的匹配交付包并核对哈希；仅拿到这份骨架时，可审计划与报告，不声称已能编译 EA。
 
-2026-10-04 最新实际测试：第九轮七策略研究完成18场新MT5原生测试，另复用S5完全同版同条件的2场；八月、独立500美元账户、GOLD/M5、模型4、名义杠杆1:1000、0/250ms。新增S1风险对照／动态降风险、S2推进确认和当前手册Scalping候选；失败及持续停机如实保留，未晋级Champion。
+2026-10-04 最新实际测试：第十轮完成17场新MT5原生回测，复用12条完全同版同条件证据，共29行；3个新候选编译0错误、0警告。每场独立500美元，GOLD/M5真实Tick模式、名义1:1000，六月及八月均为已使用开发区间，主比较250ms；不能相加为连续账户或组合。
+
+本轮有实际进展的是S2：只把推进版风险上限从1%调到2%，六月净利14.84美元、八月14.28美元（250ms），解除部分最小手数限制；列为下一轮研究主候选，原1%源码／EX5留作回退。两个月仅1／2笔交易，不能认定稳定盈利。S1恢复机制收益改善不一致，保留原1%版；S3、S4、S5、S6保留研究参考；Scalping六月亏63.79美元、最大相对净值回撤15.96%，保留失败对照，未通过跨期盈利检查。全组没有晋级Champion。
+
+详见[第十轮中文成绩](research/evidence/MT5_ITERATION10_SEVEN_20261004_CN.md)、[English results](research/evidence/MT5_ITERATION10_SEVEN_20261004_EN.md)、[完整数据与差额](research/evidence/MT5_ITERATION10_RESULTS_20261004.json)和[交付哈希](research/evidence/MT5_ITERATION10_DELIVERY_20261004.json)。本轮仅同步研究文档与哈希；MQ5默认配置、匹配EX5、SET/INI、日志、原始报告及恢复版保留在本地交付包。评分N/A，LEAN没有新运行，独立OOS、组合、提款、Demo及实盘验证未完成。
+
+历史第九轮测试：第九轮七策略研究完成18场新MT5原生测试，另复用S5完全同版同条件的2场；八月、独立500美元账户、GOLD/M5、模型4、名义杠杆1:1000、0/250ms。新增S1风险对照／动态降风险、S2推进确认和当前手册Scalping候选；失败及持续停机如实保留，未晋级Champion。
 
 七套C#信号层已编译、67项边界断言通过；LEAN实际运行遭Windows应用控制拦截，跨引擎回放和风险／成交／退出迁移尚未通过。详见[第九轮中文成绩](research/evidence/MT5_ITERATION9_SEVEN_20261004_CN.md)、[English results](research/evidence/MT5_ITERATION9_SEVEN_20261004_EN.md)、[复审](research/evidence/MT5_ITERATION9_REVIEW_20261004.json)和[交付身份](research/evidence/MT5_ITERATION9_DELIVERY_20261004.json)。源码默认值、匹配EX5和完整回测包保留在本地；本仓只同步研究报告与哈希，不公开EA源码、EX5和原始成交。
 
