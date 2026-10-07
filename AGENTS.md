@@ -42,6 +42,8 @@ Codex 与 Claude 共用本文件，根目录 CLAUDE.md 仅导入 AGENTS.md；不
 
 ## 读取顺序
 
+交易头脑V1.2的Claude Code知识同步按 `开发交易头脑EA/交易头脑v1.2/docs/COLLABORATION_CN.md` 的“Claude Code知识同步”执行；共用版本化文件，开始读取、结束回写，保存与实际读取分别留证。同步请求本身不启动新研发。
+
 1. 读取 `research-memory/README_CN.md` 和 `research-memory/STATE_CN.md`，确认当前任务所属项目与最新证据。
 2. EA 旧版升级研究使用当前 `FINAL_CHAMPION_ITERATION_SYSTEM_CN.md`（English: `FINAL_CHAMPION_ITERATION_SYSTEM.md`）。两份文件于 2026-09-12 按用户指定风险更新稿完整替换；旧总规范、历史分支计划及旧 §29 不再作为当前计划。保存或翻译计划本身不启动文中的开发、编译、回测或实盘步骤。
 3. 读取 `docs/GSM_EA_RESEARCH_BRAIN_CN.md` 作为通用协作参考；项目具体路线、风险研究与验收以用户当前任务和上述已选计划为准。

@@ -1,5 +1,56 @@
 # Codex 与 Claude 协作
 
+## Claude Code知识同步（2026-10-07）
+
+用户明确本次接收端是 **Claude Code**，目标是接续交易头脑V1.2的全部项目知识。共用GitHub中的规则、计划、状态、研究经验与证据索引，不另写一套平行计划。聊天上下文、账号权限和私人记忆不会因此自动互通；“可访问”“已读取”“已复审”“已测试”分别记录。下方2026-10-03桌面聊天与第七轮记录保留历史身份，不当成Claude Code已读证据。
+
+### 每次任务的同步流程
+
+1. 确认工作区对应 `chanteck123-ux/TX-AI---EA-GOLD-Trading`。记录主库与指标库的分支、HEAD、origin/main及未提交改动；有网络时fetch。干净且可快进才fast-forward；存在并行改动或分叉时保留现场，用diff核对再合并，不reset、不强推、不覆盖他人工作。离线时明确本地提交及可能过期范围。
+2. 根 `CLAUDE.md` 导入同一份 `AGENTS.md`。Claude Code会话中用 `/context` 查看实际加载的Memory files；文件存在只证明配置已保存，不证明模型已读取全部资料。启动已有会话后发生的变更须重新读取受影响文件。
+3. 首次接手按下表读取知识入口和当前证据，形成已读／未读清单；后续按两个提交之间的变化增量读取。历史原文、Google AI资料和学习库是研究材料，采用规则以用户最新指令及适用项目计划为准。不要读取封存的未见样本成绩来完成“全部同步”。
+4. 每次研发仍按本次用户选定的协作模式开展；本次知识同步仅做读取和交接。资料中提及的下一轮不是本次启动代码修改、编译、回测、Demo或实盘的指令。
+5. 完成实际研究后由对应责任人更新已有 `research/CURRENT.json`、`research/EVIDENCE_INDEX.json`、本轮候选／结果／经验；规则改变才更新主计划。记录实现者、复审者、source/default/EX5/config/report哈希、失败原因和下一步。未验证想法单独标明，不改写旧失败或历史报告。
+6. 提交前复核diff和依赖，非强制推送后核对远端提交。向另一端交接提交、改动路径、当前候选和未完成项；另一端实际读取后回报所读提交／文件。没有运行常驻同步服务，不保证正在进行的聊天自动刷新。
+
+### 全部知识的入口与边界
+
+下表路径以主仓库根为基准，指标库另列；是读取地图，不代表每项已逐字审阅或已经实现。
+
+| 内容 | 权威入口 |
+| --- | --- |
+| 共同规则、沟通和授权 | `AGENTS.md`、`CLAUDE.md` |
+| V1.2架构、七策略、Scalping权限、风险、指标、评分及迭代 | `开发交易头脑EA/交易头脑v1.2/docs/PLAN_CN.md`、项目`README.md` |
+| 当前状态和可接续动作 | 项目`research/CURRENT.json`、`research/EVIDENCE_INDEX.json`及当前轮候选／报告 |
+| I6至I11成果、失败及恢复 | 项目`research/evidence/`；先I11中文报告、RESULTS、DECISIONS、PROTOCOL、REVIEW、DELIVERY、SCORE_POLICY，再按依赖读取历史证据 |
+| 通用交易知识与学习经验 | `docs/GSM_EA_RESEARCH_BRAIN_CN.md`、`research-memory/README_CN.md`、`STATE_CN.md`、`DECISIONS_CN.md` |
+| 历史分支、原始材料和来源 | `research-memory/BRANCH_INDEX_CN.md`、`FILE_INDEX_CN.md`、`REPOSITORY_MANIFEST.json`、`GITHUB_RESEARCH_LIBRARY_INDEX.md`、`GITHUB_PRIORITY_SOURCES.md`；旧清单数量只代表其日期 |
+| AI Alpha、机器学习、LEAN及反思资料 | `docs/`、`docs/reference/`、`research-library/`、项目`QUANTCONNECT_LEARNING_CN.md`及历史计划；具体采用状态从当前计划核对 |
+| 旧GSM三SOP计划及用户原SOP | 根中英文`FINAL_CHAMPION_ITERATION_SYSTEM*`与`gsm-sop/`；通用公式可引用，旧项目验收不得自动套给V1.2 |
+| 综合评估工具与用户建议值 | `tools/ea-evaluation/README_CN.md`、工作簿、manifest与验证记录；建议值、验收和评分锚点分别处理 |
+| 13项指标、源码／EX5、缓冲区、量价研究 | 指标库当前`README.md`、`indicator_manifest.json`、`packages/`内接口和验证说明、`docs/INDICATOR_RESEARCH_PRINCIPLES_CN_20260927.md`、`docs/PVO_PRICE_VOLUME_INTERPRETATION_CN_20261003.md` |
+| 实际EA源码、编译和原始成交证据 | 当前轮`DELIVERY`给出的本地交付路径、`EA_SELECTION.json`、`EA文件索引.md`、`MANIFEST.json`；先核哈希，不能把GitHub文档骨架当可编译完整源码 |
+
+### 本次交接的定位快照
+
+2026-10-07核对主库基线 `2513c19c820644230d82ea002b8e4c8eb7cf78fa`、指标库 `c1a0021f2a6db562f9e791e620c08352a743e6ca`。这是交接前的版本身份；以后应以新main及CURRENT为准，不把这两个值固定成永久最新版本。
+
+- 最新实际研究仍为2026-10-04 I11：9场新MT5测试＋19条复用，3组新候选编译；历史任务为Codex-only，不能改称Claude已参与复审。
+- 当前路线为C# LEAN离线研究＋MQL5独立执行。七个C#信号层编译不等于完整迁移；LEAN运行受Windows应用控制0x800711C7阻挡，完整风险／成交／退出和双端验收未完成。
+- 用户Scalping保留M5、最近有效供需区回踩及方向反转闭柱核心，允许优化进出场细节；服务器日累计6盈OR6亏只锁该策略新增风险，保护已有仓位继续。固定表手数与风险比例是V1.2分别登记的研究候选；不把旧全局说明误当此项目新增权限的否定。
+- 35/25/20/10/10评分权重有效；正式锚点未登记，仍N/A／SCORE_TARGETS_UNSET。PF1.3–1.8、DD≤15%、200–500笔、Recovery>3、净期望／成本3–5倍为计划8.1参考，不自动给满分。
+- I11的S2推进2%＋1R保本是研究主候选：六月14.84、八月19.40 USD，但仅1／2笔。Scalping六月仍亏损。六月和八月都是已用开发数据；无独立OOS、组合连续账户、提款路径、Demo、Champion或实盘验证。
+- I11交付ZIP SHA256：`aaaae4071d2837eb94b6db1aeeb2f04f8cd2378995e1f053bf6f5788c264e37b`；本次重新核对匹配。源码／EX5和原始报告维持本地范围，没有因知识同步公开上传。
+
+本机可复用位置（跨电脑须重新定位，不存在就报告缺口）：
+
+- 主仓库：`C:\Users\A\Documents\Codex\2026-09-10\new-chat\work\plan-replacement\repository`
+- 指标库：`C:\Users\A\Documents\Codex\2026-09-08\created-by-user-chrismoody-updated-4\work\github-indicators-payload`
+- EA工作区：`C:\Users\A\Documents\Codex\2026-09-10\v1-2-ea-mt5`
+- 当前完整交付：上述工作区`outputs\TradingBrain_I11_Seven_Strategies_20261004`及同名ZIP。
+
+Claude Code机制依据：[官方记忆说明](https://code.claude.com/docs/en/memory)。本节是项目同步约定，实际是否读取须以会话回执为证，不能单凭自动加载配置声称全部知识已学会。
+
 每次开始新的开发任务或接续研究前，先让用户选择：
 
 1. **使用 Claude**：Codex 与 Claude 共同讨论和复审，Claude 写改代码，Codex 协调、编译、测试及整理证据。
