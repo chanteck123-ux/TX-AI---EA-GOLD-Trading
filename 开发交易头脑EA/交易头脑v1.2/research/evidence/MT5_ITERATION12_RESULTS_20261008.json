@@ -1,0 +1,555 @@
+{
+  "schema": "I12_COMPARISON_VS_PARENT_V1",
+  "created_utc": "2026-10-08T11:13:22.071Z",
+  "basis": "net USD, trade count, official equity DD, PF and cost come from the formal native verification proofs of both sides (parent: I10 June and I9 August VERIFICATION files, hash-bound, source = registered parent); review CSVs are used for trade matching and are asserted equal to the proofs; the closed-trade balance proxy is auxiliary only",
+  "scope": "June 2026 and August 2026 development data at 250 ms, 500 USD per independent account; not out-of-sample",
+  "rows": [
+    {
+      "candidate": "C1",
+      "scenario": "JUNE_DELAY250",
+      "result": {
+        "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration12_20261008\\Scalping\\VERIFICATION_R4_C1_JUNE_DELAY250.json",
+        "sha256": "72312ab1398b0b1d5a4909700bdb6d9da72e710f27ee56222cc5901a8408b108"
+      },
+      "parent_review": {
+        "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\outputs\\TradingBrain_I11_Seven_Strategies_20261004\\evidence\\reused\\SCALP_JUN_D250\\SCALPI1020261004_RISK2_FIX_JUNE_DELAY250_03b83e17_TRADE_REVIEW.csv",
+        "sha256": "bd14caec1328ed07adb5d86551a42d100da3f0d277df1d3b707116f85aa6a041"
+      },
+      "candidate_review": {
+        "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration12_20261008\\Scalping\\jobs\\C1\\runs\\JUNE_DELAY250\\SCALPI1220261008_C1_JUNE_DELAY250_99f5c33a_TRADE_REVIEW.csv",
+        "sha256": "615841c9a0dd6eedbe5a7e882944d250e842d846515acadf2418ee24e671acaa"
+      },
+      "parent_official": {
+        "proof": {
+          "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration10_20261004\\Scalping\\VERIFICATION_JUNE_DELAY250.json",
+          "sha256": "9bb69ad4047eb273866c45a3b6925c94f0355d536a1afb6e5bc7b386808afc52"
+        },
+        "run_id": "SCALPI1020261004_RISK2_FIX_JUNE_DELAY250_03b83e17",
+        "net_usd": -63.79,
+        "equity_dd_usd": 81.35,
+        "max_relative_equity_dd_pct": 15.96,
+        "complete_positions": 44,
+        "pf": 0.5574441515193562,
+        "cost_usd": 5.590000000000002,
+        "round_trip_lots": 0.4400000000000002,
+        "cost_usd_per_round_trip_lot": 12.704545454545451
+      },
+      "candidate_official": {
+        "run_id": "SCALPI1220261008_C1_JUNE_DELAY250_99f5c33a",
+        "net_usd": -66.32999999999998,
+        "equity_dd_usd": 80.53,
+        "max_relative_equity_dd_pct": 16,
+        "complete_positions": 31,
+        "pf": 0.5261804414601042,
+        "cost_usd": 4.550000000000001,
+        "round_trip_lots": 0.3100000000000001,
+        "cost_usd_per_round_trip_lot": 14.677419354838706
+      },
+      "review_vs_proof_net_and_trades_asserted_equal": true,
+      "delta": {
+        "net_usd": -2.54,
+        "trades": -13,
+        "equity_dd_usd": -0.82,
+        "max_relative_equity_dd_pct": 0.04,
+        "pf": -0.03126371005925199,
+        "cost_usd": -1.04,
+        "cost_usd_per_round_trip_lot": 1.972873900293255
+      },
+      "risk_accounting": {
+        "parent": {
+          "planned_pct": {
+            "n": 44,
+            "mean": 1.1243386363636363,
+            "max": 1.2477,
+            "min": 1.0557
+          },
+          "planned_usd": {
+            "n": 44,
+            "mean": 5.379999999999997,
+            "max": 5.38,
+            "min": 5.38
+          },
+          "actual_sl_risk_pct_review": {
+            "n": 44,
+            "mean": 1.0331045454545456,
+            "max": 1.1481,
+            "min": 0.8761
+          },
+          "volume": {
+            "n": 44,
+            "mean": 0.010000000000000005,
+            "max": 0.01,
+            "min": 0.01
+          },
+          "minimum_lot_rejections": 0,
+          "orders_requested": 44,
+          "orders_rejected": 0
+        },
+        "candidate": {
+          "planned_pct": {
+            "n": 31,
+            "mean": 1.5388096774193551,
+            "max": 1.9785,
+            "min": 1.1037
+          },
+          "planned_usd": {
+            "n": 31,
+            "mean": 7.107419354838709,
+            "max": 9.38,
+            "min": 5.38
+          },
+          "actual_sl_risk_pct_review": {
+            "n": 31,
+            "mean": 1.4489612903225808,
+            "max": 1.8971,
+            "min": 1.0202
+          },
+          "volume": {
+            "n": 31,
+            "mean": 0.010000000000000004,
+            "max": 0.01,
+            "min": 0.01
+          },
+          "minimum_lot_rejections": 13,
+          "orders_requested": 31,
+          "orders_rejected": 0
+        },
+        "note": "risk per trade changes with the SL distance; this explains part of the net/DD/trade-count change and is not a signal-quality statement"
+      },
+      "auxiliary_closed_trade_balance_proxy": {
+        "parent_dd_usd": 78.42,
+        "candidate_dd_usd": 74.26,
+        "note": "not an equity drawdown; auxiliary only"
+      },
+      "attribution": {
+        "shared_same_zone_time_side": 31,
+        "shared_profit_delta_usd": -37.95,
+        "candidate_only_trades": 0,
+        "candidate_only_net_usd": 0,
+        "parent_only_trades": 13,
+        "parent_only_net_usd": -35.41,
+        "note": "single-position semantics: lists diverge after the first different trade; attribution is descriptive, not causal"
+      }
+    },
+    {
+      "candidate": "C2",
+      "scenario": "JUNE_DELAY250",
+      "result": {
+        "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration12_20261008\\Scalping\\VERIFICATION_R4_C2_JUNE_DELAY250.json",
+        "sha256": "b203f40b16b29459375e989a73ba0a8e1aecf4513164ad64d04f1b69e1208cbc"
+      },
+      "parent_review": {
+        "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\outputs\\TradingBrain_I11_Seven_Strategies_20261004\\evidence\\reused\\SCALP_JUN_D250\\SCALPI1020261004_RISK2_FIX_JUNE_DELAY250_03b83e17_TRADE_REVIEW.csv",
+        "sha256": "bd14caec1328ed07adb5d86551a42d100da3f0d277df1d3b707116f85aa6a041"
+      },
+      "candidate_review": {
+        "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration12_20261008\\Scalping\\jobs\\C2\\runs\\JUNE_DELAY250\\SCALPI1220261008_C2_JUNE_DELAY250_c5bfd5e8_TRADE_REVIEW.csv",
+        "sha256": "034c1cd69c7e3bd963e1a8195729164b070c375d4fe9485006da1790fb4b82e1"
+      },
+      "parent_official": {
+        "proof": {
+          "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration10_20261004\\Scalping\\VERIFICATION_JUNE_DELAY250.json",
+          "sha256": "9bb69ad4047eb273866c45a3b6925c94f0355d536a1afb6e5bc7b386808afc52"
+        },
+        "run_id": "SCALPI1020261004_RISK2_FIX_JUNE_DELAY250_03b83e17",
+        "net_usd": -63.79,
+        "equity_dd_usd": 81.35,
+        "max_relative_equity_dd_pct": 15.96,
+        "complete_positions": 44,
+        "pf": 0.5574441515193562,
+        "cost_usd": 5.590000000000002,
+        "round_trip_lots": 0.4400000000000002,
+        "cost_usd_per_round_trip_lot": 12.704545454545451
+      },
+      "candidate_official": {
+        "run_id": "SCALPI1220261008_C2_JUNE_DELAY250_c5bfd5e8",
+        "net_usd": -68.91000000000001,
+        "equity_dd_usd": 110.64,
+        "max_relative_equity_dd_pct": 21.03,
+        "complete_positions": 95,
+        "pf": 0.7503441779581188,
+        "cost_usd": 8.810000000000006,
+        "round_trip_lots": 0.9500000000000006,
+        "cost_usd_per_round_trip_lot": 9.273684210526316
+      },
+      "review_vs_proof_net_and_trades_asserted_equal": true,
+      "delta": {
+        "net_usd": -5.12,
+        "trades": 51,
+        "equity_dd_usd": 29.29,
+        "max_relative_equity_dd_pct": 5.07,
+        "pf": 0.19290002643876258,
+        "cost_usd": 3.22,
+        "cost_usd_per_round_trip_lot": -3.4308612440191357
+      },
+      "risk_accounting": {
+        "parent": {
+          "planned_pct": {
+            "n": 44,
+            "mean": 1.1243386363636363,
+            "max": 1.2477,
+            "min": 1.0557
+          },
+          "planned_usd": {
+            "n": 44,
+            "mean": 5.379999999999997,
+            "max": 5.38,
+            "min": 5.38
+          },
+          "actual_sl_risk_pct_review": {
+            "n": 44,
+            "mean": 1.0331045454545456,
+            "max": 1.1481,
+            "min": 0.8761
+          },
+          "volume": {
+            "n": 44,
+            "mean": 0.010000000000000005,
+            "max": 0.01,
+            "min": 0.01
+          },
+          "minimum_lot_rejections": 0,
+          "orders_requested": 44,
+          "orders_rejected": 0
+        },
+        "candidate": {
+          "planned_pct": {
+            "n": 95,
+            "mean": 1.1202736842105259,
+            "max": 1.2928,
+            "min": 1.0248
+          },
+          "planned_usd": {
+            "n": 95,
+            "mean": 5.379999999999996,
+            "max": 5.38,
+            "min": 5.38
+          },
+          "actual_sl_risk_pct_review": {
+            "n": 95,
+            "mean": 1.025841052631579,
+            "max": 1.202,
+            "min": 0.88
+          },
+          "volume": {
+            "n": 95,
+            "mean": 0.010000000000000007,
+            "max": 0.01,
+            "min": 0.01
+          },
+          "minimum_lot_rejections": 0,
+          "orders_requested": 95,
+          "orders_rejected": 0
+        },
+        "note": "risk per trade changes with the SL distance; this explains part of the net/DD/trade-count change and is not a signal-quality statement"
+      },
+      "auxiliary_closed_trade_balance_proxy": {
+        "parent_dd_usd": 78.42,
+        "candidate_dd_usd": 108.82,
+        "note": "not an equity drawdown; auxiliary only"
+      },
+      "attribution": {
+        "shared_same_zone_time_side": 38,
+        "shared_profit_delta_usd": 0,
+        "candidate_only_trades": 57,
+        "candidate_only_net_usd": -16.32,
+        "parent_only_trades": 6,
+        "parent_only_net_usd": -11.2,
+        "note": "single-position semantics: lists diverge after the first different trade; attribution is descriptive, not causal"
+      }
+    },
+    {
+      "candidate": "C1",
+      "scenario": "AUGUST_DELAY250",
+      "result": {
+        "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration12_20261008\\Scalping\\VERIFICATION_R4_C1_AUGUST_DELAY250.json",
+        "sha256": "2ca2e9ef7aed9e26810aff865db97753ea4c25cf7dbf466f92fee3f692ee8ff4"
+      },
+      "parent_review": {
+        "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\outputs\\TradingBrain_I11_Seven_Strategies_20261004\\evidence\\reused\\SCALP_AUGUST_DELAY250\\SCALPI920261004_RISK2_FIX_AUGUST_DELAY250_33018e57_TRADE_REVIEW.csv",
+        "sha256": "7f362a5e389dfd1c0fd5d1a49f9be9645c71ca95bc06bd40c95299dfdc4b547c"
+      },
+      "candidate_review": {
+        "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration12_20261008\\Scalping\\jobs\\C1\\runs\\AUGUST_DELAY250\\SCALPI1220261008_C1_AUGUST_DELAY250_fccb48af_TRADE_REVIEW.csv",
+        "sha256": "6f99b2d5eeb96420a5a470ec3e853cefbb165dfada35336e0e628a991bd38a15"
+      },
+      "parent_official": {
+        "proof": {
+          "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration9_20261004\\Scalping\\VERIFICATION_AUGUST_DELAY250.json",
+          "sha256": "d9c3cd283cc22a2683337d15955d8c617f008d1ab28269ef305d3dd5cf89bcd8"
+        },
+        "run_id": "SCALPI920261004_RISK2_FIX_AUGUST_DELAY250_33018e57",
+        "net_usd": 48.050000000000004,
+        "equity_dd_usd": 29.21,
+        "max_relative_equity_dd_pct": 5.3,
+        "complete_positions": 42,
+        "pf": 1.4399780239904774,
+        "cost_usd": 3.960000000000002,
+        "round_trip_lots": 0.5200000000000002,
+        "cost_usd_per_round_trip_lot": 7.615384615384616
+      },
+      "candidate_official": {
+        "run_id": "SCALPI1220261008_C1_AUGUST_DELAY250_fccb48af",
+        "net_usd": 38.18999999999998,
+        "equity_dd_usd": 29.06,
+        "max_relative_equity_dd_pct": 5.27,
+        "complete_positions": 42,
+        "pf": 1.2688679245283017,
+        "cost_usd": 3.4800000000000018,
+        "round_trip_lots": 0.4400000000000002,
+        "cost_usd_per_round_trip_lot": 7.909090909090909
+      },
+      "review_vs_proof_net_and_trades_asserted_equal": true,
+      "delta": {
+        "net_usd": -9.86,
+        "trades": 0,
+        "equity_dd_usd": -0.15,
+        "max_relative_equity_dd_pct": -0.03,
+        "pf": -0.1711100994621757,
+        "cost_usd": -0.48,
+        "cost_usd_per_round_trip_lot": 0.2937062937062933
+      },
+      "risk_accounting": {
+        "parent": {
+          "planned_pct": {
+            "n": 42,
+            "mean": 1.2555333333333336,
+            "max": 1.9981,
+            "min": 1.0046
+          },
+          "planned_usd": {
+            "n": 42,
+            "mean": 6.656190476190475,
+            "max": 10.74,
+            "min": 5.38
+          },
+          "actual_sl_risk_pct_review": {
+            "n": 42,
+            "mean": 1.1584690476190478,
+            "max": 1.8603,
+            "min": 0.8873
+          },
+          "volume": {
+            "n": 42,
+            "mean": 0.012380952380952387,
+            "max": 0.02,
+            "min": 0.01
+          },
+          "minimum_lot_rejections": 0,
+          "orders_requested": 42,
+          "orders_rejected": 0
+        },
+        "candidate": {
+          "planned_pct": {
+            "n": 42,
+            "mean": 1.5009857142857141,
+            "max": 1.9794,
+            "min": 1.0176
+          },
+          "planned_usd": {
+            "n": 42,
+            "mean": 7.928809523809522,
+            "max": 10.74,
+            "min": 5.38
+          },
+          "actual_sl_risk_pct_review": {
+            "n": 42,
+            "mean": 1.4184642857142857,
+            "max": 1.8436,
+            "min": 0.9357
+          },
+          "volume": {
+            "n": 42,
+            "mean": 0.010476190476190481,
+            "max": 0.02,
+            "min": 0.01
+          },
+          "minimum_lot_rejections": 0,
+          "orders_requested": 42,
+          "orders_rejected": 0
+        },
+        "note": "risk per trade changes with the SL distance; this explains part of the net/DD/trade-count change and is not a signal-quality statement"
+      },
+      "auxiliary_closed_trade_balance_proxy": {
+        "parent_dd_usd": 26.93,
+        "candidate_dd_usd": 24.11,
+        "note": "not an equity drawdown; auxiliary only"
+      },
+      "attribution": {
+        "shared_same_zone_time_side": 42,
+        "shared_profit_delta_usd": -9.86,
+        "candidate_only_trades": 0,
+        "candidate_only_net_usd": 0,
+        "parent_only_trades": 0,
+        "parent_only_net_usd": 0,
+        "note": "single-position semantics: lists diverge after the first different trade; attribution is descriptive, not causal"
+      }
+    },
+    {
+      "candidate": "C2",
+      "scenario": "AUGUST_DELAY250",
+      "result": {
+        "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration12_20261008\\Scalping\\VERIFICATION_R4_C2_AUGUST_DELAY250.json",
+        "sha256": "d58501c8187fb8cae7ac53a0d08adbf04b368cb5997a3ec9131138a7d6fa907e"
+      },
+      "parent_review": {
+        "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\outputs\\TradingBrain_I11_Seven_Strategies_20261004\\evidence\\reused\\SCALP_AUGUST_DELAY250\\SCALPI920261004_RISK2_FIX_AUGUST_DELAY250_33018e57_TRADE_REVIEW.csv",
+        "sha256": "7f362a5e389dfd1c0fd5d1a49f9be9645c71ca95bc06bd40c95299dfdc4b547c"
+      },
+      "candidate_review": {
+        "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration12_20261008\\Scalping\\jobs\\C2\\runs\\AUGUST_DELAY250\\SCALPI1220261008_C2_AUGUST_DELAY250_1a358860_TRADE_REVIEW.csv",
+        "sha256": "f0b0afe1114ebc55f745a71602d90dd80dad8798e4a8702c52020e613171d52d"
+      },
+      "parent_official": {
+        "proof": {
+          "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration9_20261004\\Scalping\\VERIFICATION_AUGUST_DELAY250.json",
+          "sha256": "d9c3cd283cc22a2683337d15955d8c617f008d1ab28269ef305d3dd5cf89bcd8"
+        },
+        "run_id": "SCALPI920261004_RISK2_FIX_AUGUST_DELAY250_33018e57",
+        "net_usd": 48.050000000000004,
+        "equity_dd_usd": 29.21,
+        "max_relative_equity_dd_pct": 5.3,
+        "complete_positions": 42,
+        "pf": 1.4399780239904774,
+        "cost_usd": 3.960000000000002,
+        "round_trip_lots": 0.5200000000000002,
+        "cost_usd_per_round_trip_lot": 7.615384615384616
+      },
+      "candidate_official": {
+        "run_id": "SCALPI1220261008_C2_AUGUST_DELAY250_1a358860",
+        "net_usd": 23.74999999999999,
+        "equity_dd_usd": 28.26,
+        "max_relative_equity_dd_pct": 5.25,
+        "complete_positions": 85,
+        "pf": 1.1072283173055215,
+        "cost_usd": 7.160000000000002,
+        "round_trip_lots": 0.9100000000000006,
+        "cost_usd_per_round_trip_lot": 7.868131868131865
+      },
+      "review_vs_proof_net_and_trades_asserted_equal": true,
+      "delta": {
+        "net_usd": -24.3,
+        "trades": 43,
+        "equity_dd_usd": -0.95,
+        "max_relative_equity_dd_pct": -0.05,
+        "pf": -0.33274970668495585,
+        "cost_usd": 3.2,
+        "cost_usd_per_round_trip_lot": 0.2527472527472492
+      },
+      "risk_accounting": {
+        "parent": {
+          "planned_pct": {
+            "n": 42,
+            "mean": 1.2555333333333336,
+            "max": 1.9981,
+            "min": 1.0046
+          },
+          "planned_usd": {
+            "n": 42,
+            "mean": 6.656190476190475,
+            "max": 10.74,
+            "min": 5.38
+          },
+          "actual_sl_risk_pct_review": {
+            "n": 42,
+            "mean": 1.1584690476190478,
+            "max": 1.8603,
+            "min": 0.8873
+          },
+          "volume": {
+            "n": 42,
+            "mean": 0.012380952380952387,
+            "max": 0.02,
+            "min": 0.01
+          },
+          "minimum_lot_rejections": 0,
+          "orders_requested": 42,
+          "orders_rejected": 0
+        },
+        "candidate": {
+          "planned_pct": {
+            "n": 85,
+            "mean": 1.1123858823529413,
+            "max": 1.9952,
+            "min": 1.0084
+          },
+          "planned_usd": {
+            "n": 85,
+            "mean": 5.758352941176469,
+            "max": 10.74,
+            "min": 5.38
+          },
+          "actual_sl_risk_pct_review": {
+            "n": 85,
+            "mean": 1.024227058823529,
+            "max": 1.8582,
+            "min": 0.8495
+          },
+          "volume": {
+            "n": 85,
+            "mean": 0.010705882352941183,
+            "max": 0.02,
+            "min": 0.01
+          },
+          "minimum_lot_rejections": 0,
+          "orders_requested": 85,
+          "orders_rejected": 0
+        },
+        "note": "risk per trade changes with the SL distance; this explains part of the net/DD/trade-count change and is not a signal-quality statement"
+      },
+      "auxiliary_closed_trade_balance_proxy": {
+        "parent_dd_usd": 26.93,
+        "candidate_dd_usd": 26.78,
+        "note": "not an equity drawdown; auxiliary only"
+      },
+      "attribution": {
+        "shared_same_zone_time_side": 41,
+        "shared_profit_delta_usd": 6.05,
+        "candidate_only_trades": 44,
+        "candidate_only_net_usd": -20.13,
+        "parent_only_trades": 1,
+        "parent_only_net_usd": 10.22,
+        "note": "single-position semantics: lists diverge after the first different trade; attribution is descriptive, not causal"
+      }
+    }
+  ],
+  "verdict": {
+    "C1": {
+      "net_delta_usd_by_scenario": {
+        "JUNE_DELAY250": -2.54,
+        "AUGUST_DELAY250": -9.86
+      },
+      "improves_net_in_both_months": false,
+      "worse_net_in_any_month": true,
+      "equity_dd_delta_usd_by_scenario": {
+        "JUNE_DELAY250": -0.82,
+        "AUGUST_DELAY250": -0.15
+      },
+      "cost_delta_usd_by_scenario": {
+        "JUNE_DELAY250": -1.04,
+        "AUGUST_DELAY250": -0.48
+      }
+    },
+    "C2": {
+      "net_delta_usd_by_scenario": {
+        "JUNE_DELAY250": -5.12,
+        "AUGUST_DELAY250": -24.3
+      },
+      "improves_net_in_both_months": false,
+      "worse_net_in_any_month": true,
+      "equity_dd_delta_usd_by_scenario": {
+        "JUNE_DELAY250": 29.29,
+        "AUGUST_DELAY250": -0.95
+      },
+      "cost_delta_usd_by_scenario": {
+        "JUNE_DELAY250": 3.22,
+        "AUGUST_DELAY250": 3.2
+      }
+    }
+  },
+  "recommendation": "KEEP_PARENT_NO_CANDIDATE_IMPROVED_NET_IN_BOTH_MONTHS_DO_NOT_RUN_0MS_TO_RESCUE_RESULTS",
+  "score": {
+    "status": "SCORE_TARGETS_UNSET",
+    "total": null
+  }
+}

@@ -1,9 +1,9 @@
 {
   "schema": "TRADINGBRAIN_PLAN_EVIDENCE_V1",
-  "checked_on": "2026-10-04",
+  "checked_on": "2026-10-08",
   "timezone": "Asia/Kuala_Lumpur",
   "base_repository_commit": "5718ef82fab53f6a97e047b5b6330cb6636508ff",
-  "scope": "HISTORICAL_EVIDENCE_PRESERVED_PLUS_I11_USED_DEVELOPMENT_RESEARCH_AND_VERIFIED_LOCAL_DELIVERY",
+  "scope": "HISTORICAL_EVIDENCE_PRESERVED_PLUS_I12_NATIVE_CHALLENGER_RESEARCH_AND_VERIFIED_LOCAL_SUPPLEMENT",
   "source_workspace_local": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5",
   "source_reports": [
     {
@@ -250,6 +250,41 @@
       "sha256": "ebeab8b8eb64e6661e233b82a26b7313c2c8d7b982e4e7a847e16e9348cb5fd1",
       "scope": "I11:9 new native runs,19 exact reuse,3 clean new source builds; used-development research only, no promotion/deployment",
       "verified_on": "2026-10-04"
+    },
+    {
+      "original_workspace_relative_path": "work/repair_research/mt5_iteration12_20261008/Scalping/I12_RESEARCH_REPORT_CN.md",
+      "repository_project_relative_path": "research/evidence/MT5_ITERATION12_SCALPING_20261008_CN.md",
+      "sha256": "3a1a0c6dca76a27aad531c7e15afcb23eeb3e337f5ab432e9d1920d6d6f1548c",
+      "scope": "I12 native development research, no candidate promotion; matched local delivery",
+      "verified_on": "2026-10-08"
+    },
+    {
+      "original_workspace_relative_path": "work/repair_research/mt5_iteration12_20261008/Scalping/COMPARISON_I12_VS_PARENT.json",
+      "repository_project_relative_path": "research/evidence/MT5_ITERATION12_RESULTS_20261008.json",
+      "sha256": "89dfc96e464fa98f1fd818bd0dc73ed467c2b29271198073d2bd17c85422a626",
+      "scope": "I12 native development research, no candidate promotion; matched local delivery",
+      "verified_on": "2026-10-08"
+    },
+    {
+      "original_workspace_relative_path": "work/repair_research/mt5_iteration12_20261008/CODEX_FINAL_REVIEW.json",
+      "repository_project_relative_path": "research/evidence/MT5_ITERATION12_REVIEW_20261008.json",
+      "sha256": "79a4079b9386c9b311622b28e7aea05fc5ecd23fd1cd337f4a683d0707a1bbc0",
+      "scope": "I12 native development research, no candidate promotion; matched local delivery",
+      "verified_on": "2026-10-08"
+    },
+    {
+      "original_workspace_relative_path": "work/repair_research/mt5_iteration12_20261008/CODEX_DELIVERY_RECEIPT.json",
+      "repository_project_relative_path": "research/evidence/MT5_ITERATION12_DELIVERY_20261008.json",
+      "sha256": "a10c24211863821cea58bdb112aafe571d7bff5b824b3c452dc96655c0be8d1e",
+      "scope": "I12 native development research, no candidate promotion; matched local delivery",
+      "verified_on": "2026-10-08"
+    },
+    {
+      "original_workspace_relative_path": "work/repair_research/mt5_iteration12_20261008/Scalping/I12_RESEARCH_REPORT_EN.md",
+      "repository_project_relative_path": "research/evidence/MT5_ITERATION12_SCALPING_20261008_EN.md",
+      "sha256": "23e58801f7825ea39219dde2cf03c06995a0ba0b9d84b3f1a7e3def1ba44745b",
+      "scope": "I12 native development research, no candidate promotion; matched local delivery",
+      "verified_on": "2026-10-08"
     }
   ],
   "archived_repository_files": [

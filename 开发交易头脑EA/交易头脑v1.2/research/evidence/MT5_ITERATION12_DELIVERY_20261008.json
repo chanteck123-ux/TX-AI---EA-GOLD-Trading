@@ -1,0 +1,11 @@
+{
+  "status": "ZIP_ALL_MEMBERS_SHA256_VERIFIED",
+  "zip": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\outputs\\TradingBrain_I12_Scalping_Research_20261008.zip",
+  "zip_sha256": "ae00dc0e826aef693b437db3cb7acbc6aaeed5be1d359ab345ac71899eb1ab5a",
+  "member_count": 202,
+  "manifest_files": 200,
+  "matching_default_source_ex5_pairs": 2,
+  "original_I11_preserved": true,
+  "i11_sha256": "aaaae4071d2837eb94b6db1aeeb2f04f8cd2378995e1f053bf6f5788c264e37b",
+  "live": false
+}

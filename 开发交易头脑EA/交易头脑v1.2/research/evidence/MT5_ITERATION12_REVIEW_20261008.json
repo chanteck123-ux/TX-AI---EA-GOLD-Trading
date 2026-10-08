@@ -1,0 +1,46 @@
+{
+  "schema": "CODEX_I12_FINAL_REVIEW",
+  "created_utc": "2026-10-08T11:16:19.3913340Z",
+  "implementer": "Claude Code",
+  "independent_verifier": "Codex",
+  "compile": "2 native compilations, each 0 errors / 0 warnings",
+  "native_runs": 4,
+  "strict_final_audits": 4,
+  "predicate_fixture_checks": {
+    "r4_rounding": 11,
+    "r3_geometry": 17,
+    "original": 38
+  },
+  "collector_replayed": "CODEX_COMPARISON_REPLAY.json",
+  "decision": "Keep registered Daily6 parent and existing S1-S6 research versions. C1/C2 not promoted",
+  "candidate_net_deltas_usd": {
+    "C2_Aug": -24.3,
+    "C2_June": -5.12,
+    "C1_June": -2.54,
+    "C1_Aug": -9.86
+  },
+  "conditional_delay0_runs": 0,
+  "new_lean_runtime_attempts": 0,
+  "lean_candidate_mirror": "PENDING",
+  "score": "N/A / SCORE_TARGETS_UNSET",
+  "fault_injection": "NOT_ESTABLISHED",
+  "deployment": false,
+  "tools": [
+    {
+      "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration12_20261008\\Scalping\\compare_i12_to_parent.mjs",
+      "sha256": "7ab8d71fc8101ad328c59b9da94979cc6d8497446e24e02da8489a6656249172"
+    },
+    {
+      "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration12_20261008\\Scalping\\build_i12_report.mjs",
+      "sha256": "05f57843dcab1d60108cae15e02245e6166f8849f1ba295ac56216f15e731298"
+    },
+    {
+      "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration12_20261008\\Scalping\\build_i12_supplement.mjs",
+      "sha256": "28eef609aa6b802a82faf6c68a29d0f4cd69a114c1b87f30b97d0788a8145533"
+    },
+    {
+      "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration12_20261008\\Scalping\\package_i12_supplement.ps1",
+      "sha256": "18ff439bb02505bbaa715edaa4617c9dbbcae42bb1dafe5b09e543fca167927e"
+    }
+  ]
+}

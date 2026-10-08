@@ -1,6 +1,6 @@
 {
   "schema": "TRADINGBRAIN_CURRENT_V1",
-  "updated_on": "2026-10-04",
+  "updated_on": "2026-10-08",
   "timezone": "Asia/Kuala_Lumpur",
   "project": "TradingBrain V1.2 GOLD EA",
   "plan": "../docs/PLAN_CN.md",
@@ -35,17 +35,18 @@
     "claude_connection_scope": "DESKTOP_CHAT_MESSAGES_DESIGN_AND_RESULT_SUMMARY_ONLY",
     "claude_cli_or_background_verified": false,
     "mode_selection_required_before_each_new_or_resumed_task": true,
-    "mode_selection_for_next_task": "CODEX_ONLY",
+    "mode_selection_for_next_task": "CODEX_AND_CLAUDE",
     "research_engine": "QUANTCONNECT_LEAN_CSHARP",
     "execution_engine": "FXPRO_MT5_MQL5",
     "route_status": "SEVEN_CSHARP_SIGNAL_LAYERS_COMPILED_LEAN_RUNTIME_BLOCKED_NATIVE_RESEARCH_CONTINUES",
     "mt5_independent_of_lean": true,
     "live_signal_bridge_required": false,
-    "selected_mode_scope": "USER_CONFIRMED_CODEX_ONLY_CONTINUATION_20261004",
+    "selected_mode_scope": "USER_CONFIRMED_CLAUDE_CODE_COOPERATION_20261008",
     "research_engine_execution": "WINDOWS_APPLICATION_CONTROL_BLOCKED_0x800711C7",
     "seven_signal_modules_implemented": true,
     "full_risk_fill_exit_migrated": false,
-    "cross_engine_acceptance": false
+    "cross_engine_acceptance": false,
+    "claude_code_desktop_session_verified": true
   },
   "this_change": {
     "scope": "I11_S2_EQUAL_RISK_ENTRY_BE_AND_SCALP_DD15",
@@ -1064,5 +1065,29 @@
     "zip_sha256": "aaaae4071d2837eb94b6db1aeeb2f04f8cd2378995e1f053bf6f5788c264e37b",
     "conclusion_cn": "本轮有改善的是S2：推进确认2%加原有1R保本后，六月净利仍14.84美元；八月250ms从14.28升至19.40美元，最大净值回撤从17.17降至12.05美元，显式费用不变。列为后续研究主候选，但两个月只有1／2笔，不能认定稳定盈利。改成同收盘确认的2%候选未胜出。Scalping新增15%累计回撤管理已实际触发、平仓并保持锁定；六月净亏65.85美元，比原版多亏2.06，原生最大净值回撤减少5.88美元，八月不变。S1、S3、S4、S5、S6保留原研究版本，七套都没有晋级Champion或部署实盘。",
     "conclusion_en": "S2 improves in this development comparison: progress confirmation at2% with existing1R BE keeps June netUSD14.84 and increases August250ms net from14.28 to19.40, while maximum equityDD falls from17.17 to12.05 at unchanged explicit cost. Retain as the next research lead with only1/2 trades, not stable-profit acceptance. Same-close2% did not beat the incumbent. Scalping DD15 triggered, closed and stayed locked: June net−65.85,2.06 worse than parent, native equityDD5.88 lower; August unchanged. S1/S3/S4/S5/S6 remain prior research references. No Champion or live deployment."
+  },
+  "latest_execution_in_progress": {
+    "batch": "I12_SCALPING_DIAGNOSIS_AND_S2_VALIDATION_INVENTORY",
+    "mode": "CODEX_AND_CLAUDE",
+    "implementation_owner": "Claude Code",
+    "verification_owner": "Codex",
+    "status": "BATCH_COMPLETE_FOUR_NATIVE_VERIFIED_PARENT_PRESERVED_NO_PROMOTION",
+    "started_on": "2026-10-08",
+    "new_candidates_registered": 2,
+    "native_attempts": 4,
+    "live": false,
+    "workspace": "work/repair_research/mt5_iteration12_20261008",
+    "previous_I11_delivery_preserved": true,
+    "preregistration": "work/repair_research/mt5_iteration12_20261008/CODEX_PREREGISTRATION.json",
+    "current_review_scope": "Scalping C1 ATR bracket, C2 firsttouch episode; S2 data exposure inventory; existing S1-S6 preserved",
+    "new_candidates_created": 2,
+    "compile_attempts": 2,
+    "final_native_proofs": 4,
+    "selected_version_change": false,
+    "conclusion_cn": "本轮集中Scalping两候选：ATR初始SLTP及首次触碰T0-T2确认窗口；四场真实Tick250ms及严格账本/保护检查完成，逐月净利均低于父版，保留I11全部七套研究版本。非样本外，LEAN本轮迁移及运行未完成，不部署。",
+    "delivery_zip": "outputs/TradingBrain_I12_Scalping_Research_20261008.zip",
+    "zip_sha256": "ae00dc0e826aef693b437db3cb7acbc6aaeed5be1d359ab345ac71899eb1ab5a",
+    "score": "N/A / SCORE_TARGETS_UNSET",
+    "lean_status": "PENDING_NO_NEW_CANDIDATE_MIRROR_OR_RUNTIME"
   }
 }
