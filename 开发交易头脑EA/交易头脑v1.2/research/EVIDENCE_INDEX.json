@@ -1,6 +1,6 @@
 {
   "schema": "TRADINGBRAIN_PLAN_EVIDENCE_V1",
-  "checked_on": "2026-10-08",
+  "checked_on": "2026-10-09",
   "timezone": "Asia/Kuala_Lumpur",
   "base_repository_commit": "5718ef82fab53f6a97e047b5b6330cb6636508ff",
   "scope": "HISTORICAL_EVIDENCE_PRESERVED_PLUS_I12_NATIVE_CHALLENGER_RESEARCH_AND_VERIFIED_LOCAL_SUPPLEMENT",
@@ -457,6 +457,43 @@
       "manifest_sha256": "2ad63bffbbaa59bff7511834e986cb4f43ef55dc8b0cf1e0c0953f90f2818025"
     },
     "raw_native_data_published": false,
+    "source_ex5_zip_republished": false
+  },
+  "iteration13": {
+    "reports": [
+      {
+        "sha256": "1ec19909b4fed34905dd9f75810fbc797c14b2fc68002c59eeda6c6c6859c084",
+        "path": "evidence/MT5_ITERATION13_CSHARP_MIRROR_20261009.json"
+      },
+      {
+        "sha256": "44dac30e94f190e8ddc38bcd3a82ad7ccff337b9e6f336d17329bbde6165b9d3",
+        "path": "evidence/MT5_ITERATION13_DELIVERY_20261009.json"
+      },
+      {
+        "sha256": "a00dc1697aa7a9d3f3d73acabcb464aebcf0bfb7527bf3934d3579349f9ef88e",
+        "path": "evidence/MT5_ITERATION13_CLAUDE_REVIEW_20261009_CN.md"
+      },
+      {
+        "sha256": "d4934124100ddb2818ea820079abea997e7741f2eb6c0e1c473bd20e6a6c9b31",
+        "path": "evidence/MT5_ITERATION13_CODEX_REVIEW_20261009_CN.md"
+      },
+      {
+        "sha256": "4adc8fe2eaca18f97c00e1466a32c92d5a3ef889af1223886d32f262c553b58c",
+        "path": "evidence/MT5_ITERATION13_RESULTS_20261009.json"
+      },
+      {
+        "sha256": "25b5d71acb7506911657a24bb0fb6206dd6f606a914867df5f9ef9a8c355278f",
+        "path": "evidence/MT5_ITERATION13_SCALPING_20261009_EN.md"
+      },
+      {
+        "sha256": "a91385dbd3ac35f71e4b4899b23870f0547f0d5e9bf493d0141d2c2756d45ee3",
+        "path": "evidence/MT5_ITERATION13_SCALPING_20261009_CN.md"
+      }
+    ],
+    "delivery_zip_sha256": "adcd2d6a59109ec1246d7840f120ff200211d41b0277aa203c65a3f74a56704b",
+    "raw_native_data_published": false,
+    "status": "COMPLETE_FOUR_FORMAL_NATIVE_PROOFS_PARENT_RETAINED_NO_PROMOTION",
+    "delivery_local_only": true,
     "source_ex5_zip_republished": false
   }
 }

@@ -1,0 +1,139 @@
+{
+  "schema": "I13_MIRROR_SUMMARY_V1",
+  "created_utc": "2026-10-09T12:04:59.382Z",
+  "label": "OFFLINE_CSHARP_MIRROR_NOT_LEAN",
+  "not_lean": true,
+  "scope": "Summary of existing C# audit JSON only. The mirror recomputes the inputs and decisions the EA logged, from MT5-exported bars; it simulates no fills or P&L and is not a LEAN run.",
+  "registered_tolerance": {
+    "C1_EMA_price_units": 0.001,
+    "C2_ADX_DI_percent_units": 0.000001,
+    "edited_by_this_tool": false
+  },
+  "overall": "ALL_EQUAL_WITHIN_DECLARED_TOLERANCE",
+  "totals": {
+    "runs": 4,
+    "valid_runs": 4,
+    "decisions_compared": 178,
+    "decision_flips": 0,
+    "missing_bars": 0,
+    "time_identity_violations": 0
+  },
+  "problems": [],
+  "runs": [
+    {
+      "run": "C1_JUNE",
+      "audit_file": "work/repair_research/mt5_iteration13_20261009/CSharpMirror/evidence/AUDIT_C1_JUNE.json",
+      "audit_sha256": "9b0fb7cbb55c1a4fb77a9d23f60c0686ba81a9d2fa7ec3c97ab155f927620c19",
+      "proof": "Scalping/VERIFICATION_C1_JUNE_DELAY250.json",
+      "valid": true,
+      "issues": [],
+      "status": "EQUAL_WITHIN_DECLARED_TOLERANCE",
+      "compared": 46,
+      "missing_bars": 0,
+      "time_identity_violations": 0,
+      "decision_flips": 0,
+      "max_abs_diff_a": 4.983121471013874e-9,
+      "max_abs_diff_b": 4.7966750571504235e-9,
+      "max_abs_diff_c": 0,
+      "column_meaning": "a=EMA50, b=EMA200 (price units), c unused",
+      "declared_tolerance": 0.001,
+      "notes": [
+        "seed: replica EMA starts at the first exported H4 close; the terminal's iMA started on its own (earlier) history, so equal seeds cannot be assumed - the actual differences above are the evidence"
+      ]
+    },
+    {
+      "run": "C1_AUGUST",
+      "audit_file": "work/repair_research/mt5_iteration13_20261009/CSharpMirror/evidence/AUDIT_C1_AUGUST.json",
+      "audit_sha256": "d1cf4faf343f59c789feb97dd82dbe84385564c4b50e3537ec0ae1bd3140a122",
+      "proof": "Scalping/VERIFICATION_C1_AUGUST_DELAY250.json",
+      "valid": true,
+      "issues": [],
+      "status": "EQUAL_WITHIN_DECLARED_TOLERANCE",
+      "compared": 43,
+      "missing_bars": 0,
+      "time_identity_violations": 0,
+      "decision_flips": 0,
+      "max_abs_diff_a": 4.977664502803236e-9,
+      "max_abs_diff_b": 4.965841071680188e-9,
+      "max_abs_diff_c": 0,
+      "column_meaning": "a=EMA50, b=EMA200 (price units), c unused",
+      "declared_tolerance": 0.001,
+      "notes": [
+        "seed: replica EMA starts at the first exported H4 close; the terminal's iMA started on its own (earlier) history, so equal seeds cannot be assumed - the actual differences above are the evidence"
+      ]
+    },
+    {
+      "run": "C2_JUNE",
+      "audit_file": "work/repair_research/mt5_iteration13_20261009/CSharpMirror/evidence/AUDIT_C2_JUNE.json",
+      "audit_sha256": "969cc7748555887d7cbd69dd60d21a38649da611edffb84f89c68698da615e1f",
+      "proof": "ScalpingR1/RECOVERED_VERIFICATION_C2_JUNE_DELAY250_REPAIR1.json",
+      "valid": true,
+      "issues": [],
+      "status": "EQUAL_WITHIN_DECLARED_TOLERANCE",
+      "compared": 46,
+      "missing_bars": 0,
+      "time_identity_violations": 0,
+      "decision_flips": 0,
+      "max_abs_diff_a": 4.955785115612343e-9,
+      "max_abs_diff_b": 4.828411448443148e-9,
+      "max_abs_diff_c": 4.771830930394572e-9,
+      "column_meaning": "a=ADX, b=+DI, c=-DI (indicator percent units)",
+      "declared_tolerance": 0.000001,
+      "notes": [
+        "seed: replica starts at the first exported M5 bar; the terminal's indicator started earlier, so an exactly equal seed cannot be assumed - the actual differences above are the evidence"
+      ]
+    },
+    {
+      "run": "C2_AUGUST",
+      "audit_file": "work/repair_research/mt5_iteration13_20261009/CSharpMirror/evidence/AUDIT_C2_AUGUST.json",
+      "audit_sha256": "2708fc385c38b5e16380acee3c85365c4e6e8766cf7ba8061f8fb1c9975c71db",
+      "proof": "ScalpingR1/VERIFICATION_C2_AUGUST_DELAY250.json",
+      "valid": true,
+      "issues": [],
+      "status": "EQUAL_WITHIN_DECLARED_TOLERANCE",
+      "compared": 43,
+      "missing_bars": 0,
+      "time_identity_violations": 0,
+      "decision_flips": 0,
+      "max_abs_diff_a": 4.986233648196503e-9,
+      "max_abs_diff_b": 4.812029885670199e-9,
+      "max_abs_diff_c": 4.9554351733149815e-9,
+      "column_meaning": "a=ADX, b=+DI, c=-DI (indicator percent units)",
+      "declared_tolerance": 0.000001,
+      "notes": [
+        "seed: replica starts at the first exported M5 bar; the terminal's indicator started earlier, so an exactly equal seed cannot be assumed - the actual differences above are the evidence"
+      ]
+    }
+  ],
+  "sections": [
+    {
+      "name": "C1_JUNE (C1_H4_EMA50_200)",
+      "status": "EQUAL_WITHIN_DECLARED_TOLERANCE",
+      "compared": 46,
+      "max_abs_diff_summary": "4.983121471013874E-09",
+      "decision_flips": 0
+    },
+    {
+      "name": "C1_AUGUST (C1_H4_EMA50_200)",
+      "status": "EQUAL_WITHIN_DECLARED_TOLERANCE",
+      "compared": 43,
+      "max_abs_diff_summary": "4.977664502803236E-09",
+      "decision_flips": 0
+    },
+    {
+      "name": "C2_JUNE (C2_ADX_M5_WILDER14)",
+      "status": "EQUAL_WITHIN_DECLARED_TOLERANCE",
+      "compared": 46,
+      "max_abs_diff_summary": "4.955785115612343E-09",
+      "decision_flips": 0
+    },
+    {
+      "name": "C2_AUGUST (C2_ADX_M5_WILDER14)",
+      "status": "EQUAL_WITHIN_DECLARED_TOLERANCE",
+      "compared": 43,
+      "max_abs_diff_summary": "4.986233648196503E-09",
+      "decision_flips": 0
+    }
+  ],
+  "reading": "EQUAL_WITHIN_DECLARED_TOLERANCE means the replica agreed with the EA-logged values within the tolerance registered before the run and no decision flipped; it does not prove the library or broker algorithms in general. NOT_PROVEN_EQUAL means the actual differences or flips above exceeded that tolerance (or an input binding failed); the tolerance is not adjusted afterwards."
+}

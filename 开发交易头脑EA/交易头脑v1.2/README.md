@@ -26,7 +26,9 @@
 
 后续实际开发沿用原 `v1-2-ea-mt5` 工作区及固定 MT5 终端。本次没有把本地全部 EA 源码、EX5 或大包重新公开到 GitHub，没有创建空壳交易程序。跨电脑协作先取得已授权的匹配交付包并核对哈希；仅拿到这份骨架时，可审计划与报告，不声称已能编译 EA。
 
-2026-10-08 最新实际研究：与Claude Code合作，第十二轮集中Scalping两个新候选，编译各0错误/0警告，完成4场真实Tick250ms测试及严格核验。C1六月/八月净USD为-66.33/38.19，C2为-68.91/23.75；逐月均低于登记父版，保留I11七套研究版本，不追加0ms。新研究附件逐成员哈希验证，原I11包不变。详见[中文成绩](research/evidence/MT5_ITERATION12_SCALPING_20261008_CN.md)、[English results](research/evidence/MT5_ITERATION12_SCALPING_20261008_EN.md)、[逐月差额](research/evidence/MT5_ITERATION12_RESULTS_20261008.json)及[交付哈希](research/evidence/MT5_ITERATION12_DELIVERY_20261008.json)。本轮没有新LEAN迁移或运行；评分N/A，无样本外、Champion或部署。
+2026-10-09 最新实际研究：与Claude Code合作，第十三轮新增Scalping两个独立背景门（H4 EMA50/200方向、M5库Wilder ADX14逆向排除）。3次MQ5编译均0错误/0警告，5次原生尝试得到4份正式结果，其中六月ADX修复场为完整原生结束后的日志恢复审计；原失败不覆盖。C1六月/八月净USD -20.38/34.70，C2_R1 -49.09/33.48；两候选六月改善、八月少赚，保留原版及I11七套研究版本。普通C#编译和178个原生门决策离线对照通过，仍不是LEAN引擎运行。详见[中文成绩](research/evidence/MT5_ITERATION13_SCALPING_20261009_CN.md)、[English results](research/evidence/MT5_ITERATION13_SCALPING_20261009_EN.md)、[逐月差额](research/evidence/MT5_ITERATION13_RESULTS_20261009.json)、[交付哈希](research/evidence/MT5_ITERATION13_DELIVERY_20261009.json)。S1–S6本批未重新测试；评分N/A，无独立样本外、Champion、Demo或部署。
+
+2026-10-08 历史实际研究：与Claude Code合作，第十二轮集中Scalping两个新候选，编译各0错误/0警告，完成4场真实Tick250ms测试及严格核验。C1六月/八月净USD为-66.33/38.19，C2为-68.91/23.75；逐月均低于登记父版，保留I11七套研究版本，不追加0ms。新研究附件逐成员哈希验证，原I11包不变。详见[中文成绩](research/evidence/MT5_ITERATION12_SCALPING_20261008_CN.md)、[English results](research/evidence/MT5_ITERATION12_SCALPING_20261008_EN.md)、[逐月差额](research/evidence/MT5_ITERATION12_RESULTS_20261008.json)及[交付哈希](research/evidence/MT5_ITERATION12_DELIVERY_20261008.json)。本轮没有新LEAN迁移或运行；评分N/A，无样本外、Champion或部署。
 
 历史第十一轮测试：第十一轮完成9场新MT5原生回测，复用19条完全同版同条件证据，共28行；3个新候选编译0错误、0警告。每场独立500美元，GOLD/M5真实Tick模式、名义1:1000，六月及八月均为已使用开发区间，主比较250ms；不能相加为连续账户或组合。
 

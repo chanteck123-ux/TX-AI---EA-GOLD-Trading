@@ -1,0 +1,38 @@
+{
+  "demo": false,
+  "csharp_gate_comparisons": 178,
+  "zip": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\outputs\\TradingBrain_I13_Scalping_Research_20261009.zip",
+  "chart": false,
+  "manifest_files": 246,
+  "matching_tested_default_source_ex5_pairs": 2,
+  "zip_bytes": 15584744,
+  "new_native_attempts": 5,
+  "created_utc": "2026-10-09T12:07:34.1798500Z",
+  "formal_native_proofs": 4,
+  "member_count": 248,
+  "deployment": false,
+  "zip_sha256": "adcd2d6a59109ec1246d7840f120ff200211d41b0277aa203c65a3f74a56704b",
+  "mq5_compiles": 3,
+  "recovery_refs": [
+    {
+      "hash": "aaaae4071d2837eb94b6db1aeeb2f04f8cd2378995e1f053bf6f5788c264e37b",
+      "name": "TradingBrain_I11_Seven_Strategies_20261004.zip"
+    },
+    {
+      "hash": "ae00dc0e826aef693b437db3cb7acbc6aaeed5be1d359ab345ac71899eb1ab5a",
+      "name": "TradingBrain_I12_Scalping_Research_20261008.zip"
+    }
+  ],
+  "recovered_native_proofs": 1,
+  "private_terminal_config_backup_excluded": true,
+  "status": "ZIP_ALL_MEMBERS_SHA256_VERIFIED",
+  "lean_new_engine_runs": 0,
+  "invalid_interface_attempts": 1,
+  "original_I11_and_I12_preserved": true,
+  "promotion": false,
+  "score": "N/A / SCORE_TARGETS_UNSET",
+  "live": false,
+  "engineering_csharp_compiles": 1,
+  "failed_source_ex5_pairs_retained": 1,
+  "scope": "Scalping research supplement, S1-S6 retained"
+}

@@ -1,0 +1,469 @@
+{
+  "schema": "I13_COMPARISON_VS_PARENT_V1",
+  "created_utc": "2026-10-09T12:02:35.526Z",
+  "basis": "Official account numbers (net, equity DD USD/%, PF, complete trades, cost per round-trip lot, expectancy) are read from the formal strict native verification proofs of BOTH sides; parent = I10 June and I9 August formal proofs bound in the frozen registration. No counterfactual subset, no review-CSV proxy, no message figures.",
+  "scope": "GOLD M5, real ticks model 4, 500 USD, 1:1000, 250 ms; June and August 2026 are ALREADY-USED development months, not out-of-sample; the two monthly accounts are independent and are not summed",
+  "fixed_policy_score": {
+    "status": "SCORE_TARGETS_UNSET",
+    "total": null,
+    "text": "N/A"
+  },
+  "rows": [
+    {
+      "candidate": "C1_H4_ALIGN",
+      "scenario": "JUNE_DELAY250",
+      "status": "FORMAL_PROOF_BOUND",
+      "recovered_audit": false,
+      "candidate_proof": {
+        "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration13_20261009\\Scalping\\VERIFICATION_C1_JUNE_DELAY250.json",
+        "sha256": "e543deb459c9f9557a84d5cd5087264cd302ea7252fd21f2f387d033b40556a4",
+        "run_id": "SCALPI1320261009_C1_JUNE_DELAY250_9d1ae261"
+      },
+      "parent_proof": {
+        "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration10_20261004\\Scalping\\VERIFICATION_JUNE_DELAY250.json",
+        "sha256": "9bb69ad4047eb273866c45a3b6925c94f0355d536a1afb6e5bc7b386808afc52",
+        "run_id": "SCALPI1020261004_RISK2_FIX_JUNE_DELAY250_03b83e17"
+      },
+      "candidate_source_sha256": "61b35df144e36d260c5b097249955acc9c70c716c9995009b856cd44097b0a01",
+      "candidate_official": {
+        "net_usd": -20.38,
+        "equity_dd_usd": 31.29,
+        "max_relative_equity_dd_pct": 6.12,
+        "pf": 0.6009398864303898,
+        "pf_status": "DEFINED",
+        "complete_positions": 16,
+        "wins": 6,
+        "losses": 10,
+        "cost_usd": 1.28,
+        "round_trip_lots": 0.16,
+        "cost_usd_per_round_trip_lot": 8,
+        "net_expectancy_usd_per_trade": -1.27
+      },
+      "parent_official": {
+        "net_usd": -63.79,
+        "equity_dd_usd": 81.35,
+        "max_relative_equity_dd_pct": 15.96,
+        "pf": 0.5574441515193562,
+        "pf_status": "DEFINED",
+        "complete_positions": 44,
+        "wins": 16,
+        "losses": 28,
+        "cost_usd": 5.590000000000002,
+        "round_trip_lots": 0.4400000000000002,
+        "cost_usd_per_round_trip_lot": 12.704545454545451,
+        "net_expectancy_usd_per_trade": -1.45
+      },
+      "gate_counts": {
+        "gate_evaluated": 46,
+        "gate_pass_released": 17,
+        "gate_reject": 29,
+        "gate_unavailable": 0,
+        "later_gate_rejections_after_release": 1,
+        "orders_prepared": 16,
+        "requests_accepted": 16,
+        "requests_rejected": 0,
+        "server_fills_complete_trades": 16
+      },
+      "parity_with_parent_path": {
+        "status": "IDENTICAL_UNTIL_FIRST_GATE_REJECT",
+        "identical_before": 1,
+        "first_divergence": {
+          "zone": "SCALP_GOLD_1_1780323300",
+          "entry_time": "2026.06.01 15:05:00",
+          "direction": "BUY",
+          "gate_decision": "REJECT"
+        }
+      },
+      "adx_library_init": null,
+      "delta": {
+        "net_usd": 43.41,
+        "equity_dd_usd": -50.06,
+        "max_relative_equity_dd_pct": -9.84,
+        "pf": 0.043495734911033535,
+        "complete_positions": -28,
+        "cost_usd": -4.31,
+        "cost_usd_per_round_trip_lot": -4.7045454545454515,
+        "net_expectancy_usd_per_trade": 0.18
+      },
+      "net_above_parent": true
+    },
+    {
+      "candidate": "C2_ADX_ADVERSE_R1",
+      "scenario": "JUNE_DELAY250",
+      "status": "FORMAL_PROOF_BOUND",
+      "recovered_audit": true,
+      "candidate_proof": {
+        "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration13_20261009\\ScalpingR1\\RECOVERED_VERIFICATION_C2_JUNE_DELAY250_REPAIR1.json",
+        "sha256": "ce9259bb5c280967dd4b190ebda54f3170a4cb0f905933c12a59b9ebb596a2a5",
+        "run_id": "SCALPI13R120261009_C2_JUNE_DELAY250_REPAIR1_4fc1af7b"
+      },
+      "parent_proof": {
+        "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration10_20261004\\Scalping\\VERIFICATION_JUNE_DELAY250.json",
+        "sha256": "9bb69ad4047eb273866c45a3b6925c94f0355d536a1afb6e5bc7b386808afc52",
+        "run_id": "SCALPI1020261004_RISK2_FIX_JUNE_DELAY250_03b83e17"
+      },
+      "candidate_source_sha256": "8830417c62bec4c924b2b68a365cae13307fe845ce8f1ad5c282c067decf6d26",
+      "candidate_official": {
+        "net_usd": -49.09000000000001,
+        "equity_dd_usd": 62.55,
+        "max_relative_equity_dd_pct": 12.37,
+        "pf": 0.6057661419852233,
+        "pf_status": "DEFINED",
+        "complete_positions": 39,
+        "wins": 15,
+        "losses": 24,
+        "cost_usd": 5.190000000000001,
+        "round_trip_lots": 0.3900000000000002,
+        "cost_usd_per_round_trip_lot": 13.307692307692305,
+        "net_expectancy_usd_per_trade": -1.26
+      },
+      "parent_official": {
+        "net_usd": -63.79,
+        "equity_dd_usd": 81.35,
+        "max_relative_equity_dd_pct": 15.96,
+        "pf": 0.5574441515193562,
+        "pf_status": "DEFINED",
+        "complete_positions": 44,
+        "wins": 16,
+        "losses": 28,
+        "cost_usd": 5.590000000000002,
+        "round_trip_lots": 0.4400000000000002,
+        "cost_usd_per_round_trip_lot": 12.704545454545451,
+        "net_expectancy_usd_per_trade": -1.45
+      },
+      "gate_counts": {
+        "gate_evaluated": 46,
+        "gate_pass_released": 40,
+        "gate_reject": 6,
+        "gate_unavailable": 0,
+        "later_gate_rejections_after_release": 1,
+        "orders_prepared": 39,
+        "requests_accepted": 39,
+        "requests_rejected": 0,
+        "server_fills_complete_trades": 39
+      },
+      "parity_with_parent_path": {
+        "status": "IDENTICAL_UNTIL_FIRST_GATE_REJECT",
+        "identical_before": 6,
+        "first_divergence": {
+          "zone": "SCALP_GOLD_1_1780482600",
+          "entry_time": "2026.06.03 10:50:00",
+          "direction": "BUY",
+          "gate_decision": "REJECT"
+        }
+      },
+      "adx_library_init": {
+        "status": "LIBRARY_INSTANCE_INITIALISED_WITH_WILDER_14",
+        "init_lines": 1,
+        "unique_instances": 1,
+        "method": 0,
+        "period": 14
+      },
+      "delta": {
+        "net_usd": 14.7,
+        "equity_dd_usd": -18.8,
+        "max_relative_equity_dd_pct": -3.59,
+        "pf": 0.04832199046586705,
+        "complete_positions": -5,
+        "cost_usd": -0.4,
+        "cost_usd_per_round_trip_lot": 0.6031468531468533,
+        "net_expectancy_usd_per_trade": 0.19
+      },
+      "net_above_parent": true
+    },
+    {
+      "candidate": "C1_H4_ALIGN",
+      "scenario": "AUGUST_DELAY250",
+      "status": "FORMAL_PROOF_BOUND",
+      "recovered_audit": false,
+      "candidate_proof": {
+        "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration13_20261009\\Scalping\\VERIFICATION_C1_AUGUST_DELAY250.json",
+        "sha256": "f39f7cd5b73bd02e98d69d77f2431005ff562ec28e9abb742c5850de28dceef6",
+        "run_id": "SCALPI1320261009_C1_AUGUST_DELAY250_89ab3fbb"
+      },
+      "parent_proof": {
+        "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration9_20261004\\Scalping\\VERIFICATION_AUGUST_DELAY250.json",
+        "sha256": "d9c3cd283cc22a2683337d15955d8c617f008d1ab28269ef305d3dd5cf89bcd8",
+        "run_id": "SCALPI920261004_RISK2_FIX_AUGUST_DELAY250_33018e57"
+      },
+      "candidate_source_sha256": "61b35df144e36d260c5b097249955acc9c70c716c9995009b856cd44097b0a01",
+      "candidate_official": {
+        "net_usd": 34.7,
+        "equity_dd_usd": 13.94,
+        "max_relative_equity_dd_pct": 2.74,
+        "pf": 1.8317353787152442,
+        "pf_status": "DEFINED",
+        "complete_positions": 23,
+        "wins": 15,
+        "losses": 8,
+        "cost_usd": 1.8400000000000005,
+        "round_trip_lots": 0.23000000000000007,
+        "cost_usd_per_round_trip_lot": 8,
+        "net_expectancy_usd_per_trade": 1.51
+      },
+      "parent_official": {
+        "net_usd": 48.050000000000004,
+        "equity_dd_usd": 29.21,
+        "max_relative_equity_dd_pct": 5.3,
+        "pf": 1.4399780239904774,
+        "pf_status": "DEFINED",
+        "complete_positions": 42,
+        "wins": 27,
+        "losses": 15,
+        "cost_usd": 3.960000000000002,
+        "round_trip_lots": 0.5200000000000002,
+        "cost_usd_per_round_trip_lot": 7.615384615384616,
+        "net_expectancy_usd_per_trade": 1.14
+      },
+      "gate_counts": {
+        "gate_evaluated": 43,
+        "gate_pass_released": 23,
+        "gate_reject": 20,
+        "gate_unavailable": 0,
+        "later_gate_rejections_after_release": 0,
+        "orders_prepared": 23,
+        "requests_accepted": 23,
+        "requests_rejected": 0,
+        "server_fills_complete_trades": 23
+      },
+      "parity_with_parent_path": {
+        "status": "IDENTICAL_UNTIL_FIRST_GATE_REJECT",
+        "identical_before": 0,
+        "first_divergence": {
+          "zone": "SCALP_GOLD_1_1785735900",
+          "entry_time": "2026.08.03 06:50:00",
+          "direction": "BUY",
+          "gate_decision": "REJECT"
+        }
+      },
+      "adx_library_init": null,
+      "delta": {
+        "net_usd": -13.35,
+        "equity_dd_usd": -15.27,
+        "max_relative_equity_dd_pct": -2.56,
+        "pf": 0.3917573547247668,
+        "complete_positions": -19,
+        "cost_usd": -2.12,
+        "cost_usd_per_round_trip_lot": 0.38461538461538414,
+        "net_expectancy_usd_per_trade": 0.37
+      },
+      "net_above_parent": false
+    },
+    {
+      "candidate": "C2_ADX_ADVERSE_R1",
+      "scenario": "AUGUST_DELAY250",
+      "status": "FORMAL_PROOF_BOUND",
+      "recovered_audit": false,
+      "candidate_proof": {
+        "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration13_20261009\\ScalpingR1\\VERIFICATION_C2_AUGUST_DELAY250.json",
+        "sha256": "77bfc843dcd56d58e7e33ac82f75d07b1e7290e87cd197689962d3efde2f716e",
+        "run_id": "SCALPI13R120261009_C2_AUGUST_DELAY250_077f5a0d"
+      },
+      "parent_proof": {
+        "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration9_20261004\\Scalping\\VERIFICATION_AUGUST_DELAY250.json",
+        "sha256": "d9c3cd283cc22a2683337d15955d8c617f008d1ab28269ef305d3dd5cf89bcd8",
+        "run_id": "SCALPI920261004_RISK2_FIX_AUGUST_DELAY250_33018e57"
+      },
+      "candidate_source_sha256": "8830417c62bec4c924b2b68a365cae13307fe845ce8f1ad5c282c067decf6d26",
+      "candidate_official": {
+        "net_usd": 33.480000000000004,
+        "equity_dd_usd": 15.59,
+        "max_relative_equity_dd_pct": 2.87,
+        "pf": 1.4009580838323354,
+        "pf_status": "DEFINED",
+        "complete_positions": 37,
+        "wins": 23,
+        "losses": 14,
+        "cost_usd": 3.0800000000000014,
+        "round_trip_lots": 0.3900000000000002,
+        "cost_usd_per_round_trip_lot": 7.897435897435898,
+        "net_expectancy_usd_per_trade": 0.9
+      },
+      "parent_official": {
+        "net_usd": 48.050000000000004,
+        "equity_dd_usd": 29.21,
+        "max_relative_equity_dd_pct": 5.3,
+        "pf": 1.4399780239904774,
+        "pf_status": "DEFINED",
+        "complete_positions": 42,
+        "wins": 27,
+        "losses": 15,
+        "cost_usd": 3.960000000000002,
+        "round_trip_lots": 0.5200000000000002,
+        "cost_usd_per_round_trip_lot": 7.615384615384616,
+        "net_expectancy_usd_per_trade": 1.14
+      },
+      "gate_counts": {
+        "gate_evaluated": 43,
+        "gate_pass_released": 38,
+        "gate_reject": 5,
+        "gate_unavailable": 0,
+        "later_gate_rejections_after_release": 1,
+        "orders_prepared": 37,
+        "requests_accepted": 37,
+        "requests_rejected": 0,
+        "server_fills_complete_trades": 37
+      },
+      "parity_with_parent_path": {
+        "status": "IDENTICAL_UNTIL_FIRST_GATE_REJECT",
+        "identical_before": 7,
+        "first_divergence": {
+          "zone": "SCALP_GOLD_1_1786009200",
+          "entry_time": "2026.08.06 10:00:00",
+          "direction": "BUY",
+          "gate_decision": "REJECT"
+        }
+      },
+      "adx_library_init": {
+        "status": "LIBRARY_INSTANCE_INITIALISED_WITH_WILDER_14",
+        "init_lines": 1,
+        "unique_instances": 1,
+        "method": 0,
+        "period": 14
+      },
+      "delta": {
+        "net_usd": -14.57,
+        "equity_dd_usd": -13.62,
+        "max_relative_equity_dd_pct": -2.43,
+        "pf": -0.03901994015814192,
+        "complete_positions": -5,
+        "cost_usd": -0.88,
+        "cost_usd_per_round_trip_lot": 0.28205128205128194,
+        "net_expectancy_usd_per_trade": -0.24
+      },
+      "net_above_parent": false
+    }
+  ],
+  "verdict": {
+    "C1_H4_ALIGN": {
+      "state": "PARENT_KEPT",
+      "replacement_condition_met": false,
+      "net_delta_usd": {
+        "JUNE_DELAY250": 43.41,
+        "AUGUST_DELAY250": -13.35
+      },
+      "net_above_parent": {
+        "JUNE_DELAY250": true,
+        "AUGUST_DELAY250": false
+      },
+      "rule": "preregistered: both development months net USD above the parent, then inspect equity DD USD/%, cost per lot, trade count and net expectancy; no promotion by score or by subset arithmetic"
+    },
+    "C2_ADX_ADVERSE_R1": {
+      "state": "PARENT_KEPT",
+      "replacement_condition_met": false,
+      "net_delta_usd": {
+        "JUNE_DELAY250": 14.7,
+        "AUGUST_DELAY250": -14.57
+      },
+      "net_above_parent": {
+        "JUNE_DELAY250": true,
+        "AUGUST_DELAY250": false
+      },
+      "rule": "preregistered: both development months net USD above the parent, then inspect equity DD USD/%, cost per lot, trade count and net expectancy; no promotion by score or by subset arithmetic"
+    }
+  },
+  "pending": [],
+  "attempt_ledger": {
+    "directory": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration13_20261009\\native_attempts",
+    "budget_max": 8,
+    "used": 5,
+    "failures_count": true,
+    "attempts": [
+      {
+        "file": "C1_JUNE_DELAY250.json",
+        "arm": "C1_JUNE_DELAY250",
+        "class": "MAIN",
+        "sequence": 1,
+        "sha256": "5dbada16648f6f5de46c3d212059a6720b372115e22af34ff8e7d20c03328f6e"
+      },
+      {
+        "file": "C1_AUGUST_DELAY250.json",
+        "arm": "C1_AUGUST_DELAY250",
+        "class": "MAIN",
+        "sequence": 2,
+        "sha256": "a86d4a2b92cd5c377f9d266630daa0faa2c8d9f1fd443719401ebbfcca15c81a"
+      },
+      {
+        "file": "C2_JUNE_DELAY250.json",
+        "arm": "C2_JUNE_DELAY250",
+        "class": "MAIN",
+        "sequence": 3,
+        "sha256": "56eef0bef78eca3e006eb0956013210f171b140739450e0918a045563fffd493"
+      },
+      {
+        "file": "C2_JUNE_DELAY250_REPAIR1.json",
+        "arm": "C2_JUNE_DELAY250_REPAIR1",
+        "class": "REPAIR",
+        "sequence": 4,
+        "sha256": "f184249639c53fbc74f90191b36a6a8dd5d72f00eb07543592c951de5429c5ad"
+      },
+      {
+        "file": "C2_AUGUST_DELAY250.json",
+        "arm": "C2_AUGUST_DELAY250",
+        "class": "MAIN",
+        "sequence": 5,
+        "sha256": "aee95e15fa7ae98cb353f5f139fbf83e872e5124b66979c9deb7e9f3eee3ac1b"
+      }
+    ]
+  },
+  "failure_and_repair_evidence": {
+    "original_c2_interface_failure": {
+      "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration13_20261009\\CODEX_C2_INTERFACE_FAILURE.json",
+      "sha256": "1d3d10f28534f447aa5027aa20110e4374a950742905d13d447eaaf777d14362",
+      "bytes": 398
+    },
+    "failure_evidence": {
+      "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration13_20261009\\CODEX_C2_FAILURE_EVIDENCE.json",
+      "sha256": "f9e5a25fcba1e40cee9b2dfe08514040139ef7b87058a9a1b0fc3a052ff8afa9",
+      "bytes": 1004
+    },
+    "partial_invalid_evidence_kept": {
+      "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration13_20261009\\CODEX_C2_FAILURE_EVIDENCE_PARTIAL_INVALID.json",
+      "sha256": "abdfbffecbe18ed94df9829819e596ee285b52a94aa108514452a9121721c789",
+      "bytes": 6
+    },
+    "raw_snapshot": {
+      "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration13_20261009\\CODEX_C2_RAW_SNAPSHOT.json",
+      "sha256": "7953d140a2635fcd0a4d58144786b54e747b5e095897a17ba5847c5482ec8cdb",
+      "bytes": 833
+    },
+    "raw_snapshot_verified": {
+      "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration13_20261009\\CODEX_C2_RAW_SNAPSHOT_VERIFIED.json",
+      "sha256": "c13f652d982adc558813c629dec54bdebe820e700288fd8fe8bba2555b566149",
+      "bytes": 352
+    },
+    "raw_agent_day_journal_zip": {
+      "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration13_20261009\\C2_FAILED_AGENT_DAY_RAW_JOURNAL.zip",
+      "sha256": "5dc646eb6f7d41cfb85bae35616b339d7050a688931ecb992f186f6cc091147b",
+      "bytes": 22894118
+    },
+    "failed_journal_tail": {
+      "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration13_20261009\\C2_FAILED_JOURNAL_TAIL.log",
+      "sha256": "5ffec42e780d31071a912f03ccfb1e75e95f4792141f196b2cb6d10e6c2b44db",
+      "bytes": 83762
+    },
+    "repair_approval": {
+      "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration13_20261009\\native_attempts_approvals\\APPROVE_C2_JUNE_DELAY250_REPAIR1.json",
+      "sha256": "f1b0be13715e1feeae242289431249f5ede2db61c099f203f04ec7bf8f845854",
+      "bytes": 1260
+    },
+    "freeze_lease": {
+      "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration13_20261009\\CODEX_FREEZE_LEASE.json",
+      "sha256": "1cd52ea030d7b576a51e11d9c9ecbfee0da2db76d47a6d10f43c3a18160e641c",
+      "bytes": 619
+    },
+    "r1_freeze_lease": {
+      "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration13_20261009\\CODEX_R1_FREEZE_LEASE.json",
+      "sha256": "9882acf88d173c9ff6ebaaf4e0bac28e3b236f96f1bf654549500626c0a3f7c1",
+      "bytes": 801
+    },
+    "note": "The original C2 June attempt produced no strategy metrics (interface failure, then a log-copy memory failure) and is used in no comparison. The fixed agent day log also contains C1 entries."
+  },
+  "limitations": [
+    "development months only, not OOS",
+    "no independent validation, no Demo, no deployment, no Champion",
+    "LEAN runtime for I13 candidates is pending (old application-control block untouched, no bypass)",
+    "strict single-entry/single-exit grouping; partial fills unsupported; restart / multi-instance not tested",
+    "costs and margin uncalibrated"
+  ]
+}
