@@ -1244,7 +1244,7 @@
     "deployment": false,
     "lean_engine_runs": 0,
     "delivery_zip": "outputs/TradingBrain_I15_Scalping_Exit_Research_20261010.zip",
-    "zip_sha256": "b0f7286dc3f969a422148cecf63411ecef24630e632127b8e01d3c3c9e6adb34",
-    "zip_verified_files": 155
+    "zip_sha256": "29accd275f3fd79d9934c2c07f69da446654bff03abe1eb9cf6200609a92c690",
+    "zip_verified_files": 161
   }
 }

@@ -1,13 +1,17 @@
 {
   "status": "ZIP_ALL_MEMBERS_HASH_VERIFIED",
   "zip_path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\outputs\\TradingBrain_I15_Scalping_Exit_Research_20261010.zip",
-  "zip_sha256": "b0f7286dc3f969a422148cecf63411ecef24630e632127b8e01d3c3c9e6adb34",
-  "zip_bytes": 5545350,
-  "manifest_files": 154,
-  "zip_verified_files": 155,
-  "manifest_sha256": "57b442313995febf09eb5492640ddc4e0caee456b83552be3ba17148e37f846c",
+  "zip_sha256": "29accd275f3fd79d9934c2c07f69da446654bff03abe1eb9cf6200609a92c690",
+  "zip_bytes": 5549218,
+  "manifest_files": 160,
+  "zip_verified_files": 161,
+  "manifest_sha256": "6eef5bd34e177ba527cd3e6e266723bb3ccb082181bf180421215b11a7db2236",
+  "native_attempt_ledger_files": 4,
+  "compile_attempt_ledger_files": 2,
   "private_backups_excluded": true,
   "teacher_originals_excluded": true,
   "candidate": "C1 development only",
-  "live_ready": false
+  "live_ready": false,
+  "superseded_zip_preserved": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\outputs\\TradingBrain_I15_Scalping_Exit_Research_20261010_superseded_before_attempt_ledgers.zip",
+  "revision": "Attempt ledgers added; source/results unchanged"
 }
