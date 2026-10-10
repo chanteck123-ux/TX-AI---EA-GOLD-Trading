@@ -1,0 +1,92 @@
+{
+  "schema": "I14_RESEARCH_RESULTS",
+  "completed_on": "2026-10-10",
+  "decision": "KEEP_PARENT_NO_PROMOTION",
+  "score": "N/A SCORE_TARGETS_UNSET",
+  "candidate": "P_TEACHER_REVERSAL_RATIO",
+  "source_owner": "Claude Code",
+  "verification_owner": "Codex",
+  "compile_attempts": 1,
+  "native_attempts": 2,
+  "conditions": "USD500 GOLD M5 Model4 Delay250 Leverage1000; used development months; separate accounts",
+  "new_lean_run": false,
+  "live": false,
+  "rows": [
+    {
+      "scenario": "JUNE_DELAY250",
+      "status": "PASS_I14_RECOVERED_NATIVE_ACCOUNTING_DAILY6_AND_REVERSAL_RULE_CHECKS",
+      "run_id": "SCALPI1420261009_P_JUNE_DELAY250_1a9c363c",
+      "account": {
+        "initial_capital_usd": 500,
+        "ending_balance_usd": 430.58000000000004,
+        "net_usd": -69.41999999999999,
+        "equity_dd_usd": 81.2,
+        "max_relative_equity_dd_pct": 16.12,
+        "complete_position_net_pf": 0.6343236409608092,
+        "pf_status": "DEFINED",
+        "native_pf_report": "0.64",
+        "complete_positions": 61,
+        "wins": 24,
+        "losses": 37,
+        "gross_usd": -61.78,
+        "commission_usd": 4.880000000000003,
+        "swap_usd": -2.76,
+        "cost_usd": 7.640000000000002,
+        "round_trip_lots": 0.6100000000000003,
+        "cost_usd_per_round_trip_lot": 12.524590163934423
+      },
+      "counts": {
+        "reversal_evaluations": 358,
+        "parent_pass": 46,
+        "rule_p_pass": 64,
+        "rule_p_only": 18,
+        "parent_only": 0,
+        "orders_prepared": 61,
+        "requests_accepted": 61,
+        "requests_rejected": 0,
+        "released_but_rejected_later": 3,
+        "server_fills_complete_trades": 61
+      },
+      "verification_sha256": "2ae3799e0fe443048a41ef8eef7de42f1cb27780eb4a0418e937e10274dca716",
+      "recovered": true
+    },
+    {
+      "scenario": "AUGUST_DELAY250",
+      "status": "PASS_I14_SCALP_NATIVE_ACCOUNTING_DAILY6_AND_REVERSAL_RULE_CHECKS",
+      "run_id": "SCALPI1420261009_P_AUGUST_DELAY250_29078eed",
+      "account": {
+        "initial_capital_usd": 500,
+        "ending_balance_usd": 568.03,
+        "net_usd": 68.02999999999999,
+        "equity_dd_usd": 29.21,
+        "max_relative_equity_dd_pct": 5.31,
+        "complete_position_net_pf": 1.3863365324549946,
+        "pf_status": "DEFINED",
+        "native_pf_report": "1.38",
+        "complete_positions": 61,
+        "wins": 37,
+        "losses": 24,
+        "gross_usd": 74.16999999999999,
+        "commission_usd": 6.139999999999997,
+        "swap_usd": 0,
+        "cost_usd": 6.139999999999997,
+        "round_trip_lots": 0.8200000000000005,
+        "cost_usd_per_round_trip_lot": 7.487804878048772
+      },
+      "counts": {
+        "reversal_evaluations": 334,
+        "parent_pass": 43,
+        "rule_p_pass": 63,
+        "rule_p_only": 20,
+        "parent_only": 0,
+        "orders_prepared": 61,
+        "requests_accepted": 61,
+        "requests_rejected": 0,
+        "released_but_rejected_later": 2,
+        "server_fills_complete_trades": 61
+      },
+      "verification_sha256": "23e5700b5a9b60f82e6facadc7855abec82aa50c6b02c86d5ec3d3c291032132",
+      "recovered": false
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "schema": "I14_DELIVERY_RECEIPT",
+  "zip": "outputs/TradingBrain_I14_Scalping_Research_20261010.zip",
+  "sha256": "949b27e4cd4f91e5a9e01e0b6c8eaba848eff568d90d1b9de2cb27fce0215e12",
+  "bytes": 3348364,
+  "manifest_files": 134,
+  "decision": "KEEP_PARENT_NO_PROMOTION",
+  "compiled": 1,
+  "native_attempts": 2,
+  "source_sha256": "65622fdb1ec8703eb3c0cfa6a689b162cd9d08c0654524435b737359f5137aaa",
+  "ex5_sha256": "880b644e0d3d0f39ca08158578301c3c6e76459f51216393725ea014256d7759",
+  "live": false
+}
