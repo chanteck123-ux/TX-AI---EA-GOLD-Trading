@@ -1,0 +1,22 @@
+{
+  "schema": "I16_DELIVERY_RECEIPT_V1",
+  "utc": "2026-10-10T11:00:44.2942739Z",
+  "status": "ZIP_SOURCE_DEFAULT_BINARY_LEDGER_AND_ALL_FILES_VERIFIED",
+  "zip_path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\outputs\\TradingBrain_I16_Scalping_FixedVolume_20261010.zip",
+  "zip_sha256": "bd3764d9494495c8e4f7e1a48cfcec91ec0262abc79c969829fd5cf84bcc3e2e",
+  "zip_bytes": 5937468,
+  "zip_verified_files": 170,
+  "manifest_sha256": "719d1dbbc953a0fac05bdee1b9cade9fd1958f59994c223a3eb5d15566eacc1a",
+  "compile_attempts": 2,
+  "native_main_runs": 4,
+  "native_repairs": 0,
+  "formal_native_proofs": 4,
+  "tester_only": true,
+  "claude_review_sha256": "fa7e634993e2f3f3a9f443f00c73cf30524382c5163f9f67b023bc014961208a",
+  "score": "N/A SCORE_TARGETS_UNSET",
+  "champion": false,
+  "oos": false,
+  "demo": false,
+  "live": false,
+  "deployment": false
+}

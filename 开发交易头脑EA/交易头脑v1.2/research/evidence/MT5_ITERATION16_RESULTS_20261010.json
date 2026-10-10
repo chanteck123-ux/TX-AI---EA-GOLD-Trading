@@ -1,0 +1,2176 @@
+{
+  "schema": "I16_CODEX_RESULTS_V1",
+  "utc": "2026-10-10T10:54:13.1197341Z",
+  "status": "COMPLETED_DEVELOPMENT_FIXED_VOLUME_DIAGNOSTIC_REVIEWED",
+  "compile_count": 2,
+  "native_main_count": 4,
+  "native_repair_count": 0,
+  "conditions": "USD500 GOLD M5 Model4 real ticks 250ms leverage1000 0.01 lot risk ceilings2pct single/3pct portfolio original entry and requestedSLTP5/5 Daily6",
+  "data_status": "ALREADY_USED_DEVELOPMENT_INDEPENDENT_ACCOUNTS_NOT_ADDITIVE",
+  "score": {
+    "status": "SCORE_TARGETS_UNSET",
+    "total": null
+  },
+  "conclusion": "Equal-volume C1 exit improves June by35.22 USD but reduces August by10.27 USD; June remains negative. No promotion. Preserve I10 original and I15 C1 recovery builds; S1-S6 unchanged.",
+  "rows": [
+    {
+      "candidate": "P0",
+      "account": {
+        "initial_capital_usd": 500,
+        "ending_balance_usd": 436.21,
+        "net_usd": -63.79,
+        "equity_dd_usd": 81.35,
+        "max_relative_equity_dd_pct": 15.96,
+        "complete_position_net_pf": 0.5574441515193562,
+        "pf_status": "DEFINED",
+        "native_pf_report": "0.56",
+        "complete_positions": 44,
+        "wins": 16,
+        "losses": 28,
+        "gross_usd": -58.2,
+        "commission_usd": 3.520000000000002,
+        "swap_usd": -2.07,
+        "cost_usd": 5.590000000000002,
+        "round_trip_lots": 0.4400000000000002,
+        "cost_usd_per_round_trip_lot": 12.704545454545451
+      },
+      "native": {
+        "delay_evidence_status": "NATIVE_AGENT_DELAY_LINE_VERIFIED",
+        "actual_leverage": 1000,
+        "from_date": "2026.06.01",
+        "to_date": "2026.07.01",
+        "model": 4,
+        "ticks": 23679824,
+        "bars": 6023,
+        "execution_delay_ms": 250,
+        "configs_restored": true,
+        "restored_config_sha256": {
+          "common.ini": "cd89cf03faf0a18621518f53aca7a66248cb1f84fe170d388533efbd6a6a764f",
+          "terminal.ini": "a51d86248751caa021818a6f40cee6cdc83d6a8d5b880510a2aff7d4e24e197c"
+        }
+      },
+      "status": "PASS_I16_SCALP_NATIVE_ACCOUNTING_DAILY6_FIXED_LOT_AND_EXIT_RULE_CHECKS",
+      "fixed_lot": {
+        "cap_lots": 0.01,
+        "kernel_checks": 17,
+        "symbol": {
+          "min": 0.01,
+          "max": 500,
+          "step": 0.01
+        },
+        "cap_lines": 44,
+        "reduced": 0,
+        "rejects": 0,
+        "reject_why": [],
+        "fills": 44,
+        "every_fill_0_01": true,
+        "ledger_deals_checked": 88,
+        "risk_plans_checked": 44,
+        "fills_detail": [
+          {
+            "position_id": "2",
+            "zone": "SCALP_GOLD_-1_1780310400",
+            "volume": 0.01,
+            "calculated_volume": 0.01862197,
+            "auto_lots": 0.01,
+            "reduced": false
+          },
+          {
+            "position_id": "4",
+            "zone": "SCALP_GOLD_1_1780323300",
+            "volume": 0.01,
+            "calculated_volume": 0.01843538,
+            "auto_lots": 0.01,
+            "reduced": false
+          },
+          {
+            "position_id": "6",
+            "zone": "SCALP_GOLD_-1_1780332600",
+            "volume": 0.01,
+            "calculated_volume": 0.01824879,
+            "auto_lots": 0.01,
+            "reduced": false
+          },
+          {
+            "position_id": "8",
+            "zone": "SCALP_GOLD_1_1780384500",
+            "volume": 0.01,
+            "calculated_volume": 0.01843501,
+            "auto_lots": 0.01,
+            "reduced": false
+          },
+          {
+            "position_id": "10",
+            "zone": "SCALP_GOLD_1_1780411500",
+            "volume": 0.01,
+            "calculated_volume": 0.01861974,
+            "auto_lots": 0.01,
+            "reduced": false
+          },
+          {
+            "position_id": "12",
+            "zone": "SCALP_GOLD_1_1780444500",
+            "volume": 0.01,
+            "calculated_volume": 0.01880335,
+            "auto_lots": 0.01,
+            "reduced": false
+          },
+          {
+            "position_id": "14",
+            "zone": "SCALP_GOLD_1_1780482600",
+            "volume": 0.01,
+            "calculated_volume": 0.01861266,
+            "auto_lots": 0.01,
+            "reduced": false
+          },
+          {
+            "position_id": "16",
+            "zone": "SCALP_GOLD_1_1780549800",
+            "volume": 0.01,
+            "calculated_volume": 0.0187959,
+            "auto_lots": 0.01,
+            "reduced": false
+          },
+          {
+            "position_id": "18",
+            "zone": "SCALP_GOLD_-1_1780572000",
+            "volume": 0.01,
+            "calculated_volume": 0.01898026,
+            "auto_lots": 0.01,
+            "reduced": false
+          },
+          {
+            "position_id": "20",
+            "zone": "SCALP_GOLD_1_1780605000",
+            "volume": 0.01,
+            "calculated_volume": 0.01879032,
+            "auto_lots": 0.01,
+            "reduced": false
+          },
+          {
+            "position_id": "22",
+            "zone": "SCALP_GOLD_1_1780610400",
+            "volume": 0.01,
+            "calculated_volume": 0.01860037,
+            "auto_lots": 0.01,
+            "reduced": false
+          },
+          {
+            "position_id": "24",
+            "zone": "SCALP_GOLD_-1_1780624200",
+            "volume": 0.01,
+            "calculated_volume": 0.0183851,
+            "auto_lots": 0.01,
+            "reduced": false
+          },
+          {
+            "position_id": "26",
+            "zone": "SCALP_GOLD_-1_1780662300",
+            "volume": 0.01,
+            "calculated_volume": 0.01856872,
+            "auto_lots": 0.01,
+            "reduced": false
+          },
+          {
+            "position_id": "28",
+            "zone": "SCALP_GOLD_-1_1780920300",
+            "volume": 0.01,
+            "calculated_volume": 0.01878957,
+            "auto_lots": 0.01,
+            "reduced": false
+          },
+          {
+            "position_id": "30",
+            "zone": "SCALP_GOLD_1_1780933200",
+            "volume": 0.01,
+            "calculated_volume": 0.01897281,
+            "auto_lots": 0.01,
+            "reduced": false
+          },
+          {
+            "position_id": "32",
+            "zone": "SCALP_GOLD_-1_1780950000",
+            "volume": 0.01,
+            "calculated_volume": 0.01878212,
+            "auto_lots": 0.01,
+            "reduced": false
+          },
+          {
+            "position_id": "34",
+            "zone": "SCALP_GOLD_-1_1780990200",
+            "volume": 0.01,
+            "calculated_volume": 0.01859106,
+            "auto_lots": 0.01,
+            "reduced": false
+          },
+          {
+            "position_id": "36",
+            "zone": "SCALP_GOLD_1_1781064900",
+            "volume": 0.01,
+            "calculated_volume": 0.01840335,
+            "auto_lots": 0.01,
+            "reduced": false
+          },
+          {
+            "position_id": "38",
+            "zone": "SCALP_GOLD_-1_1781076300",
+            "volume": 0.01,
+            "calculated_volume": 0.01820894,
+            "auto_lots": 0.01,
+            "reduced": false
+          },
+          {
+            "position_id": "40",
+            "zone": "SCALP_GOLD_1_1781242500",
+            "volume": 0.01,
+            "calculated_volume": 0.01801378,
+            "auto_lots": 0.01,
+            "reduced": false
+          },
+          {
+            "position_id": "42",
+            "zone": "SCALP_GOLD_-1_1781278500",
+            "volume": 0.01,
+            "calculated_volume": 0.01782533,
+            "auto_lots": 0.01,
+            "reduced": false
+          },
+          {
+            "position_id": "44",
+            "zone": "SCALP_GOLD_1_1781622300",
+            "volume": 0.01,
+            "calculated_volume": 0.01801006,
+            "auto_lots": 0.01,
+            "reduced": false
+          },
+          {
+            "position_id": "46",
+            "zone": "SCALP_GOLD_-1_1781630700",
+            "volume": 0.01,
+            "calculated_volume": 0.0181959,
+            "auto_lots": 0.01,
+            "reduced": false
+          },
+          {
+            "position_id": "48",
+            "zone": "SCALP_GOLD_1_1781684100",
+            "volume": 0.01,
+            "calculated_volume": 0.01800298,
+            "auto_lots": 0.01,
+            "reduced": false
+          },
+          {
+            "position_id": "50",
+            "zone": "SCALP_GOLD_1_1781748600",
+            "volume": 0.01,
+            "calculated_volume": 0.01818808,
+            "auto_lots": 0.01,
+            "reduced": false
+          },
+          {
+            "position_id": "52",
+            "zone": "SCALP_GOLD_1_1781764200",
+            "volume": 0.01,
+            "calculated_volume": 0.01837467,
+            "auto_lots": 0.01,
+            "reduced": false
+          },
+          {
+            "position_id": "54",
+            "zone": "SCALP_GOLD_-1_1781855400",
+            "volume": 0.01,
+            "calculated_volume": 0.0181851,
+            "auto_lots": 0.01,
+            "reduced": false
+          },
+          {
+            "position_id": "56",
+            "zone": "SCALP_GOLD_1_1782090000",
+            "volume": 0.01,
+            "calculated_volume": 0.0179959,
+            "auto_lots": 0.01,
+            "reduced": false
+          },
+          {
+            "position_id": "58",
+            "zone": "SCALP_GOLD_1_1782119700",
+            "volume": 0.01,
+            "calculated_volume": 0.01780112,
+            "auto_lots": 0.01,
+            "reduced": false
+          },
+          {
+            "position_id": "60",
+            "zone": "SCALP_GOLD_-1_1782153900",
+            "volume": 0.01,
+            "calculated_volume": 0.01761788,
+            "auto_lots": 0.01,
+            "reduced": false
+          },
+          {
+            "position_id": "62",
+            "zone": "SCALP_GOLD_1_1782169200",
+            "volume": 0.01,
+            "calculated_volume": 0.01742831,
+            "auto_lots": 0.01,
+            "reduced": false
+          },
+          {
+            "position_id": "64",
+            "zone": "SCALP_GOLD_1_1782201600",
+            "volume": 0.01,
+            "calculated_volume": 0.01721341,
+            "auto_lots": 0.01,
+            "reduced": false
+          },
+          {
+            "position_id": "66",
+            "zone": "SCALP_GOLD_1_1782227700",
+            "volume": 0.01,
+            "calculated_volume": 0.01705847,
+            "auto_lots": 0.01,
+            "reduced": false
+          },
+          {
+            "position_id": "68",
+            "zone": "SCALP_GOLD_1_1782230700",
+            "volume": 0.01,
+            "calculated_volume": 0.01686853,
+            "auto_lots": 0.01,
+            "reduced": false
+          },
+          {
+            "position_id": "70",
+            "zone": "SCALP_GOLD_-1_1782302700",
+            "volume": 0.01,
+            "calculated_volume": 0.01668231,
+            "auto_lots": 0.01,
+            "reduced": false
+          },
+          {
+            "position_id": "72",
+            "zone": "SCALP_GOLD_1_1782319200",
+            "volume": 0.01,
+            "calculated_volume": 0.01686667,
+            "auto_lots": 0.01,
+            "reduced": false
+          },
+          {
+            "position_id": "74",
+            "zone": "SCALP_GOLD_1_1782370200",
+            "volume": 0.01,
+            "calculated_volume": 0.01667561,
+            "auto_lots": 0.01,
+            "reduced": false
+          },
+          {
+            "position_id": "76",
+            "zone": "SCALP_GOLD_1_1782373200",
+            "volume": 0.01,
+            "calculated_volume": 0.01685996,
+            "auto_lots": 0.01,
+            "reduced": false
+          },
+          {
+            "position_id": "78",
+            "zone": "SCALP_GOLD_1_1782428400",
+            "volume": 0.01,
+            "calculated_volume": 0.01666443,
+            "auto_lots": 0.01,
+            "reduced": false
+          },
+          {
+            "position_id": "80",
+            "zone": "SCALP_GOLD_1_1782460200",
+            "volume": 0.01,
+            "calculated_volume": 0.01644395,
+            "auto_lots": 0.01,
+            "reduced": false
+          },
+          {
+            "position_id": "82",
+            "zone": "SCALP_GOLD_1_1782477300",
+            "volume": 0.01,
+            "calculated_volume": 0.01662905,
+            "auto_lots": 0.01,
+            "reduced": false
+          },
+          {
+            "position_id": "84",
+            "zone": "SCALP_GOLD_-1_1782496500",
+            "volume": 0.01,
+            "calculated_volume": 0.01643948,
+            "auto_lots": 0.01,
+            "reduced": false
+          },
+          {
+            "position_id": "86",
+            "zone": "SCALP_GOLD_-1_1782706200",
+            "volume": 0.01,
+            "calculated_volume": 0.01624916,
+            "auto_lots": 0.01,
+            "reduced": false
+          },
+          {
+            "position_id": "88",
+            "zone": "SCALP_GOLD_1_1782808500",
+            "volume": 0.01,
+            "calculated_volume": 0.01605959,
+            "auto_lots": 0.01,
+            "reduced": false
+          }
+        ],
+        "note": "CalculatedVolume keeps the automatic value; AutoLots is the risk-approved volume before the cap"
+      },
+      "verification_sha256": "15e73d99b52753ad959e349994faf4d16aaeb2ef23a4b7d22bd3ef415633476b",
+      "scenario": "JUNE_DELAY250",
+      "same_volume_difference": null,
+      "entry_rules": null,
+      "comparisons": [
+        {
+          "label": "I10_PARENT_SAME_MONTH",
+          "expect_same_exit": true,
+          "candidate_trades": 44,
+          "reference_trades": 44,
+          "matched": 44,
+          "exit_identical": 44,
+          "exit_differs": 0,
+          "only_in_candidate": [],
+          "only_in_reference": [],
+          "accepted_flag_differs_common_zones": 0,
+          "rawcore_mismatch": 0,
+          "matched_net_candidate_usd": -63.79,
+          "matched_net_reference_rescaled_to_candidate_volume_usd": -63.79,
+          "rescaled_difference_usd": 0,
+          "rescaling_note": "DESCRIPTIVE proportional rescaling of the matched reference trades (net x candidate volume / reference volume); not a native rerun and not additive; commission and swap rounding are not linear",
+          "differing_trades": []
+        }
+      ],
+      "run_id": "SCALPI1620261010_P0_JUNE_DELAY250_15929466"
+    },
+    {
+      "candidate": "P0",
+      "account": {
+        "initial_capital_usd": 500,
+        "ending_balance_usd": 559.02,
+        "net_usd": 59.02,
+        "equity_dd_usd": 15.85,
+        "max_relative_equity_dd_pct": 2.9,
+        "complete_position_net_pf": 1.7587093456742515,
+        "pf_status": "DEFINED",
+        "native_pf_report": "1.75",
+        "complete_positions": 42,
+        "wins": 27,
+        "losses": 15,
+        "gross_usd": 62.37999999999999,
+        "commission_usd": 3.3600000000000017,
+        "swap_usd": 0,
+        "cost_usd": 3.3600000000000017,
+        "round_trip_lots": 0.4200000000000002,
+        "cost_usd_per_round_trip_lot": 8
+      },
+      "native": {
+        "delay_evidence_status": "NATIVE_AGENT_DELAY_LINE_VERIFIED",
+        "actual_leverage": 1000,
+        "from_date": "2026.08.01",
+        "to_date": "2026.09.01",
+        "model": 4,
+        "ticks": 20513403,
+        "bars": 5796,
+        "execution_delay_ms": 250,
+        "configs_restored": true,
+        "restored_config_sha256": {
+          "common.ini": "cd89cf03faf0a18621518f53aca7a66248cb1f84fe170d388533efbd6a6a764f",
+          "terminal.ini": "a51d86248751caa021818a6f40cee6cdc83d6a8d5b880510a2aff7d4e24e197c"
+        }
+      },
+      "status": "PASS_I16_SCALP_NATIVE_ACCOUNTING_DAILY6_FIXED_LOT_AND_EXIT_RULE_CHECKS",
+      "fixed_lot": {
+        "cap_lots": 0.01,
+        "kernel_checks": 17,
+        "symbol": {
+          "min": 0.01,
+          "max": 500,
+          "step": 0.01
+        },
+        "cap_lines": 42,
+        "reduced": 20,
+        "rejects": 0,
+        "reject_why": [],
+        "fills": 42,
+        "every_fill_0_01": true,
+        "ledger_deals_checked": 84,
+        "risk_plans_checked": 42,
+        "fills_detail": [
+          {
+            "position_id": "2",
+            "zone": "SCALP_GOLD_1_1785735900",
+            "volume": 0.01,
+            "calculated_volume": 0.01862197,
+            "auto_lots": 0.01,
+            "reduced": false
+          },
+          {
+            "position_id": "4",
+            "zone": "SCALP_GOLD_-1_1785771300",
+            "volume": 0.01,
+            "calculated_volume": 0.01880521,
+            "auto_lots": 0.01,
+            "reduced": false
+          },
+          {
+            "position_id": "6",
+            "zone": "SCALP_GOLD_1_1785809700",
+            "volume": 0.01,
+            "calculated_volume": 0.01902272,
+            "auto_lots": 0.01,
+            "reduced": false
+          },
+          {
+            "position_id": "8",
+            "zone": "SCALP_GOLD_-1_1785896400",
+            "volume": 0.01,
+            "calculated_volume": 0.01921043,
+            "auto_lots": 0.01,
+            "reduced": false
+          },
+          {
+            "position_id": "10",
+            "zone": "SCALP_GOLD_1_1785903000",
+            "volume": 0.01,
+            "calculated_volume": 0.01902235,
+            "auto_lots": 0.01,
+            "reduced": false
+          },
+          {
+            "position_id": "12",
+            "zone": "SCALP_GOLD_1_1785988200",
+            "volume": 0.01,
+            "calculated_volume": 0.01920894,
+            "auto_lots": 0.01,
+            "reduced": false
+          },
+          {
+            "position_id": "14",
+            "zone": "SCALP_GOLD_1_1785990900",
+            "volume": 0.01,
+            "calculated_volume": 0.01901676,
+            "auto_lots": 0.01,
+            "reduced": false
+          },
+          {
+            "position_id": "16",
+            "zone": "SCALP_GOLD_1_1786009200",
+            "volume": 0.01,
+            "calculated_volume": 0.01920596,
+            "auto_lots": 0.01,
+            "reduced": false
+          },
+          {
+            "position_id": "18",
+            "zone": "SCALP_GOLD_-1_1786026000",
+            "volume": 0.01,
+            "calculated_volume": 0.01939143,
+            "auto_lots": 0.01,
+            "reduced": false
+          },
+          {
+            "position_id": "20",
+            "zone": "SCALP_GOLD_1_1786122900",
+            "volume": 0.01,
+            "calculated_volume": 0.0195851,
+            "auto_lots": 0.01,
+            "reduced": false
+          },
+          {
+            "position_id": "22",
+            "zone": "SCALP_GOLD_1_1786357200",
+            "volume": 0.01,
+            "calculated_volume": 0.01939553,
+            "auto_lots": 0.01,
+            "reduced": false
+          },
+          {
+            "position_id": "24",
+            "zone": "SCALP_GOLD_1_1786462800",
+            "volume": 0.01,
+            "calculated_volume": 0.01920559,
+            "auto_lots": 0.01,
+            "reduced": false
+          },
+          {
+            "position_id": "26",
+            "zone": "SCALP_GOLD_-1_1786465800",
+            "volume": 0.01,
+            "calculated_volume": 0.0193959,
+            "auto_lots": 0.01,
+            "reduced": false
+          },
+          {
+            "position_id": "28",
+            "zone": "SCALP_GOLD_1_1786636500",
+            "volume": 0.01,
+            "calculated_volume": 0.01958101,
+            "auto_lots": 0.01,
+            "reduced": false
+          },
+          {
+            "position_id": "30",
+            "zone": "SCALP_GOLD_1_1786641300",
+            "volume": 0.01,
+            "calculated_volume": 0.01938957,
+            "auto_lots": 0.01,
+            "reduced": false
+          },
+          {
+            "position_id": "32",
+            "zone": "SCALP_GOLD_1_1786730400",
+            "volume": 0.01,
+            "calculated_volume": 0.01957281,
+            "auto_lots": 0.01,
+            "reduced": false
+          },
+          {
+            "position_id": "34",
+            "zone": "SCALP_GOLD_1_1787003100",
+            "volume": 0.01,
+            "calculated_volume": 0.0197594,
+            "auto_lots": 0.01,
+            "reduced": false
+          },
+          {
+            "position_id": "36",
+            "zone": "SCALP_GOLD_1_1787056200",
+            "volume": 0.01,
+            "calculated_volume": 0.019946,
+            "auto_lots": 0.01,
+            "reduced": false
+          },
+          {
+            "position_id": "38",
+            "zone": "SCALP_GOLD_-1_1787091300",
+            "volume": 0.01,
+            "calculated_volume": 0.02013184,
+            "auto_lots": 0.02,
+            "reduced": true
+          },
+          {
+            "position_id": "40",
+            "zone": "SCALP_GOLD_-1_1787197200",
+            "volume": 0.01,
+            "calculated_volume": 0.02032067,
+            "auto_lots": 0.02,
+            "reduced": true
+          },
+          {
+            "position_id": "42",
+            "zone": "SCALP_GOLD_-1_1787220000",
+            "volume": 0.01,
+            "calculated_volume": 0.02012924,
+            "auto_lots": 0.02,
+            "reduced": true
+          },
+          {
+            "position_id": "44",
+            "zone": "SCALP_GOLD_-1_1787288400",
+            "volume": 0.01,
+            "calculated_volume": 0.01992998,
+            "auto_lots": 0.01,
+            "reduced": false
+          },
+          {
+            "position_id": "46",
+            "zone": "SCALP_GOLD_1_1787293800",
+            "volume": 0.01,
+            "calculated_volume": 0.01973966,
+            "auto_lots": 0.01,
+            "reduced": false
+          },
+          {
+            "position_id": "48",
+            "zone": "SCALP_GOLD_1_1787302500",
+            "volume": 0.01,
+            "calculated_volume": 0.01992514,
+            "auto_lots": 0.01,
+            "reduced": false
+          },
+          {
+            "position_id": "50",
+            "zone": "SCALP_GOLD_-1_1787333700",
+            "volume": 0.01,
+            "calculated_volume": 0.02011285,
+            "auto_lots": 0.02,
+            "reduced": true
+          },
+          {
+            "position_id": "52",
+            "zone": "SCALP_GOLD_-1_1787339100",
+            "volume": 0.01,
+            "calculated_volume": 0.02029721,
+            "auto_lots": 0.02,
+            "reduced": true
+          },
+          {
+            "position_id": "54",
+            "zone": "SCALP_GOLD_1_1787352300",
+            "volume": 0.01,
+            "calculated_volume": 0.02010242,
+            "auto_lots": 0.02,
+            "reduced": true
+          },
+          {
+            "position_id": "56",
+            "zone": "SCALP_GOLD_-1_1787564400",
+            "volume": 0.01,
+            "calculated_volume": 0.01990093,
+            "auto_lots": 0.01,
+            "reduced": false
+          },
+          {
+            "position_id": "58",
+            "zone": "SCALP_GOLD_1_1787627400",
+            "volume": 0.01,
+            "calculated_volume": 0.02009646,
+            "auto_lots": 0.02,
+            "reduced": true
+          },
+          {
+            "position_id": "60",
+            "zone": "SCALP_GOLD_1_1787656800",
+            "volume": 0.01,
+            "calculated_volume": 0.02028007,
+            "auto_lots": 0.02,
+            "reduced": true
+          },
+          {
+            "position_id": "62",
+            "zone": "SCALP_GOLD_-1_1787675100",
+            "volume": 0.01,
+            "calculated_volume": 0.02009311,
+            "auto_lots": 0.02,
+            "reduced": true
+          },
+          {
+            "position_id": "64",
+            "zone": "SCALP_GOLD_1_1787731500",
+            "volume": 0.01,
+            "calculated_volume": 0.02028268,
+            "auto_lots": 0.02,
+            "reduced": true
+          },
+          {
+            "position_id": "66",
+            "zone": "SCALP_GOLD_1_1787756400",
+            "volume": 0.01,
+            "calculated_volume": 0.02047523,
+            "auto_lots": 0.02,
+            "reduced": true
+          },
+          {
+            "position_id": "68",
+            "zone": "SCALP_GOLD_-1_1787778900",
+            "volume": 0.01,
+            "calculated_volume": 0.02026145,
+            "auto_lots": 0.02,
+            "reduced": true
+          },
+          {
+            "position_id": "70",
+            "zone": "SCALP_GOLD_1_1787798100",
+            "volume": 0.01,
+            "calculated_volume": 0.02044544,
+            "auto_lots": 0.02,
+            "reduced": true
+          },
+          {
+            "position_id": "72",
+            "zone": "SCALP_GOLD_1_1787820900",
+            "volume": 0.01,
+            "calculated_volume": 0.02025289,
+            "auto_lots": 0.02,
+            "reduced": true
+          },
+          {
+            "position_id": "74",
+            "zone": "SCALP_GOLD_-1_1787830800",
+            "volume": 0.01,
+            "calculated_volume": 0.02043613,
+            "auto_lots": 0.02,
+            "reduced": true
+          },
+          {
+            "position_id": "76",
+            "zone": "SCALP_GOLD_1_1787852400",
+            "volume": 0.01,
+            "calculated_volume": 0.0206257,
+            "auto_lots": 0.02,
+            "reduced": true
+          },
+          {
+            "position_id": "78",
+            "zone": "SCALP_GOLD_-1_1787906400",
+            "volume": 0.01,
+            "calculated_volume": 0.02081713,
+            "auto_lots": 0.02,
+            "reduced": true
+          },
+          {
+            "position_id": "80",
+            "zone": "SCALP_GOLD_1_1787910900",
+            "volume": 0.01,
+            "calculated_volume": 0.02062644,
+            "auto_lots": 0.02,
+            "reduced": true
+          },
+          {
+            "position_id": "82",
+            "zone": "SCALP_GOLD_-1_1788154200",
+            "volume": 0.01,
+            "calculated_volume": 0.02081639,
+            "auto_lots": 0.02,
+            "reduced": true
+          },
+          {
+            "position_id": "84",
+            "zone": "SCALP_GOLD_1_1788181800",
+            "volume": 0.01,
+            "calculated_volume": 0.02063166,
+            "auto_lots": 0.02,
+            "reduced": true
+          }
+        ],
+        "note": "CalculatedVolume keeps the automatic value; AutoLots is the risk-approved volume before the cap"
+      },
+      "verification_sha256": "15ab8a0ecb80722029970dff8d6e6f6aa013add44ba1777f55bf57b96e5a0b26",
+      "scenario": "AUGUST_DELAY250",
+      "same_volume_difference": null,
+      "entry_rules": null,
+      "comparisons": [
+        {
+          "label": "I10_PARENT_SAME_MONTH",
+          "expect_same_exit": true,
+          "candidate_trades": 42,
+          "reference_trades": 42,
+          "matched": 42,
+          "exit_identical": 42,
+          "exit_differs": 0,
+          "only_in_candidate": [],
+          "only_in_reference": [],
+          "accepted_flag_differs_common_zones": 0,
+          "rawcore_mismatch": 0,
+          "matched_net_candidate_usd": 59.02,
+          "matched_net_reference_rescaled_to_candidate_volume_usd": 59.12,
+          "rescaled_difference_usd": -0.1,
+          "rescaling_note": "DESCRIPTIVE proportional rescaling of the matched reference trades (net x candidate volume / reference volume); not a native rerun and not additive; commission and swap rounding are not linear",
+          "differing_trades": []
+        }
+      ],
+      "run_id": "SCALPI1620261010_P0_AUGUST_DELAY250_ced2f4fc"
+    },
+    {
+      "candidate": "C1F",
+      "account": {
+        "initial_capital_usd": 500,
+        "ending_balance_usd": 471.43,
+        "net_usd": -28.570000000000007,
+        "equity_dd_usd": 61.26,
+        "max_relative_equity_dd_pct": 11.67,
+        "complete_position_net_pf": 0.634748146254155,
+        "pf_status": "DEFINED",
+        "native_pf_report": "0.64",
+        "complete_positions": 44,
+        "wins": 14,
+        "losses": 29,
+        "gross_usd": -23.669999999999995,
+        "commission_usd": 3.520000000000002,
+        "swap_usd": -1.38,
+        "cost_usd": 4.900000000000002,
+        "round_trip_lots": 0.4400000000000002,
+        "cost_usd_per_round_trip_lot": 11.136363636363635
+      },
+      "native": {
+        "delay_evidence_status": "NATIVE_AGENT_DELAY_LINE_VERIFIED",
+        "actual_leverage": 1000,
+        "from_date": "2026.06.01",
+        "to_date": "2026.07.01",
+        "model": 4,
+        "ticks": 23679824,
+        "bars": 6023,
+        "execution_delay_ms": 250,
+        "configs_restored": true,
+        "restored_config_sha256": {
+          "common.ini": "cd89cf03faf0a18621518f53aca7a66248cb1f84fe170d388533efbd6a6a764f",
+          "terminal.ini": "a51d86248751caa021818a6f40cee6cdc83d6a8d5b880510a2aff7d4e24e197c"
+        }
+      },
+      "status": "PASS_I16_SCALP_NATIVE_ACCOUNTING_DAILY6_FIXED_LOT_AND_EXIT_RULE_CHECKS",
+      "fixed_lot": {
+        "cap_lots": 0.01,
+        "kernel_checks": 17,
+        "symbol": {
+          "min": 0.01,
+          "max": 500,
+          "step": 0.01
+        },
+        "cap_lines": 44,
+        "reduced": 0,
+        "rejects": 0,
+        "reject_why": [],
+        "fills": 44,
+        "every_fill_0_01": true,
+        "ledger_deals_checked": 88,
+        "risk_plans_checked": 44,
+        "fills_detail": [
+          {
+            "position_id": "2",
+            "zone": "SCALP_GOLD_-1_1780310400",
+            "volume": 0.01,
+            "calculated_volume": 0.01862197,
+            "auto_lots": 0.01,
+            "reduced": false
+          },
+          {
+            "position_id": "4",
+            "zone": "SCALP_GOLD_1_1780323300",
+            "volume": 0.01,
+            "calculated_volume": 0.01862272,
+            "auto_lots": 0.01,
+            "reduced": false
+          },
+          {
+            "position_id": "6",
+            "zone": "SCALP_GOLD_-1_1780332600",
+            "volume": 0.01,
+            "calculated_volume": 0.0186216,
+            "auto_lots": 0.01,
+            "reduced": false
+          },
+          {
+            "position_id": "8",
+            "zone": "SCALP_GOLD_1_1780384500",
+            "volume": 0.01,
+            "calculated_volume": 0.01880782,
+            "auto_lots": 0.01,
+            "reduced": false
+          },
+          {
+            "position_id": "10",
+            "zone": "SCALP_GOLD_1_1780411500",
+            "volume": 0.01,
+            "calculated_volume": 0.01899255,
+            "auto_lots": 0.01,
+            "reduced": false
+          },
+          {
+            "position_id": "12",
+            "zone": "SCALP_GOLD_1_1780444500",
+            "volume": 0.01,
+            "calculated_volume": 0.01917616,
+            "auto_lots": 0.01,
+            "reduced": false
+          },
+          {
+            "position_id": "14",
+            "zone": "SCALP_GOLD_1_1780482600",
+            "volume": 0.01,
+            "calculated_volume": 0.01917616,
+            "auto_lots": 0.01,
+            "reduced": false
+          },
+          {
+            "position_id": "16",
+            "zone": "SCALP_GOLD_1_1780549800",
+            "volume": 0.01,
+            "calculated_volume": 0.0193594,
+            "auto_lots": 0.01,
+            "reduced": false
+          },
+          {
+            "position_id": "18",
+            "zone": "SCALP_GOLD_-1_1780572000",
+            "volume": 0.01,
+            "calculated_volume": 0.01954376,
+            "auto_lots": 0.01,
+            "reduced": false
+          },
+          {
+            "position_id": "20",
+            "zone": "SCALP_GOLD_1_1780605000",
+            "volume": 0.01,
+            "calculated_volume": 0.01935382,
+            "auto_lots": 0.01,
+            "reduced": false
+          },
+          {
+            "position_id": "22",
+            "zone": "SCALP_GOLD_1_1780610400",
+            "volume": 0.01,
+            "calculated_volume": 0.01916387,
+            "auto_lots": 0.01,
+            "reduced": false
+          },
+          {
+            "position_id": "24",
+            "zone": "SCALP_GOLD_-1_1780624200",
+            "volume": 0.01,
+            "calculated_volume": 0.01916462,
+            "auto_lots": 0.01,
+            "reduced": false
+          },
+          {
+            "position_id": "26",
+            "zone": "SCALP_GOLD_-1_1780662300",
+            "volume": 0.01,
+            "calculated_volume": 0.01915903,
+            "auto_lots": 0.01,
+            "reduced": false
+          },
+          {
+            "position_id": "28",
+            "zone": "SCALP_GOLD_-1_1780920300",
+            "volume": 0.01,
+            "calculated_volume": 0.01915866,
+            "auto_lots": 0.01,
+            "reduced": false
+          },
+          {
+            "position_id": "30",
+            "zone": "SCALP_GOLD_1_1780933200",
+            "volume": 0.01,
+            "calculated_volume": 0.0193419,
+            "auto_lots": 0.01,
+            "reduced": false
+          },
+          {
+            "position_id": "32",
+            "zone": "SCALP_GOLD_-1_1780950000",
+            "volume": 0.01,
+            "calculated_volume": 0.01915121,
+            "auto_lots": 0.01,
+            "reduced": false
+          },
+          {
+            "position_id": "34",
+            "zone": "SCALP_GOLD_-1_1780990200",
+            "volume": 0.01,
+            "calculated_volume": 0.01896015,
+            "auto_lots": 0.01,
+            "reduced": false
+          },
+          {
+            "position_id": "36",
+            "zone": "SCALP_GOLD_1_1781064900",
+            "volume": 0.01,
+            "calculated_volume": 0.01877244,
+            "auto_lots": 0.01,
+            "reduced": false
+          },
+          {
+            "position_id": "38",
+            "zone": "SCALP_GOLD_-1_1781076300",
+            "volume": 0.01,
+            "calculated_volume": 0.01875978,
+            "auto_lots": 0.01,
+            "reduced": false
+          },
+          {
+            "position_id": "40",
+            "zone": "SCALP_GOLD_1_1781242500",
+            "volume": 0.01,
+            "calculated_volume": 0.01856462,
+            "auto_lots": 0.01,
+            "reduced": false
+          },
+          {
+            "position_id": "42",
+            "zone": "SCALP_GOLD_-1_1781278500",
+            "volume": 0.01,
+            "calculated_volume": 0.01837616,
+            "auto_lots": 0.01,
+            "reduced": false
+          },
+          {
+            "position_id": "44",
+            "zone": "SCALP_GOLD_1_1781622300",
+            "volume": 0.01,
+            "calculated_volume": 0.01856089,
+            "auto_lots": 0.01,
+            "reduced": false
+          },
+          {
+            "position_id": "46",
+            "zone": "SCALP_GOLD_-1_1781630700",
+            "volume": 0.01,
+            "calculated_volume": 0.01874674,
+            "auto_lots": 0.01,
+            "reduced": false
+          },
+          {
+            "position_id": "48",
+            "zone": "SCALP_GOLD_1_1781684100",
+            "volume": 0.01,
+            "calculated_volume": 0.01874413,
+            "auto_lots": 0.01,
+            "reduced": false
+          },
+          {
+            "position_id": "50",
+            "zone": "SCALP_GOLD_1_1781748600",
+            "volume": 0.01,
+            "calculated_volume": 0.01874451,
+            "auto_lots": 0.01,
+            "reduced": false
+          },
+          {
+            "position_id": "52",
+            "zone": "SCALP_GOLD_1_1781764200",
+            "volume": 0.01,
+            "calculated_volume": 0.01872551,
+            "auto_lots": 0.01,
+            "reduced": false
+          },
+          {
+            "position_id": "54",
+            "zone": "SCALP_GOLD_-1_1781855400",
+            "volume": 0.01,
+            "calculated_volume": 0.01853594,
+            "auto_lots": 0.01,
+            "reduced": false
+          },
+          {
+            "position_id": "56",
+            "zone": "SCALP_GOLD_1_1782090000",
+            "volume": 0.01,
+            "calculated_volume": 0.01834674,
+            "auto_lots": 0.01,
+            "reduced": false
+          },
+          {
+            "position_id": "58",
+            "zone": "SCALP_GOLD_1_1782119700",
+            "volume": 0.01,
+            "calculated_volume": 0.01815196,
+            "auto_lots": 0.01,
+            "reduced": false
+          },
+          {
+            "position_id": "60",
+            "zone": "SCALP_GOLD_-1_1782153900",
+            "volume": 0.01,
+            "calculated_volume": 0.01796872,
+            "auto_lots": 0.01,
+            "reduced": false
+          },
+          {
+            "position_id": "62",
+            "zone": "SCALP_GOLD_1_1782169200",
+            "volume": 0.01,
+            "calculated_volume": 0.0179676,
+            "auto_lots": 0.01,
+            "reduced": false
+          },
+          {
+            "position_id": "64",
+            "zone": "SCALP_GOLD_1_1782201600",
+            "volume": 0.01,
+            "calculated_volume": 0.01796723,
+            "auto_lots": 0.01,
+            "reduced": false
+          },
+          {
+            "position_id": "66",
+            "zone": "SCALP_GOLD_1_1782227700",
+            "volume": 0.01,
+            "calculated_volume": 0.01796276,
+            "auto_lots": 0.01,
+            "reduced": false
+          },
+          {
+            "position_id": "68",
+            "zone": "SCALP_GOLD_1_1782230700",
+            "volume": 0.01,
+            "calculated_volume": 0.01795978,
+            "auto_lots": 0.01,
+            "reduced": false
+          },
+          {
+            "position_id": "70",
+            "zone": "SCALP_GOLD_-1_1782302700",
+            "volume": 0.01,
+            "calculated_volume": 0.01795754,
+            "auto_lots": 0.01,
+            "reduced": false
+          },
+          {
+            "position_id": "72",
+            "zone": "SCALP_GOLD_1_1782319200",
+            "volume": 0.01,
+            "calculated_volume": 0.0181419,
+            "auto_lots": 0.01,
+            "reduced": false
+          },
+          {
+            "position_id": "74",
+            "zone": "SCALP_GOLD_1_1782370200",
+            "volume": 0.01,
+            "calculated_volume": 0.01795084,
+            "auto_lots": 0.01,
+            "reduced": false
+          },
+          {
+            "position_id": "76",
+            "zone": "SCALP_GOLD_1_1782373200",
+            "volume": 0.01,
+            "calculated_volume": 0.01794972,
+            "auto_lots": 0.01,
+            "reduced": false
+          },
+          {
+            "position_id": "78",
+            "zone": "SCALP_GOLD_1_1782428400",
+            "volume": 0.01,
+            "calculated_volume": 0.01775419,
+            "auto_lots": 0.01,
+            "reduced": false
+          },
+          {
+            "position_id": "80",
+            "zone": "SCALP_GOLD_1_1782460200",
+            "volume": 0.01,
+            "calculated_volume": 0.01775158,
+            "auto_lots": 0.01,
+            "reduced": false
+          },
+          {
+            "position_id": "82",
+            "zone": "SCALP_GOLD_1_1782477300",
+            "volume": 0.01,
+            "calculated_volume": 0.01775196,
+            "auto_lots": 0.01,
+            "reduced": false
+          },
+          {
+            "position_id": "84",
+            "zone": "SCALP_GOLD_-1_1782496500",
+            "volume": 0.01,
+            "calculated_volume": 0.01756238,
+            "auto_lots": 0.01,
+            "reduced": false
+          },
+          {
+            "position_id": "86",
+            "zone": "SCALP_GOLD_-1_1782706200",
+            "volume": 0.01,
+            "calculated_volume": 0.01737207,
+            "auto_lots": 0.01,
+            "reduced": false
+          },
+          {
+            "position_id": "88",
+            "zone": "SCALP_GOLD_1_1782808500",
+            "volume": 0.01,
+            "calculated_volume": 0.01737132,
+            "auto_lots": 0.01,
+            "reduced": false
+          }
+        ],
+        "note": "CalculatedVolume keeps the automatic value; AutoLots is the risk-approved volume before the cap"
+      },
+      "verification_sha256": "efb69df4f79352e096f3e917dc9a1362e2adfd94f9a88bb9317594048d714de8",
+      "scenario": "JUNE_DELAY250",
+      "same_volume_difference": {
+        "c1f_minus_p0": {
+          "net_usd": 35.22,
+          "equity_dd_usd": -20.09,
+          "max_relative_equity_dd_pct": -4.29,
+          "complete_position_net_pf": 0.0773,
+          "cost_usd": -0.69,
+          "complete_positions": 0,
+          "round_trip_lots": 0
+        },
+        "c1f": {
+          "net_usd": -28.570000000000007,
+          "pf": 0.634748146254155
+        },
+        "p0": {
+          "net_usd": -63.79,
+          "pf": 0.5574441515193562
+        },
+        "note": "both candidates trade 0.01 lots; this is the exit contribution at equal volume for THIS month only; no two-month sum, no cumulative figure; no promotion rule is evaluated in I16"
+      },
+      "entry_rules": {
+        "rows": 358,
+        "checked": 358,
+        "unresolved": 0,
+        "decisions_not_on_a_bar_open": 0,
+        "lookup": "closed bar = floor(decision to the 5-minute grid) - 300 s"
+      },
+      "comparisons": [
+        {
+          "label": "P0_SAME_MONTH_SAME_VOLUME",
+          "expect_same_exit": false,
+          "candidate_trades": 44,
+          "reference_trades": 44,
+          "matched": 44,
+          "exit_identical": 25,
+          "exit_differs": 19,
+          "only_in_candidate": [],
+          "only_in_reference": [],
+          "accepted_flag_differs_common_zones": 0,
+          "rawcore_mismatch": 0,
+          "matched_net_candidate_usd": -28.57,
+          "matched_net_reference_rescaled_to_candidate_volume_usd": -63.79,
+          "rescaled_difference_usd": 35.22,
+          "rescaling_note": "DESCRIPTIVE proportional rescaling of the matched reference trades (net x candidate volume / reference volume); not a native rerun and not additive; commission and swap rounding are not linear",
+          "differing_trades": [
+            {
+              "key": "SCALP_GOLD_-1_1780310400|2026.06.01 11:05:00|SELL",
+              "volume": 0.01,
+              "ref_volume": 0.01,
+              "net": 0.02,
+              "ref_net": -5.01,
+              "same_exit": false,
+              "exit_reason": "DEAL_REASON_SL",
+              "ref_exit_reason": "DEAL_REASON_SL",
+              "net_per_lot": 2,
+              "ref_net_per_lot": -501
+            },
+            {
+              "key": "SCALP_GOLD_1_1780323300|2026.06.01 15:05:00|BUY",
+              "volume": 0.01,
+              "ref_volume": 0.01,
+              "net": -0.03,
+              "ref_net": -5.01,
+              "same_exit": false,
+              "exit_reason": "DEAL_REASON_SL",
+              "ref_exit_reason": "DEAL_REASON_SL",
+              "net_per_lot": -3,
+              "ref_net_per_lot": -501
+            },
+            {
+              "key": "SCALP_GOLD_1_1780444500|2026.06.03 01:40:00|BUY",
+              "volume": 0.01,
+              "ref_volume": 0.01,
+              "net": 0,
+              "ref_net": -5.12,
+              "same_exit": false,
+              "exit_reason": "DEAL_REASON_SL",
+              "ref_exit_reason": "DEAL_REASON_SL",
+              "net_per_lot": 0,
+              "ref_net_per_lot": -512
+            },
+            {
+              "key": "SCALP_GOLD_1_1780610400|2026.06.04 22:20:00|BUY",
+              "volume": 0.01,
+              "ref_volume": 0.01,
+              "net": 0.02,
+              "ref_net": -5.78,
+              "same_exit": false,
+              "exit_reason": "DEAL_REASON_SL",
+              "ref_exit_reason": "DEAL_REASON_SL",
+              "net_per_lot": 2,
+              "ref_net_per_lot": -578
+            },
+            {
+              "key": "SCALP_GOLD_-1_1780624200|2026.06.05 02:15:00|SELL",
+              "volume": 0.01,
+              "ref_volume": 0.01,
+              "net": -0.15,
+              "ref_net": 4.93,
+              "same_exit": false,
+              "exit_reason": "DEAL_REASON_SL",
+              "ref_exit_reason": "DEAL_REASON_TP",
+              "net_per_lot": -15,
+              "ref_net_per_lot": 493
+            },
+            {
+              "key": "SCALP_GOLD_-1_1780662300|2026.06.05 12:50:00|SELL",
+              "volume": 0.01,
+              "ref_volume": 0.01,
+              "net": -0.01,
+              "ref_net": 5.93,
+              "same_exit": false,
+              "exit_reason": "DEAL_REASON_SL",
+              "ref_exit_reason": "DEAL_REASON_TP",
+              "net_per_lot": -1,
+              "ref_net_per_lot": 593
+            },
+            {
+              "key": "SCALP_GOLD_1_1781064900|2026.06.10 04:35:00|BUY",
+              "volume": 0.01,
+              "ref_volume": 0.01,
+              "net": -0.34,
+              "ref_net": -5.22,
+              "same_exit": false,
+              "exit_reason": "DEAL_REASON_SL",
+              "ref_exit_reason": "DEAL_REASON_SL",
+              "net_per_lot": -34,
+              "ref_net_per_lot": -522
+            },
+            {
+              "key": "SCALP_GOLD_-1_1781630700|2026.06.16 17:45:00|SELL",
+              "volume": 0.01,
+              "ref_volume": 0.01,
+              "net": -0.07,
+              "ref_net": -5.18,
+              "same_exit": false,
+              "exit_reason": "DEAL_REASON_SL",
+              "ref_exit_reason": "DEAL_REASON_SL",
+              "net_per_lot": -7,
+              "ref_net_per_lot": -518
+            },
+            {
+              "key": "SCALP_GOLD_1_1781684100|2026.06.17 09:25:00|BUY",
+              "volume": 0.01,
+              "ref_volume": 0.01,
+              "net": 0.01,
+              "ref_net": 4.97,
+              "same_exit": false,
+              "exit_reason": "DEAL_REASON_SL",
+              "ref_exit_reason": "DEAL_REASON_TP",
+              "net_per_lot": 1,
+              "ref_net_per_lot": 497
+            },
+            {
+              "key": "SCALP_GOLD_1_1781748600|2026.06.18 02:45:00|BUY",
+              "volume": 0.01,
+              "ref_volume": 0.01,
+              "net": -0.51,
+              "ref_net": 5.01,
+              "same_exit": false,
+              "exit_reason": "DEAL_REASON_SL",
+              "ref_exit_reason": "DEAL_REASON_TP",
+              "net_per_lot": -51,
+              "ref_net_per_lot": 501
+            },
+            {
+              "key": "SCALP_GOLD_-1_1782153900|2026.06.22 19:05:00|SELL",
+              "volume": 0.01,
+              "ref_volume": 0.01,
+              "net": -0.03,
+              "ref_net": -5.09,
+              "same_exit": false,
+              "exit_reason": "DEAL_REASON_SL",
+              "ref_exit_reason": "DEAL_REASON_SL",
+              "net_per_lot": -3,
+              "ref_net_per_lot": -509
+            },
+            {
+              "key": "SCALP_GOLD_1_1782169200|2026.06.22 23:20:00|BUY",
+              "volume": 0.01,
+              "ref_volume": 0.01,
+              "net": -0.01,
+              "ref_net": -5.77,
+              "same_exit": false,
+              "exit_reason": "DEAL_REASON_SL",
+              "ref_exit_reason": "DEAL_REASON_SL",
+              "net_per_lot": -1,
+              "ref_net_per_lot": -577
+            },
+            {
+              "key": "SCALP_GOLD_1_1782201600|2026.06.23 08:35:00|BUY",
+              "volume": 0.01,
+              "ref_volume": 0.01,
+              "net": -0.12,
+              "ref_net": -4.16,
+              "same_exit": false,
+              "exit_reason": "DEAL_REASON_SL",
+              "ref_exit_reason": "DEAL_REASON_SL",
+              "net_per_lot": -12,
+              "ref_net_per_lot": -416
+            },
+            {
+              "key": "SCALP_GOLD_1_1782227700|2026.06.23 15:50:00|BUY",
+              "volume": 0.01,
+              "ref_volume": 0.01,
+              "net": -0.08,
+              "ref_net": -5.1,
+              "same_exit": false,
+              "exit_reason": "DEAL_REASON_SL",
+              "ref_exit_reason": "DEAL_REASON_SL",
+              "net_per_lot": -8,
+              "ref_net_per_lot": -510
+            },
+            {
+              "key": "SCALP_GOLD_1_1782230700|2026.06.23 16:25:00|BUY",
+              "volume": 0.01,
+              "ref_volume": 0.01,
+              "net": -0.06,
+              "ref_net": -5,
+              "same_exit": false,
+              "exit_reason": "DEAL_REASON_SL",
+              "ref_exit_reason": "DEAL_REASON_SL",
+              "net_per_lot": -6,
+              "ref_net_per_lot": -500
+            },
+            {
+              "key": "SCALP_GOLD_1_1782370200|2026.06.25 07:45:00|BUY",
+              "volume": 0.01,
+              "ref_volume": 0.01,
+              "net": -0.03,
+              "ref_net": 4.95,
+              "same_exit": false,
+              "exit_reason": "DEAL_REASON_SL",
+              "ref_exit_reason": "DEAL_REASON_TP",
+              "net_per_lot": -3,
+              "ref_net_per_lot": 495
+            },
+            {
+              "key": "SCALP_GOLD_1_1782428400|2026.06.25 23:20:00|BUY",
+              "volume": 0.01,
+              "ref_volume": 0.01,
+              "net": -0.07,
+              "ref_net": -5.92,
+              "same_exit": false,
+              "exit_reason": "DEAL_REASON_SL",
+              "ref_exit_reason": "DEAL_REASON_SL",
+              "net_per_lot": -7,
+              "ref_net_per_lot": -592
+            },
+            {
+              "key": "SCALP_GOLD_1_1782460200|2026.06.26 08:10:00|BUY",
+              "volume": 0.01,
+              "ref_volume": 0.01,
+              "net": 0.01,
+              "ref_net": 4.97,
+              "same_exit": false,
+              "exit_reason": "DEAL_REASON_SL",
+              "ref_exit_reason": "DEAL_REASON_TP",
+              "net_per_lot": 1,
+              "ref_net_per_lot": 497
+            },
+            {
+              "key": "SCALP_GOLD_-1_1782706200|2026.06.29 04:30:00|SELL",
+              "volume": 0.01,
+              "ref_volume": 0.01,
+              "net": -0.02,
+              "ref_net": -5.09,
+              "same_exit": false,
+              "exit_reason": "DEAL_REASON_SL",
+              "ref_exit_reason": "DEAL_REASON_SL",
+              "net_per_lot": -2,
+              "ref_net_per_lot": -509
+            }
+          ]
+        },
+        {
+          "label": "I15_C1_SAME_MONTH_AUTOMATIC_LOTS",
+          "expect_same_exit": false,
+          "candidate_trades": 44,
+          "reference_trades": 44,
+          "matched": 44,
+          "exit_identical": 44,
+          "exit_differs": 0,
+          "only_in_candidate": [],
+          "only_in_reference": [],
+          "accepted_flag_differs_common_zones": 0,
+          "rawcore_mismatch": 0,
+          "matched_net_candidate_usd": -28.57,
+          "matched_net_reference_rescaled_to_candidate_volume_usd": -28.57,
+          "rescaled_difference_usd": 0,
+          "rescaling_note": "DESCRIPTIVE proportional rescaling of the matched reference trades (net x candidate volume / reference volume); not a native rerun and not additive; commission and swap rounding are not linear",
+          "differing_trades": []
+        }
+      ],
+      "run_id": "SCALPI1620261010_C1F_JUNE_DELAY250_dae32196"
+    },
+    {
+      "candidate": "C1F",
+      "account": {
+        "initial_capital_usd": 500,
+        "ending_balance_usd": 548.75,
+        "net_usd": 48.75,
+        "equity_dd_usd": 15.85,
+        "max_relative_equity_dd_pct": 2.96,
+        "complete_position_net_pf": 1.842842323651452,
+        "pf_status": "DEFINED",
+        "native_pf_report": "1.83",
+        "complete_positions": 42,
+        "wins": 25,
+        "losses": 16,
+        "gross_usd": 52.11000000000001,
+        "commission_usd": 3.3600000000000017,
+        "swap_usd": 0,
+        "cost_usd": 3.3600000000000017,
+        "round_trip_lots": 0.4200000000000002,
+        "cost_usd_per_round_trip_lot": 8
+      },
+      "native": {
+        "delay_evidence_status": "NATIVE_AGENT_DELAY_LINE_VERIFIED",
+        "actual_leverage": 1000,
+        "from_date": "2026.08.01",
+        "to_date": "2026.09.01",
+        "model": 4,
+        "ticks": 20513403,
+        "bars": 5796,
+        "execution_delay_ms": 250,
+        "configs_restored": true,
+        "restored_config_sha256": {
+          "common.ini": "cd89cf03faf0a18621518f53aca7a66248cb1f84fe170d388533efbd6a6a764f",
+          "terminal.ini": "a51d86248751caa021818a6f40cee6cdc83d6a8d5b880510a2aff7d4e24e197c"
+        }
+      },
+      "status": "PASS_I16_SCALP_NATIVE_ACCOUNTING_DAILY6_FIXED_LOT_AND_EXIT_RULE_CHECKS",
+      "fixed_lot": {
+        "cap_lots": 0.01,
+        "kernel_checks": 17,
+        "symbol": {
+          "min": 0.01,
+          "max": 500,
+          "step": 0.01
+        },
+        "cap_lines": 42,
+        "reduced": 8,
+        "rejects": 0,
+        "reject_why": [],
+        "fills": 42,
+        "every_fill_0_01": true,
+        "ledger_deals_checked": 84,
+        "risk_plans_checked": 42,
+        "fills_detail": [
+          {
+            "position_id": "2",
+            "zone": "SCALP_GOLD_1_1785735900",
+            "volume": 0.01,
+            "calculated_volume": 0.01862197,
+            "auto_lots": 0.01,
+            "reduced": false
+          },
+          {
+            "position_id": "4",
+            "zone": "SCALP_GOLD_-1_1785771300",
+            "volume": 0.01,
+            "calculated_volume": 0.01880521,
+            "auto_lots": 0.01,
+            "reduced": false
+          },
+          {
+            "position_id": "6",
+            "zone": "SCALP_GOLD_1_1785809700",
+            "volume": 0.01,
+            "calculated_volume": 0.01902272,
+            "auto_lots": 0.01,
+            "reduced": false
+          },
+          {
+            "position_id": "8",
+            "zone": "SCALP_GOLD_-1_1785896400",
+            "volume": 0.01,
+            "calculated_volume": 0.01921043,
+            "auto_lots": 0.01,
+            "reduced": false
+          },
+          {
+            "position_id": "10",
+            "zone": "SCALP_GOLD_1_1785903000",
+            "volume": 0.01,
+            "calculated_volume": 0.01902235,
+            "auto_lots": 0.01,
+            "reduced": false
+          },
+          {
+            "position_id": "12",
+            "zone": "SCALP_GOLD_1_1785988200",
+            "volume": 0.01,
+            "calculated_volume": 0.01920894,
+            "auto_lots": 0.01,
+            "reduced": false
+          },
+          {
+            "position_id": "14",
+            "zone": "SCALP_GOLD_1_1785990900",
+            "volume": 0.01,
+            "calculated_volume": 0.01901676,
+            "auto_lots": 0.01,
+            "reduced": false
+          },
+          {
+            "position_id": "16",
+            "zone": "SCALP_GOLD_1_1786009200",
+            "volume": 0.01,
+            "calculated_volume": 0.01920596,
+            "auto_lots": 0.01,
+            "reduced": false
+          },
+          {
+            "position_id": "18",
+            "zone": "SCALP_GOLD_-1_1786026000",
+            "volume": 0.01,
+            "calculated_volume": 0.01939143,
+            "auto_lots": 0.01,
+            "reduced": false
+          },
+          {
+            "position_id": "20",
+            "zone": "SCALP_GOLD_1_1786122900",
+            "volume": 0.01,
+            "calculated_volume": 0.0195851,
+            "auto_lots": 0.01,
+            "reduced": false
+          },
+          {
+            "position_id": "22",
+            "zone": "SCALP_GOLD_1_1786357200",
+            "volume": 0.01,
+            "calculated_volume": 0.01958585,
+            "auto_lots": 0.01,
+            "reduced": false
+          },
+          {
+            "position_id": "24",
+            "zone": "SCALP_GOLD_1_1786462800",
+            "volume": 0.01,
+            "calculated_volume": 0.01958361,
+            "auto_lots": 0.01,
+            "reduced": false
+          },
+          {
+            "position_id": "26",
+            "zone": "SCALP_GOLD_-1_1786465800",
+            "volume": 0.01,
+            "calculated_volume": 0.01977393,
+            "auto_lots": 0.01,
+            "reduced": false
+          },
+          {
+            "position_id": "28",
+            "zone": "SCALP_GOLD_1_1786636500",
+            "volume": 0.01,
+            "calculated_volume": 0.01977207,
+            "auto_lots": 0.01,
+            "reduced": false
+          },
+          {
+            "position_id": "30",
+            "zone": "SCALP_GOLD_1_1786641300",
+            "volume": 0.01,
+            "calculated_volume": 0.01958063,
+            "auto_lots": 0.01,
+            "reduced": false
+          },
+          {
+            "position_id": "32",
+            "zone": "SCALP_GOLD_1_1786730400",
+            "volume": 0.01,
+            "calculated_volume": 0.01958101,
+            "auto_lots": 0.01,
+            "reduced": false
+          },
+          {
+            "position_id": "34",
+            "zone": "SCALP_GOLD_1_1787003100",
+            "volume": 0.01,
+            "calculated_volume": 0.01958101,
+            "auto_lots": 0.01,
+            "reduced": false
+          },
+          {
+            "position_id": "36",
+            "zone": "SCALP_GOLD_1_1787056200",
+            "volume": 0.01,
+            "calculated_volume": 0.0197676,
+            "auto_lots": 0.01,
+            "reduced": false
+          },
+          {
+            "position_id": "38",
+            "zone": "SCALP_GOLD_-1_1787091300",
+            "volume": 0.01,
+            "calculated_volume": 0.01976797,
+            "auto_lots": 0.01,
+            "reduced": false
+          },
+          {
+            "position_id": "40",
+            "zone": "SCALP_GOLD_-1_1787197200",
+            "volume": 0.01,
+            "calculated_volume": 0.0199568,
+            "auto_lots": 0.01,
+            "reduced": false
+          },
+          {
+            "position_id": "42",
+            "zone": "SCALP_GOLD_-1_1787220000",
+            "volume": 0.01,
+            "calculated_volume": 0.01976536,
+            "auto_lots": 0.01,
+            "reduced": false
+          },
+          {
+            "position_id": "44",
+            "zone": "SCALP_GOLD_-1_1787288400",
+            "volume": 0.01,
+            "calculated_volume": 0.01956611,
+            "auto_lots": 0.01,
+            "reduced": false
+          },
+          {
+            "position_id": "46",
+            "zone": "SCALP_GOLD_1_1787293800",
+            "volume": 0.01,
+            "calculated_volume": 0.01937579,
+            "auto_lots": 0.01,
+            "reduced": false
+          },
+          {
+            "position_id": "48",
+            "zone": "SCALP_GOLD_1_1787302500",
+            "volume": 0.01,
+            "calculated_volume": 0.01956127,
+            "auto_lots": 0.01,
+            "reduced": false
+          },
+          {
+            "position_id": "50",
+            "zone": "SCALP_GOLD_-1_1787333700",
+            "volume": 0.01,
+            "calculated_volume": 0.01974898,
+            "auto_lots": 0.01,
+            "reduced": false
+          },
+          {
+            "position_id": "52",
+            "zone": "SCALP_GOLD_-1_1787339100",
+            "volume": 0.01,
+            "calculated_volume": 0.01993333,
+            "auto_lots": 0.01,
+            "reduced": false
+          },
+          {
+            "position_id": "54",
+            "zone": "SCALP_GOLD_1_1787352300",
+            "volume": 0.01,
+            "calculated_volume": 0.01973855,
+            "auto_lots": 0.01,
+            "reduced": false
+          },
+          {
+            "position_id": "56",
+            "zone": "SCALP_GOLD_-1_1787564400",
+            "volume": 0.01,
+            "calculated_volume": 0.01953706,
+            "auto_lots": 0.01,
+            "reduced": false
+          },
+          {
+            "position_id": "58",
+            "zone": "SCALP_GOLD_1_1787627400",
+            "volume": 0.01,
+            "calculated_volume": 0.0195352,
+            "auto_lots": 0.01,
+            "reduced": false
+          },
+          {
+            "position_id": "60",
+            "zone": "SCALP_GOLD_1_1787656800",
+            "volume": 0.01,
+            "calculated_volume": 0.01971881,
+            "auto_lots": 0.01,
+            "reduced": false
+          },
+          {
+            "position_id": "62",
+            "zone": "SCALP_GOLD_-1_1787675100",
+            "volume": 0.01,
+            "calculated_volume": 0.01953184,
+            "auto_lots": 0.01,
+            "reduced": false
+          },
+          {
+            "position_id": "64",
+            "zone": "SCALP_GOLD_1_1787731500",
+            "volume": 0.01,
+            "calculated_volume": 0.01972142,
+            "auto_lots": 0.01,
+            "reduced": false
+          },
+          {
+            "position_id": "66",
+            "zone": "SCALP_GOLD_1_1787756400",
+            "volume": 0.01,
+            "calculated_volume": 0.01991397,
+            "auto_lots": 0.01,
+            "reduced": false
+          },
+          {
+            "position_id": "68",
+            "zone": "SCALP_GOLD_-1_1787778900",
+            "volume": 0.01,
+            "calculated_volume": 0.01987858,
+            "auto_lots": 0.01,
+            "reduced": false
+          },
+          {
+            "position_id": "70",
+            "zone": "SCALP_GOLD_1_1787798100",
+            "volume": 0.01,
+            "calculated_volume": 0.02006257,
+            "auto_lots": 0.02,
+            "reduced": true
+          },
+          {
+            "position_id": "72",
+            "zone": "SCALP_GOLD_1_1787820900",
+            "volume": 0.01,
+            "calculated_volume": 0.02006108,
+            "auto_lots": 0.02,
+            "reduced": true
+          },
+          {
+            "position_id": "74",
+            "zone": "SCALP_GOLD_-1_1787830800",
+            "volume": 0.01,
+            "calculated_volume": 0.02024432,
+            "auto_lots": 0.02,
+            "reduced": true
+          },
+          {
+            "position_id": "76",
+            "zone": "SCALP_GOLD_1_1787852400",
+            "volume": 0.01,
+            "calculated_volume": 0.02043389,
+            "auto_lots": 0.02,
+            "reduced": true
+          },
+          {
+            "position_id": "78",
+            "zone": "SCALP_GOLD_-1_1787906400",
+            "volume": 0.01,
+            "calculated_volume": 0.02043464,
+            "auto_lots": 0.02,
+            "reduced": true
+          },
+          {
+            "position_id": "80",
+            "zone": "SCALP_GOLD_1_1787910900",
+            "volume": 0.01,
+            "calculated_volume": 0.02024395,
+            "auto_lots": 0.02,
+            "reduced": true
+          },
+          {
+            "position_id": "82",
+            "zone": "SCALP_GOLD_-1_1788154200",
+            "volume": 0.01,
+            "calculated_volume": 0.02043389,
+            "auto_lots": 0.02,
+            "reduced": true
+          },
+          {
+            "position_id": "84",
+            "zone": "SCALP_GOLD_1_1788181800",
+            "volume": 0.01,
+            "calculated_volume": 0.02024916,
+            "auto_lots": 0.02,
+            "reduced": true
+          }
+        ],
+        "note": "CalculatedVolume keeps the automatic value; AutoLots is the risk-approved volume before the cap"
+      },
+      "verification_sha256": "6e9d471ac1a67224ecb3b1b196d6b6e20040513a7da76882d36fa3d650e64a48",
+      "scenario": "AUGUST_DELAY250",
+      "same_volume_difference": {
+        "c1f_minus_p0": {
+          "net_usd": -10.27,
+          "equity_dd_usd": 0,
+          "max_relative_equity_dd_pct": 0.06,
+          "complete_position_net_pf": 0.0841,
+          "cost_usd": 0,
+          "complete_positions": 0,
+          "round_trip_lots": 0
+        },
+        "c1f": {
+          "net_usd": 48.75,
+          "pf": 1.842842323651452
+        },
+        "p0": {
+          "net_usd": 59.02,
+          "pf": 1.7587093456742515
+        },
+        "note": "both candidates trade 0.01 lots; this is the exit contribution at equal volume for THIS month only; no two-month sum, no cumulative figure; no promotion rule is evaluated in I16"
+      },
+      "entry_rules": {
+        "rows": 334,
+        "checked": 334,
+        "unresolved": 0,
+        "decisions_not_on_a_bar_open": 1,
+        "lookup": "closed bar = floor(decision to the 5-minute grid) - 300 s"
+      },
+      "comparisons": [
+        {
+          "label": "P0_SAME_MONTH_SAME_VOLUME",
+          "expect_same_exit": false,
+          "candidate_trades": 42,
+          "reference_trades": 42,
+          "matched": 42,
+          "exit_identical": 32,
+          "exit_differs": 10,
+          "only_in_candidate": [],
+          "only_in_reference": [],
+          "accepted_flag_differs_common_zones": 0,
+          "rawcore_mismatch": 0,
+          "matched_net_candidate_usd": 48.75,
+          "matched_net_reference_rescaled_to_candidate_volume_usd": 59.02,
+          "rescaled_difference_usd": -10.27,
+          "rescaling_note": "DESCRIPTIVE proportional rescaling of the matched reference trades (net x candidate volume / reference volume); not a native rerun and not additive; commission and swap rounding are not linear",
+          "differing_trades": [
+            {
+              "key": "SCALP_GOLD_1_1786122900|2026.08.07 19:35:00|BUY",
+              "volume": 0.01,
+              "ref_volume": 0.01,
+              "net": 0.02,
+              "ref_net": -5.09,
+              "same_exit": false,
+              "exit_reason": "DEAL_REASON_SL",
+              "ref_exit_reason": "DEAL_REASON_SL",
+              "net_per_lot": 2,
+              "ref_net_per_lot": -509
+            },
+            {
+              "key": "SCALP_GOLD_1_1786357200|2026.08.10 10:40:00|BUY",
+              "volume": 0.01,
+              "ref_volume": 0.01,
+              "net": -0.06,
+              "ref_net": -5.1,
+              "same_exit": false,
+              "exit_reason": "DEAL_REASON_SL",
+              "ref_exit_reason": "DEAL_REASON_SL",
+              "net_per_lot": -6,
+              "ref_net_per_lot": -510
+            },
+            {
+              "key": "SCALP_GOLD_-1_1786465800|2026.08.11 16:50:00|SELL",
+              "volume": 0.01,
+              "ref_volume": 0.01,
+              "net": -0.05,
+              "ref_net": 4.97,
+              "same_exit": false,
+              "exit_reason": "DEAL_REASON_SL",
+              "ref_exit_reason": "DEAL_REASON_TP",
+              "net_per_lot": -5,
+              "ref_net_per_lot": 497
+            },
+            {
+              "key": "SCALP_GOLD_1_1786641300|2026.08.13 17:35:00|BUY",
+              "volume": 0.01,
+              "ref_volume": 0.01,
+              "net": 0.01,
+              "ref_net": 4.92,
+              "same_exit": false,
+              "exit_reason": "DEAL_REASON_SL",
+              "ref_exit_reason": "DEAL_REASON_TP",
+              "net_per_lot": 1,
+              "ref_net_per_lot": 492
+            },
+            {
+              "key": "SCALP_GOLD_1_1786730400|2026.08.14 18:30:00|BUY",
+              "volume": 0.01,
+              "ref_volume": 0.01,
+              "net": 0,
+              "ref_net": 5.01,
+              "same_exit": false,
+              "exit_reason": "DEAL_REASON_SL",
+              "ref_exit_reason": "DEAL_REASON_TP",
+              "net_per_lot": 0,
+              "ref_net_per_lot": 501
+            },
+            {
+              "key": "SCALP_GOLD_1_1787056200|2026.08.18 12:50:00|BUY",
+              "volume": 0.01,
+              "ref_volume": 0.01,
+              "net": 0.01,
+              "ref_net": 4.99,
+              "same_exit": false,
+              "exit_reason": "DEAL_REASON_SL",
+              "ref_exit_reason": "DEAL_REASON_TP",
+              "net_per_lot": 1,
+              "ref_net_per_lot": 499
+            },
+            {
+              "key": "SCALP_GOLD_-1_1787564400|2026.08.24 10:00:00|SELL",
+              "volume": 0.01,
+              "ref_volume": 0.01,
+              "net": -0.05,
+              "ref_net": 5.25,
+              "same_exit": false,
+              "exit_reason": "DEAL_REASON_SL",
+              "ref_exit_reason": "DEAL_REASON_TP",
+              "net_per_lot": -5,
+              "ref_net_per_lot": 525
+            },
+            {
+              "key": "SCALP_GOLD_1_1787756400|2026.08.26 15:20:00|BUY",
+              "volume": 0.01,
+              "ref_volume": 0.01,
+              "net": -0.95,
+              "ref_net": -5.74,
+              "same_exit": false,
+              "exit_reason": "DEAL_REASON_SL",
+              "ref_exit_reason": "DEAL_REASON_SL",
+              "net_per_lot": -95,
+              "ref_net_per_lot": -574
+            },
+            {
+              "key": "SCALP_GOLD_1_1787798100|2026.08.27 03:00:00|BUY",
+              "volume": 0.01,
+              "ref_volume": 0.01,
+              "net": -0.04,
+              "ref_net": -5.17,
+              "same_exit": false,
+              "exit_reason": "DEAL_REASON_SL",
+              "ref_exit_reason": "DEAL_REASON_SL",
+              "net_per_lot": -4,
+              "ref_net_per_lot": -517
+            },
+            {
+              "key": "SCALP_GOLD_1_1787852400|2026.08.27 18:00:00|BUY",
+              "volume": 0.01,
+              "ref_volume": 0.01,
+              "net": 0.02,
+              "ref_net": 5.14,
+              "same_exit": false,
+              "exit_reason": "DEAL_REASON_SL",
+              "ref_exit_reason": "DEAL_REASON_TP",
+              "net_per_lot": 2,
+              "ref_net_per_lot": 514
+            }
+          ]
+        },
+        {
+          "label": "I15_C1_SAME_MONTH_AUTOMATIC_LOTS",
+          "expect_same_exit": false,
+          "candidate_trades": 42,
+          "reference_trades": 42,
+          "matched": 42,
+          "exit_identical": 42,
+          "exit_differs": 0,
+          "only_in_candidate": [],
+          "only_in_reference": [],
+          "accepted_flag_differs_common_zones": 0,
+          "rawcore_mismatch": 0,
+          "matched_net_candidate_usd": 48.75,
+          "matched_net_reference_rescaled_to_candidate_volume_usd": 48.83,
+          "rescaled_difference_usd": -0.08,
+          "rescaling_note": "DESCRIPTIVE proportional rescaling of the matched reference trades (net x candidate volume / reference volume); not a native rerun and not additive; commission and swap rounding are not linear",
+          "differing_trades": []
+        }
+      ],
+      "run_id": "SCALPI1620261010_C1F_AUGUST_DELAY250_1bc76411"
+    }
+  ],
+  "claims": {
+    "lean_validation": false,
+    "live": false,
+    "demo": false,
+    "deployment": false,
+    "oos": false,
+    "champion": false
+  },
+  "next_hypothesis": "Research whether delaying the cost-BE trigger avoids cutting August winning trades while retaining June loss reduction; register a small new comparison before changing any frozen source. No month-dependent switching.",
+  "claude_review": {
+    "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration16_20261010\\Claude\\RESULT_REVIEW_I16.json",
+    "status": "INDEPENDENT_RECOMPUTATION_MATCHED_WITH_TEXT_ERRATA",
+    "cn_sha256": "6b893c406aea032f3b386086768ebf898375b3e6f9a3e791f84f9c25031c32a4",
+    "sha256": "fa7e634993e2f3f3a9f443f00c73cf30524382c5163f9f67b023bc014961208a"
+  }
+}
