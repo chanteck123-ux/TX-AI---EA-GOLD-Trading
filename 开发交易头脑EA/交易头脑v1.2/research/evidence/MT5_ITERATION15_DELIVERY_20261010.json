@@ -1,0 +1,13 @@
+{
+  "status": "ZIP_ALL_MEMBERS_HASH_VERIFIED",
+  "zip_path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\outputs\\TradingBrain_I15_Scalping_Exit_Research_20261010.zip",
+  "zip_sha256": "b0f7286dc3f969a422148cecf63411ecef24630e632127b8e01d3c3c9e6adb34",
+  "zip_bytes": 5545350,
+  "manifest_files": 154,
+  "zip_verified_files": 155,
+  "manifest_sha256": "57b442313995febf09eb5492640ddc4e0caee456b83552be3ba17148e37f846c",
+  "private_backups_excluded": true,
+  "teacher_originals_excluded": true,
+  "candidate": "C1 development only",
+  "live_ready": false
+}

@@ -1,6 +1,6 @@
 {
   "schema": "TRADINGBRAIN_CURRENT_V1",
-  "updated_on": "2026-10-09",
+  "updated_on": "2026-10-10",
   "timezone": "Asia/Kuala_Lumpur",
   "project": "TradingBrain V1.2 GOLD EA",
   "plan": "../docs/PLAN_CN.md",
@@ -49,21 +49,19 @@
     "claude_code_desktop_session_verified": true
   },
   "this_change": {
-    "scope": "I11_S2_EQUAL_RISK_ENTRY_BE_AND_SCALP_DD15",
-    "mode": "CODEX_ONLY",
+    "scope": "I15_SCALPING_INDEPENDENT_EXIT_STUDY",
+    "mode": "CODEX_AND_CLAUDE",
+    "source_owner": "Claude Code",
+    "verification_owner": "Codex",
     "new_strategy_implementation": false,
-    "new_account_dd_guard": true,
-    "new_exit_configuration": true,
+    "new_exit_candidates": 2,
     "new_compile": true,
-    "new_native_candidate_compilations": 3,
-    "new_csharp_compile": false,
-    "new_lean_execution": false,
+    "new_native_candidate_compilations": 2,
     "new_backtest": true,
-    "new_native_attempts": 9,
-    "strict_verified": 9,
-    "reused_results": 19,
-    "audit_invalid": 0,
-    "new_chart_or_live_deployment": false,
+    "new_native_attempts": 4,
+    "strict_verified": 4,
+    "native_repairs": 0,
+    "new_lean_execution": false,
     "new_deployment": false,
     "new_live_authorization": false
   },
@@ -116,9 +114,9 @@
     "score_anchor": false
   },
   "next_research_priority": [
-    "冻结S2推进2%＋1R保本候选，先盘点哪些数据未参与选择，再登记跨期与成本／延迟验证；保留原2%退出回退",
-    "Scalping先按行情与位置归因六月亏损，下一批只登记有依据的单项对照；不靠继续抬风险或事后改DD阈值制造盈利",
-    "S1核查单笔盈利集中度，S3／S5／S6扩展已登记样本覆盖和触发漏斗；S4保留同条件净利参考，七策略并发及提款另测"
+    "Scalping冻结I15 C1及父版恢复点，下一批事前登记同手数归因对照，盘点未用于选择的数据后再做成本／延迟及独立验证；六月仍亏，不因降低回撤就宣称盈利",
+    "S2已冻结2%＋1R保本候选另行推进跨期验证，保留原退出；本轮未重测",
+    "S1核查盈利集中度，S3／S5／S6扩展已登记覆盖与漏斗，S4保留参考；七策略并发与提款路径另测"
   ],
   "latest_mt5_iteration7": {
     "status": "BATCH_COMPLETE_WITH_ONE_AUDIT_INVALID_RUN",
@@ -1213,5 +1211,40 @@
     "delivery_zip": "outputs/TradingBrain_I14_Scalping_Research_20261010.zip",
     "zip_sha256": "949b27e4cd4f91e5a9e01e0b6c8eaba848eff568d90d1b9de2cb27fce0215e12",
     "claude_review": "evidence/MT5_ITERATION14_CLAUDE_REVIEW_20261010_CN.md"
+  },
+  "latest_mt5_iteration15": {
+    "batch": "I15_SCALPING_DYNAMIC_COST_BE_VS_TRAIL",
+    "status": "COMPLETE_C1_FROZEN_DEVELOPMENT_ONLY",
+    "mode": "CODEX_AND_CLAUDE",
+    "implementation_owner": "Claude Code",
+    "verification_owner": "Codex",
+    "completed_on": "2026-10-10",
+    "new_candidates_registered": 2,
+    "mq5_compile_attempts": 2,
+    "native_attempts": 4,
+    "formal_native_proofs": 4,
+    "repair_attempts": 0,
+    "research_exit_candidate": "C1",
+    "selected_validated_version_change": false,
+    "parent_retained": true,
+    "S1_to_S6": "RETAINED_NOT_RETESTED_I15",
+    "conditions": "USD500 GOLD M5 model4 real ticks 250ms leverage1000 single2pct portfolio3pct originalentry5/5 requested initial stops Daily6",
+    "evidence": "evidence/MT5_ITERATION15_SCALPING_20261010_CN.md",
+    "english": "evidence/MT5_ITERATION15_SCALPING_20261010_EN.md",
+    "results": "evidence/MT5_ITERATION15_RESULTS_20261010.json",
+    "delivery": "evidence/MT5_ITERATION15_DELIVERY_20261010.json",
+    "claude_review": "evidence/MT5_ITERATION15_CLAUDE_REVIEW_20261010_CN.md",
+    "conclusion_cn": "C1六月-28.57/八月+58.98，双开发月账户净USD优于父版但六月仍亏；八月8笔手数路径变化，描述性父手数折算37.38低于父48.05，不能宣称纯退出优势。C2六月-18.36/八月29.18，八月低于父版，不选择。保留原版，C1冻结待验证。",
+    "score": "N/A SCORE_TARGETS_UNSET",
+    "data_status": "ALREADY_USED_DEVELOPMENT_INDEPENDENT_ACCOUNTS_NOT_ADDITIVE",
+    "independent_oos": false,
+    "champion": false,
+    "demo": false,
+    "live": false,
+    "deployment": false,
+    "lean_engine_runs": 0,
+    "delivery_zip": "outputs/TradingBrain_I15_Scalping_Exit_Research_20261010.zip",
+    "zip_sha256": "b0f7286dc3f969a422148cecf63411ecef24630e632127b8e01d3c3c9e6adb34",
+    "zip_verified_files": 155
   }
 }

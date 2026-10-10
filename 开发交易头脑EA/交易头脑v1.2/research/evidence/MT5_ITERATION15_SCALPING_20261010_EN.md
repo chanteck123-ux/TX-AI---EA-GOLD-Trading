@@ -1,0 +1,24 @@
+# I15 Scalping exit study: smaller June losses, no profitability validation
+
+2026-10-10. Claude Code authored the candidates; Codex reviewed, compiled and ran the fixed MT5 terminal. Both compiles had zero errors/warnings; all four native runs passed accounting and exit-rule verification, with no repair reruns. C1 improves net account results in both previously used development months and is frozen for future research validation. June remains negative. C2 reduces June losses more, but loses August profit relative to the parent and fails the preregistered comparison rule. The parent remains a recovery baseline. Neither is a Champion or demo/live-approved build.
+
+USD500, GOLD M5, Model4 real-tick mode, 250ms execution delay, leverage1:1000; unchanged 2% single/3% portfolio caps, single position, original SD retest and closed-bar reversal, requested initial SL/TP5.00/5.00 price units and Daily6. June and August are independent accounts on already-used development data; do not add their results. Real-tick mode/report quality is not independently established complete tick coverage.
+
+| Month/build | NetUSD | Delta vs parent | Equity DDUSD / max relative% | Native PF / net PF | Trades | Commission+swapUSD | USD/roundtrip standard lot |
+|---|---:|---:|---|---|---:|---:|---:|
+| June parent | -63.79 | — | 81.35/15.96% | 0.56/0.5574 | 44 | 5.59 | 12.7045 |
+| June C1 | -28.57 | +35.22 | 61.26/11.67% | 0.64/0.6347 | 44 | 4.90 | 11.1364 |
+| June C2 | -18.36 | +45.43 | 48.70/9.32% | 0.76/0.7614 | 44 | 4.90 | 11.1364 |
+| August parent | +48.05 | — | 29.21/5.30% | 1.44/1.4400 | 42 | 3.96 | 7.6154 |
+| August C1 | +58.98 | +10.93 | 17.52/3.10% | 1.85/1.8686 | 42 | 3.84 | 7.6800 |
+| August C2 | +29.18 | -18.87 | 18.13/3.41% | 1.50/1.5147 | 42 | 3.36 | 8.0000 |
+
+Costs are already included in net profit. Do not subtract spread, commission or slippage again. Net expectancy per trade: June parent-1.4498/C1-0.6493/C2-0.4173; August parent+1.1440/C1+1.4043/C2+0.6948USD. Score N/A / SCORE_TARGETS_UNSET.
+
+C1 triggers at favorable exit-side price movement2.50, then tightens SL to cover confirmed opening costs, incurred swap loss, expected closing commission and an explicit0.02 price slippage buffer. Closing commission uses the larger of the registered4USD/standard-lot per side and the measured opening rate, then rounds money upward to cents; OrderCalcProfit verifies coverage. Unreadable costs or an illegal/above-cap target defer optimization and retain existing protection; no downward clipping. Costs may tighten the target again. C2 starts at2.50 with fixed price distance2.00 and step0.50. These are quotation price units, not account USD, MT5 Points or actual initial risk. Nominal requested R is5.00. TP and initial risk logic stay unchanged. Server response/readback are checked; SL only tightens; no lifetime request cap. MQ5 defaults match the tested pair. Both builds are tester-only.
+
+C1 June matches all44 parent entry zones/times/volumes and gains35.22 from observed exits. August matches all42 entry zones/times but8 volumes differ. Descriptive rescaling of observed candidate net trades to parent volumes gives37.38 vs parent48.05; actual58.98 contains a21.60 volume-path component relative to that rescale. Thus August+10.93 is not entirely pure exit advantage. This is not a native fixed-volume rerun or a causal result.
+
+C1 modifications: June29 confirmed/29 managed positions; August31/31. C2 June74 requests,73 confirmations; one failed request raced with an original-TP close in the same second, with no later retry confirmation. The failure is not counted as effective protection. August90/90 confirmed. All native captures were complete, without the I14 historical-log exception; private terminal configuration restoration was verified. Slippage can still turn cost-breakeven exits into net losses. Daily6 did not lock any day. Restart, multi-instance, partial-fill and intra-bar tick timing were not established. The original verifier resolves June358/358 and August333/334 reversal rows; Claude independently resolves the remaining August row by aligning the decision timestamp to the closed M5 grid and confirms RawCore=NO. The original verification output is preserved. Unchanged entry-function text is not a full zone-lifecycle audit. Requested initial stop distance5.00 and final managed stops remain distinct.
+
+C1 is a frozen development research candidate; C2 is retained but not selected. Preserve parent recovery, default sources/EX5, SET/INI, compiler logs, native reports, verification, failed modification evidence and hashes. S1–S6 and I11–I14 packages remain unchanged. No new cost stress, OOS, withdrawal simulation, LEAN, demo or live evidence was produced. Detailed metrics are in I15_RESULTS.json and the four Scalping/VERIFICATION_C*_*.json files; Claude's independent result review is separate.
