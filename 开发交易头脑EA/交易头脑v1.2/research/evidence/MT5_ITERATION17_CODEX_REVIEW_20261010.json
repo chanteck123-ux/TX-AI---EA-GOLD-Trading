@@ -1,0 +1,33 @@
+{
+  "schema": "CODEX_I17_SOURCE_AND_NATIVE_REVIEW_V1",
+  "utc": "2026-10-10T11:38:29.8254362Z",
+  "status": "PASS_RECORDED_EVIDENCE_WITH_ONE_EXPLAINED_TP_CLOSE_MODIFICATION_RACE",
+  "source_review": "Two candidates reverse exactly to I16 C1F;322 original functions unchanged;only trigger default/initialization tests changed",
+  "issues_resolved": [
+    "deriv.base binding",
+    "complete three-way attribution coverage",
+    "I17 retention limitations"
+  ],
+  "native_proofs": 4,
+  "compile_errors": 0,
+  "compile_warnings": 0,
+  "modification_race": {
+    "explanation": "Native original TP fills at4399.68 during modification delay; net5.11; failed modification not recorded as protection effective",
+    "month": "AUGUST_DELAY250",
+    "position": 24,
+    "requests": 26,
+    "failed": 1,
+    "confirmed": 25,
+    "retcode": 3,
+    "candidate": "T40"
+  },
+  "entry_grid": "June358/358 August334/334;zero unresolved;legacy exact-minute333/334 preserved",
+  "retention": "RETAIN_C1F_AND_P0",
+  "score": "N/A SCORE_TARGETS_UNSET",
+  "limitations": [
+    "not complete tick timing or missed-trigger proof",
+    "actual broker costs and margin uncalibrated",
+    "no OOS/demo/live/LEAN",
+    "S1-S6 not retested"
+  ]
+}

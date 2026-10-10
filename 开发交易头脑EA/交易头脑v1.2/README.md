@@ -26,7 +26,9 @@
 
 后续实际开发沿用原 `v1-2-ea-mt5` 工作区及固定 MT5 终端。本次没有把本地全部 EA 源码、EX5 或大包重新公开到 GitHub，没有创建空壳交易程序。跨电脑协作先取得已授权的匹配交付包并核对哈希；仅拿到这份骨架时，可审计划与报告，不声称已能编译 EA。
 
-2026-10-10 最新实际研究 I16：Claude编写固定手数诊断候选，Codex完成2次干净编译、4次真实Tick250ms回测及严格核验，Claude独立复审一致。同0.01手，六月原退出/C1F净USD -63.79/-28.57（改善35.22）；八月59.02/48.75（少赚10.27）。六月仍亏，保本没有全面改善；保留原版与I15 C1。本轮S1–S6未重测，两个独立500USD开发账户不相加，评分N/A；无OOS、Champion或部署。MQ5默认配置及匹配EX5已封包，仅用于测试器。见[完整成绩](research/evidence/MT5_ITERATION16_SCALPING_20261010_CN.md)、[Claude复审](research/evidence/MT5_ITERATION16_CLAUDE_REVIEW_20261010_CN.md)、[交付哈希](research/evidence/MT5_ITERATION16_DELIVERY_20261010.json)。
+2026-10-10 最新实际研究 I17：Claude编写延后成本保本3.5／4.0候选，Codex完成2次干净编译、4次真实Tick250ms测试与严格核验，Claude独立复算一致。T35六月/八月净USD -47.37/48.62；T40 -59.00/48.84；六月比2.5触发C1F多亏18.80/30.43，回撤增加。少截赢家同时失去救损，两者未胜出，保留C1F/P0及I15恢复点。4.0八月一次修改失败因原TP先平仓，事件留档、未记为保护生效。两个独立500USD开发账户不相加，N/A，无OOS/Champion/部署，S1–S6未重测。默认MQ5及匹配EX5已封包、TESTER_ONLY。见[完整成绩](research/evidence/MT5_ITERATION17_SCALPING_20261010_CN.md)、[Claude复审](research/evidence/MT5_ITERATION17_CLAUDE_REVIEW_20261010_CN.md)、[交付哈希](research/evidence/MT5_ITERATION17_DELIVERY_20261010.json)。
+
+2026-10-10 历史实际研究 I16：Claude编写固定手数诊断候选，Codex完成2次干净编译、4次真实Tick250ms回测及严格核验，Claude独立复审一致。同0.01手，六月原退出/C1F净USD -63.79/-28.57（改善35.22）；八月59.02/48.75（少赚10.27）。六月仍亏，保本没有全面改善；保留原版与I15 C1。本轮S1–S6未重测，两个独立500USD开发账户不相加，评分N/A；无OOS、Champion或部署。MQ5默认配置及匹配EX5已封包，仅用于测试器。见[完整成绩](research/evidence/MT5_ITERATION16_SCALPING_20261010_CN.md)、[Claude复审](research/evidence/MT5_ITERATION16_CLAUDE_REVIEW_20261010_CN.md)、[交付哈希](research/evidence/MT5_ITERATION16_DELIVERY_20261010.json)。
 
 2026-10-09 历史研究 I13：与Claude Code合作，第十三轮新增Scalping两个独立背景门（H4 EMA50/200方向、M5库Wilder ADX14逆向排除）。3次MQ5编译均0错误/0警告，5次原生尝试得到4份正式结果，其中六月ADX修复场为完整原生结束后的日志恢复审计；原失败不覆盖。C1六月/八月净USD -20.38/34.70，C2_R1 -49.09/33.48；两候选六月改善、八月少赚，保留原版及I11七套研究版本。普通C#编译和178个原生门决策离线对照通过，仍不是LEAN引擎运行。详见[中文成绩](research/evidence/MT5_ITERATION13_SCALPING_20261009_CN.md)、[English results](research/evidence/MT5_ITERATION13_SCALPING_20261009_EN.md)、[逐月差额](research/evidence/MT5_ITERATION13_RESULTS_20261009.json)、[交付哈希](research/evidence/MT5_ITERATION13_DELIVERY_20261009.json)。S1–S6本批未重新测试；评分N/A，无独立样本外、Champion、Demo或部署。
 

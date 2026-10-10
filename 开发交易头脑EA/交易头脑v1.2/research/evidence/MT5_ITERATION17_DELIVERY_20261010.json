@@ -1,0 +1,23 @@
+{
+  "schema": "I17_DELIVERY_RECEIPT_V1",
+  "utc": "2026-10-10T11:41:28.9883026Z",
+  "status": "ZIP_SOURCE_DEFAULT_BINARY_LEDGER_AND_ALL_FILES_VERIFIED",
+  "zip_path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\outputs\\TradingBrain_I17_Scalping_LaterBE_20261010.zip",
+  "zip_sha256": "4c0eab8bcd1c9e12923e9032aa0f5807caeb9ef30cce797c7874c550eddea6b4",
+  "zip_bytes": 8427782,
+  "zip_verified_files": 243,
+  "manifest_sha256": "20e715a0909a29b7dc920df074ea6429bfa55081e0011bfbddeeefea0524b9ef",
+  "compile_attempts": 2,
+  "native_main_runs": 4,
+  "native_repairs": 0,
+  "formal_native_proofs": 4,
+  "tester_only": true,
+  "claude_review_sha256": "54dca662cf0c0e9503bd8d1191dfd823e97444f477ff3cc770584423f7459d9d",
+  "score": "N/A SCORE_TARGETS_UNSET",
+  "retention": "RETAIN_C1F_AND_P0",
+  "champion": false,
+  "oos": false,
+  "demo": false,
+  "live": false,
+  "deployment": false
+}

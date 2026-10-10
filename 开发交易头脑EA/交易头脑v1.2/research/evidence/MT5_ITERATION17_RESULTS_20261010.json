@@ -1,0 +1,764 @@
+{
+  "schema": "I17_EVALUATION_V1",
+  "created_utc": "2026-10-10T11:35:10.017Z",
+  "registration": {
+    "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration17_20261010\\Scalping\\REGISTRATION_SCALP_I17.json",
+    "sha256": "65d26a64b804d9c11e6381fe0876edd17f44ff0f2402def5e8e4415529b54eeb"
+  },
+  "score": {
+    "status": "SCORE_TARGETS_UNSET",
+    "total": null
+  },
+  "data_status": "ALREADY_USED_DEVELOPMENT_INDEPENDENT_ACCOUNTS_NOT_ADDITIVE",
+  "claims": {
+    "champion": false,
+    "validation_passed": false,
+    "oos": false,
+    "lean": false,
+    "deployment": false
+  },
+  "candidates": {
+    "T35": {
+      "trigger_price": 3.5,
+      "months": {
+        "JUNE_DELAY250": {
+          "verification": {
+            "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration17_20261010\\Scalping\\VERIFICATION_T35_JUNE_DELAY250.json",
+            "sha256": "5478af04c3fa3e511279a3906a47c5cf78554d52bb034972caea77d2f35d4ae4",
+            "status": "PASS_I17_SCALP_NATIVE_ACCOUNTING_DAILY6_FIXED_LOT_AND_DELAYED_TRIGGER_CHECKS",
+            "errors": 0
+          },
+          "run_id": "SCALPI1720261010_T35_JUNE_DELAY250_2b49f89e",
+          "candidate": {
+            "net_usd": -47.37000000000001,
+            "equity_dd_usd": 75.46,
+            "max_relative_equity_dd_pct": 14.51,
+            "net_pf_complete_positions": 0.5982188295165396,
+            "native_pf_report": "0.60",
+            "trades": 44,
+            "wins": 17,
+            "losses": 27,
+            "cost_usd": 4.900000000000002,
+            "round_trip_lots": 0.4400000000000002
+          },
+          "p0_i16": {
+            "net_usd": -63.79,
+            "equity_dd_usd": 81.35,
+            "max_relative_equity_dd_pct": 15.96,
+            "net_pf_complete_positions": 0.5574441515193562,
+            "native_pf_report": "0.56",
+            "trades": 44,
+            "wins": 16,
+            "losses": 28,
+            "cost_usd": 5.590000000000002,
+            "round_trip_lots": 0.4400000000000002
+          },
+          "c1f_i16": {
+            "net_usd": -28.570000000000007,
+            "equity_dd_usd": 61.26,
+            "max_relative_equity_dd_pct": 11.67,
+            "net_pf_complete_positions": 0.634748146254155,
+            "native_pf_report": "0.64",
+            "trades": 44,
+            "wins": 14,
+            "losses": 29,
+            "cost_usd": 4.900000000000002,
+            "round_trip_lots": 0.4400000000000002
+          },
+          "candidate_minus_p0": {
+            "net_usd": 16.42,
+            "equity_dd_usd": -5.89,
+            "max_relative_equity_dd_pct": -1.45,
+            "complete_position_net_pf": 0.0408,
+            "cost_usd": -0.69,
+            "complete_positions": 0,
+            "round_trip_lots": 0
+          },
+          "candidate_minus_c1f": {
+            "net_usd": -18.8,
+            "equity_dd_usd": 14.2,
+            "max_relative_equity_dd_pct": 2.84,
+            "complete_position_net_pf": -0.0365,
+            "cost_usd": 0,
+            "complete_positions": 0,
+            "round_trip_lots": 0
+          },
+          "attribution": {
+            "coverage": {
+              "candidate_trades": 44,
+              "p0_trades": 44,
+              "c1f_trades": 44,
+              "matched_in_all_three": 44,
+              "entry_identity_mismatch_trades": 0,
+              "classified_trades": 44,
+              "entries_identical_across_runs": true
+            },
+            "unmatched_path_differences": {
+              "candidate_not_in_p0": [],
+              "candidate_not_in_c1f": [],
+              "p0_not_in_candidate": [],
+              "c1f_not_in_candidate": []
+            },
+            "entry_identity_mismatch_keys": [],
+            "vs_p0": {
+              "tp_to_sl": {
+                "n": 2,
+                "delta": -10.06
+              },
+              "sl_exit_changed": {
+                "n": 5,
+                "delta": 26.48
+              },
+              "exit_identical": 37,
+              "other_changed": {
+                "n": 0,
+                "delta": 0
+              }
+            },
+            "vs_c1f_classes": {
+              "c1f_rescue_kept_by_candidate": {
+                "n": 4,
+                "t_net": -0.33,
+                "c1f_net": -0.33,
+                "delta_candidate_minus_c1f": 0
+              },
+              "unchanged_in_all_three": {
+                "n": 25,
+                "t_net": -27.1,
+                "c1f_net": -27.1,
+                "delta_candidate_minus_c1f": 0
+              },
+              "c1f_rescue_lost_by_candidate": {
+                "n": 8,
+                "t_net": -40.66,
+                "c1f_net": -0.45,
+                "delta_candidate_minus_c1f": -40.21
+              },
+              "c1f_cut_winner_still_cut_by_candidate": {
+                "n": 2,
+                "t_net": -0.18,
+                "c1f_net": -0.18,
+                "delta_candidate_minus_c1f": 0
+              },
+              "c1f_cut_winner_kept_by_candidate": {
+                "n": 4,
+                "t_net": 20.88,
+                "c1f_net": -0.5,
+                "delta_candidate_minus_c1f": 21.38
+              },
+              "c1f_rescue_changed_to_a_third_exit": {
+                "n": 1,
+                "t_net": 0.02,
+                "c1f_net": -0.01,
+                "delta_candidate_minus_c1f": 0.03
+              }
+            },
+            "note": "all three runs hold the same trades and each trade has identical entry key, entry price, direction, volume and initial SL/TP, so every figure is an exact same-lot difference"
+          },
+          "managed": {
+            "requests": 21,
+            "confirmed": 21,
+            "managed_positions": 21,
+            "stop_exits_after_management": {
+              "count": 7,
+              "max_adverse_slippage": 0.3600000000005821,
+              "net_positive": 3,
+              "net_zero": 0,
+              "net_negative": 4
+            },
+            "request_timing": {
+              "recorded_requests_checked": 21,
+              "positions_with_requests": 21,
+              "first_requests_below_trigger": 0,
+              "requests_below_trigger_not_armed": 0,
+              "min_favorable_ticks_first_request": 350,
+              "scope": "RECORDED requests only: each is recomputed with the registered trigger and must not precede it. A reached trigger that never produced a request (missed tick) and complete tick timing are NOT verified."
+            }
+          },
+          "fixed_lot": {
+            "fills": 44,
+            "every_fill_0_01": true,
+            "cap_reduced": 0,
+            "cap_rejects": 0,
+            "cap_reject_reasons": []
+          }
+        },
+        "AUGUST_DELAY250": {
+          "verification": {
+            "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration17_20261010\\Scalping\\VERIFICATION_T35_AUGUST_DELAY250.json",
+            "sha256": "af7bf1fdf69ade40aec613024cfe1240a596f0c44969b8dd0deed29e00b6374d",
+            "status": "PASS_I17_SCALP_NATIVE_ACCOUNTING_DAILY6_FIXED_LOT_AND_DELAYED_TRIGGER_CHECKS",
+            "errors": 0
+          },
+          "run_id": "SCALPI1720261010_T35_AUGUST_DELAY250_32c68b66",
+          "candidate": {
+            "net_usd": 48.620000000000005,
+            "equity_dd_usd": 15.85,
+            "max_relative_equity_dd_pct": 2.96,
+            "net_pf_complete_positions": 1.665389352675517,
+            "native_pf_report": "1.66",
+            "trades": 42,
+            "wins": 25,
+            "losses": 16,
+            "cost_usd": 3.3600000000000017,
+            "round_trip_lots": 0.4200000000000002
+          },
+          "p0_i16": {
+            "net_usd": 59.02,
+            "equity_dd_usd": 15.85,
+            "max_relative_equity_dd_pct": 2.9,
+            "net_pf_complete_positions": 1.7587093456742515,
+            "native_pf_report": "1.75",
+            "trades": 42,
+            "wins": 27,
+            "losses": 15,
+            "cost_usd": 3.3600000000000017,
+            "round_trip_lots": 0.4200000000000002
+          },
+          "c1f_i16": {
+            "net_usd": 48.75,
+            "equity_dd_usd": 15.85,
+            "max_relative_equity_dd_pct": 2.96,
+            "net_pf_complete_positions": 1.842842323651452,
+            "native_pf_report": "1.83",
+            "trades": 42,
+            "wins": 25,
+            "losses": 16,
+            "cost_usd": 3.3600000000000017,
+            "round_trip_lots": 0.4200000000000002
+          },
+          "candidate_minus_p0": {
+            "net_usd": -10.4,
+            "equity_dd_usd": 0,
+            "max_relative_equity_dd_pct": 0.06,
+            "complete_position_net_pf": -0.0933,
+            "cost_usd": 0,
+            "complete_positions": 0,
+            "round_trip_lots": 0
+          },
+          "candidate_minus_c1f": {
+            "net_usd": -0.13,
+            "equity_dd_usd": 0,
+            "max_relative_equity_dd_pct": 0,
+            "complete_position_net_pf": -0.1775,
+            "cost_usd": 0,
+            "complete_positions": 0,
+            "round_trip_lots": 0
+          },
+          "attribution": {
+            "coverage": {
+              "candidate_trades": 42,
+              "p0_trades": 42,
+              "c1f_trades": 42,
+              "matched_in_all_three": 42,
+              "entry_identity_mismatch_trades": 0,
+              "classified_trades": 42,
+              "entries_identical_across_runs": true
+            },
+            "unmatched_path_differences": {
+              "candidate_not_in_p0": [],
+              "candidate_not_in_c1f": [],
+              "p0_not_in_candidate": [],
+              "c1f_not_in_candidate": []
+            },
+            "entry_identity_mismatch_keys": [],
+            "vs_p0": {
+              "tp_to_sl": {
+                "n": 3,
+                "delta": -15.19
+              },
+              "sl_exit_changed": {
+                "n": 1,
+                "delta": 4.79
+              },
+              "exit_identical": 38,
+              "other_changed": {
+                "n": 0,
+                "delta": 0
+              }
+            },
+            "vs_c1f_classes": {
+              "unchanged_in_all_three": {
+                "n": 32,
+                "t_net": 49.84,
+                "c1f_net": 49.84,
+                "delta_candidate_minus_c1f": 0
+              },
+              "c1f_rescue_lost_by_candidate": {
+                "n": 3,
+                "t_net": -15.36,
+                "c1f_net": -0.08,
+                "delta_candidate_minus_c1f": -15.28
+              },
+              "c1f_cut_winner_kept_by_candidate": {
+                "n": 3,
+                "t_net": 15.14,
+                "c1f_net": -0.09,
+                "delta_candidate_minus_c1f": 15.23
+              },
+              "c1f_cut_winner_still_cut_by_candidate": {
+                "n": 3,
+                "t_net": -0.05,
+                "c1f_net": 0.03,
+                "delta_candidate_minus_c1f": -0.08
+              },
+              "c1f_rescue_kept_by_candidate": {
+                "n": 1,
+                "t_net": -0.95,
+                "c1f_net": -0.95,
+                "delta_candidate_minus_c1f": 0
+              }
+            },
+            "note": "all three runs hold the same trades and each trade has identical entry key, entry price, direction, volume and initial SL/TP, so every figure is an exact same-lot difference"
+          },
+          "managed": {
+            "requests": 28,
+            "confirmed": 28,
+            "managed_positions": 28,
+            "stop_exits_after_management": {
+              "count": 4,
+              "max_adverse_slippage": 0.9700000000002547,
+              "net_positive": 1,
+              "net_zero": 1,
+              "net_negative": 2
+            },
+            "request_timing": {
+              "recorded_requests_checked": 28,
+              "positions_with_requests": 28,
+              "first_requests_below_trigger": 0,
+              "requests_below_trigger_not_armed": 0,
+              "min_favorable_ticks_first_request": 350,
+              "scope": "RECORDED requests only: each is recomputed with the registered trigger and must not precede it. A reached trigger that never produced a request (missed tick) and complete tick timing are NOT verified."
+            }
+          },
+          "fixed_lot": {
+            "fills": 42,
+            "every_fill_0_01": true,
+            "cap_reduced": 10,
+            "cap_rejects": 0,
+            "cap_reject_reasons": []
+          }
+        }
+      },
+      "pending_months": [],
+      "retention": {
+        "rule": "both used development months: net USD not below the same-month C1F, at least one month above it, equity drawdown USD and maximum relative drawdown % not increased, no new audit anomaly; each candidate judged separately",
+        "per_month": {
+          "JUNE_DELAY250": {
+            "candidate_net_usd": -47.37000000000001,
+            "c1f_net_usd": -28.570000000000007,
+            "net_not_below_c1f": false,
+            "net_improved_over_c1f": false,
+            "candidate_dd_usd": 75.46,
+            "c1f_dd_usd": 61.26,
+            "dd_usd_not_increased": false,
+            "candidate_relative_dd_pct": 14.51,
+            "c1f_relative_dd_pct": 11.67,
+            "relative_dd_not_increased": false,
+            "verification_clean": true
+          },
+          "AUGUST_DELAY250": {
+            "candidate_net_usd": 48.620000000000005,
+            "c1f_net_usd": 48.75,
+            "net_not_below_c1f": false,
+            "net_improved_over_c1f": false,
+            "candidate_dd_usd": 15.85,
+            "c1f_dd_usd": 15.85,
+            "dd_usd_not_increased": true,
+            "candidate_relative_dd_pct": 2.96,
+            "c1f_relative_dd_pct": 2.96,
+            "relative_dd_not_increased": true,
+            "verification_clean": true
+          }
+        },
+        "conditions": {
+          "net_not_below_c1f_both_months": false,
+          "at_least_one_month_improved": false,
+          "dd_usd_not_increased_both_months": false,
+          "relative_dd_not_increased_both_months": false,
+          "no_new_audit_anomaly_both_months": true
+        },
+        "outcome": "RETAIN_C1F_AND_P0",
+        "june_net_usd": -47.37000000000001,
+        "june_still_negative": true,
+        "champion": false,
+        "validation_passed": false,
+        "oos": false,
+        "deployment": false,
+        "score": {
+          "status": "SCORE_TARGETS_UNSET",
+          "total": null
+        },
+        "note": "development retention only; the months were already used; June is reported whatever the outcome; the two months are independent accounts and are never added"
+      }
+    },
+    "T40": {
+      "trigger_price": 4,
+      "months": {
+        "JUNE_DELAY250": {
+          "verification": {
+            "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration17_20261010\\Scalping\\VERIFICATION_T40_JUNE_DELAY250.json",
+            "sha256": "0eff7b5e85abeeba42fe7f1259f9d3a1b27d0a915ee9dfbcaac0e20134c3a704",
+            "status": "PASS_I17_SCALP_NATIVE_ACCOUNTING_DAILY6_FIXED_LOT_AND_DELAYED_TRIGGER_CHECKS",
+            "errors": 0
+          },
+          "run_id": "SCALPI1720261010_T40_JUNE_DELAY250_f1397728",
+          "candidate": {
+            "net_usd": -59.00000000000001,
+            "equity_dd_usd": 81.55,
+            "max_relative_equity_dd_pct": 15.85,
+            "net_pf_complete_positions": 0.5610772206516886,
+            "native_pf_report": "0.56",
+            "trades": 44,
+            "wins": 15,
+            "losses": 29,
+            "cost_usd": 5.590000000000002,
+            "round_trip_lots": 0.4400000000000002
+          },
+          "p0_i16": {
+            "net_usd": -63.79,
+            "equity_dd_usd": 81.35,
+            "max_relative_equity_dd_pct": 15.96,
+            "net_pf_complete_positions": 0.5574441515193562,
+            "native_pf_report": "0.56",
+            "trades": 44,
+            "wins": 16,
+            "losses": 28,
+            "cost_usd": 5.590000000000002,
+            "round_trip_lots": 0.4400000000000002
+          },
+          "c1f_i16": {
+            "net_usd": -28.570000000000007,
+            "equity_dd_usd": 61.26,
+            "max_relative_equity_dd_pct": 11.67,
+            "net_pf_complete_positions": 0.634748146254155,
+            "native_pf_report": "0.64",
+            "trades": 44,
+            "wins": 14,
+            "losses": 29,
+            "cost_usd": 4.900000000000002,
+            "round_trip_lots": 0.4400000000000002
+          },
+          "candidate_minus_p0": {
+            "net_usd": 4.79,
+            "equity_dd_usd": 0.2,
+            "max_relative_equity_dd_pct": -0.11,
+            "complete_position_net_pf": 0.0036,
+            "cost_usd": 0,
+            "complete_positions": 0,
+            "round_trip_lots": 0
+          },
+          "candidate_minus_c1f": {
+            "net_usd": -30.43,
+            "equity_dd_usd": 20.29,
+            "max_relative_equity_dd_pct": 4.18,
+            "complete_position_net_pf": -0.0737,
+            "cost_usd": 0.69,
+            "complete_positions": 0,
+            "round_trip_lots": 0
+          },
+          "attribution": {
+            "coverage": {
+              "candidate_trades": 44,
+              "p0_trades": 44,
+              "c1f_trades": 44,
+              "matched_in_all_three": 44,
+              "entry_identity_mismatch_trades": 0,
+              "classified_trades": 44,
+              "entries_identical_across_runs": true
+            },
+            "unmatched_path_differences": {
+              "candidate_not_in_p0": [],
+              "candidate_not_in_c1f": [],
+              "p0_not_in_candidate": [],
+              "c1f_not_in_candidate": []
+            },
+            "entry_identity_mismatch_keys": [],
+            "vs_p0": {
+              "tp_to_sl": {
+                "n": 1,
+                "delta": -5.08
+              },
+              "sl_exit_changed": {
+                "n": 2,
+                "delta": 9.87
+              },
+              "exit_identical": 41,
+              "other_changed": {
+                "n": 0,
+                "delta": 0
+              }
+            },
+            "vs_c1f_classes": {
+              "c1f_rescue_changed_to_a_third_exit": {
+                "n": 1,
+                "t_net": -0.02,
+                "c1f_net": 0.02,
+                "delta_candidate_minus_c1f": -0.04
+              },
+              "c1f_rescue_lost_by_candidate": {
+                "n": 11,
+                "t_net": -57.22,
+                "c1f_net": -0.47,
+                "delta_candidate_minus_c1f": -56.75
+              },
+              "unchanged_in_all_three": {
+                "n": 25,
+                "t_net": -27.1,
+                "c1f_net": -27.1,
+                "delta_candidate_minus_c1f": 0
+              },
+              "c1f_cut_winner_still_cut_by_candidate": {
+                "n": 1,
+                "t_net": -0.15,
+                "c1f_net": -0.15,
+                "delta_candidate_minus_c1f": 0
+              },
+              "c1f_cut_winner_kept_by_candidate": {
+                "n": 5,
+                "t_net": 25.83,
+                "c1f_net": -0.53,
+                "delta_candidate_minus_c1f": 26.36
+              },
+              "c1f_rescue_kept_by_candidate": {
+                "n": 1,
+                "t_net": -0.34,
+                "c1f_net": -0.34,
+                "delta_candidate_minus_c1f": 0
+              }
+            },
+            "note": "all three runs hold the same trades and each trade has identical entry key, entry price, direction, volume and initial SL/TP, so every figure is an exact same-lot difference"
+          },
+          "managed": {
+            "requests": 18,
+            "confirmed": 18,
+            "managed_positions": 18,
+            "stop_exits_after_management": {
+              "count": 3,
+              "max_adverse_slippage": 0.3600000000005821,
+              "net_positive": 0,
+              "net_zero": 0,
+              "net_negative": 3
+            },
+            "request_timing": {
+              "recorded_requests_checked": 18,
+              "positions_with_requests": 18,
+              "first_requests_below_trigger": 0,
+              "requests_below_trigger_not_armed": 0,
+              "min_favorable_ticks_first_request": 400,
+              "scope": "RECORDED requests only: each is recomputed with the registered trigger and must not precede it. A reached trigger that never produced a request (missed tick) and complete tick timing are NOT verified."
+            }
+          },
+          "fixed_lot": {
+            "fills": 44,
+            "every_fill_0_01": true,
+            "cap_reduced": 0,
+            "cap_rejects": 0,
+            "cap_reject_reasons": []
+          }
+        },
+        "AUGUST_DELAY250": {
+          "verification": {
+            "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration17_20261010\\Scalping\\VERIFICATION_T40_AUGUST_DELAY250.json",
+            "sha256": "7c6a437149be983aebdbcae5306dfc8ca350c4388f78fd995bd594ff92f2b9eb",
+            "status": "PASS_I17_SCALP_NATIVE_ACCOUNTING_DAILY6_FIXED_LOT_AND_DELAYED_TRIGGER_CHECKS",
+            "errors": 0
+          },
+          "run_id": "SCALPI1720261010_T40_AUGUST_DELAY250_96c91c9f",
+          "candidate": {
+            "net_usd": 48.84,
+            "equity_dd_usd": 15.85,
+            "max_relative_equity_dd_pct": 2.93,
+            "net_pf_complete_positions": 1.6272797328538402,
+            "native_pf_report": "1.62",
+            "trades": 42,
+            "wins": 26,
+            "losses": 16,
+            "cost_usd": 3.3600000000000017,
+            "round_trip_lots": 0.4200000000000002
+          },
+          "p0_i16": {
+            "net_usd": 59.02,
+            "equity_dd_usd": 15.85,
+            "max_relative_equity_dd_pct": 2.9,
+            "net_pf_complete_positions": 1.7587093456742515,
+            "native_pf_report": "1.75",
+            "trades": 42,
+            "wins": 27,
+            "losses": 15,
+            "cost_usd": 3.3600000000000017,
+            "round_trip_lots": 0.4200000000000002
+          },
+          "c1f_i16": {
+            "net_usd": 48.75,
+            "equity_dd_usd": 15.85,
+            "max_relative_equity_dd_pct": 2.96,
+            "net_pf_complete_positions": 1.842842323651452,
+            "native_pf_report": "1.83",
+            "trades": 42,
+            "wins": 25,
+            "losses": 16,
+            "cost_usd": 3.3600000000000017,
+            "round_trip_lots": 0.4200000000000002
+          },
+          "candidate_minus_p0": {
+            "net_usd": -10.18,
+            "equity_dd_usd": 0,
+            "max_relative_equity_dd_pct": 0.03,
+            "complete_position_net_pf": -0.1314,
+            "cost_usd": 0,
+            "complete_positions": 0,
+            "round_trip_lots": 0
+          },
+          "candidate_minus_c1f": {
+            "net_usd": 0.09,
+            "equity_dd_usd": 0,
+            "max_relative_equity_dd_pct": -0.03,
+            "complete_position_net_pf": -0.2156,
+            "cost_usd": 0,
+            "complete_positions": 0,
+            "round_trip_lots": 0
+          },
+          "attribution": {
+            "coverage": {
+              "candidate_trades": 42,
+              "p0_trades": 42,
+              "c1f_trades": 42,
+              "matched_in_all_three": 42,
+              "entry_identity_mismatch_trades": 0,
+              "classified_trades": 42,
+              "entries_identical_across_runs": true
+            },
+            "unmatched_path_differences": {
+              "candidate_not_in_p0": [],
+              "candidate_not_in_c1f": [],
+              "p0_not_in_candidate": [],
+              "c1f_not_in_candidate": []
+            },
+            "entry_identity_mismatch_keys": [],
+            "vs_p0": {
+              "tp_to_sl": {
+                "n": 2,
+                "delta": -10.18
+              },
+              "sl_exit_changed": {
+                "n": 0,
+                "delta": 0
+              },
+              "exit_identical": 40,
+              "other_changed": {
+                "n": 0,
+                "delta": 0
+              }
+            },
+            "vs_c1f_classes": {
+              "unchanged_in_all_three": {
+                "n": 32,
+                "t_net": 49.84,
+                "c1f_net": 49.84,
+                "delta_candidate_minus_c1f": 0
+              },
+              "c1f_rescue_lost_by_candidate": {
+                "n": 4,
+                "t_net": -21.1,
+                "c1f_net": -1.03,
+                "delta_candidate_minus_c1f": -20.07
+              },
+              "c1f_cut_winner_kept_by_candidate": {
+                "n": 4,
+                "t_net": 20.15,
+                "c1f_net": -0.09,
+                "delta_candidate_minus_c1f": 20.24
+              },
+              "c1f_cut_winner_still_cut_by_candidate": {
+                "n": 2,
+                "t_net": -0.05,
+                "c1f_net": 0.03,
+                "delta_candidate_minus_c1f": -0.08
+              }
+            },
+            "note": "all three runs hold the same trades and each trade has identical entry key, entry price, direction, volume and initial SL/TP, so every figure is an exact same-lot difference"
+          },
+          "managed": {
+            "requests": 26,
+            "confirmed": 25,
+            "managed_positions": 26,
+            "stop_exits_after_management": {
+              "count": 2,
+              "max_adverse_slippage": 0.09000000000014552,
+              "net_positive": 1,
+              "net_zero": 0,
+              "net_negative": 1
+            },
+            "request_timing": {
+              "recorded_requests_checked": 26,
+              "positions_with_requests": 26,
+              "first_requests_below_trigger": 0,
+              "requests_below_trigger_not_armed": 0,
+              "min_favorable_ticks_first_request": 400,
+              "scope": "RECORDED requests only: each is recomputed with the registered trigger and must not precede it. A reached trigger that never produced a request (missed tick) and complete tick timing are NOT verified."
+            }
+          },
+          "fixed_lot": {
+            "fills": 42,
+            "every_fill_0_01": true,
+            "cap_reduced": 14,
+            "cap_rejects": 0,
+            "cap_reject_reasons": []
+          }
+        }
+      },
+      "pending_months": [],
+      "retention": {
+        "rule": "both used development months: net USD not below the same-month C1F, at least one month above it, equity drawdown USD and maximum relative drawdown % not increased, no new audit anomaly; each candidate judged separately",
+        "per_month": {
+          "JUNE_DELAY250": {
+            "candidate_net_usd": -59.00000000000001,
+            "c1f_net_usd": -28.570000000000007,
+            "net_not_below_c1f": false,
+            "net_improved_over_c1f": false,
+            "candidate_dd_usd": 81.55,
+            "c1f_dd_usd": 61.26,
+            "dd_usd_not_increased": false,
+            "candidate_relative_dd_pct": 15.85,
+            "c1f_relative_dd_pct": 11.67,
+            "relative_dd_not_increased": false,
+            "verification_clean": true
+          },
+          "AUGUST_DELAY250": {
+            "candidate_net_usd": 48.84,
+            "c1f_net_usd": 48.75,
+            "net_not_below_c1f": true,
+            "net_improved_over_c1f": true,
+            "candidate_dd_usd": 15.85,
+            "c1f_dd_usd": 15.85,
+            "dd_usd_not_increased": true,
+            "candidate_relative_dd_pct": 2.93,
+            "c1f_relative_dd_pct": 2.96,
+            "relative_dd_not_increased": true,
+            "verification_clean": true
+          }
+        },
+        "conditions": {
+          "net_not_below_c1f_both_months": false,
+          "at_least_one_month_improved": true,
+          "dd_usd_not_increased_both_months": false,
+          "relative_dd_not_increased_both_months": false,
+          "no_new_audit_anomaly_both_months": true
+        },
+        "outcome": "RETAIN_C1F_AND_P0",
+        "june_net_usd": -59.00000000000001,
+        "june_still_negative": true,
+        "champion": false,
+        "validation_passed": false,
+        "oos": false,
+        "deployment": false,
+        "score": {
+          "status": "SCORE_TARGETS_UNSET",
+          "total": null
+        },
+        "note": "development retention only; the months were already used; June is reported whatever the outcome; the two months are independent accounts and are never added"
+      }
+    }
+  }
+}

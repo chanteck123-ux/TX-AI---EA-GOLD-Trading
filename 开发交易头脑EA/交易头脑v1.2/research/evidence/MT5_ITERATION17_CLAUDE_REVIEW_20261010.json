@@ -1,0 +1,1388 @@
+{
+  "schema": "I17_CLAUDE_RESULT_REVIEW_V1",
+  "created": "2026-10-10",
+  "reviewer": "Claude Code",
+  "scope": "one bounded read-only review of the four real I17 run folders and the registration-bound reused I16 P0/C1F evidence; no compile, no MT5, no Git, no bound file modified",
+  "method": "own parsers and own three-way per-trade classification (Claude/analysis/review_i17_results.mjs, output review_i17_results_out.json); compared with the Codex VERIFICATION files, I17_EVALUATION.json and the user-quoted numbers",
+  "verdict": {
+    "nature": "development study of a delayed cost break-even trigger; research retention only",
+    "champion": false,
+    "validation_passed": false,
+    "oos": false,
+    "live_or_demo": false,
+    "score": "N/A (SCORE_TARGETS_UNSET)",
+    "T35": "RETAIN_C1F_AND_P0 (own judgement agrees with Codex)",
+    "T40": "RETAIN_C1F_AND_P0 (own judgement agrees with Codex)",
+    "june": "still loses in both candidates (T35 -47.37, T40 -59.00; C1F -28.57; P0 -63.79)",
+    "august": "T35 +48.62 and T40 +48.84 equal C1F +48.75 within 0.13 USD and sit about 10 USD below P0 +59.02",
+    "hypothesis_fewer_cut_winners_but_lost_rescues": "CONFIRMED: kept winners are outweighed by lost rescues in June (T35 +21.38 vs -40.21; T40 +26.36 vs -56.75) and offset almost one for one in August (T35 +15.23 vs -15.28; T40 +20.24 vs -20.07)",
+    "trigger_scan": "June net worsens monotonically 2.50 -> 3.50 -> 4.00 (-28.57, -47.37, -59.00, towards P0 -63.79) and August is flat (48.75, 48.62, 48.84): these three points show no overall improvement, so further scanning along this line is not supported; this does not infer that no better setting exists anywhere else"
+  },
+  "user_numbers_reproduced": {
+    "net": {
+      "T35/JUNE_DELAY250": {
+        "claimed": -47.37,
+        "recomputed": -47.37,
+        "match": true
+      },
+      "T35/AUGUST_DELAY250": {
+        "claimed": 48.62,
+        "recomputed": 48.62,
+        "match": true
+      },
+      "T40/JUNE_DELAY250": {
+        "claimed": -59,
+        "recomputed": -59,
+        "match": true
+      },
+      "T40/AUGUST_DELAY250": {
+        "claimed": 48.84,
+        "recomputed": 48.84,
+        "match": true
+      }
+    },
+    "attribution_kept_and_lost": {
+      "T35/JUNE_DELAY250": {
+        "kept": {
+          "claimed": [
+            4,
+            21.38
+          ],
+          "recomputed": [
+            4,
+            21.38
+          ],
+          "match": true
+        },
+        "lost": {
+          "claimed": [
+            8,
+            -40.21
+          ],
+          "recomputed": [
+            8,
+            -40.21
+          ],
+          "match": true
+        }
+      },
+      "T40/JUNE_DELAY250": {
+        "kept": {
+          "claimed": [
+            5,
+            26.36
+          ],
+          "recomputed": [
+            5,
+            26.36
+          ],
+          "match": true
+        },
+        "lost": {
+          "claimed": [
+            11,
+            -56.75
+          ],
+          "recomputed": [
+            11,
+            -56.75
+          ],
+          "match": true
+        }
+      },
+      "T35/AUGUST_DELAY250": {
+        "kept": {
+          "claimed": [
+            3,
+            15.23
+          ],
+          "recomputed": [
+            3,
+            15.23
+          ],
+          "match": true
+        },
+        "lost": {
+          "claimed": [
+            3,
+            -15.28
+          ],
+          "recomputed": [
+            3,
+            -15.28
+          ],
+          "match": true
+        }
+      },
+      "T40/AUGUST_DELAY250": {
+        "kept": {
+          "claimed": [
+            4,
+            20.24
+          ],
+          "recomputed": [
+            4,
+            20.24
+          ],
+          "match": true
+        },
+        "lost": {
+          "claimed": [
+            4,
+            -20.07
+          ],
+          "recomputed": [
+            4,
+            -20.07
+          ],
+          "match": true
+        }
+      }
+    },
+    "result": "all quoted values match the independent recomputation"
+  },
+  "recomputed": {
+    "JUNE_DELAY250": {
+      "I16_P0": {
+        "net_usd": -63.79,
+        "equity_dd_usd": 81.35,
+        "max_relative_equity_dd_pct": 15.96,
+        "net_pf_complete_positions": 0.5574,
+        "native_pf_report": "0.56",
+        "trades": 44,
+        "wins": 16,
+        "losses": 28,
+        "zero_net": 0,
+        "commission_usd": 3.52,
+        "swap_usd": 2.07,
+        "cost_usd": 5.59,
+        "round_trip_lots": 0.44,
+        "cost_usd_per_round_trip_lot": 12.7045,
+        "expectancy_per_trade": -1.4498,
+        "avg_win": 5.0219,
+        "avg_loss": -5.1479
+      },
+      "I16_C1F": {
+        "net_usd": -28.57,
+        "equity_dd_usd": 61.26,
+        "max_relative_equity_dd_pct": 11.67,
+        "net_pf_complete_positions": 0.6347,
+        "native_pf_report": "0.64",
+        "trades": 44,
+        "wins": 14,
+        "losses": 29,
+        "zero_net": 1,
+        "commission_usd": 3.52,
+        "swap_usd": 1.38,
+        "cost_usd": 4.9,
+        "round_trip_lots": 0.44,
+        "cost_usd_per_round_trip_lot": 11.1364,
+        "expectancy_per_trade": -0.6493,
+        "avg_win": 3.5464,
+        "avg_loss": -2.6972
+      },
+      "T35": {
+        "net_usd": -47.37,
+        "equity_dd_usd": 75.46,
+        "max_relative_equity_dd_pct": 14.51,
+        "net_pf_complete_positions": 0.5982,
+        "native_pf_report": "0.60",
+        "trades": 44,
+        "wins": 17,
+        "losses": 27,
+        "zero_net": 0,
+        "commission_usd": 3.52,
+        "swap_usd": 1.38,
+        "cost_usd": 4.9,
+        "round_trip_lots": 0.44,
+        "cost_usd_per_round_trip_lot": 11.1364,
+        "expectancy_per_trade": -1.0766,
+        "avg_win": 4.1488,
+        "avg_loss": -4.3667
+      },
+      "T40": {
+        "net_usd": -59,
+        "equity_dd_usd": 81.55,
+        "max_relative_equity_dd_pct": 15.85,
+        "net_pf_complete_positions": 0.5611,
+        "native_pf_report": "0.56",
+        "trades": 44,
+        "wins": 15,
+        "losses": 29,
+        "zero_net": 0,
+        "commission_usd": 3.52,
+        "swap_usd": 2.07,
+        "cost_usd": 5.59,
+        "round_trip_lots": 0.44,
+        "cost_usd_per_round_trip_lot": 12.7045,
+        "expectancy_per_trade": -1.3409,
+        "avg_win": 5.028,
+        "avg_loss": -4.6352
+      }
+    },
+    "AUGUST_DELAY250": {
+      "I16_P0": {
+        "net_usd": 59.02,
+        "equity_dd_usd": 15.85,
+        "max_relative_equity_dd_pct": 2.9,
+        "net_pf_complete_positions": 1.7587,
+        "native_pf_report": "1.75",
+        "trades": 42,
+        "wins": 27,
+        "losses": 15,
+        "zero_net": 0,
+        "commission_usd": 3.36,
+        "swap_usd": 0,
+        "cost_usd": 3.36,
+        "round_trip_lots": 0.42,
+        "cost_usd_per_round_trip_lot": 8,
+        "expectancy_per_trade": 1.4052,
+        "avg_win": 5.067,
+        "avg_loss": -5.186
+      },
+      "I16_C1F": {
+        "net_usd": 48.75,
+        "equity_dd_usd": 15.85,
+        "max_relative_equity_dd_pct": 2.96,
+        "net_pf_complete_positions": 1.8428,
+        "native_pf_report": "1.83",
+        "trades": 42,
+        "wins": 25,
+        "losses": 16,
+        "zero_net": 1,
+        "commission_usd": 3.36,
+        "swap_usd": 0,
+        "cost_usd": 3.36,
+        "round_trip_lots": 0.42,
+        "cost_usd_per_round_trip_lot": 8,
+        "expectancy_per_trade": 1.1607,
+        "avg_win": 4.2636,
+        "avg_loss": -3.615
+      },
+      "T35": {
+        "net_usd": 48.62,
+        "equity_dd_usd": 15.85,
+        "max_relative_equity_dd_pct": 2.96,
+        "net_pf_complete_positions": 1.6654,
+        "native_pf_report": "1.66",
+        "trades": 42,
+        "wins": 25,
+        "losses": 16,
+        "zero_net": 1,
+        "commission_usd": 3.36,
+        "swap_usd": 0,
+        "cost_usd": 3.36,
+        "round_trip_lots": 0.42,
+        "cost_usd_per_round_trip_lot": 8,
+        "expectancy_per_trade": 1.1576,
+        "avg_win": 4.8676,
+        "avg_loss": -4.5669
+      },
+      "T40": {
+        "net_usd": 48.84,
+        "equity_dd_usd": 15.85,
+        "max_relative_equity_dd_pct": 2.93,
+        "net_pf_complete_positions": 1.6273,
+        "native_pf_report": "1.62",
+        "trades": 42,
+        "wins": 26,
+        "losses": 16,
+        "zero_net": 0,
+        "commission_usd": 3.36,
+        "swap_usd": 0,
+        "cost_usd": 3.36,
+        "round_trip_lots": 0.42,
+        "cost_usd_per_round_trip_lot": 8,
+        "expectancy_per_trade": 1.1629,
+        "avg_win": 4.8731,
+        "avg_loss": -4.8662
+      }
+    }
+  },
+  "differences_same_lot_exact": {
+    "JUNE_DELAY250": {
+      "T35": {
+        "t_minus_p0": {
+          "net": 16.42,
+          "dd_usd": -5.89,
+          "dd_pct": -1.45,
+          "net_pf": 0.0408,
+          "cost": -0.69,
+          "trades": 0
+        },
+        "t_minus_c1f": {
+          "net": -18.8,
+          "dd_usd": 14.2,
+          "dd_pct": 2.84,
+          "net_pf": -0.0365,
+          "cost": 0,
+          "trades": 0
+        }
+      },
+      "T40": {
+        "t_minus_p0": {
+          "net": 4.79,
+          "dd_usd": 0.2,
+          "dd_pct": -0.11,
+          "net_pf": 0.0037,
+          "cost": 0,
+          "trades": 0
+        },
+        "t_minus_c1f": {
+          "net": -30.43,
+          "dd_usd": 20.29,
+          "dd_pct": 4.18,
+          "net_pf": -0.0736,
+          "cost": 0.69,
+          "trades": 0
+        }
+      }
+    },
+    "AUGUST_DELAY250": {
+      "T35": {
+        "t_minus_p0": {
+          "net": -10.4,
+          "dd_usd": 0,
+          "dd_pct": 0.06,
+          "net_pf": -0.0933,
+          "cost": 0,
+          "trades": 0
+        },
+        "t_minus_c1f": {
+          "net": -0.13,
+          "dd_usd": 0,
+          "dd_pct": 0,
+          "net_pf": -0.1774,
+          "cost": 0,
+          "trades": 0
+        }
+      },
+      "T40": {
+        "t_minus_p0": {
+          "net": -10.18,
+          "dd_usd": 0,
+          "dd_pct": 0.03,
+          "net_pf": -0.1314,
+          "cost": 0,
+          "trades": 0
+        },
+        "t_minus_c1f": {
+          "net": 0.09,
+          "dd_usd": 0,
+          "dd_pct": -0.03,
+          "net_pf": -0.2155,
+          "cost": 0,
+          "trades": 0
+        }
+      }
+    }
+  },
+  "verifier_and_evaluation_vs_own": {
+    "JUNE_DELAY250": {
+      "T35": {
+        "verifier": {
+          "net": 0,
+          "dd": 0,
+          "rel": 0,
+          "pf": 0,
+          "cost": 0,
+          "trades": 0
+        },
+        "evaluation": {
+          "net": 0,
+          "dd": 0,
+          "rel": 0
+        }
+      },
+      "T40": {
+        "verifier": {
+          "net": 0,
+          "dd": 0,
+          "rel": 0,
+          "pf": 0,
+          "cost": 0,
+          "trades": 0
+        },
+        "evaluation": {
+          "net": 0,
+          "dd": 0,
+          "rel": 0
+        }
+      }
+    },
+    "AUGUST_DELAY250": {
+      "T35": {
+        "verifier": {
+          "net": 0,
+          "dd": 0,
+          "rel": 0,
+          "pf": 0,
+          "cost": 0,
+          "trades": 0
+        },
+        "evaluation": {
+          "net": 0,
+          "dd": 0,
+          "rel": 0
+        }
+      },
+      "T40": {
+        "verifier": {
+          "net": 0,
+          "dd": 0,
+          "rel": 0,
+          "pf": 0,
+          "cost": 0,
+          "trades": 0
+        },
+        "evaluation": {
+          "net": 0,
+          "dd": 0,
+          "rel": 0
+        }
+      }
+    }
+  },
+  "per_trade_classification_vs_c1f_and_p0": {
+    "JUNE_DELAY250": {
+      "T35": {
+        "classes": {
+          "rescue_by_C1F_kept_by_T": {
+            "n": 4,
+            "t_net_usd": -0.33,
+            "c1f_net_usd": -0.33,
+            "p0_net_usd": -21.02,
+            "delta_t_minus_c1f_usd": 0
+          },
+          "tp_unchanged_in_all": {
+            "n": 10,
+            "t_net_usd": 49.59,
+            "c1f_net_usd": 49.59,
+            "p0_net_usd": 49.59,
+            "delta_t_minus_c1f_usd": 0
+          },
+          "rescue_by_C1F_lost_by_T": {
+            "n": 8,
+            "t_net_usd": -40.66,
+            "c1f_net_usd": -0.45,
+            "p0_net_usd": -40.66,
+            "delta_t_minus_c1f_usd": -40.21
+          },
+          "sl_unchanged_in_all": {
+            "n": 15,
+            "t_net_usd": -76.69,
+            "c1f_net_usd": -76.69,
+            "p0_net_usd": -76.69,
+            "delta_t_minus_c1f_usd": 0
+          },
+          "winner_cut_by_C1F_still_cut_by_T": {
+            "n": 2,
+            "t_net_usd": -0.18,
+            "c1f_net_usd": -0.18,
+            "p0_net_usd": 9.88,
+            "delta_t_minus_c1f_usd": 0
+          },
+          "winner_cut_by_C1F_kept_by_T": {
+            "n": 4,
+            "t_net_usd": 20.88,
+            "c1f_net_usd": -0.5,
+            "p0_net_usd": 20.88,
+            "delta_t_minus_c1f_usd": 21.38
+          },
+          "rescue_by_C1F_third_exit_in_T": {
+            "n": 1,
+            "t_net_usd": 0.02,
+            "c1f_net_usd": -0.01,
+            "p0_net_usd": -5.77,
+            "delta_t_minus_c1f_usd": 0.03
+          }
+        },
+        "trades_covered": 44,
+        "trades_total": 44,
+        "unmatched_in_candidate": 0,
+        "total_delta_t_minus_c1f_usd": -18.8,
+        "reconciles_to_account_difference_vs_c1f": true
+      },
+      "T40": {
+        "classes": {
+          "rescue_by_C1F_third_exit_in_T": {
+            "n": 1,
+            "t_net_usd": -0.02,
+            "c1f_net_usd": 0.02,
+            "p0_net_usd": -5.01,
+            "delta_t_minus_c1f_usd": -0.04
+          },
+          "rescue_by_C1F_lost_by_T": {
+            "n": 11,
+            "t_net_usd": -57.22,
+            "c1f_net_usd": -0.47,
+            "p0_net_usd": -57.22,
+            "delta_t_minus_c1f_usd": -56.75
+          },
+          "tp_unchanged_in_all": {
+            "n": 10,
+            "t_net_usd": 49.59,
+            "c1f_net_usd": 49.59,
+            "p0_net_usd": 49.59,
+            "delta_t_minus_c1f_usd": 0
+          },
+          "sl_unchanged_in_all": {
+            "n": 15,
+            "t_net_usd": -76.69,
+            "c1f_net_usd": -76.69,
+            "p0_net_usd": -76.69,
+            "delta_t_minus_c1f_usd": 0
+          },
+          "winner_cut_by_C1F_still_cut_by_T": {
+            "n": 1,
+            "t_net_usd": -0.15,
+            "c1f_net_usd": -0.15,
+            "p0_net_usd": 4.93,
+            "delta_t_minus_c1f_usd": 0
+          },
+          "winner_cut_by_C1F_kept_by_T": {
+            "n": 5,
+            "t_net_usd": 25.83,
+            "c1f_net_usd": -0.53,
+            "p0_net_usd": 25.83,
+            "delta_t_minus_c1f_usd": 26.36
+          },
+          "rescue_by_C1F_kept_by_T": {
+            "n": 1,
+            "t_net_usd": -0.34,
+            "c1f_net_usd": -0.34,
+            "p0_net_usd": -5.22,
+            "delta_t_minus_c1f_usd": 0
+          }
+        },
+        "trades_covered": 44,
+        "trades_total": 44,
+        "unmatched_in_candidate": 0,
+        "total_delta_t_minus_c1f_usd": -30.43,
+        "reconciles_to_account_difference_vs_c1f": true
+      }
+    },
+    "AUGUST_DELAY250": {
+      "T35": {
+        "classes": {
+          "tp_unchanged_in_all": {
+            "n": 21,
+            "t_net_usd": 106.53,
+            "c1f_net_usd": 106.53,
+            "p0_net_usd": 106.53,
+            "delta_t_minus_c1f_usd": 0
+          },
+          "sl_unchanged_in_all": {
+            "n": 11,
+            "t_net_usd": -56.69,
+            "c1f_net_usd": -56.69,
+            "p0_net_usd": -56.69,
+            "delta_t_minus_c1f_usd": 0
+          },
+          "rescue_by_C1F_lost_by_T": {
+            "n": 3,
+            "t_net_usd": -15.36,
+            "c1f_net_usd": -0.08,
+            "p0_net_usd": -15.36,
+            "delta_t_minus_c1f_usd": -15.28
+          },
+          "winner_cut_by_C1F_kept_by_T": {
+            "n": 3,
+            "t_net_usd": 15.14,
+            "c1f_net_usd": -0.09,
+            "p0_net_usd": 15.14,
+            "delta_t_minus_c1f_usd": 15.23
+          },
+          "winner_cut_by_C1F_still_cut_by_T": {
+            "n": 3,
+            "t_net_usd": -0.05,
+            "c1f_net_usd": 0.03,
+            "p0_net_usd": 15.14,
+            "delta_t_minus_c1f_usd": -0.08
+          },
+          "rescue_by_C1F_kept_by_T": {
+            "n": 1,
+            "t_net_usd": -0.95,
+            "c1f_net_usd": -0.95,
+            "p0_net_usd": -5.74,
+            "delta_t_minus_c1f_usd": 0
+          }
+        },
+        "trades_covered": 42,
+        "trades_total": 42,
+        "unmatched_in_candidate": 0,
+        "total_delta_t_minus_c1f_usd": -0.13,
+        "reconciles_to_account_difference_vs_c1f": true
+      },
+      "T40": {
+        "classes": {
+          "tp_unchanged_in_all": {
+            "n": 21,
+            "t_net_usd": 106.53,
+            "c1f_net_usd": 106.53,
+            "p0_net_usd": 106.53,
+            "delta_t_minus_c1f_usd": 0
+          },
+          "sl_unchanged_in_all": {
+            "n": 11,
+            "t_net_usd": -56.69,
+            "c1f_net_usd": -56.69,
+            "p0_net_usd": -56.69,
+            "delta_t_minus_c1f_usd": 0
+          },
+          "rescue_by_C1F_lost_by_T": {
+            "n": 4,
+            "t_net_usd": -21.1,
+            "c1f_net_usd": -1.03,
+            "p0_net_usd": -21.1,
+            "delta_t_minus_c1f_usd": -20.07
+          },
+          "winner_cut_by_C1F_kept_by_T": {
+            "n": 4,
+            "t_net_usd": 20.15,
+            "c1f_net_usd": -0.09,
+            "p0_net_usd": 20.15,
+            "delta_t_minus_c1f_usd": 20.24
+          },
+          "winner_cut_by_C1F_still_cut_by_T": {
+            "n": 2,
+            "t_net_usd": -0.05,
+            "c1f_net_usd": 0.03,
+            "p0_net_usd": 10.13,
+            "delta_t_minus_c1f_usd": -0.08
+          }
+        },
+        "trades_covered": 42,
+        "trades_total": 42,
+        "unmatched_in_candidate": 0,
+        "total_delta_t_minus_c1f_usd": 0.09,
+        "reconciles_to_account_difference_vs_c1f": true
+      }
+    }
+  },
+  "reversal_frequency_note": {
+    "june_c1f_positions_with_recorded_requests_2_50": {
+      "positions": 29,
+      "p0_tp": 16,
+      "p0_sl": 13,
+      "reversal_share": 0.448
+    },
+    "august_c1f_positions_with_recorded_requests_2_50": {
+      "positions": 31,
+      "p0_tp": 27,
+      "p0_sl": 4,
+      "reversal_share": 0.129
+    },
+    "t40_june_note": "11 of the 13 June positions whose P0 exit was a stop have no recorded T40 request; this does not prove price never reached +4.00 (no complete tick replay)",
+    "source": "I16 C1F positions with recorded requests (verification) and the P0 exit of the same trades; reading: the value of a break-even stop depends on how often price reverses after a request, and that share differs about threefold between the two used months"
+  },
+  "retention_check": {
+    "T35": {
+      "per_month": [
+        {
+          "month": "JUNE_DELAY250",
+          "net_not_below": false,
+          "net_higher": false,
+          "dd_usd_not_higher": false,
+          "dd_pct_not_higher": false,
+          "diff": {
+            "net": -18.8,
+            "dd_usd": 14.2,
+            "dd_pct": 2.84,
+            "net_pf": -0.0365,
+            "cost": 0,
+            "trades": 0
+          }
+        },
+        {
+          "month": "AUGUST_DELAY250",
+          "net_not_below": false,
+          "net_higher": false,
+          "dd_usd_not_higher": true,
+          "dd_pct_not_higher": true,
+          "diff": {
+            "net": -0.13,
+            "dd_usd": 0,
+            "dd_pct": 0,
+            "net_pf": -0.1774,
+            "cost": 0,
+            "trades": 0
+          }
+        }
+      ],
+      "own_outcome": "RETAIN_C1F_AND_P0",
+      "codex_outcome": "RETAIN_C1F_AND_P0",
+      "agrees": true
+    },
+    "T40": {
+      "per_month": [
+        {
+          "month": "JUNE_DELAY250",
+          "net_not_below": false,
+          "net_higher": false,
+          "dd_usd_not_higher": false,
+          "dd_pct_not_higher": false,
+          "diff": {
+            "net": -30.43,
+            "dd_usd": 20.29,
+            "dd_pct": 4.18,
+            "net_pf": -0.0736,
+            "cost": 0.69,
+            "trades": 0
+          }
+        },
+        {
+          "month": "AUGUST_DELAY250",
+          "net_not_below": true,
+          "net_higher": true,
+          "dd_usd_not_higher": true,
+          "dd_pct_not_higher": true,
+          "diff": {
+            "net": 0.09,
+            "dd_usd": 0,
+            "dd_pct": -0.03,
+            "net_pf": -0.2155,
+            "cost": 0,
+            "trades": 0
+          }
+        }
+      ],
+      "own_outcome": "RETAIN_C1F_AND_P0",
+      "codex_outcome": "RETAIN_C1F_AND_P0",
+      "agrees": true
+    }
+  },
+  "defaults_and_build_chain": {
+    "JUNE_DELAY250": {
+      "T35": {
+        "defaults_chain": {
+          "report_trigger_input": "3.5",
+          "report_inputs_count": 304,
+          "source_inputs_expected": 304,
+          "report_fixed_lot_cap": "0.01",
+          "report_use_fixed_lot": "false",
+          "report_scalp_risk_percent": "2.0",
+          "exit_init_trigger": "3.50000000",
+          "i17_init_trigger": "3.50000000",
+          "i17_init_only_change": "trigger_price",
+          "i17_kernel_line": true,
+          "i16_kernel_line": true,
+          "i15_kernel_line": true,
+          "i9_kernel_line": true,
+          "every_request_trigger_equals": true
+        },
+        "build": {
+          "status": "COMPILE_PASS",
+          "source_sha256": "030c8cb9a59ecd6c13b073d513d7300bfb89d55020b61fd1e4922fc7954327fd",
+          "source_equals_registration": true,
+          "ex5_sha256": "9703f6a79021ea4363e955b291582c8926eb3bd44d5795fa037f053ac3fbf651",
+          "ex5_file_sha256": "9703f6a79021ea4363e955b291582c8926eb3bd44d5795fa037f053ac3fbf651",
+          "ex5_equals_build_record": true,
+          "run_ex5_equals_build": true,
+          "compile_log_zero_errors_warnings": true
+        },
+        "exit_events": {
+          "requests": 21,
+          "confirmed": 21,
+          "failed_lines": 0,
+          "unconfirmed_lines": 0,
+          "deferred_lines": 0
+        },
+        "capture": {
+          "complete": true,
+          "anomalies": [],
+          "rotation_events": 0
+        },
+        "run_receipt": {
+          "status": "NATIVE_REPORT_CREATED_PENDING_AUDIT",
+          "configs_restored": true,
+          "log_capture_complete": true,
+          "repair": ""
+        }
+      },
+      "T40": {
+        "defaults_chain": {
+          "report_trigger_input": "4.0",
+          "report_inputs_count": 304,
+          "source_inputs_expected": 304,
+          "report_fixed_lot_cap": "0.01",
+          "report_use_fixed_lot": "false",
+          "report_scalp_risk_percent": "2.0",
+          "exit_init_trigger": "4.00000000",
+          "i17_init_trigger": "4.00000000",
+          "i17_init_only_change": "trigger_price",
+          "i17_kernel_line": true,
+          "i16_kernel_line": true,
+          "i15_kernel_line": true,
+          "i9_kernel_line": true,
+          "every_request_trigger_equals": true
+        },
+        "build": {
+          "status": "COMPILE_PASS",
+          "source_sha256": "58d9e8d3811298ddbdbf82f6c78f2080377a9eebb570d35e98220af2211724fc",
+          "source_equals_registration": true,
+          "ex5_sha256": "403469b78cacbe791571df2a48c23b741d39717c7e5a4ea0cdc33d4d4ad58dcc",
+          "ex5_file_sha256": "403469b78cacbe791571df2a48c23b741d39717c7e5a4ea0cdc33d4d4ad58dcc",
+          "ex5_equals_build_record": true,
+          "run_ex5_equals_build": true,
+          "compile_log_zero_errors_warnings": true
+        },
+        "exit_events": {
+          "requests": 18,
+          "confirmed": 18,
+          "failed_lines": 0,
+          "unconfirmed_lines": 0,
+          "deferred_lines": 0
+        },
+        "capture": {
+          "complete": true,
+          "anomalies": [],
+          "rotation_events": 0
+        },
+        "run_receipt": {
+          "status": "NATIVE_REPORT_CREATED_PENDING_AUDIT",
+          "configs_restored": true,
+          "log_capture_complete": true,
+          "repair": ""
+        }
+      }
+    },
+    "AUGUST_DELAY250": {
+      "T35": {
+        "defaults_chain": {
+          "report_trigger_input": "3.5",
+          "report_inputs_count": 304,
+          "source_inputs_expected": 304,
+          "report_fixed_lot_cap": "0.01",
+          "report_use_fixed_lot": "false",
+          "report_scalp_risk_percent": "2.0",
+          "exit_init_trigger": "3.50000000",
+          "i17_init_trigger": "3.50000000",
+          "i17_init_only_change": "trigger_price",
+          "i17_kernel_line": true,
+          "i16_kernel_line": true,
+          "i15_kernel_line": true,
+          "i9_kernel_line": true,
+          "every_request_trigger_equals": true
+        },
+        "build": {
+          "status": "COMPILE_PASS",
+          "source_sha256": "030c8cb9a59ecd6c13b073d513d7300bfb89d55020b61fd1e4922fc7954327fd",
+          "source_equals_registration": true,
+          "ex5_sha256": "9703f6a79021ea4363e955b291582c8926eb3bd44d5795fa037f053ac3fbf651",
+          "ex5_file_sha256": "9703f6a79021ea4363e955b291582c8926eb3bd44d5795fa037f053ac3fbf651",
+          "ex5_equals_build_record": true,
+          "run_ex5_equals_build": true,
+          "compile_log_zero_errors_warnings": true
+        },
+        "exit_events": {
+          "requests": 28,
+          "confirmed": 28,
+          "failed_lines": 0,
+          "unconfirmed_lines": 0,
+          "deferred_lines": 0
+        },
+        "capture": {
+          "complete": true,
+          "anomalies": [],
+          "rotation_events": 0
+        },
+        "run_receipt": {
+          "status": "NATIVE_REPORT_CREATED_PENDING_AUDIT",
+          "configs_restored": true,
+          "log_capture_complete": true,
+          "repair": ""
+        }
+      },
+      "T40": {
+        "defaults_chain": {
+          "report_trigger_input": "4.0",
+          "report_inputs_count": 304,
+          "source_inputs_expected": 304,
+          "report_fixed_lot_cap": "0.01",
+          "report_use_fixed_lot": "false",
+          "report_scalp_risk_percent": "2.0",
+          "exit_init_trigger": "4.00000000",
+          "i17_init_trigger": "4.00000000",
+          "i17_init_only_change": "trigger_price",
+          "i17_kernel_line": true,
+          "i16_kernel_line": true,
+          "i15_kernel_line": true,
+          "i9_kernel_line": true,
+          "every_request_trigger_equals": true
+        },
+        "build": {
+          "status": "COMPILE_PASS",
+          "source_sha256": "58d9e8d3811298ddbdbf82f6c78f2080377a9eebb570d35e98220af2211724fc",
+          "source_equals_registration": true,
+          "ex5_sha256": "403469b78cacbe791571df2a48c23b741d39717c7e5a4ea0cdc33d4d4ad58dcc",
+          "ex5_file_sha256": "403469b78cacbe791571df2a48c23b741d39717c7e5a4ea0cdc33d4d4ad58dcc",
+          "ex5_equals_build_record": true,
+          "run_ex5_equals_build": true,
+          "compile_log_zero_errors_warnings": true
+        },
+        "exit_events": {
+          "requests": 26,
+          "confirmed": 25,
+          "failed_lines": 1,
+          "unconfirmed_lines": 0,
+          "deferred_lines": 0
+        },
+        "capture": {
+          "complete": true,
+          "anomalies": [],
+          "rotation_events": 0
+        },
+        "run_receipt": {
+          "status": "NATIVE_REPORT_CREATED_PENDING_AUDIT",
+          "configs_restored": true,
+          "log_capture_complete": true,
+          "repair": ""
+        }
+      }
+    }
+  },
+  "fixed_lot_and_risk": {
+    "JUNE_DELAY250": {
+      "T35": {
+        "fixed_lot": {
+          "csv_volumes": [
+            0.01
+          ],
+          "ledger_volumes": [
+            "0.01"
+          ],
+          "risk_plan_volumes": [
+            0.01
+          ],
+          "cap_lines": 44,
+          "cap_reduced": 0,
+          "cap_rejects": 0,
+          "reject_reasons": [],
+          "summary": {
+            "Mode": "T35_FIXED_LOT_DELAYED_COST_BREAKEVEN",
+            "CapAppliedOrders": "44",
+            "Reduced": "0",
+            "Rejects": "0",
+            "MaxFinalLots": "0.01000000",
+            "MinFinalLots": "0.01000000"
+          },
+          "auto_lots_before_cap": {
+            "min": 0.01,
+            "max": 0.01
+          }
+        },
+        "risk": {
+          "max_actual_sl_risk_pct": 1.1064,
+          "forced_minimum_lot_trades": 0,
+          "volumes": [
+            0.01
+          ],
+          "sl_distance_min": 4.05,
+          "sl_distance_max": 5,
+          "tp_distance_min": 5,
+          "tp_distance_max": 5,
+          "overlapping_positions": 0,
+          "entries_after_daily6_lock": 0,
+          "max_closed_same_side_before_an_entry": 3
+        }
+      },
+      "T40": {
+        "fixed_lot": {
+          "csv_volumes": [
+            0.01
+          ],
+          "ledger_volumes": [
+            "0.01"
+          ],
+          "risk_plan_volumes": [
+            0.01
+          ],
+          "cap_lines": 44,
+          "cap_reduced": 0,
+          "cap_rejects": 0,
+          "reject_reasons": [],
+          "summary": {
+            "Mode": "T40_FIXED_LOT_DELAYED_COST_BREAKEVEN",
+            "CapAppliedOrders": "44",
+            "Reduced": "0",
+            "Rejects": "0",
+            "MaxFinalLots": "0.01000000",
+            "MinFinalLots": "0.01000000"
+          },
+          "auto_lots_before_cap": {
+            "min": 0.01,
+            "max": 0.01
+          }
+        },
+        "risk": {
+          "max_actual_sl_risk_pct": 1.1356,
+          "forced_minimum_lot_trades": 0,
+          "volumes": [
+            0.01
+          ],
+          "sl_distance_min": 4.05,
+          "sl_distance_max": 5,
+          "tp_distance_min": 5,
+          "tp_distance_max": 5,
+          "overlapping_positions": 0,
+          "entries_after_daily6_lock": 0,
+          "max_closed_same_side_before_an_entry": 3
+        }
+      }
+    },
+    "AUGUST_DELAY250": {
+      "T35": {
+        "fixed_lot": {
+          "csv_volumes": [
+            0.01
+          ],
+          "ledger_volumes": [
+            "0.01"
+          ],
+          "risk_plan_volumes": [
+            0.01
+          ],
+          "cap_lines": 42,
+          "cap_reduced": 10,
+          "cap_rejects": 0,
+          "reject_reasons": [],
+          "summary": {
+            "Mode": "T35_FIXED_LOT_DELAYED_COST_BREAKEVEN",
+            "CapAppliedOrders": "42",
+            "Reduced": "10",
+            "Rejects": "0",
+            "MaxFinalLots": "0.01000000",
+            "MinFinalLots": "0.01000000"
+          },
+          "auto_lots_before_cap": {
+            "min": 0.01,
+            "max": 0.02
+          }
+        },
+        "risk": {
+          "max_actual_sl_risk_pct": 0.9925,
+          "forced_minimum_lot_trades": 0,
+          "volumes": [
+            0.01
+          ],
+          "sl_distance_min": 4.62,
+          "sl_distance_max": 5,
+          "tp_distance_min": 5,
+          "tp_distance_max": 5,
+          "overlapping_positions": 0,
+          "entries_after_daily6_lock": 0,
+          "max_closed_same_side_before_an_entry": 3
+        }
+      },
+      "T40": {
+        "fixed_lot": {
+          "csv_volumes": [
+            0.01
+          ],
+          "ledger_volumes": [
+            "0.01"
+          ],
+          "risk_plan_volumes": [
+            0.01
+          ],
+          "cap_lines": 42,
+          "cap_reduced": 14,
+          "cap_rejects": 0,
+          "reject_reasons": [],
+          "summary": {
+            "Mode": "T40_FIXED_LOT_DELAYED_COST_BREAKEVEN",
+            "CapAppliedOrders": "42",
+            "Reduced": "14",
+            "Rejects": "0",
+            "MaxFinalLots": "0.01000000",
+            "MinFinalLots": "0.01000000"
+          },
+          "auto_lots_before_cap": {
+            "min": 0.01,
+            "max": 0.02
+          }
+        },
+        "risk": {
+          "max_actual_sl_risk_pct": 0.9925,
+          "forced_minimum_lot_trades": 0,
+          "volumes": [
+            0.01
+          ],
+          "sl_distance_min": 4.62,
+          "sl_distance_max": 5,
+          "tp_distance_min": 5,
+          "tp_distance_max": 5,
+          "overlapping_positions": 0,
+          "entries_after_daily6_lock": 0,
+          "max_closed_same_side_before_an_entry": 3
+        }
+      }
+    }
+  },
+  "source_delta_vs_c1f": {
+    "T35": {
+      "removed_lines": [
+        "#define I16_MODE \"C1F_FIXED_LOT_DYNAMIC_COST_BREAKEVEN\"",
+        "input double InpI15TriggerPrice          = 2.50;   // I15 price units = 0.5 x nominal requested R (R = 5.00 requested stop distance, not each trade actual initi",
+        "{ Print(\"I16_FROZEN_CANDIDATE_PROFILE_REQUIRED|mode=C1F_FIXED_LOT_DYNAMIC_COST_BREAKEVEN|reason=CAP_INPUT_OR_MANUAL_FIXED_LOT\"); return INIT_PARAMETERS_INCORREC",
+        "if(InpI15ExitMode!=1 || InpI15TriggerPrice!=2.50 || InpI15CloseCommissionPerLot!=4.00 || InpI15SlippageBufferPrice!=0.02 || InpI15MaxCostOffsetPrice!=1.00 ||",
+        "PrintFormat(\"I16_FIXED_LOT_INIT|mode=%s|candidate=TB500_Scalping_FIXED_LOT_DYNAMIC_COST_BREAKEVEN_V1_I16|base=i15_c1|base_sha256=cbc629f049f701061c9cbe76e263ed4",
+        "ok=I15Check(53,InpI15ExitMode==1 && I15Ticks(InpI15TriggerPrice,0.01)==250 && I15Ticks(InpI15SlippageBufferPrice,0.01)==2 && I15Ticks(InpI15MaxCostOffsetPrice,0"
+      ],
+      "removed_count": 6,
+      "added_count": 59,
+      "added_lines_sample_non_I17": [
+        "#define I16_MODE \"T35_FIXED_LOT_DELAYED_COST_BREAKEVEN\"",
+        "{ Print(\"I16_FROZEN_CANDIDATE_PROFILE_REQUIRED|mode=T35_FIXED_LOT_DELAYED_COST_BREAKEVEN|reason=CAP_INPUT_OR_MANUAL_FIXED_LOT\"); return INIT_PARAMETERS_INCORREC",
+        "if(InpI15ExitMode!=1 || InpI15TriggerPrice!=3.50 || InpI15CloseCommissionPerLot!=4.00 || InpI15SlippageBufferPrice!=0.02 || InpI15MaxCostOffsetPrice!=1.00 ||",
+        "return INIT_FAILED;",
+        "// The I15 exit manager, cost target, buffer, cap, tighten-only rule and server read-back are not touched; these helpers contain no trade, history, file or glob",
+        "const long off,const long maxOff,const long minDist,const int wantPlan,const int wantWhy,const double wantDesired)",
+        "int plan=I15ExitPlan(1,direction,open,sl,tp,bid,ask,trigger,off,maxOff,2.00,0.50,0.01,minDist,desired,why);",
+        "double desired=0.0;",
+        "int why=0;",
+        "if(plan!=wantPlan || why!=wantWhy)",
+        "if(wantPlan!=0 && MathAbs(desired-wantDesired)>0.0000001)",
+        "if(!pass)"
+      ],
+      "added_i17_lines": 31,
+      "helper_block_found": true,
+      "c1f_sha256": "442c833e42c126aec2bbb11b2765cd99a2a716eb81832fb76a81b8d3c3ceb611",
+      "c1f_equals_registered": true
+    },
+    "T40": {
+      "removed_lines": [
+        "#define I16_MODE \"C1F_FIXED_LOT_DYNAMIC_COST_BREAKEVEN\"",
+        "input double InpI15TriggerPrice          = 2.50;   // I15 price units = 0.5 x nominal requested R (R = 5.00 requested stop distance, not each trade actual initi",
+        "{ Print(\"I16_FROZEN_CANDIDATE_PROFILE_REQUIRED|mode=C1F_FIXED_LOT_DYNAMIC_COST_BREAKEVEN|reason=CAP_INPUT_OR_MANUAL_FIXED_LOT\"); return INIT_PARAMETERS_INCORREC",
+        "if(InpI15ExitMode!=1 || InpI15TriggerPrice!=2.50 || InpI15CloseCommissionPerLot!=4.00 || InpI15SlippageBufferPrice!=0.02 || InpI15MaxCostOffsetPrice!=1.00 ||",
+        "PrintFormat(\"I16_FIXED_LOT_INIT|mode=%s|candidate=TB500_Scalping_FIXED_LOT_DYNAMIC_COST_BREAKEVEN_V1_I16|base=i15_c1|base_sha256=cbc629f049f701061c9cbe76e263ed4",
+        "ok=I15Check(53,InpI15ExitMode==1 && I15Ticks(InpI15TriggerPrice,0.01)==250 && I15Ticks(InpI15SlippageBufferPrice,0.01)==2 && I15Ticks(InpI15MaxCostOffsetPrice,0"
+      ],
+      "removed_count": 6,
+      "added_count": 59,
+      "added_lines_sample_non_I17": [
+        "#define I16_MODE \"T40_FIXED_LOT_DELAYED_COST_BREAKEVEN\"",
+        "{ Print(\"I16_FROZEN_CANDIDATE_PROFILE_REQUIRED|mode=T40_FIXED_LOT_DELAYED_COST_BREAKEVEN|reason=CAP_INPUT_OR_MANUAL_FIXED_LOT\"); return INIT_PARAMETERS_INCORREC",
+        "if(InpI15ExitMode!=1 || InpI15TriggerPrice!=4.00 || InpI15CloseCommissionPerLot!=4.00 || InpI15SlippageBufferPrice!=0.02 || InpI15MaxCostOffsetPrice!=1.00 ||",
+        "return INIT_FAILED;",
+        "// The I15 exit manager, cost target, buffer, cap, tighten-only rule and server read-back are not touched; these helpers contain no trade, history, file or glob",
+        "const long off,const long maxOff,const long minDist,const int wantPlan,const int wantWhy,const double wantDesired)",
+        "int plan=I15ExitPlan(1,direction,open,sl,tp,bid,ask,trigger,off,maxOff,2.00,0.50,0.01,minDist,desired,why);",
+        "double desired=0.0;",
+        "int why=0;",
+        "if(plan!=wantPlan || why!=wantWhy)",
+        "if(wantPlan!=0 && MathAbs(desired-wantDesired)>0.0000001)",
+        "if(!pass)"
+      ],
+      "added_i17_lines": 31,
+      "helper_block_found": true,
+      "c1f_sha256": "442c833e42c126aec2bbb11b2765cd99a2a716eb81832fb76a81b8d3c3ceb611",
+      "c1f_equals_registered": true
+    }
+  },
+  "protected_defaults": {
+    "T35": {
+      "input_count": 304,
+      "differs_from_c1f": [
+        [
+          "InpI15TriggerPrice",
+          "2.50",
+          "3.50"
+        ]
+      ],
+      "InpUseFixedLot": "false",
+      "InpI16FixedLotCap": "0.01",
+      "InpScalpRiskPercent": "2",
+      "InpScalpSLPips": "50.0",
+      "InpScalpTPPips": "50.0",
+      "InpScalpUseBreakEven": "false",
+      "InpI15ExitMode": "1",
+      "InpI15CloseCommissionPerLot": "4.00",
+      "InpI15SlippageBufferPrice": "0.02",
+      "InpI15MaxCostOffsetPrice": "1.00",
+      "InpI15TriggerPrice": "3.50"
+    },
+    "T40": {
+      "input_count": 304,
+      "differs_from_c1f": [
+        [
+          "InpI15TriggerPrice",
+          "2.50",
+          "4.00"
+        ]
+      ],
+      "InpUseFixedLot": "false",
+      "InpI16FixedLotCap": "0.01",
+      "InpScalpRiskPercent": "2",
+      "InpScalpSLPips": "50.0",
+      "InpScalpTPPips": "50.0",
+      "InpScalpUseBreakEven": "false",
+      "InpI15ExitMode": "1",
+      "InpI15CloseCommissionPerLot": "4.00",
+      "InpI15SlippageBufferPrice": "0.02",
+      "InpI15MaxCostOffsetPrice": "1.00",
+      "InpI15TriggerPrice": "4.00"
+    }
+  },
+  "freeze_and_ledgers": {
+    "codex_freeze": {
+      "schema": "CODEX_I17_PRECOMPILE_FREEZE_V1",
+      "utc": "2026-10-10T11:31:34.6853537Z",
+      "status": "SOURCE_REVIEW_AND_HASH_FREEZE_PASS_NOT_COMPILED",
+      "review": "322 original functions unchanged; only trigger input and init fixtures changed; deriv.base, attribution coverage and limitations fixes reviewed",
+      "selftests": 35,
+      "freeze_manifest_sha256": "0bbea0ab1994a617b5a4c3c83c8081cc7bd1f7ccd234c883ac92b911cb4431a6",
+      "registration_sha256": "65d26a64b804d9c11e6381fe0876edd17f44ff0f2402def5e8e4415529b54eeb",
+      "handoff_sha256": "5b02bbd527bd78dfcc3a3c517febcbce2f76d04d58cdf2b45b3588e9b276c912"
+    },
+    "registration_sha256": "65d26a64b804d9c11e6381fe0876edd17f44ff0f2402def5e8e4415529b54eeb",
+    "tools_match_registration": {
+      "runner": true,
+      "verifier": true,
+      "checks": true,
+      "base_checks": true,
+      "exit_checks": true,
+      "link": true,
+      "fixtures": true,
+      "evaluate": true,
+      "attempt_helper": true,
+      "i16_cap_mirror": true,
+      "i16_checks": true,
+      "i15_exit_mirror": true,
+      "frozen_i15_checks": true,
+      "frozen_i14_checks": true,
+      "frozen_i13_checks": true,
+      "daily_verifier": true,
+      "node": true
+    },
+    "native_attempts": [
+      "T35_AUGUST_DELAY250.json",
+      "T35_JUNE_DELAY250.json",
+      "T40_AUGUST_DELAY250.json",
+      "T40_JUNE_DELAY250.json"
+    ],
+    "compile_attempts": [
+      "T35_COMPILE.json",
+      "T40_COMPILE.json"
+    ],
+    "repairs": 0,
+    "evaluation_file": {
+      "path": "C:/Users/A/Documents/Codex/2026-09-10/v1-2-ea-mt5/work/repair_research/mt5_iteration17_20261010/Scalping/I17_EVALUATION.json",
+      "sha256": "d930cb529f45644cebc13f433842a58036f1ff2df6f122d4ad064feee68674c6"
+    }
+  },
+  "noted_events": [
+    "T40 AUGUST: one I15_EXIT_MODIFY_FAILED (position 24, Retcode=3). The original take profit closed the position while the modification was pending; that trade netted +5.11. The failure is not counted as protection taking effect, and the counterfactual of a successful modification cannot be shown."
+  ],
+  "next_study_suggestion": {
+    "do_not": "scan more trigger values along 2.50 -> 3.50 -> 4.00 (monotone in June and flat in August: no overall improvement at these three points)",
+    "one_item": "run only the frozen P0 and C1F on further independent, unused real-tick months (same 0.01 lot, 250 ms, USD 500, 1:1000) and report per month the same-lot C1F-minus-P0 difference together with the share of C1F positions with a recorded request (trigger 2.50) whose P0 exit was a stop",
+    "basis": "the break-even effect is the balance of rescued reversals against cut winners; that share was about 45% in June and 13% in August, which two months cannot place",
+    "availability": "whether further real-tick months exist is for the user and Codex to confirm. Without new months exit development is not permanently closed: different, evidence-based hypotheses may still be pre-registered on the already-used development months (no blind trigger scanning), and a validation month not used for selection is kept after the freeze; until then C1F stays the research reference",
+    "not_started": true,
+    "nature": "a suggestion, not a precondition"
+  },
+  "not_verified": [
+    "missed triggers (a trigger reached without any request), whether positions without a recorded request ever reached a level, and complete tick timing",
+    "restart behaviour, partial fills, zone lifecycle",
+    "real commission/swap model, spread widening and slippage, margin and stop-out (uncalibrated); only the 250 ms delay tier",
+    "the 2%/3% risk ceilings were never reached with the fixed 0.01 lot (max actual SL risk 1.14%) and were not stress-tested"
+  ],
+  "limitations": [
+    "development months already used; no out-of-sample; independent accounts, never added or accumulated",
+    "the recomputation shares the raw artefacts with Codex verification and is not independent of MT5",
+    "42-44 trades per month, no significance test; August is decided by 3-4 trades per class; T40 August +0.09 is nine cents, not an improvement",
+    "native PF (report) and complete-position net PF are different statistics and are shown separately"
+  ],
+  "no_pooling_note": "June and August are independent accounts; per-month values only; no two-month sum or cumulative figure is given",
+  "positions_with_recorded_requests_outcomes": {
+    "JUNE_DELAY250": {
+      "T35": {
+        "positions_with_requests": 21,
+        "first_request_favorable_ticks_min": 350,
+        "first_request_favorable_ticks_max": 396,
+        "trigger_ticks": 350,
+        "first_requests_below_trigger": 0,
+        "requests": 21,
+        "requests_below_trigger_not_armed": 0,
+        "eventual_p0_outcome_of_those_positions": {
+          "tp": 16,
+          "sl": 5
+        },
+        "t_outcome_of_those_positions": {
+          "tp": 14,
+          "sl": 7
+        }
+      },
+      "T40": {
+        "positions_with_requests": 18,
+        "first_request_favorable_ticks_min": 400,
+        "first_request_favorable_ticks_max": 491,
+        "trigger_ticks": 400,
+        "first_requests_below_trigger": 0,
+        "requests": 18,
+        "requests_below_trigger_not_armed": 0,
+        "eventual_p0_outcome_of_those_positions": {
+          "tp": 16,
+          "sl": 2
+        },
+        "t_outcome_of_those_positions": {
+          "tp": 15,
+          "sl": 3
+        }
+      }
+    },
+    "AUGUST_DELAY250": {
+      "T35": {
+        "positions_with_requests": 28,
+        "first_request_favorable_ticks_min": 350,
+        "first_request_favorable_ticks_max": 392,
+        "trigger_ticks": 350,
+        "first_requests_below_trigger": 0,
+        "requests": 28,
+        "requests_below_trigger_not_armed": 0,
+        "eventual_p0_outcome_of_those_positions": {
+          "tp": 27,
+          "sl": 1
+        },
+        "t_outcome_of_those_positions": {
+          "tp": 24,
+          "sl": 4
+        }
+      },
+      "T40": {
+        "positions_with_requests": 26,
+        "first_request_favorable_ticks_min": 400,
+        "first_request_favorable_ticks_max": 470,
+        "trigger_ticks": 400,
+        "first_requests_below_trigger": 0,
+        "requests": 26,
+        "requests_below_trigger_not_armed": 0,
+        "eventual_p0_outcome_of_those_positions": {
+          "tp": 26,
+          "sl": 0
+        },
+        "t_outcome_of_those_positions": {
+          "tp": 24,
+          "sl": 2
+        }
+      }
+    }
+  },
+  "positions_with_recorded_requests_outcomes_note": "positions that have at least one I15_EXIT_REQUEST in the journal; without a complete tick replay this does not prove that other positions never reached the trigger",
+  "defaults_and_build_chain_note": "capture anomalies = 0 refers to the log capturer only; it does not mean zero trading failures (one modification failure in T40 August, see noted_events)",
+  "errata": {
+    "date": "2026-10-10",
+    "text_only": true,
+    "numbers_recomputed": false,
+    "changes": [
+      "outcomes table renamed to positions with recorded requests; the 11-position statement no longer claims price never reached +4.00",
+      "modification failure: original TP closed first, trade +5.11, failure not counted as protection, no counterfactual",
+      "capture anomalies = 0 limited to the log capturer",
+      "\"no sweet spot\" limited to the three tested points",
+      "suggestion: scanning along this line not supported, new months are a suggestion not a precondition, exit development is not permanently closed"
+    ]
+  }
+}
