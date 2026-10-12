@@ -1,0 +1,698 @@
+{
+  "schema": "I18_EVALUATION_SUMMARY_V1",
+  "created_utc": "2026-10-11T09:19:53.086Z",
+  "rule": "CODEX_SCOPE_I18.json canonical (numeric part only)",
+  "rows": [
+    {
+      "sid": "S1",
+      "state": "PAIRED",
+      "months": {
+        "JUNE": {
+          "state": "VERIFIED",
+          "selected_arm": "S1_JUNE_D250",
+          "used_repair_arm": false,
+          "run_id": "90657B3E"
+        },
+        "AUG": {
+          "state": "VERIFIED",
+          "selected_arm": "S1_AUG_D250",
+          "used_repair_arm": false,
+          "run_id": "202EB84D"
+        }
+      },
+      "numeric_retention": "NUMERIC_RETENTION_RULE_NOT_MET",
+      "decision": "RETAIN_BASELINE_INCUMBENT",
+      "checks": {
+        "net_both_not_below": false,
+        "net_at_least_one_greater": true,
+        "dd_usd_both_not_higher": false,
+        "relative_dd_both_not_higher": false
+      },
+      "deltas": {
+        "net_usd": {
+          "JUNE": 8.079999999999998,
+          "AUG": -31.550000000000004
+        },
+        "equity_dd_usd": {
+          "JUNE": 0,
+          "AUG": 2.4200000000000017
+        },
+        "max_relative_equity_dd_pct": {
+          "JUNE": 0,
+          "AUG": 0.7065685512000002
+        }
+      },
+      "candidate_source_sha256": "877a801ff415568e207b7395ff9987f27d49284389299cd728c2fb8345e2eecc",
+      "candidate_ex5_sha256": "aefa9d4b74e16efc7e44df92d63721e80aea41c0441254b360f6c53c6574bb5c",
+      "raw": {
+        "JUNE": {
+          "candidate": {
+            "net_usd": 57.5,
+            "equity_dd_usd": 27.09,
+            "max_relative_equity_dd_pct": 5.4136690647,
+            "profit_factor_complete_positions": 2.0636330003699594,
+            "complete_positions": 25,
+            "win_rate_pct": 36,
+            "cost_usd": 2.93
+          },
+          "baseline": {
+            "net_usd": 49.42,
+            "equity_dd_usd": 27.09,
+            "max_relative_equity_dd_pct": 5.4136690647,
+            "profit_factor_complete_positions": 1.7953009333762473,
+            "complete_positions": 27,
+            "cost_usd": 3.09,
+            "win_rate_pct": 33.333333333333336
+          },
+          "delta": {
+            "net_usd": 8.08,
+            "equity_dd_usd": 0,
+            "max_relative_equity_dd_pct": 0,
+            "complete_positions": -2,
+            "profit_factor_complete_positions": 0.268332
+          }
+        },
+        "AUG": {
+          "candidate": {
+            "net_usd": 13.69,
+            "equity_dd_usd": 30.46,
+            "max_relative_equity_dd_pct": 5.5977212166,
+            "profit_factor_complete_positions": 1.2335380416240191,
+            "complete_positions": 37,
+            "win_rate_pct": 29.72972972972973,
+            "cost_usd": 3.48
+          },
+          "baseline": {
+            "net_usd": 45.24,
+            "equity_dd_usd": 28.04,
+            "max_relative_equity_dd_pct": 4.8911526654,
+            "profit_factor_complete_positions": 1.6457322295175563,
+            "complete_positions": 45,
+            "cost_usd": 4.79,
+            "win_rate_pct": 40
+          },
+          "delta": {
+            "net_usd": -31.55,
+            "equity_dd_usd": 2.42,
+            "max_relative_equity_dd_pct": 0.706569,
+            "complete_positions": -8,
+            "profit_factor_complete_positions": -0.412194
+          }
+        }
+      }
+    },
+    {
+      "sid": "S2",
+      "state": "PAIRED",
+      "months": {
+        "JUNE": {
+          "state": "VERIFIED",
+          "selected_arm": "S2_JUNE_D250",
+          "used_repair_arm": false,
+          "run_id": "317CC9E0"
+        },
+        "AUG": {
+          "state": "VERIFIED",
+          "selected_arm": "S2_AUG_D250",
+          "used_repair_arm": false,
+          "run_id": "F5CDDBE1"
+        }
+      },
+      "numeric_retention": "NUMERIC_RETENTION_RULE_NOT_MET",
+      "decision": "RETAIN_BASELINE_INCUMBENT",
+      "checks": {
+        "net_both_not_below": true,
+        "net_at_least_one_greater": false,
+        "dd_usd_both_not_higher": true,
+        "relative_dd_both_not_higher": true
+      },
+      "deltas": {
+        "net_usd": {
+          "JUNE": 0,
+          "AUG": 0
+        },
+        "equity_dd_usd": {
+          "JUNE": 0,
+          "AUG": 0
+        },
+        "max_relative_equity_dd_pct": {
+          "JUNE": 0,
+          "AUG": 0
+        }
+      },
+      "candidate_source_sha256": "501d029627bcdf10216e5ace4e4eb5776113f5f3115607b27c41355535d43c60",
+      "candidate_ex5_sha256": "7f5268591e3a661251234679ee5aa67bdea25c8f648dd79a5511f7a946a900c7",
+      "raw": {
+        "JUNE": {
+          "candidate": {
+            "net_usd": 14.84,
+            "equity_dd_usd": 8.7,
+            "max_relative_equity_dd_pct": 1.705447631,
+            "profit_factor_complete_positions": null,
+            "complete_positions": 1,
+            "win_rate_pct": 100,
+            "cost_usd": 0.08
+          },
+          "baseline": {
+            "net_usd": 14.84,
+            "equity_dd_usd": 8.7,
+            "max_relative_equity_dd_pct": 1.705447631,
+            "profit_factor_complete_positions": null,
+            "complete_positions": 1,
+            "cost_usd": 0.08,
+            "win_rate_pct": 100
+          },
+          "delta": {
+            "net_usd": 0,
+            "equity_dd_usd": 0,
+            "max_relative_equity_dd_pct": 0,
+            "complete_positions": 0,
+            "profit_factor_complete_positions": null
+          }
+        },
+        "AUG": {
+          "candidate": {
+            "net_usd": 19.4,
+            "equity_dd_usd": 12.05,
+            "max_relative_equity_dd_pct": 2.3834955297,
+            "profit_factor_complete_positions": null,
+            "complete_positions": 2,
+            "win_rate_pct": 100,
+            "cost_usd": 0.16
+          },
+          "baseline": {
+            "net_usd": 19.4,
+            "equity_dd_usd": 12.05,
+            "max_relative_equity_dd_pct": 2.3834955297,
+            "profit_factor_complete_positions": null,
+            "complete_positions": 2,
+            "cost_usd": 0.16,
+            "win_rate_pct": 100
+          },
+          "delta": {
+            "net_usd": 0,
+            "equity_dd_usd": 0,
+            "max_relative_equity_dd_pct": 0,
+            "complete_positions": 0,
+            "profit_factor_complete_positions": null
+          }
+        }
+      }
+    },
+    {
+      "sid": "S3",
+      "state": "PAIRED",
+      "months": {
+        "JUNE": {
+          "state": "VERIFIED",
+          "selected_arm": "S3_JUNE_D250",
+          "used_repair_arm": false,
+          "run_id": "33C01B76"
+        },
+        "AUG": {
+          "state": "VERIFIED",
+          "selected_arm": "S3_AUG_D250",
+          "used_repair_arm": false,
+          "run_id": "A630FE24"
+        }
+      },
+      "numeric_retention": "NUMERIC_RETENTION_RULE_NOT_MET",
+      "decision": "RETAIN_BASELINE_INCUMBENT",
+      "checks": {
+        "net_both_not_below": false,
+        "net_at_least_one_greater": false,
+        "dd_usd_both_not_higher": false,
+        "relative_dd_both_not_higher": false
+      },
+      "deltas": {
+        "net_usd": {
+          "JUNE": -14.56,
+          "AUG": -5.51
+        },
+        "equity_dd_usd": {
+          "JUNE": 12.620000000000001,
+          "AUG": 5.360000000000001
+        },
+        "max_relative_equity_dd_pct": {
+          "JUNE": 2.5143696675,
+          "AUG": 1.0378545841999998
+        }
+      },
+      "candidate_source_sha256": "4cb60e6dd3d0ecad793dc006f60834d41066fb536ab42fed3c9fac8e74949e51",
+      "candidate_ex5_sha256": "6c0a1439b68e6d42196d6ec2bb82b8be1278fb8bb87cafa1840b73a9e367f05b",
+      "raw": {
+        "JUNE": {
+          "candidate": {
+            "net_usd": -7.53,
+            "equity_dd_usd": 22.28,
+            "max_relative_equity_dd_pct": 4.4259917758,
+            "profit_factor_complete_positions": 0.7113836719049443,
+            "complete_positions": 8,
+            "win_rate_pct": 25,
+            "cost_usd": 0.64
+          },
+          "baseline": {
+            "net_usd": 7.03,
+            "equity_dd_usd": 9.66,
+            "max_relative_equity_dd_pct": 1.9116221083,
+            "profit_factor_complete_positions": 1.923784494086728,
+            "complete_positions": 4,
+            "cost_usd": 0.32,
+            "win_rate_pct": 50
+          },
+          "delta": {
+            "net_usd": -14.56,
+            "equity_dd_usd": 12.62,
+            "max_relative_equity_dd_pct": 2.51437,
+            "complete_positions": 4,
+            "profit_factor_complete_positions": -1.212401
+          }
+        },
+        "AUG": {
+          "candidate": {
+            "net_usd": -0.94,
+            "equity_dd_usd": 17.39,
+            "max_relative_equity_dd_pct": 3.367218511,
+            "profit_factor_complete_positions": 0.9444444444444444,
+            "complete_positions": 7,
+            "win_rate_pct": 28.571428571428573,
+            "cost_usd": 0.56
+          },
+          "baseline": {
+            "net_usd": 4.57,
+            "equity_dd_usd": 12.03,
+            "max_relative_equity_dd_pct": 2.3293639268,
+            "profit_factor_complete_positions": 1.4005258545135846,
+            "complete_positions": 6,
+            "cost_usd": 0.48,
+            "win_rate_pct": 33.333333333333336
+          },
+          "delta": {
+            "net_usd": -5.51,
+            "equity_dd_usd": 5.36,
+            "max_relative_equity_dd_pct": 1.037855,
+            "complete_positions": 1,
+            "profit_factor_complete_positions": -0.456081
+          }
+        }
+      }
+    },
+    {
+      "sid": "S4",
+      "state": "PAIRED",
+      "months": {
+        "JUNE": {
+          "state": "VERIFIED",
+          "selected_arm": "S4_JUNE_D250",
+          "used_repair_arm": false,
+          "run_id": "8214ECCF"
+        },
+        "AUG": {
+          "state": "VERIFIED",
+          "selected_arm": "S4_AUG_D250",
+          "used_repair_arm": false,
+          "run_id": "E24F5EA6"
+        }
+      },
+      "numeric_retention": "NUMERIC_RETENTION_RULE_NOT_MET",
+      "decision": "RETAIN_BASELINE_INCUMBENT",
+      "checks": {
+        "net_both_not_below": false,
+        "net_at_least_one_greater": true,
+        "dd_usd_both_not_higher": false,
+        "relative_dd_both_not_higher": false
+      },
+      "deltas": {
+        "net_usd": {
+          "JUNE": 4.75,
+          "AUG": -56.68
+        },
+        "equity_dd_usd": {
+          "JUNE": -6.780000000000001,
+          "AUG": 8.829999999999998
+        },
+        "max_relative_equity_dd_pct": {
+          "JUNE": -0.8776476048999999,
+          "AUG": 2.2598083014000006
+        }
+      },
+      "candidate_source_sha256": "6139181ae903115dc00aab7a86ca770686d1947f8c6ae509278d738b5bd7c583",
+      "candidate_ex5_sha256": "2e4c03d297548f2c6412b217d34260bf0f9ab79139135a7508371b4024e92873",
+      "raw": {
+        "JUNE": {
+          "candidate": {
+            "net_usd": 70.89,
+            "equity_dd_usd": 34.69,
+            "max_relative_equity_dd_pct": 6.5306199288,
+            "profit_factor_complete_positions": 1.4406389855793138,
+            "complete_positions": 50,
+            "win_rate_pct": 44,
+            "cost_usd": 4.3
+          },
+          "baseline": {
+            "net_usd": 66.14,
+            "equity_dd_usd": 41.47,
+            "max_relative_equity_dd_pct": 7.4082675337,
+            "profit_factor_complete_positions": 1.325556211852727,
+            "complete_positions": 50,
+            "cost_usd": 4.3,
+            "win_rate_pct": 48
+          },
+          "delta": {
+            "net_usd": 4.75,
+            "equity_dd_usd": -6.78,
+            "max_relative_equity_dd_pct": -0.877648,
+            "complete_positions": 0,
+            "profit_factor_complete_positions": 0.115083
+          }
+        },
+        "AUG": {
+          "candidate": {
+            "net_usd": 45.35,
+            "equity_dd_usd": 42.05,
+            "max_relative_equity_dd_pct": 7.8501288131,
+            "profit_factor_complete_positions": 1.2144512223956117,
+            "complete_positions": 58,
+            "win_rate_pct": 41.37931034482759,
+            "cost_usd": 5.32
+          },
+          "baseline": {
+            "net_usd": 102.03,
+            "equity_dd_usd": 33.22,
+            "max_relative_equity_dd_pct": 5.5903205117,
+            "profit_factor_complete_positions": 1.464342602284622,
+            "complete_positions": 56,
+            "cost_usd": 5.14,
+            "win_rate_pct": 50
+          },
+          "delta": {
+            "net_usd": -56.68,
+            "equity_dd_usd": 8.83,
+            "max_relative_equity_dd_pct": 2.259808,
+            "complete_positions": 2,
+            "profit_factor_complete_positions": -0.249891
+          }
+        }
+      }
+    },
+    {
+      "sid": "S5",
+      "state": "PAIRED",
+      "months": {
+        "JUNE": {
+          "state": "VERIFIED",
+          "selected_arm": "S5_JUNE_D250",
+          "used_repair_arm": false,
+          "run_id": "F9B97134"
+        },
+        "AUG": {
+          "state": "VERIFIED",
+          "selected_arm": "S5_AUG_D250",
+          "used_repair_arm": false,
+          "run_id": "4AE14FBF"
+        }
+      },
+      "numeric_retention": "NUMERIC_RETENTION_RULE_NOT_MET",
+      "decision": "RETAIN_BASELINE_INCUMBENT",
+      "checks": {
+        "net_both_not_below": false,
+        "net_at_least_one_greater": false,
+        "dd_usd_both_not_higher": false,
+        "relative_dd_both_not_higher": false
+      },
+      "deltas": {
+        "net_usd": {
+          "JUNE": -8.06,
+          "AUG": -0.22999999999999865
+        },
+        "equity_dd_usd": {
+          "JUNE": 4.42,
+          "AUG": 0
+        },
+        "max_relative_equity_dd_pct": {
+          "JUNE": 0.8769263062999999,
+          "AUG": 0
+        }
+      },
+      "candidate_source_sha256": "3ac3510a82b837c5f8df0bfff6f82041ea1821cb409a2fbd804802bbc16c30c0",
+      "candidate_ex5_sha256": "f7389fe48fcd8bc82946afac1c40d5690a8260448cca26dcec1e2b8cf0079211",
+      "raw": {
+        "JUNE": {
+          "candidate": {
+            "net_usd": -1.47,
+            "equity_dd_usd": 6.49,
+            "max_relative_equity_dd_pct": 1.2850976199,
+            "profit_factor_complete_positions": 0.8256227758007118,
+            "complete_positions": 7,
+            "win_rate_pct": 57.142857142857146,
+            "cost_usd": 0.56
+          },
+          "baseline": {
+            "net_usd": 6.59,
+            "equity_dd_usd": 2.07,
+            "max_relative_equity_dd_pct": 0.4081713136,
+            "profit_factor_complete_positions": 10.28169014084507,
+            "complete_positions": 7,
+            "cost_usd": 0.56,
+            "win_rate_pct": 71.42857142857143
+          },
+          "delta": {
+            "net_usd": -8.06,
+            "equity_dd_usd": 4.42,
+            "max_relative_equity_dd_pct": 0.876926,
+            "complete_positions": 0,
+            "profit_factor_complete_positions": -9.456067
+          }
+        },
+        "AUG": {
+          "candidate": {
+            "net_usd": 11.3,
+            "equity_dd_usd": 6.83,
+            "max_relative_equity_dd_pct": 1.3561004666,
+            "profit_factor_complete_positions": 2.522911051212938,
+            "complete_positions": 11,
+            "win_rate_pct": 72.72727272727273,
+            "cost_usd": 0.88
+          },
+          "baseline": {
+            "net_usd": 11.53,
+            "equity_dd_usd": 6.83,
+            "max_relative_equity_dd_pct": 1.3561004666,
+            "profit_factor_complete_positions": 2.6036161335187757,
+            "complete_positions": 11,
+            "cost_usd": 0.88,
+            "win_rate_pct": 72.72727272727273
+          },
+          "delta": {
+            "net_usd": -0.23,
+            "equity_dd_usd": 0,
+            "max_relative_equity_dd_pct": 0,
+            "complete_positions": 0,
+            "profit_factor_complete_positions": -0.080705
+          }
+        }
+      }
+    },
+    {
+      "sid": "S6",
+      "state": "PAIRED",
+      "months": {
+        "JUNE": {
+          "state": "VERIFIED",
+          "selected_arm": "S6_JUNE_D250",
+          "used_repair_arm": false,
+          "run_id": "6FE6FEC5"
+        },
+        "AUG": {
+          "state": "VERIFIED",
+          "selected_arm": "S6_AUG_D250",
+          "used_repair_arm": false,
+          "run_id": "A38B29D9"
+        }
+      },
+      "numeric_retention": "NUMERIC_RETENTION_RULE_NOT_MET",
+      "decision": "RETAIN_BASELINE_INCUMBENT",
+      "checks": {
+        "net_both_not_below": false,
+        "net_at_least_one_greater": true,
+        "dd_usd_both_not_higher": false,
+        "relative_dd_both_not_higher": false
+      },
+      "deltas": {
+        "net_usd": {
+          "JUNE": -8.569999999999999,
+          "AUG": 6.629999999999999
+        },
+        "equity_dd_usd": {
+          "JUNE": 2.4499999999999993,
+          "AUG": -4.75
+        },
+        "max_relative_equity_dd_pct": {
+          "JUNE": 0.5205747754000005,
+          "AUG": -0.8202283424000001
+        }
+      },
+      "candidate_source_sha256": "286a26ef0a29ee7dd31dd5ceab728fdb59407098b67e6c107216736d7c3c0653",
+      "candidate_ex5_sha256": "7435cc353920d4a9ccdeafcafb1b4522beac56681c4b78bc98e1972c710e7146",
+      "raw": {
+        "JUNE": {
+          "candidate": {
+            "net_usd": 8.74,
+            "equity_dd_usd": 21.08,
+            "max_relative_equity_dd_pct": 4.1407216799,
+            "profit_factor_complete_positions": 1.1910382513661202,
+            "complete_positions": 14,
+            "win_rate_pct": 21.428571428571427,
+            "cost_usd": 0.78
+          },
+          "baseline": {
+            "net_usd": 17.31,
+            "equity_dd_usd": 18.63,
+            "max_relative_equity_dd_pct": 3.6201469045,
+            "profit_factor_complete_positions": 2.1124678663239074,
+            "complete_positions": 15,
+            "cost_usd": 0.86,
+            "win_rate_pct": 40
+          },
+          "delta": {
+            "net_usd": -8.57,
+            "equity_dd_usd": 2.45,
+            "max_relative_equity_dd_pct": 0.520575,
+            "complete_positions": -1,
+            "profit_factor_complete_positions": -0.92143
+          }
+        },
+        "AUG": {
+          "candidate": {
+            "net_usd": 28.65,
+            "equity_dd_usd": 11.3,
+            "max_relative_equity_dd_pct": 2.1626549256,
+            "profit_factor_complete_positions": 2.463975472662238,
+            "complete_positions": 11,
+            "win_rate_pct": 54.54545454545455,
+            "cost_usd": 0.88
+          },
+          "baseline": {
+            "net_usd": 22.02,
+            "equity_dd_usd": 16.05,
+            "max_relative_equity_dd_pct": 2.982883268,
+            "profit_factor_complete_positions": 2.941798941798942,
+            "complete_positions": 10,
+            "cost_usd": 0.8,
+            "win_rate_pct": 50
+          },
+          "delta": {
+            "net_usd": 6.63,
+            "equity_dd_usd": -4.75,
+            "max_relative_equity_dd_pct": -0.820228,
+            "complete_positions": 1,
+            "profit_factor_complete_positions": -0.477823
+          }
+        }
+      }
+    },
+    {
+      "sid": "Scalping",
+      "state": "PAIRED",
+      "months": {
+        "JUNE": {
+          "state": "VERIFIED",
+          "selected_arm": "S20_JUNE_DELAY250",
+          "used_repair_arm": false,
+          "run_id": "SCALPI1820261011_S20_JUNE_DELAY250_efa681b8"
+        },
+        "AUG": {
+          "state": "VERIFIED",
+          "selected_arm": "S20_AUGUST_DELAY250",
+          "used_repair_arm": false,
+          "run_id": "SCALPI1820261011_S20_AUGUST_DELAY250_905a99f0"
+        }
+      },
+      "numeric_retention": "NUMERIC_RETENTION_RULE_MET",
+      "decision": "NUMERIC_RULE_MET_PENDING_CODEX_AUDIT_EXPLANATION_RESEARCH_ONLY",
+      "checks": {
+        "net_both_not_below": true,
+        "net_at_least_one_greater": true,
+        "dd_usd_both_not_higher": true,
+        "relative_dd_both_not_higher": true
+      },
+      "deltas": {
+        "net_usd": {
+          "JUNE": 5.970000000000006,
+          "AUG": 9.509999999999984
+        },
+        "equity_dd_usd": {
+          "JUNE": -5.969999999999999,
+          "AUG": 0
+        },
+        "max_relative_equity_dd_pct": {
+          "JUNE": -1.1300000000000008,
+          "AUG": -0.050000000000000266
+        }
+      },
+      "candidate_source_sha256": "41f443dd4ee26c495354f3955d7931be92e3b09c1e70458fbbf1a446baef4f2f",
+      "candidate_ex5_sha256": "6e53ed697aefe084e4d79fdf79c6e2b68abcac3b5198b544d1cf39bf18c10060",
+      "raw": {
+        "JUNE": {
+          "candidate": {
+            "net_usd": -22.6,
+            "equity_dd_usd": 55.29,
+            "max_relative_equity_dd_pct": 10.54,
+            "profit_factor_complete_positions": 0.68719723183391,
+            "complete_positions": 38,
+            "win_rate_pct": null,
+            "cost_usd": 3.0400000000000014
+          },
+          "baseline": {
+            "net_usd": -28.570000000000007,
+            "equity_dd_usd": 61.26,
+            "max_relative_equity_dd_pct": 11.67,
+            "profit_factor_complete_positions": 0.634748146254155,
+            "complete_positions": 44,
+            "cost_usd": 4.900000000000002,
+            "win_rate_pct": null
+          },
+          "delta": {
+            "net_usd": 5.97,
+            "equity_dd_usd": -5.97,
+            "max_relative_equity_dd_pct": -1.13,
+            "complete_positions": -6,
+            "profit_factor_complete_positions": 0.052449
+          }
+        },
+        "AUG": {
+          "candidate": {
+            "net_usd": 68.48999999999998,
+            "equity_dd_usd": 17.52,
+            "max_relative_equity_dd_pct": 3.05,
+            "profit_factor_complete_positions": 2.1745841193620303,
+            "complete_positions": 38,
+            "win_rate_pct": null,
+            "cost_usd": 3.580000000000002
+          },
+          "baseline": {
+            "net_usd": 58.98,
+            "equity_dd_usd": 17.52,
+            "max_relative_equity_dd_pct": 3.1,
+            "profit_factor_complete_positions": 1.8686303387334313,
+            "complete_positions": 42,
+            "cost_usd": 3.840000000000002,
+            "win_rate_pct": null
+          },
+          "delta": {
+            "net_usd": 9.51,
+            "equity_dd_usd": 0,
+            "max_relative_equity_dd_pct": -0.05,
+            "complete_positions": -4,
+            "profit_factor_complete_positions": 0.305954
+          }
+        }
+      }
+    }
+  ],
+  "notes": [
+    "RETAIN/NUMERIC_RULE_MET never says the candidate passed validation; \"all audit deviations explained\" is a Codex review item, not computed here.",
+    "June and August are independent USD500 accounts and are never added.",
+    "Score N/A (SCORE_TARGETS_UNSET); no OOS/Champion/live claim."
+  ]
+}

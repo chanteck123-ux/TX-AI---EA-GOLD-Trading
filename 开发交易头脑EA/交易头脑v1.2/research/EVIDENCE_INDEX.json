@@ -1,9 +1,9 @@
 {
   "schema": "TRADINGBRAIN_PLAN_EVIDENCE_V1",
-  "checked_on": "2026-10-09",
+  "checked_on": "2026-10-12",
   "timezone": "Asia/Kuala_Lumpur",
   "base_repository_commit": "5718ef82fab53f6a97e047b5b6330cb6636508ff",
-  "scope": "HISTORICAL_EVIDENCE_PRESERVED_PLUS_I12_NATIVE_CHALLENGER_RESEARCH_AND_VERIFIED_LOCAL_SUPPLEMENT",
+  "scope": "HISTORICAL_EVIDENCE_PRESERVED_PLUS_I18_SEVEN_STRATEGY_NATIVE_RESEARCH",
   "source_workspace_local": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5",
   "source_reports": [
     {
@@ -533,5 +533,46 @@
     "raw_native_data_published": false,
     "delivery_local_only": true,
     "source_ex5_zip_republished": false
+  },
+  "iteration18": {
+    "files": [
+      {
+        "path": "evidence/MT5_ITERATION18_SEVEN_20261011_CN.md",
+        "sha256": "b093dac723a1c50c0f1c87441556b9a8805efb06ab5712a6c804344a70eaab45"
+      },
+      {
+        "path": "evidence/MT5_ITERATION18_SEVEN_20261011_EN.md",
+        "sha256": "d2dc981c811db70d5eacdbdf4536a4b75fe510674821d41492de9e80596f721e"
+      },
+      {
+        "path": "evidence/MT5_ITERATION18_RESULTS_20261011.json",
+        "sha256": "5fbeb0836d76ce940e8a0a9b61c37a23179473a1d8119b070a512f080437effe"
+      },
+      {
+        "path": "evidence/MT5_ITERATION18_CODEX_REVIEW_20261012.json",
+        "sha256": "f7704ae8d577356eec703bc0695188d5abc124e2def4fbe69c09b1bc71579c4b"
+      },
+      {
+        "path": "evidence/MT5_ITERATION18_CLAUDE_REVIEW_20261011_CN.md",
+        "sha256": "910a5a0b3919cdec0444b77b5e64f8a60981e5d1268fdc424aaeae442e50a6a7"
+      },
+      {
+        "path": "evidence/MT5_ITERATION18_DELIVERY_20261012.json",
+        "sha256": "865a26a76449bb8bf137d080a798e87e2f3a60fb632e85baf8a585ec8d18b7f9"
+      },
+      {
+        "path": "evidence/MT5_ITERATION18_SELECTION_20261012.json",
+        "sha256": "3c2d5371836b65c6baa3b917db78f41b0fba0dc80edebee26bbbc0d4e31475ce"
+      },
+      {
+        "path": "evidence/MT5_ITERATION18_RAW_COMPARISON_20261011.csv",
+        "sha256": "47b39001ded0d9b246503bd324777e1d55f82d4a85dbb6841ff09ef6e377b9fd"
+      }
+    ],
+    "delivery_zip_sha256": "a3e8abde9b16d4e9a47b59d6600573eeeb0c84b3378596686fa0cacd19f91e4b",
+    "delivery_local_only": true,
+    "raw_native_data_published": false,
+    "source_ex5_zip_republished": false,
+    "status": "COMPLETED_RESEARCH_BATCH_REVIEWED_NOT_CHAMPION"
   }
 }

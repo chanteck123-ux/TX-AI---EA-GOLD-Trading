@@ -1,0 +1,11 @@
+{
+  "schema": "I18_CODEX_DOTNET_ZIP_READBACK_V1",
+  "review_on": "2026-10-12",
+  "status": "PASS_ALL_MEMBERS",
+  "zip_sha256": "a3e8abde9b16d4e9a47b59d6600573eeeb0c84b3378596686fa0cacd19f91e4b",
+  "members": 1163,
+  "payload_hashes_checked": 1161,
+  "manifest_and_sums_checked": 2,
+  "reader": "System.IO.Compression.ZipArchive independent of Node writer/reader",
+  "zip_bytes": 53086596
+}

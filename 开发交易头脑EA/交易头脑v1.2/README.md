@@ -26,7 +26,7 @@
 
 后续实际开发沿用原 `v1-2-ea-mt5` 工作区及固定 MT5 终端。本次没有把本地全部 EA 源码、EX5 或大包重新公开到 GitHub，没有创建空壳交易程序。跨电脑协作先取得已授权的匹配交付包并核对哈希；仅拿到这份骨架时，可审计划与报告，不声称已能编译 EA。
 
-2026-10-10 最新实际研究 I17：Claude编写延后成本保本3.5／4.0候选，Codex完成2次干净编译、4次真实Tick250ms测试与严格核验，Claude独立复算一致。T35六月/八月净USD -47.37/48.62；T40 -59.00/48.84；六月比2.5触发C1F多亏18.80/30.43，回撤增加。少截赢家同时失去救损，两者未胜出，保留C1F/P0及I15恢复点。4.0八月一次修改失败因原TP先平仓，事件留档、未记为保护生效。两个独立500USD开发账户不相加，N/A，无OOS/Champion/部署，S1–S6未重测。默认MQ5及匹配EX5已封包、TESTER_ONLY。见[完整成绩](research/evidence/MT5_ITERATION17_SCALPING_20261010_CN.md)、[Claude复审](research/evidence/MT5_ITERATION17_CLAUDE_REVIEW_20261010_CN.md)、[交付哈希](research/evidence/MT5_ITERATION17_DELIVERY_20261010.json)。
+2026-10-10 历史研究 I17：Claude编写延后成本保本3.5／4.0候选，Codex完成2次干净编译、4次真实Tick250ms测试与严格核验，Claude独立复算一致。T35六月/八月净USD -47.37/48.62；T40 -59.00/48.84；六月比2.5触发C1F多亏18.80/30.43，回撤增加。少截赢家同时失去救损，两者未胜出，保留C1F/P0及I15恢复点。4.0八月一次修改失败因原TP先平仓，事件留档、未记为保护生效。两个独立500USD开发账户不相加，N/A，无OOS/Champion/部署，S1–S6未重测。默认MQ5及匹配EX5已封包、TESTER_ONLY。见[完整成绩](research/evidence/MT5_ITERATION17_SCALPING_20261010_CN.md)、[Claude复审](research/evidence/MT5_ITERATION17_CLAUDE_REVIEW_20261010_CN.md)、[交付哈希](research/evidence/MT5_ITERATION17_DELIVERY_20261010.json)。
 
 2026-10-10 历史实际研究 I16：Claude编写固定手数诊断候选，Codex完成2次干净编译、4次真实Tick250ms回测及严格核验，Claude独立复审一致。同0.01手，六月原退出/C1F净USD -63.79/-28.57（改善35.22）；八月59.02/48.75（少赚10.27）。六月仍亏，保本没有全面改善；保留原版与I15 C1。本轮S1–S6未重测，两个独立500USD开发账户不相加，评分N/A；无OOS、Champion或部署。MQ5默认配置及匹配EX5已封包，仅用于测试器。见[完整成绩](research/evidence/MT5_ITERATION16_SCALPING_20261010_CN.md)、[Claude复审](research/evidence/MT5_ITERATION16_CLAUDE_REVIEW_20261010_CN.md)、[交付哈希](research/evidence/MT5_ITERATION16_DELIVERY_20261010.json)。
 
@@ -53,3 +53,7 @@
 历史第八轮测试：第八轮S5请求终态修复已完成，编译0错误/0警告，5场原生测试全部严格核账通过。交易逻辑与1%风险未改；四场为六月/八月0、250ms，八月1000ms另列故障复现。当前测试杠杆1:1000；保证金率/Stop Out及真实成本仍未校准，不能据此证明500美元实盘承受能力。
 
 查看[第八轮成绩](research/evidence/MT5_ITERATION8_S5_RESULTS_20261004_CN.txt)、[复审](research/evidence/MT5_ITERATION8_FINAL_REVIEW_20261004.json)和[交付身份](research/evidence/MT5_ITERATION8_DELIVERY_RECEIPT_20261004.json)。旧[第七轮失败与延迟证据](research/evidence/MT5_ITERATION7_DELAY_20261003_CN.md)和[第六轮恢复依据](research/evidence/MT5_ITERATION6_20261002_CN.md)保留。新旧MQ5/EX5和完整包在本地工作区；本次不公开重传EA源码、二进制或原始成交。均为已用开发数据，尚无独立验证、连续组合、提款或实盘盈利证明。
+
+2026-10-12 I18交付复审完成（原始批次2026-10-11）：七套干净编译、14场500USD/GOLD-M5/真实Tick/250ms测试及匹配核对。S1–S6新候选未胜过两月保留规则，原版保留；Scalping在I15 C1自动风险手数基础上限制点差20 Point，净USD六月-22.60、八月+68.49，分别改善5.97、9.51，回撤不增加，仅保留为开发期较优候选。六月仍亏，N/A，无0ms/成本压力/独立OOS/Champion/Demo/实盘。53MB本地交付ZIP的1163成员已独立回读；源默认值与EX5匹配，恢复点保留。见[中文结论及澄清](research/evidence/MT5_ITERATION18_SEVEN_20261011_CN.md)、[English](research/evidence/MT5_ITERATION18_SEVEN_20261011_EN.md)、[原始指标差额](research/evidence/MT5_ITERATION18_RAW_COMPARISON_20261011.csv)、[当前研究选择](research/evidence/MT5_ITERATION18_SELECTION_20261012.json)。
+
+I18接续经验：S1过严斜率会删掉赢单；S2背景门变化不等于新成交；S3较便宜价格可能伴随突破失效；S4匹配交易净差不能等同纯保本效应；S5延后检查的亏损可在第二根前发生；S6的H4 ATR距离13.5–26.4R而无保护收紧；Scalping点差与夜间时段混杂，手数路径也影响收益。缺错误文件不证明零异常，EA超预算平仓不是券商Stop Out。后续新方案仍需登记、新回测和保留证据。

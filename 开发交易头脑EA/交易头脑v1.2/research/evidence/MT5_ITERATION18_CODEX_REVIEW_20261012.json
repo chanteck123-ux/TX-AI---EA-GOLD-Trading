@@ -1,0 +1,198 @@
+{
+  "schema": "I18_CODEX_FINAL_REVIEW_V1",
+  "delivery_review_on": "2026-10-12",
+  "batch_on": "2026-10-11",
+  "status": "COMPLETED_RESEARCH_BATCH_NOT_CHAMPION",
+  "compiled_candidates": 7,
+  "native_main250": 14,
+  "compile_repairs": 0,
+  "native_repairs": 0,
+  "delay0": 0,
+  "verified_arms": [
+    {
+      "sid": "S1",
+      "month": "JUNE",
+      "run_id": "90657B3E",
+      "proof": {
+        "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration18_20261011\\Claude\\exec\\S1_JUNE_D250\\verification\\2026-10-11T08-45-46-511Z\\VERIFICATION.json",
+        "sha256": "1061e4871034a61224126c33cc38678ca92e272be7e86977bd67983f2f36fd2f"
+      },
+      "source_sha256": "877a801ff415568e207b7395ff9987f27d49284389299cd728c2fb8345e2eecc",
+      "ex5_sha256": "aefa9d4b74e16efc7e44df92d63721e80aea41c0441254b360f6c53c6574bb5c",
+      "binding_checked": true
+    },
+    {
+      "sid": "S1",
+      "month": "AUG",
+      "run_id": "202EB84D",
+      "proof": {
+        "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration18_20261011\\Claude\\exec\\S1_AUG_D250\\verification\\2026-10-11T08-48-29-128Z\\VERIFICATION.json",
+        "sha256": "5263cb2ec27e9ec2b95e21ad2df02585980a6015dfc630285d83572ca1702d5c"
+      },
+      "source_sha256": "877a801ff415568e207b7395ff9987f27d49284389299cd728c2fb8345e2eecc",
+      "ex5_sha256": "aefa9d4b74e16efc7e44df92d63721e80aea41c0441254b360f6c53c6574bb5c",
+      "binding_checked": true
+    },
+    {
+      "sid": "S2",
+      "month": "JUNE",
+      "run_id": "317CC9E0",
+      "proof": {
+        "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration18_20261011\\Claude\\exec\\S2_JUNE_D250\\verification\\2026-10-11T08-51-34-164Z\\VERIFICATION.json",
+        "sha256": "56625b308e4440db0d53f8eca4babc54ae55b8a5d978c3ea28cb83ddceba110f"
+      },
+      "source_sha256": "501d029627bcdf10216e5ace4e4eb5776113f5f3115607b27c41355535d43c60",
+      "ex5_sha256": "7f5268591e3a661251234679ee5aa67bdea25c8f648dd79a5511f7a946a900c7",
+      "binding_checked": true
+    },
+    {
+      "sid": "S2",
+      "month": "AUG",
+      "run_id": "F5CDDBE1",
+      "proof": {
+        "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration18_20261011\\Claude\\exec\\S2_AUG_D250\\verification\\2026-10-11T08-54-08-181Z\\VERIFICATION.json",
+        "sha256": "af7b1c544e24971b16041724c880b09b322c25d4984bf106ca1b07bc226dd2e7"
+      },
+      "source_sha256": "501d029627bcdf10216e5ace4e4eb5776113f5f3115607b27c41355535d43c60",
+      "ex5_sha256": "7f5268591e3a661251234679ee5aa67bdea25c8f648dd79a5511f7a946a900c7",
+      "binding_checked": true
+    },
+    {
+      "sid": "S3",
+      "month": "JUNE",
+      "run_id": "33C01B76",
+      "proof": {
+        "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration18_20261011\\Claude\\exec\\S3_JUNE_D250\\verification\\2026-10-11T08-56-51-067Z\\VERIFICATION.json",
+        "sha256": "c70c2f62749195d9cfc38f49479f1896ea31932dfc623c2fd4030c1ebb1776d8"
+      },
+      "source_sha256": "4cb60e6dd3d0ecad793dc006f60834d41066fb536ab42fed3c9fac8e74949e51",
+      "ex5_sha256": "6c0a1439b68e6d42196d6ec2bb82b8be1278fb8bb87cafa1840b73a9e367f05b",
+      "binding_checked": true
+    },
+    {
+      "sid": "S3",
+      "month": "AUG",
+      "run_id": "A630FE24",
+      "proof": {
+        "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration18_20261011\\Claude\\exec\\S3_AUG_D250\\verification\\2026-10-11T08-59-11-526Z\\VERIFICATION.json",
+        "sha256": "c8c905496dcccbe8b59e6947219af76c472351e80c3c848e7ea386cb1b2ffae3"
+      },
+      "source_sha256": "4cb60e6dd3d0ecad793dc006f60834d41066fb536ab42fed3c9fac8e74949e51",
+      "ex5_sha256": "6c0a1439b68e6d42196d6ec2bb82b8be1278fb8bb87cafa1840b73a9e367f05b",
+      "binding_checked": true
+    },
+    {
+      "sid": "S4",
+      "month": "JUNE",
+      "run_id": "8214ECCF",
+      "proof": {
+        "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration18_20261011\\Claude\\exec\\S4_JUNE_D250\\verification\\2026-10-11T09-02-27-816Z\\VERIFICATION.json",
+        "sha256": "f2682a670c47ffa156fbfabc4a09b127ad22e11c4b1b5bf59cd428c63bb7b47d"
+      },
+      "source_sha256": "6139181ae903115dc00aab7a86ca770686d1947f8c6ae509278d738b5bd7c583",
+      "ex5_sha256": "2e4c03d297548f2c6412b217d34260bf0f9ab79139135a7508371b4024e92873",
+      "binding_checked": true
+    },
+    {
+      "sid": "S4",
+      "month": "AUG",
+      "run_id": "E24F5EA6",
+      "proof": {
+        "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration18_20261011\\Claude\\exec\\S4_AUG_D250\\verification\\2026-10-11T09-05-23-419Z\\VERIFICATION.json",
+        "sha256": "b381badd55e094da291f0351b8429337bd9ebfc44e2c3bbb80dba1d76b4b2297"
+      },
+      "source_sha256": "6139181ae903115dc00aab7a86ca770686d1947f8c6ae509278d738b5bd7c583",
+      "ex5_sha256": "2e4c03d297548f2c6412b217d34260bf0f9ab79139135a7508371b4024e92873",
+      "binding_checked": true
+    },
+    {
+      "sid": "S5",
+      "month": "JUNE",
+      "run_id": "F9B97134",
+      "proof": {
+        "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration18_20261011\\Claude\\exec\\S5_JUNE_D250\\verification\\2026-10-11T09-08-29-993Z\\VERIFICATION.json",
+        "sha256": "c6af6bde317178ef74f3cf8dc8726487683f2ca371527c275191edbbaad58dd8"
+      },
+      "source_sha256": "3ac3510a82b837c5f8df0bfff6f82041ea1821cb409a2fbd804802bbc16c30c0",
+      "ex5_sha256": "f7389fe48fcd8bc82946afac1c40d5690a8260448cca26dcec1e2b8cf0079211",
+      "binding_checked": true
+    },
+    {
+      "sid": "S5",
+      "month": "AUG",
+      "run_id": "4AE14FBF",
+      "proof": {
+        "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration18_20261011\\Claude\\exec\\S5_AUG_D250\\verification\\2026-10-11T09-11-24-036Z\\VERIFICATION.json",
+        "sha256": "dee17b05fb5f097ba52cd1f314e8143e13ec5f7dfdec4a3d75585240bab54e17"
+      },
+      "source_sha256": "3ac3510a82b837c5f8df0bfff6f82041ea1821cb409a2fbd804802bbc16c30c0",
+      "ex5_sha256": "f7389fe48fcd8bc82946afac1c40d5690a8260448cca26dcec1e2b8cf0079211",
+      "binding_checked": true
+    },
+    {
+      "sid": "S6",
+      "month": "JUNE",
+      "run_id": "6FE6FEC5",
+      "proof": {
+        "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration18_20261011\\Claude\\exec\\S6_JUNE_D250\\verification\\2026-10-11T09-14-07-635Z\\VERIFICATION.json",
+        "sha256": "951d54dbcf57d6b8bab9b8cac4a2afdb234deddd74f20ffa5e80b3b0fcbd28c0"
+      },
+      "source_sha256": "286a26ef0a29ee7dd31dd5ceab728fdb59407098b67e6c107216736d7c3c0653",
+      "ex5_sha256": "7435cc353920d4a9ccdeafcafb1b4522beac56681c4b78bc98e1972c710e7146",
+      "binding_checked": true
+    },
+    {
+      "sid": "S6",
+      "month": "AUG",
+      "run_id": "A38B29D9",
+      "proof": {
+        "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration18_20261011\\Claude\\exec\\S6_AUG_D250\\verification\\2026-10-11T09-16-27-495Z\\VERIFICATION.json",
+        "sha256": "08b77ba44319315921d2c8f41238d05afdfb6e4cabf85922e82476f5ffaa80aa"
+      },
+      "source_sha256": "286a26ef0a29ee7dd31dd5ceab728fdb59407098b67e6c107216736d7c3c0653",
+      "ex5_sha256": "7435cc353920d4a9ccdeafcafb1b4522beac56681c4b78bc98e1972c710e7146",
+      "binding_checked": true
+    },
+    {
+      "sid": "Scalping",
+      "month": "JUNE",
+      "run_id": "SCALPI1820261011_S20_JUNE_DELAY250_efa681b8",
+      "proof": {
+        "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration18_20261011\\Claude\\exec\\Scalping\\VERIFICATION_S20_JUNE_DELAY250.json",
+        "sha256": "7def4780816456a6e7f8770bd116cf6efbb1cc058b26ea83f296e999905f0ec3"
+      },
+      "source_sha256": "41f443dd4ee26c495354f3955d7931be92e3b09c1e70458fbbf1a446baef4f2f",
+      "ex5_sha256": "6e53ed697aefe084e4d79fdf79c6e2b68abcac3b5198b544d1cf39bf18c10060",
+      "binding_checked": true
+    },
+    {
+      "sid": "Scalping",
+      "month": "AUG",
+      "run_id": "SCALPI1820261011_S20_AUGUST_DELAY250_905a99f0",
+      "proof": {
+        "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration18_20261011\\Claude\\exec\\Scalping\\VERIFICATION_S20_AUGUST_DELAY250.json",
+        "sha256": "27c3c89c94bef574b77d291c06c38107259dc3974db1506cb00a284dcb514ef6"
+      },
+      "source_sha256": "41f443dd4ee26c495354f3955d7931be92e3b09c1e70458fbbf1a446baef4f2f",
+      "ex5_sha256": "6e53ed697aefe084e4d79fdf79c6e2b68abcac3b5198b544d1cf39bf18c10060",
+      "binding_checked": true
+    }
+  ],
+  "scalping_retain": "TB500_Scalping_SPREAD20_I18",
+  "s1_s6_retain": "I11 selected baselines",
+  "audit_deviations_explained_for_development_selection": true,
+  "capital_risk_fully_validated": false,
+  "source_changes_by": "Claude Code",
+  "execution_by": "Codex",
+  "review": "Claude Code report recomputation and Codex review; not blind external audit",
+  "claude_final_review_sha256": "f75448359b97ff01032712a9d3964eb03ac8054c07d0adce9115503ffa65656f",
+  "codex_review_sha256": "b093dac723a1c50c0f1c87441556b9a8805efb06ab5712a6c804344a70eaab45",
+  "selected_versions_sha256": "3c2d5371836b65c6baa3b917db78f41b0fba0dc80edebee26bbbc0d4e31475ce",
+  "score": "N/A_SCORE_TARGETS_UNSET",
+  "cost_pressure": false,
+  "independent_oos": false,
+  "champion": false,
+  "demo": false,
+  "live": false,
+  "lean_run": false
+}

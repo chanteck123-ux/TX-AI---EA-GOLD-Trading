@@ -1,0 +1,79 @@
+[
+  {
+    "sid": "S1",
+    "candidate_id": "TB500_S1_TRIGGER_M5_SL_R2",
+    "role": "BASELINE_RETAINED",
+    "source_sha256": "05d1efc953ae8ef24779e738e4cde7b37095bede5217576cb301c8185f85eb67",
+    "ex5_sha256": "3a4bc73c5c4d2e9350090a5566672451724856c5033e808ce472d06502da7175",
+    "compile_log_sha256": "af66bae4a82e313f760449fc818c5a00e2d082418d273ca6c4d9ea88e3ff102a",
+    "risk_pct": 1,
+    "scope": "RESEARCH_ONLY_NOT_CHAMPION_NOT_LIVE",
+    "relative_directory": "MT5_Current_Research/S1"
+  },
+  {
+    "sid": "S2",
+    "candidate_id": "TB500_S2_PROGRESS_RISK2_BE1_I11",
+    "role": "BASELINE_RETAINED",
+    "source_sha256": "734d447ead4b90b092be2c397784ae7b3d3e0d9cdea839d877f73f834d815eab",
+    "ex5_sha256": "f25d3592bce56dc1eb1ad1d13d4f9fa04ef7b97664a07aef7f3b6ec76a6bd672",
+    "compile_log_sha256": "06bccabda190921a7be981acbabb892a2c282b42accb1429c0f6256fb4cb07cb",
+    "risk_pct": 2,
+    "scope": "RESEARCH_ONLY_NOT_CHAMPION_NOT_LIVE",
+    "relative_directory": "MT5_Current_Research/S2"
+  },
+  {
+    "sid": "S3",
+    "candidate_id": "TB500_S3_H1_SLOPE_PRICE",
+    "role": "BASELINE_RETAINED",
+    "source_sha256": "0f2901565718506bbdb3f344ceaab572bfef01e08efef8e28b12fcedff728f54",
+    "ex5_sha256": "fb9c30c97feb993ce115e6f225bc8097b7e664958ad03a0ce3d2f75aa6ee9615",
+    "compile_log_sha256": "4f7f7826f7f112f817bbde79aa1e076fb90fe920aba70b583e04e3f9073cdcc8",
+    "risk_pct": 1,
+    "scope": "RESEARCH_ONLY_NOT_CHAMPION_NOT_LIVE",
+    "relative_directory": "MT5_Current_Research/S3"
+  },
+  {
+    "sid": "S4",
+    "candidate_id": "TB500_S4_BE125",
+    "role": "BASELINE_RETAINED",
+    "source_sha256": "f6abe1abc8d9cfca27e6483f344aab03110b9df11b8d1b458e3fce432d63be47",
+    "ex5_sha256": "dfc67a50a6fe7cc4ec297ad4d59017409bafe4244dadcbf18d410568d474bbfc",
+    "compile_log_sha256": "73cd23dfd365261145144acb912965793a502ec5c3cc0eb0d15e7d1f36f06dab",
+    "risk_pct": 2,
+    "scope": "RESEARCH_ONLY_NOT_CHAMPION_NOT_LIVE",
+    "relative_directory": "MT5_Current_Research/S4"
+  },
+  {
+    "sid": "S5",
+    "candidate_id": "TB500_S5_REQUEST_FINALITY_V1",
+    "role": "BASELINE_RETAINED",
+    "source_sha256": "631ef2c3ce325fa2ec279766ce4c907f4d5a107509688f247fd2e3d99c2d99a1",
+    "ex5_sha256": "e519d018f0732d92063ea75ffe9c84ed7cd5fdd0bcf5606677043890b984e9dc",
+    "compile_log_sha256": "db3e6b7d6d3c770604ef44614748eeb3acda3d9a7132217428c547232f3b8605",
+    "risk_pct": 1,
+    "scope": "RESEARCH_ONLY_NOT_CHAMPION_NOT_LIVE",
+    "relative_directory": "MT5_Current_Research/S5"
+  },
+  {
+    "sid": "S6",
+    "candidate_id": "TB500_S6_DISTINCT_TRIGGER_BE1",
+    "role": "BASELINE_RETAINED",
+    "source_sha256": "956d2fec9c809b8cb60b879a7868e08b3b2114e8e7b384347777617becaf4bdf",
+    "ex5_sha256": "47c2a6d51306f6465746f274a52164a76dec1fc6264386cef1734cfe631ae3d0",
+    "compile_log_sha256": "1792deb617c93f61398a622a9ec99292a0cdede041f0ed1d41ce7bc0559faf9f",
+    "risk_pct": 1,
+    "scope": "RESEARCH_ONLY_NOT_CHAMPION_NOT_LIVE",
+    "relative_directory": "MT5_Current_Research/S6"
+  },
+  {
+    "sid": "Scalping",
+    "candidate_id": "TB500_Scalping_SPREAD20_I18",
+    "role": "DEVELOPMENT_BEST_CANDIDATE_ONLY",
+    "source_sha256": "41f443dd4ee26c495354f3955d7931be92e3b09c1e70458fbbf1a446baef4f2f",
+    "ex5_sha256": "6e53ed697aefe084e4d79fdf79c6e2b68abcac3b5198b544d1cf39bf18c10060",
+    "compile_log_sha256": "8c718af077dfe857f295a6ac1ea06a6c7eb6edc7c58cd5c9b0296834987d35c6",
+    "risk_pct": 2,
+    "scope": "RESEARCH_ONLY_NOT_CHAMPION_NOT_LIVE",
+    "relative_directory": "MT5_Current_Research/Scalping"
+  }
+]
