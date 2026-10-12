@@ -1420,12 +1420,14 @@
     "unit_skip": 1,
     "unit_fail": 0,
     "stdio_checks_passed": 54,
-    "lean_status": "STARTUP_BLOCKED_NO_ALGORITHM_RUN",
+    "lean_status": "ENGINE_SMOKE_COMPLETED_NO_GOLD_STRATEGY_VALIDATION",
     "lean_failed_assembly": "QuantConnect.Messaging.dll",
     "error": "0x800711C7",
     "migration": "SEVEN_PLANNED_NOT_COMPLETED",
     "evidence": "LEAN_MCP_20261012/CODEX_FINAL_REVIEW.json",
     "source": "../tools/mcp_monitor/server.py",
-    "live_changes": false
+    "live_changes": false,
+    "engine_recovery_evidence": "LEAN_MCP_20261012/lean_probe_02/RUN_RECEIPT.json",
+    "s4_migration_status": "CLAUDE_SOURCE_REVIEW_AND_IMPLEMENTATION_IN_PROGRESS"
   }
 }

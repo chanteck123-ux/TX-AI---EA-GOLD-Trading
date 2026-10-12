@@ -1,0 +1,21 @@
+{
+  "hashes": {
+    "console.log": "aa921c9ecfed04e5fd7120961608567f626c265334e13c1cb1a1f16767f19608",
+    "config.json": "722ba1ecefc24293c73ea65d3224a31ce9d335d653fe376577cb65c07ae1ba39",
+    "LEAN_ENGINE_PROBE_02_20261012.json": "a6ee4b9d6f0b6ca27472df0095c7c39a26cd369661617aa948d2bbc079fc413b",
+    "LEAN_ENGINE_PROBE_02_20261012-summary.json": "fe171c70ab67c034be469765c8fcc942e9b3399f8445686a9aad6a2b42ef97c6"
+  },
+  "gold_strategy_validated": false,
+  "smart_app_control_observed_state": 0,
+  "runtime_error": "",
+  "status": "COMPLETED",
+  "algorithm_status": "Completed",
+  "scope": "OFFICIAL_CSHARP_ENGINE_SMOKE_NOT_GOLD_STRATEGY",
+  "security_settings_changed_by_codex": false,
+  "process_exit_code": 0,
+  "algorithm": "BasicTemplateFrameworkAlgorithm",
+  "observed_utc": "2026-10-12T08:36:56.2853208Z",
+  "data_requests_failed": 0,
+  "orders": "3",
+  "data_requests_succeeded": 13
+}

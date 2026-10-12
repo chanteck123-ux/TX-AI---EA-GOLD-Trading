@@ -1,0 +1,11 @@
+{
+  "declared_rows": 20513403,
+  "status": "HASHES_MATCH_EXISTING_DATA_MANIFESTS",
+  "tick_archives": 26,
+  "exposure": "AUGUST_2026_PREVIOUSLY_USED_DEVELOPMENT",
+  "hash_mismatches": [],
+  "native_bar_files": 6,
+  "observed_utc": "2026-10-12T08:42:47.3451337Z",
+  "tick_manifest_sha256": "9a3926c75890be2a0d54537cfe1b31f37fd1209ca04291ce9064172551cd117f",
+  "scope": "FILE_HASH_RECHECK_ONLY_NOT_NEW_ROW_LEVEL_OR_DATA_QUALITY_AUDIT"
+}
