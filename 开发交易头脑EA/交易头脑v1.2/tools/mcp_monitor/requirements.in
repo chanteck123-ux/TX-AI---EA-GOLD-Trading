@@ -1,0 +1,2 @@
+# Direct dependency only (lock: requirements.lock.txt)
+mcp>=1.30,<2

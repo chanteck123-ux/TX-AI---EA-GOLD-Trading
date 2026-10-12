@@ -2,3 +2,5 @@
 docs/history/** -text -filter
 开发交易头脑EA/交易头脑v1.2/docs/history/** -text -filter
 开发交易头脑EA/交易头脑v1.2/research/evidence/** -text -filter
+开发交易头脑EA/交易头脑v1.2/tools/mcp_monitor/** -text -filter
+开发交易头脑EA/交易头脑v1.2/research/LEAN_MCP_20261012/** -text -filter

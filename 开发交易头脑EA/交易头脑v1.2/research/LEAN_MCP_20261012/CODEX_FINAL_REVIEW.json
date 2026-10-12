@@ -1,0 +1,104 @@
+{
+  "lean": "STARTUP_BLOCKED_NO_ALGORITHM_EXECUTION",
+  "source_hash_checks": [
+    {
+      "file": "server.py",
+      "sha256": "4b8134edfa43b92e90673e84020e376daaeacfee99cf7e6990f9b44399a0412f",
+      "matches": true
+    },
+    {
+      "file": "monitor_core.py",
+      "sha256": "888361aca43f5349bea8c5085ad4275608789d8e6fef76bfa361d8b998b20e22",
+      "matches": true
+    },
+    {
+      "file": "test_monitor.py",
+      "sha256": "37d6f5eed21b0d67fed0153899ba6527389f79f08f489d02d17f867e0c919900",
+      "matches": true
+    },
+    {
+      "file": "verify_stdio_client.py",
+      "sha256": "676bd0f407063669502ccea8328afd06dbdc461389d389629f4219ff293e8507",
+      "matches": true
+    },
+    {
+      "file": "LEAN_MIGRATION_MAP.json",
+      "sha256": "d81ca9b09602918dca9b5f26c1c35720dbbc92638bb6528bc6be4244ac7edcda",
+      "matches": true
+    },
+    {
+      "file": "requirements.in",
+      "sha256": "16c5c812609aba9a10fff0b9b47b9a3379f71392d7a54a75e22f868a620a66b2",
+      "matches": true
+    },
+    {
+      "file": "requirements.lock.txt",
+      "sha256": "622a36f2937cf888037fac520f0f92ab8ccd125632e2302f0f4755a526f0ec2a",
+      "matches": true
+    },
+    {
+      "file": "README_CN.md",
+      "sha256": "d24ebba12666fc0d1a5b43e71fa72b52677e6ffaafe6f04a2652121af7972438",
+      "matches": true
+    },
+    {
+      "file": "CLAUDE_REVIEW_CN.md",
+      "sha256": "ca0c5c1e6eb8446790a54bcfa02b0e1a78e3f5383c4d0b730366815ab48f12bf",
+      "matches": true
+    },
+    {
+      "file": "config_samples/codex_config.toml",
+      "sha256": "f311232c201455d9c7007ed9f4dd65d4851bf58c689edeabdef4f2cd882bf9db",
+      "matches": true
+    },
+    {
+      "file": "config_samples/claude_code_mcp.json",
+      "sha256": "2390679f1175eb98cd294b199b464f54485c31dffe18382577ad0d99187f61a3",
+      "matches": true
+    },
+    {
+      "file": "verification/CLAUDE_UNITTEST_3.txt",
+      "sha256": "e0acfe76ba69fba42f978a41e8972a3bb668dde36f367266f6e42c96fdd652a2",
+      "matches": true
+    },
+    {
+      "file": "verification/CLAUDE_SELF_CHECK_STDIO_3.json",
+      "sha256": "180422c2cfe06dde1c8d2bd3397526ca5ff1f9a0f0a36cb432319cdd60b917f7",
+      "matches": true
+    },
+    {
+      "file": "verification/CLAUDE_UNITTEST_1_RACE_FAILURE_kept.txt",
+      "sha256": "1362624939cd2c1525d64ba4737125832538ac427ee7bfc851e03be768e16d74",
+      "matches": true
+    }
+  ],
+  "schema": "TB_MONITOR_CODEX_FINAL_V1",
+  "score": "N/A SCORE_TARGETS_UNSET",
+  "security_policy_changes": false,
+  "strategies": "SEVEN_REFERENCE_HASHES_MATCH_MIGRATION_PLANNED_NOT_IMPLEMENTED",
+  "limitations": [
+    "On-demand MCP reads; no automatic idle coding or live hot update",
+    "No OS process liveness; observed log growth only",
+    "Tail-window truncation explicitly labelled",
+    "Symlink creation permission unavailable; junction rejection tested"
+  ],
+  "mql5_changes": false,
+  "status": "SERVER_TESTED_CLIENTS_CONFIGURED_RELOAD_PENDING",
+  "version": "1.2.0",
+  "lean_error": "0x800711C7",
+  "lean_failed_assembly": "QuantConnect.Messaging.dll",
+  "codex_client": "CONFIGURED_NOT_LOADED_THIS_SESSION",
+  "claude_client": "CONFIGURED_LOAD_NOT_VERIFIED",
+  "unit_tests": {
+    "passed": 30,
+    "failed": 0,
+    "total": 31,
+    "log": "CODEX_UNIT_TEST_V1_2.log",
+    "skipped": 1
+  },
+  "stdio": {
+    "checks": 54,
+    "passed": true,
+    "evidence": "CODEX_STDIO_V1_2.json"
+  }
+}

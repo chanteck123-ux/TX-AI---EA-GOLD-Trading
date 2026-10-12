@@ -1,0 +1,2111 @@
+{
+  "schema": "TB_MONITOR_STDIO_CHECK_V1",
+  "label": "CODEX_INDEPENDENT_V1_2_FINAL",
+  "started_utc": "2026-10-12T08:20:13+00:00",
+  "client_python": "3.12.14",
+  "server_command": [
+    "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\lean_mcp_20261012\\monitor\\.venv\\Scripts\\python.exe",
+    "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\lean_mcp_20261012\\monitor\\server.py"
+  ],
+  "calls": [
+    {
+      "tool": "health",
+      "arguments": {},
+      "ms": 55,
+      "is_error": false,
+      "response": {
+        "tool": "health",
+        "observed_utc": "2026-10-12T08:20:14+00:00",
+        "platform": {
+          "os": "Windows-11-10.0.26300-SP0",
+          "python": "3.12.14",
+          "pid": 17944
+        },
+        "server_version": "1.2.0",
+        "ok": true,
+        "result": {
+          "server": "tb-lean-monitor",
+          "version": "1.2.0",
+          "mcp_sdk": "1.30.0",
+          "uptime_seconds": 0.1,
+          "roots": {
+            "workspace": {
+              "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5",
+              "exists": true,
+              "reparse_point": false
+            },
+            "mt5_common_files": {
+              "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\Common\\Files",
+              "exists": true,
+              "reparse_point": false
+            }
+          },
+          "project": {
+            "path": "workspace:work/repair_research/lean_mcp_20261012",
+            "exists": true
+          },
+          "policy": {
+            "read_only": true,
+            "executes_commands": false,
+            "writes_files": false,
+            "sends_orders": false,
+            "changes_configuration": false,
+            "internal_discovery_uses_same_path_policy": true,
+            "mt5_common_files_allowed_prefix_regex": "^(AUDIT_|CAPACITY_|CONTROL_|SCALPI\\d|SCALP20|QC_|QC20|I9_|GSM_|V400|V410|v3\\.20|TB_|TradingBrain)",
+            "denied_directories": [
+              ".claude",
+              ".codex",
+              ".git",
+              ".venv",
+              "__pycache__",
+              "backups",
+              "dotnet_home",
+              "node_modules",
+              "nuget",
+              "private",
+              "venv"
+            ],
+            "max_tail_lines": 400,
+            "max_tail_bytes": 65536,
+            "fresh_seconds": 120.0
+          },
+          "liveness_rule": "A recent write time alone does not show that a process is alive; only growth observed between two calls of this session is reported as progress. The monitor cannot see processes.",
+          "client_loading": "UNKNOWN_TO_SERVER: a successful call proves only this process answered; client configuration is verified separately."
+        }
+      }
+    },
+    {
+      "tool": "research_status",
+      "arguments": {},
+      "ms": 14,
+      "is_error": false,
+      "response": {
+        "tool": "research_status",
+        "observed_utc": "2026-10-12T08:20:14+00:00",
+        "platform": {
+          "os": "Windows-11-10.0.26300-SP0",
+          "python": "3.12.14",
+          "pid": 17944
+        },
+        "server_version": "1.2.0",
+        "ok": true,
+        "result": {
+          "project": "workspace:work/repair_research/lean_mcp_20261012",
+          "project_exists": true,
+          "migration_map": {
+            "parse": "OK",
+            "status": "PLANNED_NOT_IMPLEMENTED"
+          },
+          "stages": {
+            "code": {
+              "state": "NO_RECORD"
+            },
+            "compile": {
+              "state": "NO_RECORD"
+            },
+            "backtest": {
+              "state": "NO_RECORD"
+            },
+            "optimize": {
+              "state": "NO_RECORD"
+            }
+          },
+          "stage_record_scan": {
+            "file": "MISSING"
+          },
+          "strategies": [
+            {
+              "sid": "S4",
+              "priority": 1,
+              "reference": "TB500_S4_BE125 (retained original; I18 BE1.0R candidate not retained)",
+              "lean_source_dir": "workspace:work/repair_research/lean_mcp_20261012/lean/algorithms/S4",
+              "source_files": 0,
+              "source_state": "NOT_STARTED",
+              "source_files_truncated_at_cap": false,
+              "project_lean_runs": 0,
+              "latest_run_status": "NO_RUN"
+            },
+            {
+              "sid": "Scalping",
+              "priority": 2,
+              "reference": "TB500_Scalping_SPREAD20_I18 (development-period best only; I15 C1 is its exact parent)",
+              "lean_source_dir": "workspace:work/repair_research/lean_mcp_20261012/lean/algorithms/Scalping",
+              "source_files": 0,
+              "source_state": "NOT_STARTED",
+              "source_files_truncated_at_cap": false,
+              "project_lean_runs": 0,
+              "latest_run_status": "NO_RUN"
+            },
+            {
+              "sid": "S1",
+              "priority": 3,
+              "reference": "TB500_S1_TRIGGER_M5_SL_R2 (retained)",
+              "lean_source_dir": "workspace:work/repair_research/lean_mcp_20261012/lean/algorithms/S1",
+              "source_files": 0,
+              "source_state": "NOT_STARTED",
+              "source_files_truncated_at_cap": false,
+              "project_lean_runs": 0,
+              "latest_run_status": "NO_RUN"
+            },
+            {
+              "sid": "S2",
+              "priority": 4,
+              "reference": "TB500_S2_PROGRESS_RISK2_BE1_I11 (retained)",
+              "lean_source_dir": "workspace:work/repair_research/lean_mcp_20261012/lean/algorithms/S2",
+              "source_files": 0,
+              "source_state": "NOT_STARTED",
+              "source_files_truncated_at_cap": false,
+              "project_lean_runs": 0,
+              "latest_run_status": "NO_RUN"
+            },
+            {
+              "sid": "S3",
+              "priority": 5,
+              "reference": "TB500_S3_H1_SLOPE_PRICE (retained)",
+              "lean_source_dir": "workspace:work/repair_research/lean_mcp_20261012/lean/algorithms/S3",
+              "source_files": 0,
+              "source_state": "NOT_STARTED",
+              "source_files_truncated_at_cap": false,
+              "project_lean_runs": 0,
+              "latest_run_status": "NO_RUN"
+            },
+            {
+              "sid": "S5",
+              "priority": 6,
+              "reference": "TB500_S5_REQUEST_FINALITY_V1 (retained)",
+              "lean_source_dir": "workspace:work/repair_research/lean_mcp_20261012/lean/algorithms/S5",
+              "source_files": 0,
+              "source_state": "NOT_STARTED",
+              "source_files_truncated_at_cap": false,
+              "project_lean_runs": 0,
+              "latest_run_status": "NO_RUN"
+            },
+            {
+              "sid": "S6",
+              "priority": 7,
+              "reference": "TB500_S6_DISTINCT_TRIGGER_BE1 (retained)",
+              "lean_source_dir": "workspace:work/repair_research/lean_mcp_20261012/lean/algorithms/S6",
+              "source_files": 0,
+              "source_state": "NOT_STARTED",
+              "source_files_truncated_at_cap": false,
+              "project_lean_runs": 0,
+              "latest_run_status": "NO_RUN"
+            }
+          ],
+          "engine_probes": [
+            {
+              "run_dir": "workspace:work/repair_research/lean_mcp_20261012/lean_probe_01",
+              "kind": "LEAN_BACKTEST",
+              "origin": "PROJECT_LEAN",
+              "logs": [
+                {
+                  "file": "workspace:work/repair_research/lean_mcp_20261012/lean_probe_01/log.txt",
+                  "size": 207,
+                  "mtime_utc": "2026-10-12T08:02:49+00:00",
+                  "scanned_bytes": 207,
+                  "scan_window_truncated": false,
+                  "first_observation_this_session": true,
+                  "bytes_since_last_observation": null
+                },
+                {
+                  "file": "workspace:work/repair_research/lean_mcp_20261012/lean_probe_01/console.log",
+                  "size": 2303,
+                  "mtime_utc": "2026-10-12T08:02:49+00:00",
+                  "scanned_bytes": 2303,
+                  "scan_window_truncated": false,
+                  "first_observation_this_session": true,
+                  "bytes_since_last_observation": null
+                }
+              ],
+              "evidence": [
+                {
+                  "file": "workspace:work/repair_research/lean_mcp_20261012/lean_probe_01/console.log",
+                  "reason": "CODE_INTEGRITY_BLOCKED_DLL",
+                  "line": "20261012 08:02:46.219 TRACE:: Composer.LoadPartsSafely(C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\quantconnect_20260920\\vendor\\Lean\\Launcher\\bin\\Release\\QuantConnect.Messaging.dll): Skipping FileLoadException: Could not load file or assembly 'C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\quantconnect_20260920\\vendor\\Lean\\Launcher\\bin\\Release\\Qua"
+                },
+                {
+                  "file": "workspace:work/repair_research/lean_mcp_20261012/lean_probe_01/console.log",
+                  "reason": "UNHANDLED_EXCEPTION",
+                  "line": "Unhandled exception. System.ArgumentException: Unable to locate any exports matching the requested typeName: QuantConnect.Messaging.Messaging. Type: QuantConnect.Interfaces.IMessagingHandler (Parameter 'typeName')"
+                }
+              ],
+              "summaries": [],
+              "run_receipt": {
+                "parse": "MISSING",
+                "status": null
+              },
+              "newest_log_age_seconds": 1045.0,
+              "status": "FAILED",
+              "failure_reasons": [
+                "CODE_INTEGRITY_BLOCKED_DLL",
+                "UNHANDLED_EXCEPTION"
+              ]
+            }
+          ],
+          "engine_probes_total": 1,
+          "engine_probes_truncated": false,
+          "rules": [
+            "All seven strategies are in scope; implementation order below.",
+            "The reference for each strategy is the RETAINED MT5 version (I18 kept every incumbent except Scalping, whose development-period best is S20). I18 candidates that were not retained are not migrated.",
+            "Earlier LEAN work is SIGNAL-LAYER translation only and must not be called a complete migration: quantconnect_20260920 (C7Signals.cs, S1/S4 signals with an engineering order/risk wrapper), lean_500_20260927 (same S1/S4 signals with a 500 USD engineering risk/fill model) and mt5_iteration9_20261004/algorithm (I9 SevenSignalsAlgorithm: signal layer of all seven strategies S1-S6 + Scalping). None of them reproduces the MT5 fill, exit, protection and account-risk lifecycle of the retained versions.",
+            "Comparison order per strategy: (1) clock/time mapping, (2) indicators on native closed bars, (3) zones/structures, (4) signals and gates, (5) risk sizing and portfolio caps, (6) fees/swap, (7) fills/latency and exits. A later layer is compared only after the earlier one matches or its residual difference is explained.",
+            "Any strategy change discovered during migration is a new experiment with its own registration and budget; migration itself must not change MT5 behaviour.",
+            "LEAN currently cannot start on this machine: Windows application control (CodeIntegrity 0x800711C7) blocks QuantConnect DLLs (lean_probe_01). Security policy is not changed and DLLs are not moved, renamed or re-signed to bypass it.",
+            "Score N/A (SCORE_TARGETS_UNSET). I18 MT5 numbers are never LEAN numbers."
+          ],
+          "monitor_rules": [
+            "Status is derived from file content and observed growth; a file existing or a recent mtime never means running or passed.",
+            "I18 MT5 results are never reported as LEAN results.",
+            "Score N/A (SCORE_TARGETS_UNSET)."
+          ]
+        }
+      }
+    },
+    {
+      "tool": "source_changes",
+      "arguments": {
+        "scope": "monitor"
+      },
+      "ms": 12,
+      "is_error": false,
+      "response": {
+        "tool": "source_changes",
+        "observed_utc": "2026-10-12T08:20:14+00:00",
+        "platform": {
+          "os": "Windows-11-10.0.26300-SP0",
+          "python": "3.12.14",
+          "pid": 17944
+        },
+        "server_version": "1.2.0",
+        "ok": true,
+        "result": {
+          "scope": "monitor",
+          "baseline_established_now": true,
+          "files_tracked": 9,
+          "truncated_at_file_cap": false,
+          "file_cap": 5000,
+          "capped_bases": [],
+          "changes": [],
+          "changes_total": 0,
+          "changes_truncated_by_limit": false,
+          "touched_content_unchanged": [],
+          "touched_total": 0,
+          "touched_truncated_by_limit": false,
+          "note": "The first call of a session stores SHA-256 of every tracked file as the baseline (no change claimed unless since_utc is given); later calls diff by hash.",
+          "newest_files": [
+            {
+              "path": "workspace:work/repair_research/lean_mcp_20261012/monitor/TOOLS_READY.json",
+              "mtime_utc": "2026-10-12T08:19:33+00:00",
+              "sha256": "aa0ea4c831f1078d654db4ef065fc195eed4ac98c9123cdee00692af564c1c40"
+            },
+            {
+              "path": "workspace:work/repair_research/lean_mcp_20261012/monitor/CLAUDE_REVIEW_CN.md",
+              "mtime_utc": "2026-10-12T08:19:32+00:00",
+              "sha256": "ca0c5c1e6eb8446790a54bcfa02b0e1a78e3f5383c4d0b730366815ab48f12bf"
+            },
+            {
+              "path": "workspace:work/repair_research/lean_mcp_20261012/monitor/README_CN.md",
+              "mtime_utc": "2026-10-12T08:18:50+00:00",
+              "sha256": "d24ebba12666fc0d1a5b43e71fa72b52677e6ffaafe6f04a2652121af7972438"
+            },
+            {
+              "path": "workspace:work/repair_research/lean_mcp_20261012/monitor/test_monitor.py",
+              "mtime_utc": "2026-10-12T08:18:37+00:00",
+              "sha256": "37d6f5eed21b0d67fed0153899ba6527389f79f08f489d02d17f867e0c919900"
+            },
+            {
+              "path": "workspace:work/repair_research/lean_mcp_20261012/monitor/monitor_core.py",
+              "mtime_utc": "2026-10-12T08:18:37+00:00",
+              "sha256": "888361aca43f5349bea8c5085ad4275608789d8e6fef76bfa361d8b998b20e22"
+            },
+            {
+              "path": "workspace:work/repair_research/lean_mcp_20261012/monitor/config_samples/claude_code_mcp.json",
+              "mtime_utc": "2026-10-12T08:16:57+00:00",
+              "sha256": "2390679f1175eb98cd294b199b464f54485c31dffe18382577ad0d99187f61a3"
+            },
+            {
+              "path": "workspace:work/repair_research/lean_mcp_20261012/monitor/verify_stdio_client.py",
+              "mtime_utc": "2026-10-12T08:15:54+00:00",
+              "sha256": "676bd0f407063669502ccea8328afd06dbdc461389d389629f4219ff293e8507"
+            },
+            {
+              "path": "workspace:work/repair_research/lean_mcp_20261012/monitor/LEAN_MIGRATION_MAP.json",
+              "mtime_utc": "2026-10-12T08:14:44+00:00",
+              "sha256": "d81ca9b09602918dca9b5f26c1c35720dbbc92638bb6528bc6be4244ac7edcda"
+            },
+            {
+              "path": "workspace:work/repair_research/lean_mcp_20261012/monitor/server.py",
+              "mtime_utc": "2026-10-12T08:07:49+00:00",
+              "sha256": "4b8134edfa43b92e90673e84020e376daaeacfee99cf7e6990f9b44399a0412f"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "tool": "source_changes",
+      "arguments": {
+        "scope": "monitor"
+      },
+      "ms": 8,
+      "is_error": false,
+      "response": {
+        "tool": "source_changes",
+        "observed_utc": "2026-10-12T08:20:14+00:00",
+        "platform": {
+          "os": "Windows-11-10.0.26300-SP0",
+          "python": "3.12.14",
+          "pid": 17944
+        },
+        "server_version": "1.2.0",
+        "ok": true,
+        "result": {
+          "scope": "monitor",
+          "baseline_established_now": false,
+          "files_tracked": 9,
+          "truncated_at_file_cap": false,
+          "file_cap": 5000,
+          "capped_bases": [],
+          "changes": [],
+          "changes_total": 0,
+          "changes_truncated_by_limit": false,
+          "touched_content_unchanged": [],
+          "touched_total": 0,
+          "touched_truncated_by_limit": false,
+          "note": "The first call of a session stores SHA-256 of every tracked file as the baseline (no change claimed unless since_utc is given); later calls diff by hash.",
+          "newest_files": [
+            {
+              "path": "workspace:work/repair_research/lean_mcp_20261012/monitor/TOOLS_READY.json",
+              "mtime_utc": "2026-10-12T08:19:33+00:00",
+              "sha256": "aa0ea4c831f1078d654db4ef065fc195eed4ac98c9123cdee00692af564c1c40"
+            },
+            {
+              "path": "workspace:work/repair_research/lean_mcp_20261012/monitor/CLAUDE_REVIEW_CN.md",
+              "mtime_utc": "2026-10-12T08:19:32+00:00",
+              "sha256": "ca0c5c1e6eb8446790a54bcfa02b0e1a78e3f5383c4d0b730366815ab48f12bf"
+            },
+            {
+              "path": "workspace:work/repair_research/lean_mcp_20261012/monitor/README_CN.md",
+              "mtime_utc": "2026-10-12T08:18:50+00:00",
+              "sha256": "d24ebba12666fc0d1a5b43e71fa72b52677e6ffaafe6f04a2652121af7972438"
+            },
+            {
+              "path": "workspace:work/repair_research/lean_mcp_20261012/monitor/test_monitor.py",
+              "mtime_utc": "2026-10-12T08:18:37+00:00",
+              "sha256": "37d6f5eed21b0d67fed0153899ba6527389f79f08f489d02d17f867e0c919900"
+            },
+            {
+              "path": "workspace:work/repair_research/lean_mcp_20261012/monitor/monitor_core.py",
+              "mtime_utc": "2026-10-12T08:18:37+00:00",
+              "sha256": "888361aca43f5349bea8c5085ad4275608789d8e6fef76bfa361d8b998b20e22"
+            },
+            {
+              "path": "workspace:work/repair_research/lean_mcp_20261012/monitor/config_samples/claude_code_mcp.json",
+              "mtime_utc": "2026-10-12T08:16:57+00:00",
+              "sha256": "2390679f1175eb98cd294b199b464f54485c31dffe18382577ad0d99187f61a3"
+            },
+            {
+              "path": "workspace:work/repair_research/lean_mcp_20261012/monitor/verify_stdio_client.py",
+              "mtime_utc": "2026-10-12T08:15:54+00:00",
+              "sha256": "676bd0f407063669502ccea8328afd06dbdc461389d389629f4219ff293e8507"
+            },
+            {
+              "path": "workspace:work/repair_research/lean_mcp_20261012/monitor/LEAN_MIGRATION_MAP.json",
+              "mtime_utc": "2026-10-12T08:14:44+00:00",
+              "sha256": "d81ca9b09602918dca9b5f26c1c35720dbbc92638bb6528bc6be4244ac7edcda"
+            },
+            {
+              "path": "workspace:work/repair_research/lean_mcp_20261012/monitor/server.py",
+              "mtime_utc": "2026-10-12T08:07:49+00:00",
+              "sha256": "4b8134edfa43b92e90673e84020e376daaeacfee99cf7e6990f9b44399a0412f"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "tool": "source_changes",
+      "arguments": {
+        "scope": "lean",
+        "since_utc": "2000-01-01T00:00:00Z"
+      },
+      "ms": 2,
+      "is_error": false,
+      "response": {
+        "tool": "source_changes",
+        "observed_utc": "2026-10-12T08:20:14+00:00",
+        "platform": {
+          "os": "Windows-11-10.0.26300-SP0",
+          "python": "3.12.14",
+          "pid": 17944
+        },
+        "server_version": "1.2.0",
+        "ok": true,
+        "result": {
+          "scope": "lean",
+          "baseline_established_now": true,
+          "files_tracked": 0,
+          "truncated_at_file_cap": false,
+          "file_cap": 5000,
+          "capped_bases": [],
+          "changes": [],
+          "changes_total": 0,
+          "changes_truncated_by_limit": false,
+          "touched_content_unchanged": [],
+          "touched_total": 0,
+          "touched_truncated_by_limit": false,
+          "note": "The first call of a session stores SHA-256 of every tracked file as the baseline (no change claimed unless since_utc is given); later calls diff by hash.",
+          "newest_files": []
+        }
+      }
+    },
+    {
+      "tool": "run_status",
+      "arguments": {
+        "kind": "all"
+      },
+      "ms": 1344,
+      "is_error": false,
+      "response": {
+        "tool": "run_status",
+        "observed_utc": "2026-10-12T08:20:14+00:00",
+        "platform": {
+          "os": "Windows-11-10.0.26300-SP0",
+          "python": "3.12.14",
+          "pid": 17944
+        },
+        "server_version": "1.2.0",
+        "ok": true,
+        "result": {
+          "kind": "all",
+          "liveness_rule": "A recent write time alone does not show that a process is alive; only growth observed between two calls of this session is reported as progress. The monitor cannot see processes.",
+          "lean_runs": [
+            {
+              "run_dir": "workspace:work/repair_research/lean_mcp_20261012/lean_probe_01",
+              "kind": "LEAN_BACKTEST",
+              "origin": "PROJECT_LEAN",
+              "logs": [
+                {
+                  "file": "workspace:work/repair_research/lean_mcp_20261012/lean_probe_01/log.txt",
+                  "size": 207,
+                  "mtime_utc": "2026-10-12T08:02:49+00:00",
+                  "scanned_bytes": 207,
+                  "scan_window_truncated": false,
+                  "first_observation_this_session": false,
+                  "bytes_since_last_observation": 0,
+                  "mtime_changed": false
+                },
+                {
+                  "file": "workspace:work/repair_research/lean_mcp_20261012/lean_probe_01/console.log",
+                  "size": 2303,
+                  "mtime_utc": "2026-10-12T08:02:49+00:00",
+                  "scanned_bytes": 2303,
+                  "scan_window_truncated": false,
+                  "first_observation_this_session": false,
+                  "bytes_since_last_observation": 0,
+                  "mtime_changed": false
+                }
+              ],
+              "evidence": [
+                {
+                  "file": "workspace:work/repair_research/lean_mcp_20261012/lean_probe_01/console.log",
+                  "reason": "CODE_INTEGRITY_BLOCKED_DLL",
+                  "line": "20261012 08:02:46.219 TRACE:: Composer.LoadPartsSafely(C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\quantconnect_20260920\\vendor\\Lean\\Launcher\\bin\\Release\\QuantConnect.Messaging.dll): Skipping FileLoadException: Could not load file or assembly 'C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\quantconnect_20260920\\vendor\\Lean\\Launcher\\bin\\Release\\Qua"
+                },
+                {
+                  "file": "workspace:work/repair_research/lean_mcp_20261012/lean_probe_01/console.log",
+                  "reason": "UNHANDLED_EXCEPTION",
+                  "line": "Unhandled exception. System.ArgumentException: Unable to locate any exports matching the requested typeName: QuantConnect.Messaging.Messaging. Type: QuantConnect.Interfaces.IMessagingHandler (Parameter 'typeName')"
+                }
+              ],
+              "summaries": [],
+              "run_receipt": {
+                "parse": "MISSING",
+                "status": null
+              },
+              "newest_log_age_seconds": 1045.0,
+              "status": "FAILED",
+              "failure_reasons": [
+                "CODE_INTEGRITY_BLOCKED_DLL",
+                "UNHANDLED_EXCEPTION"
+              ]
+            }
+          ],
+          "lean_runs_total": 1,
+          "lean_runs_truncated_by_limit": false,
+          "builds": [],
+          "builds_total": 0,
+          "builds_truncated_by_limit": false,
+          "builds_note": "No build log under builds/<id>/*.log in this project.",
+          "mt5_common_files": {
+            "state": "OK",
+            "project_audit_files": 1903,
+            "newest": [
+              {
+                "file": "mt5_common_files:SCALPI1820261011_S20_AUGUST_DELAY250_905a99f0_SIGNAL_FUNNEL.csv",
+                "size": 1222,
+                "mtime_utc": "2026-10-11T09:18:05+00:00",
+                "age_seconds": 82930.3,
+                "first_observation_this_session": true,
+                "bytes_since_last_observation": null
+              },
+              {
+                "file": "mt5_common_files:I9_USER_SCALP_64641A485A05534A.csv",
+                "size": 49,
+                "mtime_utc": "2026-10-11T09:18:05+00:00",
+                "age_seconds": 82930.3,
+                "first_observation_this_session": true,
+                "bytes_since_last_observation": null
+              },
+              {
+                "file": "mt5_common_files:SCALPI1820261011_S20_AUGUST_DELAY250_905a99f0_SIGNAL_AUDIT.csv",
+                "size": 119845,
+                "mtime_utc": "2026-10-11T09:18:05+00:00",
+                "age_seconds": 82930.4,
+                "first_observation_this_session": true,
+                "bytes_since_last_observation": null
+              },
+              {
+                "file": "mt5_common_files:SCALPI1820261011_S20_AUGUST_DELAY250_905a99f0_TRADE_REVIEW.csv",
+                "size": 15265,
+                "mtime_utc": "2026-10-11T09:18:04+00:00",
+                "age_seconds": 82931.0,
+                "first_observation_this_session": true,
+                "bytes_since_last_observation": null
+              },
+              {
+                "file": "mt5_common_files:SCALPI1820261011_S20_JUNE_DELAY250_efa681b8_SIGNAL_FUNNEL.csv",
+                "size": 1217,
+                "mtime_utc": "2026-10-11T09:17:28+00:00",
+                "age_seconds": 82967.5,
+                "first_observation_this_session": true,
+                "bytes_since_last_observation": null
+              },
+              {
+                "file": "mt5_common_files:I9_USER_SCALP_4B58894BABD2CD6D.csv",
+                "size": 49,
+                "mtime_utc": "2026-10-11T09:17:27+00:00",
+                "age_seconds": 82967.5,
+                "first_observation_this_session": true,
+                "bytes_since_last_observation": null
+              },
+              {
+                "file": "mt5_common_files:SCALPI1820261011_S20_JUNE_DELAY250_efa681b8_SIGNAL_AUDIT.csv",
+                "size": 127918,
+                "mtime_utc": "2026-10-11T09:17:27+00:00",
+                "age_seconds": 82967.6,
+                "first_observation_this_session": true,
+                "bytes_since_last_observation": null
+              },
+              {
+                "file": "mt5_common_files:SCALPI1820261011_S20_JUNE_DELAY250_efa681b8_TRADE_REVIEW.csv",
+                "size": 15295,
+                "mtime_utc": "2026-10-11T09:17:27+00:00",
+                "age_seconds": 82968.4,
+                "first_observation_this_session": true,
+                "bytes_since_last_observation": null
+              },
+              {
+                "file": "mt5_common_files:SCALPI1720261010_T40_AUGUST_DELAY250_96c91c9f_SIGNAL_FUNNEL.csv",
+                "size": 1222,
+                "mtime_utc": "2026-10-10T11:34:44+00:00",
+                "age_seconds": 161131.2,
+                "first_observation_this_session": true,
+                "bytes_since_last_observation": null
+              },
+              {
+                "file": "mt5_common_files:I9_USER_SCALP_47EA69DC7B6ABFD6.csv",
+                "size": 49,
+                "mtime_utc": "2026-10-10T11:34:44+00:00",
+                "age_seconds": 161131.2,
+                "first_observation_this_session": true,
+                "bytes_since_last_observation": null
+              },
+              {
+                "file": "mt5_common_files:SCALPI1720261010_T40_AUGUST_DELAY250_96c91c9f_SIGNAL_AUDIT.csv",
+                "size": 119601,
+                "mtime_utc": "2026-10-10T11:34:44+00:00",
+                "age_seconds": 161131.2,
+                "first_observation_this_session": true,
+                "bytes_since_last_observation": null
+              },
+              {
+                "file": "mt5_common_files:SCALPI1720261010_T40_AUGUST_DELAY250_96c91c9f_TRADE_REVIEW.csv",
+                "size": 16772,
+                "mtime_utc": "2026-10-10T11:34:43+00:00",
+                "age_seconds": 161131.7,
+                "first_observation_this_session": true,
+                "bytes_since_last_observation": null
+              },
+              {
+                "file": "mt5_common_files:SCALPI1720261010_T40_JUNE_DELAY250_f1397728_SIGNAL_FUNNEL.csv",
+                "size": 1217,
+                "mtime_utc": "2026-10-10T11:34:00+00:00",
+                "age_seconds": 161175.2,
+                "first_observation_this_session": true,
+                "bytes_since_last_observation": null
+              },
+              {
+                "file": "mt5_common_files:I9_USER_SCALP_C632AA94E3CB605A.csv",
+                "size": 49,
+                "mtime_utc": "2026-10-10T11:34:00+00:00",
+                "age_seconds": 161175.2,
+                "first_observation_this_session": true,
+                "bytes_since_last_observation": null
+              },
+              {
+                "file": "mt5_common_files:SCALPI1720261010_T40_JUNE_DELAY250_f1397728_SIGNAL_AUDIT.csv",
+                "size": 127552,
+                "mtime_utc": "2026-10-10T11:34:00+00:00",
+                "age_seconds": 161175.2,
+                "first_observation_this_session": true,
+                "bytes_since_last_observation": null
+              },
+              {
+                "file": "mt5_common_files:SCALPI1720261010_T40_JUNE_DELAY250_f1397728_TRADE_REVIEW.csv",
+                "size": 17559,
+                "mtime_utc": "2026-10-10T11:33:59+00:00",
+                "age_seconds": 161176.0,
+                "first_observation_this_session": true,
+                "bytes_since_last_observation": null
+              },
+              {
+                "file": "mt5_common_files:SCALPI1720261010_T35_AUGUST_DELAY250_32c68b66_SIGNAL_FUNNEL.csv",
+                "size": 1222,
+                "mtime_utc": "2026-10-10T11:33:11+00:00",
+                "age_seconds": 161224.3,
+                "first_observation_this_session": true,
+                "bytes_since_last_observation": null
+              },
+              {
+                "file": "mt5_common_files:I9_USER_SCALP_82333D6EAE6C4A00.csv",
+                "size": 49,
+                "mtime_utc": "2026-10-10T11:33:11+00:00",
+                "age_seconds": 161224.3,
+                "first_observation_this_session": true,
+                "bytes_since_last_observation": null
+              },
+              {
+                "file": "mt5_common_files:SCALPI1720261010_T35_AUGUST_DELAY250_32c68b66_SIGNAL_AUDIT.csv",
+                "size": 119601,
+                "mtime_utc": "2026-10-10T11:33:11+00:00",
+                "age_seconds": 161224.3,
+                "first_observation_this_session": true,
+                "bytes_since_last_observation": null
+              },
+              {
+                "file": "mt5_common_files:SCALPI1720261010_T35_AUGUST_DELAY250_32c68b66_TRADE_REVIEW.csv",
+                "size": 16772,
+                "mtime_utc": "2026-10-10T11:33:10+00:00",
+                "age_seconds": 161224.8,
+                "first_observation_this_session": true,
+                "bytes_since_last_observation": null
+              }
+            ],
+            "newest_truncated_by_limit": true,
+            "growth_observed": false,
+            "note": "Mtime/growth of project audit files only; not proof that an EA or tester is running or healthy. A recent write time alone does not show that a process is alive; only growth observed between two calls of this session is reported as progress. The monitor cannot see processes."
+          }
+        }
+      }
+    },
+    {
+      "tool": "run_status",
+      "arguments": {
+        "kind": "all",
+        "include_historical": true,
+        "limit": 5
+      },
+      "ms": 1397,
+      "is_error": false,
+      "response": {
+        "tool": "run_status",
+        "observed_utc": "2026-10-12T08:20:15+00:00",
+        "platform": {
+          "os": "Windows-11-10.0.26300-SP0",
+          "python": "3.12.14",
+          "pid": 17944
+        },
+        "server_version": "1.2.0",
+        "ok": true,
+        "result": {
+          "kind": "all",
+          "liveness_rule": "A recent write time alone does not show that a process is alive; only growth observed between two calls of this session is reported as progress. The monitor cannot see processes.",
+          "lean_runs": [
+            {
+              "run_dir": "workspace:work/repair_research/lean_mcp_20261012/lean_probe_01",
+              "kind": "LEAN_BACKTEST",
+              "origin": "PROJECT_LEAN",
+              "logs": [
+                {
+                  "file": "workspace:work/repair_research/lean_mcp_20261012/lean_probe_01/log.txt",
+                  "size": 207,
+                  "mtime_utc": "2026-10-12T08:02:49+00:00",
+                  "scanned_bytes": 207,
+                  "scan_window_truncated": false,
+                  "first_observation_this_session": false,
+                  "bytes_since_last_observation": 0,
+                  "mtime_changed": false
+                },
+                {
+                  "file": "workspace:work/repair_research/lean_mcp_20261012/lean_probe_01/console.log",
+                  "size": 2303,
+                  "mtime_utc": "2026-10-12T08:02:49+00:00",
+                  "scanned_bytes": 2303,
+                  "scan_window_truncated": false,
+                  "first_observation_this_session": false,
+                  "bytes_since_last_observation": 0,
+                  "mtime_changed": false
+                }
+              ],
+              "evidence": [
+                {
+                  "file": "workspace:work/repair_research/lean_mcp_20261012/lean_probe_01/console.log",
+                  "reason": "CODE_INTEGRITY_BLOCKED_DLL",
+                  "line": "20261012 08:02:46.219 TRACE:: Composer.LoadPartsSafely(C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\quantconnect_20260920\\vendor\\Lean\\Launcher\\bin\\Release\\QuantConnect.Messaging.dll): Skipping FileLoadException: Could not load file or assembly 'C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\quantconnect_20260920\\vendor\\Lean\\Launcher\\bin\\Release\\Qua"
+                },
+                {
+                  "file": "workspace:work/repair_research/lean_mcp_20261012/lean_probe_01/console.log",
+                  "reason": "UNHANDLED_EXCEPTION",
+                  "line": "Unhandled exception. System.ArgumentException: Unable to locate any exports matching the requested typeName: QuantConnect.Messaging.Messaging. Type: QuantConnect.Interfaces.IMessagingHandler (Parameter 'typeName')"
+                }
+              ],
+              "summaries": [],
+              "run_receipt": {
+                "parse": "MISSING",
+                "status": null
+              },
+              "newest_log_age_seconds": 1046.4,
+              "status": "FAILED",
+              "failure_reasons": [
+                "CODE_INTEGRITY_BLOCKED_DLL",
+                "UNHANDLED_EXCEPTION"
+              ]
+            },
+            {
+              "run_dir": "workspace:work/repair_research/quantconnect_20260920/lean_runs/S1_G0_648fd63966694b6c80d8a2c646a2318e",
+              "kind": "LEAN_BACKTEST",
+              "origin": "HISTORICAL_LEAN_BEFORE_THIS_PROJECT",
+              "logs": [
+                {
+                  "file": "workspace:work/repair_research/quantconnect_20260920/lean_runs/S1_G0_648fd63966694b6c80d8a2c646a2318e/log.txt",
+                  "size": 9878,
+                  "mtime_utc": "2026-09-20T11:50:57+00:00",
+                  "scanned_bytes": 9878,
+                  "scan_window_truncated": false,
+                  "first_observation_this_session": true,
+                  "bytes_since_last_observation": null
+                },
+                {
+                  "file": "workspace:work/repair_research/quantconnect_20260920/lean_runs/S1_G0_648fd63966694b6c80d8a2c646a2318e/console.log",
+                  "size": 10026,
+                  "mtime_utc": "2026-09-20T11:50:57+00:00",
+                  "scanned_bytes": 10026,
+                  "scan_window_truncated": false,
+                  "first_observation_this_session": true,
+                  "bytes_since_last_observation": null
+                },
+                {
+                  "file": "workspace:work/repair_research/quantconnect_20260920/lean_runs/S1_G0_648fd63966694b6c80d8a2c646a2318e/QC_C7_S1_0_648fd63966694b6c80d8a2c646a2318e-log.txt",
+                  "size": 462,
+                  "mtime_utc": "2026-09-20T11:50:57+00:00",
+                  "scanned_bytes": 462,
+                  "scan_window_truncated": false,
+                  "first_observation_this_session": true,
+                  "bytes_since_last_observation": null
+                }
+              ],
+              "evidence": [],
+              "summaries": [
+                {
+                  "file": "workspace:work/repair_research/quantconnect_20260920/lean_runs/S1_G0_648fd63966694b6c80d8a2c646a2318e/QC_C7_S1_0_648fd63966694b6c80d8a2c646a2318e-summary.json",
+                  "parse": "OK",
+                  "has_statistics": true
+                }
+              ],
+              "run_receipt": {
+                "parse": "OK",
+                "status": "COMPLETE_REVIEW_REQUIRED"
+              },
+              "newest_log_age_seconds": 1888157.9,
+              "status": "COMPLETED_RESULTS_PRESENT_REVIEW_REQUIRED",
+              "note": "Historical run from an earlier project; not a result of this LEAN research."
+            },
+            {
+              "run_dir": "workspace:work/repair_research/quantconnect_20260920/lean_runs/S4_G0_56b8730214684acfa55eb09f57f4deaa",
+              "kind": "LEAN_BACKTEST",
+              "origin": "HISTORICAL_LEAN_BEFORE_THIS_PROJECT",
+              "logs": [
+                {
+                  "file": "workspace:work/repair_research/quantconnect_20260920/lean_runs/S4_G0_56b8730214684acfa55eb09f57f4deaa/log.txt",
+                  "size": 9896,
+                  "mtime_utc": "2026-09-20T11:50:46+00:00",
+                  "scanned_bytes": 9896,
+                  "scan_window_truncated": false,
+                  "first_observation_this_session": true,
+                  "bytes_since_last_observation": null
+                },
+                {
+                  "file": "workspace:work/repair_research/quantconnect_20260920/lean_runs/S4_G0_56b8730214684acfa55eb09f57f4deaa/console.log",
+                  "size": 10044,
+                  "mtime_utc": "2026-09-20T11:50:46+00:00",
+                  "scanned_bytes": 10044,
+                  "scan_window_truncated": false,
+                  "first_observation_this_session": true,
+                  "bytes_since_last_observation": null
+                },
+                {
+                  "file": "workspace:work/repair_research/quantconnect_20260920/lean_runs/S4_G0_56b8730214684acfa55eb09f57f4deaa/QC_C7_S4_0_56b8730214684acfa55eb09f57f4deaa-log.txt",
+                  "size": 483,
+                  "mtime_utc": "2026-09-20T11:50:46+00:00",
+                  "scanned_bytes": 483,
+                  "scan_window_truncated": false,
+                  "first_observation_this_session": true,
+                  "bytes_since_last_observation": null
+                }
+              ],
+              "evidence": [],
+              "summaries": [
+                {
+                  "file": "workspace:work/repair_research/quantconnect_20260920/lean_runs/S4_G0_56b8730214684acfa55eb09f57f4deaa/QC_C7_S4_0_56b8730214684acfa55eb09f57f4deaa-summary.json",
+                  "parse": "OK",
+                  "has_statistics": true
+                }
+              ],
+              "run_receipt": {
+                "parse": "OK",
+                "status": "COMPLETE_REVIEW_REQUIRED"
+              },
+              "newest_log_age_seconds": 1888169.2,
+              "status": "COMPLETED_RESULTS_PRESENT_REVIEW_REQUIRED",
+              "note": "Historical run from an earlier project; not a result of this LEAN research."
+            },
+            {
+              "run_dir": "workspace:work/repair_research/quantconnect_20260920/lean_runs/S4_G2_119962dbd78c46718a693c5c43c7c709",
+              "kind": "LEAN_BACKTEST",
+              "origin": "HISTORICAL_LEAN_BEFORE_THIS_PROJECT",
+              "logs": [
+                {
+                  "file": "workspace:work/repair_research/quantconnect_20260920/lean_runs/S4_G2_119962dbd78c46718a693c5c43c7c709/log.txt",
+                  "size": 9750,
+                  "mtime_utc": "2026-09-20T11:49:17+00:00",
+                  "scanned_bytes": 9750,
+                  "scan_window_truncated": false,
+                  "first_observation_this_session": true,
+                  "bytes_since_last_observation": null
+                },
+                {
+                  "file": "workspace:work/repair_research/quantconnect_20260920/lean_runs/S4_G2_119962dbd78c46718a693c5c43c7c709/console.log",
+                  "size": 9905,
+                  "mtime_utc": "2026-09-20T11:49:17+00:00",
+                  "scanned_bytes": 9905,
+                  "scan_window_truncated": false,
+                  "first_observation_this_session": true,
+                  "bytes_since_last_observation": null
+                },
+                {
+                  "file": "workspace:work/repair_research/quantconnect_20260920/lean_runs/S4_G2_119962dbd78c46718a693c5c43c7c709/QC_C7_S4_2_119962dbd78c46718a693c5c43c7c709-log.txt",
+                  "size": 480,
+                  "mtime_utc": "2026-09-20T11:49:17+00:00",
+                  "scanned_bytes": 480,
+                  "scan_window_truncated": false,
+                  "first_observation_this_session": true,
+                  "bytes_since_last_observation": null
+                }
+              ],
+              "evidence": [],
+              "summaries": [
+                {
+                  "file": "workspace:work/repair_research/quantconnect_20260920/lean_runs/S4_G2_119962dbd78c46718a693c5c43c7c709/QC_C7_S4_2_119962dbd78c46718a693c5c43c7c709-summary.json",
+                  "parse": "OK",
+                  "has_statistics": true
+                }
+              ],
+              "run_receipt": {
+                "parse": "OK",
+                "status": "COMPLETE_REVIEW_REQUIRED"
+              },
+              "newest_log_age_seconds": 1888258.3,
+              "status": "COMPLETED_RESULTS_PRESENT_REVIEW_REQUIRED",
+              "note": "Historical run from an earlier project; not a result of this LEAN research."
+            },
+            {
+              "run_dir": "workspace:work/repair_research/quantconnect_20260920/lean_runs/S1_G2_ea8480186cfe46f29d32e1a08c1e0fa0",
+              "kind": "LEAN_BACKTEST",
+              "origin": "HISTORICAL_LEAN_BEFORE_THIS_PROJECT",
+              "logs": [
+                {
+                  "file": "workspace:work/repair_research/quantconnect_20260920/lean_runs/S1_G2_ea8480186cfe46f29d32e1a08c1e0fa0/log.txt",
+                  "size": 9878,
+                  "mtime_utc": "2026-09-20T11:49:05+00:00",
+                  "scanned_bytes": 9878,
+                  "scan_window_truncated": false,
+                  "first_observation_this_session": true,
+                  "bytes_since_last_observation": null
+                },
+                {
+                  "file": "workspace:work/repair_research/quantconnect_20260920/lean_runs/S1_G2_ea8480186cfe46f29d32e1a08c1e0fa0/console.log",
+                  "size": 10026,
+                  "mtime_utc": "2026-09-20T11:49:05+00:00",
+                  "scanned_bytes": 10026,
+                  "scan_window_truncated": false,
+                  "first_observation_this_session": true,
+                  "bytes_since_last_observation": null
+                },
+                {
+                  "file": "workspace:work/repair_research/quantconnect_20260920/lean_runs/S1_G2_ea8480186cfe46f29d32e1a08c1e0fa0/QC_C7_S1_2_ea8480186cfe46f29d32e1a08c1e0fa0-log.txt",
+                  "size": 460,
+                  "mtime_utc": "2026-09-20T11:49:05+00:00",
+                  "scanned_bytes": 460,
+                  "scan_window_truncated": false,
+                  "first_observation_this_session": true,
+                  "bytes_since_last_observation": null
+                }
+              ],
+              "evidence": [],
+              "summaries": [
+                {
+                  "file": "workspace:work/repair_research/quantconnect_20260920/lean_runs/S1_G2_ea8480186cfe46f29d32e1a08c1e0fa0/QC_C7_S1_2_ea8480186cfe46f29d32e1a08c1e0fa0-summary.json",
+                  "parse": "OK",
+                  "has_statistics": true
+                }
+              ],
+              "run_receipt": {
+                "parse": "OK",
+                "status": "COMPLETE_REVIEW_REQUIRED"
+              },
+              "newest_log_age_seconds": 1888270.2,
+              "status": "COMPLETED_RESULTS_PRESENT_REVIEW_REQUIRED",
+              "note": "Historical run from an earlier project; not a result of this LEAN research."
+            }
+          ],
+          "lean_runs_total": 17,
+          "lean_runs_truncated_by_limit": true,
+          "builds": [],
+          "builds_total": 0,
+          "builds_truncated_by_limit": false,
+          "builds_note": "No build log under builds/<id>/*.log in this project.",
+          "mt5_i18_arms": [
+            {
+              "arm": "workspace:work/repair_research/mt5_iteration18_20261011/Claude/exec/S6_AUG_D250",
+              "kind": "MT5_NATIVE_I18",
+              "origin": "HISTORICAL_I18_MT5_NOT_LEAN",
+              "native_result": {
+                "parse": "OK",
+                "status": "COMPLETE",
+                "run_id": "A38B29D9"
+              },
+              "latest_verification": {
+                "dir": "workspace:work/repair_research/mt5_iteration18_20261011/Claude/exec/S6_AUG_D250/verification/2026-10-11T09-16-27-495Z",
+                "parse": "OK",
+                "status": "PASS_NATIVE_ENGINEERING_ACCOUNTING_AND_I18_AUDIT_CHECKS"
+              },
+              "status": "VERIFIED_HISTORICAL"
+            },
+            {
+              "arm": "workspace:work/repair_research/mt5_iteration18_20261011/Claude/exec/S6_JUNE_D250",
+              "kind": "MT5_NATIVE_I18",
+              "origin": "HISTORICAL_I18_MT5_NOT_LEAN",
+              "native_result": {
+                "parse": "OK",
+                "status": "COMPLETE",
+                "run_id": "6FE6FEC5"
+              },
+              "latest_verification": {
+                "dir": "workspace:work/repair_research/mt5_iteration18_20261011/Claude/exec/S6_JUNE_D250/verification/2026-10-11T09-14-07-635Z",
+                "parse": "OK",
+                "status": "PASS_NATIVE_ENGINEERING_ACCOUNTING_AND_I18_AUDIT_CHECKS"
+              },
+              "status": "VERIFIED_HISTORICAL"
+            },
+            {
+              "arm": "workspace:work/repair_research/mt5_iteration18_20261011/Claude/exec/S5_AUG_D250",
+              "kind": "MT5_NATIVE_I18",
+              "origin": "HISTORICAL_I18_MT5_NOT_LEAN",
+              "native_result": {
+                "parse": "OK",
+                "status": "COMPLETE",
+                "run_id": "4AE14FBF"
+              },
+              "latest_verification": {
+                "dir": "workspace:work/repair_research/mt5_iteration18_20261011/Claude/exec/S5_AUG_D250/verification/2026-10-11T09-11-24-036Z",
+                "parse": "OK",
+                "status": "PASS_NATIVE_ENGINEERING_ACCOUNTING_AND_I18_AUDIT_CHECKS"
+              },
+              "status": "VERIFIED_HISTORICAL"
+            },
+            {
+              "arm": "workspace:work/repair_research/mt5_iteration18_20261011/Claude/exec/S5_JUNE_D250",
+              "kind": "MT5_NATIVE_I18",
+              "origin": "HISTORICAL_I18_MT5_NOT_LEAN",
+              "native_result": {
+                "parse": "OK",
+                "status": "COMPLETE",
+                "run_id": "F9B97134"
+              },
+              "latest_verification": {
+                "dir": "workspace:work/repair_research/mt5_iteration18_20261011/Claude/exec/S5_JUNE_D250/verification/2026-10-11T09-08-29-993Z",
+                "parse": "OK",
+                "status": "PASS_NATIVE_ENGINEERING_ACCOUNTING_AND_I18_AUDIT_CHECKS"
+              },
+              "status": "VERIFIED_HISTORICAL"
+            },
+            {
+              "arm": "workspace:work/repair_research/mt5_iteration18_20261011/Claude/exec/S4_AUG_D250",
+              "kind": "MT5_NATIVE_I18",
+              "origin": "HISTORICAL_I18_MT5_NOT_LEAN",
+              "native_result": {
+                "parse": "OK",
+                "status": "COMPLETE",
+                "run_id": "E24F5EA6"
+              },
+              "latest_verification": {
+                "dir": "workspace:work/repair_research/mt5_iteration18_20261011/Claude/exec/S4_AUG_D250/verification/2026-10-11T09-05-23-419Z",
+                "parse": "OK",
+                "status": "PASS_NATIVE_ENGINEERING_ACCOUNTING_AND_I18_AUDIT_CHECKS"
+              },
+              "status": "VERIFIED_HISTORICAL"
+            }
+          ],
+          "mt5_i18_arms_total": 12,
+          "mt5_i18_arms_truncated_by_limit": true,
+          "mt5_i18_scalping": [
+            {
+              "file": "workspace:work/repair_research/mt5_iteration18_20261011/Claude/exec/Scalping/VERIFICATION_S20_AUGUST_DELAY250.json",
+              "parse": "OK",
+              "status": "PASS_I18_SCALP_NATIVE_ACCOUNTING_DAILY6_EXIT_RULE_AND_SPREAD_GATE_CHECKS",
+              "origin": "HISTORICAL_I18_MT5_NOT_LEAN"
+            },
+            {
+              "file": "workspace:work/repair_research/mt5_iteration18_20261011/Claude/exec/Scalping/VERIFICATION_S20_JUNE_DELAY250.json",
+              "parse": "OK",
+              "status": "PASS_I18_SCALP_NATIVE_ACCOUNTING_DAILY6_EXIT_RULE_AND_SPREAD_GATE_CHECKS",
+              "origin": "HISTORICAL_I18_MT5_NOT_LEAN"
+            }
+          ],
+          "mt5_common_files": {
+            "state": "OK",
+            "project_audit_files": 1903,
+            "newest": [
+              {
+                "file": "mt5_common_files:SCALPI1820261011_S20_AUGUST_DELAY250_905a99f0_SIGNAL_FUNNEL.csv",
+                "size": 1222,
+                "mtime_utc": "2026-10-11T09:18:05+00:00",
+                "age_seconds": 82931.7,
+                "first_observation_this_session": false,
+                "bytes_since_last_observation": 0,
+                "mtime_changed": false
+              },
+              {
+                "file": "mt5_common_files:I9_USER_SCALP_64641A485A05534A.csv",
+                "size": 49,
+                "mtime_utc": "2026-10-11T09:18:05+00:00",
+                "age_seconds": 82931.7,
+                "first_observation_this_session": false,
+                "bytes_since_last_observation": 0,
+                "mtime_changed": false
+              },
+              {
+                "file": "mt5_common_files:SCALPI1820261011_S20_AUGUST_DELAY250_905a99f0_SIGNAL_AUDIT.csv",
+                "size": 119845,
+                "mtime_utc": "2026-10-11T09:18:05+00:00",
+                "age_seconds": 82931.8,
+                "first_observation_this_session": false,
+                "bytes_since_last_observation": 0,
+                "mtime_changed": false
+              },
+              {
+                "file": "mt5_common_files:SCALPI1820261011_S20_AUGUST_DELAY250_905a99f0_TRADE_REVIEW.csv",
+                "size": 15265,
+                "mtime_utc": "2026-10-11T09:18:04+00:00",
+                "age_seconds": 82932.4,
+                "first_observation_this_session": false,
+                "bytes_since_last_observation": 0,
+                "mtime_changed": false
+              },
+              {
+                "file": "mt5_common_files:SCALPI1820261011_S20_JUNE_DELAY250_efa681b8_SIGNAL_FUNNEL.csv",
+                "size": 1217,
+                "mtime_utc": "2026-10-11T09:17:28+00:00",
+                "age_seconds": 82968.9,
+                "first_observation_this_session": false,
+                "bytes_since_last_observation": 0,
+                "mtime_changed": false
+              }
+            ],
+            "newest_truncated_by_limit": true,
+            "growth_observed": false,
+            "note": "Mtime/growth of project audit files only; not proof that an EA or tester is running or healthy. A recent write time alone does not show that a process is alive; only growth observed between two calls of this session is reported as progress. The monitor cannot see processes."
+          }
+        }
+      }
+    },
+    {
+      "tool": "latest_results",
+      "arguments": {},
+      "ms": 4,
+      "is_error": false,
+      "response": {
+        "tool": "latest_results",
+        "observed_utc": "2026-10-12T08:20:16+00:00",
+        "platform": {
+          "os": "Windows-11-10.0.26300-SP0",
+          "python": "3.12.14",
+          "pid": 17944
+        },
+        "server_version": "1.2.0",
+        "ok": true,
+        "result": {
+          "lean_results": [],
+          "lean_results_total": 0,
+          "lean_results_truncated_by_limit": false,
+          "note": "A summary file is a LEAN engine output, not an accepted research result. Cross-check with run_status (terminal marker, failures).",
+          "lean_results_state": "NO_PROJECT_LEAN_RESULT"
+        }
+      }
+    },
+    {
+      "tool": "latest_results",
+      "arguments": {
+        "include_historical": true,
+        "limit": 3
+      },
+      "ms": 47,
+      "is_error": false,
+      "response": {
+        "tool": "latest_results",
+        "observed_utc": "2026-10-12T08:20:16+00:00",
+        "platform": {
+          "os": "Windows-11-10.0.26300-SP0",
+          "python": "3.12.14",
+          "pid": 17944
+        },
+        "server_version": "1.2.0",
+        "ok": true,
+        "result": {
+          "lean_results": [
+            {
+              "file": "workspace:work/repair_research/lean_500_20260927/runs/TB500_S1_F2_SINGLE_96ce116563dc40b6a8257988d387c3ad/TB500_S1_F2_SINGLE_96ce116563dc40b6a8257988d387c3ad-summary.json",
+              "origin": "HISTORICAL_LEAN_BEFORE_THIS_PROJECT",
+              "mtime_utc": "2026-09-27T08:06:39+00:00",
+              "age_seconds": 1296817.5,
+              "parse": "OK",
+              "statistics": {
+                "Total Orders": "50",
+                "Net Profit": "-7.440%",
+                "Drawdown": "9.800%",
+                "Sharpe Ratio": "-1.736",
+                "Win Rate": "28%",
+                "Profit-Loss Ratio": "1.94",
+                "Total Fees": "$2.12",
+                "Start Equity": "500",
+                "End Equity": "462.8",
+                "Compounding Annual Return": "-59.908%"
+              }
+            },
+            {
+              "file": "workspace:work/repair_research/lean_500_20260927/runs/TB500_S1_F1_SINGLE_419323f25aea453c9bedd14a62bc74f5/TB500_S1_F1_SINGLE_419323f25aea453c9bedd14a62bc74f5-summary.json",
+              "origin": "HISTORICAL_LEAN_BEFORE_THIS_PROJECT",
+              "mtime_utc": "2026-09-27T08:06:38+00:00",
+              "age_seconds": 1296818.8,
+              "parse": "OK",
+              "statistics": {
+                "Total Orders": "16",
+                "Net Profit": "-2.430%",
+                "Drawdown": "5.400%",
+                "Sharpe Ratio": "-2.153",
+                "Win Rate": "25%",
+                "Profit-Loss Ratio": "1.78",
+                "Total Fees": "$0.64",
+                "Start Equity": "500",
+                "End Equity": "487.85",
+                "Compounding Annual Return": "-25.235%"
+              }
+            },
+            {
+              "file": "workspace:work/repair_research/lean_500_20260927/runs/TB500_S4_F2_SINGLE_085d55cde9e84883982345306d77f6ae/TB500_S4_F2_SINGLE_085d55cde9e84883982345306d77f6ae-summary.json",
+              "origin": "HISTORICAL_LEAN_BEFORE_THIS_PROJECT",
+              "mtime_utc": "2026-09-27T08:04:23+00:00",
+              "age_seconds": 1296953.8,
+              "parse": "OK",
+              "statistics": {
+                "Total Orders": "80",
+                "Net Profit": "6.740%",
+                "Drawdown": "7.300%",
+                "Sharpe Ratio": "2.698",
+                "Win Rate": "45%",
+                "Profit-Loss Ratio": "1.48",
+                "Total Fees": "$3.58",
+                "Start Equity": "500",
+                "End Equity": "533.7",
+                "Compounding Annual Return": "116.214%"
+              }
+            }
+          ],
+          "lean_results_total": 11,
+          "lean_results_truncated_by_limit": true,
+          "note": "A summary file is a LEAN engine output, not an accepted research result. Cross-check with run_status (terminal marker, failures).",
+          "i18_mt5_evaluations": [
+            {
+              "file": "workspace:work/repair_research/mt5_iteration18_20261011/Claude/exec/EVALUATION_S1.json",
+              "origin": "HISTORICAL_I18_MT5_NOT_LEAN",
+              "parse": "OK",
+              "sid": "S1",
+              "numeric_retention": "NUMERIC_RETENTION_RULE_NOT_MET"
+            },
+            {
+              "file": "workspace:work/repair_research/mt5_iteration18_20261011/Claude/exec/EVALUATION_S2.json",
+              "origin": "HISTORICAL_I18_MT5_NOT_LEAN",
+              "parse": "OK",
+              "sid": "S2",
+              "numeric_retention": "NUMERIC_RETENTION_RULE_NOT_MET"
+            },
+            {
+              "file": "workspace:work/repair_research/mt5_iteration18_20261011/Claude/exec/EVALUATION_S3.json",
+              "origin": "HISTORICAL_I18_MT5_NOT_LEAN",
+              "parse": "OK",
+              "sid": "S3",
+              "numeric_retention": "NUMERIC_RETENTION_RULE_NOT_MET"
+            },
+            {
+              "file": "workspace:work/repair_research/mt5_iteration18_20261011/Claude/exec/EVALUATION_S4.json",
+              "origin": "HISTORICAL_I18_MT5_NOT_LEAN",
+              "parse": "OK",
+              "sid": "S4",
+              "numeric_retention": "NUMERIC_RETENTION_RULE_NOT_MET"
+            },
+            {
+              "file": "workspace:work/repair_research/mt5_iteration18_20261011/Claude/exec/EVALUATION_S5.json",
+              "origin": "HISTORICAL_I18_MT5_NOT_LEAN",
+              "parse": "OK",
+              "sid": "S5",
+              "numeric_retention": "NUMERIC_RETENTION_RULE_NOT_MET"
+            },
+            {
+              "file": "workspace:work/repair_research/mt5_iteration18_20261011/Claude/exec/EVALUATION_S6.json",
+              "origin": "HISTORICAL_I18_MT5_NOT_LEAN",
+              "parse": "OK",
+              "sid": "S6",
+              "numeric_retention": "NUMERIC_RETENTION_RULE_NOT_MET"
+            },
+            {
+              "file": "workspace:work/repair_research/mt5_iteration18_20261011/Claude/exec/EVALUATION_Scalping.json",
+              "origin": "HISTORICAL_I18_MT5_NOT_LEAN",
+              "parse": "OK",
+              "sid": "Scalping",
+              "numeric_retention": "NUMERIC_RETENTION_RULE_MET"
+            }
+          ],
+          "i18_note": "I18 MT5 evaluations are historical MT5 evidence and are never LEAN results of this project."
+        }
+      }
+    },
+    {
+      "tool": "bounded_log_tail",
+      "arguments": {
+        "path": "workspace:work/repair_research/lean_mcp_20261012/lean_probe_01/console.log",
+        "max_lines": 5,
+        "max_bytes": 4096
+      },
+      "ms": 153,
+      "is_error": false,
+      "response": {
+        "tool": "bounded_log_tail",
+        "observed_utc": "2026-10-12T08:20:16+00:00",
+        "platform": {
+          "os": "Windows-11-10.0.26300-SP0",
+          "python": "3.12.14",
+          "pid": 17944
+        },
+        "server_version": "1.2.0",
+        "ok": true,
+        "result": {
+          "file": {
+            "path": "workspace:work/repair_research/lean_mcp_20261012/lean_probe_01/console.log",
+            "exists": true,
+            "size": 2303,
+            "mtime_utc": "2026-10-12T08:02:49+00:00",
+            "age_seconds": 1047.8,
+            "stable_during_probe": true
+          },
+          "root": "workspace",
+          "lines": [
+            "Unhandled exception. System.ArgumentException: Unable to locate any exports matching the requested typeName: QuantConnect.Messaging.Messaging. Type: QuantConnect.Interfaces.IMessagingHandler (Parameter 'typeName')",
+            "   at QuantConnect.Util.Composer.GetExportedValueByTypeName[T](String typeName, Boolean forceTypeNameOnExisting) in C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\quantconnect_20260920\\vendor\\Lean\\Common\\Util\\Composer.cs:line 259",
+            "   at QuantConnect.Lean.Engine.LeanEngineSystemHandlers.FromConfiguration(Composer composer) in C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\quantconnect_20260920\\vendor\\Lean\\Engine\\LeanEngineSystemHandlers.cs:line 109",
+            "   at QuantConnect.Lean.Engine.Initializer.GetSystemHandlers() in C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\quantconnect_20260920\\vendor\\Lean\\Engine\\Initializer.cs:line 65",
+            "   at QuantConnect.Lean.Launcher.Program.Main(String[] args) in C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\quantconnect_20260920\\vendor\\Lean\\Launcher\\Program.cs:line 64"
+          ],
+          "line_count": 5,
+          "lines_dropped_by_limit": 6,
+          "encoding": "utf-8",
+          "bytes_read": 2303,
+          "file_size": 2303,
+          "truncated_from_start": false,
+          "redacted": true,
+          "limits": {
+            "max_lines": 5,
+            "max_bytes": 4096
+          }
+        }
+      }
+    },
+    {
+      "tool": "bounded_log_tail",
+      "arguments": {
+        "path": "workspace:../outside.txt"
+      },
+      "ms": 2,
+      "is_error": false,
+      "response": {
+        "tool": "bounded_log_tail",
+        "observed_utc": "2026-10-12T08:20:17+00:00",
+        "platform": {
+          "os": "Windows-11-10.0.26300-SP0",
+          "python": "3.12.14",
+          "pid": 17944
+        },
+        "server_version": "1.2.0",
+        "ok": false,
+        "error": "ACCESS_DENIED",
+        "reason": "PATH_ESCAPE"
+      }
+    },
+    {
+      "tool": "bounded_log_tail",
+      "arguments": {
+        "path": "C:/Windows/win.ini"
+      },
+      "ms": 2,
+      "is_error": false,
+      "response": {
+        "tool": "bounded_log_tail",
+        "observed_utc": "2026-10-12T08:20:17+00:00",
+        "platform": {
+          "os": "Windows-11-10.0.26300-SP0",
+          "python": "3.12.14",
+          "pid": 17944
+        },
+        "server_version": "1.2.0",
+        "ok": false,
+        "error": "ACCESS_DENIED",
+        "reason": "OUTSIDE_ALLOWED_ROOTS"
+      }
+    },
+    {
+      "tool": "bounded_log_tail",
+      "arguments": {
+        "path": "workspace:work/x.log:stream"
+      },
+      "ms": 2,
+      "is_error": false,
+      "response": {
+        "tool": "bounded_log_tail",
+        "observed_utc": "2026-10-12T08:20:17+00:00",
+        "platform": {
+          "os": "Windows-11-10.0.26300-SP0",
+          "python": "3.12.14",
+          "pid": 17944
+        },
+        "server_version": "1.2.0",
+        "ok": false,
+        "error": "ACCESS_DENIED",
+        "reason": "INVALID_PATH"
+      }
+    },
+    {
+      "tool": "bounded_log_tail",
+      "arguments": {
+        "path": "workspace:work/a/terminal.ini"
+      },
+      "ms": 2,
+      "is_error": false,
+      "response": {
+        "tool": "bounded_log_tail",
+        "observed_utc": "2026-10-12T08:20:17+00:00",
+        "platform": {
+          "os": "Windows-11-10.0.26300-SP0",
+          "python": "3.12.14",
+          "pid": 17944
+        },
+        "server_version": "1.2.0",
+        "ok": false,
+        "error": "ACCESS_DENIED",
+        "reason": "PRIVATE_OR_CREDENTIAL_FILE"
+      }
+    },
+    {
+      "tool": "bounded_log_tail",
+      "arguments": {
+        "path": "workspace:work/repair_research/lean_mcp_20261012/monitor/.venv/pyvenv.cfg"
+      },
+      "ms": 2,
+      "is_error": false,
+      "response": {
+        "tool": "bounded_log_tail",
+        "observed_utc": "2026-10-12T08:20:17+00:00",
+        "platform": {
+          "os": "Windows-11-10.0.26300-SP0",
+          "python": "3.12.14",
+          "pid": 17944
+        },
+        "server_version": "1.2.0",
+        "ok": false,
+        "error": "ACCESS_DENIED",
+        "reason": "PRIVATE_OR_TOOLING_DIRECTORY"
+      }
+    },
+    {
+      "tool": "bounded_log_tail",
+      "arguments": {
+        "path": "mt5_common_files:not_project_file.csv"
+      },
+      "ms": 3,
+      "is_error": false,
+      "response": {
+        "tool": "bounded_log_tail",
+        "observed_utc": "2026-10-12T08:20:17+00:00",
+        "platform": {
+          "os": "Windows-11-10.0.26300-SP0",
+          "python": "3.12.14",
+          "pid": 17944
+        },
+        "server_version": "1.2.0",
+        "ok": false,
+        "error": "ACCESS_DENIED",
+        "reason": "MT5_COMMON_NOT_PROJECT_AUDIT"
+      }
+    },
+    {
+      "tool": "bounded_log_tail",
+      "arguments": {
+        "path": "workspace:work/does_not_exist.log"
+      },
+      "ms": 2,
+      "is_error": false,
+      "response": {
+        "tool": "bounded_log_tail",
+        "observed_utc": "2026-10-12T08:20:17+00:00",
+        "platform": {
+          "os": "Windows-11-10.0.26300-SP0",
+          "python": "3.12.14",
+          "pid": 17944
+        },
+        "server_version": "1.2.0",
+        "ok": false,
+        "error": "ACCESS_DENIED",
+        "reason": "NOT_FOUND"
+      }
+    },
+    {
+      "tool": "bounded_log_tail",
+      "arguments": {
+        "path": "workspace:work/repair_research/lean_mcp_20261012/monitor/server.py"
+      },
+      "ms": 3,
+      "is_error": false,
+      "response": {
+        "tool": "bounded_log_tail",
+        "observed_utc": "2026-10-12T08:20:17+00:00",
+        "platform": {
+          "os": "Windows-11-10.0.26300-SP0",
+          "python": "3.12.14",
+          "pid": 17944
+        },
+        "server_version": "1.2.0",
+        "ok": false,
+        "error": "ACCESS_DENIED",
+        "reason": "NOT_A_TEXT_LOG_EXTENSION"
+      }
+    },
+    {
+      "tool": "source_changes",
+      "arguments": {
+        "scope": "C:/"
+      },
+      "ms": 2,
+      "is_error": false,
+      "response": {
+        "tool": "source_changes",
+        "observed_utc": "2026-10-12T08:20:17+00:00",
+        "platform": {
+          "os": "Windows-11-10.0.26300-SP0",
+          "python": "3.12.14",
+          "pid": 17944
+        },
+        "server_version": "1.2.0",
+        "ok": false,
+        "error": "ACCESS_DENIED",
+        "reason": "UNKNOWN_SCOPE"
+      }
+    },
+    {
+      "tool": "run_status",
+      "arguments": {
+        "kind": "shell"
+      },
+      "ms": 2,
+      "is_error": false,
+      "response": {
+        "tool": "run_status",
+        "observed_utc": "2026-10-12T08:20:17+00:00",
+        "platform": {
+          "os": "Windows-11-10.0.26300-SP0",
+          "python": "3.12.14",
+          "pid": 17944
+        },
+        "server_version": "1.2.0",
+        "ok": false,
+        "error": "ACCESS_DENIED",
+        "reason": "UNKNOWN_KIND"
+      }
+    },
+    {
+      "tool": "source_changes",
+      "arguments": {
+        "scope": "lean",
+        "since_utc": "yesterday"
+      },
+      "ms": 2,
+      "is_error": false,
+      "response": {
+        "tool": "source_changes",
+        "observed_utc": "2026-10-12T08:20:17+00:00",
+        "platform": {
+          "os": "Windows-11-10.0.26300-SP0",
+          "python": "3.12.14",
+          "pid": 17944
+        },
+        "server_version": "1.2.0",
+        "ok": false,
+        "error": "ACCESS_DENIED",
+        "reason": "BAD_SINCE_UTC"
+      }
+    },
+    {
+      "tool": "bounded_log_tail",
+      "arguments": {
+        "path": "workspace:work/repair_research/lean_mcp_20261012/lean_probe_01/console.log",
+        "max_lines": 1000000000,
+        "max_bytes": 1000000000
+      },
+      "ms": 154,
+      "is_error": false,
+      "response": {
+        "tool": "bounded_log_tail",
+        "observed_utc": "2026-10-12T08:20:17+00:00",
+        "platform": {
+          "os": "Windows-11-10.0.26300-SP0",
+          "python": "3.12.14",
+          "pid": 17944
+        },
+        "server_version": "1.2.0",
+        "ok": true,
+        "result": {
+          "file": {
+            "path": "workspace:work/repair_research/lean_mcp_20261012/lean_probe_01/console.log",
+            "exists": true,
+            "size": 2303,
+            "mtime_utc": "2026-10-12T08:02:49+00:00",
+            "age_seconds": 1048.0,
+            "stable_during_probe": true
+          },
+          "root": "workspace",
+          "lines": [
+            "20261012 08:02:33.326 TRACE:: Using C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\lean_mcp_20261012\\lean_probe_01\\config.json as configuration file",
+            "20261012 08:02:33.553 TRACE:: Composer(): Loading Assemblies from C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\quantconnect_20260920\\vendor\\Lean\\Launcher\\bin\\Release\\",
+            "20261012 08:02:36.185 TRACE:: Python for .NET Assembly: Python.Runtime, Version=2.0.66.0, Culture=neutral, PublicKeyToken=5000fea6cba702dd",
+            "20261012 08:02:46.219 TRACE:: Composer.LoadPartsSafely(C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\quantconnect_20260920\\vendor\\Lean\\Launcher\\bin\\Release\\QuantConnect.Messaging.dll): Skipping FileLoadException: Could not load file or assembly 'C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\quantconnect_20260920\\vendor\\Lean\\Launcher\\bin\\Release\\QuantConnect.Messaging.dll'. 应用程序控制策略已阻止此文件。 (0x800711C7)",
+            "20261012 08:02:49.044 TRACE:: Engine.Main(): LEAN ALGORITHMIC TRADING ENGINE v2.5.0.0 Mode: RELEASE (64bit) Host: DESKTOP-34QBTAL",
+            "20261012 08:02:49.049 TRACE:: Engine.Main(): Started 4:02 PM",
+            "Unhandled exception. System.ArgumentException: Unable to locate any exports matching the requested typeName: QuantConnect.Messaging.Messaging. Type: QuantConnect.Interfaces.IMessagingHandler (Parameter 'typeName')",
+            "   at QuantConnect.Util.Composer.GetExportedValueByTypeName[T](String typeName, Boolean forceTypeNameOnExisting) in C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\quantconnect_20260920\\vendor\\Lean\\Common\\Util\\Composer.cs:line 259",
+            "   at QuantConnect.Lean.Engine.LeanEngineSystemHandlers.FromConfiguration(Composer composer) in C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\quantconnect_20260920\\vendor\\Lean\\Engine\\LeanEngineSystemHandlers.cs:line 109",
+            "   at QuantConnect.Lean.Engine.Initializer.GetSystemHandlers() in C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\quantconnect_20260920\\vendor\\Lean\\Engine\\Initializer.cs:line 65",
+            "   at QuantConnect.Lean.Launcher.Program.Main(String[] args) in C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\quantconnect_20260920\\vendor\\Lean\\Launcher\\Program.cs:line 64"
+          ],
+          "line_count": 11,
+          "lines_dropped_by_limit": 0,
+          "encoding": "utf-8",
+          "bytes_read": 2303,
+          "file_size": 2303,
+          "truncated_from_start": false,
+          "redacted": true,
+          "limits": {
+            "max_lines": 400,
+            "max_bytes": 65536
+          }
+        }
+      }
+    },
+    {
+      "tool": "no_such_tool",
+      "is_error": true
+    }
+  ],
+  "checks": [
+    {
+      "check": "handshake_server_name",
+      "pass": true,
+      "detail": "tb-lean-monitor"
+    },
+    {
+      "check": "required_tools_listed",
+      "pass": true,
+      "detail": [
+        "bounded_log_tail",
+        "health",
+        "latest_results",
+        "research_status",
+        "run_status",
+        "source_changes"
+      ]
+    },
+    {
+      "check": "all_tools_read_only_annotated",
+      "pass": true,
+      "detail": [
+        {
+          "name": "health",
+          "read_only_hint": true
+        },
+        {
+          "name": "research_status",
+          "read_only_hint": true
+        },
+        {
+          "name": "source_changes",
+          "read_only_hint": true
+        },
+        {
+          "name": "run_status",
+          "read_only_hint": true
+        },
+        {
+          "name": "bounded_log_tail",
+          "read_only_hint": true
+        },
+        {
+          "name": "latest_results",
+          "read_only_hint": true
+        }
+      ]
+    },
+    {
+      "check": "health({}) ok=True",
+      "pass": true,
+      "detail": {
+        "ok": true,
+        "error": null,
+        "reason": null
+      }
+    },
+    {
+      "check": "health({}) has observed_utc/platform",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "health_policy_read_only",
+      "pass": true,
+      "detail": {
+        "read_only": true,
+        "executes_commands": false,
+        "writes_files": false,
+        "sends_orders": false,
+        "changes_configuration": false,
+        "internal_discovery_uses_same_path_policy": true,
+        "mt5_common_files_allowed_prefix_regex": "^(AUDIT_|CAPACITY_|CONTROL_|SCALPI\\d|SCALP20|QC_|QC20|I9_|GSM_|V400|V410|v3\\.20|TB_|TradingBrain)",
+        "denied_directories": [
+          ".claude",
+          ".codex",
+          ".git",
+          ".venv",
+          "__pycache__",
+          "backups",
+          "dotnet_home",
+          "node_modules",
+          "nuget",
+          "private",
+          "venv"
+        ],
+        "max_tail_lines": 400,
+        "max_tail_bytes": 65536,
+        "fresh_seconds": 120.0
+      }
+    },
+    {
+      "check": "research_status({}) ok=True",
+      "pass": true,
+      "detail": {
+        "ok": true,
+        "error": null,
+        "reason": null
+      }
+    },
+    {
+      "check": "research_status({}) has observed_utc/platform",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "migration_order_S4_then_Scalping_seven_total",
+      "pass": true,
+      "detail": [
+        "S4",
+        "Scalping",
+        "S1",
+        "S2",
+        "S3",
+        "S5",
+        "S6"
+      ]
+    },
+    {
+      "check": "source_changes({\"scope\": \"monitor\"}) ok=True",
+      "pass": true,
+      "detail": {
+        "ok": true,
+        "error": null,
+        "reason": null
+      }
+    },
+    {
+      "check": "source_changes({\"scope\": \"monitor\"}) has observed_utc/platform",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "source_baseline_first",
+      "pass": true,
+      "detail": 9
+    },
+    {
+      "check": "source_changes({\"scope\": \"monitor\"}) ok=True",
+      "pass": true,
+      "detail": {
+        "ok": true,
+        "error": null,
+        "reason": null
+      }
+    },
+    {
+      "check": "source_changes({\"scope\": \"monitor\"}) has observed_utc/platform",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "source_second_call_diff_not_baseline",
+      "pass": true,
+      "detail": 0
+    },
+    {
+      "check": "source_changes({\"scope\": \"lean\", \"since_utc\": \"2000-01-01T00:00:00Z\"}) ok=True",
+      "pass": true,
+      "detail": {
+        "ok": true,
+        "error": null,
+        "reason": null
+      }
+    },
+    {
+      "check": "source_changes({\"scope\": \"lean\", \"since_utc\": \"2000-01-01T00:00:00Z\"}) has observed_utc/platform",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "run_status({\"kind\": \"all\"}) ok=True",
+      "pass": true,
+      "detail": {
+        "ok": true,
+        "error": null,
+        "reason": null
+      }
+    },
+    {
+      "check": "run_status({\"kind\": \"all\"}) has observed_utc/platform",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "run_status({\"kind\": \"all\", \"include_historical\": true, \"limit\": 5}) ok=True",
+      "pass": true,
+      "detail": {
+        "ok": true,
+        "error": null,
+        "reason": null
+      }
+    },
+    {
+      "check": "run_status({\"kind\": \"all\", \"include_historical\": true, \"limit\": 5}) has observed_utc/platform",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "latest_results({}) ok=True",
+      "pass": true,
+      "detail": {
+        "ok": true,
+        "error": null,
+        "reason": null
+      }
+    },
+    {
+      "check": "latest_results({}) has observed_utc/platform",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "latest_results({\"include_historical\": true, \"limit\": 3}) ok=True",
+      "pass": true,
+      "detail": {
+        "ok": true,
+        "error": null,
+        "reason": null
+      }
+    },
+    {
+      "check": "latest_results({\"include_historical\": true, \"limit\": 3}) has observed_utc/platform",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "i18_never_labelled_lean",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "lean_probe_01_reported_failed_code_integrity",
+      "pass": true,
+      "detail": [
+        "CODE_INTEGRITY_BLOCKED_DLL",
+        "UNHANDLED_EXCEPTION"
+      ]
+    },
+    {
+      "check": "bounded_log_tail({\"path\": \"workspace:work/repair_research/lean_mcp_20261012/lean_probe_01/console.log\", \"max_lines\": 5, \"max_bytes\": 4096}) ok=True",
+      "pass": true,
+      "detail": {
+        "ok": true,
+        "error": null,
+        "reason": null
+      }
+    },
+    {
+      "check": "bounded_log_tail({\"path\": \"workspace:work/repair_research/lean_mcp_20261012/lean_probe_01/console.log\", \"max_lines\": 5, \"max_bytes\": 4096}) has observed_utc/platform",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "tail_bounded",
+      "pass": true,
+      "detail": 5
+    },
+    {
+      "check": "bounded_log_tail({\"path\": \"workspace:../outside.txt\"}) ok=False",
+      "pass": true,
+      "detail": {
+        "ok": false,
+        "error": "ACCESS_DENIED",
+        "reason": "PATH_ESCAPE"
+      }
+    },
+    {
+      "check": "bounded_log_tail({\"path\": \"workspace:../outside.txt\"}) reason=PATH_ESCAPE",
+      "pass": true,
+      "detail": "PATH_ESCAPE"
+    },
+    {
+      "check": "bounded_log_tail({\"path\": \"C:/Windows/win.ini\"}) ok=False",
+      "pass": true,
+      "detail": {
+        "ok": false,
+        "error": "ACCESS_DENIED",
+        "reason": "OUTSIDE_ALLOWED_ROOTS"
+      }
+    },
+    {
+      "check": "bounded_log_tail({\"path\": \"C:/Windows/win.ini\"}) reason=OUTSIDE_ALLOWED_ROOTS",
+      "pass": true,
+      "detail": "OUTSIDE_ALLOWED_ROOTS"
+    },
+    {
+      "check": "bounded_log_tail({\"path\": \"workspace:work/x.log:stream\"}) ok=False",
+      "pass": true,
+      "detail": {
+        "ok": false,
+        "error": "ACCESS_DENIED",
+        "reason": "INVALID_PATH"
+      }
+    },
+    {
+      "check": "bounded_log_tail({\"path\": \"workspace:work/x.log:stream\"}) reason=INVALID_PATH",
+      "pass": true,
+      "detail": "INVALID_PATH"
+    },
+    {
+      "check": "bounded_log_tail({\"path\": \"workspace:work/a/terminal.ini\"}) ok=False",
+      "pass": true,
+      "detail": {
+        "ok": false,
+        "error": "ACCESS_DENIED",
+        "reason": "PRIVATE_OR_CREDENTIAL_FILE"
+      }
+    },
+    {
+      "check": "bounded_log_tail({\"path\": \"workspace:work/a/terminal.ini\"}) reason=PRIVATE_OR_CREDENTIAL_FILE",
+      "pass": true,
+      "detail": "PRIVATE_OR_CREDENTIAL_FILE"
+    },
+    {
+      "check": "bounded_log_tail({\"path\": \"workspace:work/repair_research/lean_mcp_20261012/monitor/.venv/pyvenv.cfg\"}) ok=False",
+      "pass": true,
+      "detail": {
+        "ok": false,
+        "error": "ACCESS_DENIED",
+        "reason": "PRIVATE_OR_TOOLING_DIRECTORY"
+      }
+    },
+    {
+      "check": "bounded_log_tail({\"path\": \"workspace:work/repair_research/lean_mcp_20261012/monitor/.venv/pyvenv.cfg\"}) reason=PRIVATE_OR_TOOLING_DIRECTORY",
+      "pass": true,
+      "detail": "PRIVATE_OR_TOOLING_DIRECTORY"
+    },
+    {
+      "check": "bounded_log_tail({\"path\": \"mt5_common_files:not_project_file.csv\"}) ok=False",
+      "pass": true,
+      "detail": {
+        "ok": false,
+        "error": "ACCESS_DENIED",
+        "reason": "MT5_COMMON_NOT_PROJECT_AUDIT"
+      }
+    },
+    {
+      "check": "bounded_log_tail({\"path\": \"mt5_common_files:not_project_file.csv\"}) reason=MT5_COMMON_NOT_PROJECT_AUDIT",
+      "pass": true,
+      "detail": "MT5_COMMON_NOT_PROJECT_AUDIT"
+    },
+    {
+      "check": "bounded_log_tail({\"path\": \"workspace:work/does_not_exist.log\"}) ok=False",
+      "pass": true,
+      "detail": {
+        "ok": false,
+        "error": "ACCESS_DENIED",
+        "reason": "NOT_FOUND"
+      }
+    },
+    {
+      "check": "bounded_log_tail({\"path\": \"workspace:work/does_not_exist.log\"}) reason=NOT_FOUND",
+      "pass": true,
+      "detail": "NOT_FOUND"
+    },
+    {
+      "check": "bounded_log_tail({\"path\": \"workspace:work/repair_research/lean_mcp_20261012/monitor/server.py\"}) ok=False",
+      "pass": true,
+      "detail": {
+        "ok": false,
+        "error": "ACCESS_DENIED",
+        "reason": "NOT_A_TEXT_LOG_EXTENSION"
+      }
+    },
+    {
+      "check": "bounded_log_tail({\"path\": \"workspace:work/repair_research/lean_mcp_20261012/monitor/server.py\"}) reason=NOT_A_TEXT_LOG_EXTENSION",
+      "pass": true,
+      "detail": "NOT_A_TEXT_LOG_EXTENSION"
+    },
+    {
+      "check": "source_changes({\"scope\": \"C:/\"}) ok=False",
+      "pass": true,
+      "detail": {
+        "ok": false,
+        "error": "ACCESS_DENIED",
+        "reason": "UNKNOWN_SCOPE"
+      }
+    },
+    {
+      "check": "source_changes({\"scope\": \"C:/\"}) reason=UNKNOWN_SCOPE",
+      "pass": true,
+      "detail": "UNKNOWN_SCOPE"
+    },
+    {
+      "check": "run_status({\"kind\": \"shell\"}) ok=False",
+      "pass": true,
+      "detail": {
+        "ok": false,
+        "error": "ACCESS_DENIED",
+        "reason": "UNKNOWN_KIND"
+      }
+    },
+    {
+      "check": "run_status({\"kind\": \"shell\"}) reason=UNKNOWN_KIND",
+      "pass": true,
+      "detail": "UNKNOWN_KIND"
+    },
+    {
+      "check": "source_changes({\"scope\": \"lean\", \"since_utc\": \"yesterday\"}) ok=False",
+      "pass": true,
+      "detail": {
+        "ok": false,
+        "error": "ACCESS_DENIED",
+        "reason": "BAD_SINCE_UTC"
+      }
+    },
+    {
+      "check": "source_changes({\"scope\": \"lean\", \"since_utc\": \"yesterday\"}) reason=BAD_SINCE_UTC",
+      "pass": true,
+      "detail": "BAD_SINCE_UTC"
+    },
+    {
+      "check": "limits_clamped",
+      "pass": true,
+      "detail": {
+        "max_lines": 400,
+        "max_bytes": 65536
+      }
+    },
+    {
+      "check": "unknown_tool_is_error",
+      "pass": true,
+      "detail": null
+    }
+  ],
+  "initialize": {
+    "server": {
+      "name": "tb-lean-monitor",
+      "title": null,
+      "version": "1.30.0",
+      "websiteUrl": null,
+      "icons": null
+    },
+    "protocol": "2025-11-25"
+  },
+  "tools": [
+    {
+      "name": "health",
+      "read_only_hint": true
+    },
+    {
+      "name": "research_status",
+      "read_only_hint": true
+    },
+    {
+      "name": "source_changes",
+      "read_only_hint": true
+    },
+    {
+      "name": "run_status",
+      "read_only_hint": true
+    },
+    {
+      "name": "bounded_log_tail",
+      "read_only_hint": true
+    },
+    {
+      "name": "latest_results",
+      "read_only_hint": true
+    }
+  ],
+  "finished_utc": "2026-10-12T08:20:17+00:00",
+  "passed": true,
+  "failed_checks": []
+}

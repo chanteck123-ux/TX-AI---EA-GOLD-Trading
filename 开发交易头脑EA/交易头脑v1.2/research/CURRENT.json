@@ -1407,5 +1407,25 @@
     "native_restart_fault_injection": false,
     "broker_cost_margin_calibrated": false,
     "champion": false
+  },
+  "realtime_research_monitor": {
+    "date": "2026-10-12",
+    "version": "1.2.0",
+    "mode": "CODEX_AND_CLAUDE",
+    "code_owner": "CLAUDE_CODE",
+    "verification_owner": "CODEX",
+    "status": "SERVER_TESTED_CLIENTS_CONFIGURED_LOAD_PENDING",
+    "tools": 6,
+    "unit_pass": 30,
+    "unit_skip": 1,
+    "unit_fail": 0,
+    "stdio_checks_passed": 54,
+    "lean_status": "STARTUP_BLOCKED_NO_ALGORITHM_RUN",
+    "lean_failed_assembly": "QuantConnect.Messaging.dll",
+    "error": "0x800711C7",
+    "migration": "SEVEN_PLANNED_NOT_COMPLETED",
+    "evidence": "LEAN_MCP_20261012/CODEX_FINAL_REVIEW.json",
+    "source": "../tools/mcp_monitor/server.py",
+    "live_changes": false
   }
 }

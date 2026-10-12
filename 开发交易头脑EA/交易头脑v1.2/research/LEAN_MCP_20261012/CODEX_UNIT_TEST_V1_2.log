@@ -1,0 +1,36 @@
+test_build_states (test_monitor.Builds.test_build_states) ... ok
+test_junctioned_run_dir_and_log_are_not_read (test_monitor.InternalDiscovery.test_junctioned_run_dir_and_log_are_not_read) ... ok
+test_stage_records_and_json_reads_respect_policy (test_monitor.InternalDiscovery.test_stage_records_and_json_reads_respect_policy) ... ok
+test_code_integrity_block_is_failed (test_monitor.LeanClassification.test_code_integrity_block_is_failed) ... ok
+test_completed_needs_terminal_marker_and_valid_summary (test_monitor.LeanClassification.test_completed_needs_terminal_marker_and_valid_summary) ... ok
+test_exited_without_valid_summary_and_parse_states (test_monitor.LeanClassification.test_exited_without_valid_summary_and_parse_states) ... ok
+test_no_log_is_not_running (test_monitor.LeanClassification.test_no_log_is_not_running) ... ok
+test_recent_activity_and_growth_between_calls (test_monitor.LeanClassification.test_recent_activity_and_growth_between_calls) ... ok
+test_summary_without_terminal_marker_is_not_completed (test_monitor.LeanClassification.test_summary_without_terminal_marker_is_not_completed) ... ok
+test_escape_absolute_outside_and_unknown_root_are_denied (test_monitor.PathPolicy.test_escape_absolute_outside_and_unknown_root_are_denied) ... ok
+test_junction_inside_root_is_denied (test_monitor.PathPolicy.test_junction_inside_root_is_denied) ... ok
+test_mt5_common_only_project_audit_names (test_monitor.PathPolicy.test_mt5_common_only_project_audit_names) ... ok
+test_private_credential_and_tooling_paths_are_denied (test_monitor.PathPolicy.test_private_credential_and_tooling_paths_are_denied) ... ok
+test_relative_and_root_prefixed_paths_resolve (test_monitor.PathPolicy.test_relative_and_root_prefixed_paths_resolve) ... ok
+test_symlink_is_denied_when_creatable (test_monitor.PathPolicy.test_symlink_is_denied_when_creatable) ... skipped 'symlink creation not permitted on this account'
+test_patterns (test_monitor.Redaction.test_patterns) ... ok
+test_historical_i18_never_called_lean (test_monitor.ResultsAndStatus.test_historical_i18_never_called_lean) ... ok
+test_latest_results_labels_and_empty_state (test_monitor.ResultsAndStatus.test_latest_results_labels_and_empty_state) ... ok
+test_mt5_common_listing_is_filtered_and_tracks_growth (test_monitor.ResultsAndStatus.test_mt5_common_listing_is_filtered_and_tracks_growth) ... ok
+test_research_status_reports_missing_not_running (test_monitor.ResultsAndStatus.test_research_status_reports_missing_not_running) ... ok
+test_unknown_kind_denied (test_monitor.ResultsAndStatus.test_unknown_kind_denied) ... ok
+test_baseline_then_added_modified_deleted_with_hashes (test_monitor.Sources.test_baseline_then_added_modified_deleted_with_hashes) ... ok
+test_since_timestamp_and_bad_scope (test_monitor.Sources.test_since_timestamp_and_bad_scope) ... ok
+test_source_walk_skips_junctioned_directory (test_monitor.Sources.test_source_walk_skips_junctioned_directory) ... ok
+test_touch_without_content_change_is_not_a_modification (test_monitor.Sources.test_touch_without_content_change_is_not_a_modification) ... ok
+test_initialize_and_tools_list_over_raw_stdio (test_monitor.StdioProtocol.test_initialize_and_tools_list_over_raw_stdio) ... ok
+test_limits_clamped_and_non_text_refused (test_monitor.Tail.test_limits_clamped_and_non_text_refused) ... ok
+test_utf16_mt5_journal (test_monitor.Tail.test_utf16_mt5_journal) ... ok
+test_utf8_bounded_and_redacted (test_monitor.Tail.test_utf8_bounded_and_redacted) ... ok
+test_caps_and_limits_are_reported (test_monitor.Truncation.test_caps_and_limits_are_reported) ... ok
+test_log_scan_window_is_reported (test_monitor.Truncation.test_log_scan_window_is_reported) ... ok
+
+----------------------------------------------------------------------
+Ran 31 tests in 1.562s
+
+OK (skipped=1)

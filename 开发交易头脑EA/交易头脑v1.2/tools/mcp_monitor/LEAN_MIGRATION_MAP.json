@@ -1,0 +1,103 @@
+{
+  "schema": "TB_LEAN_MIGRATION_MAP_V1",
+  "created": "2026-10-12",
+  "author": "Claude Code (plan only; no LEAN algorithm, build or run exists for this map yet)",
+  "status": "PLANNED_NOT_IMPLEMENTED",
+  "rules": [
+    "All seven strategies are in scope; implementation order below.",
+    "The reference for each strategy is the RETAINED MT5 version (I18 kept every incumbent except Scalping, whose development-period best is S20). I18 candidates that were not retained are not migrated.",
+    "Earlier LEAN work is SIGNAL-LAYER translation only and must not be called a complete migration: quantconnect_20260920 (C7Signals.cs, S1/S4 signals with an engineering order/risk wrapper), lean_500_20260927 (same S1/S4 signals with a 500 USD engineering risk/fill model) and mt5_iteration9_20261004/algorithm (I9 SevenSignalsAlgorithm: signal layer of all seven strategies S1-S6 + Scalping). None of them reproduces the MT5 fill, exit, protection and account-risk lifecycle of the retained versions.",
+    "Comparison order per strategy: (1) clock/time mapping, (2) indicators on native closed bars, (3) zones/structures, (4) signals and gates, (5) risk sizing and portfolio caps, (6) fees/swap, (7) fills/latency and exits. A later layer is compared only after the earlier one matches or its residual difference is explained.",
+    "Any strategy change discovered during migration is a new experiment with its own registration and budget; migration itself must not change MT5 behaviour.",
+    "LEAN currently cannot start on this machine: Windows application control (CodeIntegrity 0x800711C7) blocks QuantConnect DLLs (lean_probe_01). Security policy is not changed and DLLs are not moved, renamed or re-signed to bypass it.",
+    "Score N/A (SCORE_TARGETS_UNSET). I18 MT5 numbers are never LEAN numbers."
+  ],
+  "order": [
+    {
+      "priority": 1,
+      "sid": "S4",
+      "reference": "TB500_S4_BE125 (retained original; I18 BE1.0R candidate not retained)",
+      "mt5_source": "outputs/TradingBrain_I11_Seven_Strategies_20261004/MT5/S4/TB500_S4_BE125/TB500_S4_BE125.mq5",
+      "mt5_source_sha256": "f6abe1abc8d9cfca27e6483f344aab03110b9df11b8d1b458e3fce432d63be47",
+      "risk_percent": 2,
+      "prior_lean_work": "C7Signals.cs S4 signal layer + runs QC_C7_S4_G0/G2 (signal parity only; 30000 USD capital in 2026-09-20 runs, 500 USD single-slot engineering model in lean_500_20260927); I9 SevenSignalsAlgorithm signal layer (mt5_iteration9_20261004/algorithm), signal only",
+      "must_add": [
+        "two position slots + portfolio risk cap as in MT5",
+        "break-even at 1.25R incl. cost buffer",
+        "ENTRY_RISK_OVERRUN EA close",
+        "daily equity stop",
+        "FxPro fee/swap/contract units",
+        "250 ms request delay model"
+      ]
+    },
+    {
+      "priority": 2,
+      "sid": "Scalping",
+      "reference": "TB500_Scalping_SPREAD20_I18 (development-period best only; I15 C1 is its exact parent)",
+      "mt5_source": "work/repair_research/mt5_iteration18_20261011/Claude/candidates_r1/TB500_Scalping_SPREAD20_I18/TB500_Scalping_SPREAD20_I18.mq5",
+      "mt5_source_sha256": "41f443dd4ee26c495354f3955d7931be92e3b09c1e70458fbbf1a446baef4f2f",
+      "risk_percent": "2 single / 3 total",
+      "prior_lean_work": "I9 SevenSignalsAlgorithm signal layer (mt5_iteration9_20261004/algorithm), signal only",
+      "must_add": [
+        "M5 recent valid supply/demand zone retest + closed-bar reversal (user SOP, unchanged)",
+        "decision-time spread gate 20 points",
+        "Daily6 server-day 6 wins OR 6 losses (strategy-only)",
+        "auto-risk sizing with fee budget",
+        "I15 dynamic cost break-even exits",
+        "single position"
+      ]
+    },
+    {
+      "priority": 3,
+      "sid": "S1",
+      "reference": "TB500_S1_TRIGGER_M5_SL_R2 (retained)",
+      "mt5_source": "outputs/TradingBrain_I11_Seven_Strategies_20261004/MT5/S1/TB500_S1_TRIGGER_M5_SL_R2/TB500_S1_TRIGGER_M5_SL_R2.mq5",
+      "mt5_source_sha256": "05d1efc953ae8ef24779e738e4cde7b37095bede5217576cb301c8185f85eb67",
+      "risk_percent": 1,
+      "prior_lean_work": "C7Signals.cs S1 signal layer (parity reports in quantconnect_20260920/algorithm_tests); I9 SevenSignalsAlgorithm signal layer (mt5_iteration9_20261004/algorithm), signal only"
+    },
+    {
+      "priority": 4,
+      "sid": "S2",
+      "reference": "TB500_S2_PROGRESS_RISK2_BE1_I11 (retained)",
+      "mt5_source": "outputs/TradingBrain_I11_Seven_Strategies_20261004/MT5/S2/TB500_S2_PROGRESS_RISK2_BE1_I11/TB500_S2_PROGRESS_RISK2_BE1_I11.mq5",
+      "mt5_source_sha256": "734d447ead4b90b092be2c397784ae7b3d3e0d9cdea839d877f73f834d815eab",
+      "risk_percent": 2,
+      "prior_lean_work": "I9 SevenSignalsAlgorithm signal layer (mt5_iteration9_20261004/algorithm), signal only"
+    },
+    {
+      "priority": 5,
+      "sid": "S3",
+      "reference": "TB500_S3_H1_SLOPE_PRICE (retained)",
+      "mt5_source": "outputs/TradingBrain_I11_Seven_Strategies_20261004/MT5/S3/TB500_S3_H1_SLOPE_PRICE/TB500_S3_H1_SLOPE_PRICE.mq5",
+      "mt5_source_sha256": "0f2901565718506bbdb3f344ceaab572bfef01e08efef8e28b12fcedff728f54",
+      "risk_percent": 1,
+      "prior_lean_work": "I9 SevenSignalsAlgorithm signal layer (mt5_iteration9_20261004/algorithm), signal only"
+    },
+    {
+      "priority": 6,
+      "sid": "S5",
+      "reference": "TB500_S5_REQUEST_FINALITY_V1 (retained)",
+      "mt5_source": "outputs/TradingBrain_I11_Seven_Strategies_20261004/MT5/S5/TB500_S5_REQUEST_FINALITY_V1/TB500_S5_REQUEST_FINALITY_V1.mq5",
+      "mt5_source_sha256": "631ef2c3ce325fa2ec279766ce4c907f4d5a107509688f247fd2e3d99c2d99a1",
+      "risk_percent": 1,
+      "prior_lean_work": "I9 SevenSignalsAlgorithm signal layer (mt5_iteration9_20261004/algorithm), signal only"
+    },
+    {
+      "priority": 7,
+      "sid": "S6",
+      "reference": "TB500_S6_DISTINCT_TRIGGER_BE1 (retained)",
+      "mt5_source": "outputs/TradingBrain_I11_Seven_Strategies_20261004/MT5/S6/TB500_S6_DISTINCT_TRIGGER_BE1/TB500_S6_DISTINCT_TRIGGER_BE1.mq5",
+      "mt5_source_sha256": "956d2fec9c809b8cb60b879a7868e08b3b2114e8e7b384347777617becaf4bdf",
+      "risk_percent": 1,
+      "prior_lean_work": "I9 SevenSignalsAlgorithm signal layer (mt5_iteration9_20261004/algorithm), signal only"
+    }
+  ],
+  "project_layout_convention": {
+    "lean/algorithms/<SID>/": "C# algorithm sources per strategy (Claude writes)",
+    "builds/<build_id>/*.log": "dotnet build logs written by the Codex runner",
+    "runs/<run_id>/": "LEAN outputs: config.json, log.txt, console.log, *-summary.json, RUN_RECEIPT.json",
+    "optimizations/<opt_id>/": "registered optimization batches (not created yet)",
+    "research/STAGES.jsonl": "one JSON object per line {stage: code|compile|backtest|optimize, sid, id, status, utc, evidence} appended by the stage owner"
+  }
+}

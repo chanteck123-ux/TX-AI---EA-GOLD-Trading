@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "tb-lean-monitor": {
+      "type": "stdio",
+      "command": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\lean_mcp_20261012\\monitor\\.venv\\Scripts\\python.exe",
+      "args": ["C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\lean_mcp_20261012\\monitor\\server.py"],
+      "env": {}
+    }
+  }
+}

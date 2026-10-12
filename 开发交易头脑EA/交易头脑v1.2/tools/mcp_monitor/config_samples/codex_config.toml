@@ -1,0 +1,12 @@
+# SAMPLE ONLY - not installed anywhere by Claude. Codex adds this to ~/.codex/config.toml (global) or a trusted project's
+# .codex/config.toml after its own handshake/tool-call tests. Keys follow the official Codex MCP docs (stdio server).
+[mcp_servers.tb-lean-monitor]
+command = 'C:\Users\A\Documents\Codex\2026-09-10\v1-2-ea-mt5\work\repair_research\lean_mcp_20261012\monitor\.venv\Scripts\python.exe'
+args = ['C:\Users\A\Documents\Codex\2026-09-10\v1-2-ea-mt5\work\repair_research\lean_mcp_20261012\monitor\server.py']
+cwd = 'C:\Users\A\Documents\Codex\2026-09-10\v1-2-ea-mt5\work\repair_research\lean_mcp_20261012\monitor'
+startup_timeout_sec = 20
+tool_timeout_sec = 60
+enabled = true
+enabled_tools = ["health", "research_status", "source_changes", "run_status", "bounded_log_tail", "latest_results"]
+# The server reads APPDATA to locate MT5 Common/Files; forward only that variable.
+env_vars = ["APPDATA"]

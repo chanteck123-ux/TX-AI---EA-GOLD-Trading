@@ -1,0 +1,39 @@
+{
+  "schema": "LEAN_MCP_INTAKE_20261012_V1",
+  "mode": "CLAUDE_CODE_PLUS_CODEX",
+  "lean_status": "STARTUP_BLOCKED_NO_ALGORITHM_RUN",
+  "failed_assembly": "QuantConnect.Messaging.dll",
+  "error": "0x800711C7",
+  "process_exit_code": -532462766,
+  "scope": "OFFICIAL_LOCAL_CSHARP_ENGINE_SMOKE_NOT_TRADINGBRAIN_VALIDATION",
+  "console_log": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\lean_mcp_20261012\\lean_probe_01\\console.log",
+  "console_log_sha256": "a79c1172586caa359f5a99a5d241e5030adef06b83ee9a851dfcf18b0237d2f5",
+  "code_integrity_events": [
+    {
+      "id": 3077,
+      "utc": "2026-10-12T08:02:46.2184168Z",
+      "message": "Code Integrity determined that a process (\\Device\\HarddiskVolume3\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\quantconnect_20260920\\runtime\\dotnet\\dotnet.exe) attempted to load \\Device\\HarddiskVolume3\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\quantconnect_20260920\\vendor\\Lean\\Launcher\\bin\\Release\\QuantConnect.Messaging.dll that did not meet the Enterprise signing level requirements or violated code integrity policy (Policy ID:{0283ac0f-fff1-49ae-ada1-8a933130cad6})."
+    },
+    {
+      "id": 3033,
+      "utc": "2026-10-12T08:02:46.2182889Z",
+      "message": "Code Integrity determined that a process (\\Device\\HarddiskVolume3\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\quantconnect_20260920\\runtime\\dotnet\\dotnet.exe) attempted to load \\Device\\HarddiskVolume3\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\quantconnect_20260920\\vendor\\Lean\\Launcher\\bin\\Release\\QuantConnect.Messaging.dll that did not meet the Enterprise signing level requirements."
+    },
+    {
+      "id": 3077,
+      "utc": "2026-10-12T08:02:42.9440985Z",
+      "message": "Code Integrity determined that a process (\\Device\\HarddiskVolume3\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\quantconnect_20260920\\runtime\\dotnet\\dotnet.exe) attempted to load \\Device\\HarddiskVolume3\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\quantconnect_20260920\\vendor\\Lean\\Launcher\\bin\\Release\\QuantConnect.Messaging.dll that did not meet the Enterprise signing level requirements or violated code integrity policy (Policy ID:{0283ac0f-fff1-49ae-ada1-8a933130cad6})."
+    },
+    {
+      "id": 3033,
+      "utc": "2026-10-12T08:02:42.9439862Z",
+      "message": "Code Integrity determined that a process (\\Device\\HarddiskVolume3\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\quantconnect_20260920\\runtime\\dotnet\\dotnet.exe) attempted to load \\Device\\HarddiskVolume3\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\quantconnect_20260920\\vendor\\Lean\\Launcher\\bin\\Release\\QuantConnect.Messaging.dll that did not meet the Enterprise signing level requirements."
+    }
+  ],
+  "security_settings_changed": false,
+  "python": "3.12.14",
+  "mcp_sdk": "1.30.0",
+  "python_scope": "MCP_MONITOR_ONLY",
+  "monitor_status": "CLAUDE_IMPLEMENTATION_IN_PROGRESS_NOT_CONNECTED",
+  "live_changes": false
+}
