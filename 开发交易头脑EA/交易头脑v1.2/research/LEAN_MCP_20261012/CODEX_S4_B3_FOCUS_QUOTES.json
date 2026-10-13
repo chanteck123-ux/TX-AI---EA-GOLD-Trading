@@ -1,0 +1,111 @@
+{
+  "schema": "S4_B3_CODEX_FOCUS_QUOTES_V1",
+  "quote_rows": 19986,
+  "newbar_rows": 275,
+  "newbar_fresh_equals_cached_bid_ask": 275,
+  "focus": [
+    {
+      "anchor_msc": 1785756000070,
+      "native": [
+        {
+          "ontick_seq": "440467",
+          "same_ms_index": "0",
+          "new_bar": "1",
+          "fresh_time_msc": "1785756000070",
+          "fresh_bid": "4057.82",
+          "fresh_ask": "4057.97",
+          "fresh_last": "4057.83",
+          "fresh_flags": "376",
+          "interventions": "ITIME>1785756000070:4057.82:4057.97:376|ATR_COPYBUFFER(1:3.557857)>1785756000070:4057.82:4057.97:376|COPYRATES(7:1785756000)>1785756000070:4057.82:4057.97:376"
+        },
+        {
+          "ontick_seq": "440468",
+          "same_ms_index": "1",
+          "new_bar": "0",
+          "fresh_time_msc": "1785756000070",
+          "fresh_bid": "4057.83",
+          "fresh_ask": "4057.98",
+          "fresh_last": "4057.83",
+          "fresh_flags": "6",
+          "interventions": "ITIME>1785756000070:4057.83:4057.98:6|ATR_COPYBUFFER(1:3.557857)>1785756000070:4057.83:4057.98:6|COPYRATES(7:1785756000)>1785756000070:4057.83:4057.98:6"
+        }
+      ],
+      "export_rows": [
+        {
+          "key": "S4|GOLD|-1|S4_MOMENTUM_1785755700_-1|1785756000",
+          "file": "ticks_20260803.csv",
+          "line": "440468",
+          "row_ms": "1785756000070",
+          "bid": "4057.83",
+          "ask": "4057.98",
+          "last": "4057.83",
+          "flags": "280",
+          "dup_index_in_ms": "0"
+        },
+        {
+          "key": "S4|GOLD|-1|S4_MOMENTUM_1785755700_-1|1785756000",
+          "file": "ticks_20260803.csv",
+          "line": "440469",
+          "row_ms": "1785756000070",
+          "bid": "4057.83",
+          "ask": "4057.98",
+          "last": "4057.83",
+          "flags": "1030",
+          "dup_index_in_ms": "1"
+        }
+      ]
+    },
+    {
+      "anchor_msc": 1785760200077,
+      "native": [
+        {
+          "ontick_seq": "485831",
+          "same_ms_index": "0",
+          "new_bar": "1",
+          "fresh_time_msc": "1785760200077",
+          "fresh_bid": "4052.69",
+          "fresh_ask": "4052.84",
+          "fresh_last": "4052.89",
+          "fresh_flags": "312",
+          "interventions": "ITIME>1785760200077:4052.69:4052.84:312|ATR_COPYBUFFER(1:3.460000)>1785760200077:4052.69:4052.84:312|COPYRATES(7:1785760200)>1785760200077:4052.69:4052.84:312"
+        },
+        {
+          "ontick_seq": "485832",
+          "same_ms_index": "1",
+          "new_bar": "0",
+          "fresh_time_msc": "1785760200077",
+          "fresh_bid": "4052.89",
+          "fresh_ask": "4053.04",
+          "fresh_last": "4052.89",
+          "fresh_flags": "6",
+          "interventions": "ITIME>1785760200077:4052.89:4053.04:6|ATR_COPYBUFFER(1:3.460000)>1785760200077:4052.89:4053.04:6|COPYRATES(7:1785760200)>1785760200077:4052.89:4053.04:6"
+        }
+      ],
+      "export_rows": [
+        {
+          "key": "S4|GOLD|-1|S4_MOMENTUM_1785759900_-1|1785760200",
+          "file": "ticks_20260803.csv",
+          "line": "485832",
+          "row_ms": "1785760200077",
+          "bid": "4052.89",
+          "ask": "4053.04",
+          "last": "4052.89",
+          "flags": "280",
+          "dup_index_in_ms": "0"
+        },
+        {
+          "key": "S4|GOLD|-1|S4_MOMENTUM_1785759900_-1|1785760200",
+          "file": "ticks_20260803.csv",
+          "line": "485833",
+          "row_ms": "1785760200077",
+          "bid": "4052.89",
+          "ask": "4053.04",
+          "last": "4052.89",
+          "flags": "1030",
+          "dup_index_in_ms": "1"
+        }
+      ]
+    }
+  ],
+  "interpretation": "MT5 updates Last/time on trade rows while quotes remain prior; same-millisecond quote row changes Bid/Ask on a later OnTick in these two focus events. Not a full-month parity proof."
+}

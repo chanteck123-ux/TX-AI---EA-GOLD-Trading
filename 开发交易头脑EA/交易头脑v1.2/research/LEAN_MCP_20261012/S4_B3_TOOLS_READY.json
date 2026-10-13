@@ -1,0 +1,26 @@
+{
+  "schema": "S4_B3_TOOLS_READY_V1",
+  "status": "SOURCE_AND_RUNNER_READY_FOR_CODEX_COMPILE_NOT_COMPILED_NOT_RUN",
+  "written_utc": "2026-10-13",
+  "implementer": "Claude",
+  "scope": "research/S4_B3_MT5_PROBE_SCOPE_CN.md (tester-only quote/order probe; Aug 3 only; budget 3 main + 2 diagnostic runs)",
+  "files": {
+    "tools/S4MT5Probe/S4MT5Probe.mq5": "89372e607a05165591647eea30065a5fb80f4f389488b385267e7462f953862f",
+    "tools/S4MT5Probe/run_probe.ps1": "c220215c0561dbfa18705b03b9a5c84276b5dd66d3ece3efc3fd05f16efca68a",
+    "tools/S4MT5Probe/README_CN.md": "7b462c2c9cfa12c4b6d716fe0ffd283d92c78a5414d7d7f7e724d7d2ebe09402"
+  },
+  "codex_review_fixes_applied": [
+    "CSV: all free-text fields (interventions, log_reason, res_comment, detail, meta values, flags list) RFC4180-escaped; interventions use ':' '|' '>' internally; header has interventions",
+    "position ticket resolved by POSITION_IDENTIFIER + magic + symbol, ticket used to select/close",
+    "TryClose keeps local slot for logging; DONE_PARTIAL re-checks remaining position and keeps managing; unknown entry blocks new entries only; unknown exit never resent; management never blocked by the new-entry stop",
+    "summary.csv written only by OnTester (on_tester_called=1); OnDeinit records deinit_reason and on_tester_called_before_deinit; nothing written after rejected OnInit",
+    "S4-order interventions on every tick: F0 SymbolInfoTick > iTime > F1 > CopyBuffer(iATR14 shift2) > F2 > CopyRates(M5,0,7) > F3; observer CopyTicksRange labelled and moved after order logic; boundary recorded that a minimal probe cannot rule out a full-S4 cache effect",
+    "runner: restore failure keeps checkpoint+owner, returns RESTORE_FAILED, blocks launches; completion requires OnTester + normal end; History Quality diagnostic only; Launch re-verifies installed MQ5/source manifest and run evidence copy vs frozen build",
+    "fill variables initialised to keep the build warning-free"
+  ],
+  "claude_checks": ["run_probe.ps1 parsed with PowerShell parser: 0 errors"],
+  "not_done_by_claude": ["MetaEditor compile", "any MT5/terminal start", "any tester run"],
+  "s4_and_seven_strategies_changed": false,
+  "native_runner_changed": false,
+  "score_status": "SCORE_TARGETS_UNSET"
+}

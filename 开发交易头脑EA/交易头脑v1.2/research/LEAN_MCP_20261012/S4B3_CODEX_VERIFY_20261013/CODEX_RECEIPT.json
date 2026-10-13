@@ -1,0 +1,11 @@
+{
+  "schema": "S4_B3_INDEPENDENT_VERIFIER_RECEIPT_V1",
+  "utc": "2026-10-13T15:15:26.6318635Z",
+  "status": "INDEPENDENTLY_REPRODUCED",
+  "program_sha256": "317ca519d9213f44fa59ee3b4c724c1bc9472bcdd964e8f33b24fa53b642d454",
+  "dll_sha256": "5a3b865b7673824da27cf70a52ceee46d381bfd833025525e43a5a8bd67459ba",
+  "result_sha256": "bab9d4c721aff90326387189b521f5755360ed374dffa52c11cc5c6595a49c40",
+  "all_fields_equal_except_generation_time_and_path_separators": true,
+  "initial_literal_compare": "DIFFERED_ONLY_GENERATION_TIME_AND_WINDOWS_PATH_SLASH_FORMAT",
+  "native_tests_repeated": false
+}

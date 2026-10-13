@@ -1,0 +1,101 @@
+{
+  "status": "COMPLETE_REVIEW_REQUIRED",
+  "variant": "ORDER_D0",
+  "diagnostic": false,
+  "diagnostic_reason": "",
+  "run_label": "S4B3_ORDER_D0_bb6f69a82619",
+  "source_sha256": "3df23779339a1d47d96c74cc9c3900feddd20061954f6a147499cec142f08025",
+  "ex5_sha256": "6d2407cefda344fb359e86345474bcc5246f0d66d6e2fa266722aae880ce03b7",
+  "set_sha256": "23dd131371d8a9e63ef61de4f059ddd87f1bca556202357e477b6eda130343da",
+  "config_sha256": "6c7aaa97a11a495add527972e3e45ed29282e2ccc66017ebf4771c08b60242eb",
+  "checks": {
+    "on_tester_called": true,
+    "normal_end_ontester_before_deinit": true,
+    "ontick_calls_positive": true,
+    "summary_label_matches": true,
+    "summary_mode_matches_variant": true,
+    "meta_tester_flag": true,
+    "meta_leverage_1000": true,
+    "quote_rows_logged": true,
+    "quote_only_has_no_orders_or_transactions": true,
+    "no_open_probe_position_at_ontester": true,
+    "no_unknown_exit": true,
+    "single_day_window": true,
+    "journal_expert_dates_symbol": true,
+    "journal_real_ticks": true,
+    "journal_test_passed": true,
+    "journal_no_tick_fallback": true,
+    "tester_ini_execution_mode_matches_variant": true,
+    "configs_restored_byte_identical": true
+  },
+  "diagnostics_not_pass_criteria": {
+    "report_history_quality_100pct": true,
+    "note": "History Quality is a report figure only; it does not prove actual tick coverage. Real-tick mode, journal and fallback checks are listed separately in checks."
+  },
+  "delay_evidence": {
+    "requested_execution_mode_ms": 0,
+    "journal_lines_mentioning_delay": [
+      "IO\t0\t23:06:55.287\tCore 01\t  InpDeclaredDelayMs=0",
+      "CS\t0\t23:06:52.196\tTester\t  InpDeclaredDelayMs=0"
+    ],
+    "status": "JOURNAL_LINES_FOUND_REVIEW_REQUIRED",
+    "note": "InpDeclaredDelayMs is a label only; the requested ExecutionMode is in tester.ini; actual delay behaviour needs journal/order evidence review"
+  },
+  "restore_receipt": [
+    {
+      "restored_sha256": "e940f56df8d7950bab4759f98dad865cdc2c7cd386cc535db5105a8d572d7bed",
+      "byte_identical": true,
+      "name": "common.ini",
+      "before_restore_sha256": "e940f56df8d7950bab4759f98dad865cdc2c7cd386cc535db5105a8d572d7bed",
+      "backup_sha256": "e940f56df8d7950bab4759f98dad865cdc2c7cd386cc535db5105a8d572d7bed"
+    },
+    {
+      "restored_sha256": "452a128862bd559aafc9ae50d36d403bf3ce4331b3e9c8e3e163641062c319f5",
+      "byte_identical": true,
+      "name": "terminal.ini",
+      "before_restore_sha256": "78fc661f1f036f499671c5b0b2451798ce1a10dbca7438688695442ec93a9a2e",
+      "backup_sha256": "452a128862bd559aafc9ae50d36d403bf3ce4331b3e9c8e3e163641062c319f5"
+    }
+  ],
+  "evidence_sha256": {
+    "probe_output/meta.csv": "6dd4b103b16075e3afba27ff538bae739f0a3f31d6f300c1f9da23d66f799b08",
+    "probe_output/quotes.csv": "a051c33bffb409dd57e1848b11351e45f082640a82cf48a97873fe7c9f5759fb",
+    "probe_output/orders.csv": "76d50a01292c9e1e3fb6df6605515b2c8b98ddec775d7d2014875ab6480447bf",
+    "probe_output/transactions.csv": "9a0d65c4d9301eaa2653389a0cf5ec2329f9b69339b55e63418fcc93b2593e80",
+    "probe_output/summary.csv": "f0bb62cdc10e0a562b0d65c727bb1abf04cf79ce6f513dbf6f652d7fdd8e7c8f",
+    "report/bb6f69a826194ca6b6d03102c2681e74.html": "ca44acc315c0b7c0cb7d82ef41632059286eef1366cdc6e40f01bfb6013594fc",
+    "report/bb6f69a826194ca6b6d03102c2681e74-holding.png": "9d4ea5ea2ee01bb88c08113cecef47900092017e020b35035185333d9c86c615",
+    "report/bb6f69a826194ca6b6d03102c2681e74-hst.png": "cf2f1b160c89172d134f644f345a141dac37b3e61f3d060a46911b895b4178c3",
+    "report/bb6f69a826194ca6b6d03102c2681e74-mfemae.png": "a1d4c0a1d3ece6cffa09ab21658c37bb41fa5730b0a6a8c1473473a7802813c8",
+    "report/bb6f69a826194ca6b6d03102c2681e74.png": "f8631e83f59bcc3fb3818e84cc83e57773ec3e8ea5841a4e2ed298b52a3b4fd3",
+    "tester_journal.log": "1f8f8db6cd040910ac46e54490fafc686b178e9271a02d49f443fcc1cf73be73",
+    "effective.set": "23dd131371d8a9e63ef61de4f059ddd87f1bca556202357e477b6eda130343da",
+    "scenario.json": "12bccdc27f6166c378118f215463a85fd25547f4dd431327959e216c586c2a7c",
+    "tester.ini": "6c7aaa97a11a495add527972e3e45ed29282e2ccc66017ebf4771c08b60242eb",
+    "launch_identity.json": "11d29d0e6957497fb5f11a515e7fafc188fc5bfdbff116b1808d00970b8b429f"
+  },
+  "summary": {
+    "slot0": "2|CLOSED_BY_PROBE",
+    "quote_rows_logged": "19986",
+    "ontick_calls": "923807",
+    "note": "probe P/L is a by-product of evidence collection and is not a strategy result",
+    "symbolinfotick_failures": "0",
+    "ontick_calls_same_ms_as_previous": "226700",
+    "ontick_bid_or_ask_changed_vs_cached": "306898",
+    "final_balance": "499.10",
+    "exit_blocked_unknown": "0",
+    "new_bars_seen": "275",
+    "slot1": "2|CLOSED_BY_PROBE",
+    "last_fresh_time_msc": "1785801574461",
+    "open_probe_positions_at_ontester": "0",
+    "transactions": "16",
+    "first_fresh_time_msc": "1785718830009",
+    "run_label": "S4B3_ORDER_D0_bb6f69a82619",
+    "mode": "PROBE_ORDER",
+    "new_entries_blocked": "0",
+    "probe_version": "S4B3_PROBE_1.01",
+    "on_tester_called": "1"
+  },
+  "probe_pnl_note": "by-product of evidence collection; not a strategy result; score N/A",
+  "completed_utc": "2026-10-13T15:06:59.0004457Z"
+}

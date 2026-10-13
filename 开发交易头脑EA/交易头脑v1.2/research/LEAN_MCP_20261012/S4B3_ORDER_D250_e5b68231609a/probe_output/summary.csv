@@ -1,0 +1,21 @@
+key,value
+probe_version,S4B3_PROBE_1.01
+on_tester_called,1
+run_label,S4B3_ORDER_D250_e5b68231609a
+mode,PROBE_ORDER
+ontick_calls,923787
+ontick_calls_same_ms_as_previous,226692
+ontick_bid_or_ask_changed_vs_cached,306890
+symbolinfotick_failures,0
+new_bars_seen,275
+quote_rows_logged,19966
+first_fresh_time_msc,1785718830009
+last_fresh_time_msc,1785801574461
+transactions,16
+slot0,2|CLOSED_BY_PROBE
+slot1,2|CLOSED_BY_PROBE
+open_probe_positions_at_ontester,0
+new_entries_blocked,0
+exit_blocked_unknown,0
+final_balance,499.35
+note,probe P/L is a by-product of evidence collection and is not a strategy result

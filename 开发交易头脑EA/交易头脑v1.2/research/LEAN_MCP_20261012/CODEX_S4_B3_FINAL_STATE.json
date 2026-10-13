@@ -1,0 +1,35 @@
+{
+  "status": "BASELINE_RUNTIME_AND_CONFIG_HASHES_UNCHANGED_OR_RESTORED",
+  "files": [
+    {
+      "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\outputs\\TradingBrain_I11_Seven_Strategies_20261004\\MT5\\S4\\TB500_S4_BE125\\TB500_S4_BE125.mq5",
+      "match": true
+    },
+    {
+      "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\outputs\\TradingBrain_I11_Seven_Strategies_20261004\\MT5\\S4\\TB500_S4_BE125\\TB500_S4_BE125.ex5",
+      "match": true
+    },
+    {
+      "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\terminal64.exe",
+      "match": true
+    },
+    {
+      "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\metaeditor64.exe",
+      "match": true
+    }
+  ],
+  "configs": [
+    {
+      "name": "common.ini",
+      "expected": "e940f56df8d7950bab4759f98dad865cdc2c7cd386cc535db5105a8d572d7bed",
+      "actual": "e940f56df8d7950bab4759f98dad865cdc2c7cd386cc535db5105a8d572d7bed"
+    },
+    {
+      "name": "terminal.ini",
+      "expected": "452a128862bd559aafc9ae50d36d403bf3ce4331b3e9c8e3e163641062c319f5",
+      "actual": "452a128862bd559aafc9ae50d36d403bf3ce4331b3e9c8e3e163641062c319f5"
+    }
+  ],
+  "native_process_count": 0,
+  "active_checkpoint_present": false
+}

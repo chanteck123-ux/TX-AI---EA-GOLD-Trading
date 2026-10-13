@@ -1,0 +1,21 @@
+{
+  "schema": "S4_B3_VERIFY_PLAN_V1",
+  "frozen_before_running_verifier": true,
+  "author": "Claude",
+  "written_utc": "2026-10-13",
+  "inputs": {
+    "raw": "quantconnect_20260920/data/raw/ticks_20260803.csv (sha must equal EXPORT_MANIFEST entry)",
+    "runs": ["mt5_probe_b3/runs/S4B3_QUOTE_D0_96a518b47fdb", "mt5_probe_b3/runs/S4B3_ORDER_D0_bb6f69a82619", "mt5_probe_b3/runs/S4B3_ORDER_D250_e5b68231609a"],
+    "run_gate": "probe_result.json status COMPLETE_REVIEW_REQUIRED and every evidence_sha256 entry re-hashed equal"
+  },
+  "definitions": {
+    "A_alignment": "For QUOTE_D0 and ORDER_D0 logged quote rows: raw data row index == ontick_seq (1-based) and raw ms == fresh_time_msc. Report aligned/misaligned counts. ORDER_D250: report the offset (raw index - ontick_seq) found by locating, from the previous offset, the raw row with the same ms and same_ms_index; report offset progression and where it changes.",
+    "B_price_semantics": "For aligned rows: CURRENT_ROW if tester fresh bid==raw[i].bid and ask==raw[i].ask; PREV_ROW if equal to raw[i-1]; BOTH if both; NEITHER otherwise. Cross-tab by raw flags, tester flags, same_ms_index==0, new_bar.",
+    "C_events": "All new_bar=1 rows (expected 275) and the first OnTick at/after 2026.08.03 11:20:00 and 12:30:00: raw rows in that ms (line, flags, bid, ask), tester OnTick rows in that ms (seq, same_ms_index, flags, bid, ask, new_bar).",
+    "D_interventions": "Count logged rows where any of F1/F2/F3 (after iTime / CopyBuffer ATR / CopyRates) differs from F0 in time_msc, bid or ask.",
+    "E_orders": "Per order: deal_time_msc - pre_request_time_msc; post_return_time_msc vs deal_time_msc; deal_price vs post_return side price (sell entry=bid, buy exit=ask); raw last row with ms <= deal_time_msc and its side price; raw first row with ms >= deal_time_msc; number of raw rows with pre_request ms < ms <= post_return ms (rows the EA could not observe while OrderSend was outstanding).",
+    "F_tester_view": "tester_rows_in_ms vs raw rows in that ms; tester_last_in_ms bid/ask vs raw last row in that ms.",
+    "price_tolerance": 0.005
+  },
+  "not_claimed": ["causal mechanism proven", "B1 parity", "strategy result", "probe P/L as performance"]
+}

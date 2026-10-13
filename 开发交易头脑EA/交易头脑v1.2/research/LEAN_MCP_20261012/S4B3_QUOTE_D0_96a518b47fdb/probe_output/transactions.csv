@@ -1,0 +1,1 @@
+tx_seq,ontick_seq_at_callback,timecurrent_s,wall_us,cb_fresh_time_msc,cb_fresh_bid,cb_fresh_ask,cb_fresh_last,cb_fresh_volume,cb_fresh_flags,trans_type,trans_order,trans_deal,trans_position,trans_price,trans_volume,trans_deal_type,trans_order_state,req_action,req_type,req_price,res_retcode,res_order,res_deal,deal_time_msc,deal_price

@@ -1,0 +1,39 @@
+EI	0	23:06:10.876	Tester	GOLD: preliminary downloading of history ticks started, it may take quite a long time
+FP	0	23:06:10.876	Tester	GOLD: preliminary downloading of history ticks completed
+GM	0	23:06:10.876	Tester	GOLD: ticks data begins from 2026.01.02 00:00
+FM	0	23:06:11.447	Tester	GOLD,M5 (FxPro-MT5 Demo): testing of Experts\S4MT5Probe\96a518b47fdb459f90d354c05ca704b0\S4MT5Probe.ex5 from 2026.08.03 00:00 to 2026.08.04 00:00
+OL	0	23:06:11.548	Core 01	GOLD: ticks synchronized already [39 bytes]
+DQ	0	23:06:14.927	Core 01	GOLD: symbol to be synchronized
+QE	0	23:06:14.927	Core 01	GOLD: symbol synchronized, 3720 bytes of symbol info received
+EP	0	23:06:14.927	Core 01	GOLD: load 23 bytes of history data to synchronize in 0:00:00.002
+KL	0	23:06:14.927	Core 01	GOLD: history synchronized from 2008.03.11 to 2026.09.08
+MJ	0	23:06:14.927	Core 01	GOLD: ticks synchronization started
+HM	0	23:06:14.927	Core 01	GOLD: load 30 bytes of tick data to synchronize in 0:00:00.000
+RF	0	23:06:14.927	Core 01	GOLD: history ticks synchronized from 2026.01.02 to 2026.08.31
+HJ	0	23:06:14.927	Core 01	GOLD,M5: history cache allocated for 112571 bars and contains 111954 bars from 2025.01.02 01:00 to 2026.07.31 23:55
+ME	0	23:06:14.927	Core 01	GOLD,M5: history begins from 2025.01.02 01:00
+FL	0	23:06:14.927	Core 01	GOLD,M5 (FxPro-MT5 Demo): generating based on real ticks
+CQ	0	23:06:14.927	Core 01	GOLD,M5: testing of Experts\S4MT5Probe\96a518b47fdb459f90d354c05ca704b0\S4MT5Probe.ex5 from 2026.08.03 00:00 to 2026.08.04 00:00 started with inputs:
+IO	0	23:06:14.927	Core 01	  InpRunLabel=S4B3_QUOTE_D0_96a518b47fdb
+EJ	0	23:06:14.927	Core 01	  InpDeclaredDelayMs=0
+DP	0	23:06:14.927	Core 01	GOLD : real ticks begin from 2026.01.02 00:00:00
+GS	0	23:06:14.927	Core 01	GOLD,M5: 923807 ticks, 276 bars generated. Environment synchronized in 0:00:00.026. Test passed in 0:00:03.465 (including ticks preprocessing 0:00:00.078).
+MD	0	23:06:14.927	Core 01	GOLD,M5: total time from login to stop testing 0:00:03.491 (including 0:00:00.026 for history data synchronization)
+NS	0	23:06:14.978	Tester	automatic testing finished
+CS	0	23:06:11.463	Symbols	GOLD: symbol to be synchronized
+CS	0	23:06:11.463	Symbols	GOLD: symbol synchronized, 3720 bytes of symbol info received
+CS	0	23:06:11.546	History	GOLD: load 23 bytes of history data to synchronize in 0:00:00.002
+CS	0	23:06:11.546	History	GOLD: history synchronized from 2008.03.11 to 2026.09.08
+CS	0	23:06:11.547	Ticks	GOLD: ticks synchronization started
+CS	0	23:06:11.547	Ticks	GOLD: load 30 bytes of tick data to synchronize in 0:00:00.000
+CS	0	23:06:11.547	Ticks	GOLD: history ticks synchronized from 2026.01.02 to 2026.08.31
+CS	0	23:06:11.580	History	GOLD,M5: history cache allocated for 112571 bars and contains 111954 bars from 2025.01.02 01:00 to 2026.07.31 23:55
+CS	0	23:06:11.580	History	GOLD,M5: history begins from 2025.01.02 01:00
+CS	0	23:06:11.647	Tester	GOLD,M5 (FxPro-MT5 Demo): generating based on real ticks
+CS	0	23:06:11.647	Tester	GOLD,M5: testing of Experts\S4MT5Probe\96a518b47fdb459f90d354c05ca704b0\S4MT5Probe.ex5 from 2026.08.03 00:00 to 2026.08.04 00:00 started with inputs:
+CS	0	23:06:11.647	Tester	  InpRunLabel=S4B3_QUOTE_D0_96a518b47fdb
+CS	0	23:06:11.647	Tester	  InpDeclaredDelayMs=0
+CS	0	23:06:11.729	Ticks	GOLD : real ticks begin from 2026.01.02 00:00:00
+CS	0	23:06:14.927	Tester	GOLD,M5: 923807 ticks, 276 bars generated. Environment synchronized in 0:00:00.026. Test passed in 0:00:03.465 (including ticks preprocessing 0:00:00.078).
+CS	0	23:06:14.927	Tester	GOLD,M5: total time from login to stop testing 0:00:03.491 (including 0:00:00.026 for history data synchronization)
+CS	0	23:06:14.927	Tester	test Experts\S4MT5Probe\96a518b47fdb459f90d354c05ca704b0\S4MT5Probe.ex5 on GOLD,M5 thread finished

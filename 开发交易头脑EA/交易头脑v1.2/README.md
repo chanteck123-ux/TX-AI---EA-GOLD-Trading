@@ -58,3 +58,5 @@
 
 I18接续经验：S1过严斜率会删掉赢单；S2背景门变化不等于新成交；S3较便宜价格可能伴随突破失效；S4匹配交易净差不能等同纯保本效应；S5延后检查的亏损可在第二根前发生；S6的H4 ATR距离13.5–26.4R而无保护收紧；Scalping点差与夜间时段混杂，手数路径也影响收益。缺错误文件不证明零异常，EA超预算平仓不是券商Stop Out。后续新方案仍需登记、新回测和保留证据。
 2026-10-13 LEAN S4 B1：真实八月500 USD／250ms全月完成，净利36.58 USD，净值回撤37.05 USD／6.459%，完整交易净PF 1.179，56笔。账务核验通过；75个获准ARMED的指定字段一致，成交和保护模型未对等。原生基线102.03 USD保留，差额−65.45 USD不作策略排名。Python MCP v1.2.1已在Codex实际连接，Claude自身MCP加载未核验。评分N/A，已使用开发区间，无OOS／Champion／部署。见[Codex复审](research/LEAN_MCP_20261012/CODEX_S4_B1_ACCEPTANCE_CN.md)、[Claude复审](research/LEAN_MCP_20261012/S4_FULLAUG_REVIEW_CN.md)、[下一批诊断范围](research/LEAN_MCP_20261012/S4_B2_QUOTE_DIAGNOSTIC_SCOPE_CN.md)。
+
+2026-10-13 S4 B3：固定MT5完成报价/0ms订单/250ms订单三组Aug3真实Tick探针，0错误0警告；同毫秒的新柱回调先用旧Bid/Ask，后续报价回调才更新。19986条已记录回调逐行核验，6824条Last/Volume行只吻合前一报价；四次250ms开平仓的DEAL_TIME_MSC与请求前报价时间差均250。C#核验独立复现，原配置恢复、S4与LEAN B1未改；没有新增策略成绩或全月对等声明。见[探针复审](research/LEAN_MCP_20261012/CODEX_S4_B3_REVIEW_CN.md)与[Claude复审](research/LEAN_MCP_20261012/S4_B3_PROBE_REVIEW_CN.md)。

@@ -1,0 +1,146 @@
+{
+  "schema": "S4_B3_CODEX_NATIVE_CHECKS_V1",
+  "utc": "2026-10-13T15:09:03.0415482Z",
+  "runs": [
+    {
+      "variant": "QUOTE_D0",
+      "status": "COMPLETE_REVIEW_REQUIRED",
+      "checks_pass": 18,
+      "checks_total": 18,
+      "ontick_calls": "923807",
+      "quote_rows": "19986",
+      "complete_slots": [
+        "2|QUOTE_ONLY_MODE",
+        "2|QUOTE_ONLY_MODE"
+      ],
+      "run_dir": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\lean_mcp_20261012\\mt5_probe_b3\\runs\\S4B3_QUOTE_D0_96a518b47fdb"
+    },
+    {
+      "variant": "ORDER_D0",
+      "status": "COMPLETE_REVIEW_REQUIRED",
+      "checks_pass": 18,
+      "checks_total": 18,
+      "ontick_calls": "923807",
+      "quote_rows": "19986",
+      "complete_slots": [
+        "2|CLOSED_BY_PROBE",
+        "2|CLOSED_BY_PROBE"
+      ],
+      "run_dir": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\lean_mcp_20261012\\mt5_probe_b3\\runs\\S4B3_ORDER_D0_bb6f69a82619"
+    },
+    {
+      "variant": "ORDER_D250",
+      "status": "COMPLETE_REVIEW_REQUIRED",
+      "checks_pass": 18,
+      "checks_total": 18,
+      "ontick_calls": "923787",
+      "quote_rows": "19966",
+      "complete_slots": [
+        "2|CLOSED_BY_PROBE",
+        "2|CLOSED_BY_PROBE"
+      ],
+      "run_dir": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\lean_mcp_20261012\\mt5_probe_b3\\runs\\S4B3_ORDER_D250_e5b68231609a"
+    }
+  ],
+  "orders": [
+    {
+      "variant": "ORDER_D0",
+      "event": "ENTRY_SENT",
+      "slot": "0",
+      "request_msc": 1785756000070,
+      "deal_msc": 1785756000070,
+      "delay_ms": 0,
+      "request_price": "4057.82",
+      "fill_price": "4057.82",
+      "post_quote_msc": "1785756000070",
+      "retcode": "10009"
+    },
+    {
+      "variant": "ORDER_D0",
+      "event": "EXIT_DONE",
+      "slot": "0",
+      "request_msc": 1785756001077,
+      "deal_msc": 1785756001077,
+      "delay_ms": 0,
+      "request_price": "4058.09",
+      "fill_price": "4058.09",
+      "post_quote_msc": "1785756001077",
+      "retcode": "10009"
+    },
+    {
+      "variant": "ORDER_D0",
+      "event": "ENTRY_SENT",
+      "slot": "1",
+      "request_msc": 1785760200077,
+      "deal_msc": 1785760200077,
+      "delay_ms": 0,
+      "request_price": "4052.69",
+      "fill_price": "4052.69",
+      "post_quote_msc": "1785760200077",
+      "retcode": "10009"
+    },
+    {
+      "variant": "ORDER_D0",
+      "event": "EXIT_DONE",
+      "slot": "1",
+      "request_msc": 1785760201082,
+      "deal_msc": 1785760201082,
+      "delay_ms": 0,
+      "request_price": "4053.16",
+      "fill_price": "4053.16",
+      "post_quote_msc": "1785760201082",
+      "retcode": "10009"
+    },
+    {
+      "variant": "ORDER_D250",
+      "event": "ENTRY_SENT",
+      "slot": "0",
+      "request_msc": 1785756000070,
+      "deal_msc": 1785756000320,
+      "delay_ms": 250,
+      "request_price": "4057.82",
+      "fill_price": "4057.94",
+      "post_quote_msc": "1785756000272",
+      "retcode": "10009"
+    },
+    {
+      "variant": "ORDER_D250",
+      "event": "EXIT_DONE",
+      "slot": "0",
+      "request_msc": 1785756001393,
+      "deal_msc": 1785756001643,
+      "delay_ms": 250,
+      "request_price": "4058.13",
+      "fill_price": "4058.24",
+      "post_quote_msc": "1785756001595",
+      "retcode": "10009"
+    },
+    {
+      "variant": "ORDER_D250",
+      "event": "ENTRY_SENT",
+      "slot": "1",
+      "request_msc": 1785760200077,
+      "deal_msc": 1785760200327,
+      "delay_ms": 250,
+      "request_price": "4052.69",
+      "fill_price": "4052.88",
+      "post_quote_msc": "1785760200279",
+      "retcode": "10009"
+    },
+    {
+      "variant": "ORDER_D250",
+      "event": "EXIT_DONE",
+      "slot": "1",
+      "request_msc": 1785760201384,
+      "deal_msc": 1785760201634,
+      "delay_ms": 250,
+      "request_price": "4053.20",
+      "fill_price": "4053.07",
+      "post_quote_msc": "1785760201586",
+      "retcode": "10009"
+    }
+  ],
+  "score": "N/A",
+  "data_role": "USED_DEVELOPMENT_NOT_OOS",
+  "strategy_changed": false
+}

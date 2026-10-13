@@ -1,0 +1,37 @@
+{
+  "schema": "S4_B3_REVIEW_READY_V1",
+  "status": "B3_CLOSED_CODEX_VERIFIED_DESCRIPTIVE_FINDINGS",
+  "written_utc": "2026-10-13",
+  "reviewer": "Claude (independent read of results, CSV, journals; read-only C# verifier)",
+  "runs": {
+    "S4B3_QUOTE_D0_96a518b47fdb": "d89ef08d302ab4dffcceb5464d8768b1982300976af15fabf2d44041fc6a26ac",
+    "S4B3_ORDER_D0_bb6f69a82619": "6076a68ee685675332322699b3e071b2380a5643232e4c1e117fe1ffb39679dd",
+    "S4B3_ORDER_D250_e5b68231609a": "7bd4cd38b37333e3c6cc9f23aba1b413fc64cfd4a0bcf36be7530a2254a2e6bb"
+  },
+  "runs_note": "values are probe_result.json SHA256; 45 evidence files re-hashed, 0 mismatches; budget used 3 main, 0 diagnostic",
+  "source_ready_file": {"research/S4_B3_TOOLS_READY.json": "0ba86f3039c19485c9e2aa8031c49e3abf6ff76d08c2bf38a0eb2cf833c2b506"},
+  "verifier": {
+    "plan_frozen_first": {"research/S4_B3_VERIFY_PLAN.json": "37d11f46a3e6a676507cfb04ccaa2696cc74e0bccae2c73672b3e3d605a5d4a7"},
+    "tools/S4B3Verify/Program.cs": "317ca519d9213f44fa59ee3b4c724c1bc9472bcdd964e8f33b24fa53b642d454",
+    "tools/S4B3Verify/S4B3Verify.csproj": "90bb0a56b93cb5da65cfe0ae1a3d09dfc960147f3ccc9554d90b7fdb5a83cbb7",
+    "build": "builds/S4B3_VERIFY_01 (0 warnings) dll d9d2427081fd1219f21e8ec4f935099199e21cd67e347a7695e13545ec31e646",
+    "result": {"builds/S4B3_VERIFY_01/VERIFY_RESULT.json": "20d421e1f9071fbbdc22d7b07d57b474a065c8dac3b9a4a60fbf93833b6f89c5"}
+  },
+  "report": {"research/S4_B3_PROBE_REVIEW_CN.md": "590225b7b707be30e7cb9f2345c0603ea16796d5c3a7acb630729e16db8edd4f"},
+  "findings_descriptive_one_day": [
+    "F1 day total OnTick count (923807) equals raw row count; the 19986 logged rows align one-to-one; two same-ms callbacks directly observed at the fixed events; the ~900k unlogged rows were not audited row by row",
+    "F2 on raw flag-280 rows tester bid/ask = previous quote (6824 PREV_ROW, all flag 280); tester CopyTicksRange view agrees with tester",
+    "F3 iTime/CopyBuffer/CopyRates changed no quote (0 of 19986); does not rule out full-S4 effects",
+    "F4 D0: DEAL_TIME_MSC = request ms, fill = tester quote at request",
+    "F5 D250 (4 orders this batch): actual deal time DEAL_TIME_MSC = request quote time + 250 ms; deal price matches the last valid quote up to that time (a row earlier than the deal time); post-return quote at +202 ms; 5 rows without OnTick per order = deficit 20; journal confirms 250 ms delay",
+    "F6 native D4BF2385 11:20 (4057.82->4057.94) and 12:30 (4052.69->4052.88) reproduced exactly",
+    "F7 risk 9.00 USD incl reserve <= 2% equity; position ticket = id; 2 full round trips per order run"
+  ],
+  "possible_b2_fill_model_candidates_not_registered": ["flag-280 rows use previous bid/ask", "250 ms: fill at last row before request+250, deal time request+250, intermediate rows hidden from EA"],
+  "not_exercised": ["DONE_PARTIAL and unknown-result branches were not triggered in normal runs; source review is not fault-injection proof"],
+  "independent_verification": {"dir": "builds/S4B3_CODEX_VERIFY_20261013", "receipt_sha256": "d1fdd9bc1ce2c5fba46aeb0a09e71bc839adf0dc6ac288e65ed416d99f1827c5", "result": "0 warnings/0 errors; VERIFY_RESULT identical to Claude after path normalisation (only generated_utc and slash style differ)"},
+  "unresolved": ["why the exported CSV and tester tick store differ on flag-280 rows", "CopyTicksRange row-count view differs on 5213 rows"],
+  "changed": {"probe": false, "b1": false, "mt5_rerun": false},
+  "score_status": "SCORE_TARGETS_UNSET",
+  "claims_not_made": ["causal mechanism explained", "B1 parity", "strategy improvement", "probe P/L as performance", "Champion", "live readiness"]
+}

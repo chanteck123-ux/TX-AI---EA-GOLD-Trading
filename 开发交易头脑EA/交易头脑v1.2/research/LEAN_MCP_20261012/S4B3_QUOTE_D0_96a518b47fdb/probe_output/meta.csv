@@ -1,0 +1,32 @@
+key,value
+probe_version,S4B3_PROBE_1.01
+run_label,S4B3_QUOTE_D0_96a518b47fdb
+mode,PROBE_QUOTE_ONLY
+allow_tester_orders,false
+declared_delay_ms_label_only,0
+tester,1
+terminal_build,6230
+symbol,GOLD
+account_currency,USD
+account_leverage,1000
+account_margin_mode,2
+initial_balance,500.00
+initial_equity,500.00
+volume_min,0.01000000
+volume_step,0.01000000
+tick_size,0.01000000
+contract_size,100.00000000
+stops_level,0
+freeze_level,0
+filling_mode,2
+trade_exemode,2
+registered_slots_server,2026.08.03 11:20:00|2026.08.03 12:30:00
+registered_sl_tp_distance,8.00|12.00
+registered_risk,fee_reserve_usd=1.00|max_pct_equity=2.00
+wall_clock_note,"GetMicrosecondCount is process wall time, NOT simulated market time"
+intervention_sequence_every_tick,F0 SymbolInfoTick > iTime(M5 0) > F1 > CopyBuffer(iATR14 M5 shift2) > F2 > CopyRates(M5 0 7) > F3; mirrors S4 OnTick start then GSMScan4 Val then GSMNewBar order
+observer_intervention,"On logged ticks only, CopyTicksRange (same ms; previous 2 s) runs AFTER order logic; it is itself a tester call and cannot prove behaviour of an uninstrumented full S4 EA"
+boundary,A minimal probe that does not reproduce a cache effect does not rule it out in the full S4 EA
+atr_handle_ok,1
+deinit_reason,1
+on_tester_called_before_deinit,1

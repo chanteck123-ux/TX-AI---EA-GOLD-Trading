@@ -1,0 +1,103 @@
+{
+  "status": "COMPLETE_REVIEW_REQUIRED",
+  "variant": "ORDER_D250",
+  "diagnostic": false,
+  "diagnostic_reason": "",
+  "run_label": "S4B3_ORDER_D250_e5b68231609a",
+  "source_sha256": "3df23779339a1d47d96c74cc9c3900feddd20061954f6a147499cec142f08025",
+  "ex5_sha256": "6d2407cefda344fb359e86345474bcc5246f0d66d6e2fa266722aae880ce03b7",
+  "set_sha256": "a7ecb924fbb7c83de9bb8be5aaa87415a62b0e99dc426de583ae9789fbb6c1b6",
+  "config_sha256": "ebb5b765e36b33ba82410c5597f5d903368a8a4bdd9680f05f0ff5b0ed8f0f0f",
+  "checks": {
+    "on_tester_called": true,
+    "normal_end_ontester_before_deinit": true,
+    "ontick_calls_positive": true,
+    "summary_label_matches": true,
+    "summary_mode_matches_variant": true,
+    "meta_tester_flag": true,
+    "meta_leverage_1000": true,
+    "quote_rows_logged": true,
+    "quote_only_has_no_orders_or_transactions": true,
+    "no_open_probe_position_at_ontester": true,
+    "no_unknown_exit": true,
+    "single_day_window": true,
+    "journal_expert_dates_symbol": true,
+    "journal_real_ticks": true,
+    "journal_test_passed": true,
+    "journal_no_tick_fallback": true,
+    "tester_ini_execution_mode_matches_variant": true,
+    "configs_restored_byte_identical": true
+  },
+  "diagnostics_not_pass_criteria": {
+    "report_history_quality_100pct": true,
+    "note": "History Quality is a report figure only; it does not prove actual tick coverage. Real-tick mode, journal and fallback checks are listed separately in checks."
+  },
+  "delay_evidence": {
+    "requested_execution_mode_ms": 250,
+    "journal_lines_mentioning_delay": [
+      "NR\t0\t23:07:44.679\tCore 01\ttesting with execution delay 250 milliseconds",
+      "JO\t0\t23:07:44.679\tCore 01\t  InpDeclaredDelayMs=250",
+      "CS\t0\t23:07:41.602\tTester\ttesting with execution delay 250 milliseconds",
+      "CS\t0\t23:07:41.602\tTester\t  InpDeclaredDelayMs=250"
+    ],
+    "status": "JOURNAL_LINES_FOUND_REVIEW_REQUIRED",
+    "note": "InpDeclaredDelayMs is a label only; the requested ExecutionMode is in tester.ini; actual delay behaviour needs journal/order evidence review"
+  },
+  "restore_receipt": [
+    {
+      "backup_sha256": "e940f56df8d7950bab4759f98dad865cdc2c7cd386cc535db5105a8d572d7bed",
+      "restored_sha256": "e940f56df8d7950bab4759f98dad865cdc2c7cd386cc535db5105a8d572d7bed",
+      "name": "common.ini",
+      "before_restore_sha256": "e940f56df8d7950bab4759f98dad865cdc2c7cd386cc535db5105a8d572d7bed",
+      "byte_identical": true
+    },
+    {
+      "backup_sha256": "452a128862bd559aafc9ae50d36d403bf3ce4331b3e9c8e3e163641062c319f5",
+      "restored_sha256": "452a128862bd559aafc9ae50d36d403bf3ce4331b3e9c8e3e163641062c319f5",
+      "name": "terminal.ini",
+      "before_restore_sha256": "8f19f80771d4ad5ec7c6470dcec18c34f245ce9150ff0eef2e4dc6e44e07ea3b",
+      "byte_identical": true
+    }
+  ],
+  "evidence_sha256": {
+    "probe_output/meta.csv": "d8756ec9d01e61d43459771eeb6625f5237d00d21922b0cbde0466dc2dcc8d8b",
+    "probe_output/quotes.csv": "c320e4b029ed847e5ed735836a2fb763c049514a9341f7b7995fec3f7bf46805",
+    "probe_output/orders.csv": "c015b16f99340711af78f08b2c0199ad4c262490e3a3f65738c3b67db60fc4c8",
+    "probe_output/transactions.csv": "ba6df078ea576dea858d3596cd97eba7596252cf0f376aee623717e5668fb3d5",
+    "probe_output/summary.csv": "c42139d45fa45fc14bad86873e51f4f8cad353f1645da792cce2dd2a747a1fa7",
+    "report/e5b68231609a4e1fb01515d2fd366fb8.html": "d8479c0c76174ceb5b3eec42e4e3929fec52a0011f09cf2424f594ba5d884a31",
+    "report/e5b68231609a4e1fb01515d2fd366fb8-holding.png": "a9a6405e9d61c47a827e7a6fd3d24039494883afdc1b072b38f44720e9d378c4",
+    "report/e5b68231609a4e1fb01515d2fd366fb8-hst.png": "dd89ea521a2df05f0c100e5a70147cf9a00f2dbcffea9d5a859c6ed04d9e862c",
+    "report/e5b68231609a4e1fb01515d2fd366fb8-mfemae.png": "de4cec7f9e0e57c1294fd91beb9b9a31aeb215986f8c2a8a09cc05988af27f61",
+    "report/e5b68231609a4e1fb01515d2fd366fb8.png": "f80fae2326fa71c6b6d0a746d48a07d54057bd64cc82baa3841120d918000394",
+    "tester_journal.log": "2676a1c520037ee8d252fe285dd0f0072f2e97a994e936a517e6890d3c43a975",
+    "effective.set": "a7ecb924fbb7c83de9bb8be5aaa87415a62b0e99dc426de583ae9789fbb6c1b6",
+    "scenario.json": "ef177a1f97919be435b259d6d4d530411e5ece9720a8bca46dbd59310a0b9dec",
+    "tester.ini": "ebb5b765e36b33ba82410c5597f5d903368a8a4bdd9680f05f0ff5b0ed8f0f0f",
+    "launch_identity.json": "d78fbd3478cbeb07f21f84c5a26472a33d61c30201b5b7530e25644e9811f402"
+  },
+  "summary": {
+    "open_probe_positions_at_ontester": "0",
+    "new_entries_blocked": "0",
+    "run_label": "S4B3_ORDER_D250_e5b68231609a",
+    "transactions": "16",
+    "ontick_calls_same_ms_as_previous": "226692",
+    "ontick_calls": "923787",
+    "last_fresh_time_msc": "1785801574461",
+    "quote_rows_logged": "19966",
+    "probe_version": "S4B3_PROBE_1.01",
+    "final_balance": "499.35",
+    "ontick_bid_or_ask_changed_vs_cached": "306890",
+    "slot0": "2|CLOSED_BY_PROBE",
+    "exit_blocked_unknown": "0",
+    "first_fresh_time_msc": "1785718830009",
+    "mode": "PROBE_ORDER",
+    "slot1": "2|CLOSED_BY_PROBE",
+    "note": "probe P/L is a by-product of evidence collection and is not a strategy result",
+    "new_bars_seen": "275",
+    "symbolinfotick_failures": "0",
+    "on_tester_called": "1"
+  },
+  "probe_pnl_note": "by-product of evidence collection; not a strategy result; score N/A",
+  "completed_utc": "2026-10-13T15:07:48.4644466Z"
+}

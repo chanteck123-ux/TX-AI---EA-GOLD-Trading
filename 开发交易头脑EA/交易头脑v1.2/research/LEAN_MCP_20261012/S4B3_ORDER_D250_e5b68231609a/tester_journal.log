@@ -1,0 +1,73 @@
+KE	0	23:07:40.959	Tester	GOLD: preliminary downloading of history ticks started, it may take quite a long time
+LD	0	23:07:40.959	Tester	GOLD: preliminary downloading of history ticks completed
+MQ	0	23:07:40.959	Tester	GOLD: ticks data begins from 2026.01.02 00:00
+OI	0	23:07:41.488	Tester	GOLD,M5 (FxPro-MT5 Demo): testing of Experts\S4MT5Probe\e5b68231609a4e1fb01515d2fd366fb8\S4MT5Probe.ex5 from 2026.08.03 00:00 to 2026.08.04 00:00
+DP	0	23:07:41.507	Core 01	GOLD: ticks synchronized already [39 bytes]
+JM	0	23:07:44.679	Core 01	GOLD: symbol to be synchronized
+OI	0	23:07:44.679	Core 01	GOLD: symbol synchronized, 3720 bytes of symbol info received
+GD	0	23:07:44.679	Core 01	GOLD: load 23 bytes of history data to synchronize in 0:00:00.002
+MP	0	23:07:44.679	Core 01	GOLD: history synchronized from 2008.03.11 to 2026.09.08
+KN	0	23:07:44.679	Core 01	GOLD: ticks synchronization started
+FI	0	23:07:44.679	Core 01	GOLD: load 30 bytes of tick data to synchronize in 0:00:00.000
+DR	0	23:07:44.679	Core 01	GOLD: history ticks synchronized from 2026.01.02 to 2026.08.31
+FF	0	23:07:44.679	Core 01	GOLD,M5: history cache allocated for 112571 bars and contains 111954 bars from 2025.01.02 01:00 to 2026.07.31 23:55
+KQ	0	23:07:44.679	Core 01	GOLD,M5: history begins from 2025.01.02 01:00
+HH	0	23:07:44.679	Core 01	GOLD,M5 (FxPro-MT5 Demo): generating based on real ticks
+NR	0	23:07:44.679	Core 01	testing with execution delay 250 milliseconds
+MD	0	23:07:44.679	Core 01	GOLD,M5: testing of Experts\S4MT5Probe\e5b68231609a4e1fb01515d2fd366fb8\S4MT5Probe.ex5 from 2026.08.03 00:00 to 2026.08.04 00:00 started with inputs:
+EK	0	23:07:44.679	Core 01	  InpRunLabel=S4B3_ORDER_D250_e5b68231609a
+JO	0	23:07:44.679	Core 01	  InpDeclaredDelayMs=250
+JG	0	23:07:44.679	Core 01	GOLD : real ticks begin from 2026.01.02 00:00:00
+LL	0	23:07:44.679	Core 01	2026.08.03 11:20:00   market sell 0.01 GOLD sl: 4065.82 tp: 4045.82 (4057.94 / 4058.09 / 4057.94)
+QO	0	23:07:44.679	Core 01	2026.08.03 11:20:00   deal #2 sell 0.01 GOLD at 4057.94 done (based on order #2)
+QR	0	23:07:44.679	Core 01	2026.08.03 11:20:00   deal performed [#2 sell 0.01 GOLD at 4057.94]
+NR	0	23:07:44.679	Core 01	2026.08.03 11:20:00   order performed sell 0.01 at 4057.94 [#2 sell 0.01 GOLD at 4057.94]
+NF	0	23:07:44.679	Core 01	2026.08.03 11:20:01   market buy 0.01 GOLD, close #2 (4058.09 / 4058.24 / 4058.09)
+RJ	0	23:07:44.679	Core 01	2026.08.03 11:20:01   deal #3 buy 0.01 GOLD at 4058.24 done (based on order #3)
+KJ	0	23:07:44.679	Core 01	2026.08.03 11:20:01   deal performed [#3 buy 0.01 GOLD at 4058.24]
+FL	0	23:07:44.679	Core 01	2026.08.03 11:20:01   order performed buy 0.01 at 4058.24 [#3 buy 0.01 GOLD at 4058.24]
+KO	0	23:07:44.679	Core 01	2026.08.03 12:30:00   market sell 0.01 GOLD sl: 4060.69 tp: 4040.69 (4052.88 / 4053.03 / 4052.88)
+ML	0	23:07:44.679	Core 01	2026.08.03 12:30:00   deal #4 sell 0.01 GOLD at 4052.88 done (based on order #4)
+ON	0	23:07:44.679	Core 01	2026.08.03 12:30:00   deal performed [#4 sell 0.01 GOLD at 4052.88]
+PG	0	23:07:44.679	Core 01	2026.08.03 12:30:00   order performed sell 0.01 at 4052.88 [#4 sell 0.01 GOLD at 4052.88]
+NE	0	23:07:44.679	Core 01	2026.08.03 12:30:01   market buy 0.01 GOLD, close #4 (4052.92 / 4053.07 / 4052.92)
+DE	0	23:07:44.679	Core 01	2026.08.03 12:30:01   deal #5 buy 0.01 GOLD at 4053.07 done (based on order #5)
+GO	0	23:07:44.679	Core 01	2026.08.03 12:30:01   deal performed [#5 buy 0.01 GOLD at 4053.07]
+HQ	0	23:07:44.679	Core 01	2026.08.03 12:30:01   order performed buy 0.01 at 4053.07 [#5 buy 0.01 GOLD at 4053.07]
+QH	0	23:07:44.679	Core 01	GOLD,M5: 923807 ticks, 276 bars generated. Environment synchronized in 0:00:00.022. Test passed in 0:00:03.179 (including ticks preprocessing 0:00:00.078).
+FM	0	23:07:44.679	Core 01	GOLD,M5: total time from login to stop testing 0:00:03.201 (including 0:00:00.022 for history data synchronization)
+LJ	0	23:07:44.839	Tester	automatic testing finished
+CS	0	23:07:41.500	Symbols	GOLD: symbol to be synchronized
+CS	0	23:07:41.500	Symbols	GOLD: symbol synchronized, 3720 bytes of symbol info received
+CS	0	23:07:41.506	History	GOLD: load 23 bytes of history data to synchronize in 0:00:00.002
+CS	0	23:07:41.506	History	GOLD: history synchronized from 2008.03.11 to 2026.09.08
+CS	0	23:07:41.507	Ticks	GOLD: ticks synchronization started
+CS	0	23:07:41.507	Ticks	GOLD: load 30 bytes of tick data to synchronize in 0:00:00.000
+CS	0	23:07:41.507	Ticks	GOLD: history ticks synchronized from 2026.01.02 to 2026.08.31
+CS	0	23:07:41.539	History	GOLD,M5: history cache allocated for 112571 bars and contains 111954 bars from 2025.01.02 01:00 to 2026.07.31 23:55
+CS	0	23:07:41.539	History	GOLD,M5: history begins from 2025.01.02 01:00
+CS	0	23:07:41.602	Tester	GOLD,M5 (FxPro-MT5 Demo): generating based on real ticks
+CS	0	23:07:41.602	Tester	testing with execution delay 250 milliseconds
+CS	0	23:07:41.602	Tester	GOLD,M5: testing of Experts\S4MT5Probe\e5b68231609a4e1fb01515d2fd366fb8\S4MT5Probe.ex5 from 2026.08.03 00:00 to 2026.08.04 00:00 started with inputs:
+CS	0	23:07:41.602	Tester	  InpRunLabel=S4B3_ORDER_D250_e5b68231609a
+CS	0	23:07:41.602	Tester	  InpDeclaredDelayMs=250
+CS	0	23:07:41.678	Ticks	GOLD : real ticks begin from 2026.01.02 00:00:00
+CS	0	23:07:43.143	Trade	2026.08.03 11:20:00   market sell 0.01 GOLD sl: 4065.82 tp: 4045.82 (4057.94 / 4058.09 / 4057.94)
+CS	0	23:07:43.143	Trades	2026.08.03 11:20:00   deal #2 sell 0.01 GOLD at 4057.94 done (based on order #2)
+CS	0	23:07:43.144	Trade	2026.08.03 11:20:00   deal performed [#2 sell 0.01 GOLD at 4057.94]
+CS	0	23:07:43.144	Trade	2026.08.03 11:20:00   order performed sell 0.01 at 4057.94 [#2 sell 0.01 GOLD at 4057.94]
+CS	0	23:07:43.144	Trade	2026.08.03 11:20:01   market buy 0.01 GOLD, close #2 (4058.09 / 4058.24 / 4058.09)
+CS	0	23:07:43.144	Trades	2026.08.03 11:20:01   deal #3 buy 0.01 GOLD at 4058.24 done (based on order #3)
+CS	0	23:07:43.144	Trade	2026.08.03 11:20:01   deal performed [#3 buy 0.01 GOLD at 4058.24]
+CS	0	23:07:43.144	Trade	2026.08.03 11:20:01   order performed buy 0.01 at 4058.24 [#3 buy 0.01 GOLD at 4058.24]
+CS	0	23:07:43.286	Trade	2026.08.03 12:30:00   market sell 0.01 GOLD sl: 4060.69 tp: 4040.69 (4052.88 / 4053.03 / 4052.88)
+CS	0	23:07:43.286	Trades	2026.08.03 12:30:00   deal #4 sell 0.01 GOLD at 4052.88 done (based on order #4)
+CS	0	23:07:43.286	Trade	2026.08.03 12:30:00   deal performed [#4 sell 0.01 GOLD at 4052.88]
+CS	0	23:07:43.286	Trade	2026.08.03 12:30:00   order performed sell 0.01 at 4052.88 [#4 sell 0.01 GOLD at 4052.88]
+CS	0	23:07:43.286	Trade	2026.08.03 12:30:01   market buy 0.01 GOLD, close #4 (4052.92 / 4053.07 / 4052.92)
+CS	0	23:07:43.286	Trades	2026.08.03 12:30:01   deal #5 buy 0.01 GOLD at 4053.07 done (based on order #5)
+CS	0	23:07:43.286	Trade	2026.08.03 12:30:01   deal performed [#5 buy 0.01 GOLD at 4053.07]
+CS	0	23:07:43.286	Trade	2026.08.03 12:30:01   order performed buy 0.01 at 4053.07 [#5 buy 0.01 GOLD at 4053.07]
+CS	0	23:07:44.678	Tester	GOLD,M5: 923807 ticks, 276 bars generated. Environment synchronized in 0:00:00.022. Test passed in 0:00:03.179 (including ticks preprocessing 0:00:00.078).
+CS	0	23:07:44.678	Tester	GOLD,M5: total time from login to stop testing 0:00:03.201 (including 0:00:00.022 for history data synchronization)
+CS	0	23:07:44.678	Tester	test Experts\S4MT5Probe\e5b68231609a4e1fb01515d2fd366fb8\S4MT5Probe.ex5 on GOLD,M5 thread finished

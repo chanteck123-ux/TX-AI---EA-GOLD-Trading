@@ -1475,6 +1475,40 @@
       "report": "LEAN_MCP_20261012/CODEX_S4_B2_REVIEW_CN.md",
       "zip_members": 45,
       "same_ms_different_price": 22
+    },
+    "s4_mt5_probe_b3": {
+      "logged_quote_rows_d0": 19986,
+      "checks_per_run": "18/18",
+      "live": false,
+      "status": "THREE_NATIVE_TESTER_RUNS_COMPLETED_INDEPENDENTLY_REVIEWED",
+      "zip_members": 87,
+      "compile_warnings": 0,
+      "next": "REGISTER_NEW_LEAN_QUOTE_AND_DELAY_MODEL_CANDIDATE_THEN_COMPILE_SMOKE_AND_COMPARABLE_FULL_AUGUST",
+      "delivery": "outputs/TradingBrain_S4_B3_MT5Probe_20261013.zip",
+      "newbar_rows": 275,
+      "champion": false,
+      "lean_b1_changed": false,
+      "date_to_exclusive": "2026-08-04",
+      "review": "LEAN_MCP_20261012/CODEX_S4_B3_REVIEW_CN.md",
+      "date": "2026-10-13",
+      "raw_last_volume_rows_with_prev_quote": 6824,
+      "score_status": "SCORE_TARGETS_UNSET",
+      "terminal_configs_restored": true,
+      "score": null,
+      "observed_order_delay_ms": [
+        0,
+        250
+      ],
+      "capital_usd": 500,
+      "zip_sha256": "cb787d3fdccaa38a8f5674414921dc595343d0cf592e4e7a3219b45baff645b0",
+      "strategy_changed": false,
+      "ex5_sha256": "6d2407cefda344fb359e86345474bcc5246f0d66d6e2fa266722aae880ce03b7",
+      "compile_errors": 0,
+      "claude_review": "LEAN_MCP_20261012/S4_B3_PROBE_REVIEW_CN.md",
+      "data_role": "USED_DEVELOPMENT_NOT_OOS",
+      "date_from": "2026-08-03",
+      "native_runs": 3,
+      "diagnostic_reserve_used": 0
     }
   }
 }

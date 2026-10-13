@@ -1,0 +1,31 @@
+{
+  "schema": "S4_B3_INTAKE_V1",
+  "utc": "2026-10-13T14:55:37.6819299Z",
+  "terminal_fixed": "C:/Users/A/AppData/Roaming/MetaQuotes/Terminal/523FF71FCA93BC15AC28868379E0D478",
+  "native_processes": 0,
+  "files": [
+    {
+      "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\outputs\\TradingBrain_I11_Seven_Strategies_20261004\\MT5\\S4\\TB500_S4_BE125\\TB500_S4_BE125.mq5",
+      "sha256": "f6abe1abc8d9cfca27e6483f344aab03110b9df11b8d1b458e3fce432d63be47",
+      "bytes": 180446
+    },
+    {
+      "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\outputs\\TradingBrain_I11_Seven_Strategies_20261004\\MT5\\S4\\TB500_S4_BE125\\TB500_S4_BE125.ex5",
+      "sha256": "dfc67a50a6fe7cc4ec297ad4d59017409bafe4244dadcbf18d410568d474bbfc",
+      "bytes": 624136
+    },
+    {
+      "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\terminal64.exe",
+      "sha256": "800efc58e49079d8969aa8aed24e89eb53f3ee95a4e551373759d45d12d69fd2",
+      "bytes": 121825224
+    },
+    {
+      "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\metaeditor64.exe",
+      "sha256": "cf2750bde55d98a1f3b4e56bcdd4f59300d0cff5caa6760985f7ef2c2cc12229",
+      "bytes": 116198368
+    }
+  ],
+  "planned_runs": 3,
+  "extra_budget": 2,
+  "status": "REGISTERED_CLAUDE_IMPLEMENTING_NOT_COMPILED_OR_TESTED"
+}

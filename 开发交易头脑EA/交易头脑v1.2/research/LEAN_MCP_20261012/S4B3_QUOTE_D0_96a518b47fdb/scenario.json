@@ -1,0 +1,17 @@
+{
+  "scenario": {
+    "name": "S4B3_AUG03",
+    "symbol": "GOLD",
+    "period": "M5",
+    "model": 4,
+    "from_date": "2026.08.03",
+    "to_date": "2026.08.04",
+    "deposit": 500,
+    "currency": "USD",
+    "leverage": 1000
+  },
+  "variant": "QUOTE_D0",
+  "execution_delay_ms_requested": 0,
+  "diagnostic": false,
+  "diagnostic_reason": ""
+}
