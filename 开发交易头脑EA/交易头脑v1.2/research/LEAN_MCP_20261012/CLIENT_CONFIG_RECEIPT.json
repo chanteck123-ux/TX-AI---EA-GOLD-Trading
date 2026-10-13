@@ -1,9 +1,16 @@
 {
   "server": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\lean_mcp_20261012\\monitor\\server.py",
   "python": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\lean_mcp_20261012\\monitor\\.venv\\Scripts\\python.exe",
-  "status": "CONFIGURED_CLIENT_LOAD_NOT_VERIFIED",
+  "status": "CODEX_CLIENT_CONNECTED_CLAUDE_LOAD_NOT_VERIFIED",
   "backup_private": true,
   "claude_project_config": "C:/Users/A/Documents/Codex/2026-09-10/new-chat/work/plan-replacement/repository/.mcp.json",
   "no_security_policy_changes": true,
-  "codex_config": "C:/Users/A/.codex/config.toml"
+  "codex_config": "C:/Users/A/.codex/config.toml",
+  "codex_connection_verified_utc": "2026-10-13T13:49:47Z",
+  "codex_server_version": "1.2.1",
+  "actual_codex_tool_calls": [
+    "health",
+    "run_status",
+    "source_changes"
+  ]
 }

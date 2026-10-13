@@ -1,0 +1,785 @@
+{
+  "native_count": 75,
+  "tolerance": 1E-07,
+  "deltas": {
+    "equity_dd_usd": 3.8300000000014336,
+    "cost_usd": -0.16999999999999638,
+    "relative_dd_pct": 0.8685467023580884,
+    "complete_position_net_pf": -0.2857118766278275,
+    "net_usd": -65.4500000000011
+  },
+  "native_armed_file_sha256": "0276bb448fb8b5e7ab0b459e56720b8965e0d36edad7e06f540c27061907465f",
+  "native_account": {
+    "net_usd": 102.03,
+    "equity_dd_usd": 33.22,
+    "max_relative_equity_dd_pct": 5.5903205117,
+    "native_pf": 1.4616115459,
+    "complete_position_net_pf": 1.464342602284622,
+    "complete_positions": 56,
+    "native_exit_trades": 56,
+    "win_rate_pct": 50,
+    "cost_usd": 5.14,
+    "cost_breakdown_signed": {
+      "profit": 107.17,
+      "commission": -5.14,
+      "swap": 0,
+      "fee": 0
+    },
+    "matched_round_trip_standard_lots": 0.6700000000000004,
+    "recorded_cost_usd_per_round_trip_standard_lot": 7.671641791044771,
+    "average_net_win": 11.491428571428571,
+    "average_net_loss_absolute": 7.847499999999999,
+    "average_win_loss_ratio": 1.4643426022846222,
+    "longest_loss_streak": 3,
+    "final_balance": 602.03,
+    "dd_definition": "Native maximum equity drawdown amount and native maximum relative equity drawdown percent; their peaks may differ.",
+    "cost_definition": "Commission+swap+fees from matched full lifecycles, divided by opening standard lots. Actual bid/ask spread is already in net and is not subtracted again. This is recorded explicit cost, not an independently estimated spread/slippage total.",
+    "native_pf_raw": 1.4616115459
+  },
+  "result_sha256": "a60e4c36ea5271baedb5747d366b9a4170ae5d5a6bfe6abc10693a4a28ba1a97",
+  "differences": [],
+  "reconciliation": {
+    "formula": "LEAN_CFD_TPV = ledger_at_net_side_quote - net_liquidation_fee (SecurityHolding.TotalCloseProfit includeFees=true)",
+    "tolerance_usd": 0.05,
+    "checks": 227,
+    "quantity_mismatches": 0,
+    "liquidation_fee_mismatches": 0,
+    "max_tpv_gap_usd": 2.0000000000003E-12,
+    "lean_end_tpv": 536.58,
+    "lean_end_quantity": 0.0,
+    "ledger_end_balance": 536.5799999999989,
+    "passed": true
+  },
+  "status": "FULL_MONTH_S4_ARMED_PARITY_WITHIN_DECLARED_TOLERANCE",
+  "lean_account": {
+    "complete_positions": 56,
+    "wins": 24,
+    "losses": 32,
+    "zero_net": 0,
+    "net_usd": 36.579999999998904,
+    "ending_balance": 536.5799999999989,
+    "gross_profit_usd": 241.3600000000004,
+    "gross_loss_usd": 204.78000000000173,
+    "profit_factor": 1.1786307256567945,
+    "win_rate_pct": 42.857142857142854,
+    "avg_win_usd": 10.056666666666684,
+    "avg_loss_usd": -6.399375000000054,
+    "commission_usd": 4.970000000000003,
+    "swap_usd": 0,
+    "matched_round_trip_lots": 0.6400000000000003,
+    "commission_usd_per_round_trip_lot": 7.765625000000001,
+    "max_equity_dd_usd": 37.05000000000143,
+    "max_equity_dd_pct": 6.458867214058088,
+    "max_consecutive_losses": 5,
+    "exit_reasons": {
+      "TP": 22,
+      "SL": 26,
+      "SL_AFTER_BE": 4,
+      "ENTRY_RISK_OVERRUN": 4
+    },
+    "rejected_requests": 0,
+    "break_even_moves": 25,
+    "emergency_lock": false,
+    "daily_locks": 1,
+    "utc_day_starts": 26,
+    "armed_signals": 75,
+    "decision_reasons": {
+      "RESERVED": 56,
+      "MIN_LOT_OVER_RISK": 116,
+      "ENTRY_PRICE_DEVIATION": 170,
+      "ORDER_BLOCKED_BY_PORTFOLIO_RISK": 99,
+      "DAILY_EQUITY_STOP": 1,
+      "SPREAD_TOO_HIGH_RELATIVE": 23,
+      "STRUCTURE_SL_CROSSED": 16,
+      "STRATEGY_SLOT_FULL": 1
+    },
+    "events": {
+      "ENTRY_FILLED": 56,
+      "SL_MODIFIED_PROTECTION": 25,
+      "EXIT_TP": 22,
+      "EXIT_SL": 26,
+      "EXIT_SL_AFTER_BE": 4,
+      "ENTRY_RISK_OVERRUN": 24,
+      "EXIT_ENTRY_RISK_OVERRUN": 5
+    }
+  },
+  "matches": [
+    {
+      "deltas": {
+        "time_ms": 0,
+        "sl": -2.8194335754960775E-11,
+        "ref": 0.0,
+        "atr": -4.2932324362254803E-11
+      },
+      "key": "S4|GOLD|-1|S4_MOMENTUM_1785755700_-1|1785756000"
+    },
+    {
+      "deltas": {
+        "time_ms": 0,
+        "sl": 0.0,
+        "ref": 0.0,
+        "atr": -1.9761969838327786E-13
+      },
+      "key": "S4|GOLD|-1|S4_MOMENTUM_1785759900_-1|1785760200"
+    },
+    {
+      "deltas": {
+        "time_ms": 0,
+        "sl": 2.864908310584724E-11,
+        "ref": 0.0,
+        "atr": 4.2667647193184166E-11
+      },
+      "key": "S4|GOLD|-1|S4_MOMENTUM_1785760200_-1|1785760500"
+    },
+    {
+      "deltas": {
+        "time_ms": 0,
+        "sl": 0.0,
+        "ref": 0.0,
+        "atr": -2.2737367544323206E-13
+      },
+      "key": "S4|GOLD|-1|S4_MOMENTUM_1785773400_-1|1785773700"
+    },
+    {
+      "deltas": {
+        "time_ms": 0,
+        "sl": -4.274625098332763E-11,
+        "ref": 0.0,
+        "atr": 1.4149570404242695E-11
+      },
+      "key": "S4|GOLD|1|S4_MOMENTUM_1785861900_1|1785862200"
+    },
+    {
+      "deltas": {
+        "time_ms": 0,
+        "sl": -2.9103830456733704E-11,
+        "ref": 0.0,
+        "atr": 4.284839150159314E-11
+      },
+      "key": "S4|GOLD|1|S4_MOMENTUM_1785927300_1|1785927600"
+    },
+    {
+      "deltas": {
+        "time_ms": 0,
+        "sl": -4.274625098332763E-11,
+        "ref": 0.0,
+        "atr": 1.4226841926756606E-11
+      },
+      "key": "S4|GOLD|1|S4_MOMENTUM_1785942000_1|1785942300"
+    },
+    {
+      "deltas": {
+        "time_ms": 0,
+        "sl": -1.4551915228366852E-11,
+        "ref": 0.0,
+        "atr": -2.8486546455042117E-11
+      },
+      "key": "S4|GOLD|1|S4_MOMENTUM_1785949500_1|1785949800"
+    },
+    {
+      "deltas": {
+        "time_ms": 0,
+        "sl": 2.7284841053187847E-11,
+        "ref": 0.0,
+        "atr": -4.2813752543224837E-11
+      },
+      "key": "S4|GOLD|1|S4_MOMENTUM_1785950100_1|1785950400"
+    },
+    {
+      "deltas": {
+        "time_ms": 0,
+        "sl": -4.274625098332763E-11,
+        "ref": 0.0,
+        "atr": 1.425348727934761E-11
+      },
+      "key": "S4|GOLD|1|S4_MOMENTUM_1785951600_1|1785951900"
+    },
+    {
+      "deltas": {
+        "time_ms": 0,
+        "sl": -4.18367562815547E-11,
+        "ref": 0.0,
+        "atr": 1.397104654188297E-11
+      },
+      "key": "S4|GOLD|1|S4_MOMENTUM_1786017300_1|1786017600"
+    },
+    {
+      "deltas": {
+        "time_ms": 0,
+        "sl": -4.274625098332763E-11,
+        "ref": 0.0,
+        "atr": -1.432365337450392E-11
+      },
+      "key": "S4|GOLD|-1|S4_MOMENTUM_1786031100_-1|1786031400"
+    },
+    {
+      "deltas": {
+        "time_ms": 0,
+        "sl": -1.4551915228366852E-11,
+        "ref": 0.0,
+        "atr": 2.8497204596078518E-11
+      },
+      "key": "S4|GOLD|-1|S4_MOMENTUM_1786031400_-1|1786031700"
+    },
+    {
+      "deltas": {
+        "time_ms": 0,
+        "sl": 0.0,
+        "ref": 0.0,
+        "atr": -7.37188088351104E-14
+      },
+      "key": "S4|GOLD|1|S4_MOMENTUM_1786100100_1|1786100400"
+    },
+    {
+      "deltas": {
+        "time_ms": 0,
+        "sl": 0.0,
+        "ref": 0.0,
+        "atr": -5.5067062021407764E-14
+      },
+      "key": "S4|GOLD|1|S4_MOMENTUM_1786101000_1|1786101300"
+    },
+    {
+      "deltas": {
+        "time_ms": 0,
+        "sl": -4.274625098332763E-11,
+        "ref": 0.0,
+        "atr": 1.4217960142559605E-11
+      },
+      "key": "S4|GOLD|1|S4_MOMENTUM_1786106400_1|1786106700"
+    },
+    {
+      "deltas": {
+        "time_ms": 0,
+        "sl": 0.0,
+        "ref": 0.0,
+        "atr": -3.2507330161024584E-13
+      },
+      "key": "S4|GOLD|1|S4_MOMENTUM_1786120500_1|1786120800"
+    },
+    {
+      "deltas": {
+        "time_ms": 0,
+        "sl": -2.8194335754960775E-11,
+        "ref": 0.0,
+        "atr": -4.298739142427621E-11
+      },
+      "key": "S4|GOLD|-1|S4_MOMENTUM_1786374600_-1|1786374900"
+    },
+    {
+      "deltas": {
+        "time_ms": 0,
+        "sl": 9.094947017729282E-13,
+        "ref": 0.0,
+        "atr": -1.247890679678676E-13
+      },
+      "key": "S4|GOLD|-1|S4_MOMENTUM_1786374900_-1|1786375200"
+    },
+    {
+      "deltas": {
+        "time_ms": 0,
+        "sl": -4.18367562815547E-11,
+        "ref": 0.0,
+        "atr": 1.4190870700758751E-11
+      },
+      "key": "S4|GOLD|1|S4_MOMENTUM_1786530900_1|1786531200"
+    },
+    {
+      "deltas": {
+        "time_ms": 0,
+        "sl": 4.274625098332763E-11,
+        "ref": 0.0,
+        "atr": -1.4507062218171995E-11
+      },
+      "key": "S4|GOLD|1|S4_MOMENTUM_1786536600_1|1786536900"
+    },
+    {
+      "deltas": {
+        "time_ms": 0,
+        "sl": -1.4551915228366852E-11,
+        "ref": 0.0,
+        "atr": 2.851496816447252E-11
+      },
+      "key": "S4|GOLD|-1|S4_MOMENTUM_1786616100_-1|1786616400"
+    },
+    {
+      "deltas": {
+        "time_ms": 0,
+        "sl": -1.4551915228366852E-11,
+        "ref": 0.0,
+        "atr": 2.858024927832048E-11
+      },
+      "key": "S4|GOLD|-1|S4_MOMENTUM_1786617900_-1|1786618200"
+    },
+    {
+      "deltas": {
+        "time_ms": 0,
+        "sl": 0.0,
+        "ref": 0.0,
+        "atr": 8.881784197001252E-15
+      },
+      "key": "S4|GOLD|-1|S4_MOMENTUM_1786618500_-1|1786618800"
+    },
+    {
+      "deltas": {
+        "time_ms": 0,
+        "sl": 2.8194335754960775E-11,
+        "ref": 0.0,
+        "atr": 4.29181135075396E-11
+      },
+      "key": "S4|GOLD|-1|S4_MOMENTUM_1786618800_-1|1786619100"
+    },
+    {
+      "deltas": {
+        "time_ms": 0,
+        "sl": 4.274625098332763E-11,
+        "ref": 0.0,
+        "atr": -1.4211742893621704E-11
+      },
+      "key": "S4|GOLD|1|S4_MOMENTUM_1786633500_1|1786633800"
+    },
+    {
+      "deltas": {
+        "time_ms": 0,
+        "sl": 2.8194335754960775E-11,
+        "ref": 0.0,
+        "atr": -4.295941380405566E-11
+      },
+      "key": "S4|GOLD|1|S4_MOMENTUM_1786636500_1|1786636800"
+    },
+    {
+      "deltas": {
+        "time_ms": 0,
+        "sl": 2.8194335754960775E-11,
+        "ref": 0.0,
+        "atr": -4.283018384398929E-11
+      },
+      "key": "S4|GOLD|1|S4_MOMENTUM_1786704000_1|1786704300"
+    },
+    {
+      "deltas": {
+        "time_ms": 0,
+        "sl": -1.4551915228366852E-11,
+        "ref": 0.0,
+        "atr": -2.8482105562943616E-11
+      },
+      "key": "S4|GOLD|1|S4_MOMENTUM_1786704300_1|1786704600"
+    },
+    {
+      "deltas": {
+        "time_ms": 0,
+        "sl": -1.4551915228366852E-11,
+        "ref": 0.0,
+        "atr": -2.864908310584724E-11
+      },
+      "key": "S4|GOLD|1|S4_MOMENTUM_1786710000_1|1786710300"
+    },
+    {
+      "deltas": {
+        "time_ms": 0,
+        "sl": 2.9103830456733704E-11,
+        "ref": 0.0,
+        "atr": -4.306199841153102E-11
+      },
+      "key": "S4|GOLD|1|S4_MOMENTUM_1786719300_1|1786719600"
+    },
+    {
+      "deltas": {
+        "time_ms": 0,
+        "sl": 2.9103830456733704E-11,
+        "ref": 0.0,
+        "atr": -4.305178435970447E-11
+      },
+      "key": "S4|GOLD|1|S4_MOMENTUM_1786719600_1|1786719900"
+    },
+    {
+      "deltas": {
+        "time_ms": 0,
+        "sl": -4.3655745685100555E-11,
+        "ref": 0.0,
+        "atr": 1.4169110329476098E-11
+      },
+      "key": "S4|GOLD|1|S4_MOMENTUM_1786720800_1|1786721100"
+    },
+    {
+      "deltas": {
+        "time_ms": 0,
+        "sl": 1.4551915228366852E-11,
+        "ref": 0.0,
+        "atr": 2.866240578214274E-11
+      },
+      "key": "S4|GOLD|1|S4_MOMENTUM_1786724400_1|1786724700"
+    },
+    {
+      "deltas": {
+        "time_ms": 0,
+        "sl": -2.9103830456733704E-11,
+        "ref": 0.0,
+        "atr": 4.288924770889935E-11
+      },
+      "key": "S4|GOLD|1|S4_MOMENTUM_1786725000_1|1786725300"
+    },
+    {
+      "deltas": {
+        "time_ms": 0,
+        "sl": -2.9103830456733704E-11,
+        "ref": 0.0,
+        "atr": 4.271427656021842E-11
+      },
+      "key": "S4|GOLD|1|S4_MOMENTUM_1786962300_1|1786962600"
+    },
+    {
+      "deltas": {
+        "time_ms": 0,
+        "sl": -1.4551915228366852E-11,
+        "ref": 0.0,
+        "atr": 2.8613555969059234E-11
+      },
+      "key": "S4|GOLD|-1|S4_MOMENTUM_1787074500_-1|1787074800"
+    },
+    {
+      "deltas": {
+        "time_ms": 0,
+        "sl": 0.0,
+        "ref": 0.0,
+        "atr": -1.4832579608992091E-13
+      },
+      "key": "S4|GOLD|1|S4_MOMENTUM_1787137500_1|1787137800"
+    },
+    {
+      "deltas": {
+        "time_ms": 0,
+        "sl": 1.3642420526593924E-11,
+        "ref": 0.0,
+        "atr": 2.8391955453344053E-11
+      },
+      "key": "S4|GOLD|1|S4_MOMENTUM_1787139600_1|1787139900"
+    },
+    {
+      "deltas": {
+        "time_ms": 0,
+        "sl": -4.3655745685100555E-11,
+        "ref": 0.0,
+        "atr": 1.446753827849534E-11
+      },
+      "key": "S4|GOLD|1|S4_MOMENTUM_1787154000_1|1787154300"
+    },
+    {
+      "deltas": {
+        "time_ms": 0,
+        "sl": -1.546140993013978E-11,
+        "ref": 0.0,
+        "atr": -2.843592028511921E-11
+      },
+      "key": "S4|GOLD|1|S4_MOMENTUM_1787154600_1|1787154900"
+    },
+    {
+      "deltas": {
+        "time_ms": 0,
+        "sl": 4.274625098332763E-11,
+        "ref": 0.0,
+        "atr": -1.4066969811210583E-11
+      },
+      "key": "S4|GOLD|1|S4_MOMENTUM_1787154900_1|1787155200"
+    },
+    {
+      "deltas": {
+        "time_ms": 0,
+        "sl": 1.3642420526593924E-11,
+        "ref": 0.0,
+        "atr": 2.872013737942325E-11
+      },
+      "key": "S4|GOLD|1|S4_MOMENTUM_1787155800_1|1787156100"
+    },
+    {
+      "deltas": {
+        "time_ms": 0,
+        "sl": -4.18367562815547E-11,
+        "ref": 0.0,
+        "atr": 1.4169998507895798E-11
+      },
+      "key": "S4|GOLD|1|S4_MOMENTUM_1787159100_1|1787159400"
+    },
+    {
+      "deltas": {
+        "time_ms": 0,
+        "sl": -4.274625098332763E-11,
+        "ref": 0.0,
+        "atr": 1.3992362823955773E-11
+      },
+      "key": "S4|GOLD|1|S4_MOMENTUM_1787160000_1|1787160300"
+    },
+    {
+      "deltas": {
+        "time_ms": 0,
+        "sl": 9.094947017729282E-13,
+        "ref": 0.0,
+        "atr": -2.9665159217984183E-13
+      },
+      "key": "S4|GOLD|1|S4_MOMENTUM_1787160300_1|1787160600"
+    },
+    {
+      "deltas": {
+        "time_ms": 0,
+        "sl": -1.4551915228366852E-11,
+        "ref": 0.0,
+        "atr": 2.851585634289222E-11
+      },
+      "key": "S4|GOLD|-1|S4_MOMENTUM_1787238000_-1|1787238300"
+    },
+    {
+      "deltas": {
+        "time_ms": 0,
+        "sl": 0.0,
+        "ref": 0.0,
+        "atr": -2.842170943040401E-14
+      },
+      "key": "S4|GOLD|1|S4_MOMENTUM_1787247900_1|1787248200"
+    },
+    {
+      "deltas": {
+        "time_ms": 0,
+        "sl": -2.8194335754960775E-11,
+        "ref": 0.0,
+        "atr": 4.282973975477944E-11
+      },
+      "key": "S4|GOLD|1|S4_MOMENTUM_1787310900_1|1787311200"
+    },
+    {
+      "deltas": {
+        "time_ms": 0,
+        "sl": 2.8194335754960775E-11,
+        "ref": 0.0,
+        "atr": -4.2946979306179855E-11
+      },
+      "key": "S4|GOLD|1|S4_MOMENTUM_1787311200_1|1787311500"
+    },
+    {
+      "deltas": {
+        "time_ms": 0,
+        "sl": -2.8194335754960775E-11,
+        "ref": 0.0,
+        "atr": 4.2789771725892933E-11
+      },
+      "key": "S4|GOLD|1|S4_MOMENTUM_1787313900_1|1787314200"
+    },
+    {
+      "deltas": {
+        "time_ms": 0,
+        "sl": -4.3655745685100555E-11,
+        "ref": 0.0,
+        "atr": 1.4218848320979305E-11
+      },
+      "key": "S4|GOLD|1|S4_MOMENTUM_1787314200_1|1787314500"
+    },
+    {
+      "deltas": {
+        "time_ms": 0,
+        "sl": -1.4551915228366852E-11,
+        "ref": 0.0,
+        "atr": -2.8615332325898635E-11
+      },
+      "key": "S4|GOLD|1|S4_MOMENTUM_1787332800_1|1787333100"
+    },
+    {
+      "deltas": {
+        "time_ms": 0,
+        "sl": 4.3655745685100555E-11,
+        "ref": 0.0,
+        "atr": -1.4338752407638822E-11
+      },
+      "key": "S4|GOLD|1|S4_MOMENTUM_1787333100_1|1787333400"
+    },
+    {
+      "deltas": {
+        "time_ms": 0,
+        "sl": 4.274625098332763E-11,
+        "ref": 0.0,
+        "atr": -1.4390266755981429E-11
+      },
+      "key": "S4|GOLD|1|S4_MOMENTUM_1787585700_1|1787586000"
+    },
+    {
+      "deltas": {
+        "time_ms": 0,
+        "sl": 1.4551915228366852E-11,
+        "ref": 0.0,
+        "atr": 2.830624623584299E-11
+      },
+      "key": "S4|GOLD|1|S4_MOMENTUM_1787589000_1|1787589300"
+    },
+    {
+      "deltas": {
+        "time_ms": 0,
+        "sl": -1.3642420526593924E-11,
+        "ref": 0.0,
+        "atr": 2.8616220504318335E-11
+      },
+      "key": "S4|GOLD|-1|S4_MOMENTUM_1787653500_-1|1787653800"
+    },
+    {
+      "deltas": {
+        "time_ms": 0,
+        "sl": -2.9103830456733704E-11,
+        "ref": 0.0,
+        "atr": -4.2799541688509635E-11
+      },
+      "key": "S4|GOLD|-1|S4_MOMENTUM_1787655000_-1|1787655300"
+    },
+    {
+      "deltas": {
+        "time_ms": 0,
+        "sl": -4.274625098332763E-11,
+        "ref": 0.0,
+        "atr": -1.4261480885124911E-11
+      },
+      "key": "S4|GOLD|-1|S4_MOMENTUM_1787655600_-1|1787655900"
+    },
+    {
+      "deltas": {
+        "time_ms": 0,
+        "sl": 0.0,
+        "ref": 0.0,
+        "atr": -2.0872192862952943E-13
+      },
+      "key": "S4|GOLD|-1|S4_MOMENTUM_1787674200_-1|1787674500"
+    },
+    {
+      "deltas": {
+        "time_ms": 0,
+        "sl": 0.0,
+        "ref": 0.0,
+        "atr": -2.815525590449397E-13
+      },
+      "key": "S4|GOLD|-1|S4_MOMENTUM_1787674800_-1|1787675100"
+    },
+    {
+      "deltas": {
+        "time_ms": 0,
+        "sl": -4.274625098332763E-11,
+        "ref": 0.0,
+        "atr": -1.4533263481553149E-11
+      },
+      "key": "S4|GOLD|-1|S4_MOMENTUM_1787675100_-1|1787675400"
+    },
+    {
+      "deltas": {
+        "time_ms": 0,
+        "sl": -2.8194335754960775E-11,
+        "ref": 0.0,
+        "atr": -4.304467893234687E-11
+      },
+      "key": "S4|GOLD|-1|S4_MOMENTUM_1787676300_-1|1787676600"
+    },
+    {
+      "deltas": {
+        "time_ms": 0,
+        "sl": -1.546140993013978E-11,
+        "ref": 0.0,
+        "atr": 2.8548718944421125E-11
+      },
+      "key": "S4|GOLD|-1|S4_MOMENTUM_1787739900_-1|1787740200"
+    },
+    {
+      "deltas": {
+        "time_ms": 0,
+        "sl": 1.4551915228366852E-11,
+        "ref": 0.0,
+        "atr": -2.8607338720121334E-11
+      },
+      "key": "S4|GOLD|-1|S4_MOMENTUM_1787740500_-1|1787740800"
+    },
+    {
+      "deltas": {
+        "time_ms": 0,
+        "sl": 2.8194335754960775E-11,
+        "ref": 0.0,
+        "atr": 4.284927968001284E-11
+      },
+      "key": "S4|GOLD|-1|S4_MOMENTUM_1787741400_-1|1787741700"
+    },
+    {
+      "deltas": {
+        "time_ms": 0,
+        "sl": 0.0,
+        "ref": 0.0,
+        "atr": -1.1723955140041653E-13
+      },
+      "key": "S4|GOLD|-1|S4_MOMENTUM_1787745600_-1|1787745900"
+    },
+    {
+      "deltas": {
+        "time_ms": 0,
+        "sl": 1.4551915228366852E-11,
+        "ref": 0.0,
+        "atr": -2.87303514312498E-11
+      },
+      "key": "S4|GOLD|-1|S4_MOMENTUM_1787746500_-1|1787746800"
+    },
+    {
+      "deltas": {
+        "time_ms": 0,
+        "sl": 4.274625098332763E-11,
+        "ref": 0.0,
+        "atr": 1.4090506539332637E-11
+      },
+      "key": "S4|GOLD|-1|S4_MOMENTUM_1787747100_-1|1787747400"
+    },
+    {
+      "deltas": {
+        "time_ms": 0,
+        "sl": 2.8194335754960775E-11,
+        "ref": 0.0,
+        "atr": 4.274980369700643E-11
+      },
+      "key": "S4|GOLD|-1|S4_MOMENTUM_1787766600_-1|1787766900"
+    },
+    {
+      "deltas": {
+        "time_ms": 0,
+        "sl": 1.3642420526593924E-11,
+        "ref": 0.0,
+        "atr": -2.8631319537453237E-11
+      },
+      "key": "S4|GOLD|-1|S4_MOMENTUM_1787825700_-1|1787826000"
+    },
+    {
+      "deltas": {
+        "time_ms": 0,
+        "sl": -1.4551915228366852E-11,
+        "ref": 0.0,
+        "atr": 2.8451907496673812E-11
+      },
+      "key": "S4|GOLD|-1|S4_MOMENTUM_1787845500_-1|1787845800"
+    },
+    {
+      "deltas": {
+        "time_ms": 0,
+        "sl": -4.3655745685100555E-11,
+        "ref": 0.0,
+        "atr": 1.4241940959891508E-11
+      },
+      "key": "S4|GOLD|1|S4_MOMENTUM_1787910900_1|1787911200"
+    },
+    {
+      "deltas": {
+        "time_ms": 0,
+        "sl": -1.4551915228366852E-11,
+        "ref": 0.0,
+        "atr": 2.83666423683826E-11
+      },
+      "key": "S4|GOLD|-1|S4_MOMENTUM_1787937000_-1|1787937300"
+    },
+    {
+      "deltas": {
+        "time_ms": 0,
+        "sl": -4.274625098332763E-11,
+        "ref": 0.0,
+        "atr": -1.4456880137458938E-11
+      },
+      "key": "S4|GOLD|-1|S4_MOMENTUM_1788194700_-1|1788195000"
+    }
+  ],
+  "lean_count": 75,
+  "scope": "ARMED_KEYS_TIME_REF_SL_ATR_ONLY_NOT_FILL_PROFIT_PARITY"
+}

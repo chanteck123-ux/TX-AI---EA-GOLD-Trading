@@ -1,0 +1,64 @@
+{
+  "schema": "S4_LEAN_B1_RECEIPT_V1",
+  "id": "S4B1_SMOKE_D250_20261012T090135Z_c3a0007a",
+  "mode": "Smoke",
+  "candidate_id": "TB500_S4_BE125_LEAN_B1",
+  "owner": "Codex",
+  "latency_ms": 250,
+  "protective_fill": "QUOTE",
+  "commission_per_lot_side": 3.5,
+  "data_role": "AUGUST_2026_ALREADY_USED_DEVELOPMENT_NOT_OOS",
+  "score_status": "SCORE_TARGETS_UNSET",
+  "mq5_sha256": "f6abe1abc8d9cfca27e6483f344aab03110b9df11b8d1b458e3fce432d63be47",
+  "source_hashes": [
+    {
+      "path": "lean_mcp_20261012\\lean\\algorithms\\S4\\S4Core.cs",
+      "sha256": "2e2b70c75fe0b331687b138f53a3405e58a9e4380d71dc028ab121bfe0efe04a"
+    },
+    {
+      "path": "lean_mcp_20261012\\lean\\algorithms\\S4\\S4RetainedAlgorithm.cs",
+      "sha256": "42e86891d5717e471051791976710c4a6cdc125da60bb5d3ec263bf6907e6eac"
+    },
+    {
+      "path": "lean_mcp_20261012\\lean\\algorithms\\S4\\TradingBrain.S4.csproj",
+      "sha256": "83e5107d36c3122221d71cc1a4e6ff90fac76478974631f8a6144eee054f7f2a"
+    },
+    {
+      "path": "mt5_iteration9_20261004\\algorithm\\C7Signals.Core.cs",
+      "sha256": "261b96eb242267aa7471b89c9d73b3f8076b816b020fbecd41dc8239f55dd595"
+    },
+    {
+      "path": "mt5_iteration9_20261004\\algorithm\\Strategy123.cs",
+      "sha256": "1be13bfe8ceda032430bdd3cb087f5b474e6ceaec9efba650767aabd246e3bd9"
+    },
+    {
+      "path": "mt5_iteration9_20261004\\algorithm\\Strategy456.cs",
+      "sha256": "cffb2b726971c6d5088c1e0285191b8e01a4f4b77ae5e3c6d79a7e881f12e2fb"
+    },
+    {
+      "path": "mt5_iteration9_20261004\\algorithm\\StrategyScalping.cs",
+      "sha256": "1576cd1e3993201541fb941943ba287a0fbfaa4afbd306b071ecbab092fcde09"
+    },
+    {
+      "path": "lean_mcp_20261012\\lean\\algorithms\\S4\\fixtures\\Program.cs",
+      "sha256": "6ac59801309f9ed393390f34fde2903cca38e7bd5328faa4e857f6cd6bb2db0d"
+    },
+    {
+      "path": "lean_mcp_20261012\\lean\\algorithms\\S4\\fixtures\\S4.Fixtures.csproj",
+      "sha256": "b026fba548e1516e75501812c0ddefb0545147b5fb60dceae15b361b29d65007"
+    }
+  ],
+  "started_utc": "2026-10-12T09:01:35.3064664Z",
+  "status": "FAILED",
+  "dll_sha256": "09279d988c8b2d8b8e3283dc8ea7a79e077f97124ea01829849441cf9550518b",
+  "compile_log_sha256": "6d0745f425798c057c4ff6d545d60f5fd715bb5349fa0b931745a922d7c588be",
+  "tick_manifest_sha256": "9a3926c75890be2a0d54537cfe1b31f37fd1209ca04291ce9064172551cd117f",
+  "bar_proof_sha256": "d3f4d35f2c01c85c2975afc75a3fce091b1773b552ad98035ba265b4d2e0c015",
+  "config_sha256": "aa5bef121cba82ed4b3c47ca235aa0abb28566f777ca4ce8c731d3246db6edc7",
+  "end_date": "2026-08-03",
+  "result_sha256": "7307d7e571d1b96b23f03cadd85bf076238a26484a820c007c2dd2ae8dc03f68",
+  "ticks": 923807,
+  "result_status": "ENGINE_RUN_FINISHED_RECONCILIATION_FAILED",
+  "error": "LEAN/slot-ledger reconciliation failed",
+  "completed_utc": "2026-10-12T09:01:53.7520416Z"
+}

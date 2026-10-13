@@ -188,6 +188,59 @@ class LeanClassification(Base):
         write(d / "config.json", "{}")
         self.assertEqual(core.classify_lean_run(self.cfg, d)["status"], "NOT_STARTED_OR_NO_LOG")
 
+    # Real case: S4B1_SMOKE_D250_20261012T090135Z_c3a0007a. The engine exited normally with a valid
+    # summary, but the runner's RUN_RECEIPT says FAILED (reconciliation gate). Monitor v1.2.0 showed
+    # COMPLETED; the receipt must take precedence while the engine view stays visible.
+    def _engine_completed(self, name: str) -> Path:
+        d = self.run_dir(name)
+        old = time.time() - 3600
+        write(d / "log.txt", "TRACE:: Engine.Main(): Started\nTRACE:: Program.Main(): Exiting Lean...\n", mtime=old)
+        write(d / (name + "-summary.json"), json.dumps({"statistics": {"Total Orders": "8"}}), mtime=old)
+        return d
+
+    def test_failed_receipt_overrides_engine_completed_real_case(self):
+        d = self._engine_completed("S4B1_SMOKE_D250_20261012T090135Z_c3a0007a")
+        write(d / "RUN_RECEIPT.json", json.dumps({"status": "FAILED", "result_status": "ENGINE_RUN_FINISHED_RECONCILIATION_FAILED",
+                                                   "error": "LEAN/slot-ledger reconciliation failed"}))
+        r = core.classify_lean_run(self.cfg, d)
+        self.assertEqual(r["status"], "FAILED")
+        self.assertEqual(r["engine_status"], "COMPLETED_RESULTS_PRESENT_REVIEW_REQUIRED")
+        self.assertEqual(r["research_status"], "FAILED_BY_RUN_RECEIPT")
+        self.assertIn("RUN_RECEIPT_FAILED", r["failure_reasons"])
+        self.assertEqual(r["run_receipt"]["error"], "LEAN/slot-ledger reconciliation failed")
+
+    def test_passing_receipt_keeps_engine_status(self):
+        d = self._engine_completed("S4B1_SMOKE_D250_20261012T090608Z_30882182")
+        write(d / "RUN_RECEIPT.json", json.dumps({"status": "SMOKE_PASS_REVIEW_REQUIRED"}))
+        r = core.classify_lean_run(self.cfg, d)
+        self.assertEqual(r["status"], "COMPLETED_RESULTS_PRESENT_REVIEW_REQUIRED")
+        self.assertEqual(r["engine_status"], r["status"])
+        self.assertEqual(r["research_status"], "RUN_RECEIPT_SMOKE_PASS_REVIEW_REQUIRED")
+
+    def test_running_receipt_does_not_override_and_missing_receipt_reported(self):
+        d = self._engine_completed("running_receipt")
+        write(d / "RUN_RECEIPT.json", json.dumps({"status": "RUNNING"}))
+        r = core.classify_lean_run(self.cfg, d)
+        self.assertEqual((r["status"], r["research_status"]), ("COMPLETED_RESULTS_PRESENT_REVIEW_REQUIRED", "RUN_RECEIPT_RUNNING"))
+        d2 = self._engine_completed("no_receipt")
+        self.assertEqual(core.classify_lean_run(self.cfg, d2)["research_status"], "NO_RUN_RECEIPT")
+
+    def test_failed_receipt_without_engine_log(self):
+        d = self.run_dir("build_failed")
+        write(d / "compile.log", "error CS1002\n")
+        write(d / "RUN_RECEIPT.json", json.dumps({"status": "FAILED", "error": "C# build failed"}))
+        r = core.classify_lean_run(self.cfg, d)
+        self.assertEqual((r["status"], r["engine_status"], r["research_status"]), ("FAILED", "NOT_STARTED_OR_NO_LOG", "FAILED_BY_RUN_RECEIPT"))
+
+    def test_real_workspace_failed_smoke_if_present(self):
+        real = core.MonitorConfig()
+        d = real.project / "runs" / "S4B1_SMOKE_D250_20261012T090135Z_c3a0007a"
+        if not d.is_dir():
+            self.skipTest("real failed smoke run not present on this machine")
+        r = core.classify_lean_run(real, d)
+        self.assertEqual((r["status"], r["research_status"]), ("FAILED", "FAILED_BY_RUN_RECEIPT"))
+        self.assertTrue(r["engine_status"].startswith("COMPLETED"))
+
 
 class InternalDiscovery(Base):
     def test_junctioned_run_dir_and_log_are_not_read(self):

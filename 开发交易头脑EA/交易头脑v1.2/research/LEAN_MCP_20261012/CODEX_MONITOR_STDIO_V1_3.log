@@ -1,0 +1,13 @@
+2026-10-12 17:12:39,917 WARNING tb-lean-monitor: bounded_log_tail denied: PATH_ESCAPE
+2026-10-12 17:12:39,918 WARNING tb-lean-monitor: bounded_log_tail denied: OUTSIDE_ALLOWED_ROOTS
+2026-10-12 17:12:39,921 WARNING tb-lean-monitor: bounded_log_tail denied: INVALID_PATH
+2026-10-12 17:12:39,923 WARNING tb-lean-monitor: bounded_log_tail denied: PRIVATE_OR_CREDENTIAL_FILE
+2026-10-12 17:12:39,926 WARNING tb-lean-monitor: bounded_log_tail denied: PRIVATE_OR_TOOLING_DIRECTORY
+2026-10-12 17:12:39,928 WARNING tb-lean-monitor: bounded_log_tail denied: MT5_COMMON_NOT_PROJECT_AUDIT
+2026-10-12 17:12:39,929 WARNING tb-lean-monitor: bounded_log_tail denied: NOT_FOUND
+2026-10-12 17:12:39,932 WARNING tb-lean-monitor: bounded_log_tail denied: NOT_A_TEXT_LOG_EXTENSION
+2026-10-12 17:12:39,935 WARNING tb-lean-monitor: source_changes denied: UNKNOWN_SCOPE
+2026-10-12 17:12:39,937 WARNING tb-lean-monitor: run_status denied: UNKNOWN_KIND
+2026-10-12 17:12:39,939 WARNING tb-lean-monitor: source_changes denied: BAD_SINCE_UTC
+2026-10-12 17:12:40,094 WARNING mcp.server.lowlevel.server: Tool 'no_such_tool' not listed, no validation will be performed
+{"passed": true, "checks": 54, "failed": [], "out": "..\\CODEX_MONITOR_STDIO_V1_3.json"}

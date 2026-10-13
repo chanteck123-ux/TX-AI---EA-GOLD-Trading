@@ -1,0 +1,24 @@
+{
+  "protection_native_confirmed": 28,
+  "protection_native_requested": 29,
+  "matched_setups": 55,
+  "status": "ARITHMETIC_DECOMPOSITION_NOT_CAUSAL_IDENTIFICATION",
+  "scope": "PAIR_BY_SETUP_FULL_AUGUST_DIFFERENCE_BRIDGE",
+  "only_lean": [
+    {
+      "net": 6.890000000000255,
+      "setup": "S4|GOLD|-1|S4_MOMENTUM_1787740500_-1|1787740800"
+    }
+  ],
+  "total_net_delta": -65.45000000000068,
+  "request_is_not_confirmation": true,
+  "one_sided_net_delta": 7.710000000000255,
+  "only_native": [
+    {
+      "net": -0.82,
+      "setup": "S4|GOLD|1|S4_MOMENTUM_1787333100_1|1787333400"
+    }
+  ],
+  "score": "N/A",
+  "matched_net_delta": -73.16000000000093
+}

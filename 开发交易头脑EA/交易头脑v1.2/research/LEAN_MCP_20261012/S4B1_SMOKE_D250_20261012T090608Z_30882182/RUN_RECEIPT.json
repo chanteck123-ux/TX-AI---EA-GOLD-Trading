@@ -1,0 +1,63 @@
+{
+  "schema": "S4_LEAN_B1_RECEIPT_V1",
+  "id": "S4B1_SMOKE_D250_20261012T090608Z_30882182",
+  "mode": "Smoke",
+  "candidate_id": "TB500_S4_BE125_LEAN_B1",
+  "owner": "Codex",
+  "latency_ms": 250,
+  "protective_fill": "QUOTE",
+  "commission_per_lot_side": 3.5,
+  "data_role": "AUGUST_2026_ALREADY_USED_DEVELOPMENT_NOT_OOS",
+  "score_status": "SCORE_TARGETS_UNSET",
+  "mq5_sha256": "f6abe1abc8d9cfca27e6483f344aab03110b9df11b8d1b458e3fce432d63be47",
+  "source_hashes": [
+    {
+      "path": "lean_mcp_20261012\\lean\\algorithms\\S4\\S4Core.cs",
+      "sha256": "ee509e1d50440b2bc0351a1b568abed7bc7e08050f9010eaafd5da3fc6be4e5d"
+    },
+    {
+      "path": "lean_mcp_20261012\\lean\\algorithms\\S4\\S4RetainedAlgorithm.cs",
+      "sha256": "28e8ae2c96c6af7839a4a224b7267e1acad6251d4b99024118949215188b8ae2"
+    },
+    {
+      "path": "lean_mcp_20261012\\lean\\algorithms\\S4\\TradingBrain.S4.csproj",
+      "sha256": "83e5107d36c3122221d71cc1a4e6ff90fac76478974631f8a6144eee054f7f2a"
+    },
+    {
+      "path": "mt5_iteration9_20261004\\algorithm\\C7Signals.Core.cs",
+      "sha256": "261b96eb242267aa7471b89c9d73b3f8076b816b020fbecd41dc8239f55dd595"
+    },
+    {
+      "path": "mt5_iteration9_20261004\\algorithm\\Strategy123.cs",
+      "sha256": "1be13bfe8ceda032430bdd3cb087f5b474e6ceaec9efba650767aabd246e3bd9"
+    },
+    {
+      "path": "mt5_iteration9_20261004\\algorithm\\Strategy456.cs",
+      "sha256": "cffb2b726971c6d5088c1e0285191b8e01a4f4b77ae5e3c6d79a7e881f12e2fb"
+    },
+    {
+      "path": "mt5_iteration9_20261004\\algorithm\\StrategyScalping.cs",
+      "sha256": "1576cd1e3993201541fb941943ba287a0fbfaa4afbd306b071ecbab092fcde09"
+    },
+    {
+      "path": "lean_mcp_20261012\\lean\\algorithms\\S4\\fixtures\\Program.cs",
+      "sha256": "c1edbbda5b255b9d3bd451d5f1f7ac9c76c0a2761f668068302eef61a6aa4775"
+    },
+    {
+      "path": "lean_mcp_20261012\\lean\\algorithms\\S4\\fixtures\\S4.Fixtures.csproj",
+      "sha256": "b026fba548e1516e75501812c0ddefb0545147b5fb60dceae15b361b29d65007"
+    }
+  ],
+  "started_utc": "2026-10-12T09:06:08.3283784Z",
+  "status": "SMOKE_PASS_REVIEW_REQUIRED",
+  "dll_sha256": "bfc25515a0d44807d06f1b705e6e05d2ca535eaea1b884f73db20e3a67a96ce6",
+  "compile_log_sha256": "22174c4035a8b8f4b15758e501aa43b214633c80a8775fa3326c741fd1678242",
+  "tick_manifest_sha256": "9a3926c75890be2a0d54537cfe1b31f37fd1209ca04291ce9064172551cd117f",
+  "bar_proof_sha256": "d3f4d35f2c01c85c2975afc75a3fce091b1773b552ad98035ba265b4d2e0c015",
+  "config_sha256": "22de69b15d44a436a468f07335f44666f95bb3a6a54efec158374497b5b404e2",
+  "end_date": "2026-08-03",
+  "result_sha256": "d9d7a2d1d9a7cf2b9a0c0ef9ef9ed186a5f7ed950f263fa0e86bda919e1ea44f",
+  "ticks": 923807,
+  "result_status": "ENGINE_RUN_FINISHED_REVIEW_REQUIRED",
+  "completed_utc": "2026-10-12T09:06:26.4380135Z"
+}

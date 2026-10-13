@@ -1,0 +1,1696 @@
+{
+  "schema": "S4_NATIVE_VS_LEAN_LAYERED_COMPARISON_V1",
+  "generated_utc": "2026-10-12T09:19:34.3754842Z",
+  "score_status": "SCORE_TARGETS_UNSET",
+  "data_role": "AUGUST_2026_ALREADY_USED_DEVELOPMENT_NOT_OOS",
+  "inputs": {
+    "lean_run": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\lean_mcp_20261012\\runs\\S4B1_FULLAUGUST_D250_20261012T090714Z_ab0a4fb2",
+    "lean_receipt_status": "FULL_AUGUST_COMPLETE_REVIEW_REQUIRED",
+    "lean_result_sha256": "a60e4c36ea5271baedb5747d366b9a4170ae5d5a6bfe6abc10693a4a28ba1a97",
+    "lean_receipt_sha256": "cc62cc2913775ba13935f45a076c66f953fa6cdd92f0e17a86d1bbb5bcc56427",
+    "native_run_id": "D4BF2385",
+    "native_baseline_sha256": "19f94178c840bfdad7324bb1b3b4565126fc7a0a6b89acc31209f28b137cfea0",
+    "native_files": {
+      "signals": "0276bb448fb8b5e7ab0b459e56720b8965e0d36edad7e06f540c27061907465f",
+      "decision_log": "3fdebff6404a74a7ea0503346b461c11a39dc204cc08b1e7c2960b1189091750",
+      "orders_audit": "48c99e25e631abe12070a6a9b736eff8aac286f48301082b4e6c8a4cc886fb89",
+      "position_events": "34ce1e66a6edaadbad7e90c4f0cf9f04f2a1a5dbe182200ec8611a025e908390",
+      "complete_trades": "4aee44ca7ecf46982b2fe69860cfc8dd064ba5cf2ef65bdd19e2558077641664",
+      "execution_errors": "e3b1f9daf41b680494b3860fc26fa289611989607e5387c3248a040e69368a29"
+    },
+    "native_files_expected_from_native_result": {
+      "signals": "0276bb448fb8b5e7ab0b459e56720b8965e0d36edad7e06f540c27061907465f",
+      "decision_log": "3fdebff6404a74a7ea0503346b461c11a39dc204cc08b1e7c2960b1189091750",
+      "orders_audit": "48c99e25e631abe12070a6a9b736eff8aac286f48301082b4e6c8a4cc886fb89",
+      "position_events": "34ce1e66a6edaadbad7e90c4f0cf9f04f2a1a5dbe182200ec8611a025e908390",
+      "complete_trades": "4aee44ca7ecf46982b2fe69860cfc8dd064ba5cf2ef65bdd19e2558077641664",
+      "execution_errors": "e3b1f9daf41b680494b3860fc26fa289611989607e5387c3248a040e69368a29"
+    }
+  },
+  "layer1_signals": {
+    "native": 75,
+    "lean": 75,
+    "matched_keys": 75,
+    "equal_within_tolerance": 75,
+    "differences": [],
+    "only_native": [],
+    "only_lean": []
+  },
+  "layer2_gate_decisions": {
+    "native": 34,
+    "lean": 34,
+    "matched_keys": 33,
+    "equal_within_tolerance": 27,
+    "differences": [
+      {
+        "key": "S4|GOLD|-1|S4_MOMENTUM_1787674800_-1|1787675100",
+        "native": "ENTRY_PRICE_DEVIATION,MIN_LOT_OVER_RISK,ORDER_BLOCKED_BY_PORTFOLIO_RISK",
+        "lean": "ENTRY_PRICE_DEVIATION,MIN_LOT_OVER_RISK"
+      },
+      {
+        "key": "S4|GOLD|-1|S4_MOMENTUM_1787675100_-1|1787675400",
+        "native": "STRATEGY_SLOT_FULL,STRUCTURE_SL_CROSSED",
+        "lean": "ORDER_BLOCKED_BY_PORTFOLIO_RISK,SPREAD_TOO_HIGH_RELATIVE,STRUCTURE_SL_CROSSED"
+      },
+      {
+        "key": "S4|GOLD|-1|S4_MOMENTUM_1787676300_-1|1787676600",
+        "native": "ORDER_BLOCKED_BY_PORTFOLIO_RISK",
+        "lean": "MIN_LOT_OVER_RISK,ORDER_BLOCKED_BY_PORTFOLIO_RISK"
+      },
+      {
+        "key": "S4|GOLD|-1|S4_MOMENTUM_1787741400_-1|1787741700",
+        "native": "ENTRY_PRICE_DEVIATION,ORDER_BLOCKED_BY_PORTFOLIO_RISK",
+        "lean": "STRATEGY_SLOT_FULL"
+      },
+      {
+        "key": "S4|GOLD|1|S4_MOMENTUM_1787160300_1|1787160600",
+        "native": "ENTRY_PRICE_DEVIATION,MIN_LOT_OVER_RISK,ORDER_BLOCKED_BY_PORTFOLIO_RISK",
+        "lean": "MIN_LOT_OVER_RISK"
+      },
+      {
+        "key": "S4|GOLD|1|S4_MOMENTUM_1787333100_1|1787333400",
+        "native": "ORDER_BLOCKED_BY_PORTFOLIO_RISK",
+        "lean": "ORDER_BLOCKED_BY_PORTFOLIO_RISK,SPREAD_TOO_HIGH_RELATIVE,STRUCTURE_SL_CROSSED"
+      }
+    ],
+    "only_native": [
+      "S4|GOLD|-1|S4_MOMENTUM_1787746500_-1|1787746800"
+    ],
+    "only_lean": [
+      "S4|GOLD|1|S4_MOMENTUM_1787585700_1|1787586000"
+    ]
+  },
+  "layer3_reservations": {
+    "native": 56,
+    "lean": 56,
+    "matched_keys": 55,
+    "equal_within_tolerance": 0,
+    "differences": [
+      {
+        "key": "S4|GOLD|-1|S4_MOMENTUM_1785755700_-1|1785756000",
+        "planned_price": 0.009999999999763531,
+        "volume": 0,
+        "sl": 0,
+        "tp": 0.03000000000020009,
+        "risk": -0.01000000000001755,
+        "budget": 0,
+        "note": "PLANNED_QUOTE_DIFFERS_DOWNSTREAM_TP_AND_RISK_DEPEND_ON_IT"
+      },
+      {
+        "key": "S4|GOLD|-1|S4_MOMENTUM_1785759900_-1|1785760200",
+        "planned_price": 0.1999999999998181,
+        "volume": 0,
+        "sl": 0,
+        "tp": 0.5,
+        "risk": -0.2000000000000357,
+        "budget": 0,
+        "note": "PLANNED_QUOTE_DIFFERS_DOWNSTREAM_TP_AND_RISK_DEPEND_ON_IT"
+      },
+      {
+        "key": "S4|GOLD|-1|S4_MOMENTUM_1785760200_-1|1785760500",
+        "planned_price": 0,
+        "volume": 0,
+        "sl": 0,
+        "tp": 0,
+        "risk": -2.1760371282653068E-13,
+        "budget": 0.11880000000000202,
+        "note": ""
+      },
+      {
+        "key": "S4|GOLD|-1|S4_MOMENTUM_1785773400_-1|1785773700",
+        "planned_price": 0,
+        "volume": 0,
+        "sl": 0,
+        "tp": 0,
+        "risk": -7.283063041541027E-14,
+        "budget": 0.11779999999999724,
+        "note": ""
+      },
+      {
+        "key": "S4|GOLD|-1|S4_MOMENTUM_1786031400_-1|1786031700",
+        "planned_price": 0.21000000000003638,
+        "volume": 0,
+        "sl": 0,
+        "tp": 0.5299999999997453,
+        "risk": -0.20999999999861707,
+        "budget": 0.10859999999999559,
+        "note": "PLANNED_QUOTE_DIFFERS_DOWNSTREAM_TP_AND_RISK_DEPEND_ON_IT"
+      },
+      {
+        "key": "S4|GOLD|-1|S4_MOMENTUM_1786374600_-1|1786374900",
+        "planned_price": 0,
+        "volume": 0,
+        "sl": 0,
+        "tp": 0,
+        "risk": 1.8189894035458565E-12,
+        "budget": 0.10560000000001146,
+        "note": ""
+      },
+      {
+        "key": "S4|GOLD|-1|S4_MOMENTUM_1786616100_-1|1786616400",
+        "planned_price": 0,
+        "volume": 0,
+        "sl": 0,
+        "tp": 0,
+        "risk": 8.739675649849232E-13,
+        "budget": 0.1068000000000282,
+        "note": ""
+      },
+      {
+        "key": "S4|GOLD|-1|S4_MOMENTUM_1786617900_-1|1786618200",
+        "planned_price": 0,
+        "volume": 0,
+        "sl": 0,
+        "tp": 0,
+        "risk": 6.554756737386924E-13,
+        "budget": 0.10680000000001044,
+        "note": ""
+      },
+      {
+        "key": "S4|GOLD|-1|S4_MOMENTUM_1786618800_-1|1786619100",
+        "planned_price": -0.0999999999994543,
+        "volume": 0,
+        "sl": 0,
+        "tp": -0.25,
+        "risk": 0.10000000000087317,
+        "budget": 0.10680000000001044,
+        "note": "PLANNED_QUOTE_DIFFERS_DOWNSTREAM_TP_AND_RISK_DEPEND_ON_IT"
+      },
+      {
+        "key": "S4|GOLD|-1|S4_MOMENTUM_1787074500_-1|1787074800",
+        "planned_price": 0.010000000000218279,
+        "volume": 0,
+        "sl": 0,
+        "tp": 0.02999999999974534,
+        "risk": -0.009999999999635634,
+        "budget": 0.11459999999999582,
+        "note": "PLANNED_QUOTE_DIFFERS_DOWNSTREAM_TP_AND_RISK_DEPEND_ON_IT"
+      },
+      {
+        "key": "S4|GOLD|-1|S4_MOMENTUM_1787238000_-1|1787238300",
+        "planned_price": -0.06000000000040018,
+        "volume": 0,
+        "sl": 0,
+        "tp": -0.1499999999996362,
+        "risk": 0.060000000000728804,
+        "budget": -0.45400000000002194,
+        "note": "PLANNED_QUOTE_DIFFERS_DOWNSTREAM_TP_AND_RISK_DEPEND_ON_IT"
+      },
+      {
+        "key": "S4|GOLD|-1|S4_MOMENTUM_1787653500_-1|1787653800",
+        "planned_price": -0.03999999999996362,
+        "volume": 0,
+        "sl": 0,
+        "tp": -0.1000000000003638,
+        "risk": 0.04000000000127368,
+        "budget": -0.4504000000000161,
+        "note": "PLANNED_QUOTE_DIFFERS_DOWNSTREAM_TP_AND_RISK_DEPEND_ON_IT"
+      },
+      {
+        "key": "S4|GOLD|-1|S4_MOMENTUM_1787655600_-1|1787655900",
+        "planned_price": -3.240000000000691,
+        "volume": 0,
+        "sl": 0,
+        "tp": -8.099999999999454,
+        "risk": 3.240000000000837,
+        "budget": -0.4504000000000161,
+        "note": "PLANNED_QUOTE_DIFFERS_DOWNSTREAM_TP_AND_RISK_DEPEND_ON_IT"
+      },
+      {
+        "key": "S4|GOLD|-1|S4_MOMENTUM_1787674200_-1|1787674500",
+        "planned_price": 0.75,
+        "volume": 0,
+        "sl": 0,
+        "tp": 1.8800000000001091,
+        "risk": -0.7499999999986908,
+        "budget": -0.6788000000000114,
+        "note": "PLANNED_QUOTE_DIFFERS_DOWNSTREAM_TP_AND_RISK_DEPEND_ON_IT"
+      },
+      {
+        "key": "S4|GOLD|-1|S4_MOMENTUM_1787674800_-1|1787675100",
+        "planned_price": 0,
+        "volume": 0,
+        "sl": 0,
+        "tp": 0,
+        "risk": 6.554756737386924E-13,
+        "budget": -0.6714000000000144,
+        "note": ""
+      },
+      {
+        "key": "S4|GOLD|-1|S4_MOMENTUM_1787739900_-1|1787740200",
+        "planned_price": -0.1000000000003638,
+        "volume": -0.01,
+        "sl": 0,
+        "tp": -0.25,
+        "risk": -5.639999999998581,
+        "budget": -1.0080000000000169,
+        "note": "PLANNED_QUOTE_DIFFERS_DOWNSTREAM_TP_AND_RISK_DEPEND_ON_IT"
+      },
+      {
+        "key": "S4|GOLD|-1|S4_MOMENTUM_1787745600_-1|1787745900",
+        "planned_price": 0.13000000000010914,
+        "volume": -0.01,
+        "sl": 0,
+        "tp": 0.32000000000061846,
+        "risk": -5.9799999999993805,
+        "budget": -1.0288000000000146,
+        "note": "PLANNED_QUOTE_DIFFERS_DOWNSTREAM_TP_AND_RISK_DEPEND_ON_IT"
+      },
+      {
+        "key": "S4|GOLD|-1|S4_MOMENTUM_1787746500_-1|1787746800",
+        "planned_price": 0.5399999999999636,
+        "volume": 0,
+        "sl": 0,
+        "tp": 1.3500000000003638,
+        "risk": -0.539999999998872,
+        "budget": -1.0282000000000124,
+        "note": "PLANNED_QUOTE_DIFFERS_DOWNSTREAM_TP_AND_RISK_DEPEND_ON_IT"
+      },
+      {
+        "key": "S4|GOLD|-1|S4_MOMENTUM_1787747100_-1|1787747400",
+        "planned_price": 0,
+        "volume": 0,
+        "sl": 0,
+        "tp": 0,
+        "risk": 1.382449710263245E-12,
+        "budget": -1.2054000000000116,
+        "note": ""
+      },
+      {
+        "key": "S4|GOLD|-1|S4_MOMENTUM_1787766600_-1|1787766900",
+        "planned_price": 0.26999999999952706,
+        "volume": 0,
+        "sl": 0,
+        "tp": 0.680000000000291,
+        "risk": -0.26999999999923574,
+        "budget": -1.0664000000000016,
+        "note": "PLANNED_QUOTE_DIFFERS_DOWNSTREAM_TP_AND_RISK_DEPEND_ON_IT"
+      },
+      {
+        "key": "S4|GOLD|-1|S4_MOMENTUM_1787825700_-1|1787826000",
+        "planned_price": 0,
+        "volume": 0,
+        "sl": 0,
+        "tp": 0,
+        "risk": 1.091571277811454E-12,
+        "budget": -1.0644000000000045,
+        "note": ""
+      },
+      {
+        "key": "S4|GOLD|-1|S4_MOMENTUM_1787845500_-1|1787845800",
+        "planned_price": -0.010000000000218279,
+        "volume": -0.01,
+        "sl": 0,
+        "tp": -0.019999999999527063,
+        "risk": -5.6299999999990895,
+        "budget": -1.0643999999999973,
+        "note": "PLANNED_QUOTE_DIFFERS_DOWNSTREAM_TP_AND_RISK_DEPEND_ON_IT"
+      },
+      {
+        "key": "S4|GOLD|-1|S4_MOMENTUM_1787937000_-1|1787937300",
+        "planned_price": 0.9600000000000364,
+        "volume": 0,
+        "sl": 0,
+        "tp": 2.4000000000005457,
+        "risk": -0.9599999999990896,
+        "budget": -0.9558000000000071,
+        "note": "PLANNED_QUOTE_DIFFERS_DOWNSTREAM_TP_AND_RISK_DEPEND_ON_IT"
+      },
+      {
+        "key": "S4|GOLD|-1|S4_MOMENTUM_1788194700_-1|1788195000",
+        "planned_price": 0.020000000000436557,
+        "volume": 0,
+        "sl": 0,
+        "tp": 0.0500000000001819,
+        "risk": -0.019999999999271267,
+        "budget": -1.3086000000000144,
+        "note": "PLANNED_QUOTE_DIFFERS_DOWNSTREAM_TP_AND_RISK_DEPEND_ON_IT"
+      },
+      {
+        "key": "S4|GOLD|1|S4_MOMENTUM_1785861900_1|1785862200",
+        "planned_price": 0,
+        "volume": 0,
+        "sl": 0,
+        "tp": 0,
+        "risk": -1.7763568394002505E-14,
+        "budget": 0.11659999999999471,
+        "note": ""
+      },
+      {
+        "key": "S4|GOLD|1|S4_MOMENTUM_1785927300_1|1785927600",
+        "planned_price": 0.010000000000218279,
+        "volume": 0,
+        "sl": 0,
+        "tp": 0.019999999999527063,
+        "risk": 0.010000000000873754,
+        "budget": 0.11640000000000228,
+        "note": "PLANNED_QUOTE_DIFFERS_DOWNSTREAM_TP_AND_RISK_DEPEND_ON_IT"
+      },
+      {
+        "key": "S4|GOLD|1|S4_MOMENTUM_1785942000_1|1785942300",
+        "planned_price": 0,
+        "volume": 0,
+        "sl": 0,
+        "tp": 0,
+        "risk": 7.283063041541027E-14,
+        "budget": 0.11539999999998862,
+        "note": ""
+      },
+      {
+        "key": "S4|GOLD|1|S4_MOMENTUM_1785950100_1|1785950400",
+        "planned_price": 0,
+        "volume": 0,
+        "sl": 0,
+        "tp": 0,
+        "risk": 1.0551559626037488E-12,
+        "budget": 0.11519999999999442,
+        "note": ""
+      },
+      {
+        "key": "S4|GOLD|1|S4_MOMENTUM_1786017300_1|1786017600",
+        "planned_price": 0.020000000000436557,
+        "volume": 0,
+        "sl": 0,
+        "tp": 0.0500000000001819,
+        "risk": 0.02000000000065505,
+        "budget": 0.10859999999999026,
+        "note": "PLANNED_QUOTE_DIFFERS_DOWNSTREAM_TP_AND_RISK_DEPEND_ON_IT"
+      },
+      {
+        "key": "S4|GOLD|1|S4_MOMENTUM_1786100100_1|1786100400",
+        "planned_price": -0.020000000000436557,
+        "volume": 0,
+        "sl": 0,
+        "tp": -0.0500000000001819,
+        "risk": -0.039999999999562164,
+        "budget": 0.10559999999999015,
+        "note": "PLANNED_QUOTE_DIFFERS_DOWNSTREAM_TP_AND_RISK_DEPEND_ON_IT"
+      },
+      {
+        "key": "S4|GOLD|1|S4_MOMENTUM_1786101000_1|1786101300",
+        "planned_price": -0.009999999999308784,
+        "volume": 0,
+        "sl": 0,
+        "tp": -0.020000000000436557,
+        "risk": -0.00999999999839929,
+        "budget": 0.1056000000000008,
+        "note": "PLANNED_QUOTE_DIFFERS_DOWNSTREAM_TP_AND_RISK_DEPEND_ON_IT"
+      },
+      {
+        "key": "S4|GOLD|1|S4_MOMENTUM_1786106400_1|1786106700",
+        "planned_price": 0,
+        "volume": 0,
+        "sl": 0,
+        "tp": 0,
+        "risk": 3.9968028886505635E-13,
+        "budget": 0.10500000000000398,
+        "note": ""
+      },
+      {
+        "key": "S4|GOLD|1|S4_MOMENTUM_1786530900_1|1786531200",
+        "planned_price": 0,
+        "volume": 0,
+        "sl": 0,
+        "tp": 0,
+        "risk": 3.2027713814386516E-12,
+        "budget": 0.10760000000000325,
+        "note": ""
+      },
+      {
+        "key": "S4|GOLD|1|S4_MOMENTUM_1786536600_1|1786536900",
+        "planned_price": 0,
+        "volume": 0,
+        "sl": 0,
+        "tp": 0,
+        "risk": 8.01136934569513E-13,
+        "budget": 0.10680000000002998,
+        "note": ""
+      },
+      {
+        "key": "S4|GOLD|1|S4_MOMENTUM_1786633500_1|1786633800",
+        "planned_price": 0,
+        "volume": 0,
+        "sl": 0,
+        "tp": 0,
+        "risk": 7.647216193618078E-13,
+        "budget": 0.11080000000001178,
+        "note": ""
+      },
+      {
+        "key": "S4|GOLD|1|S4_MOMENTUM_1786704000_1|1786704300",
+        "planned_price": 0.010000000000218279,
+        "volume": 0,
+        "sl": 0,
+        "tp": 0.020000000000436557,
+        "risk": 0.02000000000203883,
+        "budget": 0.11459999999999759,
+        "note": "PLANNED_QUOTE_DIFFERS_DOWNSTREAM_TP_AND_RISK_DEPEND_ON_IT"
+      },
+      {
+        "key": "S4|GOLD|1|S4_MOMENTUM_1786710000_1|1786710300",
+        "planned_price": 0,
+        "volume": 0,
+        "sl": 0,
+        "tp": 0,
+        "risk": 8.739675649849232E-13,
+        "budget": 0.11500000000001087,
+        "note": ""
+      },
+      {
+        "key": "S4|GOLD|1|S4_MOMENTUM_1786719300_1|1786719600",
+        "planned_price": 0,
+        "volume": 0,
+        "sl": 0,
+        "tp": 0,
+        "risk": 1.4566126083082054E-12,
+        "budget": 0.1166000000000178,
+        "note": ""
+      },
+      {
+        "key": "S4|GOLD|1|S4_MOMENTUM_1786719600_1|1786719900",
+        "planned_price": -0.03999999999996362,
+        "volume": 0,
+        "sl": 0,
+        "tp": -0.0999999999994543,
+        "risk": -0.03999999999941739,
+        "budget": 0.11660000000001958,
+        "note": "PLANNED_QUOTE_DIFFERS_DOWNSTREAM_TP_AND_RISK_DEPEND_ON_IT"
+      },
+      {
+        "key": "S4|GOLD|1|S4_MOMENTUM_1786720800_1|1786721100",
+        "planned_price": -0.0999999999994543,
+        "volume": 0,
+        "sl": 0,
+        "tp": -0.25,
+        "risk": -0.09999999999901732,
+        "budget": 0.1126000000000218,
+        "note": "PLANNED_QUOTE_DIFFERS_DOWNSTREAM_TP_AND_RISK_DEPEND_ON_IT"
+      },
+      {
+        "key": "S4|GOLD|1|S4_MOMENTUM_1786724400_1|1786724700",
+        "planned_price": 0,
+        "volume": 0,
+        "sl": 0,
+        "tp": 0,
+        "risk": 1.2736478538499796E-12,
+        "budget": 0.11440000000000872,
+        "note": ""
+      },
+      {
+        "key": "S4|GOLD|1|S4_MOMENTUM_1786962300_1|1786962600",
+        "planned_price": 0,
+        "volume": 0,
+        "sl": 0,
+        "tp": 0,
+        "risk": 1.3820056210533949E-12,
+        "budget": 0.1146000000000047,
+        "note": ""
+      },
+      {
+        "key": "S4|GOLD|1|S4_MOMENTUM_1787137500_1|1787137800",
+        "planned_price": 0,
+        "volume": 0,
+        "sl": 0,
+        "tp": 0,
+        "risk": 7.647216193618078E-13,
+        "budget": 0.11299999999998889,
+        "note": ""
+      },
+      {
+        "key": "S4|GOLD|1|S4_MOMENTUM_1787139600_1|1787139900",
+        "planned_price": 0,
+        "volume": 0,
+        "sl": 0,
+        "tp": 0,
+        "risk": 9.823253321883385E-13,
+        "budget": 0.11299999999999066,
+        "note": ""
+      },
+      {
+        "key": "S4|GOLD|1|S4_MOMENTUM_1787154000_1|1787154300",
+        "planned_price": 0.1499999999996362,
+        "volume": 0,
+        "sl": 0,
+        "tp": 0.36999999999989086,
+        "risk": 0.15000000000061853,
+        "budget": 0.11159999999999037,
+        "note": "PLANNED_QUOTE_DIFFERS_DOWNSTREAM_TP_AND_RISK_DEPEND_ON_IT"
+      },
+      {
+        "key": "S4|GOLD|1|S4_MOMENTUM_1787154900_1|1787155200",
+        "planned_price": 0.13999999999941792,
+        "volume": 0,
+        "sl": 0,
+        "tp": 0.3500000000003638,
+        "risk": 0.14000000000040025,
+        "budget": 0.10899999999998222,
+        "note": "PLANNED_QUOTE_DIFFERS_DOWNSTREAM_TP_AND_RISK_DEPEND_ON_IT"
+      },
+      {
+        "key": "S4|GOLD|1|S4_MOMENTUM_1787160000_1|1787160300",
+        "planned_price": 0.7600000000002183,
+        "volume": 0,
+        "sl": 0,
+        "tp": 1.8999999999996362,
+        "risk": 0.7600000000014191,
+        "budget": 0.09819999999996654,
+        "note": "PLANNED_QUOTE_DIFFERS_DOWNSTREAM_TP_AND_RISK_DEPEND_ON_IT"
+      },
+      {
+        "key": "S4|GOLD|1|S4_MOMENTUM_1787160300_1|1787160600",
+        "planned_price": 1.569999999999709,
+        "volume": 0,
+        "sl": 0,
+        "tp": 3.9200000000000728,
+        "risk": 1.570000000000583,
+        "budget": 0.10319999999996732,
+        "note": "PLANNED_QUOTE_DIFFERS_DOWNSTREAM_TP_AND_RISK_DEPEND_ON_IT"
+      },
+      {
+        "key": "S4|GOLD|1|S4_MOMENTUM_1787247900_1|1787248200",
+        "planned_price": -0.4600000000000364,
+        "volume": 0,
+        "sl": 0,
+        "tp": -1.1500000000005457,
+        "risk": -0.45999999999901675,
+        "budget": -0.4542000000000268,
+        "note": "PLANNED_QUOTE_DIFFERS_DOWNSTREAM_TP_AND_RISK_DEPEND_ON_IT"
+      },
+      {
+        "key": "S4|GOLD|1|S4_MOMENTUM_1787310900_1|1787311200",
+        "planned_price": 0.010000000000218279,
+        "volume": 0,
+        "sl": 0,
+        "tp": 0.020000000000436557,
+        "risk": 0.010000000000509601,
+        "budget": -0.4684000000000257,
+        "note": "PLANNED_QUOTE_DIFFERS_DOWNSTREAM_TP_AND_RISK_DEPEND_ON_IT"
+      },
+      {
+        "key": "S4|GOLD|1|S4_MOMENTUM_1787314200_1|1787314500",
+        "planned_price": -0.020000000000436557,
+        "volume": 0,
+        "sl": 0,
+        "tp": -0.0500000000001819,
+        "risk": -0.03999999999861714,
+        "budget": -0.46840000000002746,
+        "note": "PLANNED_QUOTE_DIFFERS_DOWNSTREAM_TP_AND_RISK_DEPEND_ON_IT"
+      },
+      {
+        "key": "S4|GOLD|1|S4_MOMENTUM_1787332800_1|1787333100",
+        "planned_price": 0.10999999999967258,
+        "volume": 0,
+        "sl": 0,
+        "tp": 0.27999999999974534,
+        "risk": 0.11000000000047372,
+        "budget": -0.3636000000000106,
+        "note": "PLANNED_QUOTE_DIFFERS_DOWNSTREAM_TP_AND_RISK_DEPEND_ON_IT"
+      },
+      {
+        "key": "S4|GOLD|1|S4_MOMENTUM_1787585700_1|1787586000",
+        "planned_price": -0.3000000000001819,
+        "volume": 0,
+        "sl": 0,
+        "tp": -0.75,
+        "risk": -0.2999999999990539,
+        "budget": -0.34720000000001505,
+        "note": "PLANNED_QUOTE_DIFFERS_DOWNSTREAM_TP_AND_RISK_DEPEND_ON_IT"
+      },
+      {
+        "key": "S4|GOLD|1|S4_MOMENTUM_1787589000_1|1787589300",
+        "planned_price": -0.6500000000005457,
+        "volume": 0,
+        "sl": 0,
+        "tp": -1.6300000000001091,
+        "risk": -0.6499999999995261,
+        "budget": -0.6744000000000163,
+        "note": "PLANNED_QUOTE_DIFFERS_DOWNSTREAM_TP_AND_RISK_DEPEND_ON_IT"
+      },
+      {
+        "key": "S4|GOLD|1|S4_MOMENTUM_1787910900_1|1787911200",
+        "planned_price": -0.22000000000025466,
+        "volume": 0,
+        "sl": 0,
+        "tp": -0.5500000000001819,
+        "risk": -0.2199999999993807,
+        "budget": -0.9505999999999979,
+        "note": "PLANNED_QUOTE_DIFFERS_DOWNSTREAM_TP_AND_RISK_DEPEND_ON_IT"
+      }
+    ],
+    "only_native": [
+      "S4|GOLD|1|S4_MOMENTUM_1787333100_1|1787333400"
+    ],
+    "only_lean": [
+      "S4|GOLD|-1|S4_MOMENTUM_1787740500_-1|1787740800"
+    ]
+  },
+  "layer4_entry_fills": {
+    "native": 56,
+    "lean": 56,
+    "matched_keys": 55,
+    "equal_within_tolerance": 14,
+    "differences": [
+      {
+        "key": "S4|GOLD|-1|S4_MOMENTUM_1785759900_-1|1785760200",
+        "fill_price": -0.010000000000218279,
+        "volume": 0,
+        "native_send_msc": 1785760200077,
+        "lean_fill_msc": 1785760200378
+      },
+      {
+        "key": "S4|GOLD|-1|S4_MOMENTUM_1785773400_-1|1785773700",
+        "fill_price": -0.05999999999994543,
+        "volume": 0,
+        "native_send_msc": 1785773700023,
+        "lean_fill_msc": 1785773700316
+      },
+      {
+        "key": "S4|GOLD|-1|S4_MOMENTUM_1786031400_-1|1786031700",
+        "fill_price": -0.1499999999996362,
+        "volume": 0,
+        "native_send_msc": 1786031700086,
+        "lean_fill_msc": 1786031700389
+      },
+      {
+        "key": "S4|GOLD|-1|S4_MOMENTUM_1786374600_-1|1786374900",
+        "fill_price": 0.049999999999272404,
+        "volume": 0,
+        "native_send_msc": 1786374900085,
+        "lean_fill_msc": 1786374900388
+      },
+      {
+        "key": "S4|GOLD|-1|S4_MOMENTUM_1786618800_-1|1786619100",
+        "fill_price": -0.17000000000007276,
+        "volume": 0,
+        "native_send_msc": 1786619175722,
+        "lean_fill_msc": 1786619170993
+      },
+      {
+        "key": "S4|GOLD|-1|S4_MOMENTUM_1787074500_-1|1787074800",
+        "fill_price": -0.07999999999992724,
+        "volume": 0,
+        "native_send_msc": 1787074800033,
+        "lean_fill_msc": 1787074800333
+      },
+      {
+        "key": "S4|GOLD|-1|S4_MOMENTUM_1787238000_-1|1787238300",
+        "fill_price": -0.010000000000218279,
+        "volume": 0,
+        "native_send_msc": 1787238300064,
+        "lean_fill_msc": 1787238300366
+      },
+      {
+        "key": "S4|GOLD|-1|S4_MOMENTUM_1787653500_-1|1787653800",
+        "fill_price": 0.02999999999974534,
+        "volume": 0,
+        "native_send_msc": 1787653800013,
+        "lean_fill_msc": 1787653800315
+      },
+      {
+        "key": "S4|GOLD|-1|S4_MOMENTUM_1787655600_-1|1787655900",
+        "fill_price": -3.300000000000182,
+        "volume": 0,
+        "native_send_msc": 1787656012338,
+        "lean_fill_msc": 1787656100051
+      },
+      {
+        "key": "S4|GOLD|-1|S4_MOMENTUM_1787674200_-1|1787674500",
+        "fill_price": 0.6599999999998545,
+        "volume": 0,
+        "native_send_msc": 1787674521280,
+        "lean_fill_msc": 1787674541242
+      },
+      {
+        "key": "S4|GOLD|-1|S4_MOMENTUM_1787674800_-1|1787675100",
+        "fill_price": 0.07999999999992724,
+        "volume": 0,
+        "native_send_msc": 1787675311622,
+        "lean_fill_msc": 1787675311928
+      },
+      {
+        "key": "S4|GOLD|-1|S4_MOMENTUM_1787739900_-1|1787740200",
+        "fill_price": 0.06000000000040018,
+        "volume": -0.01,
+        "native_send_msc": 1787740200077,
+        "lean_fill_msc": 1787740200379
+      },
+      {
+        "key": "S4|GOLD|-1|S4_MOMENTUM_1787745600_-1|1787745900",
+        "fill_price": 0,
+        "volume": -0.01,
+        "native_send_msc": 1787745900088,
+        "lean_fill_msc": 1787745900462
+      },
+      {
+        "key": "S4|GOLD|-1|S4_MOMENTUM_1787746500_-1|1787746800",
+        "fill_price": 0.6500000000005457,
+        "volume": 0,
+        "native_send_msc": 1787746872345,
+        "lean_fill_msc": 1787746800349
+      },
+      {
+        "key": "S4|GOLD|-1|S4_MOMENTUM_1787766600_-1|1787766900",
+        "fill_price": 0.1000000000003638,
+        "volume": 0,
+        "native_send_msc": 1787766900040,
+        "lean_fill_msc": 1787766900343
+      },
+      {
+        "key": "S4|GOLD|-1|S4_MOMENTUM_1787845500_-1|1787845800",
+        "fill_price": 0,
+        "volume": -0.01,
+        "native_send_msc": 1787845800012,
+        "lean_fill_msc": 1787845800314
+      },
+      {
+        "key": "S4|GOLD|-1|S4_MOMENTUM_1787937000_-1|1787937300",
+        "fill_price": 0.9600000000000364,
+        "volume": 0,
+        "native_send_msc": 1787937467663,
+        "lean_fill_msc": 1787937484473
+      },
+      {
+        "key": "S4|GOLD|-1|S4_MOMENTUM_1788194700_-1|1788195000",
+        "fill_price": -0.020000000000436557,
+        "volume": 0,
+        "native_send_msc": 1788195000006,
+        "lean_fill_msc": 1788195000306
+      },
+      {
+        "key": "S4|GOLD|1|S4_MOMENTUM_1785861900_1|1785862200",
+        "fill_price": 0.009999999999763531,
+        "volume": 0,
+        "native_send_msc": 1785862315280,
+        "lean_fill_msc": 1785862315580
+      },
+      {
+        "key": "S4|GOLD|1|S4_MOMENTUM_1785927300_1|1785927600",
+        "fill_price": 0.0500000000001819,
+        "volume": 0,
+        "native_send_msc": 1785927600064,
+        "lean_fill_msc": 1785927600363
+      },
+      {
+        "key": "S4|GOLD|1|S4_MOMENTUM_1785942000_1|1785942300",
+        "fill_price": 0.010000000000218279,
+        "volume": 0,
+        "native_send_msc": 1785942300000,
+        "lean_fill_msc": 1785942300303
+      },
+      {
+        "key": "S4|GOLD|1|S4_MOMENTUM_1785950100_1|1785950400",
+        "fill_price": -0.019999999999527063,
+        "volume": 0,
+        "native_send_msc": 1785950405135,
+        "lean_fill_msc": 1785950405436
+      },
+      {
+        "key": "S4|GOLD|1|S4_MOMENTUM_1786101000_1|1786101300",
+        "fill_price": 0.030000000000654836,
+        "volume": 0,
+        "native_send_msc": 1786101300084,
+        "lean_fill_msc": 1786101300386
+      },
+      {
+        "key": "S4|GOLD|1|S4_MOMENTUM_1786106400_1|1786106700",
+        "fill_price": -0.030000000000654836,
+        "volume": 0,
+        "native_send_msc": 1786106700051,
+        "lean_fill_msc": 1786106700353
+      },
+      {
+        "key": "S4|GOLD|1|S4_MOMENTUM_1786530900_1|1786531200",
+        "fill_price": 0.019999999999527063,
+        "volume": 0,
+        "native_send_msc": 1786531200066,
+        "lean_fill_msc": 1786531200497
+      },
+      {
+        "key": "S4|GOLD|1|S4_MOMENTUM_1786633500_1|1786633800",
+        "fill_price": -0.18999999999959982,
+        "volume": 0,
+        "native_send_msc": 1786633800008,
+        "lean_fill_msc": 1786633800310
+      },
+      {
+        "key": "S4|GOLD|1|S4_MOMENTUM_1786704000_1|1786704300",
+        "fill_price": -0.010000000000218279,
+        "volume": 0,
+        "native_send_msc": 1786704300052,
+        "lean_fill_msc": 1786704300355
+      },
+      {
+        "key": "S4|GOLD|1|S4_MOMENTUM_1786710000_1|1786710300",
+        "fill_price": -0.03999999999996362,
+        "volume": 0,
+        "native_send_msc": 1786710300095,
+        "lean_fill_msc": 1786710300396
+      },
+      {
+        "key": "S4|GOLD|1|S4_MOMENTUM_1786719300_1|1786719600",
+        "fill_price": 0.1000000000003638,
+        "volume": 0,
+        "native_send_msc": 1786719600040,
+        "lean_fill_msc": 1786719600345
+      },
+      {
+        "key": "S4|GOLD|1|S4_MOMENTUM_1786720800_1|1786721100",
+        "fill_price": -0.08999999999923602,
+        "volume": 0,
+        "native_send_msc": 1786721100010,
+        "lean_fill_msc": 1786721100312
+      },
+      {
+        "key": "S4|GOLD|1|S4_MOMENTUM_1786724400_1|1786724700",
+        "fill_price": -0.010000000000218279,
+        "volume": 0,
+        "native_send_msc": 1786724700027,
+        "lean_fill_msc": 1786724700329
+      },
+      {
+        "key": "S4|GOLD|1|S4_MOMENTUM_1787137500_1|1787137800",
+        "fill_price": 0.06999999999970896,
+        "volume": 0,
+        "native_send_msc": 1787137800082,
+        "lean_fill_msc": 1787137800384
+      },
+      {
+        "key": "S4|GOLD|1|S4_MOMENTUM_1787154000_1|1787154300",
+        "fill_price": 0.13000000000010914,
+        "volume": 0,
+        "native_send_msc": 1787154309091,
+        "lean_fill_msc": 1787154309091
+      },
+      {
+        "key": "S4|GOLD|1|S4_MOMENTUM_1787154900_1|1787155200",
+        "fill_price": 0.5399999999999636,
+        "volume": 0,
+        "native_send_msc": 1787155207939,
+        "lean_fill_msc": 1787155207839
+      },
+      {
+        "key": "S4|GOLD|1|S4_MOMENTUM_1787160000_1|1787160300",
+        "fill_price": 0.8500000000003638,
+        "volume": 0,
+        "native_send_msc": 1787160314198,
+        "lean_fill_msc": 1787160300941
+      },
+      {
+        "key": "S4|GOLD|1|S4_MOMENTUM_1787160300_1|1787160600",
+        "fill_price": 1.5599999999994907,
+        "volume": 0,
+        "native_send_msc": 1787160854634,
+        "lean_fill_msc": 1787160601777
+      },
+      {
+        "key": "S4|GOLD|1|S4_MOMENTUM_1787247900_1|1787248200",
+        "fill_price": -0.5299999999997453,
+        "volume": 0,
+        "native_send_msc": 1787248233124,
+        "lean_fill_msc": 1787248248809
+      },
+      {
+        "key": "S4|GOLD|1|S4_MOMENTUM_1787314200_1|1787314500",
+        "fill_price": 0.019999999999527063,
+        "volume": 0,
+        "native_send_msc": 1787314500072,
+        "lean_fill_msc": 1787314500374
+      },
+      {
+        "key": "S4|GOLD|1|S4_MOMENTUM_1787585700_1|1787586000",
+        "fill_price": -0.1499999999996362,
+        "volume": 0,
+        "native_send_msc": 1787586000061,
+        "lean_fill_msc": 1787586041117
+      },
+      {
+        "key": "S4|GOLD|1|S4_MOMENTUM_1787589000_1|1787589300",
+        "fill_price": -0.3500000000003638,
+        "volume": 0,
+        "native_send_msc": 1787589303818,
+        "lean_fill_msc": 1787589321684
+      },
+      {
+        "key": "S4|GOLD|1|S4_MOMENTUM_1787910900_1|1787911200",
+        "fill_price": 0.2600000000002183,
+        "volume": 0,
+        "native_send_msc": 1787911200058,
+        "lean_fill_msc": 1787911200364
+      }
+    ],
+    "only_native": [
+      "S4|GOLD|1|S4_MOMENTUM_1787333100_1|1787333400"
+    ],
+    "only_lean": [
+      "S4|GOLD|-1|S4_MOMENTUM_1787740500_-1|1787740800"
+    ]
+  },
+  "protection_requests_vs_confirmed": {
+    "native_requested": 29,
+    "native_confirmed_kind1": 28,
+    "native_requested_not_confirmed": [
+      {
+        "key": "S4|GOLD|-1|S4_MOMENTUM_1787766600_-1|1787766900",
+        "requested": 1,
+        "confirmed": 0,
+        "ended_position_closed": true
+      }
+    ],
+    "lean_requested": 26,
+    "lean_confirmed_sl_modified": 25,
+    "lean_requested_not_confirmed": [
+      {
+        "key": "S4|GOLD|-1|S4_MOMENTUM_1787766600_-1|1787766900",
+        "requested": 1,
+        "confirmed": 0
+      }
+    ],
+    "rule": "exit SL_AFTER_BE requires a confirmed SL change (native MANAGEMENT_CONFIRMED kind=1, LEAN SL_MODIFIED); requests alone never count"
+  },
+  "layer5_6_trades_and_protection": {
+    "native": 56,
+    "lean": 56,
+    "matched_keys": 55,
+    "equal_within_tolerance": 14,
+    "differences": [
+      {
+        "key": "S4|GOLD|-1|S4_MOMENTUM_1785759900_-1|1785760200",
+        "exit_native": "SL_AFTER_BE",
+        "exit_lean": "TP",
+        "protection_native_confirmed": 1,
+        "protection_lean_confirmed": 1,
+        "protection_native_requested": 1,
+        "protection_lean_requested": 1,
+        "net": 5.890000000000018,
+        "gross": 5.890000000000018,
+        "commission": 0,
+        "exit_time_s": -313,
+        "native_net": 0.01,
+        "lean_net": 5.900000000000018,
+        "note": "OUTCOME_FLIP_CHECK_QUOTE_AND_SAME_MS_ORDER_BEFORE_ATTRIBUTING"
+      },
+      {
+        "key": "S4|GOLD|-1|S4_MOMENTUM_1785773400_-1|1785773700",
+        "exit_native": "TP",
+        "exit_lean": "TP",
+        "protection_native_confirmed": 1,
+        "protection_lean_confirmed": 1,
+        "protection_native_requested": 1,
+        "protection_lean_requested": 1,
+        "net": -0.06000000000007155,
+        "gross": -0.06000000000007333,
+        "commission": 0,
+        "exit_time_s": 0,
+        "native_net": 10.31,
+        "lean_net": 10.249999999999929,
+        "note": ""
+      },
+      {
+        "key": "S4|GOLD|-1|S4_MOMENTUM_1786031400_-1|1786031700",
+        "exit_native": "TP",
+        "exit_lean": "TP",
+        "protection_native_confirmed": 1,
+        "protection_lean_confirmed": 1,
+        "protection_native_requested": 1,
+        "protection_lean_requested": 1,
+        "net": -0.1500000000002526,
+        "gross": -0.15000000000025437,
+        "commission": 0,
+        "exit_time_s": 0,
+        "native_net": 11.35,
+        "lean_net": 11.199999999999747,
+        "note": ""
+      },
+      {
+        "key": "S4|GOLD|-1|S4_MOMENTUM_1786374600_-1|1786374900",
+        "exit_native": "TP",
+        "exit_lean": "TP",
+        "protection_native_confirmed": 1,
+        "protection_lean_confirmed": 1,
+        "protection_native_requested": 1,
+        "protection_lean_requested": 1,
+        "net": 0.09999999999963549,
+        "gross": 0.09999999999963549,
+        "commission": 0,
+        "exit_time_s": 0,
+        "native_net": 13.66,
+        "lean_net": 13.759999999999636,
+        "note": ""
+      },
+      {
+        "key": "S4|GOLD|-1|S4_MOMENTUM_1786618800_-1|1786619100",
+        "exit_native": "TP",
+        "exit_lean": "TP",
+        "protection_native_confirmed": 1,
+        "protection_lean_confirmed": 1,
+        "protection_native_requested": 1,
+        "protection_lean_requested": 1,
+        "net": 0.19999999999999973,
+        "gross": 0.20000000000000018,
+        "commission": 0,
+        "exit_time_s": 1,
+        "native_net": 3.22,
+        "lean_net": 3.42,
+        "note": ""
+      },
+      {
+        "key": "S4|GOLD|-1|S4_MOMENTUM_1787074500_-1|1787074800",
+        "exit_native": "TP",
+        "exit_lean": "TP",
+        "protection_native_confirmed": 1,
+        "protection_lean_confirmed": 1,
+        "protection_native_requested": 1,
+        "protection_lean_requested": 1,
+        "net": -0.08000000000021679,
+        "gross": -0.08000000000021856,
+        "commission": 0,
+        "exit_time_s": 0,
+        "native_net": 14.74,
+        "lean_net": 14.659999999999783,
+        "note": ""
+      },
+      {
+        "key": "S4|GOLD|-1|S4_MOMENTUM_1787238000_-1|1787238300",
+        "exit_native": "SL",
+        "exit_lean": "SL",
+        "protection_native_confirmed": 0,
+        "protection_lean_confirmed": 0,
+        "protection_native_requested": 0,
+        "protection_lean_requested": 0,
+        "net": -0.010000000000216502,
+        "gross": -0.010000000000218279,
+        "commission": 0,
+        "exit_time_s": 0,
+        "native_net": -10.33,
+        "lean_net": -10.340000000000217,
+        "note": ""
+      },
+      {
+        "key": "S4|GOLD|-1|S4_MOMENTUM_1787653500_-1|1787653800",
+        "exit_native": "TP",
+        "exit_lean": "TP",
+        "protection_native_confirmed": 1,
+        "protection_lean_confirmed": 1,
+        "protection_native_requested": 1,
+        "protection_lean_requested": 1,
+        "net": 0.4199999999999289,
+        "gross": 0.4199999999999271,
+        "commission": 0,
+        "exit_time_s": 0,
+        "native_net": 11.33,
+        "lean_net": 11.749999999999929,
+        "note": ""
+      },
+      {
+        "key": "S4|GOLD|-1|S4_MOMENTUM_1787655600_-1|1787655900",
+        "exit_native": "TP",
+        "exit_lean": "SL",
+        "protection_native_confirmed": 1,
+        "protection_lean_confirmed": 0,
+        "protection_native_requested": 1,
+        "protection_lean_requested": 0,
+        "net": -11.839999999999746,
+        "gross": -11.839999999999744,
+        "commission": 0,
+        "exit_time_s": 805,
+        "native_net": 5.23,
+        "lean_net": -6.609999999999745,
+        "note": "OUTCOME_FLIP_CHECK_QUOTE_AND_SAME_MS_ORDER_BEFORE_ATTRIBUTING"
+      },
+      {
+        "key": "S4|GOLD|-1|S4_MOMENTUM_1787674200_-1|1787674500",
+        "exit_native": "TP",
+        "exit_lean": "EA_CLOSE(ENTRY_RISK_OVERRUN)",
+        "protection_native_confirmed": 1,
+        "protection_lean_confirmed": 0,
+        "protection_native_requested": 1,
+        "protection_lean_requested": 0,
+        "net": -16.540000000000145,
+        "gross": -16.540000000000145,
+        "commission": 0,
+        "exit_time_s": -1917,
+        "native_net": 16.87,
+        "lean_net": 0.3299999999998545,
+        "note": "OUTCOME_FLIP_CHECK_QUOTE_AND_SAME_MS_ORDER_BEFORE_ATTRIBUTING"
+      },
+      {
+        "key": "S4|GOLD|-1|S4_MOMENTUM_1787674800_-1|1787675100",
+        "exit_native": "SL",
+        "exit_lean": "SL",
+        "protection_native_confirmed": 0,
+        "protection_lean_confirmed": 0,
+        "protection_native_requested": 0,
+        "protection_lean_requested": 0,
+        "net": 0.07999999999985619,
+        "gross": 0.07999999999985441,
+        "commission": 0,
+        "exit_time_s": 0,
+        "native_net": -11,
+        "lean_net": -10.920000000000144,
+        "note": ""
+      },
+      {
+        "key": "S4|GOLD|-1|S4_MOMENTUM_1787739900_-1|1787740200",
+        "exit_native": "TP",
+        "exit_lean": "TP",
+        "protection_native_confirmed": 1,
+        "protection_lean_confirmed": 1,
+        "protection_native_requested": 1,
+        "protection_lean_requested": 1,
+        "net": -7.93,
+        "gross": -7.989999999999998,
+        "commission": 0.06000000000000001,
+        "exit_time_s": 475,
+        "native_net": 16.6,
+        "lean_net": 8.670000000000002,
+        "note": ""
+      },
+      {
+        "key": "S4|GOLD|-1|S4_MOMENTUM_1787745600_-1|1787745900",
+        "exit_native": "TP",
+        "exit_lean": "TP",
+        "protection_native_confirmed": 1,
+        "protection_lean_confirmed": 1,
+        "protection_native_requested": 1,
+        "protection_lean_requested": 1,
+        "net": -8.829999999999998,
+        "gross": -8.89,
+        "commission": 0.06000000000000001,
+        "exit_time_s": -2,
+        "native_net": 17,
+        "lean_net": 8.170000000000002,
+        "note": ""
+      },
+      {
+        "key": "S4|GOLD|-1|S4_MOMENTUM_1787746500_-1|1787746800",
+        "exit_native": "SL_AFTER_BE",
+        "exit_lean": "TP",
+        "protection_native_confirmed": 1,
+        "protection_lean_confirmed": 1,
+        "protection_native_requested": 1,
+        "protection_lean_requested": 1,
+        "net": 6.9500000000004,
+        "gross": 6.9500000000004,
+        "commission": 0,
+        "exit_time_s": -594,
+        "native_net": 0.03,
+        "lean_net": 6.9800000000004,
+        "note": "OUTCOME_FLIP_CHECK_QUOTE_AND_SAME_MS_ORDER_BEFORE_ATTRIBUTING"
+      },
+      {
+        "key": "S4|GOLD|-1|S4_MOMENTUM_1787766600_-1|1787766900",
+        "exit_native": "TP",
+        "exit_lean": "TP",
+        "protection_native_confirmed": 0,
+        "protection_lean_confirmed": 0,
+        "protection_native_requested": 1,
+        "protection_lean_requested": 1,
+        "net": 0.09999999999982023,
+        "gross": 0.09999999999981846,
+        "commission": 0,
+        "exit_time_s": 0,
+        "native_net": 13.27,
+        "lean_net": 13.36999999999982,
+        "note": ""
+      },
+      {
+        "key": "S4|GOLD|-1|S4_MOMENTUM_1787845500_-1|1787845800",
+        "exit_native": "SL",
+        "exit_lean": "SL",
+        "protection_native_confirmed": 0,
+        "protection_lean_confirmed": 0,
+        "protection_native_requested": 0,
+        "protection_lean_requested": 0,
+        "net": 5.689999999999891,
+        "gross": 5.629999999999891,
+        "commission": 0.06000000000000001,
+        "exit_time_s": 0,
+        "native_net": -11.4,
+        "lean_net": -5.710000000000109,
+        "note": ""
+      },
+      {
+        "key": "S4|GOLD|-1|S4_MOMENTUM_1787937000_-1|1787937300",
+        "exit_native": "TP",
+        "exit_lean": "SL_AFTER_BE",
+        "protection_native_confirmed": 1,
+        "protection_lean_confirmed": 1,
+        "protection_native_requested": 1,
+        "protection_lean_requested": 1,
+        "net": -17.640000000000434,
+        "gross": -17.640000000000438,
+        "commission": 0,
+        "exit_time_s": -296,
+        "native_net": 17.54,
+        "lean_net": -0.10000000000043656,
+        "note": "OUTCOME_FLIP_CHECK_QUOTE_AND_SAME_MS_ORDER_BEFORE_ATTRIBUTING"
+      },
+      {
+        "key": "S4|GOLD|-1|S4_MOMENTUM_1788194700_-1|1788195000",
+        "exit_native": "SL",
+        "exit_lean": "SL",
+        "protection_native_confirmed": 0,
+        "protection_lean_confirmed": 0,
+        "protection_native_requested": 0,
+        "protection_lean_requested": 0,
+        "net": -0.020000000000326423,
+        "gross": -0.0200000000003282,
+        "commission": 0,
+        "exit_time_s": 0,
+        "native_net": -10.2,
+        "lean_net": -10.220000000000326,
+        "note": ""
+      },
+      {
+        "key": "S4|GOLD|1|S4_MOMENTUM_1785861900_1|1785862200",
+        "exit_native": "SL",
+        "exit_lean": "SL",
+        "protection_native_confirmed": 0,
+        "protection_lean_confirmed": 0,
+        "protection_native_requested": 0,
+        "protection_lean_requested": 0,
+        "net": -0.009999999999743991,
+        "gross": -0.009999999999745768,
+        "commission": 0,
+        "exit_time_s": 0,
+        "native_net": -10.35,
+        "lean_net": -10.359999999999744,
+        "note": ""
+      },
+      {
+        "key": "S4|GOLD|1|S4_MOMENTUM_1785927300_1|1785927600",
+        "exit_native": "SL",
+        "exit_lean": "SL",
+        "protection_native_confirmed": 0,
+        "protection_lean_confirmed": 0,
+        "protection_native_requested": 0,
+        "protection_lean_requested": 0,
+        "net": -0.05000000000061888,
+        "gross": -0.05000000000061888,
+        "commission": 0,
+        "exit_time_s": 0,
+        "native_net": -6.1,
+        "lean_net": -6.1500000000006185,
+        "note": ""
+      },
+      {
+        "key": "S4|GOLD|1|S4_MOMENTUM_1785942000_1|1785942300",
+        "exit_native": "TP",
+        "exit_lean": "TP",
+        "protection_native_confirmed": 1,
+        "protection_lean_confirmed": 1,
+        "protection_native_requested": 1,
+        "protection_lean_requested": 1,
+        "net": -0.009999999999743991,
+        "gross": -0.009999999999745768,
+        "commission": 0,
+        "exit_time_s": 0,
+        "native_net": 10.65,
+        "lean_net": 10.640000000000256,
+        "note": ""
+      },
+      {
+        "key": "S4|GOLD|1|S4_MOMENTUM_1785950100_1|1785950400",
+        "exit_native": "SL_AFTER_BE",
+        "exit_lean": "SL_AFTER_BE",
+        "protection_native_confirmed": 1,
+        "protection_lean_confirmed": 1,
+        "protection_native_requested": 1,
+        "protection_lean_requested": 1,
+        "net": -0.33000000000025465,
+        "gross": -0.33000000000025465,
+        "commission": 0,
+        "exit_time_s": 0,
+        "native_net": 0.03,
+        "lean_net": -0.3000000000002546,
+        "note": ""
+      },
+      {
+        "key": "S4|GOLD|1|S4_MOMENTUM_1786101000_1|1786101300",
+        "exit_native": "SL",
+        "exit_lean": "SL",
+        "protection_native_confirmed": 0,
+        "protection_lean_confirmed": 0,
+        "protection_native_requested": 0,
+        "protection_lean_requested": 0,
+        "net": -0.029999999999854587,
+        "gross": -0.029999999999854587,
+        "commission": 0,
+        "exit_time_s": 0,
+        "native_net": -6.21,
+        "lean_net": -6.2399999999998546,
+        "note": ""
+      },
+      {
+        "key": "S4|GOLD|1|S4_MOMENTUM_1786106400_1|1786106700",
+        "exit_native": "SL",
+        "exit_lean": "SL",
+        "protection_native_confirmed": 0,
+        "protection_lean_confirmed": 0,
+        "protection_native_requested": 0,
+        "protection_lean_requested": 0,
+        "net": 0.030000000000402594,
+        "gross": 0.030000000000400817,
+        "commission": 0,
+        "exit_time_s": 0,
+        "native_net": -11.05,
+        "lean_net": -11.019999999999598,
+        "note": ""
+      },
+      {
+        "key": "S4|GOLD|1|S4_MOMENTUM_1786530900_1|1786531200",
+        "exit_native": "SL",
+        "exit_lean": "SL",
+        "protection_native_confirmed": 0,
+        "protection_lean_confirmed": 0,
+        "protection_native_requested": 0,
+        "protection_lean_requested": 0,
+        "net": -0.03999999999869175,
+        "gross": -0.03999999999868997,
+        "commission": 0,
+        "exit_time_s": 0,
+        "native_net": -10.04,
+        "lean_net": -10.079999999998691,
+        "note": ""
+      },
+      {
+        "key": "S4|GOLD|1|S4_MOMENTUM_1786633500_1|1786633800",
+        "exit_native": "SL",
+        "exit_lean": "SL",
+        "protection_native_confirmed": 0,
+        "protection_lean_confirmed": 0,
+        "protection_native_requested": 0,
+        "protection_lean_requested": 0,
+        "net": 0.18999999999923567,
+        "gross": 0.18999999999923567,
+        "commission": 0,
+        "exit_time_s": 0,
+        "native_net": -5.68,
+        "lean_net": -5.490000000000764,
+        "note": ""
+      },
+      {
+        "key": "S4|GOLD|1|S4_MOMENTUM_1786704000_1|1786704300",
+        "exit_native": "TP",
+        "exit_lean": "TP",
+        "protection_native_confirmed": 1,
+        "protection_lean_confirmed": 1,
+        "protection_native_requested": 1,
+        "protection_lean_requested": 1,
+        "net": 0.02000000000072788,
+        "gross": 0.02000000000072788,
+        "commission": 0,
+        "exit_time_s": 0,
+        "native_net": 13.04,
+        "lean_net": 13.060000000000727,
+        "note": ""
+      },
+      {
+        "key": "S4|GOLD|1|S4_MOMENTUM_1786710000_1|1786710300",
+        "exit_native": "SL_AFTER_BE",
+        "exit_lean": "SL_AFTER_BE",
+        "protection_native_confirmed": 1,
+        "protection_lean_confirmed": 1,
+        "protection_native_requested": 1,
+        "protection_lean_requested": 1,
+        "net": 0.08000000000036378,
+        "gross": 0.08000000000036378,
+        "commission": 0,
+        "exit_time_s": 0,
+        "native_net": -1.12,
+        "lean_net": -1.0399999999996363,
+        "note": ""
+      },
+      {
+        "key": "S4|GOLD|1|S4_MOMENTUM_1786719300_1|1786719600",
+        "exit_native": "TP",
+        "exit_lean": "TP",
+        "protection_native_confirmed": 1,
+        "protection_lean_confirmed": 1,
+        "protection_native_requested": 1,
+        "protection_lean_requested": 1,
+        "net": -0.19999999999970974,
+        "gross": -0.19999999999970974,
+        "commission": 0,
+        "exit_time_s": 0,
+        "native_net": 13.74,
+        "lean_net": 13.54000000000029,
+        "note": ""
+      },
+      {
+        "key": "S4|GOLD|1|S4_MOMENTUM_1786720800_1|1786721100",
+        "exit_native": "SL",
+        "exit_lean": "SL",
+        "protection_native_confirmed": 0,
+        "protection_lean_confirmed": 0,
+        "protection_native_requested": 0,
+        "protection_lean_requested": 0,
+        "net": 0.08999999999930886,
+        "gross": 0.08999999999930886,
+        "commission": 0,
+        "exit_time_s": 0,
+        "native_net": -7.91,
+        "lean_net": -7.820000000000691,
+        "note": ""
+      },
+      {
+        "key": "S4|GOLD|1|S4_MOMENTUM_1786724400_1|1786724700",
+        "exit_native": "TP",
+        "exit_lean": "TP",
+        "protection_native_confirmed": 1,
+        "protection_lean_confirmed": 1,
+        "protection_native_requested": 1,
+        "protection_lean_requested": 1,
+        "net": 0.009999999999783071,
+        "gross": 0.009999999999781295,
+        "commission": 0,
+        "exit_time_s": 0,
+        "native_net": 10.15,
+        "lean_net": 10.159999999999783,
+        "note": ""
+      },
+      {
+        "key": "S4|GOLD|1|S4_MOMENTUM_1787137500_1|1787137800",
+        "exit_native": "SL",
+        "exit_lean": "SL",
+        "protection_native_confirmed": 0,
+        "protection_lean_confirmed": 0,
+        "protection_native_requested": 0,
+        "protection_lean_requested": 0,
+        "net": -0.07000000000000028,
+        "gross": -0.07000000000000028,
+        "commission": 0,
+        "exit_time_s": 0,
+        "native_net": -5.76,
+        "lean_net": -5.83,
+        "note": ""
+      },
+      {
+        "key": "S4|GOLD|1|S4_MOMENTUM_1787154000_1|1787154300",
+        "exit_native": "TP",
+        "exit_lean": "TP",
+        "protection_native_confirmed": 1,
+        "protection_lean_confirmed": 1,
+        "protection_native_requested": 1,
+        "protection_lean_requested": 1,
+        "net": -0.13000000000036138,
+        "gross": -0.13000000000036493,
+        "commission": 0,
+        "exit_time_s": 0,
+        "native_net": 15.95,
+        "lean_net": 15.819999999999638,
+        "note": ""
+      },
+      {
+        "key": "S4|GOLD|1|S4_MOMENTUM_1787154900_1|1787155200",
+        "exit_native": "SL",
+        "exit_lean": "SL",
+        "protection_native_confirmed": 0,
+        "protection_lean_confirmed": 0,
+        "protection_native_requested": 0,
+        "protection_lean_requested": 0,
+        "net": -0.540000000000763,
+        "gross": -0.5400000000007648,
+        "commission": 0,
+        "exit_time_s": 0,
+        "native_net": -10.2,
+        "lean_net": -10.740000000000762,
+        "note": ""
+      },
+      {
+        "key": "S4|GOLD|1|S4_MOMENTUM_1787160000_1|1787160300",
+        "exit_native": "TP",
+        "exit_lean": "EA_CLOSE(ENTRY_RISK_OVERRUN)",
+        "protection_native_confirmed": 1,
+        "protection_lean_confirmed": 0,
+        "protection_native_requested": 1,
+        "protection_lean_requested": 0,
+        "net": -14.140000000000036,
+        "gross": -14.140000000000036,
+        "commission": 0,
+        "exit_time_s": -974,
+        "native_net": 14.35,
+        "lean_net": 0.2099999999999636,
+        "note": "OUTCOME_FLIP_CHECK_QUOTE_AND_SAME_MS_ORDER_BEFORE_ATTRIBUTING"
+      },
+      {
+        "key": "S4|GOLD|1|S4_MOMENTUM_1787160300_1|1787160600",
+        "exit_native": "TP",
+        "exit_lean": "SL_AFTER_BE",
+        "protection_native_confirmed": 1,
+        "protection_lean_confirmed": 1,
+        "protection_native_requested": 1,
+        "protection_lean_requested": 1,
+        "net": -13.469999999999418,
+        "gross": -13.469999999999418,
+        "commission": 0,
+        "exit_time_s": 10070,
+        "native_net": 13.25,
+        "lean_net": -0.21999999999941794,
+        "note": "OUTCOME_FLIP_CHECK_QUOTE_AND_SAME_MS_ORDER_BEFORE_ATTRIBUTING"
+      },
+      {
+        "key": "S4|GOLD|1|S4_MOMENTUM_1787247900_1|1787248200",
+        "exit_native": "TP",
+        "exit_lean": "TP",
+        "protection_native_confirmed": 1,
+        "protection_lean_confirmed": 1,
+        "protection_native_requested": 1,
+        "protection_lean_requested": 1,
+        "net": -0.7099999999999973,
+        "gross": -0.7100000000000009,
+        "commission": 0,
+        "exit_time_s": -1,
+        "native_net": 16.63,
+        "lean_net": 15.920000000000002,
+        "note": ""
+      },
+      {
+        "key": "S4|GOLD|1|S4_MOMENTUM_1787314200_1|1787314500",
+        "exit_native": "SL",
+        "exit_lean": "SL",
+        "protection_native_confirmed": 0,
+        "protection_lean_confirmed": 0,
+        "protection_native_requested": 0,
+        "protection_lean_requested": 0,
+        "net": 5.240000000000764,
+        "gross": 5.250000000000764,
+        "commission": -0.010000000000000009,
+        "exit_time_s": 0,
+        "native_net": -10.98,
+        "lean_net": -5.739999999999236,
+        "note": ""
+      },
+      {
+        "key": "S4|GOLD|1|S4_MOMENTUM_1787585700_1|1787586000",
+        "exit_native": "TP",
+        "exit_lean": "EA_CLOSE(ENTRY_RISK_OVERRUN)",
+        "protection_native_confirmed": 1,
+        "protection_lean_confirmed": 0,
+        "protection_native_requested": 1,
+        "protection_lean_requested": 0,
+        "net": -16.360000000000106,
+        "gross": -16.36000000000011,
+        "commission": 0,
+        "exit_time_s": -3237,
+        "native_net": 16.15,
+        "lean_net": -0.21000000000010915,
+        "note": "OUTCOME_FLIP_CHECK_QUOTE_AND_SAME_MS_ORDER_BEFORE_ATTRIBUTING"
+      },
+      {
+        "key": "S4|GOLD|1|S4_MOMENTUM_1787589000_1|1787589300",
+        "exit_native": "SL",
+        "exit_lean": "EA_CLOSE(ENTRY_RISK_OVERRUN)",
+        "protection_native_confirmed": 0,
+        "protection_lean_confirmed": 0,
+        "protection_native_requested": 0,
+        "protection_lean_requested": 0,
+        "net": 11.200000000000037,
+        "gross": 11.200000000000037,
+        "commission": 0,
+        "exit_time_s": -241,
+        "native_net": -11.32,
+        "lean_net": -0.11999999999996364,
+        "note": ""
+      },
+      {
+        "key": "S4|GOLD|1|S4_MOMENTUM_1787910900_1|1787911200",
+        "exit_native": "SL",
+        "exit_lean": "SL",
+        "protection_native_confirmed": 0,
+        "protection_lean_confirmed": 0,
+        "protection_native_requested": 0,
+        "protection_lean_requested": 0,
+        "net": -0.2600000000003977,
+        "gross": -0.26000000000039947,
+        "commission": 0,
+        "exit_time_s": 0,
+        "native_net": -9.63,
+        "lean_net": -9.890000000000398,
+        "note": ""
+      }
+    ],
+    "only_native": [
+      "S4|GOLD|1|S4_MOMENTUM_1787333100_1|1787333400"
+    ],
+    "only_lean": [
+      "S4|GOLD|-1|S4_MOMENTUM_1787740500_-1|1787740800"
+    ]
+  },
+  "layer7_account": {
+    "native": {
+      "net_usd": 102.03,
+      "equity_dd_usd": 33.22,
+      "max_relative_equity_dd_pct": 5.5903205117,
+      "complete_position_net_pf": 1.464342602284622,
+      "complete_positions": 56,
+      "win_rate_pct": 50,
+      "commission_usd": 5.14,
+      "longest_loss_streak": 3,
+      "daily_equity_stops": 2,
+      "daily_equity_stop_server_times": [
+        "2026.08.13 15:10:38",
+        "2026.08.27 16:03:05"
+      ]
+    },
+    "lean": {
+      "net_usd": 36.579999999998904,
+      "equity_dd_usd": 37.05000000000143,
+      "max_relative_equity_dd_pct": 6.458867214058088,
+      "complete_position_net_pf": 1.1786307256567945,
+      "complete_positions": 56,
+      "win_rate_pct": 42.857142857142854,
+      "commission_usd": 4.970000000000003,
+      "longest_loss_streak": 5,
+      "daily_equity_stops": 1,
+      "emergency_lock": false,
+      "exit_reasons": {
+        "TP": 22,
+        "SL": 26,
+        "SL_AFTER_BE": 4,
+        "ENTRY_RISK_OVERRUN": 4
+      }
+    },
+    "note": "Account metrics are path-dependent; any earlier-layer difference propagates. Differences are model-difference leads, not strategy improvement or degradation. DD definitions: native tester equity DD vs LEAN per-tick MT5-semantics equity curve."
+  },
+  "layer8_overnight": {
+    "rule": "position open across server 00:00 (FxPro rollover); LEAN does not model swap (gap G3)",
+    "native": [],
+    "lean": [],
+    "lean_swap_model_gap_exposed": false
+  },
+  "first_divergence": {
+    "trigger_server_s": 1785756000,
+    "layer": "layer3_reservations:difference",
+    "key": "S4|GOLD|-1|S4_MOMENTUM_1785755700_-1|1785756000",
+    "note": "Everything after the first divergence may be path-dependent (equity, budget, slots, cooldown, day locks)."
+  },
+  "status": "FULL_AUGUST_LAYERED_COMPARISON_REVIEW_REQUIRED",
+  "claims_not_made": [
+    "native parity",
+    "strategy improvement",
+    "score",
+    "Champion",
+    "live readiness"
+  ]
+}

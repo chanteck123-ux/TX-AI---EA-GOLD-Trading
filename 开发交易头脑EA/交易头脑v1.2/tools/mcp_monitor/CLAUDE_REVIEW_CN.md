@@ -24,5 +24,10 @@
 6. 稳定性探测每个尾读增加约 0.15 s。
 7. 服务器测试通过 ≠ 客户端已加载；Codex 的 `CLIENT_CONFIG_RECEIPT.json` 记录为 `CONFIGURED_CLIENT_LOAD_NOT_VERIFIED`，我未改任何客户端配置。
 
+## v1.2.1（2026-10-12，按用户／Codex 要求修小缺陷）
+- 缺陷：v1.2.0 读取了 `RUN_RECEIPT.status`，但没有用于判定。真实 smoke `S4B1_SMOKE_D250_20261012T090135Z_c3a0007a` 的引擎已正常退出、summary 有效，回执却是 FAILED（对账门控），v1.2.0 把它显示为 COMPLETED。
+- 修正：`engine_status` 单独保留引擎判断；`research_status` 来自回执；回执明确 FAILED 时，总状态优先为 FAILED；没有引擎日志但回执 FAILED（例如编译失败）时，也判为 FAILED。只改了 `classify_lean_run`，其他行为不变。
+- 自查：unittest 36 项通过，其中新增 5 项（真实案例复刻、通过的回执、RUNNING 回执和缺少回执、无日志且回执失败、实际工作区中的 c3a0007a），1 项 skip（与之前相同，是符号链接权限）。日志：`verification/CLAUDE_UNITTEST_V1_2_1.txt`。官方 SDK stdio 54 checks 通过：`verification/CLAUDE_SELF_CHECK_STDIO_V1_2_1.json`。**需要 Codex 对 v1.2.1 独立重跑。**客户端配置未改，客户端是否已加载仍未确认。
+
 ## 范围声明
 LEAN 引擎仍被应用控制阻止（`lean_probe_01`，0x800711C7），没有任何 LEAN 算法执行；本目录只有监控与迁移计划，**不宣称任何 LEAN 迁移完成**。监控只在被调用时读取，没有后台或空闲时的自动改代码。评分 N/A。

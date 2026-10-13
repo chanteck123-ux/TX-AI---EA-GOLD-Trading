@@ -24,7 +24,7 @@ from dataclasses import dataclass, field
 from pathlib import Path
 from typing import Any, Iterator
 
-VERSION = "1.2.0"
+VERSION = "1.2.1"
 
 # --------------------------------------------------------------------------------------------- configuration
 DEFAULT_WORKSPACE = Path(r"C:\Users\A\Documents\Codex\2026-09-10\v1-2-ea-mt5")
@@ -387,6 +387,14 @@ def classify_lean_run(cfg: MonitorConfig, run_dir: Path, memory: ProgressMemory 
     summaries = sorted(safe_glob(cfg, run_dir, "*-summary.json"))
     if not logs:
         out.update(status="NOT_STARTED_OR_NO_LOG", note="Directory exists but no readable LEAN log: not running, not completed.")
+        rstate, rval = load_json_bounded(cfg, run_dir / "RUN_RECEIPT.json")
+        out["run_receipt"] = {"parse": rstate, "status": rval.get("status") if isinstance(rval, dict) else None}
+        out["engine_status"] = out["status"]
+        out["research_status"] = _receipt_research_status(rstate, rval)
+        if out["research_status"] == "FAILED_BY_RUN_RECEIPT":  # e.g. build or data gate failed before the engine started
+            err = rval.get("error") if isinstance(rval, dict) else None
+            out["run_receipt"]["error"] = redact(str(err))[:400] if err else None
+            out.update(status="FAILED", failure_reasons=["RUN_RECEIPT_FAILED"])
         return out
     newest = max(lg.stat().st_mtime for lg in logs)
     fail_reasons, done, started = [], False, False
@@ -434,9 +442,30 @@ def classify_lean_run(cfg: MonitorConfig, run_dir: Path, memory: ProgressMemory 
         out["note"] = LIVENESS_NOTE + " Call again to observe growth."
     else:
         out["status"] = "INTERRUPTED_OR_STALLED_NO_TERMINAL_MARKER"
+    # The engine log state and the research receipt are different facts: keep the engine view as
+    # engine_status, and let an explicit FAILED research receipt take precedence for the run status
+    # (a run can be "engine completed" yet failed by the runner's own gates, e.g. reconciliation).
+    out["engine_status"] = out["status"]
+    out["research_status"] = _receipt_research_status(rstate, rval)
+    if out["research_status"] == "FAILED_BY_RUN_RECEIPT":
+        err = rval.get("error") if isinstance(rval, dict) else None
+        out["run_receipt"]["error"] = redact(str(err))[:400] if err else None
+        out["status"] = "FAILED"
+        out["failure_reasons"] = list(dict.fromkeys((out.get("failure_reasons") or []) + ["RUN_RECEIPT_FAILED"]))
     if historical and out["status"].startswith("COMPLETED"):
         out["note"] = "Historical run from an earlier project; not a result of this LEAN research."
     return out
+
+
+def _receipt_research_status(state: str, val: Any) -> str:
+    if state == "MISSING":
+        return "NO_RUN_RECEIPT"
+    if state != "OK" or not isinstance(val, dict):
+        return "RUN_RECEIPT_" + str(state)
+    status = str(val.get("status") or "")
+    if status == "FAILED" or status.endswith("_FAILED"):
+        return "FAILED_BY_RUN_RECEIPT"
+    return "RUN_RECEIPT_" + (status or "NO_STATUS")
 
 
 def classify_build(cfg: MonitorConfig, build_log: Path, memory: ProgressMemory | None = None) -> dict[str, Any]:

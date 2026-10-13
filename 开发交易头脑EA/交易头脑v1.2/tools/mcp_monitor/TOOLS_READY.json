@@ -1,62 +1,44 @@
 {
   "schema": "TB_LEAN_MONITOR_TOOLS_READY_V1",
-  "created_utc": "2026-10-12T08:19:33+00:00",
+  "created_utc": "2026-10-12T09:15:00+00:00",
   "author": "Claude Code",
-  "status": "TOOLS_READY_V1_2_0_NEEDS_CODEX_RERUN_ON_THESE_HASHES",
+  "status": "TOOLS_READY_V1_2_1_NEEDS_CODEX_RERUN_ON_THESE_HASHES",
   "server": {
     "name": "tb-lean-monitor",
-    "version": "1.2.0",
+    "version": "1.2.1",
     "transport": "stdio",
     "sdk": "mcp 1.30.0 (FastMCP, 1.x API)",
     "python": "3.12.14 (.venv created by Codex)"
   },
-  "tools": [
-    "health",
-    "research_status",
-    "source_changes",
-    "run_status",
-    "bounded_log_tail",
-    "latest_results"
-  ],
+  "change_from_1_2_0": "classify_lean_run: engine_status kept separately; research_status from RUN_RECEIPT.json; explicit FAILED receipt takes precedence for status (real case S4B1_SMOKE_D250_20261012T090135Z_c3a0007a was shown as COMPLETED by 1.2.0); failed receipt without engine log also FAILED. No other behaviour changed.",
+  "tools": ["health", "research_status", "source_changes", "run_status", "bounded_log_tail", "latest_results"],
   "files_sha256": {
     "server.py": "4b8134edfa43b92e90673e84020e376daaeacfee99cf7e6990f9b44399a0412f",
-    "monitor_core.py": "888361aca43f5349bea8c5085ad4275608789d8e6fef76bfa361d8b998b20e22",
-    "test_monitor.py": "37d6f5eed21b0d67fed0153899ba6527389f79f08f489d02d17f867e0c919900",
+    "monitor_core.py": "870884ac007f31f3f4485b05e387a507a98771e3d897ac3d452cf5b71950bfa8",
+    "test_monitor.py": "6c3549a1684073ab9497b62b58a3ef2419e71edca8936574555d68f708b1956d",
     "verify_stdio_client.py": "676bd0f407063669502ccea8328afd06dbdc461389d389629f4219ff293e8507",
     "LEAN_MIGRATION_MAP.json": "d81ca9b09602918dca9b5f26c1c35720dbbc92638bb6528bc6be4244ac7edcda",
     "requirements.in": "16c5c812609aba9a10fff0b9b47b9a3379f71392d7a54a75e22f868a620a66b2",
     "requirements.lock.txt": "622a36f2937cf888037fac520f0f92ab8ccd125632e2302f0f4755a526f0ec2a",
-    "README_CN.md": "d24ebba12666fc0d1a5b43e71fa72b52677e6ffaafe6f04a2652121af7972438",
-    "CLAUDE_REVIEW_CN.md": "ca0c5c1e6eb8446790a54bcfa02b0e1a78e3f5383c4d0b730366815ab48f12bf",
+    "README_CN.md": "504f41b248498909ce22df1a4307bdb3a24cfe4ee8d53a2ebc9a0e730b9a5a81",
+    "CLAUDE_REVIEW_CN.md": "f1715cc302fa3075faaa54c58b7f6dd9e0d094e5268ecbfec9949dd198ef99f1",
     "config_samples/codex_config.toml": "f311232c201455d9c7007ed9f4dd65d4851bf58c689edeabdef4f2cd882bf9db",
     "config_samples/claude_code_mcp.json": "2390679f1175eb98cd294b199b464f54485c31dffe18382577ad0d99187f61a3",
-    "verification/CLAUDE_UNITTEST_3.txt": "e0acfe76ba69fba42f978a41e8972a3bb668dde36f367266f6e42c96fdd652a2",
-    "verification/CLAUDE_SELF_CHECK_STDIO_3.json": "180422c2cfe06dde1c8d2bd3397526ca5ff1f9a0f0a36cb432319cdd60b917f7",
+    "verification/CLAUDE_UNITTEST_V1_2_1.txt": "285f96998345054f770a32a5bf0e3c146ed4e5fe63355952051546d0cff49a14",
+    "verification/CLAUDE_SELF_CHECK_STDIO_V1_2_1.json": "e2d107d8e183e1cb4b5d1ca245fd0486937f01c44c2ff36eedf95754a202e031",
+    "verification/CLAUDE_SELF_CHECK_STDIO_V1_2_1.log": "9ac5cdae49d61e768bad69ba5408d801a8387389178f2add2cd518fbda9e74ce",
     "verification/CLAUDE_UNITTEST_1_RACE_FAILURE_kept.txt": "1362624939cd2c1525d64ba4737125832538ac427ee7bfc851e03be768e16d74"
   },
   "claude_self_checks": {
-    "unittest_v1_2_0": "31 tests OK, 1 skipped (symlink creation not permitted; junction rejection tested)",
-    "stdio_client_real_workspace_v1_2_0": {
-      "passed": true,
-      "checks": 54,
-      "failed": 0
-    },
+    "unittest_v1_2_1": "36 tests OK (31 previous + 5 receipt-precedence incl. real workspace c3a0007a), 1 skipped (symlink creation not permitted; junction rejection tested)",
+    "stdio_client_real_workspace_v1_2_1": {"passed": true, "checks": 54, "failed": 0},
     "kept_failure": "verification/CLAUDE_UNITTEST_1_RACE_FAILURE_kept.txt (raw stdio test race, fixed in the test; server unchanged)"
   },
   "codex_independent_verification_seen": {
-    "files": [
-      "../CODEX_UNIT_TEST_FINAL.log",
-      "../CODEX_STDIO_VERIFICATION.json"
-    ],
-    "applies_to": "v1.1.0 (29 tests, 54 stdio checks); v1.2.0 adds truncation flags and 2 tests only"
+    "applies_to": "v1.2.0 (31 tests, 54 SDK checks, pushed as ddd91f6); v1.2.1 rerun by Codex: 36 unit (35 pass / 1 skip) + 54 stdio checks pass, logs CODEX_MONITOR_UNIT_V1_3.log / CODEX_MONITOR_STDIO_V1_3.json (file names say V1_3 but health reports version 1.2.1; health is authoritative). README_CN.md since updated (current facts only), code unchanged"
   },
-  "client_configuration": "Configured by Codex (CLIENT_CONFIG_RECEIPT.json: CONFIGURED_CLIENT_LOAD_NOT_VERIFIED); not changed by Claude",
-  "not_done": [
-    "client load verification",
-    "any LEAN build/run (engine blocked by CodeIntegrity 0x800711C7)",
-    "any MT5/MetaEditor action",
-    "LEAN algorithm code for the seven strategies (migration map only)"
-  ],
+  "client_configuration": "Not changed by Claude; client load still unconfirmed (CONFIGURED_CLIENT_LOAD_NOT_VERIFIED)",
+  "not_done": ["client load verification", "any MT5/MetaEditor action", "Git push of v1.2.1"],
   "limits": [
     "Server cannot observe processes; liveness only from growth between two calls of one session.",
     "Log markers scanned in the last 256 KiB only (flagged).",

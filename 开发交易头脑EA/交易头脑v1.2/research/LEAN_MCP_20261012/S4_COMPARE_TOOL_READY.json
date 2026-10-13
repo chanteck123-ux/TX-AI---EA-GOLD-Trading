@@ -1,0 +1,42 @@
+{
+  "schema": "S4_COMPARE_TOOL_READY_V2",
+  "status": "FULL_AUGUST_COMPARISON_AND_ATTRIBUTION_DONE_REVIEW_REQUIRED",
+  "written_utc": "2026-10-12",
+  "implementer": "Claude",
+  "s4_implementation_frozen": true,
+  "s4_implementation_unchanged_since": "R2 (S4Core.cs ee509e1d, S4RetainedAlgorithm.cs 28e8ae2c)",
+  "revision_2_changes_after_codex_review": [
+    "native CSV expected-hash gate: proof VERIFICATION.json -> single native_receipt native_result.json (hash-checked) -> evidence_sha256 per audit CSV; mismatch refuses comparison",
+    "protection requested vs confirmed listed separately (native PROTECTION_REQUESTED vs MANAGEMENT_CONFIRMED kind=1; LEAN PROTECTION_REQUESTED vs SL_MODIFIED); SL_AFTER_BE classified from confirmed changes only; unconfirmed request kept and listed",
+    "attribute_fullaug.ps1 parameter renamed to -OutFile (case-insensitive $out/$Out clash had sent the first output to a stray file)"
+  ],
+  "files": {
+    "tools/S4Compare/Program.cs": "0c1c3f2e9fb8cf25d69262f4e1ce07e56aeea30ff2108e78db6c9d2e23d4e520",
+    "tools/S4Compare/S4Compare.csproj": "00534ea4a3c5443edc8e44bda03c5c85813c7063517988edd5722d1a86a5ed0f",
+    "tools/S4Compare/attribute_fullaug.ps1": "ab3c5cfae6695f29553e6c9e90678742797431a2fd8e2442e59a88bd3be93700",
+    "tools/S4Compare/README_CN.md": "a81146b3a5b19d883ddf42ccceffce113b6aa3455d68c9ba9c24f1e783d95d19"
+  },
+  "build": {
+    "dir": "builds/S4COMPARE_CLAUDE_BUILD_02",
+    "dll_sha256": "a07cae37fe05075b83f1712f62bda0231996d9f2b3a8b46588d676332ec560fb",
+    "gate_tests": {
+      "tampered_native_csv_refused": "builds/S4COMPARE_CLAUDE_BUILD_02/TAMPER_GATE_TEST.json 87ccff4f (exit 2)",
+      "failed_smoke_run_refused": "builds/S4COMPARE_CLAUDE_BUILD_02/INCOMPLETE_GATE_TEST.json 007914bb (exit 2)"
+    }
+  },
+  "outputs": {
+    "research/S4_FULLAUG_COMPARISON.json": "e69bdd9b24b635b344d9f2cd4d5f16f149cab9e6ea027d96cc9c1db80ae2d71f",
+    "research/S4_FULLAUG_ATTRIBUTION.json": "e8c0ba8dd1a5571fbd79acc410b3f6bf6d0040e7d6fc162047dd6b6c47d9fd11",
+    "research/S4_FULLAUG_REVIEW_CN.md": "0c4c26f131f8ebdad8f0101d1cf8a35bce9b9a74eef9b680322b23132b13f954"
+  },
+  "headline": {
+    "signals": "75/75 ARMED key/time/ref/sl/ATR aligned (1e-7); 18 gate-rejected values and indicator/gate buffer history not re-audited",
+    "fills_and_protection": "NOT_EQUIVALENT",
+    "net_difference_usd": -65.45,
+    "categories": {"C1a_same_exit_price_path": 3.86, "C1b_volume_differs": -11.07, "C2_protective_outcome_flip": -30.11, "C3_lean_entry_risk_overrun_close": -35.84, "C4_lean_only": 6.89, "C4_native_only": 0.82},
+    "classification": "MODEL_AND_PATH_DIFFERENCE_NOT_STRATEGY_RESULT",
+    "native_baseline_kept": "D4BF2385"
+  },
+  "score_status": "SCORE_TARGETS_UNSET",
+  "claims_not_made": ["native parity", "strategy improvement", "migration complete", "Champion", "live readiness", "0 errors (InterestRateProvider csv warning: LEAN statistics computed with RF=1% default fallback, not historical; not mixed with MT5 RF0, not scored)", "C1b as pure risk/volume effect (it mixes price path and volume)"]
+}

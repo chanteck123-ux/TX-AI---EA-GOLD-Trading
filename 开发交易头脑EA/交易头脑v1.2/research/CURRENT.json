@@ -1409,25 +1409,56 @@
     "champion": false
   },
   "realtime_research_monitor": {
-    "date": "2026-10-12",
-    "version": "1.2.0",
+    "date": "2026-10-13",
+    "version": "1.2.1",
     "mode": "CODEX_AND_CLAUDE",
     "code_owner": "CLAUDE_CODE",
     "verification_owner": "CODEX",
-    "status": "SERVER_TESTED_CLIENTS_CONFIGURED_LOAD_PENDING",
+    "status": "CODEX_CLIENT_CONNECTED_CLAUDE_LOAD_NOT_VERIFIED",
     "tools": 6,
-    "unit_pass": 30,
+    "unit_pass": 35,
     "unit_skip": 1,
     "unit_fail": 0,
     "stdio_checks_passed": 54,
-    "lean_status": "ENGINE_SMOKE_COMPLETED_NO_GOLD_STRATEGY_VALIDATION",
-    "lean_failed_assembly": "QuantConnect.Messaging.dll",
-    "error": "0x800711C7",
+    "lean_status": "S4_ENGINEERING_FULL_AUGUST_COMPLETED_EXECUTION_PARITY_PENDING",
+    "lean_failed_assembly": null,
+    "error": null,
     "migration": "SEVEN_PLANNED_NOT_COMPLETED",
     "evidence": "LEAN_MCP_20261012/CODEX_FINAL_REVIEW.json",
     "source": "../tools/mcp_monitor/server.py",
     "live_changes": false,
     "engine_recovery_evidence": "LEAN_MCP_20261012/lean_probe_02/RUN_RECEIPT.json",
-    "s4_migration_status": "CLAUDE_SOURCE_REVIEW_AND_IMPLEMENTATION_IN_PROGRESS"
+    "s4_migration_status": "ARMED75_FIELDS_MATCH_FILLS_AND_PROTECTION_NOT_EQUIVALENT",
+    "historical_block": {
+      "assembly": "QuantConnect.Messaging.dll",
+      "error": "0x800711C7",
+      "resolved_by": "USER_MANUAL_WINDOWS_POLICY_CHANGE_ENGINE_PROBE_VERIFIED"
+    },
+    "s4_result": {
+      "capital_usd": 500,
+      "score": null,
+      "native_net_usd": 102.03,
+      "net_pf": 1.1786307256567945,
+      "review": "LEAN_MCP_20261012/CODEX_S4_B1_ACCEPTANCE_CN.md",
+      "data_role": "USED_DEVELOPMENT_NOT_OOS",
+      "complete_positions": 56,
+      "run_id": "S4B1_FULLAUGUST_D250_20261012T090714Z_ab0a4fb2",
+      "net_delta_usd": -65.45,
+      "live": false,
+      "latency_ms": 250,
+      "score_status": "SCORE_TARGETS_UNSET",
+      "max_equity_dd_pct": 6.458867214058088,
+      "max_equity_dd_usd": 37.05,
+      "next_scope": "LEAN_MCP_20261012/S4_B2_QUOTE_DIAGNOSTIC_SCOPE_CN.md",
+      "champion": false,
+      "net_usd": 36.58
+    },
+    "local_delivery": {
+      "members": 96,
+      "status": "ALL_ZIP_MEMBER_HASHES_MATCH",
+      "kind": "EVIDENCE_SNAPSHOT_NOT_STANDALONE_RUNTIME",
+      "sha256": "dba9526f5ab9ffbd54f943742a301daa9b2d87fbaeb6ae074514e0cf8b75f928",
+      "path": "outputs/TradingBrain_S4_LEAN_B1_20261013.zip"
+    }
   }
 }

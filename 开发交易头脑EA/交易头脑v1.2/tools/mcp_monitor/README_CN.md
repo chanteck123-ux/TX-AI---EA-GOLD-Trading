@@ -41,7 +41,7 @@ Codex 接入：把 `config_samples/codex_config.toml` 的表加入 `~/.codex/con
 | `bounded_log_tail` | 单个日志尾部（见上）。 |
 | `latest_results` | 本项目最新 LEAN summary 与关键统计；历史 LEAN 与 I18 MT5 评估仅在 `include_historical=true` 时列出并标 `HISTORICAL_…`，**I18 成绩永不称为 LEAN 成绩**。 |
 
-LEAN 运行状态：`FAILED`（含 `CODE_INTEGRITY_BLOCKED_DLL`、未处理异常、运行时/初始化错误）、`COMPLETED_RESULTS_PRESENT_REVIEW_REQUIRED`（须有退出标记**且**可解析含统计的 summary）、`COMPLETED_RESULT_BEING_WRITTEN`、`ENGINE_EXITED_WITHOUT_VALID_SUMMARY`、`IN_PROGRESS_LOG_GROWTH_OBSERVED`（本会话两次调用之间日志确实增长）、`RECENT_LOG_WRITE_LIVENESS_UNCONFIRMED`（只有近期写入，**不声称进程存活**）、`INTERRUPTED_OR_STALLED_NO_TERMINAL_MARKER`、`NOT_STARTED_OR_NO_LOG`。构建同理：`BUILD_FAILED`、`BUILD_SUCCEEDED_LOG`（DLL 哈希仍需运行记录绑定）、`BUILD_IN_PROGRESS_LOG_GROWTH_OBSERVED`、`BUILD_RECENT_LOG_WRITE_LIVENESS_UNCONFIRMED`、`BUILD_INCOMPLETE_OR_INTERRUPTED`。JSON：`OK`/`MISSING`/`DENIED`/`TOO_LARGE`/`PARSING_FILE_CHANGING`/`PARSE_ERROR`。服务器看不到进程，“存活”只能来自观察到的增长。
+LEAN 运行状态：`FAILED`（含 `CODE_INTEGRITY_BLOCKED_DLL`、未处理异常、运行时/初始化错误）、`COMPLETED_RESULTS_PRESENT_REVIEW_REQUIRED`（须有退出标记**且**可解析含统计的 summary）、`COMPLETED_RESULT_BEING_WRITTEN`、`ENGINE_EXITED_WITHOUT_VALID_SUMMARY`、`IN_PROGRESS_LOG_GROWTH_OBSERVED`（本会话两次调用之间日志确实增长）、`RECENT_LOG_WRITE_LIVENESS_UNCONFIRMED`（只有近期写入，**不声称进程存活**）、`INTERRUPTED_OR_STALLED_NO_TERMINAL_MARKER`、`NOT_STARTED_OR_NO_LOG`。**v1.2.1：** 每个运行另返回 `engine_status`（只依据引擎日志与 summary）和 `research_status`（依据 runner 的 `RUN_RECEIPT.json`：`FAILED_BY_RUN_RECEIPT`、`RUN_RECEIPT_<status>`、`NO_RUN_RECEIPT`）。当回执明确为 `FAILED`（或以 `_FAILED` 结尾）时，总 `status` 为 `FAILED`，`failure_reasons` 含 `RUN_RECEIPT_FAILED`，并附脱敏后的回执 error；此时 `engine_status` 仍保留引擎的原始判断，例如引擎已正常退出、但 runner 对账门控判为失败的情况。回执为 RUNNING 或通过时，不覆盖引擎状态。构建同理：`BUILD_FAILED`、`BUILD_SUCCEEDED_LOG`（DLL 哈希仍需运行记录绑定）、`BUILD_IN_PROGRESS_LOG_GROWTH_OBSERVED`、`BUILD_RECENT_LOG_WRITE_LIVENESS_UNCONFIRMED`、`BUILD_INCOMPLETE_OR_INTERRUPTED`。JSON：`OK`/`MISSING`/`DENIED`/`TOO_LARGE`/`PARSING_FILE_CHANGING`/`PARSE_ERROR`。服务器看不到进程，“存活”只能来自观察到的增长。
 
 **截断一律明示**：源码遍历上限 5000 文件（`truncated_at_file_cap`、`capped_bases`）、各列表 `*_total` 与 `*_truncated_by_limit`、日志标记只扫描文件尾 256 KiB（`scan_window_truncated` 与 `scan_note`，窗口外的早期失败行不会被看到）、构建错误行最多 20 条（`error_lines_total`）、`STAGES.jsonl` 只读尾 64 KiB（`stage_record_scan.window_truncated`）。
 
@@ -51,6 +51,12 @@ LEAN 运行状态：`FAILED`（含 `CODE_INTEGRITY_BLOCKED_DLL`、未处理异�
 `lean/algorithms/<SID>/`（C# 源码，Claude 写）、`builds/<build_id>/*.log`（Codex 编译日志）、`runs/<run_id>/`（LEAN 输出与 `RUN_RECEIPT.json`）、`optimizations/<opt_id>/`、`research/STAGES.jsonl`（每行一个 `{stage, sid, id, status, utc, evidence}`，由阶段负责人追加）。
 
 ## 当前事实与边界
-- LEAN 引擎探针 `lean_probe_01` 被 Windows 应用控制阻止加载 `QuantConnect.Messaging.dll`（0x800711C7），**没有算法执行**；监控把它报告为 `FAILED / CODE_INTEGRITY_BLOCKED_DLL`。不改安全政策、不移动/改名/重签 DLL。
-- 旧 LEAN 工作只是信号层：quantconnect_20260920 与 lean_500_20260927（S1/S4 信号＋工程风控/成交模型）、mt5_iteration9 I9 SevenSignalsAlgorithm（七套信号层）；都不是完整成交/退出迁移。
+（更新于 2026-10-12）
+- **LEAN 引擎已经恢复。**用户自行关闭 SAC 后，`lean_probe_02`（官方 C# BasicTemplateFrameworkAlgorithm）运行完成，13/13 个数据请求成功。`lean_probe_01` 是被 Windows 应用控制阻止（0x800711C7）的历史证据，监控仍把它报告为 `FAILED / CODE_INTEGRITY_BLOCKED_DLL`，不覆盖。Claude 与 Codex 都没有改过安全设置。
+- **S4 保留版的 LEAN 工程已经实际运行**（Codex 编译并运行，代码 R2 冻结）：
+  - smoke `S4B1_SMOKE_D250_…c3a0007a`：回执 FAILED，对账公式问题，保留为证据；
+  - smoke `…30882182`：通过；
+  - 全月 `S4B1_FULLAUGUST_D250_…ab0a4fb2`：回执 FULL_AUGUST_COMPLETE_REVIEW_REQUIRED，对账 227 次全部通过。
+  - 与原生基线 D4BF2385 比较：75 个获准 ARMED 信号的 key、时间、ref、sl、ATR 已对齐（18 个被门控拒绝的数值与指标缓冲区没有重新审计），**成交与保护层未对等**；净差 −65.45 USD 属于模型和路径差异，不是新的策略成绩（见 `research/S4_FULLAUG_REVIEW_CN.md`）。MT5 原生基线保持不变。
+- 早期 LEAN 工作仍然只是信号层，不是完整的成交和退出迁移：quantconnect_20260920 与 lean_500_20260927（S1/S4 信号，加工程风控和成交模型），以及 mt5_iteration9 的 I9 SevenSignalsAlgorithm（七套信号层）。七策略中除 S4 以外，其余都还没有迁移。
 - 评分 N/A（SCORE_TARGETS_UNSET）；工程烟测、C# 编译、LEAN 执行、MT5 测试、独立验证与实盘分别报告。
