@@ -1,0 +1,25 @@
+{
+  "schema": "CODEX_S4_B2_INDEPENDENT_REVIEW_V1",
+  "utc": "2026-10-13T14:31:18.7734979Z",
+  "status": "DIAGNOSTIC_REPRODUCED_MECHANISM_UNPROVEN",
+  "independent_run": "diagnostics/S4_B2_CODEX_VERIFY_20261013T142855Z",
+  "source_sha256": {
+    "QuoteDiag.cs": "c553a742c89ac864f57c24a41b3818629cd507967e5ae0de257b1d3a252bdda1",
+    "Program.cs": "2d05d63767468d022e6e960d96ba7594fac99edf4906b75c1a36425ad07f6bad",
+    "S4QuoteDiag.csproj": "114ff284ad70de0a557c91137f1372d4e303cec551ea94e6fa289df1e53f8f72",
+    "run_quotediag.ps1": "ca228058b64487aebc9b83c7c61943be3bc9fc00c8cd8b03d56195424a801c0a"
+  },
+  "fixtures_pass": 12,
+  "build_warnings": 0,
+  "build_errors": 0,
+  "claude_r2": "diagnostics/S4_B2_QUOTEDIAG_20261013T142824Z",
+  "events_csv_byte_hash_equal": true,
+  "evidence_rows_byte_hash_equal": true,
+  "stats_all_equal": true,
+  "orders_external_archive_expected_sha256": "e9a0f29f452f7992296aeb9edab4defa59fdc03e07e2bd9478871c190a5c9e46",
+  "orders_external_archive_current_match": true,
+  "score": "N/A",
+  "oos": false,
+  "champion": false,
+  "live": false
+}

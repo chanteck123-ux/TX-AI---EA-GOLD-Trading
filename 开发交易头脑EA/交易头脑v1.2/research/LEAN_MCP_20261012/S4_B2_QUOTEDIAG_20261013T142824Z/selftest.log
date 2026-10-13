@@ -1,0 +1,20 @@
+﻿{
+  "schema": "S4_B2_QUOTE_DIAG_SELFTEST_V1",
+  "status": "PASS",
+  "passed": 12,
+  "failed": [],
+  "names": [
+    "same_ms_first_vs_last_discriminates",
+    "duplicate_ms_rows_all_kept_with_lines",
+    "side_flag_candidate_uses_ask_bit_for_long",
+    "side_flag_candidate_uses_bid_bit_for_short",
+    "middle_duplicate_match_found_in_window_not_forced_into_candidates",
+    "prev_only_match",
+    "window_crosses_file_boundary",
+    "missing_window_marked",
+    "native_fill_deal_second_unique",
+    "native_fill_missing_deal_time_marked",
+    "flags_decoded_with_other_bits",
+    "tampered_raw_file_refused"
+  ]
+}

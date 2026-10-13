@@ -1,0 +1,1127 @@
+{
+  "schema": "S4_B2_QUOTE_DIAGNOSTIC_SUMMARY_V1",
+  "status": "DIAGNOSTIC_COMPLETE_REVIEW_REQUIRED",
+  "generated_utc": "2026-10-13T14:28:34.9812603Z",
+  "scope": "Read-only raw-tick evidence for 55 common reservations and entry fills; fixed candidates; no causation, no profit claim, no trading-code change",
+  "inputs": {
+    "raw_dir": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\quantconnect_20260920\\data\\raw",
+    "export_manifest_sha256": "9024018027104db19e53f238c8479cb249255b336c0a6f9b51cf2d43a0aeb581",
+    "lean_tick_manifest_sha256": "9a3926c75890be2a0d54537cfe1b31f37fd1209ca04291ce9064172551cd117f",
+    "native_baseline_sha256": "19f94178c840bfdad7324bb1b3b4565126fc7a0a6b89acc31209f28b137cfea0",
+    "native_csv_sha256": {
+      "orders_audit": "48c99e25e631abe12070a6a9b736eff8aac286f48301082b4e6c8a4cc886fb89",
+      "complete_trades": "4aee44ca7ecf46982b2fe69860cfc8dd064ba5cf2ef65bdd19e2558077641664"
+    },
+    "lean_orders_binding": "CURRENT_FILE_HASH_ONLY: no frozen expected SHA for orders.jsonl exists in B1 artifacts (receipt binds RESULT.json only); this input is not covered by a complete anti-tamper chain",
+    "lean_run": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\lean_mcp_20261012\\runs\\S4B1_FULLAUGUST_D250_20261012T090714Z_ab0a4fb2",
+    "lean_receipt_sha256": "cc62cc2913775ba13935f45a076c66f953fa6cdd92f0e17a86d1bbb5bcc56427",
+    "lean_orders_sha256": "e9a0f29f452f7992296aeb9edab4defa59fdc03e07e2bd9478871c190a5c9e46"
+  },
+  "raw_files": [
+    {
+      "file": "ticks_20260803.csv",
+      "status": "HASH_VERIFIED",
+      "sha256": "6ca5d7a95223229652170df835bfdb1a831def668a67815ea6819f6abfcb6f38",
+      "data_rows": 923807,
+      "rows_kept": 231
+    },
+    {
+      "file": "ticks_20260804.csv",
+      "status": "HASH_VERIFIED",
+      "sha256": "519e2ac79b8ab0536a6a937cd337623aecc30b70f9cf94fdece46df0a69a151e",
+      "data_rows": 886266,
+      "rows_kept": 72
+    },
+    {
+      "file": "ticks_20260805.csv",
+      "status": "HASH_VERIFIED",
+      "sha256": "9f74c650f9ebfbd71e2d05e4c94f731dbac77884bb69f2a2c74fe1330f36dd6e",
+      "data_rows": 978750,
+      "rows_kept": 211
+    },
+    {
+      "file": "ticks_20260806.csv",
+      "status": "HASH_VERIFIED",
+      "sha256": "c1645f630218c0c7f5ea7a1d3e48ef478a77603a0eb26472695c783cd3b8120f",
+      "data_rows": 983581,
+      "rows_kept": 120
+    },
+    {
+      "file": "ticks_20260807.csv",
+      "status": "HASH_VERIFIED",
+      "sha256": "c9eddadbfbedd3f9e3c14716fd1c1061949c5f71ca168a523638aacbaac5e449",
+      "data_rows": 1007265,
+      "rows_kept": 193
+    },
+    {
+      "file": "ticks_20260810.csv",
+      "status": "HASH_VERIFIED",
+      "sha256": "089560975c5e3a509e782e905a7a93ceb58f63433bbff98e28d00d6e8b3f27c4",
+      "data_rows": 942236,
+      "rows_kept": 56
+    },
+    {
+      "file": "ticks_20260812.csv",
+      "status": "HASH_VERIFIED",
+      "sha256": "b0a838ba87a58a6a87208e4c9c98c9aca5b58233fd8b7904d8e6efa005a6eaa9",
+      "data_rows": 928753,
+      "rows_kept": 112
+    },
+    {
+      "file": "ticks_20260813.csv",
+      "status": "HASH_VERIFIED",
+      "sha256": "0ae633349ab2e53824c480ae1312b7455503e872afc07c32dff9a17fbd73751f",
+      "data_rows": 971068,
+      "rows_kept": 285
+    },
+    {
+      "file": "ticks_20260814.csv",
+      "status": "HASH_VERIFIED",
+      "sha256": "dcaf18ac4a2ba406238fc234d64e2ed83c4853eb7317cde65c1d63ec16ff7c0e",
+      "data_rows": 893091,
+      "rows_kept": 355
+    },
+    {
+      "file": "ticks_20260817.csv",
+      "status": "HASH_VERIFIED",
+      "sha256": "bd02a2d3cc6c01222ce66f4e1a8dd0c29127d8cadad4569182fa63b6136ac6fd",
+      "data_rows": 894743,
+      "rows_kept": 59
+    },
+    {
+      "file": "ticks_20260818.csv",
+      "status": "HASH_VERIFIED",
+      "sha256": "16ec6fa5407a5fe347ff8827c195fe52b248a004c2170f62cd2715cdc4a13b28",
+      "data_rows": 923500,
+      "rows_kept": 76
+    },
+    {
+      "file": "ticks_20260819.csv",
+      "status": "HASH_VERIFIED",
+      "sha256": "0ba0b53f5b3a5cb0da90bad3691c04ae3f62cd65fccdcdfe1245a2fa5444ca74",
+      "data_rows": 1046326,
+      "rows_kept": 599
+    },
+    {
+      "file": "ticks_20260820.csv",
+      "status": "HASH_VERIFIED",
+      "sha256": "3f00bef4a298154e89f7bcbcf28c0792b55e2c14b83218244ccb66107bbb15d6",
+      "data_rows": 1032535,
+      "rows_kept": 211
+    },
+    {
+      "file": "ticks_20260821.csv",
+      "status": "HASH_VERIFIED",
+      "sha256": "46a06567e6dd93cb63da994e1c1b218d020cb78be63c4ba6535b5c3723a7b74c",
+      "data_rows": 1014673,
+      "rows_kept": 208
+    },
+    {
+      "file": "ticks_20260824.csv",
+      "status": "HASH_VERIFIED",
+      "sha256": "db4fd6f4ce6f3152c02a1b11aee4c10b519d2c71d4b42446df20bc7d8b7a7014",
+      "data_rows": 1108664,
+      "rows_kept": 296
+    },
+    {
+      "file": "ticks_20260825.csv",
+      "status": "HASH_VERIFIED",
+      "sha256": "a491f15af06ad3c2f8a5d3a23cbefaa34e7133e9cd1dab748f428e35f55f9fcb",
+      "data_rows": 1042384,
+      "rows_kept": 412
+    },
+    {
+      "file": "ticks_20260826.csv",
+      "status": "HASH_VERIFIED",
+      "sha256": "b63e16dc6a83889055744dbf3e7cb876ffd6144a18145d04fd5d253771aa04a9",
+      "data_rows": 956577,
+      "rows_kept": 360
+    },
+    {
+      "file": "ticks_20260827.csv",
+      "status": "HASH_VERIFIED",
+      "sha256": "317aa9b62ee66d0c0100a5b46181e0826b91bc6ea50ef5371eb947b76d1654d9",
+      "data_rows": 1004721,
+      "rows_kept": 107
+    },
+    {
+      "file": "ticks_20260828.csv",
+      "status": "HASH_VERIFIED",
+      "sha256": "ab06ba090c2cd0198d64e306b16068be0451351a86cf8786cb871c0c3318fdfc",
+      "data_rows": 1007890,
+      "rows_kept": 228
+    },
+    {
+      "file": "ticks_20260831.csv",
+      "status": "HASH_VERIFIED",
+      "sha256": "6e351e44dd8391bdf185b74a3f9490c936725e53287f08f1b0f5ea3f607ae3e2",
+      "data_rows": 1021721,
+      "rows_kept": 77
+    }
+  ],
+  "common_keys": 55,
+  "subsets": {
+    "DIFFERENT_RESERVE_MS": 12,
+    "SAME_MS_DIFFERENT_PLANNED_PRICE": 22,
+    "SAME_MS_SAME_PLANNED_PRICE": 21
+  },
+  "stats_all": {
+    "LEAN_FILL": {
+      "events": 55,
+      "candidates": {
+        "PREV_LAST_ROW_BEFORE": {
+          "preregistered": true,
+          "match": 22,
+          "no_match": 33,
+          "missing": 0
+        },
+        "SAME_MS_FIRST_ROW": {
+          "preregistered": true,
+          "match": 55,
+          "no_match": 0,
+          "missing": 0
+        },
+        "SAME_MS_LAST_ROW": {
+          "preregistered": true,
+          "match": 55,
+          "no_match": 0,
+          "missing": 0
+        },
+        "LAST_ROW_WITH_SIDE_FLAG_AT_OR_BEFORE": {
+          "preregistered": true,
+          "match": 49,
+          "no_match": 6,
+          "missing": 0
+        },
+        "SUPPLEMENTARY_FIRST_ROW_AT_OR_AFTER": {
+          "preregistered": false,
+          "match": 55,
+          "no_match": 0,
+          "missing": 0
+        }
+      },
+      "status": {
+        "DISCRIMINATING_MATCH_MULTIPLE_ROWS_AMBIGUOUS": 27,
+        "DISCRIMINATING_MATCH_SINGLE_ROW": 6,
+        "MATCH_NON_DISCRIMINATING_ALL_CANDIDATES_SAME_PRICE": 22
+      },
+      "any_row_in_window_matches": 55
+    },
+    "LEAN_RESERVE": {
+      "events": 55,
+      "candidates": {
+        "PREV_LAST_ROW_BEFORE": {
+          "preregistered": true,
+          "match": 18,
+          "no_match": 37,
+          "missing": 0
+        },
+        "SAME_MS_FIRST_ROW": {
+          "preregistered": true,
+          "match": 55,
+          "no_match": 0,
+          "missing": 0
+        },
+        "SAME_MS_LAST_ROW": {
+          "preregistered": true,
+          "match": 55,
+          "no_match": 0,
+          "missing": 0
+        },
+        "LAST_ROW_WITH_SIDE_FLAG_AT_OR_BEFORE": {
+          "preregistered": true,
+          "match": 43,
+          "no_match": 12,
+          "missing": 0
+        },
+        "SUPPLEMENTARY_FIRST_ROW_AT_OR_AFTER": {
+          "preregistered": false,
+          "match": 55,
+          "no_match": 0,
+          "missing": 0
+        }
+      },
+      "status": {
+        "DISCRIMINATING_MATCH_MULTIPLE_ROWS_AMBIGUOUS": 25,
+        "DISCRIMINATING_MATCH_SINGLE_ROW": 12,
+        "MATCH_NON_DISCRIMINATING_ALL_CANDIDATES_SAME_PRICE": 18
+      },
+      "any_row_in_window_matches": 55
+    },
+    "NATIVE_FILL": {
+      "events": 55,
+      "candidates": {
+        "PREV_LAST_ROW_BEFORE": {
+          "preregistered": true,
+          "match": 55,
+          "no_match": 0,
+          "missing": 0
+        },
+        "SAME_MS_FIRST_ROW": {
+          "preregistered": true,
+          "match": 0,
+          "no_match": 0,
+          "missing": 55
+        },
+        "SAME_MS_LAST_ROW": {
+          "preregistered": true,
+          "match": 0,
+          "no_match": 0,
+          "missing": 55
+        },
+        "LAST_ROW_WITH_SIDE_FLAG_AT_OR_BEFORE": {
+          "preregistered": true,
+          "match": 55,
+          "no_match": 0,
+          "missing": 0
+        },
+        "SUPPLEMENTARY_FIRST_ROW_AT_OR_AFTER": {
+          "preregistered": false,
+          "match": 20,
+          "no_match": 35,
+          "missing": 0
+        }
+      },
+      "status": {
+        "MATCH_NON_DISCRIMINATING_ALL_CANDIDATES_SAME_PRICE": 55
+      },
+      "any_row_in_window_matches": 55,
+      "fill_second_status": {
+        "MULTIPLE_ROWS_AMBIGUOUS": 55
+      }
+    },
+    "NATIVE_RESERVE": {
+      "events": 55,
+      "candidates": {
+        "PREV_LAST_ROW_BEFORE": {
+          "preregistered": true,
+          "match": 41,
+          "no_match": 14,
+          "missing": 0
+        },
+        "SAME_MS_FIRST_ROW": {
+          "preregistered": true,
+          "match": 33,
+          "no_match": 22,
+          "missing": 0
+        },
+        "SAME_MS_LAST_ROW": {
+          "preregistered": true,
+          "match": 33,
+          "no_match": 22,
+          "missing": 0
+        },
+        "LAST_ROW_WITH_SIDE_FLAG_AT_OR_BEFORE": {
+          "preregistered": true,
+          "match": 43,
+          "no_match": 12,
+          "missing": 0
+        },
+        "SUPPLEMENTARY_FIRST_ROW_AT_OR_AFTER": {
+          "preregistered": false,
+          "match": 33,
+          "no_match": 22,
+          "missing": 0
+        }
+      },
+      "status": {
+        "DISCRIMINATING_MATCH_MULTIPLE_ROWS_AMBIGUOUS": 16,
+        "DISCRIMINATING_MATCH_SINGLE_ROW": 20,
+        "MATCH_NON_DISCRIMINATING_ALL_CANDIDATES_SAME_PRICE": 19
+      },
+      "any_row_in_window_matches": 55
+    }
+  },
+  "stats_same_ms_different_planned_price": {
+    "LEAN_FILL": {
+      "events": 22,
+      "candidates": {
+        "PREV_LAST_ROW_BEFORE": {
+          "preregistered": true,
+          "match": 8,
+          "no_match": 14,
+          "missing": 0
+        },
+        "SAME_MS_FIRST_ROW": {
+          "preregistered": true,
+          "match": 22,
+          "no_match": 0,
+          "missing": 0
+        },
+        "SAME_MS_LAST_ROW": {
+          "preregistered": true,
+          "match": 22,
+          "no_match": 0,
+          "missing": 0
+        },
+        "LAST_ROW_WITH_SIDE_FLAG_AT_OR_BEFORE": {
+          "preregistered": true,
+          "match": 21,
+          "no_match": 1,
+          "missing": 0
+        },
+        "SUPPLEMENTARY_FIRST_ROW_AT_OR_AFTER": {
+          "preregistered": false,
+          "match": 22,
+          "no_match": 0,
+          "missing": 0
+        }
+      },
+      "status": {
+        "DISCRIMINATING_MATCH_MULTIPLE_ROWS_AMBIGUOUS": 13,
+        "DISCRIMINATING_MATCH_SINGLE_ROW": 1,
+        "MATCH_NON_DISCRIMINATING_ALL_CANDIDATES_SAME_PRICE": 8
+      },
+      "any_row_in_window_matches": 22
+    },
+    "LEAN_RESERVE": {
+      "events": 22,
+      "candidates": {
+        "PREV_LAST_ROW_BEFORE": {
+          "preregistered": true,
+          "match": 0,
+          "no_match": 22,
+          "missing": 0
+        },
+        "SAME_MS_FIRST_ROW": {
+          "preregistered": true,
+          "match": 22,
+          "no_match": 0,
+          "missing": 0
+        },
+        "SAME_MS_LAST_ROW": {
+          "preregistered": true,
+          "match": 22,
+          "no_match": 0,
+          "missing": 0
+        },
+        "LAST_ROW_WITH_SIDE_FLAG_AT_OR_BEFORE": {
+          "preregistered": true,
+          "match": 12,
+          "no_match": 10,
+          "missing": 0
+        },
+        "SUPPLEMENTARY_FIRST_ROW_AT_OR_AFTER": {
+          "preregistered": false,
+          "match": 22,
+          "no_match": 0,
+          "missing": 0
+        }
+      },
+      "status": {
+        "DISCRIMINATING_MATCH_MULTIPLE_ROWS_AMBIGUOUS": 12,
+        "DISCRIMINATING_MATCH_SINGLE_ROW": 10
+      },
+      "any_row_in_window_matches": 22
+    },
+    "NATIVE_FILL": {
+      "events": 22,
+      "candidates": {
+        "PREV_LAST_ROW_BEFORE": {
+          "preregistered": true,
+          "match": 22,
+          "no_match": 0,
+          "missing": 0
+        },
+        "SAME_MS_FIRST_ROW": {
+          "preregistered": true,
+          "match": 0,
+          "no_match": 0,
+          "missing": 22
+        },
+        "SAME_MS_LAST_ROW": {
+          "preregistered": true,
+          "match": 0,
+          "no_match": 0,
+          "missing": 22
+        },
+        "LAST_ROW_WITH_SIDE_FLAG_AT_OR_BEFORE": {
+          "preregistered": true,
+          "match": 22,
+          "no_match": 0,
+          "missing": 0
+        },
+        "SUPPLEMENTARY_FIRST_ROW_AT_OR_AFTER": {
+          "preregistered": false,
+          "match": 8,
+          "no_match": 14,
+          "missing": 0
+        }
+      },
+      "status": {
+        "MATCH_NON_DISCRIMINATING_ALL_CANDIDATES_SAME_PRICE": 22
+      },
+      "any_row_in_window_matches": 22,
+      "fill_second_status": {
+        "MULTIPLE_ROWS_AMBIGUOUS": 22
+      }
+    },
+    "NATIVE_RESERVE": {
+      "events": 22,
+      "candidates": {
+        "PREV_LAST_ROW_BEFORE": {
+          "preregistered": true,
+          "match": 22,
+          "no_match": 0,
+          "missing": 0
+        },
+        "SAME_MS_FIRST_ROW": {
+          "preregistered": true,
+          "match": 0,
+          "no_match": 22,
+          "missing": 0
+        },
+        "SAME_MS_LAST_ROW": {
+          "preregistered": true,
+          "match": 0,
+          "no_match": 22,
+          "missing": 0
+        },
+        "LAST_ROW_WITH_SIDE_FLAG_AT_OR_BEFORE": {
+          "preregistered": true,
+          "match": 10,
+          "no_match": 12,
+          "missing": 0
+        },
+        "SUPPLEMENTARY_FIRST_ROW_AT_OR_AFTER": {
+          "preregistered": false,
+          "match": 0,
+          "no_match": 22,
+          "missing": 0
+        }
+      },
+      "status": {
+        "DISCRIMINATING_MATCH_MULTIPLE_ROWS_AMBIGUOUS": 2,
+        "DISCRIMINATING_MATCH_SINGLE_ROW": 20
+      },
+      "any_row_in_window_matches": 22
+    }
+  },
+  "stats_same_ms_same_planned_price": {
+    "LEAN_FILL": {
+      "events": 21,
+      "candidates": {
+        "PREV_LAST_ROW_BEFORE": {
+          "preregistered": true,
+          "match": 8,
+          "no_match": 13,
+          "missing": 0
+        },
+        "SAME_MS_FIRST_ROW": {
+          "preregistered": true,
+          "match": 21,
+          "no_match": 0,
+          "missing": 0
+        },
+        "SAME_MS_LAST_ROW": {
+          "preregistered": true,
+          "match": 21,
+          "no_match": 0,
+          "missing": 0
+        },
+        "LAST_ROW_WITH_SIDE_FLAG_AT_OR_BEFORE": {
+          "preregistered": true,
+          "match": 18,
+          "no_match": 3,
+          "missing": 0
+        },
+        "SUPPLEMENTARY_FIRST_ROW_AT_OR_AFTER": {
+          "preregistered": false,
+          "match": 21,
+          "no_match": 0,
+          "missing": 0
+        }
+      },
+      "status": {
+        "DISCRIMINATING_MATCH_MULTIPLE_ROWS_AMBIGUOUS": 10,
+        "DISCRIMINATING_MATCH_SINGLE_ROW": 3,
+        "MATCH_NON_DISCRIMINATING_ALL_CANDIDATES_SAME_PRICE": 8
+      },
+      "any_row_in_window_matches": 21
+    },
+    "LEAN_RESERVE": {
+      "events": 21,
+      "candidates": {
+        "PREV_LAST_ROW_BEFORE": {
+          "preregistered": true,
+          "match": 18,
+          "no_match": 3,
+          "missing": 0
+        },
+        "SAME_MS_FIRST_ROW": {
+          "preregistered": true,
+          "match": 21,
+          "no_match": 0,
+          "missing": 0
+        },
+        "SAME_MS_LAST_ROW": {
+          "preregistered": true,
+          "match": 21,
+          "no_match": 0,
+          "missing": 0
+        },
+        "LAST_ROW_WITH_SIDE_FLAG_AT_OR_BEFORE": {
+          "preregistered": true,
+          "match": 21,
+          "no_match": 0,
+          "missing": 0
+        },
+        "SUPPLEMENTARY_FIRST_ROW_AT_OR_AFTER": {
+          "preregistered": false,
+          "match": 21,
+          "no_match": 0,
+          "missing": 0
+        }
+      },
+      "status": {
+        "DISCRIMINATING_MATCH_MULTIPLE_ROWS_AMBIGUOUS": 3,
+        "MATCH_NON_DISCRIMINATING_ALL_CANDIDATES_SAME_PRICE": 18
+      },
+      "any_row_in_window_matches": 21
+    },
+    "NATIVE_FILL": {
+      "events": 21,
+      "candidates": {
+        "PREV_LAST_ROW_BEFORE": {
+          "preregistered": true,
+          "match": 21,
+          "no_match": 0,
+          "missing": 0
+        },
+        "SAME_MS_FIRST_ROW": {
+          "preregistered": true,
+          "match": 0,
+          "no_match": 0,
+          "missing": 21
+        },
+        "SAME_MS_LAST_ROW": {
+          "preregistered": true,
+          "match": 0,
+          "no_match": 0,
+          "missing": 21
+        },
+        "LAST_ROW_WITH_SIDE_FLAG_AT_OR_BEFORE": {
+          "preregistered": true,
+          "match": 21,
+          "no_match": 0,
+          "missing": 0
+        },
+        "SUPPLEMENTARY_FIRST_ROW_AT_OR_AFTER": {
+          "preregistered": false,
+          "match": 8,
+          "no_match": 13,
+          "missing": 0
+        }
+      },
+      "status": {
+        "MATCH_NON_DISCRIMINATING_ALL_CANDIDATES_SAME_PRICE": 21
+      },
+      "any_row_in_window_matches": 21,
+      "fill_second_status": {
+        "MULTIPLE_ROWS_AMBIGUOUS": 21
+      }
+    },
+    "NATIVE_RESERVE": {
+      "events": 21,
+      "candidates": {
+        "PREV_LAST_ROW_BEFORE": {
+          "preregistered": true,
+          "match": 18,
+          "no_match": 3,
+          "missing": 0
+        },
+        "SAME_MS_FIRST_ROW": {
+          "preregistered": true,
+          "match": 21,
+          "no_match": 0,
+          "missing": 0
+        },
+        "SAME_MS_LAST_ROW": {
+          "preregistered": true,
+          "match": 21,
+          "no_match": 0,
+          "missing": 0
+        },
+        "LAST_ROW_WITH_SIDE_FLAG_AT_OR_BEFORE": {
+          "preregistered": true,
+          "match": 21,
+          "no_match": 0,
+          "missing": 0
+        },
+        "SUPPLEMENTARY_FIRST_ROW_AT_OR_AFTER": {
+          "preregistered": false,
+          "match": 21,
+          "no_match": 0,
+          "missing": 0
+        }
+      },
+      "status": {
+        "DISCRIMINATING_MATCH_MULTIPLE_ROWS_AMBIGUOUS": 3,
+        "MATCH_NON_DISCRIMINATING_ALL_CANDIDATES_SAME_PRICE": 18
+      },
+      "any_row_in_window_matches": 21
+    }
+  },
+  "same_ms_reservation_pairs": [
+    {
+      "key": "S4|GOLD|-1|S4_MOMENTUM_1785755700_-1|1785756000",
+      "subset": "SAME_MS_DIFFERENT_PLANNED_PRICE",
+      "native_matches": "PREV_LAST_ROW_BEFORE",
+      "lean_matches": "SAME_MS_FIRST_ROW|SAME_MS_LAST_ROW|LAST_ROW_WITH_SIDE_FLAG_AT_OR_BEFORE",
+      "rows_in_ms": 2,
+      "native_status": "DISCRIMINATING_MATCH_SINGLE_ROW",
+      "lean_status": "DISCRIMINATING_MATCH_MULTIPLE_ROWS_AMBIGUOUS"
+    },
+    {
+      "key": "S4|GOLD|-1|S4_MOMENTUM_1785759900_-1|1785760200",
+      "subset": "SAME_MS_DIFFERENT_PLANNED_PRICE",
+      "native_matches": "PREV_LAST_ROW_BEFORE",
+      "lean_matches": "SAME_MS_FIRST_ROW|SAME_MS_LAST_ROW|LAST_ROW_WITH_SIDE_FLAG_AT_OR_BEFORE",
+      "rows_in_ms": 2,
+      "native_status": "DISCRIMINATING_MATCH_SINGLE_ROW",
+      "lean_status": "DISCRIMINATING_MATCH_MULTIPLE_ROWS_AMBIGUOUS"
+    },
+    {
+      "key": "S4|GOLD|-1|S4_MOMENTUM_1785760200_-1|1785760500",
+      "subset": "SAME_MS_SAME_PLANNED_PRICE",
+      "native_matches": "PREV_LAST_ROW_BEFORE|SAME_MS_FIRST_ROW|SAME_MS_LAST_ROW|LAST_ROW_WITH_SIDE_FLAG_AT_OR_BEFORE",
+      "lean_matches": "PREV_LAST_ROW_BEFORE|SAME_MS_FIRST_ROW|SAME_MS_LAST_ROW|LAST_ROW_WITH_SIDE_FLAG_AT_OR_BEFORE",
+      "rows_in_ms": 2,
+      "native_status": "MATCH_NON_DISCRIMINATING_ALL_CANDIDATES_SAME_PRICE",
+      "lean_status": "MATCH_NON_DISCRIMINATING_ALL_CANDIDATES_SAME_PRICE"
+    },
+    {
+      "key": "S4|GOLD|-1|S4_MOMENTUM_1785773400_-1|1785773700",
+      "subset": "SAME_MS_SAME_PLANNED_PRICE",
+      "native_matches": "PREV_LAST_ROW_BEFORE|SAME_MS_FIRST_ROW|SAME_MS_LAST_ROW|LAST_ROW_WITH_SIDE_FLAG_AT_OR_BEFORE",
+      "lean_matches": "PREV_LAST_ROW_BEFORE|SAME_MS_FIRST_ROW|SAME_MS_LAST_ROW|LAST_ROW_WITH_SIDE_FLAG_AT_OR_BEFORE",
+      "rows_in_ms": 1,
+      "native_status": "MATCH_NON_DISCRIMINATING_ALL_CANDIDATES_SAME_PRICE",
+      "lean_status": "MATCH_NON_DISCRIMINATING_ALL_CANDIDATES_SAME_PRICE"
+    },
+    {
+      "key": "S4|GOLD|-1|S4_MOMENTUM_1786031400_-1|1786031700",
+      "subset": "SAME_MS_DIFFERENT_PLANNED_PRICE",
+      "native_matches": "PREV_LAST_ROW_BEFORE|LAST_ROW_WITH_SIDE_FLAG_AT_OR_BEFORE",
+      "lean_matches": "SAME_MS_FIRST_ROW|SAME_MS_LAST_ROW",
+      "rows_in_ms": 1,
+      "native_status": "DISCRIMINATING_MATCH_SINGLE_ROW",
+      "lean_status": "DISCRIMINATING_MATCH_SINGLE_ROW"
+    },
+    {
+      "key": "S4|GOLD|-1|S4_MOMENTUM_1786374600_-1|1786374900",
+      "subset": "SAME_MS_SAME_PLANNED_PRICE",
+      "native_matches": "PREV_LAST_ROW_BEFORE|SAME_MS_FIRST_ROW|SAME_MS_LAST_ROW|LAST_ROW_WITH_SIDE_FLAG_AT_OR_BEFORE",
+      "lean_matches": "PREV_LAST_ROW_BEFORE|SAME_MS_FIRST_ROW|SAME_MS_LAST_ROW|LAST_ROW_WITH_SIDE_FLAG_AT_OR_BEFORE",
+      "rows_in_ms": 2,
+      "native_status": "MATCH_NON_DISCRIMINATING_ALL_CANDIDATES_SAME_PRICE",
+      "lean_status": "MATCH_NON_DISCRIMINATING_ALL_CANDIDATES_SAME_PRICE"
+    },
+    {
+      "key": "S4|GOLD|-1|S4_MOMENTUM_1786616100_-1|1786616400",
+      "subset": "SAME_MS_SAME_PLANNED_PRICE",
+      "native_matches": "PREV_LAST_ROW_BEFORE|SAME_MS_FIRST_ROW|SAME_MS_LAST_ROW|LAST_ROW_WITH_SIDE_FLAG_AT_OR_BEFORE",
+      "lean_matches": "PREV_LAST_ROW_BEFORE|SAME_MS_FIRST_ROW|SAME_MS_LAST_ROW|LAST_ROW_WITH_SIDE_FLAG_AT_OR_BEFORE",
+      "rows_in_ms": 2,
+      "native_status": "MATCH_NON_DISCRIMINATING_ALL_CANDIDATES_SAME_PRICE",
+      "lean_status": "MATCH_NON_DISCRIMINATING_ALL_CANDIDATES_SAME_PRICE"
+    },
+    {
+      "key": "S4|GOLD|-1|S4_MOMENTUM_1786617900_-1|1786618200",
+      "subset": "SAME_MS_SAME_PLANNED_PRICE",
+      "native_matches": "PREV_LAST_ROW_BEFORE|SAME_MS_FIRST_ROW|SAME_MS_LAST_ROW|LAST_ROW_WITH_SIDE_FLAG_AT_OR_BEFORE",
+      "lean_matches": "PREV_LAST_ROW_BEFORE|SAME_MS_FIRST_ROW|SAME_MS_LAST_ROW|LAST_ROW_WITH_SIDE_FLAG_AT_OR_BEFORE",
+      "rows_in_ms": 1,
+      "native_status": "MATCH_NON_DISCRIMINATING_ALL_CANDIDATES_SAME_PRICE",
+      "lean_status": "MATCH_NON_DISCRIMINATING_ALL_CANDIDATES_SAME_PRICE"
+    },
+    {
+      "key": "S4|GOLD|-1|S4_MOMENTUM_1787074500_-1|1787074800",
+      "subset": "SAME_MS_DIFFERENT_PLANNED_PRICE",
+      "native_matches": "PREV_LAST_ROW_BEFORE",
+      "lean_matches": "SAME_MS_FIRST_ROW|SAME_MS_LAST_ROW|LAST_ROW_WITH_SIDE_FLAG_AT_OR_BEFORE",
+      "rows_in_ms": 2,
+      "native_status": "DISCRIMINATING_MATCH_SINGLE_ROW",
+      "lean_status": "DISCRIMINATING_MATCH_MULTIPLE_ROWS_AMBIGUOUS"
+    },
+    {
+      "key": "S4|GOLD|-1|S4_MOMENTUM_1787238000_-1|1787238300",
+      "subset": "SAME_MS_DIFFERENT_PLANNED_PRICE",
+      "native_matches": "PREV_LAST_ROW_BEFORE|LAST_ROW_WITH_SIDE_FLAG_AT_OR_BEFORE",
+      "lean_matches": "SAME_MS_FIRST_ROW|SAME_MS_LAST_ROW",
+      "rows_in_ms": 1,
+      "native_status": "DISCRIMINATING_MATCH_SINGLE_ROW",
+      "lean_status": "DISCRIMINATING_MATCH_SINGLE_ROW"
+    },
+    {
+      "key": "S4|GOLD|-1|S4_MOMENTUM_1787653500_-1|1787653800",
+      "subset": "SAME_MS_DIFFERENT_PLANNED_PRICE",
+      "native_matches": "PREV_LAST_ROW_BEFORE|LAST_ROW_WITH_SIDE_FLAG_AT_OR_BEFORE",
+      "lean_matches": "SAME_MS_FIRST_ROW|SAME_MS_LAST_ROW",
+      "rows_in_ms": 1,
+      "native_status": "DISCRIMINATING_MATCH_MULTIPLE_ROWS_AMBIGUOUS",
+      "lean_status": "DISCRIMINATING_MATCH_SINGLE_ROW"
+    },
+    {
+      "key": "S4|GOLD|-1|S4_MOMENTUM_1787674800_-1|1787675100",
+      "subset": "SAME_MS_SAME_PLANNED_PRICE",
+      "native_matches": "SAME_MS_FIRST_ROW|SAME_MS_LAST_ROW|LAST_ROW_WITH_SIDE_FLAG_AT_OR_BEFORE",
+      "lean_matches": "SAME_MS_FIRST_ROW|SAME_MS_LAST_ROW|LAST_ROW_WITH_SIDE_FLAG_AT_OR_BEFORE",
+      "rows_in_ms": 2,
+      "native_status": "DISCRIMINATING_MATCH_MULTIPLE_ROWS_AMBIGUOUS",
+      "lean_status": "DISCRIMINATING_MATCH_MULTIPLE_ROWS_AMBIGUOUS"
+    },
+    {
+      "key": "S4|GOLD|-1|S4_MOMENTUM_1787739900_-1|1787740200",
+      "subset": "SAME_MS_DIFFERENT_PLANNED_PRICE",
+      "native_matches": "PREV_LAST_ROW_BEFORE|LAST_ROW_WITH_SIDE_FLAG_AT_OR_BEFORE",
+      "lean_matches": "SAME_MS_FIRST_ROW|SAME_MS_LAST_ROW",
+      "rows_in_ms": 1,
+      "native_status": "DISCRIMINATING_MATCH_SINGLE_ROW",
+      "lean_status": "DISCRIMINATING_MATCH_SINGLE_ROW"
+    },
+    {
+      "key": "S4|GOLD|-1|S4_MOMENTUM_1787745600_-1|1787745900",
+      "subset": "SAME_MS_DIFFERENT_PLANNED_PRICE",
+      "native_matches": "PREV_LAST_ROW_BEFORE|LAST_ROW_WITH_SIDE_FLAG_AT_OR_BEFORE",
+      "lean_matches": "SAME_MS_FIRST_ROW|SAME_MS_LAST_ROW",
+      "rows_in_ms": 1,
+      "native_status": "DISCRIMINATING_MATCH_SINGLE_ROW",
+      "lean_status": "DISCRIMINATING_MATCH_SINGLE_ROW"
+    },
+    {
+      "key": "S4|GOLD|-1|S4_MOMENTUM_1787747100_-1|1787747400",
+      "subset": "SAME_MS_SAME_PLANNED_PRICE",
+      "native_matches": "PREV_LAST_ROW_BEFORE|SAME_MS_FIRST_ROW|SAME_MS_LAST_ROW|LAST_ROW_WITH_SIDE_FLAG_AT_OR_BEFORE",
+      "lean_matches": "PREV_LAST_ROW_BEFORE|SAME_MS_FIRST_ROW|SAME_MS_LAST_ROW|LAST_ROW_WITH_SIDE_FLAG_AT_OR_BEFORE",
+      "rows_in_ms": 1,
+      "native_status": "MATCH_NON_DISCRIMINATING_ALL_CANDIDATES_SAME_PRICE",
+      "lean_status": "MATCH_NON_DISCRIMINATING_ALL_CANDIDATES_SAME_PRICE"
+    },
+    {
+      "key": "S4|GOLD|-1|S4_MOMENTUM_1787766600_-1|1787766900",
+      "subset": "SAME_MS_DIFFERENT_PLANNED_PRICE",
+      "native_matches": "PREV_LAST_ROW_BEFORE",
+      "lean_matches": "SAME_MS_FIRST_ROW|SAME_MS_LAST_ROW|LAST_ROW_WITH_SIDE_FLAG_AT_OR_BEFORE",
+      "rows_in_ms": 2,
+      "native_status": "DISCRIMINATING_MATCH_SINGLE_ROW",
+      "lean_status": "DISCRIMINATING_MATCH_MULTIPLE_ROWS_AMBIGUOUS"
+    },
+    {
+      "key": "S4|GOLD|-1|S4_MOMENTUM_1787825700_-1|1787826000",
+      "subset": "SAME_MS_SAME_PLANNED_PRICE",
+      "native_matches": "PREV_LAST_ROW_BEFORE|SAME_MS_FIRST_ROW|SAME_MS_LAST_ROW|LAST_ROW_WITH_SIDE_FLAG_AT_OR_BEFORE",
+      "lean_matches": "PREV_LAST_ROW_BEFORE|SAME_MS_FIRST_ROW|SAME_MS_LAST_ROW|LAST_ROW_WITH_SIDE_FLAG_AT_OR_BEFORE",
+      "rows_in_ms": 2,
+      "native_status": "MATCH_NON_DISCRIMINATING_ALL_CANDIDATES_SAME_PRICE",
+      "lean_status": "MATCH_NON_DISCRIMINATING_ALL_CANDIDATES_SAME_PRICE"
+    },
+    {
+      "key": "S4|GOLD|-1|S4_MOMENTUM_1787845500_-1|1787845800",
+      "subset": "SAME_MS_DIFFERENT_PLANNED_PRICE",
+      "native_matches": "PREV_LAST_ROW_BEFORE|LAST_ROW_WITH_SIDE_FLAG_AT_OR_BEFORE",
+      "lean_matches": "SAME_MS_FIRST_ROW|SAME_MS_LAST_ROW",
+      "rows_in_ms": 1,
+      "native_status": "DISCRIMINATING_MATCH_SINGLE_ROW",
+      "lean_status": "DISCRIMINATING_MATCH_SINGLE_ROW"
+    },
+    {
+      "key": "S4|GOLD|-1|S4_MOMENTUM_1788194700_-1|1788195000",
+      "subset": "SAME_MS_DIFFERENT_PLANNED_PRICE",
+      "native_matches": "PREV_LAST_ROW_BEFORE",
+      "lean_matches": "SAME_MS_FIRST_ROW|SAME_MS_LAST_ROW|LAST_ROW_WITH_SIDE_FLAG_AT_OR_BEFORE",
+      "rows_in_ms": 2,
+      "native_status": "DISCRIMINATING_MATCH_SINGLE_ROW",
+      "lean_status": "DISCRIMINATING_MATCH_MULTIPLE_ROWS_AMBIGUOUS"
+    },
+    {
+      "key": "S4|GOLD|1|S4_MOMENTUM_1785861900_1|1785862200",
+      "subset": "SAME_MS_SAME_PLANNED_PRICE",
+      "native_matches": "SAME_MS_FIRST_ROW|SAME_MS_LAST_ROW|LAST_ROW_WITH_SIDE_FLAG_AT_OR_BEFORE",
+      "lean_matches": "SAME_MS_FIRST_ROW|SAME_MS_LAST_ROW|LAST_ROW_WITH_SIDE_FLAG_AT_OR_BEFORE",
+      "rows_in_ms": 2,
+      "native_status": "DISCRIMINATING_MATCH_MULTIPLE_ROWS_AMBIGUOUS",
+      "lean_status": "DISCRIMINATING_MATCH_MULTIPLE_ROWS_AMBIGUOUS"
+    },
+    {
+      "key": "S4|GOLD|1|S4_MOMENTUM_1785927300_1|1785927600",
+      "subset": "SAME_MS_DIFFERENT_PLANNED_PRICE",
+      "native_matches": "PREV_LAST_ROW_BEFORE",
+      "lean_matches": "SAME_MS_FIRST_ROW|SAME_MS_LAST_ROW|LAST_ROW_WITH_SIDE_FLAG_AT_OR_BEFORE",
+      "rows_in_ms": 2,
+      "native_status": "DISCRIMINATING_MATCH_SINGLE_ROW",
+      "lean_status": "DISCRIMINATING_MATCH_MULTIPLE_ROWS_AMBIGUOUS"
+    },
+    {
+      "key": "S4|GOLD|1|S4_MOMENTUM_1785942000_1|1785942300",
+      "subset": "SAME_MS_SAME_PLANNED_PRICE",
+      "native_matches": "PREV_LAST_ROW_BEFORE|SAME_MS_FIRST_ROW|SAME_MS_LAST_ROW|LAST_ROW_WITH_SIDE_FLAG_AT_OR_BEFORE",
+      "lean_matches": "PREV_LAST_ROW_BEFORE|SAME_MS_FIRST_ROW|SAME_MS_LAST_ROW|LAST_ROW_WITH_SIDE_FLAG_AT_OR_BEFORE",
+      "rows_in_ms": 2,
+      "native_status": "MATCH_NON_DISCRIMINATING_ALL_CANDIDATES_SAME_PRICE",
+      "lean_status": "MATCH_NON_DISCRIMINATING_ALL_CANDIDATES_SAME_PRICE"
+    },
+    {
+      "key": "S4|GOLD|1|S4_MOMENTUM_1785950100_1|1785950400",
+      "subset": "SAME_MS_SAME_PLANNED_PRICE",
+      "native_matches": "SAME_MS_FIRST_ROW|SAME_MS_LAST_ROW|LAST_ROW_WITH_SIDE_FLAG_AT_OR_BEFORE",
+      "lean_matches": "SAME_MS_FIRST_ROW|SAME_MS_LAST_ROW|LAST_ROW_WITH_SIDE_FLAG_AT_OR_BEFORE",
+      "rows_in_ms": 2,
+      "native_status": "DISCRIMINATING_MATCH_MULTIPLE_ROWS_AMBIGUOUS",
+      "lean_status": "DISCRIMINATING_MATCH_MULTIPLE_ROWS_AMBIGUOUS"
+    },
+    {
+      "key": "S4|GOLD|1|S4_MOMENTUM_1786017300_1|1786017600",
+      "subset": "SAME_MS_DIFFERENT_PLANNED_PRICE",
+      "native_matches": "PREV_LAST_ROW_BEFORE",
+      "lean_matches": "SAME_MS_FIRST_ROW|SAME_MS_LAST_ROW|LAST_ROW_WITH_SIDE_FLAG_AT_OR_BEFORE",
+      "rows_in_ms": 2,
+      "native_status": "DISCRIMINATING_MATCH_SINGLE_ROW",
+      "lean_status": "DISCRIMINATING_MATCH_MULTIPLE_ROWS_AMBIGUOUS"
+    },
+    {
+      "key": "S4|GOLD|1|S4_MOMENTUM_1786100100_1|1786100400",
+      "subset": "SAME_MS_DIFFERENT_PLANNED_PRICE",
+      "native_matches": "PREV_LAST_ROW_BEFORE",
+      "lean_matches": "SAME_MS_FIRST_ROW|SAME_MS_LAST_ROW|LAST_ROW_WITH_SIDE_FLAG_AT_OR_BEFORE",
+      "rows_in_ms": 2,
+      "native_status": "DISCRIMINATING_MATCH_SINGLE_ROW",
+      "lean_status": "DISCRIMINATING_MATCH_MULTIPLE_ROWS_AMBIGUOUS"
+    },
+    {
+      "key": "S4|GOLD|1|S4_MOMENTUM_1786101000_1|1786101300",
+      "subset": "SAME_MS_DIFFERENT_PLANNED_PRICE",
+      "native_matches": "PREV_LAST_ROW_BEFORE|LAST_ROW_WITH_SIDE_FLAG_AT_OR_BEFORE",
+      "lean_matches": "SAME_MS_FIRST_ROW|SAME_MS_LAST_ROW",
+      "rows_in_ms": 1,
+      "native_status": "DISCRIMINATING_MATCH_SINGLE_ROW",
+      "lean_status": "DISCRIMINATING_MATCH_SINGLE_ROW"
+    },
+    {
+      "key": "S4|GOLD|1|S4_MOMENTUM_1786106400_1|1786106700",
+      "subset": "SAME_MS_SAME_PLANNED_PRICE",
+      "native_matches": "PREV_LAST_ROW_BEFORE|SAME_MS_FIRST_ROW|SAME_MS_LAST_ROW|LAST_ROW_WITH_SIDE_FLAG_AT_OR_BEFORE",
+      "lean_matches": "PREV_LAST_ROW_BEFORE|SAME_MS_FIRST_ROW|SAME_MS_LAST_ROW|LAST_ROW_WITH_SIDE_FLAG_AT_OR_BEFORE",
+      "rows_in_ms": 2,
+      "native_status": "MATCH_NON_DISCRIMINATING_ALL_CANDIDATES_SAME_PRICE",
+      "lean_status": "MATCH_NON_DISCRIMINATING_ALL_CANDIDATES_SAME_PRICE"
+    },
+    {
+      "key": "S4|GOLD|1|S4_MOMENTUM_1786530900_1|1786531200",
+      "subset": "SAME_MS_SAME_PLANNED_PRICE",
+      "native_matches": "PREV_LAST_ROW_BEFORE|SAME_MS_FIRST_ROW|SAME_MS_LAST_ROW|LAST_ROW_WITH_SIDE_FLAG_AT_OR_BEFORE",
+      "lean_matches": "PREV_LAST_ROW_BEFORE|SAME_MS_FIRST_ROW|SAME_MS_LAST_ROW|LAST_ROW_WITH_SIDE_FLAG_AT_OR_BEFORE",
+      "rows_in_ms": 2,
+      "native_status": "MATCH_NON_DISCRIMINATING_ALL_CANDIDATES_SAME_PRICE",
+      "lean_status": "MATCH_NON_DISCRIMINATING_ALL_CANDIDATES_SAME_PRICE"
+    },
+    {
+      "key": "S4|GOLD|1|S4_MOMENTUM_1786536600_1|1786536900",
+      "subset": "SAME_MS_SAME_PLANNED_PRICE",
+      "native_matches": "PREV_LAST_ROW_BEFORE|SAME_MS_FIRST_ROW|SAME_MS_LAST_ROW|LAST_ROW_WITH_SIDE_FLAG_AT_OR_BEFORE",
+      "lean_matches": "PREV_LAST_ROW_BEFORE|SAME_MS_FIRST_ROW|SAME_MS_LAST_ROW|LAST_ROW_WITH_SIDE_FLAG_AT_OR_BEFORE",
+      "rows_in_ms": 2,
+      "native_status": "MATCH_NON_DISCRIMINATING_ALL_CANDIDATES_SAME_PRICE",
+      "lean_status": "MATCH_NON_DISCRIMINATING_ALL_CANDIDATES_SAME_PRICE"
+    },
+    {
+      "key": "S4|GOLD|1|S4_MOMENTUM_1786633500_1|1786633800",
+      "subset": "SAME_MS_SAME_PLANNED_PRICE",
+      "native_matches": "PREV_LAST_ROW_BEFORE|SAME_MS_FIRST_ROW|SAME_MS_LAST_ROW|LAST_ROW_WITH_SIDE_FLAG_AT_OR_BEFORE",
+      "lean_matches": "PREV_LAST_ROW_BEFORE|SAME_MS_FIRST_ROW|SAME_MS_LAST_ROW|LAST_ROW_WITH_SIDE_FLAG_AT_OR_BEFORE",
+      "rows_in_ms": 2,
+      "native_status": "MATCH_NON_DISCRIMINATING_ALL_CANDIDATES_SAME_PRICE",
+      "lean_status": "MATCH_NON_DISCRIMINATING_ALL_CANDIDATES_SAME_PRICE"
+    },
+    {
+      "key": "S4|GOLD|1|S4_MOMENTUM_1786704000_1|1786704300",
+      "subset": "SAME_MS_DIFFERENT_PLANNED_PRICE",
+      "native_matches": "PREV_LAST_ROW_BEFORE|LAST_ROW_WITH_SIDE_FLAG_AT_OR_BEFORE",
+      "lean_matches": "SAME_MS_FIRST_ROW|SAME_MS_LAST_ROW",
+      "rows_in_ms": 1,
+      "native_status": "DISCRIMINATING_MATCH_SINGLE_ROW",
+      "lean_status": "DISCRIMINATING_MATCH_SINGLE_ROW"
+    },
+    {
+      "key": "S4|GOLD|1|S4_MOMENTUM_1786710000_1|1786710300",
+      "subset": "SAME_MS_SAME_PLANNED_PRICE",
+      "native_matches": "PREV_LAST_ROW_BEFORE|SAME_MS_FIRST_ROW|SAME_MS_LAST_ROW|LAST_ROW_WITH_SIDE_FLAG_AT_OR_BEFORE",
+      "lean_matches": "PREV_LAST_ROW_BEFORE|SAME_MS_FIRST_ROW|SAME_MS_LAST_ROW|LAST_ROW_WITH_SIDE_FLAG_AT_OR_BEFORE",
+      "rows_in_ms": 1,
+      "native_status": "MATCH_NON_DISCRIMINATING_ALL_CANDIDATES_SAME_PRICE",
+      "lean_status": "MATCH_NON_DISCRIMINATING_ALL_CANDIDATES_SAME_PRICE"
+    },
+    {
+      "key": "S4|GOLD|1|S4_MOMENTUM_1786719300_1|1786719600",
+      "subset": "SAME_MS_SAME_PLANNED_PRICE",
+      "native_matches": "PREV_LAST_ROW_BEFORE|SAME_MS_FIRST_ROW|SAME_MS_LAST_ROW|LAST_ROW_WITH_SIDE_FLAG_AT_OR_BEFORE",
+      "lean_matches": "PREV_LAST_ROW_BEFORE|SAME_MS_FIRST_ROW|SAME_MS_LAST_ROW|LAST_ROW_WITH_SIDE_FLAG_AT_OR_BEFORE",
+      "rows_in_ms": 2,
+      "native_status": "MATCH_NON_DISCRIMINATING_ALL_CANDIDATES_SAME_PRICE",
+      "lean_status": "MATCH_NON_DISCRIMINATING_ALL_CANDIDATES_SAME_PRICE"
+    },
+    {
+      "key": "S4|GOLD|1|S4_MOMENTUM_1786719600_1|1786719900",
+      "subset": "SAME_MS_DIFFERENT_PLANNED_PRICE",
+      "native_matches": "PREV_LAST_ROW_BEFORE",
+      "lean_matches": "SAME_MS_FIRST_ROW|SAME_MS_LAST_ROW|LAST_ROW_WITH_SIDE_FLAG_AT_OR_BEFORE",
+      "rows_in_ms": 2,
+      "native_status": "DISCRIMINATING_MATCH_SINGLE_ROW",
+      "lean_status": "DISCRIMINATING_MATCH_MULTIPLE_ROWS_AMBIGUOUS"
+    },
+    {
+      "key": "S4|GOLD|1|S4_MOMENTUM_1786720800_1|1786721100",
+      "subset": "SAME_MS_DIFFERENT_PLANNED_PRICE",
+      "native_matches": "PREV_LAST_ROW_BEFORE",
+      "lean_matches": "SAME_MS_FIRST_ROW|SAME_MS_LAST_ROW|LAST_ROW_WITH_SIDE_FLAG_AT_OR_BEFORE",
+      "rows_in_ms": 2,
+      "native_status": "DISCRIMINATING_MATCH_SINGLE_ROW",
+      "lean_status": "DISCRIMINATING_MATCH_MULTIPLE_ROWS_AMBIGUOUS"
+    },
+    {
+      "key": "S4|GOLD|1|S4_MOMENTUM_1786724400_1|1786724700",
+      "subset": "SAME_MS_SAME_PLANNED_PRICE",
+      "native_matches": "PREV_LAST_ROW_BEFORE|SAME_MS_FIRST_ROW|SAME_MS_LAST_ROW|LAST_ROW_WITH_SIDE_FLAG_AT_OR_BEFORE",
+      "lean_matches": "PREV_LAST_ROW_BEFORE|SAME_MS_FIRST_ROW|SAME_MS_LAST_ROW|LAST_ROW_WITH_SIDE_FLAG_AT_OR_BEFORE",
+      "rows_in_ms": 2,
+      "native_status": "MATCH_NON_DISCRIMINATING_ALL_CANDIDATES_SAME_PRICE",
+      "lean_status": "MATCH_NON_DISCRIMINATING_ALL_CANDIDATES_SAME_PRICE"
+    },
+    {
+      "key": "S4|GOLD|1|S4_MOMENTUM_1786962300_1|1786962600",
+      "subset": "SAME_MS_SAME_PLANNED_PRICE",
+      "native_matches": "PREV_LAST_ROW_BEFORE|SAME_MS_FIRST_ROW|SAME_MS_LAST_ROW|LAST_ROW_WITH_SIDE_FLAG_AT_OR_BEFORE",
+      "lean_matches": "PREV_LAST_ROW_BEFORE|SAME_MS_FIRST_ROW|SAME_MS_LAST_ROW|LAST_ROW_WITH_SIDE_FLAG_AT_OR_BEFORE",
+      "rows_in_ms": 2,
+      "native_status": "MATCH_NON_DISCRIMINATING_ALL_CANDIDATES_SAME_PRICE",
+      "lean_status": "MATCH_NON_DISCRIMINATING_ALL_CANDIDATES_SAME_PRICE"
+    },
+    {
+      "key": "S4|GOLD|1|S4_MOMENTUM_1787137500_1|1787137800",
+      "subset": "SAME_MS_SAME_PLANNED_PRICE",
+      "native_matches": "PREV_LAST_ROW_BEFORE|SAME_MS_FIRST_ROW|SAME_MS_LAST_ROW|LAST_ROW_WITH_SIDE_FLAG_AT_OR_BEFORE",
+      "lean_matches": "PREV_LAST_ROW_BEFORE|SAME_MS_FIRST_ROW|SAME_MS_LAST_ROW|LAST_ROW_WITH_SIDE_FLAG_AT_OR_BEFORE",
+      "rows_in_ms": 2,
+      "native_status": "MATCH_NON_DISCRIMINATING_ALL_CANDIDATES_SAME_PRICE",
+      "lean_status": "MATCH_NON_DISCRIMINATING_ALL_CANDIDATES_SAME_PRICE"
+    },
+    {
+      "key": "S4|GOLD|1|S4_MOMENTUM_1787139600_1|1787139900",
+      "subset": "SAME_MS_SAME_PLANNED_PRICE",
+      "native_matches": "PREV_LAST_ROW_BEFORE|SAME_MS_FIRST_ROW|SAME_MS_LAST_ROW|LAST_ROW_WITH_SIDE_FLAG_AT_OR_BEFORE",
+      "lean_matches": "PREV_LAST_ROW_BEFORE|SAME_MS_FIRST_ROW|SAME_MS_LAST_ROW|LAST_ROW_WITH_SIDE_FLAG_AT_OR_BEFORE",
+      "rows_in_ms": 1,
+      "native_status": "MATCH_NON_DISCRIMINATING_ALL_CANDIDATES_SAME_PRICE",
+      "lean_status": "MATCH_NON_DISCRIMINATING_ALL_CANDIDATES_SAME_PRICE"
+    },
+    {
+      "key": "S4|GOLD|1|S4_MOMENTUM_1787310900_1|1787311200",
+      "subset": "SAME_MS_DIFFERENT_PLANNED_PRICE",
+      "native_matches": "PREV_LAST_ROW_BEFORE",
+      "lean_matches": "SAME_MS_FIRST_ROW|SAME_MS_LAST_ROW|LAST_ROW_WITH_SIDE_FLAG_AT_OR_BEFORE",
+      "rows_in_ms": 2,
+      "native_status": "DISCRIMINATING_MATCH_SINGLE_ROW",
+      "lean_status": "DISCRIMINATING_MATCH_MULTIPLE_ROWS_AMBIGUOUS"
+    },
+    {
+      "key": "S4|GOLD|1|S4_MOMENTUM_1787314200_1|1787314500",
+      "subset": "SAME_MS_DIFFERENT_PLANNED_PRICE",
+      "native_matches": "PREV_LAST_ROW_BEFORE|LAST_ROW_WITH_SIDE_FLAG_AT_OR_BEFORE",
+      "lean_matches": "SAME_MS_FIRST_ROW|SAME_MS_LAST_ROW",
+      "rows_in_ms": 1,
+      "native_status": "DISCRIMINATING_MATCH_SINGLE_ROW",
+      "lean_status": "DISCRIMINATING_MATCH_SINGLE_ROW"
+    },
+    {
+      "key": "S4|GOLD|1|S4_MOMENTUM_1787332800_1|1787333100",
+      "subset": "SAME_MS_DIFFERENT_PLANNED_PRICE",
+      "native_matches": "PREV_LAST_ROW_BEFORE",
+      "lean_matches": "SAME_MS_FIRST_ROW|SAME_MS_LAST_ROW|LAST_ROW_WITH_SIDE_FLAG_AT_OR_BEFORE",
+      "rows_in_ms": 2,
+      "native_status": "DISCRIMINATING_MATCH_SINGLE_ROW",
+      "lean_status": "DISCRIMINATING_MATCH_MULTIPLE_ROWS_AMBIGUOUS"
+    },
+    {
+      "key": "S4|GOLD|1|S4_MOMENTUM_1787910900_1|1787911200",
+      "subset": "SAME_MS_DIFFERENT_PLANNED_PRICE",
+      "native_matches": "PREV_LAST_ROW_BEFORE|LAST_ROW_WITH_SIDE_FLAG_AT_OR_BEFORE",
+      "lean_matches": "SAME_MS_FIRST_ROW|SAME_MS_LAST_ROW",
+      "rows_in_ms": 1,
+      "native_status": "DISCRIMINATING_MATCH_MULTIPLE_ROWS_AMBIGUOUS",
+      "lean_status": "DISCRIMINATING_MATCH_SINGLE_ROW"
+    }
+  ],
+  "candidate_definitions": {
+    "PREV_LAST_ROW_BEFORE": "last raw row with time \u003C anchor (preregistered)",
+    "SAME_MS_FIRST_ROW": "first raw row with time == anchor (preregistered)",
+    "SAME_MS_LAST_ROW": "last raw row with time == anchor (preregistered)",
+    "LAST_ROW_WITH_SIDE_FLAG_AT_OR_BEFORE": "last row with time \u003C= anchor carrying TICK_FLAG_ASK (long) / TICK_FLAG_BID (short) (preregistered)",
+    "SUPPLEMENTARY_FIRST_ROW_AT_OR_AFTER": "first row with time \u003E= anchor; the B1 R2 LEAN delay rule, NOT preregistered, reported separately"
+  },
+  "price_tolerance": 0.005,
+  "window_caveat": "All candidates (previous row, side-flag row, nearest match) are searched only within the \u002B-2 s window (native fill: from cached-2 s to max(cached\u002B2.25 s, end of deal second)); they are not the latest quote over unlimited history",
+  "post_hoc_descriptive_not_preregistered": [
+    {
+      "subset": "DIFFERENT_RESERVE_MS",
+      "anchor_ms_row_flags": "280",
+      "prev_row_matches": true,
+      "same_ms_first_row_matches": true,
+      "events": 1
+    },
+    {
+      "subset": "DIFFERENT_RESERVE_MS",
+      "anchor_ms_row_flags": "280/1030",
+      "prev_row_matches": false,
+      "same_ms_first_row_matches": true,
+      "events": 11
+    },
+    {
+      "subset": "SAME_MS_DIFFERENT_PLANNED_PRICE",
+      "anchor_ms_row_flags": "280",
+      "prev_row_matches": true,
+      "same_ms_first_row_matches": false,
+      "events": 10
+    },
+    {
+      "subset": "SAME_MS_DIFFERENT_PLANNED_PRICE",
+      "anchor_ms_row_flags": "280/1030",
+      "prev_row_matches": true,
+      "same_ms_first_row_matches": false,
+      "events": 12
+    },
+    {
+      "subset": "SAME_MS_SAME_PLANNED_PRICE",
+      "anchor_ms_row_flags": "280",
+      "prev_row_matches": true,
+      "same_ms_first_row_matches": true,
+      "events": 5
+    },
+    {
+      "subset": "SAME_MS_SAME_PLANNED_PRICE",
+      "anchor_ms_row_flags": "280/1026",
+      "prev_row_matches": true,
+      "same_ms_first_row_matches": true,
+      "events": 13
+    },
+    {
+      "subset": "SAME_MS_SAME_PLANNED_PRICE",
+      "anchor_ms_row_flags": "280/1030",
+      "prev_row_matches": false,
+      "same_ms_first_row_matches": true,
+      "events": 3
+    }
+  ],
+  "mechanisms_to_verify_not_established": [
+    "MT5 tester quote cache per millisecond",
+    "OnTick merging of same-ms rows",
+    "synchronous OrderSend blocking under 250 ms delay"
+  ],
+  "claims_not_made": [
+    "causation identified",
+    "profit improvement",
+    "native parity",
+    "score",
+    "Champion",
+    "live readiness"
+  ]
+}

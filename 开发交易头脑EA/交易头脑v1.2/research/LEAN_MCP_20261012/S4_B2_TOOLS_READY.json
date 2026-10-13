@@ -1,0 +1,33 @@
+{
+  "schema": "S4_B2_TOOLS_READY_V1",
+  "status": "B2_READ_ONLY_DIAGNOSTIC_CLOSED_CODEX_VERIFIED",
+  "written_utc": "2026-10-13",
+  "implementer": "Claude",
+  "independent_verification": "Codex diagnostics/S4_B2_CODEX_VERIFY_20261013T142855Z: rebuild 0 warnings 0 errors, selftest 12/12, events.csv and evidence_rows.csv byte-identical, stats_all identical",
+  "tool_sources": {
+    "tools/S4QuoteDiag/QuoteDiag.cs": "c553a742c89ac864f57c24a41b3818629cd507967e5ae0de257b1d3a252bdda1",
+    "tools/S4QuoteDiag/Program.cs": "2d05d63767468d022e6e960d96ba7594fac99edf4906b75c1a36425ad07f6bad",
+    "tools/S4QuoteDiag/S4QuoteDiag.csproj": "114ff284ad70de0a557c91137f1372d4e303cec551ea94e6fa289df1e53f8f72",
+    "tools/S4QuoteDiag/run_quotediag.ps1": "ca228058b64487aebc9b83c7c61943be3bc9fc00c8cd8b03d56195424a801c0a"
+  },
+  "run": {
+    "dir": "diagnostics/S4_B2_QUOTEDIAG_20261013T142824Z",
+    "receipt_sha256": "48f1b8490f617199107b34aaef21211ae3b83a5d30285b4e0830bd58505ca165",
+    "dll_sha256": "ab8e0bd4506cf68e2ae01eefaff009d13ee3995e81ac68a4476fb8523eb58574",
+    "selftest_result_sha256": "05a10333794c9fa1c8aa81c9caff02e80d3e875e81553c3cdb8abdd624597222",
+    "outputs": {"SUMMARY.json": "8a3043d25214ce97ec2936f2d23fb96ad0eaba299aa43fe04d5d73460fd91f1c", "events.csv": "85aab5a2f4cab10c2fd60fcd3e569c451430ffbb052c50c3fb6ec3c0e8e31ed8", "evidence_rows.csv": "cbc1d2e6028b2a3a8f10be0937d94162fa1818d91d28009242697afdc0fcf67e"},
+    "superseded_run_kept": "diagnostics/S4_B2_QUOTEDIAG_20261013T142633Z (time-semantics labels only)"
+  },
+  "report": {"research/S4_B2_QUOTE_DIAGNOSTIC_REPORT_CN.md": "81adeeeb1a1067e82c68db2755080ced250b2e517f93194eae3dad3ccc0f2193"},
+  "lean_orders_input": {
+    "tool_binding": "CURRENT_FILE_HASH_ONLY (no in-tool expected-hash gate; SUMMARY.json lean_orders_binding wording overstated and is corrected by the report)",
+    "external_archive_check": "Codex outputs/TradingBrain_S4_LEAN_B1_20261013/MANIFEST.json (94fea769b9b2b02eb0e692e0dec4a0aee0c4f80e091f13ce467ed7db19d0da65) expects orders.jsonl e9a0f29f452f7992296aeb9edab4defa59fdc03e07e2bd9478871c190a5c9e46 = current; ZIP dba9526f5ab9ffbd54f943742a301daa9b2d87fbaeb6ae074514e0cf8b75f928; rechecked by Claude"
+  },
+  "next_evidence_not_started": [
+    "non-trading quote/OnTick probe: tests quote cache and OnTick merging only, cannot test synchronous OrderSend 250 ms blocking",
+    "separately pre-registered tester order probe (historical tester only, never demo/live): DEAL_TIME_MSC plus quotes before/after the request"
+  ],
+  "b1_r2_trading_code_changed": false,
+  "score_status": "SCORE_TARGETS_UNSET",
+  "claims_not_made": ["causation identified", "profit improvement", "native parity", "Champion", "live readiness"]
+}

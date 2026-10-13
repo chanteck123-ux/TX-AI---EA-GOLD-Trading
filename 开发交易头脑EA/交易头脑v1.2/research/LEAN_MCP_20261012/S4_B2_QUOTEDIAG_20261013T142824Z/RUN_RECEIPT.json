@@ -1,0 +1,27 @@
+﻿{
+    "schema":  "S4_B2_QUOTEDIAG_RECEIPT_V1",
+    "id":  "S4_B2_QUOTEDIAG_20261013T142824Z",
+    "started_utc":  "2026-10-13T14:28:24.6876244Z",
+    "status":  "DIAGNOSTIC_COMPLETE_REVIEW_REQUIRED",
+    "source_sha256":  {
+                          "QuoteDiag.cs":  "c553a742c89ac864f57c24a41b3818629cd507967e5ae0de257b1d3a252bdda1",
+                          "Program.cs":  "2d05d63767468d022e6e960d96ba7594fac99edf4906b75c1a36425ad07f6bad",
+                          "S4QuoteDiag.csproj":  "114ff284ad70de0a557c91137f1372d4e303cec551ea94e6fa289df1e53f8f72",
+                          "run_quotediag.ps1":  "ca228058b64487aebc9b83c7c61943be3bc9fc00c8cd8b03d56195424a801c0a"
+                      },
+    "scope":  "READ_ONLY_RAW_TICK_EVIDENCE; no engine, no trading change; score N/A",
+    "data_role":  "AUGUST_2026_ALREADY_USED_DEVELOPMENT_NOT_OOS",
+    "dll_sha256":  "ab8e0bd4506cf68e2ae01eefaff009d13ee3995e81ac68a4476fb8523eb58574",
+    "build_log_sha256":  "db3a9e4e696c9579825b29daf02bdf55b8aaf67559bfbdd6bd905e5e7eb8444e",
+    "selftest_result_sha256":  "05a10333794c9fa1c8aa81c9caff02e80d3e875e81553c3cdb8abdd624597222",
+    "command":  "dotnet S4QuoteDiag.dll --raw-dir C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\quantconnect_20260920\\data\\raw --export-manifest C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\quantconnect_20260920\\data\\EXPORT_MANIFEST.json --lean-tick-manifest C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\quantconnect_20260920\\data\\LEAN_TICK_MANIFEST.json --native-baseline C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\lean_mcp_20261012\\research\\S4_NATIVE_AUG_BASELINE.json --native-audit C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration9_20261004\\S4_BASE_AUG_D250\\session\\run\\audit --lean-run C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\lean_mcp_20261012\\runs\\S4B1_FULLAUGUST_D250_20261012T090714Z_ab0a4fb2 --out-dir C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\lean_mcp_20261012\\diagnostics\\S4_B2_QUOTEDIAG_20261013T142824Z\\out",
+    "scan_exit_code":  0,
+    "summary_status":  "DIAGNOSTIC_COMPLETE_REVIEW_REQUIRED",
+    "outputs":  {
+                    "SUMMARY.json":  "8a3043d25214ce97ec2936f2d23fb96ad0eaba299aa43fe04d5d73460fd91f1c",
+                    "events.csv":  "85aab5a2f4cab10c2fd60fcd3e569c451430ffbb052c50c3fb6ec3c0e8e31ed8",
+                    "evidence_rows.csv":  "cbc1d2e6028b2a3a8f10be0937d94162fa1818d91d28009242697afdc0fcf67e"
+                },
+    "scan_log_sha256":  "14e253f3adecf6a59847a21903ce5e6a3eb47df1875a1b9e0df1b10ccf39ae0f",
+    "completed_utc":  "2026-10-13T14:28:35.0456622Z"
+}

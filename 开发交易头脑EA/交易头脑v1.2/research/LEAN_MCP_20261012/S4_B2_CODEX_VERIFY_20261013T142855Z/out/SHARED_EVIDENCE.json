@@ -1,0 +1,16 @@
+{
+  "status": "BYTE_IDENTICAL_SHARED_EVIDENCE",
+  "files": [
+    {
+      "name": "events.csv",
+      "sha256": "85aab5a2f4cab10c2fd60fcd3e569c451430ffbb052c50c3fb6ec3c0e8e31ed8",
+      "identical_to": "../../S4_B2_QUOTEDIAG_20261013T142824Z/out/events.csv"
+    },
+    {
+      "name": "evidence_rows.csv",
+      "sha256": "cbc1d2e6028b2a3a8f10be0937d94162fa1818d91d28009242697afdc0fcf67e",
+      "identical_to": "../../S4_B2_QUOTEDIAG_20261013T142824Z/out/evidence_rows.csv"
+    }
+  ],
+  "original_workspace_outputs_preserved": true
+}
