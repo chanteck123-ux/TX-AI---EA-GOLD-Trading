@@ -1,0 +1,56 @@
+{
+  "sid": "S4",
+  "arm": "S4_BASE_AUG_D250",
+  "candidate_id": "TB500_S4_BE125",
+  "run_id": "D4BF2385",
+  "account": {
+    "net_usd": 102.03,
+    "equity_dd_usd": 33.22,
+    "max_relative_equity_dd_pct": 5.5903205117,
+    "native_pf": 1.4616115459,
+    "complete_position_net_pf": 1.464342602284622,
+    "complete_positions": 56,
+    "native_exit_trades": 56,
+    "win_rate_pct": 50,
+    "cost_usd": 5.14,
+    "cost_breakdown_signed": {
+      "profit": 107.17,
+      "commission": -5.14,
+      "swap": 0,
+      "fee": 0
+    },
+    "matched_round_trip_standard_lots": 0.6700000000000004,
+    "recorded_cost_usd_per_round_trip_standard_lot": 7.671641791044771,
+    "average_net_win": 11.491428571428571,
+    "average_net_loss_absolute": 7.847499999999999,
+    "average_win_loss_ratio": 1.4643426022846222,
+    "longest_loss_streak": 3,
+    "final_balance": 602.03,
+    "dd_definition": "Native maximum equity drawdown amount and native maximum relative equity drawdown percent; their peaks may differ.",
+    "cost_definition": "Commission+swap+fees from matched full lifecycles, divided by opening standard lots. Actual bid/ask spread is already in net and is not subtracted again. This is recorded explicit cost, not an independently estimated spread/slippage total.",
+    "native_pf_raw": 1.4616115459
+  },
+  "conditions": {
+    "from_date": "2026.08.01",
+    "to_date": "2026.09.01",
+    "deposit": 500,
+    "currency": "USD",
+    "symbol": "GOLD",
+    "period": "M5",
+    "model": 4,
+    "leverage": 1000,
+    "execution_delay_ms": 250
+  },
+  "proof": {
+    "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration9_20261004\\S4_BASE_AUG_D250\\verification\\2026-10-04T05-30-34-949Z\\VERIFICATION.json",
+    "sha256": "00b0a546edd00d0b56ee074074e2a945e527011cba8df418e5453d1bf02d00af"
+  },
+  "source": {
+    "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration9_20261004\\S4_BASE_AUG_D250\\source\\TB500_S4_BE125.mq5",
+    "sha256": "f6abe1abc8d9cfca27e6483f344aab03110b9df11b8d1b458e3fce432d63be47"
+  },
+  "ex5": {
+    "path": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\mt5_iteration5_20260927\\S4_BE125_AUG_R2\\session\\private\\builds\\ecb22e7a182b405393241c51a8e82016\\TB500_S4_BE125.ex5",
+    "sha256": "dfc67a50a6fe7cc4ec297ad4d59017409bafe4244dadcbf18d410568d474bbfc"
+  }
+}

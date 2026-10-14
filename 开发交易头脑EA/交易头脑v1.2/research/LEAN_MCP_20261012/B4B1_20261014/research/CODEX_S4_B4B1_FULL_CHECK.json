@@ -1,0 +1,125 @@
+{
+  "schema": "B4B1_CODEX_FULL_CHECK_V1",
+  "run": "S4B4B1_FULLAUGUST_D250_20261014T133218Z_f3df8aa4",
+  "comparison": [
+    {
+      "file": "signals.jsonl",
+      "byte_equal": true
+    },
+    {
+      "file": "decisions.jsonl",
+      "byte_equal": true
+    },
+    {
+      "file": "trades.jsonl",
+      "byte_equal": true
+    },
+    {
+      "file": "protection.jsonl",
+      "byte_equal": true
+    },
+    {
+      "file": "equity_curve.csv",
+      "byte_equal": true
+    },
+    {
+      "file": "lean_transactions.csv",
+      "byte_equal": true
+    },
+    {
+      "file": "orders.jsonl_except_new_model_times",
+      "line_equal": true
+    }
+  ],
+  "timing_entries": 56,
+  "timing_failures": 0,
+  "min_engine_lag_ms": 14.0,
+  "max_engine_lag_ms": 398.0,
+  "source_identity": [
+    {
+      "path": "lean_mcp_20261012\\lean\\algorithms\\S4B4B\\S4CoreB4B.cs",
+      "pass": true
+    },
+    {
+      "path": "lean_mcp_20261012\\lean\\algorithms\\S4B4B\\S4CoreB4B.diff",
+      "pass": true
+    },
+    {
+      "path": "lean_mcp_20261012\\lean\\algorithms\\S4B4B\\DeadlineQuoteTracker.cs",
+      "pass": true
+    },
+    {
+      "path": "lean_mcp_20261012\\lean\\algorithms\\S4B4B\\S4B4B1Algorithm.cs",
+      "pass": true
+    },
+    {
+      "path": "lean_mcp_20261012\\lean\\algorithms\\S4B4B\\TradingBrain.S4B4B1.csproj",
+      "pass": true
+    },
+    {
+      "path": "lean_mcp_20261012\\lean\\algorithms\\S4B4B\\run_s4b4b1.ps1",
+      "pass": true
+    },
+    {
+      "path": "lean_mcp_20261012\\lean\\algorithms\\S4B4B\\fixtures\\Program.cs",
+      "pass": true
+    },
+    {
+      "path": "lean_mcp_20261012\\lean\\algorithms\\S4B4B\\fixtures\\S4B4B.Fixtures.csproj",
+      "pass": true
+    },
+    {
+      "path": "lean_mcp_20261012\\lean\\algorithms\\S4\\S4Core.cs",
+      "pass": true
+    },
+    {
+      "path": "lean_mcp_20261012\\lean\\algorithms\\S4\\fixtures\\Program.cs",
+      "pass": true
+    },
+    {
+      "path": "lean_mcp_20261012\\lean\\algorithms\\S4\\fixtures\\S4.Fixtures.csproj",
+      "pass": true
+    },
+    {
+      "path": "lean_mcp_20261012\\lean\\algorithms\\S4B4A\\QuoteFieldAdapter.cs",
+      "pass": true
+    },
+    {
+      "path": "lean_mcp_20261012\\lean\\algorithms\\S4B4A\\S4B4AAlgorithm.cs",
+      "pass": true
+    },
+    {
+      "path": "lean_mcp_20261012\\lean\\algorithms\\S4B4A\\TradingBrain.S4B4A.csproj",
+      "pass": true
+    },
+    {
+      "path": "lean_mcp_20261012\\lean\\algorithms\\S4B4A\\run_s4b4a.ps1",
+      "pass": true
+    },
+    {
+      "path": "lean_mcp_20261012\\lean\\algorithms\\S4B4A\\fixtures\\Program.cs",
+      "pass": true
+    },
+    {
+      "path": "lean_mcp_20261012\\lean\\algorithms\\S4B4A\\fixtures\\S4B4A.Fixtures.csproj",
+      "pass": true
+    },
+    {
+      "path": "mt5_iteration9_20261004\\algorithm\\C7Signals.Core.cs",
+      "pass": true
+    },
+    {
+      "path": "mt5_iteration9_20261004\\algorithm\\Strategy123.cs",
+      "pass": true
+    },
+    {
+      "path": "mt5_iteration9_20261004\\algorithm\\Strategy456.cs",
+      "pass": true
+    },
+    {
+      "path": "mt5_iteration9_20261004\\algorithm\\StrategyScalping.cs",
+      "pass": true
+    }
+  ],
+  "dll_same_as_smoke": true
+}

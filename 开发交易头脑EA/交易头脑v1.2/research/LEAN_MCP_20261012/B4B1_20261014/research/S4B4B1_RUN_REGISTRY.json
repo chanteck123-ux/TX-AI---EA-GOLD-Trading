@@ -1,0 +1,20 @@
+{
+  "runs": [
+    {
+      "id": "S4B4B1_SMOKE_D250_20261014T133139Z_f80bcfbe",
+      "dir": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\lean_mcp_20261012\\runs\\S4B4B1_SMOKE_D250_20261014T133139Z_f80bcfbe",
+      "status": "SMOKE_PASS_REVIEW_REQUIRED",
+      "correction_reason": "",
+      "mode": "Smoke",
+      "utc": "2026-10-14T13:31:39.5120457Z"
+    },
+    {
+      "mode": "FullAugust",
+      "correction_reason": "",
+      "status": "FULL_AUGUST_COMPLETE_REVIEW_REQUIRED",
+      "utc": "2026-10-14T13:32:18.6996121Z",
+      "dir": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\lean_mcp_20261012\\runs\\S4B4B1_FULLAUGUST_D250_20261014T133218Z_f3df8aa4",
+      "id": "S4B4B1_FULLAUGUST_D250_20261014T133218Z_f3df8aa4"
+    }
+  ]
+}

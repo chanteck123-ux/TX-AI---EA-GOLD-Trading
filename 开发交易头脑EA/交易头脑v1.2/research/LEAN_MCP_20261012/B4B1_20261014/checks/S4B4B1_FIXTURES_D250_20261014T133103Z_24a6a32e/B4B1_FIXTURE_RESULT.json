@@ -1,0 +1,30 @@
+{
+  "schema": "S4B4B1_FIXTURES_V1",
+  "status": "PASS",
+  "passed": 21,
+  "failed": [],
+  "passed_names": [
+    "equivalence_hook_null_latency250_trace_identical",
+    "equivalence_scenario_nontrivial",
+    "equivalence_latency0_with_hook_set_trace_identical",
+    "no_deadline_row_fill_at_last_row_before_crossing",
+    "crossing_row_price_not_used_and_change_vs_b4a_rule_flagged",
+    "submit_on_crossing_row_when_valid_lag_and_wait",
+    "model_times_trace_written",
+    "deadline_ms_row_included_in_snapshot",
+    "deadline_row_moves_start_row_flagged_separately_from_price",
+    "same_ms_deadline_rows_all_applied_in_order",
+    "invalid_crossing_row_snapshot_from_first_crossing",
+    "submitted_on_first_valid_ready_row_extra_wait_and_lag_disclosed",
+    "invalid_deadline_state_rejected",
+    "invalid_deadline_reject_traced",
+    "no_post_deadline_row_cancelled_at_end",
+    "b3_slot1_request_uses_previous_quote_on_280_row",
+    "b3_slot1_fill_equals_native_4052_88",
+    "b3_slot1_b4a_rule_coincides_because_378_is_flag_280",
+    "b3_slot1_variant_quote_row_after_deadline_b4b1_differs_from_b4a_rule",
+    "cross_day_deadline_snapshot_and_submit",
+    "initial_not_ready_rows_counted_and_entry_after_seed"
+  ],
+  "scope": "PURE_CSHARP_FORK_EQUIVALENCE_AND_DEADLINE_BOUNDARIES_NO_ENGINE"
+}

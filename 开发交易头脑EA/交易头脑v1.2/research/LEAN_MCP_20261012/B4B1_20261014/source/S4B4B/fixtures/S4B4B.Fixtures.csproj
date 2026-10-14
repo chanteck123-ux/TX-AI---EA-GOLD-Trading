@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <!-- B4B1 fixtures (pure C#; no LEAN, no engine). Links the frozen original S4Core (TradingBrain.S4) next to the fork
+       (TradingBrain.S4B4B) for the hook-null / latency-0 equivalence tests. B1 90 and B4A 27 run unchanged from their own projects. -->
+  <PropertyGroup>
+    <OutputType>Exe</OutputType><TargetFramework>net10.0</TargetFramework><ImplicitUsings>enable</ImplicitUsings><Nullable>disable</Nullable>
+    <AssemblyName>S4B4B.Fixtures</AssemblyName><EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <I9Src>../../../../../mt5_iteration9_20261004/algorithm</I9Src>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="../S4CoreB4B.cs" Link="S4CoreB4B.cs" />
+    <Compile Include="../DeadlineQuoteTracker.cs" Link="DeadlineQuoteTracker.cs" />
+    <Compile Include="../../S4/S4Core.cs" Link="frozen/S4Core.cs" />
+    <Compile Include="../../S4B4A/QuoteFieldAdapter.cs" Link="frozen/QuoteFieldAdapter.cs" />
+    <Compile Include="$(I9Src)/C7Signals.Core.cs" Link="i9/C7Signals.Core.cs" />
+    <Compile Include="$(I9Src)/Strategy123.cs" Link="i9/Strategy123.cs" />
+    <Compile Include="$(I9Src)/Strategy456.cs" Link="i9/Strategy456.cs" />
+    <Compile Include="$(I9Src)/StrategyScalping.cs" Link="i9/StrategyScalping.cs" />
+  </ItemGroup>
+</Project>

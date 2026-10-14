@@ -38,7 +38,7 @@
     "mode_selection_for_next_task": "CODEX_AND_CLAUDE",
     "research_engine": "QUANTCONNECT_LEAN_CSHARP",
     "execution_engine": "FXPRO_MT5_MQL5",
-    "route_status": "S4_B4A_FULL_AUGUST_TRADE_COMPARISON_MATCHED_REVIEW_REQUIRED",
+    "route_status": "S4_B4B1_FULL_AUGUST_SAME_AS_B4A_RESEARCH_ONLY",
     "mt5_independent_of_lean": true,
     "live_signal_bridge_required": false,
     "selected_mode_scope": "USER_CONFIRMED_CLAUDE_CODE_COOPERATION_20261008",
@@ -1525,5 +1525,26 @@
     "score_status": "SCORE_TARGETS_UNSET",
     "evidence": "LEAN_MCP_20261012/B4A_20261014/research/CODEX_S4_B4A_FULL_REVIEW_CN.md",
     "no_new_mt5_compile": true
+  },
+  "s4_b4b1": {
+    "status": "CODEX_AND_CLAUDE_REVIEW_COMPLETE_USED_DEVELOPMENT_ONLY",
+    "candidate": "TB500_S4_BE125_LEAN_B4B1",
+    "run": "S4B4B1_FULLAUGUST_D250_20261014T133218Z_f3df8aa4",
+    "net_usd": 102.03,
+    "net_change_vs_b4a": 0,
+    "equity_tick_dd_usd": 35.88,
+    "equity_tick_dd_pct": 6.071916092132757,
+    "complete_positions": 56,
+    "net_pf": 1.4643426022846224,
+    "timing_price_changes": 0,
+    "timing_start_row_changes": 0,
+    "deadline_same_ms_observed": 0,
+    "engine_lag_ms_min": 14,
+    "engine_lag_ms_max": 398,
+    "score": "N/A",
+    "score_status": "SCORE_TARGETS_UNSET",
+    "b4b2_implemented": false,
+    "live_ready": false,
+    "evidence": "LEAN_MCP_20261012/B4B1_20261014/research/CODEX_S4_B4B1_FINAL_REVIEW_CN.md"
   }
 }

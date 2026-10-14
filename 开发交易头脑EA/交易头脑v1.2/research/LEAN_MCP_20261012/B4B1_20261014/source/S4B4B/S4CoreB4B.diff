@@ -1,0 +1,96 @@
+--- S4/S4Core.cs (frozen ee509e1d)
++++ S4B4B/S4CoreB4B.cs
+@@ -8,7 +8,10 @@
+ // Source: outputs/TradingBrain_I11_Seven_Strategies_20261004/MT5/S4/TB500_S4_BE125/TB500_S4_BE125.mq5
+ // SHA256 f6abe1abc8d9cfca27e6483f344aab03110b9df11b8d1b458e3fce432d63be47 (read-only reference).
+ // Line references below are to that file. Anything not in that file is labelled as an assumption.
+-namespace TradingBrain.S4
++// B4B1 FORK of frozen lean/algorithms/S4/S4Core.cs (ee509e1d...). Only differences (see S4CoreB4B.diff):
++// namespace; EntryQuote; PendingEntryDeadlineMs; EntryQuoteAtDeadline hook; ProcessDue entry branch;
++// ExecuteEntry takes the quote explicitly; an ENTRY_MODEL_TIMES trace record. Hook null == original semantics.
++namespace TradingBrain.S4B4B
+ {
+     public sealed class S4Config
+     {
+@@ -78,6 +81,16 @@
+ 
+     public sealed class S4Plan { public double Entry, Sl, Tp, Volume, Risk, Budget, Margin, Unit, Distance, Spread; }
+ 
++    // B4B1: the effective quote state as of the 250 ms deadline (all rows with ms <= deadline applied in raw order),
++    // captured by the algorithm BEFORE applying the first row with ms > deadline. Provenance fields are evidence only.
++    public sealed class EntryQuote
++    {
++        public double Bid, Ask; public bool Ready;
++        public long DeadlineMs, QuoteRowMs, QuoteRowSequence, CrossingRowMs, CrossingRowSequence;
++        public int QuoteRowOrdinalInMs, DeadlineRows;
++        public bool Valid => Ready && Bid > 0 && Ask >= Bid;
++    }
++
+     public static class S4Math
+     {
+         public static double Profit(S4Config c, int dir, double lots, double entry, double exit) => dir * (exit - entry) * c.ContractSize * lots;
+@@ -194,6 +207,9 @@
+             return (side, atSide, fee, atSide - fee);
+         }
+         public bool RequestActive => request != null;
++        // B4B1: deadline of the pending entry request (null when none); the hook supplies the deadline quote.
++        public long? PendingEntryDeadlineMs => request?.DueMs;
++        public Func<S4Book, EntryQuote> EntryQuoteAtDeadline;
+ 
+         // ------------------------------------------------------------------ tick
+         // Native order: server-side SL/TP and delayed requests are resolved by the tester before
+@@ -329,17 +345,23 @@
+             consume?.Invoke(s); // MarkUsed at reservation, before OrderSend (line 3014)
+             DecisionReasons["RESERVED"] = DecisionReasons.TryGetValue("RESERVED", out var n) ? n + 1 : 1;
+             trace?.Write("orders", new { server_msc = Q.ServerMs, @event = "RESERVED", book = b.Id, key = s.Key, planned_price = p.Entry, volume = p.Volume, sl = p.Sl, tp = p.Tp, risk = p.Risk, budget = p.Budget, unit_risk_min_lot = p.Unit, distance = p.Distance, spread = p.Spread, margin_model = p.Margin, due_msc = b.DueMs });
+-            if (c.LatencyMs <= 0) ExecuteEntry(b);
++            if (c.LatencyMs <= 0) ExecuteEntry(b, Q.Bid, Q.Ask, null);
+         }
+ 
+-        void ExecuteEntry(S4Book b)
++        void ExecuteEntry(S4Book b, double bid, double ask, EntryQuote dq)
+         {
+             request = null; b.Pending = false;
+-            int dir = b.Direction; double price = dir > 0 ? Q.Ask : Q.Bid;
+-            if (!S4Math.StopsValid(c, dir, price, b.RequestSl, b.RequestTp, Q.Bid, Q.Ask, false))
++            if (dq != null && !dq.Valid)
++            {
++                b.Rejected = true; Count("ENTRY_REJECT_INVALID_QUOTE_AT_DEADLINE");
++                trace?.Write("orders", new { server_msc = Q.ServerMs, @event = "BROKER_REJECT_MODEL", book = b.Id, reason = "INVALID_QUOTE_AT_DEADLINE", bid, ask, deadline_msc = dq.DeadlineMs });
++                return;
++            }
++            int dir = b.Direction; double price = dir > 0 ? ask : bid;
++            if (!S4Math.StopsValid(c, dir, price, b.RequestSl, b.RequestTp, bid, ask, false))
+             {
+                 b.Rejected = true; Count("ENTRY_REJECT_INVALID_STOPS_AT_EXECUTION");
+-                trace?.Write("orders", new { server_msc = Q.ServerMs, @event = "BROKER_REJECT_MODEL", book = b.Id, reason = "INVALID_STOPS_AT_EXECUTION", bid = Q.Bid, ask = Q.Ask });
++                trace?.Write("orders", new { server_msc = Q.ServerMs, @event = "BROKER_REJECT_MODEL", book = b.Id, reason = "INVALID_STOPS_AT_EXECUTION", bid, ask });
+                 return;
+             }
+             var f = broker.Execute(b, dir * b.RequestVolume, price, "S4_ENTRY");
+@@ -355,6 +377,11 @@
+             b.InitialR = S4Math.InitialRisk(c, dir, b.InitialVolume, b.EntryPrice, b.InitialSl, false);
+             Count("ENTRY_FILLED");
+             trace?.Write("orders", new { server_msc = Q.ServerMs, @event = "ENTRY_FILLED", book = b.Id, order_id = f.OrderId, direction = dir, lots = b.Volume, price = f.Price, planned_price = b.PlannedEntry, fee = f.Fee, sl = b.Sl, tp = b.Tp, initial_r = b.InitialR, budget = b.Budget, latency_ms = Q.ServerMs - b.ReservedMs });
++            if (dq != null)
++                trace?.Write("orders", new { server_msc = Q.ServerMs, @event = "ENTRY_MODEL_TIMES", book = b.Id, order_id = f.OrderId, model_request_msc = b.ReservedMs, model_deadline_msc = dq.DeadlineMs,
++                    quote_row_msc = dq.QuoteRowMs, quote_row_sequence = dq.QuoteRowSequence, quote_row_ordinal_in_ms = dq.QuoteRowOrdinalInMs, deadline_rows = dq.DeadlineRows,
++                    crossing_row_msc = dq.CrossingRowMs, crossing_row_sequence = dq.CrossingRowSequence, engine_submit_msc = Q.ServerMs, engine_lag_ms = Q.ServerMs - dq.DeadlineMs,
++                    deadline_bid = bid, deadline_ask = ask, submit_row_bid = Q.Bid, submit_row_ask = Q.Ask });
+             AfterFillApplied?.Invoke("ENTRY order=" + f.OrderId);
+         }
+ 
+@@ -459,7 +486,12 @@
+ 
+         void ProcessDue()
+         {
+-            if (request != null && request.DueMs <= Q.ServerMs) ExecuteEntry(request);
++            if (EntryQuoteAtDeadline == null) { if (request != null && request.DueMs <= Q.ServerMs) ExecuteEntry(request, Q.Bid, Q.Ask, null); }
++            else if (request != null && request.DueMs < Q.ServerMs)   // B4B1: strictly after the deadline; quote = deadline state
++            {
++                var dq = EntryQuoteAtDeadline(request) ?? throw new InvalidOperationException("B4B1: deadline crossed without a captured deadline quote");
++                ExecuteEntry(request, dq.Bid, dq.Ask, dq);
++            }
+             foreach (var b in Books.Where(x => x.Open && x.PendingManage != null && x.PendingManage.DueMs <= Q.ServerMs).ToList()) Apply(b, b.PendingManage);
+         }
+ 

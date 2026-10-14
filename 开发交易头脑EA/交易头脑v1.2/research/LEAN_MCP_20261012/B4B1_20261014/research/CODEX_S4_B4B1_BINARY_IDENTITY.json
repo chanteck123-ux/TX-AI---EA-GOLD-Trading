@@ -1,0 +1,18 @@
+[
+  {
+    "file": "RESULT.json",
+    "pass": true
+  },
+  {
+    "file": "config.json",
+    "pass": true
+  },
+  {
+    "file": "compile.log",
+    "pass": true
+  },
+  {
+    "file": "DLL",
+    "pass": true
+  }
+]

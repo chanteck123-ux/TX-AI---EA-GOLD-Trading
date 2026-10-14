@@ -1,0 +1,119 @@
+20261014 13:32:20.109 TRACE:: Using C:\Users\A\Documents\Codex\2026-09-10\v1-2-ea-mt5\work\repair_research\lean_mcp_20261012\runs\S4B4B1_FULLAUGUST_D250_20261014T133218Z_f3df8aa4\config.json as configuration file
+20261014 13:32:20.164 TRACE:: Composer(): Loading Assemblies from C:\Users\A\Documents\Codex\2026-09-10\v1-2-ea-mt5\work\repair_research\quantconnect_20260920\vendor\Lean\Launcher\bin\Release\
+20261014 13:32:20.218 TRACE:: Python for .NET Assembly: Python.Runtime, Version=2.0.66.0, Culture=neutral, PublicKeyToken=5000fea6cba702dd
+20261014 13:32:20.808 TRACE:: Engine.Main(): LEAN ALGORITHMIC TRADING ENGINE v2.5.0.0 Mode: RELEASE (64bit) Host: DESKTOP-34QBTAL
+20261014 13:32:20.812 TRACE:: Engine.Main(): Started 9:32 PM
+20261014 13:32:20.824 TRACE:: JobQueue.NextJob(): Selected C:\Users\A\Documents\Codex\2026-09-10\v1-2-ea-mt5\work\repair_research\lean_mcp_20261012\runs\S4B4B1_FULLAUGUST_D250_20261014T133218Z_f3df8aa4\compiled\artifacts\bin\TradingBrain.S4B4B1\release\TradingBrain.S4B4B1.dll
+20261014 13:32:20.840 TRACE:: AlgorithmManager.CreateTokenBucket(): Initializing LeakyBucket: Capacity: 120 RefillAmount: 18 TimeInterval: 1440
+20261014 13:32:20.844 TRACE:: Engine.Run(): Resource limits '0' CPUs. 2147483647 MB RAM.
+20261014 13:32:20.845 TRACE:: TextSubscriptionDataSourceReader.SetCacheSize(): Setting cache size to 71582788 items
+20261014 13:32:21.184 TRACE:: Loader.TryCreateILAlgorithm(): Loading debug information with algorithm
+20261014 13:32:21.332 TRACE:: Loader.TryCreateILAlgorithm(): Loaded S4B4B1Algorithm
+20261014 13:32:21.334 TRACE:: LocalObjectStore.Initialize(): Storage Root: C:\Users\A\Documents\Codex\2026-09-10\v1-2-ea-mt5\work\repair_research\lean_mcp_20261012\runs\S4B4B1_FULLAUGUST_D250_20261014T133218Z_f3df8aa4\storage. StorageFileCount 10000. StorageLimit 10240MB. StoragePermissions Read=True Write=True Delete=True
+20261014 13:32:21.342 TRACE:: HistoryProviderManager.Initialize(): history providers [SubscriptionDataReaderHistoryProvider]
+20261014 13:32:21.344 TRACE:: BaseSetupHandler.Setup(LocalPlatform): UID: 0, PID: 0, Version: 2.5.0.0, Source: WebIDE
+20261014 13:32:21.926 TRACE:: WeightedWorkScheduler(): will use 16 workers and MaxWorkWeight is 400
+20261014 13:32:21.931 TRACE:: BaseSetupHandler.SetupCurrencyConversions():
+Account Type: Margin
+
+Symbol      Quantity    Conversion = Value in USD
+USD: $         500.00 @       1.00 = $500
+-------------------------------------------------
+CashBook Total Value:                $500
+
+20261014 13:32:21.932 TRACE:: Total margin information: TotalMarginUsed: 0.00, MarginRemaining: 500.00
+20261014 13:32:21.933 TRACE:: SetUp Backtesting: User: 0 ProjectId: 0 AlgoId: S4B4B1_FULLAUGUST_D250_20261014T133218Z_f3df8aa4
+20261014 13:32:21.933 TRACE:: Dates: Start: 08/01/2026 End: 08/31/2026 Cash: ¤500.00 MaximumRuntime: 100.00:00:00 MaxOrders: 2147483647
+20261014 13:32:21.936 TRACE:: BacktestingResultHandler(): Sample Period Set: 11.16
+20261014 13:32:21.936 TRACE:: JOB HANDLERS:
+         DataFeed:             QuantConnect.Lean.Engine.DataFeeds.FileSystemDataFeed
+         Setup:                QuantConnect.Lean.Engine.Setup.BacktestingSetupHandler
+         RealTime:             QuantConnect.Lean.Engine.RealTime.BacktestingRealTimeHandler
+         Results:              QuantConnect.Lean.Engine.Results.BacktestingResultHandler
+         Transactions:         QuantConnect.Lean.Engine.TransactionHandlers.BacktestingTransactionHandler
+         Object Store:         QuantConnect.Lean.Engine.Storage.LocalObjectStore
+         History Provider:     QuantConnect.Lean.Engine.HistoricalData.HistoryProviderManager
+         Brokerage:            QuantConnect.Brokerages.Backtesting.BacktestingBrokerage
+         Data Provider:        QuantConnect.Lean.Engine.DataFeeds.DefaultDataProvider
+
+20261014 13:32:21.946 TRACE:: Event Name "Daily Sampling", scheduled to run.
+20261014 13:32:21.946 TRACE:: AlgorithmManager.Run(): Begin DataStream - Start: 1/8/2026 12:00:00 AM Stop: 31/8/2026 11:59:59 PM Time: 1/8/2026 12:00:00 AM Warmup: False
+20261014 13:32:21.987 TRACE:: Debug: 2026-08-01 00:00:00 Launching analysis for S4B4B1_FULLAUGUST_D250_20261014T133218Z_f3df8aa4 with LEAN Engine v2.5.0.0
+20261014 13:32:38.400 ERROR:: InterestRateProvider.FromCsvFile(): no interest rates were loaded, please make sure the file is present 'C:\Users\A\Documents\Codex\2026-09-10\v1-2-ea-mt5\work\repair_research\quantconnect_20260920\data\lean\alternative\interest-rate\usa\interest-rate.csv'
+20261014 13:33:22.795 TRACE:: Isolator.ExecuteWithTimeLimit(): Used: 58, Sample: 92, App: 230, CurrentTimeStepElapsed: 00:00.000. CPU: 11%
+20261014 13:34:23.685 TRACE:: Isolator.ExecuteWithTimeLimit(): Used: 78, Sample: 89, App: 199, CurrentTimeStepElapsed: 00:00.000. CPU: 19%
+20261014 13:35:24.567 TRACE:: Isolator.ExecuteWithTimeLimit(): Used: 86, Sample: 88, App: 188, CurrentTimeStepElapsed: 00:00.000. CPU: 33%
+20261014 13:36:25.472 TRACE:: Isolator.ExecuteWithTimeLimit(): Used: 90, Sample: 93, App: 227, CurrentTimeStepElapsed: 00:00.000. CPU: 35%
+20261014 13:37:25.839 TRACE:: Isolator.ExecuteWithTimeLimit(): Used: 93, Sample: 93, App: 193, CurrentTimeStepElapsed: 00:00.000. CPU: 38%
+20261014 13:38:18.416 TRACE:: Synchronizer.GetEnumerator(): Exited thread.
+20261014 13:38:18.417 TRACE:: AlgorithmManager.Run(): Firing On End Of Algorithm...
+20261014 13:38:18.457 TRACE:: Engine.Run(): Exiting Algorithm Manager
+20261014 13:38:18.459 TRACE:: OrderRequestProcessingPool.Dispose(): completed
+20261014 13:38:18.460 TRACE:: StopSafely(): Waiting for 'Isolator Thread' thread to stop...
+20261014 13:38:18.460 TRACE:: FileSystemDataFeed.Exit(): Start. Setting cancellation token...
+20261014 13:38:18.461 TRACE:: FileSystemDataFeed.Exit(): Exit Finished.
+20261014 13:38:18.461 TRACE:: BacktestingResultHandler.Exit(): starting...
+20261014 13:38:18.461 TRACE:: BacktestingResultHandler.Exit(): Saving logs...
+20261014 13:38:18.462 TRACE:: Debug: 2026-08-31 20:59:33 S4_B4B1_DONE ticks=20513402 aligned=True orders=112 reconciled=True
+20261014 13:38:18.462 TRACE:: Debug: 2026-08-31 20:59:33 Algorithm Id:(S4B4B1_FULLAUGUST_D250_20261014T133218Z_f3df8aa4) completed in 356.52 seconds at 58k data points per second. Processing total of 20,513,404 data points.
+20261014 13:38:18.462 TRACE:: Debug: 2026-08-31 20:59:33 Your log was successfully created and can be retrieved from: C:\Users\A\Documents\Codex\2026-09-10\v1-2-ea-mt5\work\repair_research\lean_mcp_20261012\runs\S4B4B1_FULLAUGUST_D250_20261014T133218Z_f3df8aa4\S4B4B1_FULLAUGUST_D250_20261014T133218Z_f3df8aa4-log.txt
+20261014 13:38:18.462 TRACE:: BacktestingResultHandler.Run(): Ending Thread...
+20261014 13:38:18.462 TRACE:: StopSafely(): Waiting for 'Result Thread' thread to stop...
+20261014 13:38:18.492 TRACE:: Extensions.IsDirectoryEmpty(): directory 'C:\Users\A\Documents\Codex\2026-09-10\v1-2-ea-mt5\work\repair_research\quantconnect_20260920\data\lean\equity/usa/map_files' not found or empty
+20261014 13:38:18.492 ERROR:: LocalDiskMapFileProvider.GetMapFileResolver(usa): The specified directory does not exist: C:\Users\A\Documents\Codex\2026-09-10\v1-2-ea-mt5\work\repair_research\quantconnect_20260920\data\lean\equity/usa/map_files
+20261014 13:38:18.505 TRACE:: Extensions.IsDirectoryEmpty(): directory 'C:\Users\A\Documents\Codex\2026-09-10\v1-2-ea-mt5\work\repair_research\quantconnect_20260920\data\lean\equity/usa/factor_files' not found or empty
+20261014 13:38:18.536 TRACE:: 
+STATISTICS:: Total Orders 112
+STATISTICS:: Average Win 2.07%
+STATISTICS:: Average Loss -1.37%
+STATISTICS:: Compounding Annual Return 798.298%
+STATISTICS:: Drawdown 5.100%
+STATISTICS:: Expectancy 0.256
+STATISTICS:: Start Equity 500
+STATISTICS:: End Equity 602.03
+STATISTICS:: Net Profit 20.406%
+STATISTICS:: Sharpe Ratio 10.885
+STATISTICS:: Sortino Ratio 21.827
+STATISTICS:: Probabilistic Sharpe Ratio 90.041%
+STATISTICS:: Loss Rate 50%
+STATISTICS:: Win Rate 50%
+STATISTICS:: Profit-Loss Ratio 1.51
+STATISTICS:: Alpha 0
+STATISTICS:: Beta 0
+STATISTICS:: Annual Standard Deviation 0.374
+STATISTICS:: Annual Variance 0.14
+STATISTICS:: Information Ratio 10.912
+STATISTICS:: Tracking Error 0.374
+STATISTICS:: Treynor Ratio 0
+STATISTICS:: Total Fees $5.14
+STATISTICS:: Estimated Strategy Capacity $0
+STATISTICS:: Lowest Capacity Asset GOLD DW6
+STATISTICS:: Portfolio Turnover 3508.58%
+STATISTICS:: Drawdown Recovery 11
+STATISTICS:: OrderListHash 62db06a9df8635de1dcc8250db3b1792
+20261014 13:38:18.536 TRACE:: BacktestingResultHandler.SendAnalysisResult(): Processed final packet
+20261014 13:38:18.536 TRACE:: Engine.Run(): Disconnecting from brokerage...
+20261014 13:38:18.537 TRACE:: Engine.Run(): Disposing of setup handler...
+20261014 13:38:18.537 TRACE:: Engine.Main(): Analysis Completed and Results Posted.
+20261014 13:38:18.537 TRACE:: DataMonitor.Exit(): start...
+20261014 13:38:18.537 TRACE:: StopSafely(): Waiting for '' thread to stop...
+20261014 13:38:18.537 TRACE:: DataMonitor.GenerateReport():
+DATA USAGE:: Total data requests 33
+DATA USAGE:: Succeeded data requests 26
+DATA USAGE:: Failed data requests 7
+DATA USAGE:: Failed data requests percentage 21%
+DATA USAGE:: Total universe data requests 0
+DATA USAGE:: Succeeded universe data requests 0
+DATA USAGE:: Failed universe data requests 0
+DATA USAGE:: Failed universe data requests percentage 0%
+20261014 13:38:18.541 TRACE:: DataMonitor.Exit(): end
+Engine.Main(): Analysis Complete.
+20261014 13:38:18.541 TRACE:: Engine.Main(): Packet removed from queue: S4B4B1_FULLAUGUST_D250_20261014T133218Z_f3df8aa4
+20261014 13:38:18.541 TRACE:: LeanEngineSystemHandlers.Dispose(): start...
+20261014 13:38:18.542 TRACE:: LeanEngineSystemHandlers.Dispose(): Disposed of system handlers.
+20261014 13:38:18.542 TRACE:: LeanEngineAlgorithmHandlers.Dispose(): start...
+20261014 13:38:18.542 TRACE:: LocalObjectStore.Dispose(): start...
+20261014 13:38:18.542 TRACE:: LocalObjectStore.Dispose(): end
+20261014 13:38:18.542 TRACE:: LeanEngineAlgorithmHandlers.Dispose(): Disposed of algorithm handlers.
+20261014 13:38:18.542 TRACE:: StopSafely(): Waiting for 'CpuPerformance' thread to stop...
+20261014 13:38:18.543 TRACE:: Program.Main(): Exiting Lean...

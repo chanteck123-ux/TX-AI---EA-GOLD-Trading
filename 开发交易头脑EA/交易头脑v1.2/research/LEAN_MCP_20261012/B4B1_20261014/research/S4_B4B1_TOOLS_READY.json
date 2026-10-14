@@ -1,0 +1,93 @@
+﻿{
+    "schema":  "S4_B4B1_TOOLS_READY_V1",
+    "status":  "CODE_READY_FOR_CODEX_REVIEW_FIXTURES_SMOKE_FULL_NOT_RUN_BY_CODEX",
+    "written_utc":  "2026-10-14T13:30:29.8111910Z",
+    "implementer":  "Claude",
+    "candidate_id":  "TB500_S4_BE125_LEAN_B4B1",
+    "base_candidate":  "TB500_S4_BE125_LEAN_B4A",
+    "scope":  [
+                  "research/S4_B4B_SCOPE_CN.md",
+                  "research/S4_B4B_EVENT_DESIGN_CN.md",
+                  "CODEX_S4_B4B_PREIMPLEMENTATION_REVIEW_CN.md (last section)"
+              ],
+    "single_change":  "Delayed ENTRY fills at the deadline quote state (rows ms\u003c=deadline applied in raw order; snapshot captured before applying the first row ms\u003edeadline); submitted on the first valid ready row after the deadline; extra_wait_rows and engine_lag_ms disclosed; exits/management/SL-TP/risk unchanged from B4A",
+    "unverified_assumptions":  [
+                                   "SAME_MS_ROWS_AT_DEADLINE_INCLUDED (ordinal and deadline_rows recorded)"
+                               ],
+    "not_claimed":  [
+                        "exact first-row execution",
+                        "B4B2 callback/blocking model",
+                        "native parity",
+                        "strategy improvement",
+                        "complete or seven-strategy migration",
+                        "Champion",
+                        "demo/live readiness",
+                        "OOS"
+                    ],
+    "latency_ms_default":  250,
+    "files":  {
+                  "lean/algorithms/S4B4B/S4CoreB4B.cs":  "97e99dee7ef423692bbe8a169c7e09e5c83b403ceaaa174e62f1c40f84c1f8e4",
+                  "lean/algorithms/S4B4B/S4CoreB4B.diff":  "2b46e3c89029dde7b4220c917464ffa7137de80cf9bd94b929e4536e62793438",
+                  "lean/algorithms/S4B4B/DeadlineQuoteTracker.cs":  "51400586edbf5ada6db16a1fbaca5a87ab0d734d719ba700918912a66a44068a",
+                  "lean/algorithms/S4B4B/S4B4B1Algorithm.cs":  "f7d9b39c365c22a36b2ad74cc09456d5b3cfdd3fecf6e2062ad292fb75690181",
+                  "lean/algorithms/S4B4B/TradingBrain.S4B4B1.csproj":  "3eb9cb8a80e0727987eace889789786dfa24794e06a02e979a0bd37a563ba33c",
+                  "lean/algorithms/S4B4B/run_s4b4b1.ps1":  "944d40cf3a89b4062810b6a81c63fedecb76033a7fbd832ef3ca92ca1e057824",
+                  "lean/algorithms/S4B4B/fixtures/Program.cs":  "9603924b537d87f956e6c7a9e59ce6c31103d2e7e1d008fefaba7ff12a618bcc",
+                  "lean/algorithms/S4B4B/fixtures/S4B4B.Fixtures.csproj":  "55ae3f2adc964127f6ef3f4784f0190e7028d9ff4fd2b3a264a00e0ccd025695",
+                  "research/S4_B4B1_CLAUDE_SELF_REVIEW_CN.md":  "8987aae040b6a6a4e8ec783117e17218dd07b5b3a385b35c5a403fdefa950749"
+              },
+    "frozen_shared_unchanged":  {
+                                    "lean/algorithms/S4/S4Core.cs":  "ee509e1d50440b2bc0351a1b568abed7bc7e08050f9010eaafd5da3fc6be4e5d",
+                                    "lean/algorithms/S4/fixtures/Program.cs":  "c1edbbda5b255b9d3bd451d5f1f7ac9c76c0a2761f668068302eef61a6aa4775",
+                                    "lean/algorithms/S4/fixtures/S4.Fixtures.csproj":  "b026fba548e1516e75501812c0ddefb0545147b5fb60dceae15b361b29d65007",
+                                    "lean/algorithms/S4B4A/QuoteFieldAdapter.cs":  "2e5951a448432c2aa0959b706527babde5581c28ac067183d41d026bd7045da1",
+                                    "lean/algorithms/S4B4A/S4B4AAlgorithm.cs":  "2c79c2b29ab115c97cf52d1f3f50be49981ca85a91b76c74b352bf5700fce641",
+                                    "lean/algorithms/S4B4A/TradingBrain.S4B4A.csproj":  "884394c2a0be6a00e21def4075158969721511fefd8589db085128afc61c2dad",
+                                    "lean/algorithms/S4B4A/run_s4b4a.ps1":  "0319657b010e80afbce7d8b2ddeacf0ff3bde7371a540052264ee85b576fc5ee",
+                                    "lean/algorithms/S4B4A/fixtures/Program.cs":  "51af2cfc1e8243f40d38ff7743ba15b7a9f90a07fa68b7596851bf86715ce4f0",
+                                    "lean/algorithms/S4B4A/fixtures/S4B4A.Fixtures.csproj":  "1327621a970b9460e674b9abc7223390ed6ae434ffe85fff56575707e1154395",
+                                    "mt5_iteration9_20261004/algorithm/C7Signals.Core.cs":  "261b96eb242267aa7471b89c9d73b3f8076b816b020fbecd41dc8239f55dd595",
+                                    "mt5_iteration9_20261004/algorithm/Strategy123.cs":  "1be13bfe8ceda032430bdd3cb087f5b474e6ceaec9efba650767aabd246e3bd9",
+                                    "mt5_iteration9_20261004/algorithm/Strategy456.cs":  "cffb2b726971c6d5088c1e0285191b8e01a4f4b77ae5e3c6d79a7e881f12e2fb",
+                                    "mt5_iteration9_20261004/algorithm/StrategyScalping.cs":  "1576cd1e3993201541fb941943ba287a0fbfaa4afbd306b071ecbab092fcde09"
+                                },
+    "claude_self_check":  {
+                              "scope":  "PURE_CSHARP_FIXTURES_ONLY",
+                              "build_dir":  "builds/S4B4B_CLAUDE_FIXTURE_SELFCHECK_01",
+                              "b4b1_fixture_dll_sha256":  "762388c2bf0f700085051bfe3a4cd85427714842c892671c1f4c415c9db22bc9",
+                              "results":  {
+                                              "b4b1":  {
+                                                           "result":  "PASS 21/21",
+                                                           "sha256":  "f06e28ffb3c0711f3536c09089af95e4245ac4e43c5548fac0dcf16d3c087acd"
+                                                       },
+                                              "b4a":  {
+                                                          "result":  "PASS 27/27",
+                                                          "sha256":  "cb2d484682f7273c27cda0afb6db8eff476003215801c5d76f28933da88488af"
+                                                      },
+                                              "b1":  {
+                                                         "result":  "PASS 90/90",
+                                                         "sha256":  "5ab8fc08bb42269962b5d8594cb825d110a63f6840d6380da968c09abadc214b"
+                                                     }
+                                          },
+                              "algorithm_vs_b4a_diff":  {
+                                                            "path":  "builds/S4B4B_CLAUDE_FIXTURE_SELFCHECK_01/ALGORITHM_VS_B4A.diff",
+                                                            "sha256":  "7053544c119656d82fa9a805503275271ade636d24086b7fc0b65ce99cbae531"
+                                                        },
+                              "core_diff_regenerated_identical":  true,
+                              "runner_parse_errors":  0,
+                              "source_tree_build_outputs_left":  false,
+                              "lean_algorithm_compiled_by_claude":  false,
+                              "engine_or_mt5_run_by_claude":  false,
+                              "git_changed_by_claude":  false
+                          },
+    "codex_run_order":  [
+                            "pwsh lean/algorithms/S4B4B/run_s4b4b1.ps1 -Mode Fixtures   (B4B1 21 + B4A 27 + B1 90, exact counts)",
+                            "pwsh lean/algorithms/S4B4B/run_s4b4b1.ps1 -Mode Build",
+                            "pwsh lean/algorithms/S4B4B/run_s4b4b1.ps1 -Mode Smoke      (Aug 1-3; 923807 rows)",
+                            "only after SMOKE_PASS_REVIEW_REQUIRED: -Mode FullAugust -SmokeRunDir \u003cdir\u003e (reuses smoke DLL; 20513403 rows)"
+                        ],
+    "budget":  "Smoke 1 + 1 evidence-based correction (-CorrectionReason); FullAugust 1; registry research/S4B4B1_RUN_REGISTRY.json",
+    "data_role":  "AUGUST_2026_ALREADY_USED_DEVELOPMENT_NOT_OOS",
+    "score_status":  "SCORE_TARGETS_UNSET",
+    "codex_independent_review":  "PENDING"
+}

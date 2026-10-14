@@ -1,0 +1,8 @@
+{
+  "scope": "MINUTE_SAMPLED_EQUITY_COLUMN_NOT_TICK_MAX",
+  "dd_usd": 33.22000000000014,
+  "dd_pct": 5.5903205117094235,
+  "matches_tester_native_within_rounding": true,
+  "tester_actual_sampling_not_proven": true,
+  "csv_sha256": "1c591efa41bbff23c6fe7a7e9601e6b1f5c0e4965ffd4af728c8ef2367ef3c33"
+}

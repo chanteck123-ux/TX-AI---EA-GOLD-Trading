@@ -1,0 +1,35 @@
+{
+  "scope": "B4B1_SMOKE_ENTRY_METADATA_CONSISTENCY_NOT_RAW_REPLAY",
+  "entries": 4,
+  "checks": [
+    {
+      "book": 1,
+      "time_order": true,
+      "lag_correct": true,
+      "ordinal_order": true,
+      "extra_wait_correct": true
+    },
+    {
+      "book": 2,
+      "time_order": true,
+      "lag_correct": true,
+      "ordinal_order": true,
+      "extra_wait_correct": true
+    },
+    {
+      "book": 3,
+      "time_order": true,
+      "lag_correct": true,
+      "ordinal_order": true,
+      "extra_wait_correct": true
+    },
+    {
+      "book": 4,
+      "time_order": true,
+      "lag_correct": true,
+      "ordinal_order": true,
+      "extra_wait_correct": true
+    }
+  ],
+  "detail_sha256": "249fb4f0269d51f1b932e2c4e2cb4f704e91a6661747832a5bb44b4d3adbd89d"
+}
