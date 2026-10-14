@@ -1,0 +1,12 @@
+{"server_msc":1785718830010,"event":"RISK_DAY_START","baseline":500,"utc_day":20667}
+{"server_msc":1785726000011,"event":"RISK_DAY_START","baseline":500,"utc_day":20668}
+{"server_msc":1785760229927,"event":"PROTECTION_REQUESTED","book":1,"kind":1,"volume":0,"sl":4057.83,"old_sl":4063.31,"due_msc":1785760230177,"bid":4050.99,"ask":4051.14}
+{"server_msc":1785760230229,"event":"SL_MODIFIED","tag":"PROTECTION","book":1,"old_sl":4063.31,"new_sl":4057.83,"entry":4057.94,"initial_sl":4063.31}
+{"server_msc":1785760231138,"event":"TP_TRIGGERED","book":1,"sl":4057.83,"tp":4049.58,"bid":4049.27,"ask":4049.42,"fill_rule":"TRIGGER_QUOTE"}
+{"server_msc":1785760301292,"event":"PROTECTION_REQUESTED","book":2,"kind":1,"volume":0,"sl":4052.77,"old_sl":4056.89,"due_msc":1785760301542,"bid":4047.68,"ask":4047.83}
+{"server_msc":1785760301594,"event":"SL_MODIFIED","tag":"PROTECTION","book":2,"old_sl":4056.89,"new_sl":4052.77,"entry":4052.88,"initial_sl":4056.89}
+{"server_msc":1785760720406,"event":"SL_AFTER_BE_TRIGGERED","book":2,"sl":4052.77,"tp":4046.39,"bid":4052.64,"ask":4052.79,"fill_rule":"TRIGGER_QUOTE"}
+{"server_msc":1785761049914,"event":"SL_TRIGGERED","book":3,"sl":4054.25,"tp":4036.25,"bid":4054.1,"ask":4054.25,"fill_rule":"TRIGGER_QUOTE"}
+{"server_msc":1785774773262,"event":"PROTECTION_REQUESTED","book":4,"kind":1,"volume":0,"sl":4038.76,"old_sl":4045.64,"due_msc":1785774773512,"bid":4030.21,"ask":4030.36}
+{"server_msc":1785774773563,"event":"SL_MODIFIED","tag":"PROTECTION","book":4,"old_sl":4045.64,"new_sl":4038.76,"entry":4038.87,"initial_sl":4045.64}
+{"server_msc":1785774932200,"event":"TP_TRIGGERED","book":4,"sl":4038.76,"tp":4028.66,"bid":4028.33,"ask":4028.48,"fill_rule":"TRIGGER_QUOTE"}

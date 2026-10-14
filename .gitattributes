@@ -9,3 +9,4 @@ docs/history/** -text -filter
 开发交易头脑EA/交易头脑v1.2/tools/S4QuoteDiag/** -text -filter
 开发交易头脑EA/交易头脑v1.2/tools/S4MT5Probe/** -text -filter
 开发交易头脑EA/交易头脑v1.2/tools/S4B3Verify/** -text -filter
+开发交易头脑EA/交易头脑v1.2/research/LEAN_MCP_20261012/B4A_20261014/runs/*/console.log whitespace=-blank-at-eol,-blank-at-eof,cr-at-eol

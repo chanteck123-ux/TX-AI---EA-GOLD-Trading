@@ -1,0 +1,28 @@
+{
+  "runs": [
+    {
+      "correction_reason": "",
+      "dir": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\lean_mcp_20261012\\runs\\S4B4A_SMOKE_D250_20261013T154409Z_238a5484",
+      "status": "FAILED",
+      "utc": "2026-10-13T15:44:09.2635685Z",
+      "mode": "Smoke",
+      "id": "S4B4A_SMOKE_D250_20261013T154409Z_238a5484"
+    },
+    {
+      "correction_reason": "END cache used after-window UTC quotes; restore last valid in-window quote before finalization without relaxing reconciliation checks",
+      "id": "S4B4A_SMOKE_D250_20261013T155034Z_cdccb990",
+      "utc": "2026-10-13T15:50:34.7876018Z",
+      "mode": "Smoke",
+      "dir": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\lean_mcp_20261012\\runs\\S4B4A_SMOKE_D250_20261013T155034Z_cdccb990",
+      "status": "SMOKE_PASS_REVIEW_REQUIRED"
+    },
+    {
+      "status": "FULL_AUGUST_COMPLETE_REVIEW_REQUIRED",
+      "dir": "C:\\Users\\A\\Documents\\Codex\\2026-09-10\\v1-2-ea-mt5\\work\\repair_research\\lean_mcp_20261012\\runs\\S4B4A_FULLAUGUST_D250_20261013T155148Z_3f926243",
+      "id": "S4B4A_FULLAUGUST_D250_20261013T155148Z_3f926243",
+      "correction_reason": "",
+      "mode": "FullAugust",
+      "utc": "2026-10-13T15:51:48.2063049Z"
+    }
+  ]
+}

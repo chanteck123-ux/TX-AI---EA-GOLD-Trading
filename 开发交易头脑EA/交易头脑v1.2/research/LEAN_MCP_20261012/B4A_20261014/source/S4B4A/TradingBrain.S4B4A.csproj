@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <!-- S4 B4A quote-field candidate. Own assembly. Shared FROZEN sources are linked (not copied, not edited):
+       ../S4/S4Core.cs (B1 R2 ee509e1d...) and the four I9 signal sources; the runner verifies their hashes. -->
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework><ImplicitUsings>enable</ImplicitUsings><Nullable>disable</Nullable>
+    <AssemblyName>TradingBrain.S4B4A</AssemblyName><EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <LeanBin>../../../../quantconnect_20260920/vendor/Lean/Launcher/bin/Release</LeanBin>
+    <I9Src>../../../../mt5_iteration9_20261004/algorithm</I9Src>
+    <S4CoreSrc>../S4</S4CoreSrc>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="QuoteFieldAdapter.cs" />
+    <Compile Include="S4B4AAlgorithm.cs" />
+    <Compile Include="$(S4CoreSrc)/S4Core.cs" Link="shared/S4Core.cs" />
+    <Compile Include="$(I9Src)/C7Signals.Core.cs" Link="i9/C7Signals.Core.cs" />
+    <Compile Include="$(I9Src)/Strategy123.cs" Link="i9/Strategy123.cs" />
+    <Compile Include="$(I9Src)/Strategy456.cs" Link="i9/Strategy456.cs" />
+    <Compile Include="$(I9Src)/StrategyScalping.cs" Link="i9/StrategyScalping.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="QuantConnect.Algorithm"><HintPath>$(LeanBin)/QuantConnect.Algorithm.dll</HintPath></Reference>
+    <Reference Include="QuantConnect.Common"><HintPath>$(LeanBin)/QuantConnect.Common.dll</HintPath></Reference>
+    <Reference Include="QuantConnect.Configuration"><HintPath>$(LeanBin)/QuantConnect.Configuration.dll</HintPath></Reference>
+    <Reference Include="QuantConnect.Indicators"><HintPath>$(LeanBin)/QuantConnect.Indicators.dll</HintPath></Reference>
+    <Reference Include="QuantConnect.Logging"><HintPath>$(LeanBin)/QuantConnect.Logging.dll</HintPath></Reference>
+    <Reference Include="NodaTime"><HintPath>$(LeanBin)/NodaTime.dll</HintPath></Reference>
+    <Reference Include="Newtonsoft.Json"><HintPath>$(LeanBin)/Newtonsoft.Json.dll</HintPath></Reference>
+    <Reference Include="Python.Runtime"><HintPath>$(LeanBin)/Python.Runtime.dll</HintPath></Reference>
+  </ItemGroup>
+</Project>

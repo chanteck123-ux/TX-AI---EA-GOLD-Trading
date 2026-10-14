@@ -1,6 +1,6 @@
 {
   "schema": "TRADINGBRAIN_CURRENT_V1",
-  "updated_on": "2026-10-12",
+  "updated_on": "2026-10-14",
   "timezone": "Asia/Kuala_Lumpur",
   "project": "TradingBrain V1.2 GOLD EA",
   "plan": "../docs/PLAN_CN.md",
@@ -32,17 +32,17 @@
     "lean_route": "PRIMARY_OFFLINE_CSHARP_RESEARCH_ENGINE",
     "railway_required": false,
     "remote_desktop_commander_required": false,
-    "claude_connection_scope": "DESKTOP_CHAT_MESSAGES_DESIGN_AND_RESULT_SUMMARY_ONLY",
+    "claude_connection_scope": "DESKTOP_CODE_SESSION_AND_MCP_HEALTH_RUN_STATUS_SUCCESS_20261014",
     "claude_cli_or_background_verified": false,
     "mode_selection_required_before_each_new_or_resumed_task": true,
     "mode_selection_for_next_task": "CODEX_AND_CLAUDE",
     "research_engine": "QUANTCONNECT_LEAN_CSHARP",
     "execution_engine": "FXPRO_MT5_MQL5",
-    "route_status": "SEVEN_CSHARP_SIGNAL_LAYERS_COMPILED_LEAN_RUNTIME_BLOCKED_NATIVE_RESEARCH_CONTINUES",
+    "route_status": "S4_B4A_FULL_AUGUST_TRADE_COMPARISON_MATCHED_REVIEW_REQUIRED",
     "mt5_independent_of_lean": true,
     "live_signal_bridge_required": false,
     "selected_mode_scope": "USER_CONFIRMED_CLAUDE_CODE_COOPERATION_20261008",
-    "research_engine_execution": "WINDOWS_APPLICATION_CONTROL_BLOCKED_0x800711C7",
+    "research_engine_execution": "LEAN_OFFLINE_CSHARP_RUN_VERIFIED",
     "seven_signal_modules_implemented": true,
     "full_risk_fill_exit_migrated": false,
     "cross_engine_acceptance": false,
@@ -1510,5 +1510,20 @@
       "native_runs": 3,
       "diagnostic_reserve_used": 0
     }
+  },
+  "s4_b4a": {
+    "status": "CODEX_AND_CLAUDE_REVIEW_COMPLETE_USED_DEVELOPMENT_ONLY",
+    "data_role": "USED_DEVELOPMENT_NOT_OOS",
+    "net_usd": 102.03,
+    "complete_positions": 56,
+    "net_pf": 1.4643426022846224,
+    "ea_tick_equity_dd_usd": 35.88,
+    "ea_tick_equity_dd_pct": 6.071916092132757,
+    "mt5_native_equity_dd_usd": 33.22,
+    "mt5_native_equity_dd_pct": 5.5903205117,
+    "score": "N/A",
+    "score_status": "SCORE_TARGETS_UNSET",
+    "evidence": "LEAN_MCP_20261012/B4A_20261014/research/CODEX_S4_B4A_FULL_REVIEW_CN.md",
+    "no_new_mt5_compile": true
   }
 }

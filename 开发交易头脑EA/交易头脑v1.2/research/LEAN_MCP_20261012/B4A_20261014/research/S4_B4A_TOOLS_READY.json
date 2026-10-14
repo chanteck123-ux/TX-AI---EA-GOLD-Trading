@@ -1,0 +1,75 @@
+﻿{
+    "schema":  "S4_B4A_TOOLS_READY_V1",
+    "status":  "CODE_READY_REVISION_3_END_CACHE_FIX_FOR_CORRECTION_SMOKE_NOT_RUN",
+    "written_utc":  "2026-10-13",
+    "implementer":  "Claude",
+    "candidate_id":  "TB500_S4_BE125_LEAN_B4A",
+    "scope":  "research/S4_B4A_QUOTE_FIELDS_SCOPE_CN.md",
+    "single_change":  "Bid/Ask from the current raw row flags only (BID=2, ASK=4); LAST/VOLUME never overwrite; unknown bits counted; not-ready until both sides seeded by their own rows; corrected quote synced into LEAN security cache (SetMarketPrice with current tick time) and TPV invalidated before core logic",
+    "files":  {
+                  "lean/algorithms/S4B4A/QuoteFieldAdapter.cs":  "2e5951a448432c2aa0959b706527babde5581c28ac067183d41d026bd7045da1",
+                  "lean/algorithms/S4B4A/S4B4AAlgorithm.cs":  "2c79c2b29ab115c97cf52d1f3f50be49981ca85a91b76c74b352bf5700fce641",
+                  "lean/algorithms/S4B4A/TradingBrain.S4B4A.csproj":  "884394c2a0be6a00e21def4075158969721511fefd8589db085128afc61c2dad",
+                  "lean/algorithms/S4B4A/run_s4b4a.ps1":  "0319657b010e80afbce7d8b2ddeacf0ff3bde7371a540052264ee85b576fc5ee",
+                  "lean/algorithms/S4B4A/fixtures/Program.cs":  "51af2cfc1e8243f40d38ff7743ba15b7a9f90a07fa68b7596851bf86715ce4f0",
+                  "lean/algorithms/S4B4A/fixtures/S4B4A.Fixtures.csproj":  "1327621a970b9460e674b9abc7223390ed6ae434ffe85fff56575707e1154395",
+                  "research/S4_B4A_CLAUDE_SELF_REVIEW_CN.md":  "041a1c73d2b354f012aeeb9eda50f04799111060fde05f88dbfd1c14868ee5c1"
+              },
+    "frozen_shared_linked_unchanged":  {
+                                           "lean/algorithms/S4/S4Core.cs":  "ee509e1d50440b2bc0351a1b568abed7bc7e08050f9010eaafd5da3fc6be4e5d",
+                                           "lean/algorithms/S4/fixtures/Program.cs":  "c1edbbda5b255b9d3bd451d5f1f7ac9c76c0a2761f668068302eef61a6aa4775",
+                                           "mt5_iteration9_20261004/algorithm/C7Signals.Core.cs":  "261b96eb242267aa7471b89c9d73b3f8076b816b020fbecd41dc8239f55dd595",
+                                           "mt5_iteration9_20261004/algorithm/Strategy123.cs":  "1be13bfe8ceda032430bdd3cb087f5b474e6ceaec9efba650767aabd246e3bd9",
+                                           "mt5_iteration9_20261004/algorithm/Strategy456.cs":  "cffb2b726971c6d5088c1e0285191b8e01a4f4b77ae5e3c6d79a7e881f12e2fb",
+                                           "mt5_iteration9_20261004/algorithm/StrategyScalping.cs":  "1576cd1e3993201541fb941943ba287a0fbfaa4afbd306b071ecbab092fcde09"
+                                       },
+    "claude_self_check":  {
+                              "scope":  "PURE_CSHARP_ADAPTER_FIXTURES_ONLY",
+                              "build_dir":  "builds/S4B4A_CLAUDE_FIXTURE_SELFCHECK_02",
+                              "fixture_dll_sha256":  "20655833e6e882c52bf049113d6d52bee0e4bf64df50b70bc514036b9d900fec",
+                              "fixture_result_sha256":  "b4bce8da85a9c1d5147ab4c18a295d988995f5f9094084197d8c4a5eaaf6f777",
+                              "result":  "PASS 27/27",
+                              "runner_parse_errors":  0,
+                              "lean_algorithm_compiled_by_claude":  false,
+                              "engine_or_mt5_run_by_claude":  false
+                          },
+    "codex_run_order":  [
+                            "pwsh lean/algorithms/S4B4A/run_s4b4a.ps1 -Mode Fixtures   (23 B4A adapter + original 90 B1 fixtures)",
+                            "pwsh lean/algorithms/S4B4A/run_s4b4a.ps1 -Mode Build",
+                            "pwsh lean/algorithms/S4B4A/run_s4b4a.ps1 -Mode Smoke      (Aug 3; 923807 rows must align)",
+                            "only after SMOKE_PASS_REVIEW_REQUIRED: pwsh lean/algorithms/S4B4A/run_s4b4a.ps1 -Mode FullAugust -SmokeRunDir \u003cdir\u003e   (reuses smoke build; 20513403 rows)"
+                        ],
+    "budget":  "Smoke 1 + 1 evidence-based correction (-CorrectionReason); FullAugust 1; registry research/S4B4A_RUN_REGISTRY.json",
+    "unchanged_and_known_differences":  [
+                                            "B1 risk/entry/exit/2 slots/1.5R/1.25R BE/locks",
+                                            "250 ms next-row-at-or-after-due fill and no synchronous blocking (B3 F5 differs; separate later candidate)",
+                                            "fee/fill/margin models",
+                                            "reconciliation formula and 0.05 USD tolerance"
+                                        ],
+    "b1_changed":  false,
+    "data_role":  "AUGUST_2026_ALREADY_USED_DEVELOPMENT_NOT_OOS",
+    "score_status":  "SCORE_TARGETS_UNSET",
+    "claims_not_made":  [
+                            "strategy improvement",
+                            "native parity",
+                            "complete migration",
+                            "seven-strategy migration",
+                            "Champion",
+                            "live readiness"
+                        ],
+    "revision_2_fixes":  [
+                             "FullAugust reuses the verified smoke build (REUSED_MATCHING_SMOKE_BUILD) after checking smoke DLL/compile.log/source/config/result hashes; any source change requires a new smoke",
+                             "every bound copy (own 3, S4Core, 4 I9) checked against receipt-captured hashes; sources re-checked after compile, fixtures and engine run; DLL re-checked after run",
+                             "algorithm latency-ms default 250; risk stays shared 2%",
+                             "sidecar: finite-number check before comparisons (NaN-safe), raw time non-decreasing incl. across files and drain; 4 new fixtures"
+                         ],
+    "revision_3_fix":  {
+                           "failed_smoke_kept":  "runs/S4B4A_SMOKE_D250_20261013T154409Z_238a5484",
+                           "evidence":  "only END cache flag false; qty/fee/liquidation 0 diff; max gap 0; 923807 aligned",
+                           "root_cause":  "after-window UTC ticks (server Aug 4) still delivered by LEAN, skipped without cache re-sync, leaving raw after-window quote in the cache at OnEndOfAlgorithm",
+                           "fix":  "restore last valid in-window corrected quote (own tickUtc) via SetMarketPrice + InvalidateTotalPortfolioValue before core.End/Reconcile END; record before/after cache and last after-window tick; cache check and 0.05 unchanged",
+                           "next":  "Codex: -Mode Build, then the single correction -Mode Smoke -CorrectionReason; no full August in this batch",
+                           "root_cause_evidence":  "SetEndDate Aug 3 is the UTC day end; window ends server Aug 4 00:00 = UTC Aug 3 21:00; AlgorithmManager.cs ~271 security.Update before OnData; console 972469 data points to UTC 23:59:59 vs 923807 in window",
+                           "diagnostics_added":  "first/last discarded after-window tick time and quote, count; GetLastData time+quote before/after restore; exposure (ledger lots, LEAN qty, orders, fees) when after-window valuation began and additions after the window; residual no longer claims zero engine valuation effect"
+                       }
+}

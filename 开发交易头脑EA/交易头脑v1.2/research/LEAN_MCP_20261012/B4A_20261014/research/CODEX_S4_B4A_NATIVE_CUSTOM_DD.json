@@ -1,0 +1,8 @@
+{
+  "rows": 30258,
+  "sha256": "809a5f021e93535f0e1792df3936c5f0a07e74dc1883b181b1f998300fa24345",
+  "max_custom_equity_dd": 35.88,
+  "first_max_server": "2026.08.28 17:21:39",
+  "first_max_detail": "balance=594.6500000000;equity=590.9700000000;initial_risk=11.8400000000;equity_risk=8.1600000000;margin=0.0000000000;cash_flow=0.0000000000;max_equity_dd=35.8800000000;max_equity_dd_pct=6.0719160921;S1=0.0000000000;S1_max_contribution_dd=0.0000000000;S2=0.0000000000;S2_max_contribution_dd=0.0000000000;S3=0.0000000000;S3_max_contribution_dd=0.0000000000;S4=90.9700000000;S4_max_contribution_dd=35.8800000000;S5=0.0000000000;S5_max_contribution_dd=0.0000000000;S6=0.0000000000;S6_max_contribution_dd=0.0000000000",
+  "last_detail": "balance=602.0300000000;equity=602.0300000000;initial_risk=0.0000000000;equity_risk=0.0000000000;margin=0.0000000000;cash_flow=0.0000000000;max_equity_dd=35.8800000000;max_equity_dd_pct=6.0719160921;S1=0.0000000000;S1_max_contribution_dd=0.0000000000;S2=0.0000000000;S2_max_contribution_dd=0.0000000000;S3=0.0000000000;S3_max_contribution_dd=0.0000000000;S4=102.0300000000;S4_max_contribution_dd=35.8800000000;S5=0.0000000000;S5_max_contribution_dd=0.0000000000;S6=0.0000000000;S6_max_contribution_dd=0.0000000000"
+}

@@ -1,0 +1,66 @@
+[
+  {
+    "path": "lean_mcp_20261012\\lean\\algorithms\\S4B4A\\QuoteFieldAdapter.cs",
+    "pass": true
+  },
+  {
+    "path": "lean_mcp_20261012\\lean\\algorithms\\S4B4A\\S4B4AAlgorithm.cs",
+    "pass": true
+  },
+  {
+    "path": "lean_mcp_20261012\\lean\\algorithms\\S4B4A\\TradingBrain.S4B4A.csproj",
+    "pass": true
+  },
+  {
+    "path": "lean_mcp_20261012\\lean\\algorithms\\S4B4A\\run_s4b4a.ps1",
+    "pass": true
+  },
+  {
+    "path": "lean_mcp_20261012\\lean\\algorithms\\S4B4A\\fixtures\\Program.cs",
+    "pass": true
+  },
+  {
+    "path": "lean_mcp_20261012\\lean\\algorithms\\S4B4A\\fixtures\\S4B4A.Fixtures.csproj",
+    "pass": true
+  },
+  {
+    "path": "lean_mcp_20261012\\lean\\algorithms\\S4\\S4Core.cs",
+    "pass": true
+  },
+  {
+    "path": "lean_mcp_20261012\\lean\\algorithms\\S4\\fixtures\\Program.cs",
+    "pass": true
+  },
+  {
+    "path": "lean_mcp_20261012\\lean\\algorithms\\S4\\fixtures\\S4.Fixtures.csproj",
+    "pass": true
+  },
+  {
+    "path": "mt5_iteration9_20261004\\algorithm\\C7Signals.Core.cs",
+    "pass": true
+  },
+  {
+    "path": "mt5_iteration9_20261004\\algorithm\\Strategy123.cs",
+    "pass": true
+  },
+  {
+    "path": "mt5_iteration9_20261004\\algorithm\\Strategy456.cs",
+    "pass": true
+  },
+  {
+    "path": "mt5_iteration9_20261004\\algorithm\\StrategyScalping.cs",
+    "pass": true
+  },
+  {
+    "path": "RESULT.json",
+    "pass": true
+  },
+  {
+    "path": "config.json",
+    "pass": true
+  },
+  {
+    "path": "compile.log",
+    "pass": true
+  }
+]

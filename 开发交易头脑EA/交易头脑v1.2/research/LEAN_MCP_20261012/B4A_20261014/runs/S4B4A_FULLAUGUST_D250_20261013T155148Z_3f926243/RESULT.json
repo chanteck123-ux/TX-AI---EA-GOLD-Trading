@@ -1,0 +1,342 @@
+{
+  "schema": "S4_LEAN_B4A_RESULT_V1",
+  "candidate_id": "TB500_S4_BE125_LEAN_B4A",
+  "run_id": "S4B4A_FULLAUGUST_D250_20261013T155148Z_3f926243",
+  "strategy": "S4",
+  "source_mq5_sha256": "f6abe1abc8d9cfca27e6483f344aab03110b9df11b8d1b458e3fce432d63be47",
+  "single_change": "QUOTE_FIELDS_FROM_CURRENT_ROW_FLAGS (BID=2, ASK=4); everything else as B1 R2",
+  "status": "ENGINE_RUN_FINISHED_REVIEW_REQUIRED",
+  "data_role": "AUGUST_2026_ALREADY_USED_DEVELOPMENT_NOT_OOS",
+  "end_date": "2026-08-31",
+  "initial_capital_usd": 500,
+  "risk_pct": 2,
+  "portfolio_risk_pct": 2,
+  "equity_risk_pct": 3,
+  "day_loss_pct": 3,
+  "emergency_dd_pct": 10,
+  "slots": 2,
+  "be_trigger_r": 1.25,
+  "reward_risk": 1.5,
+  "latency_ms": 250,
+  "protective_fill": "TRIGGER_QUOTE",
+  "commission_per_lot_side": 3.5,
+  "ticks": 20513402,
+  "first_server_msc": 1785718830010,
+  "last_server_msc": 1788220773968,
+  "end_server_exclusive_msc": 1788220800000,
+  "quote_adapter": {
+    "aligned": true,
+    "lean_ticks_in_window": 20513403,
+    "raw_rows_matched": 20513403,
+    "raw_rows_in_window_unmatched": 0,
+    "raw_rows_in_window_total": 20513403,
+    "ready_rows": 20513402,
+    "not_ready_rows_skipped": 1,
+    "invalid_effective_quote_skipped": 0,
+    "delivered_to_core": 20513402,
+    "identity": "lean_ticks_in_window = delivered_to_core \u002B not_ready_rows_skipped \u002B invalid_effective_quote_skipped",
+    "bid_updates": 7254948,
+    "ask_updates": 7232132,
+    "rows_without_bid_or_ask_bit": 13235483,
+    "ready_rows_where_effective_differs_from_raw_row": 7246472,
+    "rows_with_unknown_bits": 20513403,
+    "unknown_bits": {
+      "256": 13235483,
+      "1024": 7277920
+    },
+    "flag_counts": {
+      "280": 13235483,
+      "1030": 7209160,
+      "1028": 22972,
+      "1026": 45788
+    },
+    "files": [
+      {
+        "file": "ticks_20260801.csv",
+        "sha256": "aad34e94fdfe6507f24228be769e6403d671ddfa3ecfe36582406f97c321d211",
+        "rows": 0
+      },
+      {
+        "file": "ticks_20260802.csv",
+        "sha256": "aad34e94fdfe6507f24228be769e6403d671ddfa3ecfe36582406f97c321d211",
+        "rows": 0
+      },
+      {
+        "file": "ticks_20260803.csv",
+        "sha256": "6ca5d7a95223229652170df835bfdb1a831def668a67815ea6819f6abfcb6f38",
+        "rows": 923807
+      },
+      {
+        "file": "ticks_20260804.csv",
+        "sha256": "519e2ac79b8ab0536a6a937cd337623aecc30b70f9cf94fdece46df0a69a151e",
+        "rows": 886266
+      },
+      {
+        "file": "ticks_20260805.csv",
+        "sha256": "9f74c650f9ebfbd71e2d05e4c94f731dbac77884bb69f2a2c74fe1330f36dd6e",
+        "rows": 978750
+      },
+      {
+        "file": "ticks_20260806.csv",
+        "sha256": "c1645f630218c0c7f5ea7a1d3e48ef478a77603a0eb26472695c783cd3b8120f",
+        "rows": 983581
+      },
+      {
+        "file": "ticks_20260807.csv",
+        "sha256": "c9eddadbfbedd3f9e3c14716fd1c1061949c5f71ca168a523638aacbaac5e449",
+        "rows": 1007265
+      },
+      {
+        "file": "ticks_20260808.csv",
+        "sha256": "aad34e94fdfe6507f24228be769e6403d671ddfa3ecfe36582406f97c321d211",
+        "rows": 0
+      },
+      {
+        "file": "ticks_20260809.csv",
+        "sha256": "aad34e94fdfe6507f24228be769e6403d671ddfa3ecfe36582406f97c321d211",
+        "rows": 0
+      },
+      {
+        "file": "ticks_20260810.csv",
+        "sha256": "089560975c5e3a509e782e905a7a93ceb58f63433bbff98e28d00d6e8b3f27c4",
+        "rows": 942236
+      },
+      {
+        "file": "ticks_20260811.csv",
+        "sha256": "cb52129e5f62fca59cc1a006e096b5bc67b5d98858c941dab094daa643894132",
+        "rows": 944852
+      },
+      {
+        "file": "ticks_20260812.csv",
+        "sha256": "b0a838ba87a58a6a87208e4c9c98c9aca5b58233fd8b7904d8e6efa005a6eaa9",
+        "rows": 928753
+      },
+      {
+        "file": "ticks_20260813.csv",
+        "sha256": "0ae633349ab2e53824c480ae1312b7455503e872afc07c32dff9a17fbd73751f",
+        "rows": 971068
+      },
+      {
+        "file": "ticks_20260814.csv",
+        "sha256": "dcaf18ac4a2ba406238fc234d64e2ed83c4853eb7317cde65c1d63ec16ff7c0e",
+        "rows": 893091
+      },
+      {
+        "file": "ticks_20260815.csv",
+        "sha256": "aad34e94fdfe6507f24228be769e6403d671ddfa3ecfe36582406f97c321d211",
+        "rows": 0
+      },
+      {
+        "file": "ticks_20260816.csv",
+        "sha256": "aad34e94fdfe6507f24228be769e6403d671ddfa3ecfe36582406f97c321d211",
+        "rows": 0
+      },
+      {
+        "file": "ticks_20260817.csv",
+        "sha256": "bd02a2d3cc6c01222ce66f4e1a8dd0c29127d8cadad4569182fa63b6136ac6fd",
+        "rows": 894743
+      },
+      {
+        "file": "ticks_20260818.csv",
+        "sha256": "16ec6fa5407a5fe347ff8827c195fe52b248a004c2170f62cd2715cdc4a13b28",
+        "rows": 923500
+      },
+      {
+        "file": "ticks_20260819.csv",
+        "sha256": "0ba0b53f5b3a5cb0da90bad3691c04ae3f62cd65fccdcdfe1245a2fa5444ca74",
+        "rows": 1046326
+      },
+      {
+        "file": "ticks_20260820.csv",
+        "sha256": "3f00bef4a298154e89f7bcbcf28c0792b55e2c14b83218244ccb66107bbb15d6",
+        "rows": 1032535
+      },
+      {
+        "file": "ticks_20260821.csv",
+        "sha256": "46a06567e6dd93cb63da994e1c1b218d020cb78be63c4ba6535b5c3723a7b74c",
+        "rows": 1014673
+      },
+      {
+        "file": "ticks_20260822.csv",
+        "sha256": "aad34e94fdfe6507f24228be769e6403d671ddfa3ecfe36582406f97c321d211",
+        "rows": 0
+      },
+      {
+        "file": "ticks_20260823.csv",
+        "sha256": "aad34e94fdfe6507f24228be769e6403d671ddfa3ecfe36582406f97c321d211",
+        "rows": 0
+      },
+      {
+        "file": "ticks_20260824.csv",
+        "sha256": "db4fd6f4ce6f3152c02a1b11aee4c10b519d2c71d4b42446df20bc7d8b7a7014",
+        "rows": 1108664
+      },
+      {
+        "file": "ticks_20260825.csv",
+        "sha256": "a491f15af06ad3c2f8a5d3a23cbefaa34e7133e9cd1dab748f428e35f55f9fcb",
+        "rows": 1042384
+      },
+      {
+        "file": "ticks_20260826.csv",
+        "sha256": "b63e16dc6a83889055744dbf3e7cb876ffd6144a18145d04fd5d253771aa04a9",
+        "rows": 956577
+      },
+      {
+        "file": "ticks_20260827.csv",
+        "sha256": "317aa9b62ee66d0c0100a5b46181e0826b91bc6ea50ef5371eb947b76d1654d9",
+        "rows": 1004721
+      },
+      {
+        "file": "ticks_20260828.csv",
+        "sha256": "ab06ba090c2cd0198d64e306b16068be0451351a86cf8786cb871c0c3318fdfc",
+        "rows": 1007890
+      },
+      {
+        "file": "ticks_20260829.csv",
+        "sha256": "aad34e94fdfe6507f24228be769e6403d671ddfa3ecfe36582406f97c321d211",
+        "rows": 0
+      },
+      {
+        "file": "ticks_20260830.csv",
+        "sha256": "aad34e94fdfe6507f24228be769e6403d671ddfa3ecfe36582406f97c321d211",
+        "rows": 0
+      },
+      {
+        "file": "ticks_20260831.csv",
+        "sha256": "6e351e44dd8391bdf185b74a3f9490c936725e53287f08f1b0f5ea3f607ae3e2",
+        "rows": 1021721
+      }
+    ],
+    "lean_cache_sync": "Security.SetMarketPrice(new Tick(currentTime, bid, ask)) \u002B Portfolio.InvalidateTotalPortfolioValue before core logic each ready tick; at END the last valid in-window quote is restored before core.End/Reconcile",
+    "residual": "LEAN AlgorithmManager (Engine/AlgorithmManager.cs ~line 271) calls security.Update for every slice BEFORE OnData. In-window slices: OnData then re-syncs the corrected quote per tick before any logic. After the server-day window (SetEndDate is the UTC day end, B1-identical) LEAN still delivers UTC ticks that map past the window; they are not traded and not re-synced, so the engine values holdings/TPV/margin at after-window raw quotes until the END restore. Actual exposure is recorded in end_cache_restore.exposure_when_after_window_valuation_began; an engine valuation effect is NOT claimed to be impossible.",
+    "after_window_ticks_not_traded": 0,
+    "end_cache_restore": {
+      "before_restore": {
+        "bid": 4447.76,
+        "ask": 4448.67,
+        "last_data_utc": "2026-08-31T20:59:33.9680000"
+      },
+      "last_valid_in_window": {
+        "server_msc": 1788220773968,
+        "utc": "2026-08-31T20:59:33.9680000",
+        "bid": 4447.76,
+        "ask": 4448.67
+      },
+      "after_restore": {
+        "bid": 4447.76,
+        "ask": 4448.67,
+        "last_data_utc": "2026-08-31T20:59:33.9680000"
+      },
+      "after_window_ticks_delivered_by_lean": 0,
+      "first_after_window_tick_utc": null,
+      "last_after_window_tick": {
+        "server_msc": 0,
+        "utc": null,
+        "bid": 0,
+        "ask": 0
+      },
+      "exposure_when_after_window_valuation_began": null,
+      "before_cache_equals_last_after_window_tick": false,
+      "before_cache_equals_last_valid_quote": true,
+      "after_cache_equals_last_valid_quote": true
+    }
+  },
+  "c7": {
+    "raw": 93,
+    "allowed": 75,
+    "rejected": 18,
+    "not_ready": 0
+  },
+  "diagnostic_counts": {
+    "-1/WARMUP_NO_HISTORY_REPLAY": 1,
+    "3/C7_SETUP": 93,
+    "3/ARMED": 75,
+    "3/SETUP_CONSUMED": 56
+  },
+  "lifecycle": {
+    "complete_positions": 56,
+    "wins": 28,
+    "losses": 28,
+    "zero_net": 0,
+    "net_usd": 102.030000000001,
+    "ending_balance": 602.030000000001,
+    "gross_profit_usd": 321.76000000000346,
+    "gross_loss_usd": 219.7300000000023,
+    "profit_factor": 1.4643426022846224,
+    "win_rate_pct": 50,
+    "avg_win_usd": 11.491428571428695,
+    "avg_loss_usd": -7.847500000000082,
+    "commission_usd": 5.140000000000002,
+    "swap_usd": 0,
+    "matched_round_trip_lots": 0.6700000000000004,
+    "commission_usd_per_round_trip_lot": 7.671641791044776,
+    "max_equity_dd_usd": 35.880000000000905,
+    "max_equity_dd_pct": 6.071916092132757,
+    "max_consecutive_losses": 3,
+    "exit_reasons": {
+      "TP": 25,
+      "SL_AFTER_BE": 4,
+      "SL": 27
+    },
+    "rejected_requests": 0,
+    "break_even_moves": 28,
+    "emergency_lock": false,
+    "daily_locks": 2,
+    "utc_day_starts": 26,
+    "armed_signals": 75,
+    "decision_reasons": {
+      "RESERVED": 56,
+      "MIN_LOT_OVER_RISK": 137,
+      "ENTRY_PRICE_DEVIATION": 211,
+      "ORDER_BLOCKED_BY_PORTFOLIO_RISK": 105,
+      "DAILY_EQUITY_STOP": 1,
+      "STRATEGY_SLOT_FULL": 5,
+      "STRUCTURE_SL_CROSSED": 5
+    },
+    "events": {
+      "ENTRY_FILLED": 56,
+      "SL_MODIFIED_PROTECTION": 28,
+      "EXIT_TP": 25,
+      "EXIT_SL_AFTER_BE": 4,
+      "EXIT_SL": 27
+    }
+  },
+  "qc_orders": {
+    "sent": 112,
+    "lean_order_count": 112,
+    "fill_price_mismatches": 0,
+    "fee_mismatches": 0,
+    "lean_fees_usd": 5.14
+  },
+  "reconciliation": {
+    "formula": "LEAN_CFD_TPV = ledger_at_net_side_quote - net_liquidation_fee (SecurityHolding.TotalCloseProfit includeFees=true)",
+    "tolerance_usd": 0.05,
+    "checks": 225,
+    "quantity_mismatches": 0,
+    "liquidation_fee_mismatches": 0,
+    "lean_cache_vs_corrected_quote_mismatches": 0,
+    "max_tpv_gap_usd": 0.000000000003,
+    "lean_end_tpv": 602.03000,
+    "lean_end_quantity": 0.00,
+    "ledger_end_balance": 602.030000000001,
+    "passed": true
+  },
+  "assumptions": [
+    "MARGIN_NOMINAL_1000_LEVERAGE_MODEL_NOT_BROKER_PARITY",
+    "STOPOUT_LEVEL_ASSUMED_100PCT",
+    "COMMISSION_3_5_PER_LOT_SIDE_OBSERVED_IN_MT5_TESTER_NOT_LIVE_CALIBRATED",
+    "SWAP_NOT_MODELED",
+    "SL_TP_FILL_AT_TRIGGER_QUOTE_UNLESS_LEVEL",
+    "SAME_TICK_ORDER_DUE_ACTIONS_THEN_SERVER_SLTP_THEN_EA",
+    "STOPS_AND_FREEZE_LEVEL_0_FROM_2026_10_04_SNAPSHOT",
+    "DEAL_PROFIT_NOT_ROUNDED_TO_CENTS",
+    "NO_PARTIAL_FILLS",
+    "CASH_LEDGER_TESTER_NO_DEPOSITS",
+    "KNOWN_DIFFERENCE_250MS_NEXT_ROW_NOT_LAST_ROW_BEFORE_DUE_AND_NO_SYNC_BLOCKING (B3 F5; separate later candidate)"
+  ],
+  "score": null,
+  "score_status": "SCORE_TARGETS_UNSET",
+  "verification_status": "LEAN_CANDIDATE_ENGINEERING_NOT_NATIVE_PARITY",
+  "champion": false,
+  "live_ready": false
+}

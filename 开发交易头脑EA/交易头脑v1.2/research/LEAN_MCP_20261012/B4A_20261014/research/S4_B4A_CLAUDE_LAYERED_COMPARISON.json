@@ -1,0 +1,147 @@
+{
+  "schema": "S4_NATIVE_VS_LEAN_LAYERED_COMPARISON_V1",
+  "generated_utc": "2026-10-14T11:33:26.4551847Z",
+  "score_status": "SCORE_TARGETS_UNSET",
+  "data_role": "AUGUST_2026_ALREADY_USED_DEVELOPMENT_NOT_OOS",
+  "inputs": {
+    "lean_run": "C:/Users/A/Documents/Codex/2026-09-10/v1-2-ea-mt5/work/repair_research/lean_mcp_20261012/runs/S4B4A_FULLAUGUST_D250_20261013T155148Z_3f926243",
+    "lean_receipt_status": "FULL_AUGUST_COMPLETE_REVIEW_REQUIRED",
+    "lean_result_sha256": "a0876d2caa058e84b53d9b7c4b394f15a759bdc1bef3b8598b4d7ad6a1b71cf9",
+    "lean_receipt_sha256": "a97813ba6685623708b639fda168c80f0799bda89475163c01315be7ff1fd1c0",
+    "native_run_id": "D4BF2385",
+    "native_baseline_sha256": "19f94178c840bfdad7324bb1b3b4565126fc7a0a6b89acc31209f28b137cfea0",
+    "native_files": {
+      "signals": "0276bb448fb8b5e7ab0b459e56720b8965e0d36edad7e06f540c27061907465f",
+      "decision_log": "3fdebff6404a74a7ea0503346b461c11a39dc204cc08b1e7c2960b1189091750",
+      "orders_audit": "48c99e25e631abe12070a6a9b736eff8aac286f48301082b4e6c8a4cc886fb89",
+      "position_events": "34ce1e66a6edaadbad7e90c4f0cf9f04f2a1a5dbe182200ec8611a025e908390",
+      "complete_trades": "4aee44ca7ecf46982b2fe69860cfc8dd064ba5cf2ef65bdd19e2558077641664",
+      "execution_errors": "e3b1f9daf41b680494b3860fc26fa289611989607e5387c3248a040e69368a29"
+    },
+    "native_files_expected_from_native_result": {
+      "signals": "0276bb448fb8b5e7ab0b459e56720b8965e0d36edad7e06f540c27061907465f",
+      "decision_log": "3fdebff6404a74a7ea0503346b461c11a39dc204cc08b1e7c2960b1189091750",
+      "orders_audit": "48c99e25e631abe12070a6a9b736eff8aac286f48301082b4e6c8a4cc886fb89",
+      "position_events": "34ce1e66a6edaadbad7e90c4f0cf9f04f2a1a5dbe182200ec8611a025e908390",
+      "complete_trades": "4aee44ca7ecf46982b2fe69860cfc8dd064ba5cf2ef65bdd19e2558077641664",
+      "execution_errors": "e3b1f9daf41b680494b3860fc26fa289611989607e5387c3248a040e69368a29"
+    }
+  },
+  "layer1_signals": {
+    "native": 75,
+    "lean": 75,
+    "matched_keys": 75,
+    "equal_within_tolerance": 75,
+    "differences": [],
+    "only_native": [],
+    "only_lean": []
+  },
+  "layer2_gate_decisions": {
+    "native": 34,
+    "lean": 34,
+    "matched_keys": 34,
+    "equal_within_tolerance": 34,
+    "differences": [],
+    "only_native": [],
+    "only_lean": []
+  },
+  "layer3_reservations": {
+    "native": 56,
+    "lean": 56,
+    "matched_keys": 56,
+    "equal_within_tolerance": 56,
+    "differences": [],
+    "only_native": [],
+    "only_lean": []
+  },
+  "layer4_entry_fills": {
+    "native": 56,
+    "lean": 56,
+    "matched_keys": 56,
+    "equal_within_tolerance": 56,
+    "differences": [],
+    "only_native": [],
+    "only_lean": []
+  },
+  "protection_requests_vs_confirmed": {
+    "native_requested": 29,
+    "native_confirmed_kind1": 28,
+    "native_requested_not_confirmed": [
+      {
+        "key": "S4|GOLD|-1|S4_MOMENTUM_1787766600_-1|1787766900",
+        "requested": 1,
+        "confirmed": 0,
+        "ended_position_closed": true
+      }
+    ],
+    "lean_requested": 29,
+    "lean_confirmed_sl_modified": 28,
+    "lean_requested_not_confirmed": [
+      {
+        "key": "S4|GOLD|-1|S4_MOMENTUM_1787766600_-1|1787766900",
+        "requested": 1,
+        "confirmed": 0
+      }
+    ],
+    "rule": "exit SL_AFTER_BE requires a confirmed SL change (native MANAGEMENT_CONFIRMED kind=1, LEAN SL_MODIFIED); requests alone never count"
+  },
+  "layer5_6_trades_and_protection": {
+    "native": 56,
+    "lean": 56,
+    "matched_keys": 56,
+    "equal_within_tolerance": 56,
+    "differences": [],
+    "only_native": [],
+    "only_lean": []
+  },
+  "layer7_account": {
+    "native": {
+      "net_usd": 102.03,
+      "equity_dd_usd": 33.22,
+      "max_relative_equity_dd_pct": 5.5903205117,
+      "complete_position_net_pf": 1.464342602284622,
+      "complete_positions": 56,
+      "win_rate_pct": 50,
+      "commission_usd": 5.14,
+      "longest_loss_streak": 3,
+      "daily_equity_stops": 2,
+      "daily_equity_stop_server_times": [
+        "2026.08.13 15:10:38",
+        "2026.08.27 16:03:05"
+      ]
+    },
+    "lean": {
+      "net_usd": 102.030000000001,
+      "equity_dd_usd": 35.880000000000905,
+      "max_relative_equity_dd_pct": 6.071916092132757,
+      "complete_position_net_pf": 1.4643426022846224,
+      "complete_positions": 56,
+      "win_rate_pct": 50,
+      "commission_usd": 5.140000000000002,
+      "longest_loss_streak": 3,
+      "daily_equity_stops": 2,
+      "emergency_lock": false,
+      "exit_reasons": {
+        "TP": 25,
+        "SL_AFTER_BE": 4,
+        "SL": 27
+      }
+    },
+    "note": "Account metrics are path-dependent; any earlier-layer difference propagates. Differences are model-difference leads, not strategy improvement or degradation. DD definitions: native tester equity DD vs LEAN per-tick MT5-semantics equity curve."
+  },
+  "layer8_overnight": {
+    "rule": "position open across server 00:00 (FxPro rollover); LEAN does not model swap (gap G3)",
+    "native": [],
+    "lean": [],
+    "lean_swap_model_gap_exposed": false
+  },
+  "first_divergence": null,
+  "status": "FULL_AUGUST_LAYERED_COMPARISON_REVIEW_REQUIRED",
+  "claims_not_made": [
+    "native parity",
+    "strategy improvement",
+    "score",
+    "Champion",
+    "live readiness"
+  ]
+}
