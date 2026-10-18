@@ -138,7 +138,7 @@ CURRENT `architecture.seven_signal_modules_implemented=true`，但 C# 源码头�
 
 用户同日还确认：**方案 B**（V1.2 采用新分工和 RiskExecution v1.0），以及**先迁一套、对照一致后再扩展**。K1、K2 由此定案，待 Codex 同步 AGENTS／PLAN／COLLABORATION。
 
-对确认文件的三处文字建议（不影响归属结论）：
+对确认文件的文字建议（不影响归属结论）：
 - S5 描述“布林带”过简，实际为 M15 区间 + M5 布林带触碰 + RSI 回升。
 - S6 描述“M15/M5 入场”不完整，C# 移植另有 H4 回调路径（H4 收盘入场）。
 - S4 称“伦敦／纽约动能 Scalping”，容易与 S7 Scalping 混淆，建议称“伦敦／纽约动能”。
