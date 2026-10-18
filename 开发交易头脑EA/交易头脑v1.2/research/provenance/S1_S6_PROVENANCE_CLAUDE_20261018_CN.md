@@ -1,5 +1,7 @@
 # 交易头脑 V1.2 S1–S6 来源归属核查 — Claude 初查
 
+> **2026-10-18 更新：本文件的 UNKNOWN 结论已被用户确认取代。** 用户确认 S1–S6 是“AI 根据我的方向研究、组合出来的”，项目内归属定为 **NON_USER**；Scalping（S7）维持 USER_OWNED。权威记录见 `draft/risk-execution-interface` 分支 `contracts/drafts/strategy_origin_S1_S7_user_confirmation_20261018.md`（提交 520e57d）。Claude 同意此分类：AI 按用户方向设计的策略符合 FINAL_CHAMPION §2.2 的 NON_USER 定义。下文第 3 节的规则摘要、修改记录和源码位置仍可作台账参考；第 4 节风险 1（保留版已非原版）随之解除，因 NON_USER 允许在已授权研究内修改核心规则。
+
 日期：2026-10-18。状态：**DRAFT / 待 Codex 本地核对与双方复核**。本文件不是正式归属表；正式表在双方复核后另行更新。
 本次只读核查，没有修改任何策略、源码、计划或 CURRENT.json，没有编译或回测。
 
