@@ -63,14 +63,7 @@ Claude Code回报已读共用规则、完整项目计划／CURRENT／EVIDENCE_IN
 
 原始UI文字回执保存在本机 `C:\Users\A\Documents\Codex\outputs\claude-code-knowledge-sync-20261007\claude-code-receipt-final-20261008.txt`；本仓仅保存范围摘要，后续变更以最新提交和CURRENT为准。
 
-每次开始新的开发任务或接续研究前，先让用户选择：
-
-1. **使用 Claude**：按 AGENTS.md 当前方案 B 的 Core / RiskExecution 模块责任协作。
-2. **不用 Claude**：须另行明确风险模块责任和复审边界，不默认覆盖已冻结接口或冒充双 AI 审查。
-
-当前请求已明确选择时直接采用，不重复问；否则等待选择，不默认任何模式，也不启动该轮研发。已授权的文档维护和只读核对可以继续。选定后同一次任务内不在每个技术步骤重复询问；下一次新任务或用户另行发起接续时重新给选择。两种模式沿用相同的策略权限、风控、验证和恢复规则。
-
-本次选择写入现有研究记录。只用 Codex 时无需 Claude 交接或复审，不声称 Claude 参与。方案 B 下不自行互换模块职责；Claude 不可用则继续可独立完成的分析、文档和验证，记录待交接事项，不静默切换模式。用户可以明确改选。使用 Claude 时的完整分工以根目录 AGENTS.md 为准。切换模式不切换交易引擎、验收标准或当前有证据的版本。
+协作模式的选择规则（方案 B 双 AI／只用 Codex）只在根目录 [AGENTS.md](../../../AGENTS.md#v12-方案-b唯一现行分工规则2026-10-18) 维护，本文件不重复。本次选择写入现有研究记录；只用 Codex 时不声称 Claude 参与或复审；方案 B 下不自行互换模块职责，Claude 不可用时记录待交接事项，不静默切换模式。
 
 2026-10-03 补充核实：已通过 Claude 桌面版完成消息收发和协作流程讨论；随后已告知主仓库与指标库，Claude 界面显示 Added 2 memories 并列出 gsm-ea-gold-trading.md 与 preferences.md，回复确认保存了仓库用途、链接及分工；尚未实际读取仓库。Claude Code CLI 与后台自动协作仍未验证。未购买 API、启动后台服务或开展新 EA 研发。
 

@@ -1,6 +1,6 @@
 # GSM 黄金 EA
 
-一个仓库管理研究计划、协作和证据。交易头脑 V1.2 当前主线是 **FxPro MT5 / MQL5**，当前由 Codex 与 Claude 共同讨论方案、双方复审；代码由 Claude 负责，Codex 负责协调和测试验证。
+一个仓库管理研究计划、协作和证据。交易头脑 V1.2 当前主线是 **FxPro MT5 / MQL5**。协作分工以 [AGENTS.md](AGENTS.md) 的方案 B 为准：Codex 负责 EA Core、信号与编译测试，Claude 负责 RiskExecution，双方共同讨论与交叉复审。
 
 | 入口 | 用途 |
 | --- | --- |
