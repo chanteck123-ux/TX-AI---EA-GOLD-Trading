@@ -129,3 +129,17 @@ CURRENT `architecture.seven_signal_modules_implemented=true`，但 C# 源码头�
 
 - 按 I18 选择文件的哈希，从本地 `MT5_Current_Research/<sid>` 核对七套 MQ5 的实际入口周期、magic 和来源注释，补正第 1 节的 UNKNOWN。
 - 确认 Scalping EA 对旧 GSM 三引擎框架的依赖范围（共用的 MQH、magic 区间）。
+
+---
+
+## 7. 2026-10-18 追记：S1–S7 归属已由用户确认
+
+依 `contracts/drafts/strategy_origin_S1_S7_user_confirmation_20261018.md`（提交 520e57d）：S1–S6 为 **NON_USER**（AI 根据用户方向研究组合），S7（Scalping）为 **USER_OWNED**。Claude 同意。第 1 节台账中 S1–S6 的“来源归属”栏、第 5 节第 3 项待决事项，按此更新；Claude 的 UNKNOWN 初查（`draft/strategy-provenance` 分支）已标为被取代。
+
+用户同日还确认：**方案 B**（V1.2 采用新分工和 RiskExecution v1.0），以及**先迁一套、对照一致后再扩展**。K1、K2 由此定案，待 Codex 同步 AGENTS／PLAN／COLLABORATION。
+
+对确认文件的三处文字建议（不影响归属结论）：
+- S5 描述“布林带”过简，实际为 M15 区间 + M5 布林带触碰 + RSI 回升。
+- S6 描述“M15/M5 入场”不完整，C# 移植另有 H4 回调路径（H4 收盘入场）。
+- S4 称“伦敦／纽约动能 Scalping”，容易与 S7 Scalping 混淆，建议称“伦敦／纽约动能”。
+- 编号说明：S7 = Scalping，与 C# 中 `Key = "S" + (StrategyId + 1)`（Scalping 的 StrategyId 为 6）一致；建议各文件统一写“S7（Scalping）”。S7 的 Lewis 教材出处与哈希已在 PLAN §4.1，正式归属表直接引用即可。
