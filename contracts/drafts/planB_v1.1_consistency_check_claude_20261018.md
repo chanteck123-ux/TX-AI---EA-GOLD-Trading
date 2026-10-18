@@ -1,7 +1,7 @@
 # 方案 B 整理与 RiskExecution v1.1 — Claude 侧一致性核对
 
 分支：`draft/risk-execution-interface`。基于 Claude《方案 B 文档核对》（提交 8240e70）。
-状态：Claude 已完成 B1–B3 修正和 v1.1 草案；**等待 Codex 核对，尚未合并 main**。未编写 MQL5、未编译、未回测。
+状态（2026-10-18 更正）：本文件和 v1.1 草案已随 PR #8、#9、#11 进入 main（2026-10-18 核对 `origin/main` = `3718653`）。**正式接口仍是 FROZEN v1.0；v1.1 仍是草案，没有生效**；第三节 G1、G3、G4 和 G5 的本地取证仍在等待 Codex。没有编写 MQL5，没有编译，也没有回测。冻结前审查记录见 `contracts/drafts/riskexec_v1.1_prefreeze_review_claude_20261018.md`。
 
 ## 一、本次完成的修改
 
@@ -50,12 +50,12 @@
 - **探测环境**：双图表读写探测只在 Demo 账户或测试器中进行，不在挂实盘的终端上新增 EA 实例。
 - **状态口径**：本节修订只改核对范围；不修改正式接口 v1.0，不代表 v1.1 已获冻结批准，也不代表任何代码已实现、编译或测试通过。
 
-## 四、合并条件
+## 四、合并条件（2026-10-18 按 AGENTS「main 合并门禁」更正）
 
-1. Codex 完成上述核对；有异议的项目在 v1.1 草案中注明，双方处理。
-2. 双方确认后，Codex 以 v1.1 替换 `contracts/risk_execution_interface.md`，状态改为 FROZEN v1.1（v1.0 原文保留在 git 历史）。
-3. 一次合并到 main；`contracts/drafts/` 建议同时移到 `contracts/history/`。
-4. 合并只代表文档和接口规格定稿，不代表任何代码已实现、编译或测试通过。
+1. Codex 完成第三节 G1、G3、G4、G5 的冻结前本地取证；Claude 逐项独立复核，复核记录保存在 GitHub。冻结前审查发现的规格问题（见 `riskexec_v1.1_prefreeze_review_claude_20261018.md` 第三节 X1–X11）中，标为阻断的项目必须先在 v1.1 草案中处理并经双方复核。S7 槽位若确实无法确定，可以保持 TBD，但必须写明：S7 不得新增风险，含 S7 的批次不得回测。
+2. 用 v1.1 替换 `contracts/risk_execution_interface.md` 必须**另开独立 PR**。PR 描述逐项写明 AGENTS 规定的八项：修改目标与文件清单、核对文件、Codex 实际复核记录、Claude 实际复核记录、未决项与风险、已验证／未验证事项、阻断项与合并判定、合并后版本及恢复依据。
+3. 该 PR 必须同时具备 Codex 与 Claude 各自真实的复核记录，并取得**用户对该具体 PR 的明确合并批准**，才能从 Draft 转 Ready 或合并。Codex 和 Claude 都不得自行代用户批准，也不得自行合并；用用户账号执行合并时，要注明实际操作者及批准依据。v1.0 原文保留在 git 历史；`contracts/drafts/` 是否移到 `contracts/history/`，在该 PR 中一并说明。
+4. 合并只代表接口规格定稿，**不代表**任何代码已实现、编译或测试通过；RE-29、RE-30、RE-31 的运行验收在 RiskExecution 实现阶段另行完成。
 
 ## 五、2026-10-18 追记：S7 日锁逐项对照结果（第三节第 4 项）
 
