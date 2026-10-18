@@ -1,6 +1,6 @@
 # Risk / Execution Interface v1.0 — 正式规格（待 Claude 最终核对）
 
-**状态：v1.0 候选正式文件 / PENDING FINAL REVIEW。** D1–D4 全部接受；文档规范已整合，双方尚未完成最终确认。未编写 MQL5、未编译、未回测或 Demo 验证。来源：v0.3 与 Claude v0.3 差异复核（blob 由 GitHub 留存）。
+**状态：FROZEN v1.0（接口规格冻结，Claude F1–F3 条件已满足）。** D1–D4 全部接受；后续接口变更须双方批准并升版本号。未编写 MQL5、未编译、未回测或 Demo 验证。来源：v0.3 与 Claude v0.3 差异复核（blob 由 GitHub 留存）。
 
 ## 0. 审查决议追踪与最终决议
 
@@ -16,14 +16,14 @@ D1、D2、D3、D4 **全部接受，无异议**。M1–M6、P1–P5 按 v0.3 决�
 | M6 | **有条件接受** | §5 对账不能仅靠 magic+symbol+方向+时间认定同一请求；必须排除歧义 |
 | P1 | **有条件接受** | §4 第一轮拟对冲；运行前核对实际账户模式，净额禁新仓 |
 | P2 | 接受 | §7 只冻结字段语义，批次冻结具体数值 |
-| P3 | 接受（实现需验证） | §6 MQL5/Files 状态文件、写临时文件与恢复校验；不能预先声称原子替换 |
+| P3 | 接受（实现需验证） | §6 MQL5/Files A/B 双槽、SHA-256 校验与恢复；不依赖原子替换 |
 | P4 | 接受 | §5 默认 cancel_remainder |
 | P5 | 接受 | §7 单脚本双构建、隔离证据与生产哈希核验 |
 
 ### 有条件接受的理由
-- **M6**：magic+symbol+方向+发单时间可能对应多个订单/成交，单凭这些字段不能证明本审批已被服务器接受。应优先关联已记录的 request/order/deal/position 标识与成交链；若无法唯一匹配，则 RECONCILE_REQUIRED、保留在途锁、禁止重复发单，直到人工/后续对账解决。订单 comment 只能辅助，不能作为唯一依据。
+- **M6**：magic+symbol+方向+发单时间可能对应多个订单/成交，单凭这些字段不能证明本审批已被服务器接受。应优先关联已记录的 request/order/deal/position 标识与成交链；若无法唯一匹配，则 RECONCILE_REQUIRED、保留在途锁、禁止重复发单，依 §5.1 的 D1 规则自动结案或保持锁定；**本段旧的人工等待表述已由 D1 取代，以 §5.1 为准**。订单 comment 只能辅助，不能作为唯一依据。
 - **P1**：历史对冲证据仅用于选择试运行目标；启动时读取 ACCOUNT_MARGIN_MODE 并与冻结 policy 比对。不符时禁止新开仓并告警；RE-18 仍为净额上线前必测。
-- **P3**：终端文件系统的临时文件覆盖/改名语义、异常中断后持久性需通过故障注入和重启测试验证。实现可采用临时文件+校验+备份/代际文件+恢复选取，不把未验证的改名操作称为保证原子。
+- **P3**：终端文件系统的临时文件覆盖/改名语义、异常中断后持久性需通过故障注入和重启测试验证。**此处早期备选方案已由 D3 取代：唯一持久化方案为 §6 的 A/B 双槽，不依赖 rename；实际持久性仍须故障测试验证。**
 
 ## 1. 所有权、接口及单位
 
@@ -149,7 +149,7 @@ OnTimer：ReconcileState + ManagePositions（含待处理退出/保护）；无 
 
 - **生产构建**用于所有成绩回测、成本压力、样本外和 Demo；**故障注入构建**只用于 F 验收。生产构建不能含可触发注入代码路径。测试结果不得作为策略收益成绩。
 - Codex 负责同一编译脚本参数化生产/注入构建；两者来自同一 commit，注入差异只在 `#ifdef TEST_FAULT_INJECTION` 保护范围内。保存源码 commit、编译参数、编译日志、两个 EX5 SHA256、注入差异检查记录、报告所用 build_type 与 EX5 hash。生产部署前核对 EX5 哈希及无注入路径；未实现前状态 NOT VERIFIED。
-- 每批 `policy.json` 冻结字段及数值：account_mode、magic_base/strategy_index_range、initial_capital_account_ccy、symbol、data_range、tick_model、execution_delay、costs、score_anchors、experiment_budget、max_entry_delay_seconds、max_price_deviation_price、approval_ttl_seconds、inflight_timeout_seconds、max_retry_count、post_fill_risk_tolerance_pct、partial_fill_remainder_policy、minimum_sl_step_price、min_margin_level_after_entry_pct、clock_tolerance_seconds、run_id、emergency_unprotected_position_policy、以及部分成交、异常退出和恢复所需策略。**接口冻结字段/单位/语义，不替批次选择数值**。必要字段为 TBD 时不得启动该批；评分锚点未冻结则总分 N/A，不能事后修改。
+- 每批 `policy.json` 冻结字段及数值：account_mode、magic_base/strategy_index_range、initial_capital_account_ccy、symbol、data_range、tick_model、execution_delay、costs、score_anchors、experiment_budget、max_entry_delay_seconds、max_price_deviation_price、approval_ttl_seconds、inflight_timeout_seconds、max_retry_count、post_fill_risk_tolerance_pct、partial_fill_remainder_policy、minimum_sl_step_price、min_margin_level_after_entry_pct、clock_tolerance_seconds、emergency_unprotected_position_policy、以及部分成交、异常退出和恢复所需策略。**run_id 不属于 policy.json，不参与 policy_hash；由单一回测执行器写入队列任务，并作为 EA 输入参数传入，每份报告记录 run_id。** **接口冻结字段/单位/语义，不替批次选择数值**。必要字段为 TBD 时不得启动该批；评分锚点未冻结则总分 N/A，不能事后修改。
 - Claude 只创建不可变 `research/queue/pending/<run_id>.json`；Codex 单执行器独占更新 running/completed/failed，持久 run_id 去重、本机锁、异常恢复。Git 文件不是锁；仅一个 MT5 Tester，不额外创建数据目录绕开占用。失败试验也计入总预算。
 
 ## 8. 统一状态及验收
@@ -181,7 +181,7 @@ OnTimer：ReconcileState + ManagePositions（含待处理退出/保护）；无 
 | RE-15 | 合规手数低于最小手 | REJECT_VOLUME，不向上凑 | T | NOT RUN |
 | RE-16 | 已有持仓再入场 | 组合风险计入已有及在途风险 | T | NOT RUN |
 | RE-17 | 减仓量超过实际持仓 | 不反向开仓 | T | NOT RUN |
-| RE-18 | 净额账户第二策略同品种入场 | REJECT_NETTING_CONFLICT | D | NOT RUN |
+| RE-18 | 净额账户第二策略同品种入场 | REJECT_NETTING_CONFLICT | D | DEFERRED / NETTING RELEASE GATE |
 | RE-19 | 休市时紧急退出 | 待处理，开市重试 | T | NOT RUN |
 | RE-20 | 跳空穿过 SL | 记录实际与预计损失差 | T | NOT RUN |
 | RE-21 | 对账部分读取失败 | 可安全保护的持仓仍执行 | F | NOT RUN |
@@ -200,6 +200,6 @@ OnTimer：ReconcileState + ManagePositions（含待处理退出/保护）；无 
 ## 9. 交接、冻结与未解决问题
 
 交接必须附 candidate_id、run_id、branch、完整 commit SHA、变更模块、源码/参数/EX5 hash、编译日志、原始报告、执行环境、已跑/未跑测试和未解决问题。交叉审查完整调用路径，不只看 diff。
-本文件已写入正式路径，**等待 Claude 仅核对 D1–D4 及完整验收矩阵**。Claude 明确确认后双方才将文档状态标记 FROZEN v1.0；合并 main 仍需项目授权。本次不合并 main、不启动开发或实盘。
+Claude 已对 D1–D4 和完整验收矩阵完成有条件确认；本版落实 F1–F3 后依约将**接口规格标记 FROZEN v1.0**。此冻结不代表实现已验证；合并 main 仍需项目授权。本次不合并 main、不启动开发或实盘。
 
 **待确定**：第一轮实际账户模式及批次 policy 数值；MQL5 A/B 双槽和 SHA-256 实现验证；双构建差异验证脚本；无法自动消除的订单歧义的人工恢复流程；测试器无法模拟的服务器行为的 Demo 计划。
