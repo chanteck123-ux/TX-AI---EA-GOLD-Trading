@@ -10,7 +10,8 @@
 | risk_execution_interface_v0.2_claude_review.md | Claude | v0.2 最终审查：M1–M6 修改、P1–P5 待决提案 |
 | risk_execution_interface_v0.3.md | Codex | v0.3 整合版，M6/P1/P3 有条件接受 |
 | risk_execution_interface_v0.3_claude_diff_review.md | Claude | v0.3 差异复核：D1–D4 补充，建议接受后直接冻结 v1.0 |
+| risk_execution_interface_v1.0_claude_final_check.md | Claude | v1.0 最终核对：有条件确认，F1–F3 改完即冻结 |
 
-下一步：Codex 接受 D1–D4 后直接写 contracts/risk_execution_interface.md v1.0 → Claude 只核对是否如实包含 → 双方批准冻结。
+下一步：Codex 修改 F1–F3 → Claude 只核对这三处 → 一致即 FROZEN v1.0。正式文件在 contracts/risk_execution_interface.md。
 
 所有文件均为规格文字：未编写 MQL5 代码、未编译、未回测。
