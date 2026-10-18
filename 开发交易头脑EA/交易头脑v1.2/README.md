@@ -1,6 +1,6 @@
 # 开发交易头脑 V1.2 黄金 EA
 
-500 USD 起步，先验证成本后盈利、账户持续运作与提款可行性。**采用LEAN（C#）研究引擎＋MT5／MQL5执行；EA独立计算信号、交易和本地风控。每次新开发或接续研究前，先选择使用 Claude，或不用 Claude、只用 Codex；未选择不默认启动。** 使用 Claude 时双方讨论和复审，Claude 写改代码，Codex 编译／测试；只用 Codex 时由 Codex 完成全流程。当前请求已明确选择就不重复问，同一次任务内不逐步重问，具体按[计划第2节](docs/PLAN_CN.md#2-技术路线与职责)执行。
+500 USD 起步，先验证成本后盈利、账户持续运作与提款可行性。**采用LEAN（C#）研究引擎＋MT5／MQL5执行；EA独立计算信号、交易和本地风控。** 协作分工与每次开始前的模式选择（方案 B 双 AI 或只用 Codex）以根目录 [AGENTS.md](../../AGENTS.md#v12-方案-b唯一现行分工规则2026-10-18) 为准：方案 B 下 Codex 负责 Core／信号／编译测试，Claude 负责 RiskExecution，接口见 [`contracts/risk_execution_interface.md`](../../contracts/risk_execution_interface.md)。
 
 | 现在要做什么 | 打开这里 |
 | --- | --- |
