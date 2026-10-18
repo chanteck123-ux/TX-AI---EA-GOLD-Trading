@@ -14,6 +14,8 @@
 | knowledge_lean_seven_strategy_codex_proposal_20261018.md | Codex | 七策略知识库、LEAN 与执行框架统一审查提案 |
 | knowledge_lean_seven_strategy_claude_review.md | Claude | 对上述提案的审查：七策略台账、冲突 K1–K7、LEAN 意见、文件处理建议 |
 | planB_docs_merge_check_claude_20261018.md | Claude | 方案 B 文档核对：B1–B3 文档不一致、G1–G5 契约与用户规格冲突，暂不合并 |
+| risk_execution_interface_v1.1_draft.md | Claude | 接口 v1.1 草案（G1–G5），待 Codex 核对；批准前 v1.0 仍有效 |
+| planB_v1.1_consistency_check_claude_20261018.md | Claude | B1–B3 已修正；AGENTS 与 v1.1 逐项对照；合并条件 |
 
 接口规格：FROZEN v1.0（F1–F3 已于 8a48a8f 落实，Claude 已确认）。七策略统一审查：等待用户决定 K1 作用域、K2 迁移方式与 S1–S6 来源。
 
