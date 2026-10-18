@@ -12,7 +12,7 @@
 | G2 | 账户检查增加 `ACCOUNT_HEDGE_ALLOWED`、`ACCOUNT_FIFO_CLOSE` | §4.1 | RE-28b、RE-28c |
 | G3 | 每策略最大活动槽位 `max_active_slots`；`TradeIntent` 增加 `setup_id` | §1、§3.1 | RE-29a、RE-29b |
 | G4 | 单执行实例租约 | §6.2 | RE-30a、RE-30b |
-| G5 | S7（Scalping）服务器日 6 盈或 6 亏锁由 RiskExecution 执行；计数以服务器历史重算、跨实例共用 | §3.2 | RE-31a–RE-31j |
+| G5 | S7（Scalping）服务器日 6 盈或 6 亏锁由 RiskExecution 执行；计数以服务器历史重算、跨实例共用 | §3.2 | RE-31a–RE-31l |
 
 
 ## 0. 审查决议追踪与最终决议
@@ -94,7 +94,8 @@ OnTimer：ReconcileState + ManagePositions（含待处理退出/保护）；无 
 - **换日**：服务器时间 00:00 清零当日 win/loss 并解除本锁；午夜无 Tick 时在下一次执行机会按服务器日期更新。服务器偏移和夏令时按历史时点核对，不固定换算成本地时间或 UTC。账户紧急锁等其他限制不随换日解除。
 - **计数来源与跨实例共用**：当日计数以服务器成交历史为准重算，不依赖单个实例的内存或状态文件，因此跨图表、跨实例共用同一计数（PLAN §4.1）。S7 身份由 policy `s7_identity_magics`（S7 当前及历史使用过的全部 magic）登记；只统计这些 magic 的完整交易，S1–S6、其他策略和手工单（magic 不在该集合内）一律不计入。每次处理 S7 新增订单前，核对服务器日期、当日历史交易、在途请求和当日锁定。
 - **持久化与去重**：本地状态文件（§6）只保存服务器历史无法提供的内容（费用确认状态、已计入的 setup_id、锁定时间）；重启后与服务器历史重算结果一致；重复或乱序的交易事件不得重复计数；换 magic（新旧 magic 均登记在 `s7_identity_magics`）、重启或重挂 EA 不能清空当日计数。
-- **费用未确认**：某笔交易的费用或归属未确认时，暂停 S7 新增风险（reason=`DAILY_LEDGER_UNRESOLVED`），对账完成后再计数。
+- **费用未确认或历史不完整**：某笔交易的费用或归属未确认，或当日服务器历史查询失败、覆盖范围不足以确定当日计数时，暂停 S7 新增风险（reason=`DAILY_LEDGER_UNRESOLVED`）；不得把查询失败当作零笔交易。对账完成、历史完整后再计数并解除。
+- **多实例竞争**：S7 新增订单只能由持有 §6.2 租约的唯一执行实例发出；`s7_identity_magics` 受 §4 magic 不重叠检查约束，其他实例不能以 S7 magic 下单。同一实例内，S7 计数检查与 §5 在途锁在同一次 `EvaluateEntry` 中完成：已有在途 S7 请求时直接 `REJECT_IN_FLIGHT`，在途请求结束并计入账本前，不发出下一笔 S7 订单，避免第 6 笔结束前多开一笔。
 - policy 字段：`strategy_daily_count_lock`：`{strategy_id: "S7", win_limit: 6, loss_limit: 6, day_boundary: "SERVER_00_00"}`；`s7_identity_magics`：S7 当前及历史 magic 列表（未经 Codex 本地核对前为 TBD，TBD 时不得启动含 S7 的批次）。
 
 ## 4. 账户模式与 magic（M5、P1）
@@ -272,8 +273,10 @@ v1.1 新增 `REJECT_RISK` 的 reason：`SLOT_FULL`、`DUPLICATE_SETUP`、`STRATE
 | RE-31h | S1–S6 及手工单的盈亏 | 不计入 S7 计数 | T | NOT RUN |
 | RE-31i | 非连续序列（例：W L W L W L W L W W） | 按累计计数，第 6 笔 win 时锁定；不要求连续 | T | NOT RUN |
 | RE-31j | 两个图表／实例、重挂 EA 或更换 S7 magic 后 | 读到同一当日计数与锁定状态，不被清空 | F/D | NOT RUN |
+| RE-31k | 当日历史查询失败或覆盖不足 | REJECT_RISK(DAILY_LEDGER_UNRESOLVED)，不当作零笔 | F | NOT RUN |
+| RE-31l | 两个实例在同一时刻尝试新增 S7 订单 | 只有租约持有者能发单；另一实例不执行交易动作 | F/D | NOT RUN |
 
-注：RE-24a/b/c 是 RE-24 的三个子用例；v1.1 新增 RE-28～RE-31 共 4 个编号（展开为 17 条子用例）。全部 NOT RUN；RE-18 仍为 DEFERRED。
+注：RE-24a/b/c 是 RE-24 的三个子用例；v1.1 新增 RE-28～RE-31 共 4 个编号（展开为 19 条子用例）。全部 NOT RUN；RE-18 仍为 DEFERRED。
 第一轮对冲模式目标下 RE-18 标记 **DEFERRED / NETTING RELEASE GATE**，不是 PASSED。其他用例由双方按可模拟能力决定 T/F/D 及必要的补充集成测试，不得把模拟结果说成真实服务器验证。
 
 ## 9. 交接、冻结与未解决问题
