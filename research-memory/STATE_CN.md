@@ -1,5 +1,12 @@
 # 当前研究状态与历史身份
 
+## 2026-10-18 方案 B 主分支合并事件（历史快照，非长期现状）
+
+- **远端核对时点**：GitHub API 显示 `main` 位于 `6131b36bb540378527848a1ca324f6184b2a1f79`（PR #8、#9 已合并；时间 2026-10-18 18:01–18:02，马来西亚时间）。具体事件、提前合并与后续报告误写「main 保持不动」的复核记录见 [Claude 核对文件 §六](../contracts/drafts/planB_v1.1_consistency_check_claude_20261018.md)（追记提交 `e4d89db84bf83d2b194d84498c72185d264df86b`）。
+- **版本界限（仅限上述时点）**：方案 B 文档和 `contracts/drafts/risk_execution_interface_v1.1_draft.md` 已进入 `main`，正式 `contracts/risk_execution_interface.md` 仍为冻结 v1.0；v1.1 草案未正式生效，代码、编译、MT5/LEAN 验证与部署未因本次合并而完成。
+- **后续治理**：[AGENTS.md「main 合并门禁与状态报告」](../AGENTS.md#main-合并门禁与状态报告2026-10-18) 规定 PR 八项审查记录、独立复核、具体 PR 的用户合并批准，以及借用户账号执行合并时披露实际操作者。其文本通过 PR #10（当前为 Draft）提议，不能在合并前宣称已进入 `main`；Claude 在 [PR #10 评论](https://github.com/chanteck123-ux/TX-AI---EA-GOLD-Trading/pull/10#issuecomment-6248733075) 指出两个必改项。后续实际状态必须重新核对远端 `origin/main`，不能将本条快照用作实时状态；v1.1 正式接口升级需要另开 PR，先关闭 G1/G3/G4/G5 等阻断项。
+
+
 交易头脑V1.2 I17实际研究（2026-10-10）：延后成本保本3.5/4.0，两份编译、四次真实Tick250ms回测及独立复算完成。T35六月/八月-47.37/+48.62、T40-59.00/+48.84；六月均比C1F更差，保留原版和研究恢复点。失败尝试账本及一次TP先平仓后的修改失败均记录。N/A，已用开发数据，非OOS/Champion/部署；S1–S6未重测。详见[当前成绩](../开发交易头脑EA/交易头脑v1.2/research/evidence/MT5_ITERATION17_SCALPING_20261010_CN.md)。
 
 2026-10-10 最新执行 I16：Scalping同0.01手退出归因完成，2次编译、4次原生真实Tick250ms均通过，Claude独立复审。六月原退出-63.79／成本保本-28.57 USD；八月59.02／48.75 USD。六月仍亏，八月保本削减利润，不晋级、不部署；保留原版及I15 C1。S1–S6本轮未重测，评分N/A，已用开发数据。详见[本轮成绩](../开发交易头脑EA/交易头脑v1.2/research/evidence/MT5_ITERATION16_SCALPING_20261010_CN.md)与[当前状态](../开发交易头脑EA/交易头脑v1.2/research/CURRENT.json)。后续事前登记延后保本触发小批对照，冻结后再作独立验证。
