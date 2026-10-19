@@ -1,6 +1,22 @@
 {
   "schema": "TRADINGBRAIN_CURRENT_V1",
-  "updated_on": "2026-10-14",
+  "updated_on": "2026-10-19",
+  "plan_b_phase1": {
+    "status": "LOCAL_EVIDENCE_RECORDED_AWAITING_CLAUDE_REVIEW",
+    "main_verified": "3718653b8f7bde02e2f52ef5ec47a6ec4c1c459d",
+    "branch": "research/plan-b-local-evidence-20261018",
+    "evidence": "PLAN_B_20261018/CODEX_REVIEW_CN.md",
+    "G1": "I18_RETAINED_IDENTITIES_HASH_VERIFIED_ACCOUNT_WIDE_CONFLICTS_NOT_FULLY_VERIFIED",
+    "G3": "SOURCE_VERIFIED_S7_ONE_POSITION_PLUS_PENDING_INFLIGHT_GATES",
+    "G4": "TESTER_NAMESPACE_AND_DEMO_DUAL_CHART_PASS_TWO_FAILED_ATTEMPTS_RETAINED",
+    "G5": "SOURCE_DIFFERENCES_RECORDED_THRESHOLD_RUNTIME_NOT_OBSERVED",
+    "formal_interface": "v1.0",
+    "v1_1": "DRAFT_NOT_FROZEN",
+    "RE29_RE30_RE31": "NOT_RUN",
+    "new_strategy_backtest": false,
+    "main_merge": false,
+    "deployment": false
+  },
   "timezone": "Asia/Kuala_Lumpur",
   "project": "TradingBrain V1.2 GOLD EA",
   "plan": "../docs/PLAN_CN.md",

@@ -1,0 +1,26 @@
+[
+  {
+    "sha256": "c40cb915ed624744ae9e3b5c7677966f52b03162e85f0a85ea56ef0a2242b639",
+    "file": "G4DemoController.compile.log"
+  },
+  {
+    "sha256": "9412c7ad2cad92cf6d3841b8dbc9ace73055c5b5bbd70be2eeb62d5cf0107db0",
+    "file": "G4DemoController.ex5"
+  },
+  {
+    "sha256": "4a4bf75074a2f2e7c02b981678cc750d95bdab9b2f7fc89f93132def3b012182",
+    "file": "G4DemoController.mq5"
+  },
+  {
+    "sha256": "9712b588b17561a688a7f448659d8391d62ed8eb0856cf63c292954f3681c3f7",
+    "file": "G4DemoWorker.compile.log"
+  },
+  {
+    "sha256": "5ed024b231cef6fccf7da48d21dd3087b506e417454dda01327c51cfe5915715",
+    "file": "G4DemoWorker.ex5"
+  },
+  {
+    "sha256": "639df722e0bbb11f342a5e4a54bd85ef2f31f15c8bb4dcbd834dbddb7468f341",
+    "file": "G4DemoWorker.mq5"
+  }
+]

@@ -1,0 +1,64 @@
+SOURCE C:\Users\A\Documents\Codex\2026-09-10\v1-2-ea-mt5\outputs\TradingBrain_I18_Seven_Strategies_20261011\MT5_Current_Research\S1\TB500_S1_TRIGGER_M5_SL_R2.mq5 SHA256 05d1efc953ae8ef24779e738e4cde7b37095bede5217576cb301c8185f85eb67
+12: input bool InpS1=true;
+13: input bool InpS2=false;
+14: input bool InpS3=false;
+15: input bool InpS4=false;
+16: input bool InpS5=false;
+17: input bool InpS6=false;
+88: long g_magics[6]={6101,6201,6301,6401,6501,6601};
+89: int g_slots[6]={1,1,1,2,1,1};
+SOURCE C:\Users\A\Documents\Codex\2026-09-10\v1-2-ea-mt5\outputs\TradingBrain_I18_Seven_Strategies_20261011\MT5_Current_Research\S2\TB500_S2_PROGRESS_RISK2_BE1_I11.mq5 SHA256 734d447ead4b90b092be2c397784ae7b3d3e0d9cdea839d877f73f834d815eab
+12: input bool InpS1=false;
+13: input bool InpS2=true;
+14: input bool InpS3=false;
+15: input bool InpS4=false;
+16: input bool InpS5=false;
+17: input bool InpS6=false;
+85: long g_magics[6]={6101,6201,6301,6401,6501,6601};
+86: int g_slots[6]={1,1,1,2,1,1};
+SOURCE C:\Users\A\Documents\Codex\2026-09-10\v1-2-ea-mt5\outputs\TradingBrain_I18_Seven_Strategies_20261011\MT5_Current_Research\S3\TB500_S3_H1_SLOPE_PRICE.mq5 SHA256 0f2901565718506bbdb3f344ceaab572bfef01e08efef8e28b12fcedff728f54
+12: input bool InpS1=false;
+13: input bool InpS2=false;
+14: input bool InpS3=true;
+15: input bool InpS4=false;
+16: input bool InpS5=false;
+17: input bool InpS6=false;
+88: long g_magics[6]={6101,6201,6301,6401,6501,6601};
+89: int g_slots[6]={1,1,1,2,1,1};
+SOURCE C:\Users\A\Documents\Codex\2026-09-10\v1-2-ea-mt5\outputs\TradingBrain_I18_Seven_Strategies_20261011\MT5_Current_Research\S4\TB500_S4_BE125.mq5 SHA256 f6abe1abc8d9cfca27e6483f344aab03110b9df11b8d1b458e3fce432d63be47
+12: input bool InpS1=false;
+13: input bool InpS2=false;
+14: input bool InpS3=false;
+15: input bool InpS4=true;
+16: input bool InpS5=false;
+17: input bool InpS6=false;
+84: long g_magics[6]={6101,6201,6301,6401,6501,6601};
+85: int g_slots[6]={1,1,1,2,1,1};
+SOURCE C:\Users\A\Documents\Codex\2026-09-10\v1-2-ea-mt5\outputs\TradingBrain_I18_Seven_Strategies_20261011\MT5_Current_Research\S5\TB500_S5_REQUEST_FINALITY_V1.mq5 SHA256 631ef2c3ce325fa2ec279766ce4c907f4d5a107509688f247fd2e3d99c2d99a1
+12: input bool InpS1=false;
+13: input bool InpS2=false;
+14: input bool InpS3=false;
+15: input bool InpS4=false;
+16: input bool InpS5=true;
+17: input bool InpS6=false;
+86: long g_magics[6]={6101,6201,6301,6401,6501,6601};
+87: int g_slots[6]={1,1,1,2,1,1};
+SOURCE C:\Users\A\Documents\Codex\2026-09-10\v1-2-ea-mt5\outputs\TradingBrain_I18_Seven_Strategies_20261011\MT5_Current_Research\S6\TB500_S6_DISTINCT_TRIGGER_BE1.mq5 SHA256 956d2fec9c809b8cb60b879a7868e08b3b2114e8e7b384347777617becaf4bdf
+12: input bool InpS1=false;
+13: input bool InpS2=false;
+14: input bool InpS3=false;
+15: input bool InpS4=false;
+16: input bool InpS5=false;
+17: input bool InpS6=true;
+86: long g_magics[6]={6101,6201,6301,6401,6501,6601};
+87: int g_slots[6]={1,1,1,2,1,1};
+SOURCE C:\Users\A\Documents\Codex\2026-09-10\v1-2-ea-mt5\outputs\TradingBrain_I18_Seven_Strategies_20261011\MT5_Current_Research\Scalping\TB500_Scalping_SPREAD20_I18.mq5 SHA256 41f443dd4ee26c495354f3955d7931be92e3b09c1e70458fbbf1a446baef4f2f
+484: input long   InpIntradayMagic            = 26082102;
+485: input long   InpScalpMagic               = 26082152;
+486: input long   InpSwingMagic               = 26082303;
+501: input int    InpTotalMaxOpenPositions    = 1;
+599: input int    InpScalpPauseAfterStreak    = 6;
+600: input int    InpScalpPauseHours          = 24;
+601: input int    InpScalpMaxOpenPositions    = 1;
+658: input int              InpIntradayMaxOpenPositions= 1;
+731: input int              InpSwingMaxOpenPositions   = 1;

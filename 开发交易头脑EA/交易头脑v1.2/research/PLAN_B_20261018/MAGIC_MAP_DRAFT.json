@@ -1,0 +1,10 @@
+{
+  "status": "DRAFT_FROM_I18_RETAINED_SOURCES_NOT_FORMAL_INTERFACE",
+  "magic_map": {"S1":6101,"S2":6201,"S3":6301,"S4":6401,"S5":6501,"S6":6601,"S7":26082152},
+  "s7_identity_magics": [26082152],
+  "not_s7_identity": {"Intraday":26082102,"Swing":26082303},
+  "proposed_max_slots": {"S7":1},
+  "slot_limit_scope": "Current position cap plus separate pending-order and inflight gates; generic Setup slot semantics require RE-29",
+  "historical_identity_scope": "Actual I10 and current retained I18 source; not a claim to inventory every historical build",
+  "account_conflict_scope": "Selected seven unique; Demo observed zero positions/orders; installed historical source overlap inventoried; external active EAs not exhaustively verified"
+}
