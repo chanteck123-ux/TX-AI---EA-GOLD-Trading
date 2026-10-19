@@ -123,3 +123,14 @@ PLAN 的 §6、§8、§9 本次只核对了与 RiskExecution 相关的风险约�
 2. X1–X4、X6、X7、X9 需要 Claude 与 Codex 共同修改 v1.1 草案，修改须经双方复核。
 3. 证据充分后另开 v1.1 升级 PR，写明八项，并由用户对该 PR 明确批准。**Claude 不会自行合并。**
 4. 正式接口升级之前，Claude 不实现任何与未冻结接口冲突的交易功能。
+
+## 九、2026-10-19 更正（依据 Codex 取证 f78ccd4 及 Claude 独立复核 56bba07）
+
+| 项目 | 原写法 | 更正 |
+|---|---|---|
+| X10 | 根据 I18 第 1643、1659 行推断“非测试器路径不会阻止 S7 新增风险” | **范围错误。**该版本 OnInit 第 2038–2039 行拒绝所有非测试器运行，不能推断它在 Demo 或实盘可以绕过日锁开仓。保留的只是对新实现的要求：在所有模式下执行 `DAILY_LEDGER_UNRESOLVED`。改为不阻断的设计提示 |
+| X11 | “连续暂停参数仍在，需核对实际效果” | `UpdateScalpPause` 只有第 6580 行的定义、没有调用点，没有旧连续暂停正在运行的证据。仍然不能据此删除或合并该规则 |
+| S1–S6 行号与哈希 | 引用的是 I18 新候选 `candidates/…` | 第 18 轮保留版本是 `MT5_Current_Research/` 下的 7 套（S1 第 88 行、S4 第 84 行等）。magic 与槽位的数值相同，结论不受影响 |
+| X8 补充 | — | G4 原生日志显示，测试器内的 `FILE_COMMON` 就是真实共享的 Common 目录，隔离只靠文件名中的 run_id |
+
+复核全文：分支 `research/plan-b-claude-evidence-review-20261019`，`开发交易头脑EA/交易头脑v1.2/research/PLAN_B_20261019_CLAUDE_REVIEW/CLAUDE_G1_G3_G4_G5_REVIEW_CN.md`。
