@@ -1,6 +1,8 @@
-# Risk / Execution Interface v1.1 — 草案修订 R2（Claude 整合 Codex 2026-10-21 决议，待 Codex 复审）
+# Risk / Execution Interface v1.1 — 草案修订 R3（Claude 处理 Codex R2 复审 8ac6020，待 Codex 复审）
 
-**状态：v1.1 DRAFT R2 / PROPOSED — 等待 Codex 复审实际 diff。不是正式接口，没有冻结，不授权交易实现、部署或合并。**
+**状态：v1.1 DRAFT R3 / PROPOSED — 等待 Codex 复审实际 diff。不是正式接口，没有冻结，不授权交易实现、部署或合并。**
+
+- R3 处理了 Codex 对 R2（fd5d27b）的复审 `contracts/drafts/planB_v1.1_R2_codex_review_20261021.md`（提交 8ac6020）中的三项必改和三项澄清，逐项对应见 `contracts/drafts/planB_v1.1_R3_claude_response_20261021.md`。
 
 - **双方批准前，FROZEN v1.0（`contracts/risk_execution_interface.md`）仍是唯一有效接口。** 本草案只存在于研究分支；用户对具体 PR 明确批准之前，不替换 main 中的正式文件。
 - **基线：** FROZEN v1.0（提交 8a48a8f；main `3718653`，SHA256 bfee24c7…）；v1.1 初稿（SHA256 0c050017…）。
@@ -29,6 +31,10 @@ v1.1 相对 v1.0 是**迁移性变更**，不只是新增字段。以下语义�
 | X6 | Demo 及获授权部署时，状态与锁都放在 `FILE_COMMON/TradingBrainV1.2/<state_scope_id>/`；v1.0 写的是终端本地 `MQL5/Files/` | 替换（存储位置） | §6、§6.2 | RE-30a–e |
 | X8 | 普通 Tester 完全不用 `FILE_COMMON`，只写本地 agent 目录，按 run_id 隔离 | 替换（明确化） | §6.1 | RE-27、RE-30g |
 | schema | `schema_version` 由 1 升为 2；字段见 §6 | 替换 | §6 | RE-30j |
+| R3-1 | 服务器身份变更的失败即关闭迁移规则：`scope_family_id` 与作用域元数据 | 新增 | §6 | RE-30m |
+| R3-2 | 全七策略持久的 `consumed_setup_ids`，在首次发单前与审批、在途意图一起提交，跨重启和换日保留 | 新增 | §3.1、§5、§6 | RE-29g |
+| R3-3 | 状态写入权限只属于当前句柄持有者；持久的 `ownership_state` 只作诊断，不能恢复执行权 | 新增 | §6.2 | RE-30n |
+| R3-4 | 全文保护、撤单、退出的主语限定为当前执行所有者；无 SL 补设为独立分支；Tester 目录规则与 RE-27 统一 | 澄清 | §1、§5、§6.1、§8 | RE-05b、RE-27 |
 
 ## 0. 审查决议追踪与最终决议
 
@@ -58,6 +64,8 @@ D1、D2、D3、D4 **全部接受，无异议**。M1–M6、P1–P5 按 v0.3 决�
 ## 1. 所有权、接口及单位
 
 Codex 拥有 EA Core、指标和信号、整合、编译与唯一 MT5 Tester 队列；Claude 拥有 RiskExecution（仓位/风险/订单/SL/恢复）及其验收用例。跨模块契约修改须双方确认；各文件仅单方写入，双方互审完整调用路径。所有交易执行（入场、减仓、退出、SL/TP 修改）只允许 RiskExecution 调用交易 API；Core 只能提交意图和转发交易事件。风控 MQL5 本地独立运行，不依赖 Python、AI 或监控服务。
+
+**主语约定（R3-4）：** 本文件所有“保护、补设 SL、保本、追踪、撤单、退出、减仓、对账后恢复”等**会调用交易 API 或改写共享状态**的表述，主语一律是**当前执行所有者**，即持有独占句柄、状态为 `OWNER_HEALTHY` 或 `OWNER_DEGRADED` 的实例（§6.2）。观察者实例和 `OWNERSHIP_UNCERTAIN` 实例一律只读、只告警；即使它们检测到 S7 日锁、无 SL 持仓、待撤挂单或待处理退出，也不发任何交易请求，也不写共享状态。
 
 字段距离及单位后缀：_price、_points、_pct、_seconds、_lots、_account_ccy；仅明确 USD 账户才用 _usd。读取品种 tick size、point、volume min/step/max、stops/freeze、合约及保证金规则。不可混用 point、pip 与价格单位。
 
@@ -104,6 +112,13 @@ OnTimer：ReconcileState + ManagePositions（含待处理退出/保护）+ 所�
 - **部分成交后取消剩余挂单，但已有成交持仓仍在**：该 Setup 继续占用槽位，直到全部持仓平仓并对账完成（RE-29d）。
 - `EvaluateEntry` 在审批前检查槽位；已满返回 `REJECT_RISK`，reason=`SLOT_FULL`，记录被拒的 setup_id。槽位已满不影响已有持仓的保护与退出。
 - 每个槽位对应唯一 `setup_id`（至少包含策略、品种、方向、结构 ID、触发 K 线时间）。同一 setup_id 已占用槽位或已消费时，再次提交返回 `REJECT_RISK`，reason=`DUPLICATE_SETUP`。S4 第二槽必须是新的 setup_id。
+- **持久 Setup 去重（R3-2，适用于全部七个策略）：**
+  - 所有已消费的 setup_id 记录在持久状态的 `consumed_setup_ids`（§6）中。
+  - 写入时机：在该 Setup **首次发单之前**，与 `consumed_approval_ids`、在途意图写入**同一次** A/B 提交，并回读校验通过；提交或校验失败则不发单。
+  - 一经写入，跨重启、跨换日、跨 Setup 终态都保留。Setup 终态后从 `active_setups` 移除，但仍留在 `consumed_setup_ids`；重启后即使拿到新的审批，同一 setup_id 仍返回 `DUPLICATE_SETUP`（RE-29g）。
+  - `consumed_approval_ids` 和 S7 的 `counted_setup_ids` **都不能替代**本表：前者只防同一审批重放，后者只服务 S7 当日计数。
+  - **不裁剪。** 在另行规定并证明不会重放的安全保留政策之前，不删除任何条目。条目随 Setup 数增长，实现时须留意文件大小，但不能以空间为由删除。
+  - 普通 Tester 每个 run_id 从空表开始（§6.1）。
 - 在途锁（§5）键不变：同一策略同一品种同时最多一笔在途请求。S4 第一槽的请求结束在途状态后，第二个 Setup 才可提交；第一槽在途时第二槽返回 `REJECT_IN_FLIGHT`（RE-29e）。
 - 任一策略的 `max_active_slots` 为 TBD 时，该策略不得新增风险，含该策略的批次不得运行（RE-29f）。
 
@@ -112,7 +127,7 @@ OnTimer：ReconcileState + ManagePositions（含待处理退出/保护）+ 所�
 本条只作用于 S7（用户 Scalping），规则原文见 V1.2 `PLAN_CN.md` §4.1；本节只规定执行归属和接口语义，不改变规则内容。用户 SOP 核心保持：M5 → 最近有效供需区 → 回踩 → 反转 K 线收盘确认。
 - **归属**：由 RiskExecution 维护完整交易账本并执行锁定；Core 不自行计数。
 - **计数**：按 FxPro 服务器日期，每笔完整交易／Setup 全部结束并完成对账后，按净收益（含已确认佣金、swap 及相关费用；成交价中的点差不重复扣）分类：净盈利计 win、净亏损计 loss、净零另列不计。win 与 loss 分别累计、不互相抵销；跨日持仓按最终结束的服务器日期计数；分批平仓与多笔成交合并为一次。
-- **锁定**：当日 win 达 `win_limit` 或 loss 达 `loss_limit`（默认均为 6）即锁定 S7 当天新增风险：`EvaluateEntry` 对 S7 返回 `REJECT_RISK`，reason=`STRATEGY_DAILY_LOCK`；同时撤销 S7 待入场挂单（**只撤 S7**，不撤 S1–S6 挂单）。撤单失败时保持锁定、记录原始 retcode、告警并重试（RE-31m）。已有 S7 持仓的保护、保本、追踪、退出与对账继续；锁定后才平仓的 S7 持仓照常计入当日次数，锁定状态不变（RE-31o）。不影响 S1–S6 及其他策略。
+- **锁定**：当日 win 达 `win_limit` 或 loss 达 `loss_limit`（默认均为 6）即锁定 S7 当天新增风险：`EvaluateEntry` 对 S7 返回 `REJECT_RISK`，reason=`STRATEGY_DAILY_LOCK`；同时由**当前执行所有者**撤销 S7 待入场挂单（**只撤 S7**，不撤 S1–S6 挂单）；观察者或 `OWNERSHIP_UNCERTAIN` 实例检测到锁定时只告警，不撤单。撤单失败时保持锁定、记录原始 retcode、告警并重试（RE-31m）。已有 S7 持仓的保护、保本、追踪、退出与对账继续；锁定后才平仓的 S7 持仓照常计入当日次数，锁定状态不变（RE-31o）。不影响 S1–S6 及其他策略。
 - **换日**：服务器时间 00:00 清零当日 win/loss 并解除本锁；午夜无 Tick 时在下一次执行机会按服务器日期更新。服务器偏移和夏令时按历史时点核对，不固定换算成本地时间或 UTC（RE-31p）。账户紧急锁等其他限制不随换日解除。
 - **计数来源与跨实例共用**：当日计数以服务器成交历史为准重算，不依赖单个实例的内存或状态文件，因此跨图表、跨实例共用同一计数（PLAN §4.1）。每次处理 S7 新增订单前，核对服务器日期、当日历史交易、在途请求和当日锁定。
 - **S7 身份（X5）**：只按 policy `s7_identity_magics` 认定 S7 成交，当前取证值为 **`[26082152]`**；26082102（Intraday）、26082303（Swing）不属于 S7，只参加 §4 的冲突检查。**订单或成交 comment 不得作为归属依据，也不得兜底**；归属须由已登记 magic 及可追溯成交链（order → deal → position）确认。S1–S6、其他策略和手工单（magic 不在该集合内）一律不计入。
@@ -162,12 +177,20 @@ OnTimer：ReconcileState + ManagePositions（含待处理退出/保护）+ 所�
 
 入场只使用已收盘 bar 信号；`max_entry_delay_seconds` 和 `max_price_deviation_price` 由批次 policy 冻结；每个 strategy_id+symbol+signal_bar_time 一次评估或仅按明确重试策略处理，不得在门控结束后追入。
 - 在途锁键：`state_scope_id` + strategy_id + symbol；状态 PENDING_SUBMIT → SENT → PARTIAL/FILLED/REJECTED/EXPIRED。PARTIAL 可能仍有剩余订单。锁超时必须先对账；无法确认服务器状态时继续阻挡。
-- 提交前先持久记录 approval_id、intent_digest、magic、symbol、direction、request_time、request_id（若可得）及状态；随后才调用服务器。若崩溃发生于记录与发单之间，恢复时以不确定状态对账，不能自动再次发单。
+- 提交前先持久记录 approval_id、intent_digest、setup_id、magic、symbol、direction、request_time、request_id（若可得）及状态，并把 approval_id 写入 `consumed_approval_ids`、setup_id 写入 `consumed_setup_ids`；这些在**同一次** A/B 提交中完成并回读校验通过后，才调用服务器（R3-2）。若崩溃发生于记录与发单之间，恢复时以不确定状态对账，不能自动再次发单；该 setup_id 已被消费，不能借新审批再次提交。
 - 重试优先使用 request/order/deal/position ID 和成交链精确匹配；若 ID 缺失，按 D1 的服务器时间候选匹配规则处理（详见 §5.1）。comment 仅辅助，不能单独判定。
 - 部分成交时立即保护已成交手数并复算风险；**默认 cancel_remainder**，不追补。策略可请求 keep_remainder，但必须获 policy 白名单许可；未确认撤单前仍保持在途锁。剩余挂单取消后，槽位按 §3.1 继续占用到全部持仓终态。
-- SL 初始/保本/追踪保护只收紧（BUY 新 SL ≥ 服务器已确认 SL，SELL 新 SL ≤ 已确认 SL），以 Bid/Ask、tick size、`minimum_sl_step_price`、SYMBOL_TRADE_STOPS_LEVEL / SYMBOL_TRADE_FREEZE_LEVEL 校验；拒绝或冻结时保留旧 SL 与待处理记录。服务器确认前不更新“已生效 SL”。
+- **SL 修改分两个互斥分支（R3-4）：**
+  - **服务器已确认 SL 不存在（`POSITION_SL == 0`）**：作为独立的“补设”分支处理，**不进入**下面的单调比较。数值 0 不是“更宽”或“更紧”的 SL，不能用于比较；尤其 SELL 的“新 SL ≤ 0”这种推论没有意义。补设值取持久的初始 SL 意图，并单独校验：
+    - 价格大于 0；
+    - 方向正确（BUY 的 SL 低于当前 Bid，SELL 的 SL 高于当前 Ask）；
+    - 满足 tick size、SYMBOL_TRADE_STOPS_LEVEL、SYMBOL_TRADE_FREEZE_LEVEL。
+    
+    不能安全确定补设值时，按 `emergency_unprotected_position_policy` 处理（RE-05、RE-05b）。
+  - **服务器已确认 SL 存在**：初始/保本/追踪保护只收紧（BUY 新 SL ≥ 已确认 SL，SELL 新 SL ≤ 已确认 SL），以 Bid/Ask、tick size、`minimum_sl_step_price`、SYMBOL_TRADE_STOPS_LEVEL / SYMBOL_TRADE_FREEZE_LEVEL 校验；拒绝或冻结时保留旧 SL 与待处理记录。
+  - 两个分支都只由当前执行所有者执行；服务器确认前不更新“已生效 SL”。
 - 净成本保本：求满足 `OrderCalcProfit(方向,品种,实际成交量,实际均价,SL价) + 已发生带符号佣金 + 预计剩余佣金 + 已发生 swap + 预计其他费用 - 滑点缓冲 >= 0` 的 tick-size 离散 SL 价格；不可重复扣已在成交价中的点差。价格按 SL 成交只是估算，不保证实际净利非负。
-- 已成交仓位没有 SL：按持久初始 SL 意图尝试补设；无法安全确定时按 `emergency_unprotected_position_policy` 告警/退出，不能默认为安全。
+- 已成交仓位没有 SL：由当前执行所有者按上面的“补设”分支、依持久初始 SL 意图尝试补设；无法安全确定时按 `emergency_unprotected_position_policy` 告警/退出，不能默认为安全。观察者和 `OWNERSHIP_UNCERTAIN` 实例只发最高优先级告警（RE-30l）。
 
 ### 5.1 D1：在途对账的唯一匹配与自动结案
 
@@ -226,6 +249,7 @@ OnTimer：ReconcileState + ManagePositions（含待处理退出/保护）+ 所�
     "deal_tickets": []
   }],
   "consumed_approval_ids": [],
+  "consumed_setup_ids": [{"strategy_id": "TBD", "setup_id": "TBD", "consumed_at_server": "TBD", "approval_id": "TBD"}],
   "pending_protection_actions": [],
   "pending_exit_intents": [],
   "positions": [{
@@ -242,6 +266,27 @@ OnTimer：ReconcileState + ManagePositions（含待处理退出/保护）+ 所�
 ```
 - 所有数值占位仅是 schema 示例，**不能当运行 policy**。
 - 租约心跳**不在**本文件内，单独存放在心跳诊断文件中（§6.2），避免心跳写入与状态写入互相干扰。
+- `ownership_state` 字段**只作诊断记录**（最后一次写入时的状态），**不能**在启动时恢复执行权（§6.2 写入权限）。
+- `consumed_setup_ids` 见 §3.1：全七策略，首次发单前提交，不裁剪。
+
+**作用域元数据与服务器身份变更（R3-1，失败即关闭）：**
+- 每个 `state_scope_id` 目录另存一个只读的作用域元数据文件 `scope_meta`（与 A/B 状态分开，带 SHA-256 校验），内容为：
+  - `state_scope_id`；
+  - `scope_family_id`：用 §6 同样的规范串格式，只取 project、login、symbol 三项（**不含 server**）计算的 SHA-256；
+  - 服务器名称的指纹；
+  - 创建时间。
+  
+  `scope_meta` 由首次取得该作用域独占句柄的所有者写入一次，之后不改写。
+- **启动时的判定**（本项目 `FILE_COMMON/TradingBrainV1.2/` 下）：
+  1. 若当前 `state_scope_id` 的目录已有有效状态，正常走 §6.2 流程。
+  2. 若当前目录不存在或没有任何状态，先枚举所有其他作用域目录的 `scope_meta`，寻找 `scope_family_id` 相同、`state_scope_id` 不同的候选，即同项目、同登录号、同 symbol，但服务器名称不同：
+     - **枚举完整成功，且零个候选**：视为新的作用域，可以开始；
+     - **一个或多个候选**：进入 `STATE_MIGRATION_PENDING`，禁止新风险并告警。不自动合并，不自动转移执行权，不把旧目录的状态复制过来。不同券商的账户可能登录号相同，所以**候选再多也不能凭 `scope_family_id` 相同就认定是同一账户**；
+     - **任何 `scope_meta` 损坏、不可读，或枚举失败**：不能证明这是全新账户，同样进入 `STATE_MIGRATION_PENDING`。
+- **解除迁移待定**：必须有一份显式的迁移记录，写明旧 `state_scope_id` → 新 `state_scope_id` 的映射、依据（例如券商更名的证据）和操作者，然后与新服务器的成交历史完整对账。旧作用域中的 `consumed_setup_ids`、`consumed_approval_ids`、在途请求、初始 SL 意图和 S7 当日计数，**全部**按迁移记录带入新作用域后，才能放行新风险。
+  - 服务器改名**不能**静默重置 S7 日锁、已用审批或已消费的 Setup（RE-30m）。
+  - 迁移记录由谁提供、以什么格式登记，属于部署规程，第一个 Demo 之前确定；在此之前遇到候选一律保持 `STATE_MIGRATION_PENDING`。
+- 普通 Tester 不做此枚举（§6.1，状态在本地 run_id 目录中，每次从空开始）。
 
 **唯一写法：A/B 双槽交替写入。**
 - 例如 state_A 与 state_B；写入非当前最新有效槽，写完 flush/close 后重新读取校验。
@@ -266,7 +311,7 @@ OnTimer：ReconcileState + ManagePositions（含待处理退出/保护）+ 所�
 - `MQLInfoInteger(MQL_TESTER)` 为真时，**普通回测 OnInit 必须从空状态启动**，不得加载任何先前回测遗留审批、在途锁或持仓保护状态。
 - run_id 由单一回测执行器登记并保证唯一：
   - 缺失 run_id 时拒绝运行；
-  - 启动时若发现该 run_id 目录下已有状态或完成标记，拒绝运行，不静默清空；
+  - **目录规则（R3-4，与 RE-27 一致）**：`test/<run_id>/` 目录**可以预先存在但必须是空的**（例如由 runner 预先创建）。只要其中含有任何文件（状态 A/B、锁、心跳、去重记录、诊断日志或完成标记），EA 都拒绝运行，不静默清空、不覆盖；
   - 优化运行每个 pass 须有唯一子 ID，该机制实现前不运行优化批。
 - **唯一例外**：RE-05、RE-06、RE-25 等明确标注的重启恢复验收，显式指定 fixture 文件及恢复模式；build_type、恢复模式、fixture hash 全部留证，不得计入策略成绩。
 - 即使 policy_hash 和账户指纹与上一轮相同也必须隔离。RE-27 验证连续两次回测不串状态；RE-30g 验证 Tester 不触碰 `FILE_COMMON`。旧 G4 探针**不能**冒用为新执行层的隔离验收。
@@ -279,6 +324,18 @@ OnTimer：ReconcileState + ManagePositions（含待处理退出/保护）+ 所�
 - 锁文件路径：`FILE_COMMON/TradingBrainV1.2/<state_scope_id>/execution.lock`（Tester 见 §6.1）。锁按 `state_scope_id` 粗粒度取得，**不含 magic_map_hash**；两份部分重叠但 hash 不同的映射也不能各自取得执行权（RE-30i）。
 - 取得方式：`FileOpen` 读写二进制，**不带** FILE_SHARE_READ / FILE_SHARE_WRITE。持有期间不关闭句柄，不删除或重建锁文件，不为刷新心跳临时释放句柄。锁文件与 A/B 状态、心跳诊断是不同的文件。
 - 没拿到句柄：观察模式，**不调用任何交易 API**，只做只读对账、诊断和告警。
+
+**写入权限（R3-3）：**
+- 只有当前持有独占句柄的实例（`OWNER_HEALTHY` 或 `OWNER_DEGRADED`）可以写以下**共享**内容：
+  - 状态 A/B；
+  - 持有者心跳诊断文件；
+  - `scope_meta`（只在首次创建时写）；
+  - `consumed_approval_ids`、`consumed_setup_ids`；
+  - 在途记录、`pending_protection_actions`、`pending_exit_intents` 等执行队列。
+- 观察者和 `OWNERSHIP_UNCERTAIN` 实例**一律不写**上述任何共享文件；它们的诊断日志写在各自独立的文件中（例如 `diag/<holder_instance_id>.log`），不与持有者共用文件，也不影响持有者的任何状态（RE-30n）。
+- **每次加载时执行权都视为未证明。** 持久状态中的 `ownership_state`（即使是 `OWNER_HEALTHY`）只是上一次写入时的诊断记录，**不能**恢复执行权。
+  - 新加载的实例必须先重新取得独占句柄，并完成身份核对、A/B 读取和服务器对账，才能成为 `OWNER_DEGRADED` 或 `OWNER_HEALTHY`。
+  - 在此之前，它和观察者一样只读，不写共享状态，也不调用交易 API。
 - 不同机器之间无法共享此锁；部署范围明确**不支持**多台机器以同一账户、同一 symbol 并行运行。启动时若出现非本实例产生的、属于本项目 magic 的新成交，作为告警线索。
 
 **心跳只用于诊断（X7）。**
@@ -293,7 +350,7 @@ OnTimer：ReconcileState + ManagePositions（含待处理退出/保护）+ 所�
 |---|---|---|---|---|
 | `OWNER_HEALTHY` | 持有独占句柄；持久化与对账正常 | 按冻结 policy 允许 | 正常执行 | 正常 |
 | `OWNER_DEGRADED` | 仍持有独占句柄，但心跳或状态写入／回读校验失败 | **立即禁止**（reason=`OWNER_DEGRADED`） | **继续**能确认的保护和退出；失败记录原始 retcode 并告警 | 继续 |
-| `OWNERSHIP_UNCERTAIN` | 句柄失效、被关闭，或无法确认仍然独占 | 禁止（reason=`OWNERSHIP_UNCERTAIN`） | **不调用交易 API**；服务器已接受的 SL/TP 继续由服务器执行；记录待处理动作 | 只读对账；每次 OnTimer/OnTick 尝试重新取得独占句柄 |
+| `OWNERSHIP_UNCERTAIN` | 句柄失效、被关闭，或无法确认仍然独占 | 禁止（reason=`OWNERSHIP_UNCERTAIN`） | **不调用交易 API**；服务器已接受的 SL/TP 继续由服务器执行；待处理动作只记在本实例的诊断日志中，**不写**共享执行队列 | 只读对账；每次 OnTimer/OnTick 尝试重新取得独占句柄 |
 
 - `OWNERSHIP_UNCERTAIN` 期间，不能因为“没有发现另一个持有者”就继续改单，因为那不是排他所有权的证明。
 - 若此期间发现本项目持仓**没有服务器端 SL**，只发出最高优先级告警，不发单（RE-30l）。
@@ -326,6 +383,7 @@ v1.1 新增 `REJECT_RISK` 的 reason：`SLOT_FULL`、`DUPLICATE_SETUP`、`STRATE
 - RETRYABLE 先精确对账，无法唯一确认则 RECONCILE_REQUIRED；不得重复下单。
 - 保护/退出失败记录原始 retcode 并保留待处理；休市等待开市；冻结区不发无效请求；不得放宽服务器已生效 SL。
 - 对账数据部分不可用，仍保护可确认持仓（受 §6.2 约束），不允许新入场。
+- **矩阵主语（R3-4）：** 下表凡是“保护继续”“撤销挂单”“补设 SL”“退出”等预期，执行者都是当前执行所有者（§1 主语约定）；观察者和 `OWNERSHIP_UNCERTAIN` 实例在同样场景下只读、只告警。
 
 **完整验收矩阵：** 所有可执行用例尚未运行，RE-18 推迟至净额模式上线前。T=策略测试器；F=测试器/可控故障注入；D=Demo；构建审计=静态/编译审计。真实服务器拒单不能仅凭注入测试证明。RE-29～RE-31 属于 RiskExecution **实现阶段**的验收，不是 v1.1 冻结的前提。
 
@@ -336,6 +394,7 @@ v1.1 新增 `REJECT_RISK` 的 reason：`SLOT_FULL`、`DUPLICATE_SETUP`、`STRATE
 | RE-03 | 试图放宽 SL | 拒绝，旧 SL 不变 | T | NOT RUN |
 | RE-04 | 0.30 手部分成交 0.10 | 保护已成交量、剩余按 policy、重算风险 | F | NOT RUN |
 | RE-05 | 重启发现无 SL 持仓 | 补设或按紧急政策处理并告警 | T/D | NOT RUN |
+| RE-05b | BUY 与 SELL 持仓各一笔，均无服务器 SL（`POSITION_SL == 0`） | 走独立补设分支，不用单调比较；补设价 > 0、方向正确、满足 stops/freeze；SELL 不因“新 SL ≤ 0”被误判为收紧；无法安全确定时按紧急政策 | F | NOT RUN |
 | RE-06 | 重启遗留在途锁但无服务器订单/持仓 | 核对后解除并记录 | F | NOT RUN |
 | RE-07 | 修改 SL 被拒 | 旧 SL 不变、保留待处理 | F | NOT RUN |
 | RE-08 | SL 修改遇冻结区 | 不提交、保留旧 SL | T | NOT RUN |
@@ -359,7 +418,7 @@ v1.1 新增 `REJECT_RISK` 的 reason：`SLOT_FULL`、`DUPLICATE_SETUP`、`STRATE
 | RE-24c | 零候选但查询失败 | 保持锁、RECONCILE_REQUIRED | F | NOT RUN |
 | RE-25 | A/B 双槽写入中断、损坏或两槽无效 | 选择最新有效槽；均无效时禁新仓但保护真实持仓 | F | NOT RUN |
 | RE-26 | 生产与注入双构建 | 同 commit，哈希/差异可追溯，成绩仅生产 EX5 | 构建审计 | NOT RUN |
-| RE-27 | 连续两次普通回测 | 第二次完全不读取第一次状态，run_id 隔离；已存在 run_id 目录时拒绝运行 | T | NOT RUN |
+| RE-27 | 连续两次普通回测；另测 run_id 目录预先存在且为空，以及目录中已有任一文件 | 第二次完全不读取第一次状态，run_id 隔离；空目录可以运行；目录中有任何文件（状态、锁、心跳、去重、诊断、完成标记）时拒绝运行，不清空、不覆盖 | T | NOT RUN |
 | RE-28a | magic_map 有重复值，或与同账户另一实例的已知 magic 重叠；规范串缺项、多项或重复键 | 禁止新开仓并告警；已有持仓保护继续；规范串错误时拒绝启动新风险 | T | NOT RUN |
 | RE-28b | `ACCOUNT_HEDGE_ALLOWED` 为 false | 禁止新开仓并告警，不自动平仓 | F | NOT RUN |
 | RE-28c | `ACCOUNT_FIFO_CLOSE` 为 true | 禁止新开仓并告警，不自动平仓 | F | NOT RUN |
@@ -369,6 +428,7 @@ v1.1 新增 `REJECT_RISK` 的 reason：`SLOT_FULL`、`DUPLICATE_SETUP`、`STRATE
 | RE-29d | 部分成交后取消剩余挂单，已成交部分仍持仓 | 继续占用同一 Setup 槽位；全部持仓平仓并对账后才释放；不双计 | F | NOT RUN |
 | RE-29e | S4 第一槽请求在途时出现第二个合格 Setup | REJECT_IN_FLIGHT；第一槽在途结束后可申请第二槽 | T | NOT RUN |
 | RE-29f | 某策略 `max_active_slots` 为 TBD | 该策略不得新增风险；含该策略的批次拒绝启动 | T | NOT RUN |
+| RE-29g | S1–S6 任一策略的某 Setup 已终态（已从 `active_setups` 移除）；重启并换日后，以新审批再次提交同一 setup_id | REJECT_RISK(DUPLICATE_SETUP)；`consumed_setup_ids` 在首次发单前已提交并回读校验；提交失败时不发单 | F | NOT RUN |
 | RE-30a | 同一电脑第二个实例以相同 `state_scope_id` 启动 | 第二实例取不到独占句柄，观察模式，不执行任何交易动作，只告警 | F/D | NOT RUN |
 | RE-30b | 持有者心跳超时，但句柄仍被占用 | 不能强抢；只有成功取得独占句柄后才进入接管对账 | F | NOT RUN |
 | RE-30c | 两个实例同时启动 | 最多一个取得独占句柄 | F/D | NOT RUN |
@@ -381,6 +441,8 @@ v1.1 新增 `REJECT_RISK` 的 reason：`SLOT_FULL`、`DUPLICATE_SETUP`、`STRATE
 | RE-30j | 换 policy、magic 或 schema 后发现旧状态 | `STATE_MIGRATION_PENDING`：不静默以空状态启动；迁移核对完成前禁新风险 | F | NOT RUN |
 | RE-30k | 无 Tick、系统时钟跳变、系统重启 | 心跳时钟异常不能授予执行权 | F | NOT RUN |
 | RE-30l | `OWNERSHIP_UNCERTAIN` 期间发现本项目持仓没有服务器端 SL | 只发最高优先级告警，不调用交易 API；重新取得句柄并对账后才补设 SL | F | NOT RUN |
+| RE-30m | 同一登录号与 symbol，服务器名称改变（含：一个候选、多个候选、`scope_meta` 损坏或枚举失败） | 都进入 `STATE_MIGRATION_PENDING`，禁新风险；不自动合并、不转移执行权；S7 日锁、已用审批、已消费 Setup 不被重置；只有显式迁移记录加完整对账后才放行 | F | NOT RUN |
+| RE-30n | 观察者实例或 `OWNERSHIP_UNCERTAIN` 实例运行一段时间（含它检测到日锁、无 SL 持仓、待处理退出） | A/B 状态、心跳诊断、`scope_meta`、`consumed_*`、执行队列的字节内容均未被它改变；它只写自己的诊断日志；它重启后不因持久的 `ownership_state` 而获得执行权 | F | NOT RUN |
 | RE-31a | S7 当日 3 盈 3 亏 | 不锁定 | T | NOT RUN |
 | RE-31b | S7 当日第 6 笔净盈利（或第 6 笔净亏损） | 锁定 S7 新增风险并撤销 S7 待入场挂单；S7 持仓保护继续；S1–S6 不受影响 | T | NOT RUN |
 | RE-31c | 净零交易、手续费使毛盈变净亏 | 净零不计；按净收益分类 | T | NOT RUN |
@@ -400,7 +462,7 @@ v1.1 新增 `REJECT_RISK` 的 reason：`SLOT_FULL`、`DUPLICATE_SETUP`、`STRATE
 | RE-31q | 账户级佣金无法归属到具体持仓；或当日有疑似 S7 但 magic 未登记的成交；或成交带 S7 风格 comment 但 magic 不符 | REJECT_RISK(DAILY_LEDGER_UNRESOLVED)；comment 不计入也不兜底 | F | NOT RUN |
 | RE-31r | 基线运行 | 只执行累计 6 盈／6 亏锁；旧连续暂停未启用；若另批启用，单独记录原因码，不改变累计锁 | T | NOT RUN |
 
-注：RE-24a/b/c 是 RE-24 的三个子用例。v1.1 新增 RE-28～RE-31 共 4 个编号（展开为 39 条子用例）。全部 NOT RUN；RE-18 仍为 DEFERRED。
+注：RE-24a/b/c 是 RE-24 的三个子用例。v1.1 新增 RE-28～RE-31 共 4 个编号，展开为 **42** 条子用例：RE-28 3 条、RE-29 7 条、RE-30 14 条、RE-31 18 条。此外新增 RE-05b，并扩充了 RE-27 的预期。全部 NOT RUN；RE-18 仍为 DEFERRED。
 第一轮对冲模式目标下 RE-18 标记 **DEFERRED / NETTING RELEASE GATE**，不是 PASSED。其他用例由双方按可模拟能力决定 T/F/D 及必要的补充集成测试，不得把模拟结果说成真实服务器验证。
 
 ## 9. 交接、冻结与未解决问题
@@ -425,4 +487,6 @@ v1.0 原文保留在 git 历史（提交 8a48a8f）及 main 当前正式文件�
 - 双构建差异验证脚本；
 - 无法自动消除的订单歧义的人工恢复流程；
 - 测试器无法模拟的服务器行为的 Demo 计划；
-- 交易服务器名称变更时 `state_scope_id` 的处理（见 Claude 复审记录 R-1）。
+- 服务器身份迁移记录的提供者与登记格式（规则已在 §6 规定；格式须在第一个 Demo 之前确定）；
+- 作用域目录枚举所依赖的 `FileFindFirst`/`FileFindNext` 在 `FILE_COMMON` 下的实际行为（实现时验证；枚举不能完整成功时一律按 `STATE_MIGRATION_PENDING` 处理）；
+- `consumed_setup_ids` 的安全保留／裁剪政策（在另行规定并证明不会重放之前，一律不裁剪）。
