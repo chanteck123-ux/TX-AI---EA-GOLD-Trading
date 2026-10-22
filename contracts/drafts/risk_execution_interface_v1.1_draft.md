@@ -1,8 +1,9 @@
-# Risk / Execution Interface v1.1 — 草案修订 R3（Claude 处理 Codex R2 复审 8ac6020，待 Codex 复审）
+# Risk / Execution Interface v1.1 — 草案修订 R4（Claude 处理 Codex R3 复审 182479b，待 Codex 复审）
 
-**状态：v1.1 DRAFT R3 / PROPOSED — 等待 Codex 复审实际 diff。不是正式接口，没有冻结，不授权交易实现、部署或合并。**
+**状态：v1.1 DRAFT R4 / PROPOSED — 等待 Codex 复审实际 diff。不是正式接口，没有冻结，不授权交易实现、部署或合并。**
 
 - R3 处理了 Codex 对 R2（fd5d27b）的复审 `contracts/drafts/planB_v1.1_R2_codex_review_20261021.md`（提交 8ac6020）中的三项必改和三项澄清，逐项对应见 `contracts/drafts/planB_v1.1_R3_claude_response_20261021.md`。
+- R4 处理了 Codex 对 R3（85d623d）的复审 `contracts/drafts/planB_v1.1_R3_codex_review_20261022.md`（提交 182479b）：迁移状态的持久门控，以及全新初始化与状态丢失的区分。逐项对应见 `contracts/drafts/planB_v1.1_R4_claude_response_20261022.md`。
 
 - **双方批准前，FROZEN v1.0（`contracts/risk_execution_interface.md`）仍是唯一有效接口。** 本草案只存在于研究分支；用户对具体 PR 明确批准之前，不替换 main 中的正式文件。
 - **基线：** FROZEN v1.0（提交 8a48a8f；main `3718653`，SHA256 bfee24c7…）；v1.1 初稿（SHA256 0c050017…）。
@@ -35,6 +36,10 @@ v1.1 相对 v1.0 是**迁移性变更**，不只是新增字段。以下语义�
 | R3-2 | 全七策略持久的 `consumed_setup_ids`，在首次发单前与审批、在途意图一起提交，跨重启和换日保留 | 新增 | §3.1、§5、§6 | RE-29g |
 | R3-3 | 状态写入权限只属于当前句柄持有者；持久的 `ownership_state` 只作诊断，不能恢复执行权 | 新增 | §6.2 | RE-30n |
 | R3-4 | 全文保护、撤单、退出的主语限定为当前执行所有者；无 SL 补设为独立分支；Tester 目录规则与 RE-27 统一 | 澄清 | §1、§5、§6.1、§8 | RE-05b、RE-27 |
+| R4-1 | 持久化 `identity_resolution` / `identity_resolution_reference`；新增风险要求 RESOLVED，与 A/B 是否有效分开、每次重启都核对；保护性写入保留待定标记 | 新增 | §6 | RE-30o |
+| R4-2 | 区分全新初始化（bootstrap）与已建立作用域的状态丢失或损坏；后者是恢复，不是新开始 | 新增 | §6 | RE-30p |
+| R4-3 | 同登录号的不同券商账户可凭区分记录解除误匹配，不导入对方状态 | 新增 | §6 | RE-30q |
+| R4-4 | 不支持在线或自动的跨作用域迁移；迁移须同时持有新旧作用域句柄，旧作用域标记为 SUPERSEDED，不能以过期命名空间恢复 | 新增 | §6 | RE-30r |
 
 ## 0. 审查决议追踪与最终决议
 
@@ -235,6 +240,8 @@ OnTimer：ReconcileState + ManagePositions（含待处理退出/保护）+ 所�
   "updated_at_server": "TBD",
   "updated_at_utc": "TBD",
   "ownership_state": "OWNER_HEALTHY",
+  "identity_resolution": "UNRESOLVED",
+  "identity_resolution_reference": "TBD",
   "strategy_daily_count": [{"strategy_id": "S7", "server_date": "TBD", "wins": 0, "losses": 0, "zero": 0, "counted_setup_ids": [], "locked": false, "unresolved_reason": ""}],
   "active_setups": [{"strategy_id": "TBD", "setup_id": "TBD", "slot_state": "PENDING_SUBMIT", "order_tickets": [], "position_identifiers": []}],
   "inflight": [{
@@ -277,22 +284,60 @@ OnTimer：ReconcileState + ManagePositions（含待处理退出/保护）+ 所�
   - 创建时间。
   
   `scope_meta` 由首次取得该作用域独占句柄的所有者写入一次，之后不改写。
-- **启动时的判定**（本项目 `FILE_COMMON/TradingBrainV1.2/` 下）：
-  1. 若当前 `state_scope_id` 的目录已有有效状态，正常走 §6.2 流程。
-  2. 若当前目录不存在或没有任何状态，先枚举所有其他作用域目录的 `scope_meta`，寻找 `scope_family_id` 相同、`state_scope_id` 不同的候选，即同项目、同登录号、同 symbol，但服务器名称不同：
-     - **枚举完整成功，且零个候选**：视为新的作用域，可以开始；
-     - **一个或多个候选**：进入 `STATE_MIGRATION_PENDING`，禁止新风险并告警。不自动合并，不自动转移执行权，不把旧目录的状态复制过来。不同券商的账户可能登录号相同，所以**候选再多也不能凭 `scope_family_id` 相同就认定是同一账户**；
-     - **任何 `scope_meta` 损坏、不可读，或枚举失败**：不能证明这是全新账户，同样进入 `STATE_MIGRATION_PENDING`。
-- **解除迁移待定**：必须有一份显式的迁移记录，写明旧 `state_scope_id` → 新 `state_scope_id` 的映射、依据（例如券商更名的证据）和操作者，然后与新服务器的成交历史完整对账。旧作用域中的 `consumed_setup_ids`、`consumed_approval_ids`、在途请求、初始 SL 意图和 S7 当日计数，**全部**按迁移记录带入新作用域后，才能放行新风险。
-  - 服务器改名**不能**静默重置 S7 日锁、已用审批或已消费的 Setup（RE-30m）。
-  - 迁移记录由谁提供、以什么格式登记，属于部署规程，第一个 Demo 之前确定；在此之前遇到候选一律保持 `STATE_MIGRATION_PENDING`。
-- 普通 Tester 不做此枚举（§6.1，状态在本地 run_id 目录中，每次从空开始）。
+**身份解决状态 `identity_resolution`（R4-1，持久化、每次重启都核对）：**
+- A/B 状态中持久保存 `identity_resolution` 和 `identity_resolution_reference`。这两个字段是**有证据支撑的门控**，不是调用方可以随意设置的许可。取值：
+  - `UNRESOLVED`：还没有证据证明身份已解决（schema 示例的默认值）；
+  - `RESOLVED`：有证据证明本作用域的身份已解决，`identity_resolution_reference` 指向证据：全新初始化的检查记录、迁移记录或区分记录；
+  - `MIGRATION_PENDING`：发现候选或证据不足，等待显式记录与对账；
+  - `SUPERSEDED`：本作用域已被迁移记录取代，**永远不能再恢复执行**（R4-5，Claude 补充）。
+- **A/B 校验通过不等于身份已解决。** 新增风险要求 `identity_resolution == RESOLVED`，这一条与 A/B 是否有效**分开判断**，每次重启都要重新核对：
+  - `scope_meta` 必须有效，且属于本作用域；
+  - `identity_resolution_reference` 所指的证据必须存在且可校验。
+  
+  `UNRESOLVED`、`MIGRATION_PENDING`、`SUPERSEDED`，以及任何读不到或校验失败的情况，一律禁止新风险。**不能因为存在一个有效文件就自动升为 `RESOLVED`。**
+- **待定标记不能被保护性写入抹掉。** 迁移待定期间，执行所有者（含 `OWNER_DEGRADED`）为保护已有仓位而写入 A/B 时，必须原样保留 `identity_resolution` 及其 reference；只有经核实的迁移或区分记录加完整对账，才能把它改为 `RESOLVED`（RE-30o）。
+
+**启动时的判定**（本项目 `FILE_COMMON/TradingBrainV1.2/` 下；先按 §6.2 取得独占句柄，没取得就只读观察）：
+
+1. **已建立的作用域**：当前 `state_scope_id` 目录中存在 `scope_meta`，或存在任何本作用域的历史痕迹（A/B 槽、锁文件以外的状态文件、诊断日志）。
+   - `scope_meta` 有效，A/B 有效且 `identity_resolution == RESOLVED`，reference 证据可校验：正常走 §6.2 的恢复流程。
+   - `identity_resolution` 不是 `RESOLVED`，或 `scope_meta` 缺失或损坏：`STATE_MIGRATION_PENDING`，禁止新风险；所有者仍可按 §6.2 保护可确认的持仓（保留待定标记）。
+   - `scope_meta` 有效，但 A/B 两槽缺失或都损坏：属于**状态恢复**，**不是**全新初始化（RE-30p）。`consumed_setup_ids`、`consumed_approval_ids` 无法证明完整，所以持续禁止新风险，直到有显式恢复记录（依据服务器历史与审计日志重建已消费记录）并完整对账。不能自动重置一个已建立的作用域。
+   - 例外——**初始化中断**（R4-2b，Claude 补充）：`scope_meta` 有效、A/B 从未成功写入过，且服务器完整历史显示自 `scope_meta` 创建时间起，本项目 magic 在本账户和 symbol 上**没有任何**订单、成交或持仓，即初始化在发出任何交易之前就中断了，此时可以重做第 2 步的 A/B 初始化（沿用同一个 `scope_meta`，不改写它）。只要任一条件不满足，就按状态恢复处理。
+2. **全新作用域的初始化（bootstrap，R4-2）**——必须同时满足：
+   - 当前 `state_scope_id` 目录不存在，或为空目录；
+   - 持有该作用域的独占句柄；
+   - 同 `scope_family_id` 的作用域枚举**完整成功**，且零个候选（见下）；
+   - 与服务器完整对账：本账户、本 symbol 上**没有**属于本项目 magic 的持仓、挂单，以及可能影响当前计数的历史成交。有的话就是旧状态的证据，按状态恢复处理，不能当作全新。
+   
+   满足后，所有者依次：
+   - 写入 `scope_meta`；
+   - 以 schema 2 初始化 A/B，其中 `identity_resolution = RESOLVED`，`identity_resolution_reference` 记录本次全新检查的证据（枚举结果、对账结果、时间）；
+   - 回读校验。
+   
+   持有句柄只允许做**这一种**受限的初始化写入；初始化和对账完成、回读通过之前，不能成为 `OWNER_HEALTHY`，也不能交易。普通 Tester 的全新 run_id 命名空间按 §6.1 同样初始化，reference 记为 Tester run_id。
+3. **同族候选的枚举**：枚举所有其他作用域目录的 `scope_meta`，寻找 `scope_family_id` 相同、`state_scope_id` 不同的候选，即同项目、同登录号、同 symbol，但服务器名称不同。
+   - 枚举完整成功，且零个候选：满足第 2 步的条件之一。
+   - 一个或多个候选：`identity_resolution = MIGRATION_PENDING`，禁止新风险并告警。不自动合并，不自动转移执行权，不复制旧状态。不同券商的账户可能登录号相同，所以**不能凭 `scope_family_id` 相同就认定是同一账户**。
+   - 任何 `scope_meta` 损坏、不可读，或枚举失败：不能证明是全新账户，同样 `MIGRATION_PENDING`。
+
+**解除 `MIGRATION_PENDING` 的两条路径（不支持自动、不支持在线迁移）：**
+- **A. 迁移（同一账户，服务器改名）。** 必须有显式的迁移记录，写明旧 `state_scope_id` → 新 `state_scope_id` 的映射、依据（例如券商更名的证据）和操作者。迁移时：
+  - 旧作用域的执行器必须已经停止：迁移者须**同时**取得旧、新两个作用域的独占句柄；取不到旧句柄就说明旧执行器仍在运行，迁移拒绝进行；
+  - 旧作用域的 `consumed_setup_ids`、`consumed_approval_ids`、在途请求、初始 SL 意图和 S7 当日计数，**全部**按记录带入新作用域，并与新服务器的成交历史完整对账；
+  - 旧作用域的 A/B 标记为 `SUPERSEDED`，并引用该迁移记录。之后任何实例以旧作用域启动，都只能只读告警，**不能**以过期的旧命名空间恢复执行（RE-30r）；
+  - 完成后新作用域才能为 `RESOLVED`。
+  
+  本版本**不支持在线、自动的跨作用域迁移**；只能停机后按记录离线进行。服务器改名**不能**静默重置 S7 日锁、已用审批或已消费的 Setup（RE-30m）。
+- **B. 区分（不同券商、登录号巧合相同）。** 若证据表明候选属于**另一个无关账户**，用显式的区分记录写明两个作用域互不相关的依据和操作者。新作用域据此可以按第 2 步全新初始化，`identity_resolution_reference` 指向区分记录；**不导入**对方作用域的任何已消费记录、持仓或计数，也不修改对方作用域。无关账户**绝不能**被强行写进迁移映射（RE-30q）。
+- 两种记录由谁提供、以什么格式登记、是否需要用户确认，属于部署规程，第一个 Demo 之前确定；在此之前遇到候选一律保持 `MIGRATION_PENDING`。
+- 普通 Tester 不做同族枚举（§6.1，状态在本地 run_id 目录中，每次从空开始）。
 
 **唯一写法：A/B 双槽交替写入。**
 - 例如 state_A 与 state_B；写入非当前最新有效槽，写完 flush/close 后重新读取校验。
 - 每槽包含单调递增 sequence 和 SHA-256 checksum（使用 MQL5 支持的 CryptEncode/CRYPT_HASH_SHA256，具体编码经编译验证）；哈希计算覆盖规范化 payload，排除 checksum 字段自身。
 - 启动时分别读取两槽，选择校验通过且 sequence 最大的记录；一槽损坏则使用另一槽。
-- 两槽都无效：RECONCILE_REQUIRED，禁止新入场；依据服务器记录和可信保护记录处理可确认的持仓，不猜测初始 SL；**不放弃独占执行身份**（§6.2）。
+- 两槽都无效：RECONCILE_REQUIRED，禁止新入场；依据服务器记录和可信保护记录处理可确认的持仓，不猜测初始 SL；**不放弃独占执行身份**（§6.2）。对于已建立的作用域，这属于状态恢复，**不能**改走全新初始化（见上文“启动时的判定”第 1 步）。
 - 不得声称文件系统已保证掉电原子性，RE-25 验证中断恢复。
 
 **迁移规则（X3、X7）**：
@@ -356,7 +401,7 @@ OnTimer：ReconcileState + ManagePositions（含待处理退出/保护）+ 所�
 - 若此期间发现本项目持仓**没有服务器端 SL**，只发出最高优先级告警，不发单（RE-30l）。
 - 软件无法保证在失去所有权、网络中断或平台故障时继续计算追踪止损；这一限制必须写入部署说明，不能声称保护“不间断”。
 - 重新取得句柄后的顺序：
-  1. 核对 `state_scope_id` 等身份；
+  1. 核对 `state_scope_id`、`scope_meta` 及 `identity_resolution`（§6）；不是 `RESOLVED` 时，后续步骤只能恢复保护，不能放行新风险；
   2. 读取 A/B 状态；
   3. 与服务器对账，在途旧请求按 §5.1 处理，不假设失去句柄时请求已撤回；
   4. 恢复可确认仓位的保护；
@@ -443,6 +488,10 @@ v1.1 新增 `REJECT_RISK` 的 reason：`SLOT_FULL`、`DUPLICATE_SETUP`、`STRATE
 | RE-30l | `OWNERSHIP_UNCERTAIN` 期间发现本项目持仓没有服务器端 SL | 只发最高优先级告警，不调用交易 API；重新取得句柄并对账后才补设 SL | F | NOT RUN |
 | RE-30m | 同一登录号与 symbol，服务器名称改变（含：一个候选、多个候选、`scope_meta` 损坏或枚举失败） | 都进入 `STATE_MIGRATION_PENDING`，禁新风险；不自动合并、不转移执行权；S7 日锁、已用审批、已消费 Setup 不被重置；只有显式迁移记录加完整对账后才放行 | F | NOT RUN |
 | RE-30n | 观察者实例或 `OWNERSHIP_UNCERTAIN` 实例运行一段时间（含它检测到日锁、无 SL 持仓、待处理退出） | A/B 状态、心跳诊断、`scope_meta`、`consumed_*`、执行队列的字节内容均未被它改变；它只写自己的诊断日志；它重启后不因持久的 `ownership_state` 而获得执行权 | F | NOT RUN |
+| RE-30o | 迁移待定期间，所有者为保护已有仓位写入了有效的 A/B；随后重启 | A/B 校验通过，但 `identity_resolution` 仍为 `MIGRATION_PENDING`；重启后仍禁新风险；待定标记未被保护性写入抹掉；只有核实的记录加对账才能升为 RESOLVED | F | NOT RUN |
+| RE-30p | (1) 全新作用域：目录不存在，枚举零候选，服务器无本项目活动；(2) 已建立作用域的 A/B 两槽缺失或损坏；(3) 初始化中断：`scope_meta` 已写、A/B 未写，服务器无活动；(4) 同 (3) 但服务器已有本项目成交 | (1) 完成初始化并回读后才能交易；(2) 状态恢复，不能全新初始化，已消费记录未重建前禁新风险；(3) 可重做 A/B 初始化；(4) 按状态恢复处理 | F | NOT RUN |
+| RE-30q | 同登录号、同 symbol 的另一券商账户作用域被枚举为候选 | 无区分记录时保持 `MIGRATION_PENDING`；有区分记录后，新作用域全新初始化，不导入对方任何状态，也不修改对方作用域 | F | NOT RUN |
+| RE-30r | 离线迁移完成后，有实例以旧作用域启动；迁移过程中旧执行器仍在运行 | 旧作用域为 `SUPERSEDED`，只读告警，不恢复执行；取不到旧作用域句柄时迁移被拒绝 | F | NOT RUN |
 | RE-31a | S7 当日 3 盈 3 亏 | 不锁定 | T | NOT RUN |
 | RE-31b | S7 当日第 6 笔净盈利（或第 6 笔净亏损） | 锁定 S7 新增风险并撤销 S7 待入场挂单；S7 持仓保护继续；S1–S6 不受影响 | T | NOT RUN |
 | RE-31c | 净零交易、手续费使毛盈变净亏 | 净零不计；按净收益分类 | T | NOT RUN |
@@ -462,7 +511,7 @@ v1.1 新增 `REJECT_RISK` 的 reason：`SLOT_FULL`、`DUPLICATE_SETUP`、`STRATE
 | RE-31q | 账户级佣金无法归属到具体持仓；或当日有疑似 S7 但 magic 未登记的成交；或成交带 S7 风格 comment 但 magic 不符 | REJECT_RISK(DAILY_LEDGER_UNRESOLVED)；comment 不计入也不兜底 | F | NOT RUN |
 | RE-31r | 基线运行 | 只执行累计 6 盈／6 亏锁；旧连续暂停未启用；若另批启用，单独记录原因码，不改变累计锁 | T | NOT RUN |
 
-注：RE-24a/b/c 是 RE-24 的三个子用例。v1.1 新增 RE-28～RE-31 共 4 个编号，展开为 **42** 条子用例：RE-28 3 条、RE-29 7 条、RE-30 14 条、RE-31 18 条。此外新增 RE-05b，并扩充了 RE-27 的预期。全部 NOT RUN；RE-18 仍为 DEFERRED。
+注：RE-24a/b/c 是 RE-24 的三个子用例。v1.1 新增 RE-28～RE-31 共 4 个编号，展开为 **46** 条子用例：RE-28 3 条、RE-29 7 条、RE-30 18 条、RE-31 18 条。此外新增 RE-05b，并扩充了 RE-27 的预期。全部 NOT RUN；RE-18 仍为 DEFERRED。
 第一轮对冲模式目标下 RE-18 标记 **DEFERRED / NETTING RELEASE GATE**，不是 PASSED。其他用例由双方按可模拟能力决定 T/F/D 及必要的补充集成测试，不得把模拟结果说成真实服务器验证。
 
 ## 9. 交接、冻结与未解决问题
@@ -487,6 +536,6 @@ v1.0 原文保留在 git 历史（提交 8a48a8f）及 main 当前正式文件�
 - 双构建差异验证脚本；
 - 无法自动消除的订单歧义的人工恢复流程；
 - 测试器无法模拟的服务器行为的 Demo 计划；
-- 服务器身份迁移记录的提供者与登记格式（规则已在 §6 规定；格式须在第一个 Demo 之前确定）；
+- 迁移记录、区分记录、状态恢复记录的提供者与登记格式，以及是否需要用户确认（规则已在 §6 规定；格式须在第一个 Demo 之前确定）；
 - 作用域目录枚举所依赖的 `FileFindFirst`/`FileFindNext` 在 `FILE_COMMON` 下的实际行为（实现时验证；枚举不能完整成功时一律按 `STATE_MIGRATION_PENDING` 处理）；
 - `consumed_setup_ids` 的安全保留／裁剪政策（在另行规定并证明不会重放之前，一律不裁剪）。
