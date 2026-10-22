@@ -1,13 +1,15 @@
 {
   "schema": "TRADINGBRAIN_CURRENT_V1",
-  "updated_on": "2026-10-21",
+  "updated_on": "2026-10-22",
   "plan_b_phase1": {
     "status": "INDEPENDENT_REVIEW_COMPLETE_WITH_LIMITATIONS",
     "claude_review_commit": "56bba07e423b6a88c9aef0d9d38df5104db59bb5",
     "claude_review": "PLAN_B_20261019_CLAUDE_REVIEW/CLAUDE_G1_G3_G4_G5_REVIEW_CN.md",
     "interface_resolution_proposal": "../../../contracts/drafts/planB_v1.1_resolution_codex_20261021.md",
     "interface_resolution_commit": "1237ed321444d504adfc8fc158898fcdcff5fdc4",
-    "interface_resolution_status": "PROPOSED_AWAITING_CLAUDE_REVIEW_NOT_FROZEN",
+    "interface_resolution_status": "R3_REVIEWED_R4_MIGRATION_BOOTSTRAP_CLOSURE_PENDING_NOT_FROZEN",
+    "latest_codex_interface_review": "../../../contracts/drafts/planB_v1.1_R3_codex_review_20261022.md",
+    "latest_claude_interface_commit": "85d623d3a14775042c52a4d979fc255c886b4748",
     "main_verified": "3718653b8f7bde02e2f52ef5ec47a6ec4c1c459d",
     "branch": "research/plan-b-local-evidence-20261018",
     "evidence": "PLAN_B_20261018/CODEX_REVIEW_CN.md",
