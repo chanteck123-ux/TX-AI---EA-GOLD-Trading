@@ -1,0 +1,12 @@
+{
+  "state": "FULL_TEXT_REVIEW_COMPLETE",
+  "full_read": 246,
+  "unread": 0,
+  "assigned": 246,
+  "assets": 25,
+  "runtime_validation": false,
+  "claude_joint_full_review_confirmed": false,
+  "completed_local_date": "2026-11-01",
+  "timezone": "Asia/Kuala_Lumpur"
+}
+
