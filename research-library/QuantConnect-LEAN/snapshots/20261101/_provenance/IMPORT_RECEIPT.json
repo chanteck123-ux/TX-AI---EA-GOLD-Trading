@@ -1,0 +1,22 @@
+{
+  "date_local": "2026-11-01",
+  "timezone": "Asia/Kuala_Lumpur",
+  "operator": "Claude (on user's explicit request: \"GitHub需要更新\")",
+  "source": "user desktop folder 'Desktop\TX\QuantConnect\Lean-master QuantConnect的精简算法交易引擎（Python、C#）' (extracted, no zip provided)",
+  "repository": "QuantConnect/Lean",
+  "commit": "1383825685849e32e0074f34c3be85b627e0f50f",
+  "commit_date_utc": "2026-10-30T21:06:15Z",
+  "upstream_tree_sha": "863c4cee997c7d659bd89be0f58aff9828d53c08", "repository_subtree_sha": "863c4cee997c7d659bd89be0f58aff9828d53c08 (identical)",
+  "license": "Apache-2.0 (LICENSE retained unmodified)",
+  "retained_files": 6522,
+  "retained_bytes": 288178063,
+  "excluded": [],
+  "manifest": "_provenance/Lean_FILES.json",
+  "verification": [
+    "All 6522 local files: git blob SHA-1 (--no-filters) equal to GitHub API tree of upstream commit 1383825 (truncated=false); no extra, missing or modified files.",
+    "Repository index entries (mode + blob + path) for snapshots/20261101/Lean equal the upstream tree exactly; blobs written with --no-filters to bypass the nested .gitignore/.gitattributes of LEAN so bytes are not normalized and ignored paths (Data/, .nuget/, .vs/ etc.) are retained like the 20260920 snapshot."
+  ],
+  "previous_snapshot": {"path": "snapshots/20260920/Lean", "commit": "985ef30ad3ac774218c5ac516b4cb0aa2655730f", "files": 6315},
+  "changes_vs_previous": {"same": 5588, "modified": 724, "added": 210, "deleted": 3, "list": "_provenance/Lean_CHANGES_vs_985ef30.tsv"},
+  "upstream_code_executed": false
+}

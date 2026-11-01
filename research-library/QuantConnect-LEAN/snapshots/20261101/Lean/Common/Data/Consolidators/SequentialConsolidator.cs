@@ -1,0 +1,128 @@
+﻿/*
+ * QUANTCONNECT.COM - Democratizing Finance, Empowering Individuals.
+ * Lean Algorithmic Trading Engine v2.0. Copyright 2014 QuantConnect Corporation.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+*/
+
+using System;
+
+namespace QuantConnect.Data.Consolidators
+{
+    /// <summary>
+    /// This consolidator wires up the events on its First and Second consolidators
+    /// such that data flows from the First to Second consolidator. It's output comes
+    /// from the Second.
+    /// </summary>
+    public class SequentialConsolidator : ConsolidatorBase
+    {
+        /// <summary>
+        /// Gets the first consolidator to receive data
+        /// </summary>
+        public IDataConsolidator First
+        {
+            get; private set;
+        }
+
+        /// <summary>
+        /// Gets the second consolidator that ends up receiving data produced
+        /// by the first
+        /// </summary>
+        public IDataConsolidator Second
+        {
+            get; private set;
+        }
+
+        /// <summary>
+        /// Gets a clone of the data being currently consolidated
+        /// </summary>
+        public override IBaseData WorkingData
+        {
+            get { return Second.WorkingData; }
+        }
+
+        /// <summary>
+        /// Gets the type consumed by this consolidator
+        /// </summary>
+        public override Type InputType
+        {
+            get { return First.InputType; }
+        }
+
+        /// <summary>
+        /// Gets the type produced by this consolidator
+        /// </summary>
+        public override Type OutputType
+        {
+            get { return Second.OutputType; }
+        }
+
+        /// <summary>
+        /// Updates this consolidator with the specified data
+        /// </summary>
+        /// <param name="data">The new data for the consolidator</param>
+        public override void Update(IBaseData data)
+        {
+            First.Update(data);
+        }
+
+        /// <summary>
+        /// Scans this consolidator to see if it should emit a bar due to time passing
+        /// </summary>
+        /// <param name="currentLocalTime">The current time in the local time zone (same as <see cref="BaseData.Time"/>)</param>
+        public override void Scan(DateTime currentLocalTime)
+        {
+            First.Scan(currentLocalTime);
+        }
+
+        /// <summary>
+        /// Creates a new consolidator that will pump date through the first, and then the output
+        /// of the first into the second. This enables 'wrapping' or 'composing' of consolidators
+        /// </summary>
+        /// <param name="first">The first consolidator to receive data</param>
+        /// <param name="second">The consolidator to receive first's output</param>
+        public SequentialConsolidator(IDataConsolidator first, IDataConsolidator second)
+        {
+            if (!second.InputType.IsAssignableFrom(first.OutputType))
+            {
+                throw new ArgumentException("first.OutputType must equal second.OutputType!");
+            }
+            First = first;
+            Second = second;
+
+            // wire up the second one to get data from the first
+            first.DataConsolidated += (sender, consolidated) => second.Update(consolidated);
+
+            // wire up the second one's events to also fire this consolidator's event so consumers
+            // can attach. This wrapper also keeps its own window
+            second.DataConsolidated += (sender, consolidated) => OnDataConsolidated(consolidated);
+        }
+
+        /// <summary>Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.</summary>
+        /// <filterpriority>2</filterpriority>
+        public override void Dispose()
+        {
+            First.Dispose();
+            Second.Dispose();
+            base.Dispose();
+        }
+
+        /// <summary>
+        /// Resets the consolidator
+        /// </summary>
+        public override void Reset()
+        {
+            First.Reset();
+            Second.Reset();
+            base.Reset();
+        }
+    }
+}

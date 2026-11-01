@@ -1,0 +1,33 @@
+name: Report Generator Tests
+
+on:
+  push:
+    branches: ['*']
+    tags: ['*']
+  pull_request:
+    branches: [master]
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: self-hosted
+    container:
+        image: quantconnect/lean:foundation
+        options: --cpus 12 --memory 12g
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Build and Run Report Generator Tests
+        run: |
+          # Build
+          dotnet build /p:Configuration=Release /v:quiet /p:WarningLevel=1 QuantConnect.Lean.sln
+
+          # Run Backtest
+          (cd ./Launcher/bin/Release && dotnet QuantConnect.Lean.Launcher.dll)
+
+          # Run Report
+          (cd ./Report/bin/Release && dotnet ./QuantConnect.Report.dll --backtest-data-source-file ../../../Launcher/bin/Release/BasicTemplateFrameworkAlgorithm.json --close-automatically true)
