@@ -1,0 +1,124 @@
+{
+  "date": "2026-11-04",
+  "files": [
+    {
+      "path": "tests/build.test.mjs",
+      "sha256": "E2A019B0DCBF0809FE9F6B4C29494FD46B6023F1050B1C066B3F86A16E3B50C4",
+      "start_line": 1,
+      "end_line": 17,
+      "status": "FULL_TEXT_STATIC_READ_NOT_EXECUTED"
+    },
+    {
+      "path": "tests/catalog-ui.test.mjs",
+      "sha256": "781E66D11952DF79A61E32211930E8DDFE743717DF6963ED8DDDB67C9BAA004D",
+      "start_line": 1,
+      "end_line": 58,
+      "status": "FULL_TEXT_STATIC_READ_NOT_EXECUTED"
+    },
+    {
+      "path": "tests/community-portal.test.mjs",
+      "sha256": "2B58775C4A6DB890E9C82A45FAAE3D3D2214A0EFB5281A24F4C09640B16C2462",
+      "start_line": 1,
+      "end_line": 24,
+      "status": "FULL_TEXT_STATIC_READ_NOT_EXECUTED"
+    },
+    {
+      "path": "tests/failure-injection.test.mjs",
+      "sha256": "238C419A3267A52B9A70FE6031A7885A0A801DE720C34549A67E2473B6B099C0",
+      "start_line": 1,
+      "end_line": 50,
+      "status": "FULL_TEXT_STATIC_READ_NOT_EXECUTED"
+    },
+    {
+      "path": "tests/no-fallback.test.mjs",
+      "sha256": "AE7B66B3EF3862C85BB424B41EEC496425A730B193F590CCA2B8A559642C4C01",
+      "start_line": 1,
+      "end_line": 14,
+      "status": "FULL_TEXT_STATIC_READ_NOT_EXECUTED"
+    },
+    {
+      "path": "tests/site-accessibility.test.mjs",
+      "sha256": "AE9955F9FDA169E44DF9C4E5A7676C439157EC78CCA071A312BEC5DDCD94C5BA",
+      "start_line": 1,
+      "end_line": 12,
+      "status": "FULL_TEXT_STATIC_READ_NOT_EXECUTED"
+    },
+    {
+      "path": "tests/site-filter.test.mjs",
+      "sha256": "A30AB2384514A0218B51E12CF1053CB845D4116E9454B1B136B86D7EA51A1C5D",
+      "start_line": 1,
+      "end_line": 10,
+      "status": "FULL_TEXT_STATIC_READ_NOT_EXECUTED"
+    },
+    {
+      "path": "tests/site-render.test.mjs",
+      "sha256": "71AE7DD41E6086053E624B8DFFA011084319A9D023DAAB412996EE0AAA1B64BD",
+      "start_line": 1,
+      "end_line": 16,
+      "status": "FULL_TEXT_STATIC_READ_NOT_EXECUTED"
+    },
+    {
+      "path": "tests/snapshot-consistency.test.mjs",
+      "sha256": "0F670D79F340355107C705D8FC5000EF434E359F19081EA9E2FFAA13597FCA04",
+      "start_line": 1,
+      "end_line": 24,
+      "status": "FULL_TEXT_STATIC_READ_NOT_EXECUTED"
+    },
+    {
+      "path": "tests/unranked-listing.test.mjs",
+      "sha256": "0F9DBE82376549C4BFC0798A7E245B1FCD489292FFF3CA343D4D9306690A06A0",
+      "start_line": 1,
+      "end_line": 23,
+      "status": "FULL_TEXT_STATIC_READ_NOT_EXECUTED"
+    },
+    {
+      "path": "tests/workflow-policy.test.mjs",
+      "sha256": "578251C3E2EAEF63181794E81EFF149F1EBEE145125AED7E310F8CC93B077DDD",
+      "start_line": 1,
+      "end_line": 16,
+      "status": "FULL_TEXT_STATIC_READ_NOT_EXECUTED"
+    },
+    {
+      "path": "tests/site-security.test.mjs",
+      "sha256": "40E569D9FBF3F3BB2DC622852D08C03C9A91446CF8A2CB91E275A611A4BA044B",
+      "start_line": 1,
+      "end_line": 113,
+      "status": "FULL_TEXT_STATIC_READ_NOT_EXECUTED"
+    },
+    {
+      "path": ".github/workflows/daily-build.yml",
+      "sha256": "D81853A34FEF905D1318358FDAB6CB72E5B4ACD60A7C2963784A9F7DB8F754ED",
+      "start_line": 1,
+      "end_line": 54,
+      "status": "FULL_TEXT_STATIC_READ_NOT_EXECUTED"
+    },
+    {
+      "path": ".github/workflows/deploy-pages.yml",
+      "sha256": "15CD02F0151EA2A158CB423697ACC4945E9F18ECE5BDAFF9A5A4BBD56A929494",
+      "start_line": 1,
+      "end_line": 43,
+      "status": "FULL_TEXT_STATIC_READ_NOT_EXECUTED"
+    },
+    {
+      "path": ".gitignore",
+      "sha256": "BE5452E428648F220F0807E75BEB8486BD273C32DA0A1932E893BAA8774E984F",
+      "start_line": 1,
+      "end_line": 5,
+      "status": "FULL_TEXT_STATIC_READ_NOT_EXECUTED"
+    },
+    {
+      "path": "docs/README.zh.template.md",
+      "sha256": "D2CE913F2B29D5005B0D128BBF09FE1F7054FF1C730C7B862A463B1557F88A2F",
+      "start_line": 1,
+      "end_line": 32,
+      "status": "FULL_TEXT_STATIC_READ_NOT_EXECUTED"
+    },
+    {
+      "path": "docs/README.en.template.md",
+      "sha256": "A380C386E3585E05C6A24136DA25D3F8E676E82695235F62FCE5EEDDC60D6EF2",
+      "start_line": 1,
+      "end_line": 32,
+      "status": "FULL_TEXT_STATIC_READ_NOT_EXECUTED"
+    }
+  ]
+}
