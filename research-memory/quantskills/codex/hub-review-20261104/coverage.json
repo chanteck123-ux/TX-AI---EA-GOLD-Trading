@@ -1,0 +1,40 @@
+{
+  "date": "2026-11-04",
+  "files": [
+    {
+      "path": "scripts/build-github-metadata-plan.mjs",
+      "sha256": "A7D955EA89F0074AB8CBAE2306EA3AB8BB07468C9D2353406CA72FD5AFF73AB9",
+      "start_line": 1,
+      "end_line": 129,
+      "status": "FULL_TEXT_STATIC_READ_NOT_EXECUTED"
+    },
+    {
+      "path": "scripts/render-readme.mjs",
+      "sha256": "42B68D2D724B1CC267B633232A44643408D5DFC50056CDED0805091CBC35CC5A",
+      "start_line": 1,
+      "end_line": 106,
+      "status": "FULL_TEXT_STATIC_READ_NOT_EXECUTED"
+    },
+    {
+      "path": "tests/metadata-plan.test.mjs",
+      "sha256": "D0CD0EC3D03476225C81E606F15DCDB76073C76E38FA668B7EAF029FD0F816F0",
+      "start_line": 1,
+      "end_line": 17,
+      "status": "FULL_TEXT_STATIC_READ_NOT_EXECUTED"
+    },
+    {
+      "path": "tests/readme-render.test.mjs",
+      "sha256": "988915E23E2D2AB9AE8EDD97349D32D2F749898B5730F7BA09D397B6291C94D5",
+      "start_line": 1,
+      "end_line": 30,
+      "status": "FULL_TEXT_STATIC_READ_NOT_EXECUTED"
+    }
+  ],
+  "data_inspection": {
+    "pending_null_interface": 217,
+    "status": "STRUCTURAL_QUERY_ONLY",
+    "assets": 218,
+    "path": "site/catalog.json",
+    "sha256": "48557E5BA456465214A5C08CCCC23BE17F7D713ACF4D2524870CC1D464BF0855"
+  }
+}
