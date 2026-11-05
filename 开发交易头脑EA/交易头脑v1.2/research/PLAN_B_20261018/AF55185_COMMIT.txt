@@ -1,0 +1,20 @@
+commit af551855bc4cc40470f44cad57cff553570f2102
+Author:     Claude <noreply@anthropic.com>
+AuthorDate: Sun Oct 18 18:53:48 2026 +0800
+Commit:     Claude <noreply@anthropic.com>
+CommitDate: Sun Oct 18 18:53:48 2026 +0800
+
+    docs(v1.1 check): split §三 into pre-freeze evidence vs RiskExecution implementation acceptance
+    
+    - Pre-freeze (Codex, local): G1 magics + s7_identity_magics, G3 S7 slot source limit,
+      G4 FILE_COMMON platform capability probe, G5 existing TB500 S7 lock behaviour.
+    - Implementation (Claude writes, Codex reviews): slot control (RE-29), lease (RE-30),
+      RiskExecution S7 daily lock (RE-31a–l).
+    - S7 slot TBD does not block v1.1 freeze but blocks S7 trading/backtest batches.
+    - Dual-chart probes only on Demo or Tester.
+    - Formal interface v1.0 unchanged; not a v1.1 freeze approval.
+    
+    Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
+    Claude-Session: https://claude.ai/code/session_01L7NGEM3LHK5ZJUWbDwcHuo
+
+15	5	contracts/drafts/planB_v1.1_consistency_check_claude_20261018.md

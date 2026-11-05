@@ -1,0 +1,1 @@
+run=G4D_0420a5ff88e34c2e81c114d131777a6f|result=FAIL|demo=1|chart_a=132772944655437239|chart_b=132772944655437240|templates=1|exchange=|before=positions=0;orders=0|after=positions=0;orders=0|common=C:\Users\A\AppData\Roaming\MetaQuotes\Terminal\Common

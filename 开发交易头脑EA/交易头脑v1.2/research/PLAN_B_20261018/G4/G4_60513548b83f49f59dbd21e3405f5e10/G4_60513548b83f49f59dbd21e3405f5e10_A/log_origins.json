@@ -1,0 +1,14 @@
+[
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\Tester\\Agent-127.0.0.1-3000\\logs\\20261018.log",
+    "byte_count": 13012,
+    "byte_offset": 130050,
+    "raw_sha256": "564f6fc7f973468f4c2bef7b5bc5fb8e028900296c7bcb07b54c31c2e23db577"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\Tester\\logs\\20261018.log",
+    "byte_count": 13626,
+    "byte_offset": 136228,
+    "raw_sha256": "d97d3c5fae46538a33d9792e3616273a343be10045503df41f2dd6732ee352a7"
+  }
+]

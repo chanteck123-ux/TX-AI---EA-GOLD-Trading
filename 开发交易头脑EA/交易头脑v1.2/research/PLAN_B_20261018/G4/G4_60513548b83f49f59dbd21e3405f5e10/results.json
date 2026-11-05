@@ -1,0 +1,18 @@
+[
+  {
+    "dual_chart": "NOT_RUN",
+    "configs_restored": true,
+    "report_exists": true,
+    "run_id": "G4_60513548b83f49f59dbd21e3405f5e10_A",
+    "capability_pass": true,
+    "trading": "NO_TRADE_CALLS_IN_SOURCE"
+  },
+  {
+    "dual_chart": "NOT_RUN",
+    "configs_restored": true,
+    "report_exists": true,
+    "run_id": "G4_60513548b83f49f59dbd21e3405f5e10_B",
+    "capability_pass": true,
+    "trading": "NO_TRADE_CALLS_IN_SOURCE"
+  }
+]

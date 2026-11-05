@@ -1,0 +1,2162 @@
+[
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\Scalping_P1C\\1eb09b0cecf74855b1ad3321718c443e\\Scalping_P1C.mq5",
+    "line": 481,
+    "text": "input long   InpIntradayMagic            = 26082102;"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\Scalping_P1C\\1eb09b0cecf74855b1ad3321718c443e\\Scalping_P1C.mq5",
+    "line": 482,
+    "text": "input long   InpScalpMagic               = 26082152;"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\Scalping_P1C\\1eb09b0cecf74855b1ad3321718c443e\\Scalping_P1C.mq5",
+    "line": 483,
+    "text": "input long   InpSwingMagic               = 26082303;"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\03b68c3b8add484f8ff556842b395b6b\\TB500_S4_R0.mq5",
+    "line": 84,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\04efb862fba94c8289196e5c7c431b5b\\GSM12\\Core.mqh",
+    "line": 79,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\05bd4e2dd66344c181ba664e702dba68\\GSM12\\Core.mqh",
+    "line": 79,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\08960764556d417a8ce73720df19f49d\\TB500_S6_TRIGGER_BE1.mq5",
+    "line": 85,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\0b299d04b2454391af4dc70d40f87a99\\TB500_S4_BE125.mq5",
+    "line": 84,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\0c5b9d40ba5f4cf8abc8b8544be28908\\TB500_S5_M5_BAND_RSI.mq5",
+    "line": 85,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\0c692f7139e14df5a19f130cd924ea64\\GSM12\\Core.mqh",
+    "line": 79,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\0d2d25a0667445388aadb37dfb0b15c6\\GSM12\\Core.mqh",
+    "line": 79,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\0fbe6eb5bcc34bb981e26bc933b86df5\\S2_C8_OFF.mq5",
+    "line": 85,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\10a5917d4713406c80a41330a17b8643\\TB500_S2_SND_M5_FIRST_VISIT.mq5",
+    "line": 85,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\10ab41ea9ff64431a9519e3d6ddd0f4f\\GSM12\\Core.mqh",
+    "line": 78,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\11200c971bbc4ab0a6b560e2325af162\\GSM12\\Core.mqh",
+    "line": 78,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\119a1878c3114e74bad08d155052438a\\TB500_S5_REQUEST_FINALITY_V1.mq5",
+    "line": 86,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\11ec285646be44d1a066e94ab028e73b\\GSM12\\Core.mqh",
+    "line": 78,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\12434015ee7f40fd93f8a138d7882a2c\\TB500_S1_STOCH_EXTREME_EXIT.mq5",
+    "line": 87,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\124449c739054e588d471c2c594795a3\\TB500_S2_SAMECLOSE_RISK2_I11.mq5",
+    "line": 85,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\134ba06ce3b84e1c91d2b65bf5d76e6d\\TB500_S2_NEXT_M5_PROGRESS.mq5",
+    "line": 85,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\15ee3b4720574b4db4ceb33878f058fb\\TB500_S5_REQUEST_FINALITY_V1.mq5",
+    "line": 86,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\171c95396310491eb7ab0c9cf4337973\\GSM12\\Core.mqh",
+    "line": 78,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\178ed031beb74f8482198fb9fdc0a5d5\\TB500_S3_VFI_BE1.mq5",
+    "line": 87,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\1a41b650b3be4aa7bcb44517f8ab7cf8\\GSM12\\Core.mqh",
+    "line": 78,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\1c29ecf14974421b8da8958a5136d520\\TB500_S1_R0.mq5",
+    "line": 84,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\1c95fc8a4eba4067bc183850ff65f2c4\\TB500_S4_BE125.mq5",
+    "line": 84,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\1d5a169bee504396b1c6615ee906211c\\TB500_S3_H1_SLOPE_PRICE.mq5",
+    "line": 88,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\1e2d800e185d49628dfb9af317967dc1\\TB500_S1_TRIGGER_M5_SL_R2.mq5",
+    "line": 88,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\1e41cfcdb6af432ca2b9cf3c15b6279a\\TB500_S5_RSI_TURN_TRIGGER.mq5",
+    "line": 85,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\2057f2e45cb943aaa276544cf628864d\\TB500_S1_DYNAMIC_RISK_I9.mq5",
+    "line": 88,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\215dad4452fc4cbca00bccd7b542fa0d\\TB500_S2_SND_M5_FIRST_VISIT.mq5",
+    "line": 85,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\22dff5ee20bf437f9f17706249b9316c\\GSM12\\Core.mqh",
+    "line": 78,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\235ec327626b43e7b25a5740736f54cf\\GSM12\\Core.mqh",
+    "line": 78,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\23bb67d564274f2398249626f78c494c\\TB500_S6_DISTINCT_TRIGGER_BE1.mq5",
+    "line": 86,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\23cd0ad4e567469eb20773e5efd145f5\\TB500_S3_H1_SLOPE_PRICE.mq5",
+    "line": 88,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\242816467ad249339e936fd1a76c62db\\TB500_S3_VFI_CONFIRM_R2.mq5",
+    "line": 87,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\247e72a76da6471b9449b1c5ff1b0b98\\TB500_S1_BE1.mq5",
+    "line": 84,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\24fd5698b83e472b8df09561e1200a32\\GSM12\\Core.mqh",
+    "line": 79,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\2717ae82f2224bf2bec2cc4217354b41\\S3_ZONE_BARRIER.mq5",
+    "line": 86,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\27846187f6f441f3a9fa64f40b7fd74f\\GSM12\\Core.mqh",
+    "line": 79,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\28b90131325d4d2b8798508ea2eb91d4\\GSM12\\Core.mqh",
+    "line": 78,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\28c7aae74c0e49ae99d482bcd6819087\\TB500_S2_SND_SAME_CLOSE.mq5",
+    "line": 85,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\2a70cef8b91a44d28552409258104d85\\TB500_S2_PROGRESS_RISK2_I10.mq5",
+    "line": 85,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\2b65cfe4816e4e469e7fc2bf9a9cd563\\TB500_S1_TRIGGER_M5_SL_RISK2_I9.mq5",
+    "line": 88,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\3176374c2a3b4b9fa20a62971f43a4df\\TB500_S4_BE125.mq5",
+    "line": 84,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\31c22e279642468098241f718c8e38b7\\TB500_S2_M15_M5_TACTICAL.mq5",
+    "line": 85,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\33d0b685d9864626b16d673f42421390\\TB500_S1_ACTIVE_RECOVERY_I10.mq5",
+    "line": 88,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\34455fa624634585a7692644f167d226\\GSM12\\Core.mqh",
+    "line": 78,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\36608f7b2bbe46c8a2d7fb23a2463132\\TB500_S1_R0.mq5",
+    "line": 84,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\3716deb58b1a49999cb5980efbe8d8db\\GSM12\\Core.mqh",
+    "line": 78,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\373a222ab6c1453cb3d59771608f2df3\\TB500_S1_TRIGGER_M5_SL_R2.mq5",
+    "line": 88,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\37bf3dce4a0e4c429d3353e466453041\\TB500_S3_R0.mq5",
+    "line": 85,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\37f6de02d2b8471aba08ce8f7cca45a0\\TB500_S1_BE1.mq5",
+    "line": 84,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\3864620efcd94c9cb8e79d93d0e116b2\\GSM12\\Core.mqh",
+    "line": 82,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\38792e36db7347ffa66f3087d5cc9222\\TB500_S4_R0.mq5",
+    "line": 84,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\39059b03ccf04bd396acbe22a9ac4404\\GSM12\\Core.mqh",
+    "line": 83,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\3a1bd099086a4990a3d602cb5b6b951d\\TB500_S5_R0.mq5",
+    "line": 85,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\3af0049653514a2599911785887e100e\\S2_C8_ON.mq5",
+    "line": 85,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\3bba3b4e501e416eae6566ab596aeb35\\GSM12\\Core.mqh",
+    "line": 78,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\3bc0c776f32440ef84caff513217a586\\GSM12\\Core.mqh",
+    "line": 82,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\3c9da40d18b84766984b1cc7a9f7bdd2\\S3_C8_ON.mq5",
+    "line": 85,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\3e1c764262d249d2a9d90eb848fe1a52\\TB500_S5_M5_FIRST_PROGRESS.mq5",
+    "line": 86,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\3ee9960293394f6b938cc67c0f3c2b3f\\TB500_S6_TRIGGER_INVALIDATION.mq5",
+    "line": 85,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\40471df361f84110a3890ab3daa9f072\\GSM12\\Core.mqh",
+    "line": 79,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\4104ffab9601497087744b6f3cd33da4\\GSM12\\Core.mqh",
+    "line": 83,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\41e5dd817b0d4d3ca2dc068bf490fdd2\\S6_MW_LOCAL_SL.mq5",
+    "line": 86,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\42813b6847fc4777970334b1484bcf88\\TB500_S4_BE100_I18.mq5",
+    "line": 84,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\42e913b658244a30bc41f19c8670eee3\\TB500_S2_R0.mq5",
+    "line": 85,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\43d947e295be464da64e874c6e741d77\\TB500_S1_TRIGGER_M5_SL_R2.mq5",
+    "line": 88,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\43e186e83284473e87d325760862bee6\\TB500_S6_ATR_TRAIL_ONLY_I18.mq5",
+    "line": 86,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\44a55635ca56496298c4868b00ecfb69\\TB500_S5_TRIGGER_INVALIDATION.mq5",
+    "line": 85,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\458b681acd4f45128997e1d9740c33ab\\TB500_S3_ADVERSE_DEVIATION_I18.mq5",
+    "line": 89,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\486cbe7bca7b4292a29c566694ac98fa\\TB500_S1_EMA_LOCATION.mq5",
+    "line": 86,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\489fada811d848ca97a3bf487e01c19b\\TB500_S5_REQUEST_FINALITY_V1.mq5",
+    "line": 86,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\49d39b3e67ae499abd9fbf92643388f6\\TB500_S4_BE125.mq5",
+    "line": 84,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\4cdacecdeb7243fc875824ca19e693b1\\GSM12\\Core.mqh",
+    "line": 78,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\4cea5184ce6546079134b882532b4af2\\GSM12\\Core.mqh",
+    "line": 78,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\4d37b24c45794586bffc24b4a8888aef\\TB500_S2_SND_REJECTION.mq5",
+    "line": 85,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\4e176377f5cb4e9698843133bbe7a41b\\S5_C8_ON.mq5",
+    "line": 85,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\50270b4311864bedb097b6a09de2e12b\\TB500_S5_M5_BAND_BE1.mq5",
+    "line": 85,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\51317d7063984b7d8cd3fdae35b58c2b\\S3_C8_OFF.mq5",
+    "line": 85,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\51c2905bb4d9454da30bab79a0c7ddf6\\TB500_S2_PROGRESS_RISK2_BE1_I11.mq5",
+    "line": 85,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\52486b46102e43eea2d4047e97ce5898\\TB500_S2_SND_EMA_TACTICAL_R2.mq5",
+    "line": 85,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\52ac56feb95147d296bd66ae6a2f4dec\\GSM12\\Core.mqh",
+    "line": 78,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\54d5e2891a564e7bb253eb92010718a1\\GSM12\\Core.mqh",
+    "line": 78,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\5505b7e6445541c084ce5a8794ab01ff\\TB500_S2_SAMECLOSE_RISK2_I11.mq5",
+    "line": 85,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\558475bbaf684f568ac5d5e729fedff4\\TB500_S4_ATR1_R2_AUDIT.mq5",
+    "line": 84,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\57bcf239a15b4cb78e7557974727771c\\S2_ORIGINAL.mq5",
+    "line": 85,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\59a87c3ce80641bc91e8fc0a773b50e0\\GSM12\\Core.mqh",
+    "line": 79,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\59fef91627fb4ba0a988169f01387c25\\TB500_S2_SND_SAME_CLOSE.mq5",
+    "line": 85,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\5abd314514f74d9f9fc0784e91603fd5\\GSM12\\Core.mqh",
+    "line": 79,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\5bc22285b0c54eecb08109829845ca86\\TB500_S6_BE15.mq5",
+    "line": 85,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\5bca08b120b040608be30c96ccb12977\\GSM12\\Core.mqh",
+    "line": 82,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\5c96c7c8940146109aa34d08e4cd998f\\TB500_S2_H1_BACKGROUND_I18.mq5",
+    "line": 86,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\5d81a1f3083b49fd886960662656b83e\\GSM12\\Core.mqh",
+    "line": 79,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\5f7edcf078964e988616638bf8d3355b\\GSM12\\Core.mqh",
+    "line": 78,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\617ca03bbb2f482ba08d25b7aa2fbcc0\\S4_C7_ON.mq5",
+    "line": 84,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\619e3dbca5e445e18da2c806e3de3cf9\\TB500_S1_STOCH_EXTREME_EXIT.mq5",
+    "line": 87,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\63334dab572846b291707252fc2d5476\\GSM12\\Core.mqh",
+    "line": 78,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\63bff58cd4604aa78fc3e1a3f95e2cef\\GSM12\\Core.mqh",
+    "line": 82,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\64dc1cc5339949689ff74a02bfee1b07\\TB500_S6_DISTINCT_TRIGGER_BE1.mq5",
+    "line": 86,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\65277e35744d4f1ca7aef1017ec2b516\\TB500_S1_MONOTONE_SLOPE_I18.mq5",
+    "line": 89,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\65e76af6d40b409fb7704db88499fdf4\\GSM12\\Core.mqh",
+    "line": 78,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\67ff08a3a65b45b08a2a9a70a5cc8eae\\TB500_S4_BE100_I18.mq5",
+    "line": 84,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\6912ea1733084b89b4187bdb906b1f0d\\TB500_S3_TRIGGER_INVALIDATION.mq5",
+    "line": 85,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\6b009311f0764745b336517f48459e2c\\GSM12\\Core.mqh",
+    "line": 79,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\6b573797aaa74a9cae86ca4a9e8317aa\\TB500_S6_DISTINCT_TRIGGER_BE1.mq5",
+    "line": 86,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\6d9ac05966bb4f8c9000a1e23515aa77\\GSM12\\Core.mqh",
+    "line": 78,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\6ebc1f53a1bc494daf75530808ce01ac\\GSM12\\Core.mqh",
+    "line": 79,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\6ebd16dc12da4202ae097969103173bf\\GSM12\\Core.mqh",
+    "line": 79,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\6f20a993272a4fb690f3acc752ddb791\\TB500_S1_TRIGGER_M5_SL.mq5",
+    "line": 88,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\6f7fc85464164c7ab22e316f9ccc0ac1\\TB500_S3_VFI_CONFIRM_R2.mq5",
+    "line": 87,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\70255b29a1be436eae56484a214f11cd\\GSM12\\Core.mqh",
+    "line": 80,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\7030e7ef366643f2a65059c8eb603019\\TB500_S5_SECOND_M5_PROGRESS_I18.mq5",
+    "line": 87,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\7075c5624be647fbbf9eea5fc7b2d549\\TB500_S2_M15_M5_TACTICAL.mq5",
+    "line": 85,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\74934a70a179417b8fb07065f2cf162c\\GSM12\\Core.mqh",
+    "line": 78,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\75536ee16d3841938b7d3edbc41282e2\\GSM12\\Core.mqh",
+    "line": 79,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\76236fa3a18742859fe79e406aaeb6be\\TB500_S5_M5_BAND_BE1.mq5",
+    "line": 85,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\7688f9d002aa4dff9713dce05f35b244\\S6_C8_ON.mq5",
+    "line": 85,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\76d11e98754a41a2b7069d1de6f70201\\TB500_S4_F1_CONTROL.mq5",
+    "line": 84,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\772310f931dd4e6eaf7e1b92428956ac\\TB500_S4_BE1.mq5",
+    "line": 84,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\78c8959c26454f2fbf8bf4d15759b973\\TB500_S6_DISTINCT_TRIGGER_BE1.mq5",
+    "line": 86,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\79ca993684684898b8a2542e2387e466\\TB500_S1_TRIGGER_M5_SL_R2.mq5",
+    "line": 88,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\7a79a8217cf845958b0d1383af3319e8\\TB500_S2_PROGRESS_BE1_I10.mq5",
+    "line": 85,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\7b8c82d9c4e74e3a81d5e6b924a383fd\\TB500_S1_DYNAMIC_RISK_I9.mq5",
+    "line": 88,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\7caaccdd2bfc435ca6f7d3bcc96c40e1\\GSM12\\Core.mqh",
+    "line": 79,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\7e2b64cd37984ab4982f9e1569081478\\TB500_S1_TRIGGER_M5_SL_R2.mq5",
+    "line": 88,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\7f9272f0a50648d2a42f0d003e178d1c\\S2_M5_CONFIRM.mq5",
+    "line": 86,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\83284966d9cd4e988165c21e05d1c31d\\TB500_S6_DISTINCT_TRIGGER_BE1.mq5",
+    "line": 86,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\83a712da99ca425e962a04265bc94f04\\TB500_S1_CONFIRM_PRICE.mq5",
+    "line": 85,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\85915100aab74d76bd606eeb680fcae2\\TB500_S2_PROGRESS_RISK2_I10.mq5",
+    "line": 85,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\86402b9cf4934aabba3c8eb4955d1c8b\\TB500_S2_NEXT_M5_PROGRESS.mq5",
+    "line": 85,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\864beeeb5aac4a688ae51f5ad292a3f3\\TB500_S3_H1_SLOPE_PRICE.mq5",
+    "line": 88,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\8721b592408246dcaf1a02b623b32ea8\\TB500_S2_SND_SAME_CLOSE.mq5",
+    "line": 85,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\881ce6853f6e4ac2b9e9aa98233a6a05\\TB500_S3_R0.mq5",
+    "line": 85,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\8832c315a88d41188e7a4d494736ac51\\GSM12\\Core.mqh",
+    "line": 78,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\89f76aa50ddc4276b5bcfb51cefd7342\\GSM12\\Core.mqh",
+    "line": 83,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\8a32f85b71314c96a9bf2aa606a7cdea\\TB500_S5_RSI_TURN_TRIGGER.mq5",
+    "line": 85,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\8b9f25da09734bb08183848b0f7d2aa0\\GSM12\\Core.mqh",
+    "line": 79,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\8bbc548664464c76a4292946141c1c4f\\GSM12\\Core.mqh",
+    "line": 80,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\8e67d2b779934081bb1b3867078486d6\\S6_C8_OFF.mq5",
+    "line": 85,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\8f7bfcf6335a49a8a3b2094cd182785f\\TB500_S3_H1_SLOPE_PRICE.mq5",
+    "line": 88,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\8febb90a12834f8083ebaa8526d9f6b9\\GSM12\\Core.mqh",
+    "line": 78,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\938416bac6cf487e9d0f1f4c2bc209dd\\TB500_S1_CONFIRM_PRICE.mq5",
+    "line": 85,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\946feb001e044f2c91330163f677d4c2\\GSM12\\Core.mqh",
+    "line": 78,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\9781c9c76a3e404994b99fbaa1504580\\TB500_S5_SECOND_M5_PROGRESS_I18.mq5",
+    "line": 87,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\992e572490364efe8fdb4bbdebfafa6f\\TB500_S2_H1_BACKGROUND_I18.mq5",
+    "line": 86,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\9933615dc51f4698b9fdbae9c31505d1\\TB500_S5_REQUEST_FINALITY_V1.mq5",
+    "line": 86,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\99e8ff9e3f184ca7aa9ff5f7eb2e757f\\GSM12\\Core.mqh",
+    "line": 80,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\9ef3dcb61e614792951681602a5da4bf\\GSM12\\Core.mqh",
+    "line": 80,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\9f855838a5584b7da0119cd76fa611a1\\TB500_S4_ATR1.mq5",
+    "line": 84,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\a082f6b2780e429dbe0f345353b4a86d\\TB500_S1_MONOTONE_SLOPE_I18.mq5",
+    "line": 89,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\a333a3fab8204b0dad9d46bd4795bfcb\\GSM12\\Core.mqh",
+    "line": 78,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\a5bf837889304432a7ee24dc7d5ae332\\TB500_S3_H1_SLOPE_PRICE.mq5",
+    "line": 88,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\a8ee5ad540bd4b56aae1a95cfe756157\\GSM12\\Core.mqh",
+    "line": 79,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\a8f1350eebef4b918122198287738e46\\TB500_S2_PROGRESS_RISK2_BE1_I11.mq5",
+    "line": 85,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\a91e0700225948a2bacbc20be5ce5e87\\GSM12\\Core.mqh",
+    "line": 78,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\a92bf71e81fa4993acd2c47a08e4a3a6\\GSM12\\Core.mqh",
+    "line": 80,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\a991b9ab07e6411287d814b7dee51b80\\GSM12\\Core.mqh",
+    "line": 78,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\aab7ff83e28d4665965703caf3377820\\GSM12\\Core.mqh",
+    "line": 80,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\ab6094d609a2472f8dde5c8f9ac7bbf8\\S5_C8_OFF.mq5",
+    "line": 85,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\acd4b9e816a8497a80d6dee20cac37c9\\GSM12\\Core.mqh",
+    "line": 79,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\af6ea356afa84ef6a67cfb5946218cfe\\TB500_S1_TRIGGER_M5_SL_R2.mq5",
+    "line": 88,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\af981365fca94a52854082818b01d08e\\TB500_S2_PROGRESS_BE1_I10.mq5",
+    "line": 85,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\b27c7f9d65ab4d0c8e8ca17478fc80e9\\GSM12\\Core.mqh",
+    "line": 78,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\b6cffdf6caca42f08bc7747081d274f3\\GSM12\\Core.mqh",
+    "line": 78,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\b74cea7cf7fc4ebfbccae01b5046bd75\\GSM12\\Core.mqh",
+    "line": 78,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\b7cc6cd0e3f3497a95623bffbdaba795\\TB500_S6_TRIGGER_BE1.mq5",
+    "line": 85,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\b83c8e46dc334c4ebf8278a4c2930d46\\TB500_S2_NEXT_M5_PROGRESS.mq5",
+    "line": 85,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\b84a17c54160475d9c6814bb1a71d1da\\GSM12\\Core.mqh",
+    "line": 78,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\b84c0314b9b840e4b5f1af27fcbaf483\\TB500_S2_SND_REJECTION.mq5",
+    "line": 85,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\b91cc88368ec447287d02899b77d0c95\\TB500_S3_VFI_CONFIRM.mq5",
+    "line": 87,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\b966e73cf39a4a6ca5f273ce44d0268e\\TB500_S4_BE125.mq5",
+    "line": 84,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\ba1533a37a2543aea836f0cf26725c2e\\TB500_S5_TRIGGER_INVALIDATION.mq5",
+    "line": 85,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\ba4bad952206491f9f3b1a0d07ae2be1\\TB500_S4_BE125.mq5",
+    "line": 84,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\bb218c17f5754f25a6ab1e7c716e7e4e\\GSM12\\Core.mqh",
+    "line": 78,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\bc41c01b23cd45dc80ed8033b4196d23\\TB500_S4_HALF_RISK_BE125.mq5",
+    "line": 85,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\bd03be6593c0439f91ff3d175dc3ae80\\TB500_S2_SND_EMA_TACTICAL_R2.mq5",
+    "line": 85,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\bd4b05b957944c34bc486f69cc56e94d\\TB500_S1_ACTIVE_RECOVERY_I10.mq5",
+    "line": 88,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\bd5b7713d3c243e6a28b961b0d850b9f\\GSM12\\Core.mqh",
+    "line": 83,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\be96ddd24a854b298ae96a294c181242\\TB500_S2_PROGRESS_RISK2_BE1_I11.mq5",
+    "line": 85,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\c0af82fbf7464663a9090308095a482e\\TB500_S4_BE125.mq5",
+    "line": 84,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\c1cb154eb3314a91b166e72628d01b4c\\TB500_S1_EMA_LOCATION.mq5",
+    "line": 86,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\c41e24b2f76042a28b112aefc0b2aa10\\GSM12\\Core.mqh",
+    "line": 78,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\c46ef01346954ae5baff6c8f94a03d8d\\GSM12\\Core.mqh",
+    "line": 78,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\c55aa1b8ed7149f9b221ac2d58bb6c5a\\TB500_S3_ADVERSE_DEVIATION_I18.mq5",
+    "line": 89,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\c605843eadf74588ac8ad6e0ee3826c5\\S1_C7_ON.mq5",
+    "line": 84,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\c6d02ab4b03644c2841e137bb782b334\\TB500_S3_H1_SLOPE_PRICE.mq5",
+    "line": 88,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\c7b80842a67546658232b63af1004513\\TB500_S4_HALF_RISK_BE125.mq5",
+    "line": 85,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\c8776f5ffe364263a152682eece03817\\TB500_S6_DISTINCT_TRIGGER_BE1.mq5",
+    "line": 86,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\c8a26b7c3f634086b01f513f1ea51f87\\GSM12\\Core.mqh",
+    "line": 78,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\c9c220748ed548d6b136303997607f26\\TB500_S5_M5_FIRST_PROGRESS.mq5",
+    "line": 86,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\ca0579f82c964178b83bae6c4e1d3e51\\GSM12\\Core.mqh",
+    "line": 79,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\cc16499578344f97a13c8e55283b1499\\GSM12\\Core.mqh",
+    "line": 78,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\cdef4af9ade148a589e6f8dd7d26c2bf\\TB500_S2_PROGRESS_BE1_I10.mq5",
+    "line": 85,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\d09f62bc9be54cc7a64d55f913b4b296\\GSM12\\Core.mqh",
+    "line": 79,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\d1c93fea0128497ab29f3a3e7bb90115\\GSM12\\Core.mqh",
+    "line": 78,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\d2322eefd84f41aeb9a79fa3b39fdc20\\TB500_S3_H1_SLOPE_PRICE.mq5",
+    "line": 88,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\d25758e63a9f4682afc95abfeb7c43ad\\TB500_S5_M5_FIRST_PROGRESS.mq5",
+    "line": 86,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\d32472ddc4434fb2a7f2c9e532df832c\\TB500_S6_R0.mq5",
+    "line": 85,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\d37fb89a04034869bedc3dbcf8042881\\TB500_S3_SNR_ZONE_TRIGGER.mq5",
+    "line": 86,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\d53e65f99ce14949835e58799126002b\\GSM12\\Core.mqh",
+    "line": 79,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\d56b4340355846e49463fb4e026cf9a7\\TB500_S4_BE125.mq5",
+    "line": 84,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\d652723412bb4a5b8078543ab34b550d\\TB500_S5_M5_BAND_RSI.mq5",
+    "line": 85,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\d673c998df084c0089f0a4841692c0da\\GSM12\\Core.mqh",
+    "line": 79,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\d6a9308152084626b754ac5225db0c78\\GSM12\\Core.mqh",
+    "line": 79,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\d7a8bec55dff4bf8a290db130f2a9f76\\TB500_S6_BE15.mq5",
+    "line": 85,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\d7c5a5c6f3e64f878c55c40b8cafadaf\\GSM12\\Core.mqh",
+    "line": 80,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\db0e5ddefcd944ad93df9d14aecee094\\TB500_S2_SND_EMA_TACTICAL.mq5",
+    "line": 85,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\db18901032e045eb86e5c979c1f1c56e\\TB500_S1_ACTIVE_RECOVERY_I10.mq5",
+    "line": 88,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\dca48f932c804a3ab8747c0a620db820\\GSM12\\Core.mqh",
+    "line": 79,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\df5c1c6ea2a840aabe5991b8a82e24cf\\GSM12\\Core.mqh",
+    "line": 78,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\df6fc4a425964320b4aaaa2a219571f9\\TB500_S6_ATR_TRAIL_ONLY_I18.mq5",
+    "line": 86,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\e08b332a1cb146dcb0b6afa90ea9a27f\\GSM12\\Core.mqh",
+    "line": 79,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\e0c2f8f1555e4b1d9988eec2eba60ebe\\TB500_S3_VFI_BE1.mq5",
+    "line": 87,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\e14c8267d44c471db9dadc0e6418e76b\\TB500_S3_SNR_ZONE_TRIGGER.mq5",
+    "line": 86,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\e1d4976d787a462cad20f0a8cd170b66\\GSM12\\Core.mqh",
+    "line": 80,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\e21c5e4510e24d17903b610b5f306f7f\\TB500_S1_DYNAMIC_RISK_I9.mq5",
+    "line": 88,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\e2d295b5bf554fd5b71bdf9e337e3de9\\GSM12\\Core.mqh",
+    "line": 78,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\e41fea24206c43a5b43058a4c0fa68ae\\GSM12\\Core.mqh",
+    "line": 78,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\e513db07de594e6b8e15f82b0f8717b6\\TB500_S2_SND_SAME_CLOSE.mq5",
+    "line": 85,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\e52a13b989034e9e8fe5c9a2cbcb1cf1\\GSM12\\Core.mqh",
+    "line": 78,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\e6000310fe49421cafed297b8a0e064b\\GSM12\\Core.mqh",
+    "line": 78,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\e791d8d0af004b748348433745934c09\\GSM12\\Core.mqh",
+    "line": 78,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\e7ed9bcfccc742ab8447acc24417f286\\TB500_S2_SAMECLOSE_RISK2_I11.mq5",
+    "line": 85,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\e918b9b6727247c198d105eaac1db56f\\GSM12\\Core.mqh",
+    "line": 79,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\e96d7fffef5643c4a65261ee3972aaa0\\GSM12\\Core.mqh",
+    "line": 80,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\e98dc18243a148c0928918f876b18cf0\\TB500_S1_TRIGGER_M5_SL_RISK2_I9.mq5",
+    "line": 88,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\ea233bc2763640ecbaee950092ca0633\\GSM12\\Core.mqh",
+    "line": 80,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\eadbe3bc904547978cbedf3ae7f64b2e\\TB500_S2_SND_SAME_CLOSE.mq5",
+    "line": 85,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\ec9adf73d7384c33950db657615820c9\\GSM12\\Core.mqh",
+    "line": 79,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\ed95ac78ce93435998666b168b8cb47f\\TB500_S3_VFI_CONFIRM.mq5",
+    "line": 87,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\f086a8f370374ea9a1862bf879a90149\\GSM12\\Core.mqh",
+    "line": 78,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\f1fc323ddc234cfa84a4b4f10aec194c\\TB500_S5_REQUEST_FINALITY_V1.mq5",
+    "line": 86,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\f2014154f37e4311a5a07126a9529d00\\TB500_S2_PROGRESS_RISK2_I10.mq5",
+    "line": 85,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\f2135b8f40ea47feb9d8fc092d1d10fb\\GSM12\\Core.mqh",
+    "line": 79,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\f2a1c30654464eef9e5e3381c5901ff5\\GSM12\\Core.mqh",
+    "line": 78,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\f387c47720dd460e92cbfdc3bd0b6ca9\\TB500_S5_M5_FIRST_PROGRESS.mq5",
+    "line": 86,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\f99f215bc0a140a0b7b6a0c1bcd9fbe2\\GSM12\\Core.mqh",
+    "line": 78,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\fad34e020e6f45b28d167b3a89182d03\\TB500_S6_DISTINCT_TRIGGER_BE1.mq5",
+    "line": 86,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\fbeacf647ade45aeb111a159f8fa3bf8\\GSM12\\Core.mqh",
+    "line": 78,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\fda1a0b3f46e49918e7605c8ab0f61e5\\TB500_S1_TRIGGER_M5_SL_R2.mq5",
+    "line": 88,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\feb0d580982a4b43910d2adca3d94d33\\GSM12\\Core.mqh",
+    "line": 78,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\ff47dd648b044935acd71a3944395676\\GSM12\\Core.mqh",
+    "line": 79,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_AutoLab\\ff9d212e36de49ab873d79bb94e54a77\\TB500_S3_TRIGGER_INVALIDATION.mq5",
+    "line": 85,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_Direct_20260920\\S1_C7_ON.mq5",
+    "line": 84,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_Direct_20260920\\S4_C7_ON.mq5",
+    "line": 84,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_Direct_20260920\\Scalping_P1C.mq5",
+    "line": 481,
+    "text": "input long   InpIntradayMagic            = 26082102;"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_Direct_20260920\\Scalping_P1C.mq5",
+    "line": 482,
+    "text": "input long   InpScalpMagic               = 26082152;"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_Direct_20260920\\Scalping_P1C.mq5",
+    "line": 483,
+    "text": "input long   InpSwingMagic               = 26082303;"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_Iteration2_500\\TB500_S3_TRIGGER_INVALIDATION.mq5",
+    "line": 85,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_Iteration2_500\\TB500_S4_ATR1_R2_AUDIT.mq5",
+    "line": 84,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_Iteration2_500\\TB500_S4_BE1.mq5",
+    "line": 84,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_Iteration3_500\\Scalping_P1C_R2_Risk2_Fix.mq5",
+    "line": 481,
+    "text": "input long   InpIntradayMagic            = 26082102;"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_Iteration3_500\\Scalping_P1C_R2_Risk2_Fix.mq5",
+    "line": 482,
+    "text": "input long   InpScalpMagic               = 26082152;"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_Iteration3_500\\Scalping_P1C_R2_Risk2_Fix.mq5",
+    "line": 483,
+    "text": "input long   InpSwingMagic               = 26082303;"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_Iteration3_500\\TB500_S1_CONFIRM_PRICE.mq5",
+    "line": 85,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_Iteration3_500\\TB500_S2_M15_M5_TACTICAL.mq5",
+    "line": 85,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_Iteration3_500\\TB500_S3_SNR_ZONE_TRIGGER.mq5",
+    "line": 86,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_Iteration3_500\\TB500_S5_TRIGGER_INVALIDATION.mq5",
+    "line": 85,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_Iteration3_500\\TB500_S6_TRIGGER_BE1.mq5",
+    "line": 85,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_Iteration4_500\\TB500_S1_EMA_LOCATION.mq5",
+    "line": 86,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_Iteration4_500\\TB500_S2_SND_EMA_TACTICAL_R2.mq5",
+    "line": 85,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_Iteration4_500\\TB500_S3_VFI_CONFIRM_R2.mq5",
+    "line": 87,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_Iteration4_500\\TB500_S5_M5_BAND_RSI.mq5",
+    "line": 85,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_Iteration4_500\\TB500_S5_TRIGGER_INVALIDATION.mq5",
+    "line": 85,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_Iteration5_500\\Scalping_P1C_R2_Risk2_Fix.mq5",
+    "line": 481,
+    "text": "input long   InpIntradayMagic            = 26082102;"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_Iteration5_500\\Scalping_P1C_R2_Risk2_Fix.mq5",
+    "line": 482,
+    "text": "input long   InpScalpMagic               = 26082152;"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_Iteration5_500\\Scalping_P1C_R2_Risk2_Fix.mq5",
+    "line": 483,
+    "text": "input long   InpSwingMagic               = 26082303;"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_Iteration5_500\\TB500_S1_STOCH_EXTREME_EXIT.mq5",
+    "line": 87,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_Iteration5_500\\TB500_S2_SND_SAME_CLOSE.mq5",
+    "line": 85,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_Iteration5_500\\TB500_S3_VFI_CONFIRM_R2.mq5",
+    "line": 87,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_Iteration5_500\\TB500_S4_BE125.mq5",
+    "line": 84,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_Iteration5_500\\TB500_S5_M5_BAND_RSI.mq5",
+    "line": 85,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_Iteration5_500\\TB500_S5_TRIGGER_INVALIDATION.mq5",
+    "line": 85,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_Iteration5_500\\TB500_S6_TRIGGER_BE1.mq5",
+    "line": 85,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_Iteration6_500\\Scalping_P1C_R2_Risk2_Fix.mq5",
+    "line": 481,
+    "text": "input long   InpIntradayMagic            = 26082102;"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_Iteration6_500\\Scalping_P1C_R2_Risk2_Fix.mq5",
+    "line": 482,
+    "text": "input long   InpScalpMagic               = 26082152;"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_Iteration6_500\\Scalping_P1C_R2_Risk2_Fix.mq5",
+    "line": 483,
+    "text": "input long   InpSwingMagic               = 26082303;"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_Iteration6_500\\TB500_S1_STOCH_EXTREME_EXIT.mq5",
+    "line": 87,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_Iteration6_500\\TB500_S1_TRIGGER_M5_SL_R2.mq5",
+    "line": 88,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_Iteration6_500\\TB500_S2_SND_SAME_CLOSE.mq5",
+    "line": 85,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_Iteration6_500\\TB500_S3_H1_SLOPE_PRICE.mq5",
+    "line": 88,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_Iteration6_500\\TB500_S4_BE125.mq5",
+    "line": 84,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_Iteration6_500\\TB500_S5_M5_FIRST_PROGRESS.mq5",
+    "line": 86,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_Iteration6_500\\TB500_S5_TRIGGER_INVALIDATION.mq5",
+    "line": 85,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_Iteration6_500\\TB500_S6_DISTINCT_TRIGGER_BE1.mq5",
+    "line": 86,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_S1_C7R1\\GSM12\\Core.mqh",
+    "line": 79,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_SCALP_20260927\\31cca9e585b648c2890d07cef6b96eff\\Scalping_P1C_R1.mq5",
+    "line": 481,
+    "text": "input long   InpIntradayMagic            = 26082102;"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_SCALP_20260927\\31cca9e585b648c2890d07cef6b96eff\\Scalping_P1C_R1.mq5",
+    "line": 482,
+    "text": "input long   InpScalpMagic               = 26082152;"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_SCALP_20260927\\31cca9e585b648c2890d07cef6b96eff\\Scalping_P1C_R1.mq5",
+    "line": 483,
+    "text": "input long   InpSwingMagic               = 26082303;"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_SCALP_20260927\\31cca9e585b648c2890d07cef6b96eff\\Scalping_P1C_R2.mq5",
+    "line": 481,
+    "text": "input long   InpIntradayMagic            = 26082102;"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_SCALP_20260927\\31cca9e585b648c2890d07cef6b96eff\\Scalping_P1C_R2.mq5",
+    "line": 482,
+    "text": "input long   InpScalpMagic               = 26082152;"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_SCALP_20260927\\31cca9e585b648c2890d07cef6b96eff\\Scalping_P1C_R2.mq5",
+    "line": 483,
+    "text": "input long   InpSwingMagic               = 26082303;"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_SCALP_20260927\\6357dae74fcb40178a2f7b0f79097e97\\Scalping_P1C_R1.mq5",
+    "line": 481,
+    "text": "input long   InpIntradayMagic            = 26082102;"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_SCALP_20260927\\6357dae74fcb40178a2f7b0f79097e97\\Scalping_P1C_R1.mq5",
+    "line": 482,
+    "text": "input long   InpScalpMagic               = 26082152;"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_SCALP_20260927\\6357dae74fcb40178a2f7b0f79097e97\\Scalping_P1C_R1.mq5",
+    "line": 483,
+    "text": "input long   InpSwingMagic               = 26082303;"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_SCALP_20260927\\6357dae74fcb40178a2f7b0f79097e97\\Scalping_P1C_R2.mq5",
+    "line": 481,
+    "text": "input long   InpIntradayMagic            = 26082102;"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_SCALP_20260927\\6357dae74fcb40178a2f7b0f79097e97\\Scalping_P1C_R2.mq5",
+    "line": 482,
+    "text": "input long   InpScalpMagic               = 26082152;"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_SCALP_20260927\\6357dae74fcb40178a2f7b0f79097e97\\Scalping_P1C_R2.mq5",
+    "line": 483,
+    "text": "input long   InpSwingMagic               = 26082303;"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_SCALP_20260927\\765ab09a04ae413fa2591660a447c0fb\\Scalping_P1C.mq5",
+    "line": 481,
+    "text": "input long   InpIntradayMagic            = 26082102;"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_SCALP_20260927\\765ab09a04ae413fa2591660a447c0fb\\Scalping_P1C.mq5",
+    "line": 482,
+    "text": "input long   InpScalpMagic               = 26082152;"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_SCALP_20260927\\765ab09a04ae413fa2591660a447c0fb\\Scalping_P1C.mq5",
+    "line": 483,
+    "text": "input long   InpSwingMagic               = 26082303;"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_SCALP_I10_JUNE_20261004\\03b83e17963645a883de122b01db65ff\\TB500_Scalping_Handbook_Daily6_V1.mq5",
+    "line": 482,
+    "text": "input long   InpIntradayMagic            = 26082102;"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_SCALP_I10_JUNE_20261004\\03b83e17963645a883de122b01db65ff\\TB500_Scalping_Handbook_Daily6_V1.mq5",
+    "line": 483,
+    "text": "input long   InpScalpMagic               = 26082152;"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_SCALP_I10_JUNE_20261004\\03b83e17963645a883de122b01db65ff\\TB500_Scalping_Handbook_Daily6_V1.mq5",
+    "line": 484,
+    "text": "input long   InpSwingMagic               = 26082303;"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_SCALP_I11_DD15_20261004\\74a20455970245efaaff6ac061ff939c\\TB500_Scalping_DD15_I11.mq5",
+    "line": 482,
+    "text": "input long   InpIntradayMagic            = 26082102;"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_SCALP_I11_DD15_20261004\\74a20455970245efaaff6ac061ff939c\\TB500_Scalping_DD15_I11.mq5",
+    "line": 483,
+    "text": "input long   InpScalpMagic               = 26082152;"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_SCALP_I11_DD15_20261004\\74a20455970245efaaff6ac061ff939c\\TB500_Scalping_DD15_I11.mq5",
+    "line": 484,
+    "text": "input long   InpSwingMagic               = 26082303;"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_SCALP_I11_DD15_20261004\\9e23c7057cb04f8c80f0dd3ec5f3d97f\\TB500_Scalping_DD15_I11.mq5",
+    "line": 482,
+    "text": "input long   InpIntradayMagic            = 26082102;"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_SCALP_I11_DD15_20261004\\9e23c7057cb04f8c80f0dd3ec5f3d97f\\TB500_Scalping_DD15_I11.mq5",
+    "line": 483,
+    "text": "input long   InpScalpMagic               = 26082152;"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_SCALP_I11_DD15_20261004\\9e23c7057cb04f8c80f0dd3ec5f3d97f\\TB500_Scalping_DD15_I11.mq5",
+    "line": 484,
+    "text": "input long   InpSwingMagic               = 26082303;"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_SCALP_I11_DD15_20261004\\d1a21c4ebba14ce69bc45981201d2834\\TB500_Scalping_DD15_I11.mq5",
+    "line": 482,
+    "text": "input long   InpIntradayMagic            = 26082102;"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_SCALP_I11_DD15_20261004\\d1a21c4ebba14ce69bc45981201d2834\\TB500_Scalping_DD15_I11.mq5",
+    "line": 483,
+    "text": "input long   InpScalpMagic               = 26082152;"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_SCALP_I11_DD15_20261004\\d1a21c4ebba14ce69bc45981201d2834\\TB500_Scalping_DD15_I11.mq5",
+    "line": 484,
+    "text": "input long   InpSwingMagic               = 26082303;"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_SCALP_I12_20261008\\1a3588603f0d4783a864609553a01398\\TB500_Scalping_FIRSTTOUCH_EPISODE_V1_I12.mq5",
+    "line": 495,
+    "text": "input long   InpIntradayMagic            = 26082102;"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_SCALP_I12_20261008\\1a3588603f0d4783a864609553a01398\\TB500_Scalping_FIRSTTOUCH_EPISODE_V1_I12.mq5",
+    "line": 496,
+    "text": "input long   InpScalpMagic               = 26082152;"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_SCALP_I12_20261008\\1a3588603f0d4783a864609553a01398\\TB500_Scalping_FIRSTTOUCH_EPISODE_V1_I12.mq5",
+    "line": 497,
+    "text": "input long   InpSwingMagic               = 26082303;"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_SCALP_I12_20261008\\99f5c33a9f4f441ab452de2b33ca31ae\\TB500_Scalping_ATR_BRACKET_V1_I12.mq5",
+    "line": 492,
+    "text": "input long   InpIntradayMagic            = 26082102;"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_SCALP_I12_20261008\\99f5c33a9f4f441ab452de2b33ca31ae\\TB500_Scalping_ATR_BRACKET_V1_I12.mq5",
+    "line": 493,
+    "text": "input long   InpScalpMagic               = 26082152;"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_SCALP_I12_20261008\\99f5c33a9f4f441ab452de2b33ca31ae\\TB500_Scalping_ATR_BRACKET_V1_I12.mq5",
+    "line": 494,
+    "text": "input long   InpSwingMagic               = 26082303;"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_SCALP_I12_20261008\\c5bfd5e8b8b740c19891b254464c1aeb\\TB500_Scalping_FIRSTTOUCH_EPISODE_V1_I12.mq5",
+    "line": 495,
+    "text": "input long   InpIntradayMagic            = 26082102;"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_SCALP_I12_20261008\\c5bfd5e8b8b740c19891b254464c1aeb\\TB500_Scalping_FIRSTTOUCH_EPISODE_V1_I12.mq5",
+    "line": 496,
+    "text": "input long   InpScalpMagic               = 26082152;"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_SCALP_I12_20261008\\c5bfd5e8b8b740c19891b254464c1aeb\\TB500_Scalping_FIRSTTOUCH_EPISODE_V1_I12.mq5",
+    "line": 497,
+    "text": "input long   InpSwingMagic               = 26082303;"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_SCALP_I12_20261008\\fccb48afd90948508ae0a47e6813bea4\\TB500_Scalping_ATR_BRACKET_V1_I12.mq5",
+    "line": 492,
+    "text": "input long   InpIntradayMagic            = 26082102;"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_SCALP_I12_20261008\\fccb48afd90948508ae0a47e6813bea4\\TB500_Scalping_ATR_BRACKET_V1_I12.mq5",
+    "line": 493,
+    "text": "input long   InpScalpMagic               = 26082152;"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_SCALP_I12_20261008\\fccb48afd90948508ae0a47e6813bea4\\TB500_Scalping_ATR_BRACKET_V1_I12.mq5",
+    "line": 494,
+    "text": "input long   InpSwingMagic               = 26082303;"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_SCALP_I13_20261009\\89ab3fbb62274d3aa3182290baad8d6f\\TB500_Scalping_H4_ALIGN_V1_I13.mq5",
+    "line": 483,
+    "text": "input long   InpIntradayMagic            = 26082102;"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_SCALP_I13_20261009\\89ab3fbb62274d3aa3182290baad8d6f\\TB500_Scalping_H4_ALIGN_V1_I13.mq5",
+    "line": 484,
+    "text": "input long   InpScalpMagic               = 26082152;"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_SCALP_I13_20261009\\89ab3fbb62274d3aa3182290baad8d6f\\TB500_Scalping_H4_ALIGN_V1_I13.mq5",
+    "line": 485,
+    "text": "input long   InpSwingMagic               = 26082303;"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_SCALP_I13_20261009\\9d1ae261f1fd4d74aefbf223f13d2f4a\\TB500_Scalping_H4_ALIGN_V1_I13.mq5",
+    "line": 483,
+    "text": "input long   InpIntradayMagic            = 26082102;"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_SCALP_I13_20261009\\9d1ae261f1fd4d74aefbf223f13d2f4a\\TB500_Scalping_H4_ALIGN_V1_I13.mq5",
+    "line": 484,
+    "text": "input long   InpScalpMagic               = 26082152;"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_SCALP_I13_20261009\\9d1ae261f1fd4d74aefbf223f13d2f4a\\TB500_Scalping_H4_ALIGN_V1_I13.mq5",
+    "line": 485,
+    "text": "input long   InpSwingMagic               = 26082303;"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_SCALP_I13_20261009\\f4c5adf533e446b9a7602a4110d6ae11\\TB500_Scalping_ADX_ADVERSE_V1_I13.mq5",
+    "line": 484,
+    "text": "input long   InpIntradayMagic            = 26082102;"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_SCALP_I13_20261009\\f4c5adf533e446b9a7602a4110d6ae11\\TB500_Scalping_ADX_ADVERSE_V1_I13.mq5",
+    "line": 485,
+    "text": "input long   InpScalpMagic               = 26082152;"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_SCALP_I13_20261009\\f4c5adf533e446b9a7602a4110d6ae11\\TB500_Scalping_ADX_ADVERSE_V1_I13.mq5",
+    "line": 486,
+    "text": "input long   InpSwingMagic               = 26082303;"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_SCALP_I13R1_20261009\\077f5a0ddbad445d8fdc72ddbd51379e\\TB500_Scalping_ADX_ADVERSE_V1_I13_R1.mq5",
+    "line": 485,
+    "text": "input long   InpIntradayMagic            = 26082102;"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_SCALP_I13R1_20261009\\077f5a0ddbad445d8fdc72ddbd51379e\\TB500_Scalping_ADX_ADVERSE_V1_I13_R1.mq5",
+    "line": 486,
+    "text": "input long   InpScalpMagic               = 26082152;"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_SCALP_I13R1_20261009\\077f5a0ddbad445d8fdc72ddbd51379e\\TB500_Scalping_ADX_ADVERSE_V1_I13_R1.mq5",
+    "line": 487,
+    "text": "input long   InpSwingMagic               = 26082303;"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_SCALP_I13R1_20261009\\4fc1af7bfaac463e81f2317ea262c268\\TB500_Scalping_ADX_ADVERSE_V1_I13_R1.mq5",
+    "line": 485,
+    "text": "input long   InpIntradayMagic            = 26082102;"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_SCALP_I13R1_20261009\\4fc1af7bfaac463e81f2317ea262c268\\TB500_Scalping_ADX_ADVERSE_V1_I13_R1.mq5",
+    "line": 486,
+    "text": "input long   InpScalpMagic               = 26082152;"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_SCALP_I13R1_20261009\\4fc1af7bfaac463e81f2317ea262c268\\TB500_Scalping_ADX_ADVERSE_V1_I13_R1.mq5",
+    "line": 487,
+    "text": "input long   InpSwingMagic               = 26082303;"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_SCALP_I14_20261009\\1a9c363cdea442988e8b5e13d3948617\\TB500_Scalping_TEACHER_REVERSAL_RATIO_V1_I14.mq5",
+    "line": 483,
+    "text": "input long   InpIntradayMagic            = 26082102;"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_SCALP_I14_20261009\\1a9c363cdea442988e8b5e13d3948617\\TB500_Scalping_TEACHER_REVERSAL_RATIO_V1_I14.mq5",
+    "line": 484,
+    "text": "input long   InpScalpMagic               = 26082152;"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_SCALP_I14_20261009\\1a9c363cdea442988e8b5e13d3948617\\TB500_Scalping_TEACHER_REVERSAL_RATIO_V1_I14.mq5",
+    "line": 485,
+    "text": "input long   InpSwingMagic               = 26082303;"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_SCALP_I14_20261009\\29078eed442a4591a89703c0ff2b28ac\\TB500_Scalping_TEACHER_REVERSAL_RATIO_V1_I14.mq5",
+    "line": 483,
+    "text": "input long   InpIntradayMagic            = 26082102;"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_SCALP_I14_20261009\\29078eed442a4591a89703c0ff2b28ac\\TB500_Scalping_TEACHER_REVERSAL_RATIO_V1_I14.mq5",
+    "line": 484,
+    "text": "input long   InpScalpMagic               = 26082152;"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_SCALP_I14_20261009\\29078eed442a4591a89703c0ff2b28ac\\TB500_Scalping_TEACHER_REVERSAL_RATIO_V1_I14.mq5",
+    "line": 485,
+    "text": "input long   InpSwingMagic               = 26082303;"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_SCALP_I15_20261010\\58c277f6a208419992befe8384e33cbc\\TB500_Scalping_DYNAMIC_COST_BREAKEVEN_V1_I15.mq5",
+    "line": 483,
+    "text": "input long   InpIntradayMagic            = 26082102;"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_SCALP_I15_20261010\\58c277f6a208419992befe8384e33cbc\\TB500_Scalping_DYNAMIC_COST_BREAKEVEN_V1_I15.mq5",
+    "line": 484,
+    "text": "input long   InpScalpMagic               = 26082152;"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_SCALP_I15_20261010\\58c277f6a208419992befe8384e33cbc\\TB500_Scalping_DYNAMIC_COST_BREAKEVEN_V1_I15.mq5",
+    "line": 485,
+    "text": "input long   InpSwingMagic               = 26082303;"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_SCALP_I15_20261010\\7dfd498bcd194d21a9d11880451d6218\\TB500_Scalping_DYNAMIC_COST_BREAKEVEN_V1_I15.mq5",
+    "line": 483,
+    "text": "input long   InpIntradayMagic            = 26082102;"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_SCALP_I15_20261010\\7dfd498bcd194d21a9d11880451d6218\\TB500_Scalping_DYNAMIC_COST_BREAKEVEN_V1_I15.mq5",
+    "line": 484,
+    "text": "input long   InpScalpMagic               = 26082152;"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_SCALP_I15_20261010\\7dfd498bcd194d21a9d11880451d6218\\TB500_Scalping_DYNAMIC_COST_BREAKEVEN_V1_I15.mq5",
+    "line": 485,
+    "text": "input long   InpSwingMagic               = 26082303;"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_SCALP_I15_20261010\\875667e451f54b9d8f5c09d1ff33f96e\\TB500_Scalping_TRAIL_ONLY_V1_I15.mq5",
+    "line": 483,
+    "text": "input long   InpIntradayMagic            = 26082102;"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_SCALP_I15_20261010\\875667e451f54b9d8f5c09d1ff33f96e\\TB500_Scalping_TRAIL_ONLY_V1_I15.mq5",
+    "line": 484,
+    "text": "input long   InpScalpMagic               = 26082152;"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_SCALP_I15_20261010\\875667e451f54b9d8f5c09d1ff33f96e\\TB500_Scalping_TRAIL_ONLY_V1_I15.mq5",
+    "line": 485,
+    "text": "input long   InpSwingMagic               = 26082303;"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_SCALP_I15_20261010\\b9366e1a892d44c99deb01a9544bdb88\\TB500_Scalping_TRAIL_ONLY_V1_I15.mq5",
+    "line": 483,
+    "text": "input long   InpIntradayMagic            = 26082102;"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_SCALP_I15_20261010\\b9366e1a892d44c99deb01a9544bdb88\\TB500_Scalping_TRAIL_ONLY_V1_I15.mq5",
+    "line": 484,
+    "text": "input long   InpScalpMagic               = 26082152;"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_SCALP_I15_20261010\\b9366e1a892d44c99deb01a9544bdb88\\TB500_Scalping_TRAIL_ONLY_V1_I15.mq5",
+    "line": 485,
+    "text": "input long   InpSwingMagic               = 26082303;"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_SCALP_I16_20261010\\1592946699a8446fa265c1ede1434af8\\TB500_Scalping_FIXED_LOT_PARENT_EXIT_V1_I16.mq5",
+    "line": 483,
+    "text": "input long   InpIntradayMagic            = 26082102;"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_SCALP_I16_20261010\\1592946699a8446fa265c1ede1434af8\\TB500_Scalping_FIXED_LOT_PARENT_EXIT_V1_I16.mq5",
+    "line": 484,
+    "text": "input long   InpScalpMagic               = 26082152;"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_SCALP_I16_20261010\\1592946699a8446fa265c1ede1434af8\\TB500_Scalping_FIXED_LOT_PARENT_EXIT_V1_I16.mq5",
+    "line": 485,
+    "text": "input long   InpSwingMagic               = 26082303;"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_SCALP_I16_20261010\\1bc76411ec2c42779c9e187afa7a9a3d\\TB500_Scalping_FIXED_LOT_DYNAMIC_COST_BREAKEVEN_V1_I16.mq5",
+    "line": 484,
+    "text": "input long   InpIntradayMagic            = 26082102;"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_SCALP_I16_20261010\\1bc76411ec2c42779c9e187afa7a9a3d\\TB500_Scalping_FIXED_LOT_DYNAMIC_COST_BREAKEVEN_V1_I16.mq5",
+    "line": 485,
+    "text": "input long   InpScalpMagic               = 26082152;"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_SCALP_I16_20261010\\1bc76411ec2c42779c9e187afa7a9a3d\\TB500_Scalping_FIXED_LOT_DYNAMIC_COST_BREAKEVEN_V1_I16.mq5",
+    "line": 486,
+    "text": "input long   InpSwingMagic               = 26082303;"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_SCALP_I16_20261010\\ced2f4fc582d4dc29a5f9037882ebabe\\TB500_Scalping_FIXED_LOT_PARENT_EXIT_V1_I16.mq5",
+    "line": 483,
+    "text": "input long   InpIntradayMagic            = 26082102;"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_SCALP_I16_20261010\\ced2f4fc582d4dc29a5f9037882ebabe\\TB500_Scalping_FIXED_LOT_PARENT_EXIT_V1_I16.mq5",
+    "line": 484,
+    "text": "input long   InpScalpMagic               = 26082152;"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_SCALP_I16_20261010\\ced2f4fc582d4dc29a5f9037882ebabe\\TB500_Scalping_FIXED_LOT_PARENT_EXIT_V1_I16.mq5",
+    "line": 485,
+    "text": "input long   InpSwingMagic               = 26082303;"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_SCALP_I16_20261010\\dae32196231d405b8627084c9839fbd8\\TB500_Scalping_FIXED_LOT_DYNAMIC_COST_BREAKEVEN_V1_I16.mq5",
+    "line": 484,
+    "text": "input long   InpIntradayMagic            = 26082102;"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_SCALP_I16_20261010\\dae32196231d405b8627084c9839fbd8\\TB500_Scalping_FIXED_LOT_DYNAMIC_COST_BREAKEVEN_V1_I16.mq5",
+    "line": 485,
+    "text": "input long   InpScalpMagic               = 26082152;"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_SCALP_I16_20261010\\dae32196231d405b8627084c9839fbd8\\TB500_Scalping_FIXED_LOT_DYNAMIC_COST_BREAKEVEN_V1_I16.mq5",
+    "line": 486,
+    "text": "input long   InpSwingMagic               = 26082303;"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_SCALP_I17_20261010\\2b49f89eeee24c8996992348481c2a20\\TB500_Scalping_DELAYED_COST_BREAKEVEN_T35_V1_I17.mq5",
+    "line": 484,
+    "text": "input long   InpIntradayMagic            = 26082102;"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_SCALP_I17_20261010\\2b49f89eeee24c8996992348481c2a20\\TB500_Scalping_DELAYED_COST_BREAKEVEN_T35_V1_I17.mq5",
+    "line": 485,
+    "text": "input long   InpScalpMagic               = 26082152;"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_SCALP_I17_20261010\\2b49f89eeee24c8996992348481c2a20\\TB500_Scalping_DELAYED_COST_BREAKEVEN_T35_V1_I17.mq5",
+    "line": 486,
+    "text": "input long   InpSwingMagic               = 26082303;"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_SCALP_I17_20261010\\32c68b665fde4c0c982ab6dda5e4a675\\TB500_Scalping_DELAYED_COST_BREAKEVEN_T35_V1_I17.mq5",
+    "line": 484,
+    "text": "input long   InpIntradayMagic            = 26082102;"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_SCALP_I17_20261010\\32c68b665fde4c0c982ab6dda5e4a675\\TB500_Scalping_DELAYED_COST_BREAKEVEN_T35_V1_I17.mq5",
+    "line": 485,
+    "text": "input long   InpScalpMagic               = 26082152;"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_SCALP_I17_20261010\\32c68b665fde4c0c982ab6dda5e4a675\\TB500_Scalping_DELAYED_COST_BREAKEVEN_T35_V1_I17.mq5",
+    "line": 486,
+    "text": "input long   InpSwingMagic               = 26082303;"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_SCALP_I17_20261010\\96c91c9f676d4aa29970a7268b372ae4\\TB500_Scalping_DELAYED_COST_BREAKEVEN_T40_V1_I17.mq5",
+    "line": 484,
+    "text": "input long   InpIntradayMagic            = 26082102;"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_SCALP_I17_20261010\\96c91c9f676d4aa29970a7268b372ae4\\TB500_Scalping_DELAYED_COST_BREAKEVEN_T40_V1_I17.mq5",
+    "line": 485,
+    "text": "input long   InpScalpMagic               = 26082152;"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_SCALP_I17_20261010\\96c91c9f676d4aa29970a7268b372ae4\\TB500_Scalping_DELAYED_COST_BREAKEVEN_T40_V1_I17.mq5",
+    "line": 486,
+    "text": "input long   InpSwingMagic               = 26082303;"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_SCALP_I17_20261010\\f1397728afe7466a86bcfae3184f6069\\TB500_Scalping_DELAYED_COST_BREAKEVEN_T40_V1_I17.mq5",
+    "line": 484,
+    "text": "input long   InpIntradayMagic            = 26082102;"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_SCALP_I17_20261010\\f1397728afe7466a86bcfae3184f6069\\TB500_Scalping_DELAYED_COST_BREAKEVEN_T40_V1_I17.mq5",
+    "line": 485,
+    "text": "input long   InpScalpMagic               = 26082152;"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_SCALP_I17_20261010\\f1397728afe7466a86bcfae3184f6069\\TB500_Scalping_DELAYED_COST_BREAKEVEN_T40_V1_I17.mq5",
+    "line": 486,
+    "text": "input long   InpSwingMagic               = 26082303;"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_SCALP_I18_20261011\\905a99f040594e3495c5f1a0ccb7db4d\\TB500_Scalping_SPREAD20_I18.mq5",
+    "line": 484,
+    "text": "input long   InpIntradayMagic            = 26082102;"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_SCALP_I18_20261011\\905a99f040594e3495c5f1a0ccb7db4d\\TB500_Scalping_SPREAD20_I18.mq5",
+    "line": 485,
+    "text": "input long   InpScalpMagic               = 26082152;"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_SCALP_I18_20261011\\905a99f040594e3495c5f1a0ccb7db4d\\TB500_Scalping_SPREAD20_I18.mq5",
+    "line": 486,
+    "text": "input long   InpSwingMagic               = 26082303;"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_SCALP_I18_20261011\\efa681b8cce84d9499b146e199a3f19c\\TB500_Scalping_SPREAD20_I18.mq5",
+    "line": 484,
+    "text": "input long   InpIntradayMagic            = 26082102;"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_SCALP_I18_20261011\\efa681b8cce84d9499b146e199a3f19c\\TB500_Scalping_SPREAD20_I18.mq5",
+    "line": 485,
+    "text": "input long   InpScalpMagic               = 26082152;"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_SCALP_I18_20261011\\efa681b8cce84d9499b146e199a3f19c\\TB500_Scalping_SPREAD20_I18.mq5",
+    "line": 486,
+    "text": "input long   InpSwingMagic               = 26082303;"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_SCALP_I6_FIXED_20261002\\15edda6767124b8c99c9c8cd4cddcf97\\Scalping_P1C_R2_Risk2_Fix.mq5",
+    "line": 481,
+    "text": "input long   InpIntradayMagic            = 26082102;"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_SCALP_I6_FIXED_20261002\\15edda6767124b8c99c9c8cd4cddcf97\\Scalping_P1C_R2_Risk2_Fix.mq5",
+    "line": 482,
+    "text": "input long   InpScalpMagic               = 26082152;"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_SCALP_I6_FIXED_20261002\\15edda6767124b8c99c9c8cd4cddcf97\\Scalping_P1C_R2_Risk2_Fix.mq5",
+    "line": 483,
+    "text": "input long   InpSwingMagic               = 26082303;"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_SCALP_I9_HANDBOOK_20261004\\33018e57bedb4d719f0774284d9a0660\\TB500_Scalping_Handbook_Daily6_V1.mq5",
+    "line": 482,
+    "text": "input long   InpIntradayMagic            = 26082102;"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_SCALP_I9_HANDBOOK_20261004\\33018e57bedb4d719f0774284d9a0660\\TB500_Scalping_Handbook_Daily6_V1.mq5",
+    "line": 483,
+    "text": "input long   InpScalpMagic               = 26082152;"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_SCALP_I9_HANDBOOK_20261004\\33018e57bedb4d719f0774284d9a0660\\TB500_Scalping_Handbook_Daily6_V1.mq5",
+    "line": 484,
+    "text": "input long   InpSwingMagic               = 26082303;"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_SCALP_I9_HANDBOOK_20261004\\41fdb903384f4519a02d09e3fe7deb06\\TB500_Scalping_Handbook_Daily6_V1.mq5",
+    "line": 482,
+    "text": "input long   InpIntradayMagic            = 26082102;"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_SCALP_I9_HANDBOOK_20261004\\41fdb903384f4519a02d09e3fe7deb06\\TB500_Scalping_Handbook_Daily6_V1.mq5",
+    "line": 483,
+    "text": "input long   InpScalpMagic               = 26082152;"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_SCALP_I9_HANDBOOK_20261004\\41fdb903384f4519a02d09e3fe7deb06\\TB500_Scalping_Handbook_Daily6_V1.mq5",
+    "line": 484,
+    "text": "input long   InpSwingMagic               = 26082303;"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_SCALP_RISK2_20260927\\72025a4a16234d8888bcd1e310ffad51\\Scalping_P1C_R2_Risk2.mq5",
+    "line": 481,
+    "text": "input long   InpIntradayMagic            = 26082102;"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_SCALP_RISK2_20260927\\72025a4a16234d8888bcd1e310ffad51\\Scalping_P1C_R2_Risk2.mq5",
+    "line": 482,
+    "text": "input long   InpScalpMagic               = 26082152;"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_SCALP_RISK2_20260927\\72025a4a16234d8888bcd1e310ffad51\\Scalping_P1C_R2_Risk2.mq5",
+    "line": 483,
+    "text": "input long   InpSwingMagic               = 26082303;"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_SCALP_RISK2_FIX_20260927\\4ad4eae6b7c94795af2793849f5126bd\\Scalping_P1C_R2_Risk2_Fix.mq5",
+    "line": 481,
+    "text": "input long   InpIntradayMagic            = 26082102;"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_SCALP_RISK2_FIX_20260927\\4ad4eae6b7c94795af2793849f5126bd\\Scalping_P1C_R2_Risk2_Fix.mq5",
+    "line": 482,
+    "text": "input long   InpScalpMagic               = 26082152;"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_SCALP_RISK2_FIX_20260927\\4ad4eae6b7c94795af2793849f5126bd\\Scalping_P1C_R2_Risk2_Fix.mq5",
+    "line": 483,
+    "text": "input long   InpSwingMagic               = 26082303;"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_SCALP_RISK2_FIX_20260927\\e4072bdd69694a8081596b8e34cdb989\\Scalping_P1C_R2_Risk2_Fix.mq5",
+    "line": 481,
+    "text": "input long   InpIntradayMagic            = 26082102;"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_SCALP_RISK2_FIX_20260927\\e4072bdd69694a8081596b8e34cdb989\\Scalping_P1C_R2_Risk2_Fix.mq5",
+    "line": 482,
+    "text": "input long   InpScalpMagic               = 26082152;"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_SCALP_RISK2_FIX_20260927\\e4072bdd69694a8081596b8e34cdb989\\Scalping_P1C_R2_Risk2_Fix.mq5",
+    "line": 483,
+    "text": "input long   InpSwingMagic               = 26082303;"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_SCALP_RISK2_FIX_20260927\\e627ad95f3934e08891abe4c176b9065\\Scalping_P1C_R2_Risk2_Fix.mq5",
+    "line": 481,
+    "text": "input long   InpIntradayMagic            = 26082102;"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_SCALP_RISK2_FIX_20260927\\e627ad95f3934e08891abe4c176b9065\\Scalping_P1C_R2_Risk2_Fix.mq5",
+    "line": 482,
+    "text": "input long   InpScalpMagic               = 26082152;"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_SCALP_RISK2_FIX_20260927\\e627ad95f3934e08891abe4c176b9065\\Scalping_P1C_R2_Risk2_Fix.mq5",
+    "line": 483,
+    "text": "input long   InpSwingMagic               = 26082303;"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_SelfTest_S1_C7T1\\GSM12\\Core.mqh",
+    "line": 79,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_SelfTest_S4_C7T1\\GSM12\\Core.mqh",
+    "line": 79,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_Seven_500\\Scalping_P1C_R2.mq5",
+    "line": 481,
+    "text": "input long   InpIntradayMagic            = 26082102;"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_Seven_500\\Scalping_P1C_R2.mq5",
+    "line": 482,
+    "text": "input long   InpScalpMagic               = 26082152;"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_Seven_500\\Scalping_P1C_R2.mq5",
+    "line": 483,
+    "text": "input long   InpSwingMagic               = 26082303;"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_Seven_500\\TB500_S1_BE1.mq5",
+    "line": 84,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_Seven_500\\TB500_S2_R0.mq5",
+    "line": 85,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_Seven_500\\TB500_S3_R0.mq5",
+    "line": 85,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_Seven_500\\TB500_S4_R0.mq5",
+    "line": 84,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_Seven_500\\TB500_S5_R0.mq5",
+    "line": 85,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_Seven_500\\TB500_S6_R0.mq5",
+    "line": 85,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\TradingBrain_v1_2_DevCheck\\GSM12\\Core.mqh",
+    "line": 77,
+    "text": "long g_magics[6]={6101,6201,6301,6401,6501,6601};"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\USER_SCALP_P1B\\13add4b76f874f088051d06c637a1756\\USER_SCALP_P1B.mq5",
+    "line": 480,
+    "text": "input long   InpIntradayMagic            = 26082102;"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\USER_SCALP_P1B\\13add4b76f874f088051d06c637a1756\\USER_SCALP_P1B.mq5",
+    "line": 481,
+    "text": "input long   InpScalpMagic               = 26082152;"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\USER_SCALP_P1B\\13add4b76f874f088051d06c637a1756\\USER_SCALP_P1B.mq5",
+    "line": 482,
+    "text": "input long   InpSwingMagic               = 26082303;"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\USER_SCALP_P1B\\dd8e6a8c222e45419131f0c3bf59fe21\\USER_SCALP_P1B.mq5",
+    "line": 480,
+    "text": "input long   InpIntradayMagic            = 26082102;"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\USER_SCALP_P1B\\dd8e6a8c222e45419131f0c3bf59fe21\\USER_SCALP_P1B.mq5",
+    "line": 481,
+    "text": "input long   InpScalpMagic               = 26082152;"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\USER_SCALP_P1B\\dd8e6a8c222e45419131f0c3bf59fe21\\USER_SCALP_P1B.mq5",
+    "line": 482,
+    "text": "input long   InpSwingMagic               = 26082303;"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\USER_SCALP_P1C\\458af1e36832471189979f4147eeed77\\USER_SCALP_P1C.mq5",
+    "line": 481,
+    "text": "input long   InpIntradayMagic            = 26082102;"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\USER_SCALP_P1C\\458af1e36832471189979f4147eeed77\\USER_SCALP_P1C.mq5",
+    "line": 482,
+    "text": "input long   InpScalpMagic               = 26082152;"
+  },
+  {
+    "path": "C:\\Users\\A\\AppData\\Roaming\\MetaQuotes\\Terminal\\523FF71FCA93BC15AC28868379E0D478\\MQL5\\Experts\\USER_SCALP_P1C\\458af1e36832471189979f4147eeed77\\USER_SCALP_P1C.mq5",
+    "line": 483,
+    "text": "input long   InpSwingMagic               = 26082303;"
+  }
+]

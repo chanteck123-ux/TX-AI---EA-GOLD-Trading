@@ -1,0 +1,2 @@
+GR	0	19:33:22.749	G4DemoController (GOLD,M5)	G4D|run=G4D_2ec93af69f1640aab780be4418bab806|mode=0|tester=0
+DJ	0	19:34:04.178	G4DemoController (GOLD,M5)	G4D|run=G4D_2ec93af69f1640aab780be4418bab806|result=FAIL|demo=1|chart_a=132772944655437241|chart_b=132772944655437242|templates=1|exchange=|before=positions=0;orders=0|after=positions=0;orders=0|common=C:\Users\A\AppData\Roaming\MetaQuotes\Terminal\Common

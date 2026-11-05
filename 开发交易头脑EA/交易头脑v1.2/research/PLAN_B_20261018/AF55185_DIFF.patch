@@ -1,0 +1,50 @@
+commit af551855bc4cc40470f44cad57cff553570f2102
+Author:     Claude <noreply@anthropic.com>
+AuthorDate: Sun Oct 18 18:53:48 2026 +0800
+Commit:     Claude <noreply@anthropic.com>
+CommitDate: Sun Oct 18 18:53:48 2026 +0800
+
+    docs(v1.1 check): split §三 into pre-freeze evidence vs RiskExecution implementation acceptance
+    
+    - Pre-freeze (Codex, local): G1 magics + s7_identity_magics, G3 S7 slot source limit,
+      G4 FILE_COMMON platform capability probe, G5 existing TB500 S7 lock behaviour.
+    - Implementation (Claude writes, Codex reviews): slot control (RE-29), lease (RE-30),
+      RiskExecution S7 daily lock (RE-31a–l).
+    - S7 slot TBD does not block v1.1 freeze but blocks S7 trading/backtest batches.
+    - Dual-chart probes only on Demo or Tester.
+    - Formal interface v1.0 unchanged; not a v1.1 freeze approval.
+    
+    Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
+    Claude-Session: https://claude.ai/code/session_01L7NGEM3LHK5ZJUWbDwcHuo
+
+diff --git a/contracts/drafts/planB_v1.1_consistency_check_claude_20261018.md b/contracts/drafts/planB_v1.1_consistency_check_claude_20261018.md
+index 3167795..2d358ca 100644
+--- a/contracts/drafts/planB_v1.1_consistency_check_claude_20261018.md
++++ b/contracts/drafts/planB_v1.1_consistency_check_claude_20261018.md
+@@ -34,11 +34,21 @@
+ 
+ ## 三、请 Codex 核对的重点
+ 
+-1. **G1 magic**：在本地核对七个 TB500 EA 实际使用的 magic，填入 `magic_map`；与用户规格 6101…6601 不同时如实记录。
+-2. **G3 槽位**：确认 S7 现行源码的槽位上限（v1.1 暂列 TBD）；确认“S4 第二槽须等第一槽请求结束在途状态”不会与 S4 原有双槽行为冲突。
+-3. **G4 租约**：确认 `FILE_COMMON` 在固定终端（/portable 模式）下可用，以及回测按 run_id 隔离的写法。
+-4. **G5 日锁**：确认由 RiskExecution 计数与 PLAN §4.1 的全部验证点一一对应（v1.1 RE-31a–h）。
+-5. B1–B3 的文字修改是否符合文档维护习惯。
++> 2026-10-18 修订（用户同意）：按方案 B 区分“v1.1 冻结前取证”与“RiskExecution 实现阶段验收”。租约、槽位控制和 S7 日锁的实现都属于 RiskExecution，由 Claude 编写；代码尚未存在，所以 RE-30、RE-31 的运行验收不作为 v1.1 冻结的前提条件。原第 1–5 项的要求保留在下表和第 5 项中。
++
++| 项目 | v1.1 冻结前（Codex 本地取证） | 实现阶段（Claude 编写，Codex 复审） |
++|---|---|---|
++| G1 七策略 magic | 核对七个 TB500 EA 实际使用的 magic：源码位置、对照表、文件哈希、冲突检查，填入 `magic_map`；与用户规格 6101…6601 不同时如实记录。同时列出 S7 现行和历史 magic，填入 `s7_identity_magics` | 使用确认后的身份映射，实现启动冲突检查 |
++| G3 S7 槽位 | 核对 S7 现行源码的并发上限，以及挂单是否占用槽位；确认“S4 第二槽须等第一槽请求结束在途状态”不会与 S4 原有双槽行为冲突 | 实现槽位上限和风险预算控制（RE-29） |
++| G4 `FILE_COMMON` | 平台能力证据：固定终端（/portable 模式）下 `FILE_COMMON` 的实际路径；两个图表能否读写同一文件；测试器按 run_id 隔离的路径是否可用 | 实现租约、互斥、重启恢复，以及 RE-30 多实例竞争和重启实测 |
++| G5 S7 日锁 | 现行 TB500 S7 源码是否已有 6 盈／6 亏锁；若有，记录计数方式和换日方式，对照 PLAN §4.1 | 在 RiskExecution 实现日锁，并完成 RE-31a–l 测试 |
++
++5. B1–B3 的文字修改是否符合文档维护习惯（已随 PR #8/#9 进入 main，保留为复核项）。
++
++**规则：**
++- **S7 槽位 TBD**：若确实无法从源码确定，可以保留 `TBD`，不阻断 v1.1 接口规格冻结；但必须阻断依赖该槽位限制的 S7 交易功能。槽位未确认前，S7 不得启用新增风险，任何 S7 批次都不能开始回测。接口冻结不代表未确认风险上限的策略可以交易。
++- **探测环境**：双图表读写探测只在 Demo 账户或测试器中进行，不在挂实盘的终端上新增 EA 实例。
++- **状态口径**：本节修订只改核对范围；不修改正式接口 v1.0，不代表 v1.1 已获冻结批准，也不代表任何代码已实现、编译或测试通过。
+ 
+ ## 四、合并条件
+ 

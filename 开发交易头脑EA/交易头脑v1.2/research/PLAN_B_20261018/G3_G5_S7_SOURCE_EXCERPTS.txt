@@ -1,0 +1,527 @@
+LINES 1637-1665
+1637:    }
+1638:    return true;
+1639: }
+1640: 
+1641: bool DeliveryBeforeOrder()
+1642: {
+1643:    if(MQLInfoInteger(MQL_TESTER)) return I9ScalpReserveRequest();
+1644:    if(!g_deliveryInitOK || g_deliveryLock==INVALID_HANDLE || g_deliveryUncertainKey=="" ||
+1645:       researchExecutionUnresolved)
+1646:    { Print("SCALPING_P1C_EXECUTION_BLOCKED: scope or execution journal is unresolved"); return false; }
+1647:    // Write ahead: an interrupted request cannot reopen the gate on restart.
+1648:    if(GlobalVariableSet(g_deliveryUncertainKey,1.0)==0)
+1649:    { researchExecutionUnresolved=true; Print("SCALPING_P1C_STATE_WRITE_FAILED: request not sent"); return false; }
+1650:    GlobalVariablesFlush();
+1651:    double state=0.0;
+1652:    if(!GlobalVariableGet(g_deliveryUncertainKey,state) || state!=1.0)
+1653:    { researchExecutionUnresolved=true; Print("SCALPING_P1C_STATE_VERIFY_FAILED: request not sent"); return false; }
+1654:    return true;
+1655: }
+1656: 
+1657: void DeliveryAfterOrder(const bool filled,const uint brokerCode)
+1658: {
+1659:    if(MQLInfoInteger(MQL_TESTER)) { I9ScalpAfterRequest(filled,brokerCode); return; }
+1660:    // Only explicit request rejection codes resolve an unfilled request.
+1661:    // Zero, generic errors, pending/timeout and unknown replies remain latched.
+1662:    bool definiteReject=(brokerCode==TRADE_RETCODE_REQUOTE || brokerCode==TRADE_RETCODE_REJECT ||
+1663:       brokerCode==TRADE_RETCODE_CANCEL || brokerCode==TRADE_RETCODE_INVALID ||
+1664:       brokerCode==TRADE_RETCODE_INVALID_VOLUME || brokerCode==TRADE_RETCODE_INVALID_PRICE ||
+1665:       brokerCode==TRADE_RETCODE_INVALID_STOPS || brokerCode==TRADE_RETCODE_TRADE_DISABLED ||
+LINES 1693-1988
+1693: // I9: user-owned Scalping cumulative daily net-complete-trade control.
+1694: // Fixed identity; Magic is not the counter key. Tester runs use the frozen run label.
+1695: struct I9ScalpPositionBook
+1696: {
+1697:    ulong id;
+1698:    ulong entry_order;
+1699:    double vin,vout,net;
+1700:    datetime final_close;
+1701:    bool owned,unknown,live;
+1702: };
+1703: int i9ScalpExecutor=INVALID_HANDLE;
+1704: string i9ScalpStateFile="";
+1705: datetime i9ScalpDay=0;
+1706: int i9ScalpWins=0,i9ScalpLosses=0,i9ScalpZero=0;
+1707: bool i9ScalpLocked=false,i9ScalpInFlight=false,i9ScalpValid=false,i9ScalpDirty=true;
+1708: string i9ScalpReason="NOT_RECONCILED";
+1709: ulong i9ScalpReportedOrders[];
+1710: 
+1711: int I9ScalpNetClass(double net) { return net>0.0000001 ? 1 : net< -0.0000001 ? -1 : 0; }
+1712: bool I9ScalpDailyThreshold(int wins,int losses) { return wins>=6 || losses>=6; }
+1713: bool I9ScalpTerminalOrderShape(long state,bool active,double initial,double remaining,double executed)
+1714: {
+1715:    if(active || !MathIsValidNumber(initial) || !MathIsValidNumber(remaining) || !MathIsValidNumber(executed) || initial<=0 || remaining<0 || executed<=0) return false;
+1716:    double eps=0.00000001;
+1717:    if(remaining>initial+eps || MathAbs(initial-remaining-executed)>eps) return false;
+1718:    if(state==ORDER_STATE_FILLED) return remaining<=eps;
+1719:    return state==ORDER_STATE_CANCELED || state==ORDER_STATE_EXPIRED; // cancelled remainder is final, not another fill
+1720: }
+1721: bool I9ScalpOriginalOrderFinal(ulong order,double executed,string &reason)
+1722: {
+1723:    if(order==0) { reason="ORIGINAL_ORDER_ID_MISSING";return false; }
+1724:    if(OrderSelect(order)) { reason="ORIGINAL_ENTRY_ORDER_STILL_ACTIVE";return false; }
+1725:    if(!HistoryOrderSelect(order)) { reason="ORIGINAL_ORDER_HISTORY_UNAVAILABLE";return false; }
+1726:    long state=0,type=0,magic=0;double initial=0,remaining=0;
+1727:    if(!HistoryOrderGetInteger(order,ORDER_STATE,state) || !HistoryOrderGetInteger(order,ORDER_TYPE,type) || !HistoryOrderGetInteger(order,ORDER_MAGIC,magic) ||
+1728:       !HistoryOrderGetDouble(order,ORDER_VOLUME_INITIAL,initial) || !HistoryOrderGetDouble(order,ORDER_VOLUME_CURRENT,remaining))
+1729:    { reason="ORIGINAL_ORDER_FIELDS_UNAVAILABLE";return false; }
+1730:    if(HistoryOrderGetString(order,ORDER_SYMBOL)!=g_symbol || (magic!=26082152 && !I9ScalpOwnedComment(HistoryOrderGetString(order,ORDER_COMMENT))) ||
+1731:       (type!=ORDER_TYPE_BUY && type!=ORDER_TYPE_SELL))
+1732:    { reason="ORIGINAL_ORDER_IDENTITY_UNSUPPORTED";return false; }
+1733:    if(!I9ScalpTerminalOrderShape(state,false,initial,remaining,executed))
+1734:    { reason="ORIGINAL_ORDER_NOT_TERMINAL_OR_FILL_QUANTITY_INCOMPLETE";return false; }
+1735:    return true;
+1736: }
+1737: bool I9ScalpDigits(string value)
+1738: {
+1739:    if(StringLen(value)==0) return false;
+1740:    for(int i=0;i<StringLen(value);i++) { ushort ch=StringGetCharacter(value,i);if(ch<48 || ch>57) return false; }
+1741:    return true;
+1742: }
+1743: void I9ScalpReportComplete(ulong order,datetime closed,double net)
+1744: {
+1745:    for(int i=0;i<ArraySize(i9ScalpReportedOrders);i++) if(i9ScalpReportedOrders[i]==order) return;
+1746:    int n=ArraySize(i9ScalpReportedOrders);ArrayResize(i9ScalpReportedOrders,n+1);i9ScalpReportedOrders[n]=order;
+1747:    PrintFormat("I9_SCALP_COMPLETE_NET|event_id=ENTRY_ORDER_%I64u|entry_order=%I64u|final_close_server=%I64d|net=%.8f|class=%d|basis=entry_exit_commission_swap_fee|complete_volume=1",
+1748:                order,order,(long)closed,net,I9ScalpNetClass(net));
+1749: }
+1750: 
+1751: bool I9ScalpStateSave()
+1752: {
+1753:    int h=FileOpen(i9ScalpStateFile,FILE_WRITE|FILE_CSV|FILE_ANSI|FILE_COMMON,',');
+1754:    if(h==INVALID_HANDLE) { i9ScalpValid=false; i9ScalpReason="STATE_WRITE_OPEN_FAILED"; return false; }
+1755:    uint bytes=FileWrite(h,"USER_SCALP_DAILY_V1",(long)i9ScalpDay,i9ScalpWins,i9ScalpLosses,i9ScalpZero,
+1756:                        (int)i9ScalpLocked,(int)i9ScalpInFlight,"COMMIT");
+1757:    FileFlush(h); FileClose(h);
+1758:    if(bytes==0) { i9ScalpValid=false; i9ScalpReason="STATE_WRITE_FAILED"; return false; }
+1759:    h=FileOpen(i9ScalpStateFile,FILE_READ|FILE_CSV|FILE_ANSI|FILE_COMMON,',');
+1760:    if(h==INVALID_HANDLE) { i9ScalpValid=false; i9ScalpReason="STATE_VERIFY_OPEN_FAILED"; return false; }
+1761:    string schema=FileReadString(h),ds=FileReadString(h),ws=FileReadString(h),ls=FileReadString(h),zs=FileReadString(h),ks=FileReadString(h),ps=FileReadString(h);
+1762:    long day=StringToInteger(ds);int w=(int)StringToInteger(ws),l=(int)StringToInteger(ls),z=(int)StringToInteger(zs);
+1763:    int locked=(int)StringToInteger(ks),pending=(int)StringToInteger(ps);
+1764:    string commit=FileReadString(h); FileClose(h);
+1765:    bool ok=I9ScalpDigits(ds) && I9ScalpDigits(ws) && I9ScalpDigits(ls) && I9ScalpDigits(zs) && (ks=="0" || ks=="1") && (ps=="0" || ps=="1") &&
+1766:            schema=="USER_SCALP_DAILY_V1" && day==(long)i9ScalpDay && w==i9ScalpWins && l==i9ScalpLosses && z==i9ScalpZero &&
+1767:            locked==(int)i9ScalpLocked && pending==(int)i9ScalpInFlight && commit=="COMMIT";
+1768:    if(!ok) { i9ScalpValid=false; i9ScalpReason="STATE_VERIFY_FAILED"; }
+1769:    return ok;
+1770: }
+1771: 
+1772: bool I9ScalpInitialize()
+1773: {
+1774:    string scope=AccountInfoString(ACCOUNT_SERVER)+"|"+StringFormat("%I64d",AccountInfoInteger(ACCOUNT_LOGIN))+"|"+g_symbol+"|USER_SCALP";
+1775:    if(MQLInfoInteger(MQL_TESTER)) scope+="|TEST|"+InpAuditRunLabel;
+1776:    string tag=StringFormat("%08X%08X",HashText(scope),HashText("I9_USER_SCALP|"+scope));
+1777:    i9ScalpExecutor=FileOpen("I9_USER_SCALP_"+tag+".lock",FILE_READ|FILE_WRITE|FILE_BIN|FILE_COMMON);
+1778:    if(i9ScalpExecutor==INVALID_HANDLE) { Print("I9_SCALP_DUPLICATE_EXECUTOR_REFUSED|stable_identity=USER_SCALP"); return false; }
+1779:    i9ScalpStateFile="I9_USER_SCALP_"+tag+".csv";
+1780:    i9ScalpDay=DayStart(TimeCurrent());
+1781:    if(!FileIsExist(i9ScalpStateFile,FILE_COMMON)) return I9ScalpStateSave();
+1782:    int h=FileOpen(i9ScalpStateFile,FILE_READ|FILE_CSV|FILE_ANSI|FILE_COMMON,',');
+1783:    if(h==INVALID_HANDLE) return false;
+1784:    string schema=FileReadString(h),ds=FileReadString(h),ws=FileReadString(h),ls=FileReadString(h),zs=FileReadString(h),ks=FileReadString(h),ps=FileReadString(h);
+1785:    long day=StringToInteger(ds);int w=(int)StringToInteger(ws),l=(int)StringToInteger(ls),z=(int)StringToInteger(zs);
+1786:    int locked=(int)StringToInteger(ks),pending=(int)StringToInteger(ps);
+1787:    string commit=FileReadString(h); FileClose(h);
+1788:    if(!I9ScalpDigits(ds) || !I9ScalpDigits(ws) || !I9ScalpDigits(ls) || !I9ScalpDigits(zs) || (ks!="0" && ks!="1") || (ps!="0" && ps!="1") ||
+1789:       schema!="USER_SCALP_DAILY_V1" || commit!="COMMIT" || day<=0 || w<0 || l<0 || z<0 ||
+1790:       (locked!=0 && locked!=1) || (pending!=0 && pending!=1))
+1791:    { Print("I9_SCALP_STATE_INVALID|new_risk_refused=1"); return false; }
+1792:    if(day>(long)i9ScalpDay) { Print("I9_SCALP_CLOCK_REWIND_REFUSED|use_unique_frozen_test_run_label=1"); return false; }
+1793:    i9ScalpInFlight=(pending==1); // Midnight never clears an unresolved execution request.
+1794:    if(day==(long)i9ScalpDay) { i9ScalpWins=w;i9ScalpLosses=l;i9ScalpZero=z;i9ScalpLocked=(locked==1); }
+1795:    PrintFormat("I9_SCALP_STATE_LOADED|day=%I64d|wins=%d|losses=%d|zero=%d|locked=%d|inflight=%d",(long)i9ScalpDay,i9ScalpWins,i9ScalpLosses,i9ScalpZero,(int)i9ScalpLocked,(int)i9ScalpInFlight);
+1796:    return true;
+1797: }
+1798: 
+1799: int I9ScalpBookFind(I9ScalpPositionBook &books[],ulong id)
+1800: {
+1801:    for(int j=0;j<ArraySize(books);j++) if(books[j].id==id) return j;
+1802:    return -1;
+1803: }
+1804: bool I9ScalpOwnedComment(string comment) { return StringFind(comment,"GSM50_S_")==0; }
+1805: bool I9ScalpReadDeal(ulong ticket,ENUM_DEAL_PROPERTY_INTEGER property,long &value)
+1806: { return HistoryDealGetInteger(ticket,property,value); }
+1807: 
+1808: bool I9ScalpReconcile(string &reason)
+1809: {
+1810:    i9ScalpValid=false; i9ScalpDirty=false; reason="";
+1811:    datetime today=DayStart(TimeCurrent());
+1812:    if(today<i9ScalpDay) { reason="SERVER_CLOCK_REWIND"; return false; }
+1813:    bool newDay=today!=i9ScalpDay;
+1814:    if(!HistorySelect(0,TimeCurrent())) { reason="FULL_HISTORY_UNAVAILABLE"; return false; }
+1815:    int total=HistoryDealsTotal(); I9ScalpPositionBook books[];
+1816:    // Establish ownership from original entry, including legacy canonical magic or
+1817:    // the retained user-Scalping comment. No changed-Magic escape from daily history.
+1818:    for(int i=0;i<total;i++)
+1819:    {
+1820:       ulong ticket=HistoryDealGetTicket(i); if(ticket==0) { reason="HISTORY_TICKET_UNAVAILABLE"; return false; }
+1821:       long pos=0,entry=0,type=0,magic=0,order=0;
+1822:       if(!I9ScalpReadDeal(ticket,DEAL_POSITION_ID,pos) || !I9ScalpReadDeal(ticket,DEAL_ENTRY,entry) ||
+1823:          !I9ScalpReadDeal(ticket,DEAL_TYPE,type) || !I9ScalpReadDeal(ticket,DEAL_MAGIC,magic) || !I9ScalpReadDeal(ticket,DEAL_ORDER,order))
+1824:       { reason="HISTORY_IDENTITY_UNAVAILABLE"; return false; }
+1825:       if(pos<=0 || (type!=DEAL_TYPE_BUY && type!=DEAL_TYPE_SELL)) continue;
+1826:       if(HistoryDealGetString(ticket,DEAL_SYMBOL)!=g_symbol) continue;
+1827:       string comment=HistoryDealGetString(ticket,DEAL_COMMENT);
+1828:       bool owned=magic==26082152 || I9ScalpOwnedComment(comment);
+1829:       if(!owned) continue;
+1830:       int ix=I9ScalpBookFind(books,(ulong)pos);
+1831:       if(ix<0) { ix=ArraySize(books);ArrayResize(books,ix+1);ZeroMemory(books[ix]);books[ix].id=(ulong)pos;books[ix].owned=true; }
+1832:       if(entry==DEAL_ENTRY_IN)
+1833:       {
+1834:          if(order<=0 || (books[ix].entry_order>0 && books[ix].entry_order!=(ulong)order)) books[ix].unknown=true;
+1835:          else books[ix].entry_order=(ulong)order;
+1836:       }
+1837:       else if(entry==DEAL_ENTRY_INOUT) books[ix].unknown=true; // No netting/reversal assumption.
+1838:    }
+1839:    // Join all costs/volumes by position, not by exit Magic or callback ordering.
+1840:    for(int i=0;i<total;i++)
+1841:    {
+1842:       ulong ticket=HistoryDealGetTicket(i); long pos=0,type=0,entry=0,tm=0;
+1843:       if(!I9ScalpReadDeal(ticket,DEAL_POSITION_ID,pos) || !I9ScalpReadDeal(ticket,DEAL_TYPE,type) ||
+1844:          !I9ScalpReadDeal(ticket,DEAL_ENTRY,entry) || !I9ScalpReadDeal(ticket,DEAL_TIME,tm))
+1845:       { reason="HISTORY_JOIN_UNAVAILABLE"; return false; }
+1846:       int ix=I9ScalpBookFind(books,(ulong)pos);
+1847:       if(ix<0)
+1848:       {
+1849:          // An account-level commission cannot be attributed to this strategy.
+1850:          // Do not silently count it as zero or assign another strategy's expense.
+1851:          if(pos==0 && (type==DEAL_TYPE_COMMISSION || type==DEAL_TYPE_COMMISSION_DAILY || type==DEAL_TYPE_COMMISSION_MONTHLY ||
+1852:             type==DEAL_TYPE_COMMISSION_AGENT_DAILY || type==DEAL_TYPE_COMMISSION_AGENT_MONTHLY))
+1853:          { reason="UNALLOCATED_ACCOUNT_COMMISSION"; return false; }
+1854:          continue;
+1855:       }
+1856:       double volume=0,profit=0,commission=0,swap=0,fee=0;
+1857:       if(!HistoryDealGetDouble(ticket,DEAL_VOLUME,volume) || !HistoryDealGetDouble(ticket,DEAL_PROFIT,profit) ||
+1858:          !HistoryDealGetDouble(ticket,DEAL_COMMISSION,commission) || !HistoryDealGetDouble(ticket,DEAL_SWAP,swap) || !HistoryDealGetDouble(ticket,DEAL_FEE,fee) ||
+1859:          !MathIsValidNumber(volume) || !MathIsValidNumber(profit) || !MathIsValidNumber(commission) || !MathIsValidNumber(swap) || !MathIsValidNumber(fee))
+1860:       { reason="DEAL_COST_UNAVAILABLE"; return false; }
+1861:       books[ix].net+=profit+commission+swap+fee;
+1862:       if(type==DEAL_TYPE_BUY || type==DEAL_TYPE_SELL)
+1863:       {
+1864:          if(volume<=0) books[ix].unknown=true;
+1865:          if(entry==DEAL_ENTRY_IN) books[ix].vin+=volume;
+1866:          else if(entry==DEAL_ENTRY_OUT || entry==DEAL_ENTRY_OUT_BY)
+1867:          { books[ix].vout+=volume; books[ix].final_close=MathMax(books[ix].final_close,(datetime)tm); }
+1868:          else books[ix].unknown=true;
+1869:       }
+1870:    }
+1871:    for(int i=0;i<PositionsTotal();i++)
+1872:    {
+1873:       ulong ticket=PositionGetTicket(i); if(ticket==0 || !PositionSelectByTicket(ticket)) { reason="LIVE_POSITION_UNAVAILABLE"; return false; }
+1874:       if(PositionGetString(POSITION_SYMBOL)!=g_symbol) continue;
+1875:       ulong id=(ulong)PositionGetInteger(POSITION_IDENTIFIER); int ix=I9ScalpBookFind(books,id);
+1876:       bool own=PositionGetInteger(POSITION_MAGIC)==26082152 || I9ScalpOwnedComment(PositionGetString(POSITION_COMMENT));
+1877:       if(own && ix<0) { reason="LIVE_OWNED_POSITION_WITHOUT_ENTRY_HISTORY"; return false; }
+1878:       if(ix>=0) books[ix].live=true;
+1879:    }
+1880:    int wins=0,losses=0,zeros=0; double eps=MathMax(0.00000001,g_volumeStep*0.000001);
+1881:    for(int i=0;i<ArraySize(books);i++)
+1882:    {
+1883:       if(books[i].unknown || books[i].entry_order==0 || books[i].vin<=0 || books[i].vout>books[i].vin+eps)
+1884:       { reason="OWNED_POSITION_HISTORY_NOT_COMPLETE"; return false; }
+1885:       if(!books[i].live && MathAbs(books[i].vin-books[i].vout)>eps)
+1886:       { reason="NO_LIVE_POSITION_BUT_VOLUME_NOT_CLOSED"; return false; }
+1887:       // Group the original entry order across position identifiers if necessary.
+1888:       bool first=true; for(int j=0;j<i;j++) if(books[j].entry_order==books[i].entry_order) first=false;
+1889:       if(!first) continue;
+1890:       bool complete=true; double net=0,executed=0; datetime closed=0;
+1891:       for(int j=i;j<ArraySize(books);j++) if(books[j].entry_order==books[i].entry_order)
+1892:       {
+1893:          if(books[j].live || MathAbs(books[j].vin-books[j].vout)>eps) complete=false;
+1894:          net+=books[j].net;executed+=books[j].vin;closed=MathMax(closed,books[j].final_close);
+1895:       }
+1896:       if(!I9ScalpOriginalOrderFinal(books[i].entry_order,executed,reason)) return false;
+1897:       if(!complete || DayStart(closed)!=today) continue;
+1898:       int sign=I9ScalpNetClass(net);
+1899:       if(sign>0) wins++; else if(sign<0) losses++; else zeros++;
+1900:       I9ScalpReportComplete(books[i].entry_order,closed,net);
+1901:    }
+1902:    if(!newDay && (wins<i9ScalpWins || losses<i9ScalpLosses || zeros<i9ScalpZero))
+1903:    { reason="PERSISTED_COUNTS_EXCEED_RECONCILED_HISTORY"; return false; }
+1904:    bool changed=newDay || wins!=i9ScalpWins || losses!=i9ScalpLosses || zeros!=i9ScalpZero;
+1905:    if(newDay) { i9ScalpDay=today;i9ScalpLocked=false; }
+1906:    i9ScalpWins=wins;i9ScalpLosses=losses;i9ScalpZero=zeros;
+1907:    i9ScalpLocked=i9ScalpLocked || I9ScalpDailyThreshold(wins,losses);
+1908:    i9ScalpValid=true; reason=i9ScalpLocked?"DAILY_NET_6_6_LOCK":"RECONCILED";
+1909:    if(!I9ScalpStateSave()) { reason=i9ScalpReason; return false; }
+1910:    if(changed) PrintFormat("I9_SCALP_DAILY|day=%I64d|wins=%d|losses=%d|zero=%d|locked=%d|inflight=%d|basis=complete_entry_order_net_all_deal_fees|server_reset=00:00",
+1911:                           (long)i9ScalpDay,wins,losses,zeros,(int)i9ScalpLocked,(int)i9ScalpInFlight);
+1912:    return true;
+1913: }
+1914: 
+1915: void I9ScalpCancelOwnEntries()
+1916: {
+1917:    for(int i=OrdersTotal()-1;i>=0;i--)
+1918:    {
+1919:       ulong ticket=OrderGetTicket(i); if(ticket==0) continue;
+1920:       if(OrderGetString(ORDER_SYMBOL)!=g_symbol) continue;
+1921:       if(OrderGetInteger(ORDER_MAGIC)!=26082152 && !I9ScalpOwnedComment(OrderGetString(ORDER_COMMENT))) continue;
+1922:       ENUM_ORDER_TYPE type=(ENUM_ORDER_TYPE)OrderGetInteger(ORDER_TYPE);
+1923:       if(type!=ORDER_TYPE_BUY_LIMIT && type!=ORDER_TYPE_SELL_LIMIT && type!=ORDER_TYPE_BUY_STOP && type!=ORDER_TYPE_SELL_STOP && type!=ORDER_TYPE_BUY_STOP_LIMIT && type!=ORDER_TYPE_SELL_STOP_LIMIT) continue;
+1924:       bool sent=trade.OrderDelete(ticket); uint code=trade.ResultRetcode();
+1925:       PrintFormat("I9_SCALP_OWN_ENTRY_CANCEL|ticket=%I64u|send=%d|retcode=%u|accepted=%d",ticket,(int)sent,code,(int)(sent && code==TRADE_RETCODE_DONE));
+1926:    }
+1927: }
+1928: void I9ScalpMaintain()
+1929: {
+1930:    static datetime lastAttempt=0,lastAttemptDay=0;
+1931:    datetime today=DayStart(TimeCurrent());
+1932:    if(i9ScalpDirty || today!=lastAttemptDay || (!i9ScalpValid && TimeCurrent()-lastAttempt>=60))
+1933:    { string reason=""; lastAttempt=TimeCurrent();lastAttemptDay=today;I9ScalpReconcile(reason);i9ScalpReason=reason; }
+1934:    if(!i9ScalpValid || i9ScalpLocked || i9ScalpInFlight) I9ScalpCancelOwnEntries();
+1935:    g_scalpPauseUntil=(i9ScalpLocked?i9ScalpDay+86400:0);
+1936:    g_runtime[(int)STRATEGY_SCALPING].pauseUntil=g_scalpPauseUntil;
+1937: }
+1938: bool I9ScalpAllowNewRisk(string &reason)
+1939: {
+1940:    if(i9ScalpExecutor==INVALID_HANDLE) { reason="SCALP_EXECUTOR_NOT_OWNED"; return false; }
+1941:    if(!I9ScalpReconcile(reason)) { i9ScalpReason=reason;I9ScalpCancelOwnEntries();return false; }
+1942:    if(i9ScalpInFlight) { reason="SCALP_EXECUTION_INFLIGHT_UNRESOLVED";return false; }
+1943:    if(i9ScalpLocked) { reason="SCALP_DAILY_NET_6_6_LOCK";I9ScalpCancelOwnEntries();return false; }
+1944:    for(int i=0;i<OrdersTotal();i++)
+1945:    {
+1946:       ulong ticket=OrderGetTicket(i);if(ticket==0) { reason="ORDER_SNAPSHOT_UNAVAILABLE";return false; }
+1947:       if(OrderGetString(ORDER_SYMBOL)==g_symbol && (OrderGetInteger(ORDER_MAGIC)==26082152 || I9ScalpOwnedComment(OrderGetString(ORDER_COMMENT))))
+1948:       { reason="SCALP_OWN_ORDER_PENDING";return false; }
+1949:    }
+1950:    return true;
+1951: }
+1952: bool I9ScalpReserveRequest()
+1953: {
+1954:    string reason=""; if(!I9ScalpAllowNewRisk(reason)) { Print("I9_SCALP_ENTRY_REFUSED|reason=",reason);return false; }
+1955:    i9ScalpInFlight=true;
+1956:    return I9ScalpStateSave(); // durable write before the native trade request
+1957: }
+1958: void I9ScalpAfterRequest(bool filled,uint code)
+1959: {
+1960:    bool rejected=code==TRADE_RETCODE_REQUOTE || code==TRADE_RETCODE_REJECT || code==TRADE_RETCODE_CANCEL ||
+1961:       code==TRADE_RETCODE_INVALID || code==TRADE_RETCODE_INVALID_VOLUME || code==TRADE_RETCODE_INVALID_PRICE ||
+1962:       code==TRADE_RETCODE_INVALID_STOPS || code==TRADE_RETCODE_TRADE_DISABLED || code==TRADE_RETCODE_MARKET_CLOSED ||
+1963:       code==TRADE_RETCODE_NO_MONEY || code==TRADE_RETCODE_PRICE_CHANGED || code==TRADE_RETCODE_PRICE_OFF ||
+1964:       code==TRADE_RETCODE_INVALID_EXPIRATION || code==TRADE_RETCODE_TOO_MANY_REQUESTS || code==TRADE_RETCODE_INVALID_FILL ||
+1965:       code==TRADE_RETCODE_SERVER_DISABLES_AT || code==TRADE_RETCODE_CLIENT_DISABLES_AT || code==TRADE_RETCODE_LIMIT_ORDERS ||
+1966:       code==TRADE_RETCODE_LIMIT_VOLUME || code==TRADE_RETCODE_INVALID_ORDER;
+1967:    bool finalFill=false;string reason="";
+1968:    if(filled)
+1969:    {
+1970:       // DONE_PARTIAL plus a Deal is not proof that its original order is terminal.
+1971:       // Count currently reported entry deals for this exact result order before
+1972:       // clearing the durable request latch. Unknown/late history stays blocked.
+1973:       ulong order=trade.ResultOrder();double executed=0;
+1974:       if(order>0 && HistorySelect(0,TimeCurrent()))
+1975:       {
+1976:          for(int i=0;i<HistoryDealsTotal();i++)
+1977:          {
+1978:             ulong d=HistoryDealGetTicket(i);
+1979:             if((ulong)HistoryDealGetInteger(d,DEAL_ORDER)==order && HistoryDealGetInteger(d,DEAL_ENTRY)==DEAL_ENTRY_IN)
+1980:                executed+=HistoryDealGetDouble(d,DEAL_VOLUME);
+1981:          }
+1982:          finalFill=I9ScalpOriginalOrderFinal(order,executed,reason);
+1983:       }
+1984:       else reason="RESULT_ORDER_OR_HISTORY_UNAVAILABLE";
+1985:    }
+1986:    if(finalFill || rejected) { i9ScalpInFlight=false; I9ScalpStateSave(); }
+1987:    else PrintFormat("I9_SCALP_REQUEST_UNRESOLVED|retcode=%u|new_risk_blocked=1|reason=%s",code,reason);
+1988:    i9ScalpDirty=true;
+LINES 2024-2048
+2024: int OnInit()
+2025: {
+2026:    if(InpScalpMagic!=26082152 || InpScalpSLPips!=50.0 || InpScalpTPPips!=50.0 || InpCoursePipInPrice!=0.10 ||
+2027:       InpScalpZonePips!=30.0 || !InpP1bReselectUntouched || InpEnableOpportunityClusters || InpScalpUseEMAFilter ||
+2028:       InpScalpUseRSIFilter || InpScalpUseHTFRegimeFilter || InpScalpUseStochasticFilter || InpScalpUseScoreFilter ||
+2029:       InpScalpConfidenceMode!=CONFIDENCE_OFF || InpScalpBollingerMode!=BOLLINGER_MODE_OFF || InpScalpRiskPercent!=2.0)
+2030:    { Print("I9_SCALP_FROZEN_HANDBOOK_PROFILE_REQUIRED"); return INIT_PARAMETERS_INCORRECT; }
+2031:    if(InpI15ExitMode!=1 || InpI15TriggerPrice!=2.50 || InpI15CloseCommissionPerLot!=4.00 || InpI15SlippageBufferPrice!=0.02 || InpI15MaxCostOffsetPrice!=1.00 ||
+2032:       InpI15TrailDistancePrice!=2.00 || InpI15TrailStepPrice!=0.50 || InpCapitalLadderMode!=CAPITAL_LADDER_OFF || InpGoldSymbolScanMode!=GOLD_SCAN_OFF ||
+2033:       !InpRecenterFixedStopsAfterFill || InpScalpSLPips!=InpScalpTPPips || InpScalpUseBreakEven)
+2034:    { Print("I15_FROZEN_CANDIDATE_PROFILE_REQUIRED|mode=C1_DYNAMIC_COST_BREAKEVEN"); return INIT_PARAMETERS_INCORRECT; }
+2035:    if(!I15KernelSelfTest())
+2036:       return INIT_FAILED;
+2037:    PrintFormat("I15_EXIT_INIT|mode=%s|candidate=TB500_Scalping_DYNAMIC_COST_BREAKEVEN_V1_I15|parent_sha256=79faf1f66caf71d5bba88c657810ca582b611c402708b113531460554ebcdc1a|exit_mode=%d|nominal_requested_R_price=%.8f|trigger_price=%.8f|close_commission_usd_per_lot_per_side=%.8f|slippage_buffer_price=%.8f|max_cost_offset_price=%.8f|trail_distance_price=%.8f|trail_step_price=%.8f|tighten_only=1|server_confirm=1|tp_untouched=1|blocks_protection=0|blocks_entries=0|retry_ms=500|attempt_cap=none_evaluated_every_tick|state=derived_each_tick_not_persisted|restart_tested=0|entry_logic=parent_unchanged|initial_sl_tp_request=5.00_5.00|initial_fee_budget=unchanged_7_per_lot|spread_not_deducted_again=1",I15_MODE,InpI15ExitMode,CoursePipsToPrice(InpScalpSLPips),InpI15TriggerPrice,InpI15CloseCommissionPerLot,InpI15SlippageBufferPrice,InpI15MaxCostOffsetPrice,InpI15TrailDistancePrice,InpI15TrailStepPrice);
+2038:    if(!MQLInfoInteger(MQL_TESTER))
+2039:    { Print("SCALPING_P1C_RISK2_TESTER_ONLY: all non-tester execution is refused"); return INIT_FAILED; }
+2040:    if(!InpEnableScalpingM5 || InpEnableIntradayM30 || InpEnableSwingD1 || InpEnableChartSwitches)
+2041:    { Print("SCALPING_P1C_SCOPE_REJECT: Scalping only; chart strategy switches must remain disabled"); return INIT_PARAMETERS_INCORRECT; }
+2042:    Print("I9_SCALP_HANDBOOK_INIT|USER_SCALP|zone_wick_cap_price=3.00|SL_price=5.00|TP_price=5.00|risk=2pct_ceiling|total=3pct_ceiling|daily=cumulative6_netwins_or6_netlosses|EMA_RSI_HTF_STOCH_SCORE_CLUSTER=OFF|research_only=1");
+2043:    if(!RiskNumber(InpResearchSingleRiskPct) || InpResearchSingleRiskPct<=0.0 || InpResearchSingleRiskPct>2.0 ||
+2044:       !RiskNumber(InpResearchTotalRiskPct) || InpResearchTotalRiskPct<=0.0 || InpResearchTotalRiskPct>3.0 ||
+2045:       !RiskNumber(InpResearchRoundTripFeePerLotUSD) || InpDeviationPoints<0 || InpScalpUseBreakEven ||
+2046:       InpMoneyManagementMode!=MONEY_AUTO_RISK || InpUseFixedLot || InpForceBrokerMinimumLot ||
+2047:       InpEnableConfidence100LotBoost || InpSmallAccountProfile!=SMALL_ACCOUNT_OFF ||
+2048:       !InpRequireHedging || AccountInfoString(ACCOUNT_CURRENCY)!="USD")
+LINES 6487-6495
+6487: datetime DayStart(datetime t)
+6488: {
+6489:    MqlDateTime dt;
+6490:    TimeToStruct(t, dt);
+6491:    dt.hour = 0;
+6492:    dt.min = 0;
+6493:    dt.sec = 0;
+6494:    return StructToTime(dt);
+6495: }
+LINES 6580-6598
+6580: void UpdateScalpPause(long magic)
+6581: {
+6582:    if(TimeCurrent() < g_scalpPauseUntil)
+6583:       return;
+6584: 
+6585:    ulong lastDeal = 0;
+6586:    int streak = CurrentClosedTradeStreak(magic, lastDeal);
+6587:    if(lastDeal == 0 || lastDeal == g_lastScalpPauseDeal)
+6588:       return;
+6589: 
+6590:    if(MathAbs(streak) >= InpScalpPauseAfterStreak)
+6591:    {
+6592:       g_scalpPauseUntil = TimeCurrent() + InpScalpPauseHours * 3600;
+6593:       g_lastScalpPauseDeal = lastDeal;
+6594:       PrintFormat("Scalping pause activated until %s after streak %d",
+6595:                   TimeToString(g_scalpPauseUntil, TIME_DATE | TIME_MINUTES), streak);
+6596:    }
+6597: }
+6598: 
+LINES 6833-6962
+6833: bool PassStrategyFilters(StrategyId strategy, string &reason)
+6834: {
+6835:    if(strategy==STRATEGY_SCALPING && !I9ScalpAllowNewRisk(reason)) return false;
+6836:    if(!CapitalLadderAllows(strategy))
+6837:    {
+6838:       reason="资金阶梯禁止本策略新仓；继续记录信号";
+6839:       g_funnel[(int)strategy].riskRejected++;
+6840:       double minimumLoss=0.0,riskBudget=0.0;
+6841:       if(MinimumLotExceedsStrategyBudget(strategy,minimumLoss,riskBudget))
+6842:       {
+6843:          g_funnel[(int)strategy].minimumLotRiskRejected++;
+6844:          PrintFormat("RISK_REJECT|SOP=%s|Type=MINIMUM_LOT_EXCEEDS_RISK|Equity=%.2f|MinLotLoss=%.2f|RiskBudget=%.2f|MinLot=%s",
+6845:                      g_runtime[(int)strategy].name,AccountInfoDouble(ACCOUNT_EQUITY),minimumLoss,riskBudget,
+6846:                      DoubleToString(g_volumeMin,VolumeDigits()));
+6847:       }
+6848:       PrintFormat("CAPITAL_LADDER_REJECT|SOP=%s|Equity=%.2f|Tier=%s|Reason=%s",
+6849:                   g_runtime[(int)strategy].name,AccountInfoDouble(ACCOUNT_EQUITY),g_capitalTierName,reason);
+6850:       return false;
+6851:    }
+6852:    if(!PassCommonFiltersWithReason(reason))
+6853:    {
+6854:       int s=(int)strategy;
+6855:       if(StringFind(reason,"点差")>=0) g_funnel[s].spreadRejected++;
+6856:       else if(StringFind(reason,"风险")>=0) g_funnel[s].riskRejected++;
+6857:       else if(StringFind(reason,"保证金")>=0) g_funnel[s].marginRejected++;
+6858:       else if(StringFind(reason,"时段")>=0 || StringFind(reason,"Session")>=0 || StringFind(reason,"周末")>=0) g_funnel[s].sessionRejected++;
+6859:       return false;
+6860:    }
+6861: 
+6862:    if((strategy==STRATEGY_SCALPING && InpScalpManualNewsLock) ||
+6863:       (strategy==STRATEGY_INTRADAY && InpIntradayManualNewsLock) ||
+6864:       (strategy==STRATEGY_SWING && InpSwingManualNewsLock))
+6865:    {
+6866:       reason="本策略Manual News Lock已开启";
+6867:       return false;
+6868:    }
+6869: 
+6870:    int startHour = InpScalpStartHour;
+6871:    int endHour = InpScalpEndHour;
+6872:    int maxSpread = InpScalpMaxSpreadPoints;
+6873:    int maxTrades = InpScalpMaxTradesPerDay;
+6874:    int maxPositions = InpScalpMaxOpenPositions;
+6875: 
+6876:    if(strategy == STRATEGY_INTRADAY)
+6877:    {
+6878:       startHour = InpIntradayStartHour;
+6879:       endHour = InpIntradayEndHour;
+6880:       maxSpread = InpIntradayMaxSpreadPoints;
+6881:       maxTrades = InpIntradayMaxTradesPerDay;
+6882:       maxPositions = InpIntradayMaxOpenPositions;
+6883:    }
+6884:    else if(strategy == STRATEGY_SWING)
+6885:    {
+6886:       startHour = InpSwingStartHour;
+6887:       endHour = InpSwingEndHour;
+6888:       maxSpread = InpSwingMaxSpreadPoints;
+6889:       maxTrades = InpSwingMaxTradesPerDay;
+6890:       maxPositions = InpSwingMaxOpenPositions;
+6891:    }
+6892: 
+6893:    if(!IsTradingHourRange(startHour, endHour))
+6894:    {
+6895:       reason = "本策略不在交易时段";
+6896:       g_funnel[(int)strategy].sessionRejected++;
+6897:       return false;
+6898:    }
+6899:    if(maxSpread > 0 && CurrentSpreadPoints() > maxSpread)
+6900:    {
+6901:       reason = "本策略点差超过限制";
+6902:       g_funnel[(int)strategy].spreadRejected++;
+6903:       return false;
+6904:    }
+6905:    maxPositions=EffectiveStrategyMaxPositions(strategy,maxPositions);
+6906:    int totalMaximum=EffectiveTotalMaxPositions();
+6907:    if(CountTotalStrategyOpenPositions()>=totalMaximum)
+6908:    {
+6909:       reason=StringFormat("三套策略总持仓数量达到资金阶梯上限%d",totalMaximum);
+6910:       g_funnel[(int)strategy].positionLimitRejected++;
+6911:       return false;
+6912:    }
+6913:    if(CountOpenPositionsByMagic(StrategyMagic(strategy)) >= maxPositions)
+6914:    {
+6915:       reason = "本策略持仓数量达到上限";
+6916:       g_funnel[(int)strategy].positionLimitRejected++;
+6917:       return false;
+6918:    }
+6919:    if(maxTrades>0 && g_runtime[(int)strategy].todayTrades >= maxTrades)
+6920:    {
+6921:       reason = "本策略今日交易次数达到上限";
+6922:       return false;
+6923:    }
+6924:    if(g_runtime[(int)strategy].pauseUntil > TimeCurrent())
+6925:    {
+6926:       reason = "本策略连续胜负暂停中";
+6927:       return false;
+6928:    }
+6929:    return true;
+6930: }
+6931: 
+6932: int CountTotalStrategyOpenPositions()
+6933: {
+6934:    int count=0;
+6935:    for(int i=PositionsTotal()-1;i>=0;i--)
+6936:    {
+6937:       ulong ticket=PositionGetTicket(i);
+6938:       if(ticket==0 || !PositionSelectByTicket(ticket))
+6939:          continue;
+6940:       if(PositionGetString(POSITION_SYMBOL)!=g_symbol)
+6941:          continue;
+6942:       long magic=(long)PositionGetInteger(POSITION_MAGIC);
+6943:       if(magic==InpScalpMagic || magic==InpIntradayMagic || magic==InpSwingMagic)
+6944:          count++;
+6945:    }
+6946:    return count;
+6947: }
+6948: 
+6949: int CountOpenPositionsByMagic(long magic)
+6950: {
+6951:    int count = 0;
+6952:    for(int i = PositionsTotal() - 1; i >= 0; i--)
+6953:    {
+6954:       ulong ticket = PositionGetTicket(i);
+6955:       if(ticket == 0 || !PositionSelectByTicket(ticket))
+6956:          continue;
+6957:       if(PositionGetString(POSITION_SYMBOL) == g_symbol &&
+6958:          (long)PositionGetInteger(POSITION_MAGIC) == magic)
+6959:          count++;
+6960:    }
+6961:    return count;
+6962: }
+LINES 8810-8821
+8810:    for(int s=0;s<3;s++)
+8811:    {
+8812:       long magic = StrategyMagic((StrategyId)s);
+8813:       g_runtime[s].todayTrades = CountEntryDealsToday(magic);
+8814:       ulong lastDeal = 0;
+8815:       int streak = CurrentClosedTradeStreak(magic,lastDeal);
+8816:       g_runtime[s].winStreak = (streak > 0 ? streak : 0);
+8817:       g_runtime[s].lossStreak = (streak < 0 ? -streak : 0);
+8818:    }
+8819:    i9ScalpDirty=true;
+8820:    I9ScalpMaintain(); // supersedes the legacy consecutive-streak/24-hour pause
+8821: }

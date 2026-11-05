@@ -1,0 +1,10 @@
+source=work/repair_research/mt5_iteration10_20261004/Scalping/source/TB500_Scalping_Handbook_Daily6_V1.mq5 sha256=79faf1f66caf71d5bba88c657810ca582b611c402708b113531460554ebcdc1a
+479: // Global / broker inputs
+480: // -------------------------------------------------------------------
+481: input string InpTradeSymbol              = "GOLD";       // Empty = chart symbol. FxPro often GOLD, Tradona often XAUUSD.tm
+482: input long   InpIntradayMagic            = 26082102;
+483: input long   InpScalpMagic               = 26082152;
+484: input long   InpSwingMagic               = 26082303;
+485: input bool   InpRequireHedging            = true;
+486: input int    InpDeviationPoints          = 30;
+487: input int    InpMaxSpreadPoints          = 300;      // Common extreme-spread guard; 0 disables

@@ -1,0 +1,100 @@
+2707: double RequestFilled(int sid,bool &resolved){
+2708:  resolved=false;if(!requests[sid].active)return 0;RequestRecord r=requests[sid];
+2709:  if(!HistorySelect(r.sent-60,Now()+1))return 0;
+2710:  if(r.order==0){
+2711:   ulong found=0;int count=0;
+2712:   for(int i=0;i<HistoryOrdersTotal();i++){ulong o=HistoryOrderGetTicket(i);if(HistoryOrderGetInteger(o,ORDER_MAGIC)==g_magics[sid] && HistoryOrderGetString(o,ORDER_SYMBOL)==_Symbol && StringFind(HistoryOrderGetString(o,ORDER_COMMENT),r.token)>=0){found=o;count++;}}
+2713:   for(int i=0;i<OrdersTotal();i++){ulong o=OrderGetTicket(i);if(OrderGetString(ORDER_SYMBOL)==_Symbol&&OrderGetInteger(ORDER_MAGIC)==g_magics[sid]&&StringFind(OrderGetString(ORDER_COMMENT),r.token)>=0){found=o;count++;}}
+2714:   if(count==1){requests[sid].order=found;r.order=found;SaveRequest(sid);}else return 0;
+2715:  }
+2716:  double filled=0;int total=HistoryDealsTotal();ulong pids[];double pvol[];
+2717:  for(int i=0;i<total;i++){ulong d=HistoryDealGetTicket(i);if((ulong)HistoryDealGetInteger(d,DEAL_ORDER)!=r.order)continue;
+2718:   long entry=HistoryDealGetInteger(d,DEAL_ENTRY);if(entry!=DEAL_ENTRY_IN)continue;
+2719:   double fv=HistoryDealGetDouble(d,DEAL_VOLUME);ulong pid=(ulong)HistoryDealGetInteger(d,DEAL_POSITION_ID);filled+=fv;RegisterFill(pid,sid);
+2720:   int p=-1;for(int j=0;j<ArraySize(pids);j++)if(pids[j]==pid)p=j;if(p<0){p=ArraySize(pids);ArrayResize(pids,p+1);ArrayResize(pvol,p+1);pids[p]=pid;pvol[p]=0;}pvol[p]+=fv;
+2721:  }
+2722:  bool final_state=false;double expected=r.volume;
+2723:  if(!OrderSelect(r.order)&&HistoryOrderSelect(r.order)){
+2724:   long st=HistoryOrderGetInteger(r.order,ORDER_STATE);double original=HistoryOrderGetDouble(r.order,ORDER_VOLUME_INITIAL),remaining=HistoryOrderGetDouble(r.order,ORDER_VOLUME_CURRENT);
+2725:   final_state=st==ORDER_STATE_FILLED||st==ORDER_STATE_CANCELED||st==ORDER_STATE_REJECTED||st==ORDER_STATE_EXPIRED;expected=st==ORDER_STATE_FILLED?original:MathMax(0.0,original-remaining);
+2726:  }
+2727:  // History may precede the live position list. Only release risk already visible in
+2728:  // positions or proven closed by its complete deal lifecycle.
+2729:  double covered=0;
+2730:  for(int p=0;p<ArraySize(pids);p++){
+2731:   double closed=0,live=0;
+2732:   if(HistorySelectByPosition(pids[p]))for(int j=0;j<HistoryDealsTotal();j++){ulong d=HistoryDealGetTicket(j);long e=HistoryDealGetInteger(d,DEAL_ENTRY);if(e==DEAL_ENTRY_OUT||e==DEAL_ENTRY_OUT_BY)closed+=HistoryDealGetDouble(d,DEAL_VOLUME);}
+2733:   if(g_snapshot_active){for(int j=0;j<ArraySize(g_snapshot_ids);j++)if(g_snapshot_ids[j]==pids[p])live+=g_snapshot_volumes[j];}
+2734:   else for(int j=PositionsTotal()-1;j>=0;j--){ulong t=PositionGetTicket(j);if((ulong)PositionGetInteger(POSITION_IDENTIFIER)==pids[p]&&OwnedPosition(t,sid))live+=PositionGetDouble(POSITION_VOLUME);}
+2735:   covered+=MathMin(pvol[p],closed+live);
+2736:  }
+2737:  if(final_state&&filled+1e-8>=expected&&covered+1e-8>=filled)resolved=true;
+2738:  return covered;
+2800:  }
+2801: }
+2802: void Reconcile(){
+2803:  for(int sid=0;sid<6;sid++)if(requests[sid].active){bool resolved=false;double filled=RequestFilled(sid,resolved);if(resolved){Audit("orders_audit",sid,"REQUEST_RECONCILED",requests[sid].setup,"order_ticket="+Id(requests[sid].order)+";filled="+Num(filled));requests[sid].active=false;SaveRequest(sid);}}
+2804:  g_ownership_conflict=false;
+2805:  for(int i=PositionsTotal()-1;i>=0;i--){ulong t=PositionGetTicket(i);if(PositionGetString(POSITION_SYMBOL)!=_Symbol||Sid(PositionGetInteger(POSITION_MAGIC))<0)continue;if(!OwnedPosition(t)){g_ownership_conflict=true;continue;}int sid=Sid(PositionGetInteger(POSITION_MAGIC));AddBook((ulong)PositionGetInteger(POSITION_IDENTIFIER),sid);}
+2806:  for(int i=OrdersTotal()-1;i>=0;i--){ulong t=OrderGetTicket(i);if(OrderGetString(ORDER_SYMBOL)==_Symbol&&Sid(OrderGetInteger(ORDER_MAGIC))>=0&&!OwnedOrder(t))g_ownership_conflict=true;}
+2914: void PortfolioSnapshot(){
+2915:  g_initial_risk=0;g_equity_risk=0;g_reserved_margin=0;g_risk_reason="";ArrayInitialize(g_active,0);ArrayResize(g_snapshot_ids,0);ArrayResize(g_snapshot_volumes,0);
+2916:  for(int i=PositionsTotal()-1;i>=0;i--){
+2917:   ulong ticket=PositionGetTicket(i);string symbol=PositionGetString(POSITION_SYMBOL);long magic=PositionGetInteger(POSITION_MAGIC);int sid=symbol==_Symbol?Sid(magic):-1;
+2918:   double volume=PositionGetDouble(POSITION_VOLUME),sl=PositionGetDouble(POSITION_SL),entry=PositionGetDouble(POSITION_PRICE_OPEN);int dir=PositionGetInteger(POSITION_TYPE)==POSITION_TYPE_BUY?1:-1;
+2919:   if(sid>=0){g_active[sid]++;if(!OwnedPosition(ticket,sid))g_risk_reason="SAME_MAGIC_OWNERSHIP_UNKNOWN";int n=ArraySize(g_snapshot_ids);ArrayResize(g_snapshot_ids,n+1);ArrayResize(g_snapshot_volumes,n+1);g_snapshot_ids[n]=(ulong)PositionGetInteger(POSITION_IDENTIFIER);g_snapshot_volumes[n]=volume;}else g_risk_reason="EXTERNAL_RISK_UNKNOWN";
+2920:   if(sl<=0){g_risk_reason=sid>=0?"OWN_SL_MISSING":"EXTERNAL_RISK_UNKNOWN";continue;}
+2921:   MqlTick q;if(!SymbolInfoTick(symbol,q)){g_risk_reason="EXTERNAL_RISK_UNKNOWN";continue;}
+2922:   double atsl=0,current=0,slip=SymbolInfoDouble(symbol,SYMBOL_TRADE_TICK_SIZE)*InpSlippageReserveTicks;
+2923:   if(!ProfitAt(symbol,dir,volume,entry,sl-dir*slip,atsl)||!ProfitAt(symbol,dir,volume,entry,dir>0?q.bid:q.ask,current)){g_risk_reason="EXTERNAL_RISK_UNKNOWN";continue;}
+2924:   double costs=volume*PerLotCost();g_initial_risk+=MathMax(0.0,-atsl)+costs;g_equity_risk+=MathMax(0.0,current-atsl)+costs;
+2925:  }
+2926:  for(int i=OrdersTotal()-1;i>=0;i--){
+2927:   ulong ticket=OrderGetTicket(i);string symbol=OrderGetString(ORDER_SYMBOL);int sid=symbol==_Symbol?Sid(OrderGetInteger(ORDER_MAGIC)):-1;
+2928:   if(sid<0){g_risk_reason="EXTERNAL_RISK_UNKNOWN";continue;}
+2929:   if(requests[sid].active&&requests[sid].order==ticket)continue; // represented by remaining reservation below
+2930:   g_active[sid]++;double sl=OrderGetDouble(ORDER_SL),entry=OrderGetDouble(ORDER_PRICE_OPEN),volume=OrderGetDouble(ORDER_VOLUME_CURRENT);long type=OrderGetInteger(ORDER_TYPE);
+2931:   int dir=(type==ORDER_TYPE_BUY||type==ORDER_TYPE_BUY_LIMIT||type==ORDER_TYPE_BUY_STOP||type==ORDER_TYPE_BUY_STOP_LIMIT)?1:-1;double risk=0;
+2932:   if(sl<=0||!InitialRisk(dir,volume,entry,sl,risk,true)){g_risk_reason="OWN_PENDING_RISK_UNKNOWN";continue;}g_initial_risk+=risk;g_equity_risk+=risk;
+2933:  }
+2934:  g_snapshot_active=true;
+2935:  for(int sid=0;sid<6;sid++)if(requests[sid].active){
+2936:   bool resolved=false;double filled=RequestFilled(sid,resolved);double remaining=MathMax(0.0,requests[sid].volume-filled),fraction=requests[sid].volume>0?remaining/requests[sid].volume:1;
+2937:   // A split initial order occupies one setup slot; all split positions counted conservatively.
+2938:   if(filled<=0)g_active[sid]++;
+2939:   g_initial_risk+=requests[sid].risk*fraction;g_equity_risk+=requests[sid].risk*fraction;g_reserved_margin+=requests[sid].margin*fraction;
+2940:  }
+2941:  g_snapshot_active=false;
+2942: }
+2943: bool RiskGate(Signal &s,MqlTradeRequest &req,double &risk,double &margin,double &budget,string &why){
+2944:  if(!g_state_ok||!g_lease_ok){why="STATE_UNSAFE_RECOVERING";return false;}
+2945:  if(g_ownership_conflict){why="SAME_MAGIC_OWNERSHIP_UNKNOWN";return false;}
+2946:  if(g_emergency){why="EMERGENCY_EQUITY_STOP";return false;}
+2947:  if(g_daily_lock){why="DAILY_EQUITY_STOP";return false;}
+2948:  if(!g_baseline_known){why="DAY_BASELINE_UNKNOWN";return false;}
+2949:  if(!g_cash_ok){why="CASHFLOW_UNKNOWN";return false;}
+2950:  if(!IsTester()&&AccountInfoInteger(ACCOUNT_TRADE_MODE)==ACCOUNT_TRADE_MODE_REAL&&!InpAllowRealTrading){why="REAL_TRADING_DISABLED";return false;}
+2951:  if(!IsTester()&&AccountInfoInteger(ACCOUNT_TRADE_MODE)==ACCOUNT_TRADE_MODE_REAL&&!InpCostModelCalibrated){why="COST_MODEL_UNCALIBRATED";return false;}
+2952:  if(!CanExecute(why))return false;
+2953:  if(Now()>=s.expires||s.trigger>Now()){why="SETUP_EXPIRED";return false;}
+2954:  if(Used(s.sid,s.structure)||Used(s.sid,s.family)){why="SETUP_ALREADY_CONSUMED";return false;}
+2955:  if(s.sid==5){if(!Valid6(s,why))return false;}else if(!Valid15(s,why))return false;
+2956:  PortfolioSnapshot();if(g_risk_reason!=""){why=g_risk_reason;return false;}
+2957:  if(requests[s.sid].active){why="REQUEST_UNKNOWN";return false;}
+2958:  if(g_active[s.sid]>=g_slots[s.sid]){why="STRATEGY_SLOT_FULL";return false;}
+2959:  if(Now()<g_cooldown[s.sid]){why="STRATEGY_COOLDOWN";return false;}
+2960:  if(InpMaxDailyTrades>0){int total=0;for(int i=0;i<6;i++)total+=g_daily_completed[i]+g_active[i];if(total>=InpMaxDailyTrades){why="MAX_DAILY_TRADES";return false;}}
+3008:   if(!RiskGate(s,req,risk,margin,budget,why)){
+3009:    Reason(s.sid,why);string dk="decision."+Setup(s);if(StateText(dk)!=why){Audit("decision_log",s.sid,why,Setup(s),"equity="+Num(AccountInfoDouble(ACCOUNT_EQUITY))+";initial_risk="+Num(g_initial_risk)+";equity_risk="+Num(g_equity_risk));SetText(dk,why);}continue;
+3010:   }
+3011:   int sid=s.sid;requests[sid].active=true;requests[sid].sid=sid;requests[sid].sent=Now();requests[sid].order=0;requests[sid].volume=req.volume;requests[sid].risk=risk;requests[sid].margin=margin;requests[sid].budget=budget;requests[sid].entry=req.price;requests[sid].sl=req.sl;requests[sid].tp=req.tp;requests[sid].token=Hash(Setup(s));requests[sid].structure=s.structure;requests[sid].family=s.family;requests[sid].setup=Setup(s);requests[sid].path=s.path;
+3012:   requests[sid].detail=s.detail;
+3013:   // Crash before send leaves a held reservation. No unproven resend is permitted.
+3014:   SaveRequest(sid);MarkUsed(sid,s.structure);MarkUsed(sid,s.family);
+3015:   if(!g_state_ok)continue;
+3016:   Audit("orders_audit",sid,"RESERVED",Setup(s),"planned_price="+Num(req.price)+";volume="+Num(req.volume)+";sl="+Num(req.sl)+";tp="+Num(req.tp)+";risk="+Num(risk)+";budget="+Num(budget));if(!g_state_ok)continue;
+3017:   MqlTradeResult result={};ResetLastError();bool sent=OrderSend(req,result);int err=GetLastError();requests[sid].order=result.order;if(result.order>0)StatePut("owned_order."+Id(result.order),1);SaveRequest(sid);
+3018:   Audit("orders_audit",sid,"ORDER_SENT",Setup(s),"send_return="+IntegerToString(sent)+";retcode="+IntegerToString(result.retcode)+";request_id="+IntegerToString(result.request_id)+";order_ticket="+Id(result.order)+";deal_ticket="+Id(result.deal)+";price="+Num(result.price)+";volume="+Num(result.volume)+";error="+IntegerToString(err)+";comment="+result.comment);
+3019:   if(ExplicitFailure(result.retcode)){requests[sid].active=false;SaveRequest(sid);Reason(sid,"BROKER_REJECT");Audit("execution_errors",sid,"BROKER_REJECT",Setup(s),"retcode="+IntegerToString(result.retcode));}
+3020:   else {Reason(sid,result.retcode==TRADE_RETCODE_DONE?"ORDER_ACCEPTED_RECONCILING":"REQUEST_UNKNOWN");g_dirty=true;Reconcile();}
+3021:   StatePut("gateway.rotation",(sid+1)%6);
