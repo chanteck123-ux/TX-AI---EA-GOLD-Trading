@@ -1,0 +1,3116 @@
+[
+  {
+    "asset_id": 155,
+    "repo": "skill-pandaai-factor-online",
+    "relative": "AGENTS.md",
+    "sha256": "6D27DA5D08D9988AE64668B173E4570F060146B4E3B3260E25A9CE05CD45F1AA",
+    "commit": "0c353cfc225b1930eeff6f744c38a5f808bb1e28",
+    "status": "FULL_READ",
+    "read_ranges": [
+      "1-94"
+    ],
+    "source_url": "https://github.com/quantskills/skill-pandaai-factor-online/blob/0c353cfc225b1930eeff6f744c38a5f808bb1e28/AGENTS.md"
+  },
+  {
+    "asset_id": 155,
+    "repo": "skill-pandaai-factor-online",
+    "relative": "CLAUDE.md",
+    "sha256": "9158D3384E109217D761B2D1239D802156B4C482028357E9549FB84ACCF41726",
+    "commit": "0c353cfc225b1930eeff6f744c38a5f808bb1e28",
+    "status": "FULL_READ",
+    "read_ranges": [
+      "1-3"
+    ],
+    "source_url": "https://github.com/quantskills/skill-pandaai-factor-online/blob/0c353cfc225b1930eeff6f744c38a5f808bb1e28/CLAUDE.md"
+  },
+  {
+    "asset_id": 155,
+    "repo": "skill-pandaai-factor-online",
+    "relative": "HERMES.md",
+    "sha256": "E354EB8C012BBA1CF7975C76BE4C8020507E7CBE78D9A5519B2D08BEA0783548",
+    "commit": "0c353cfc225b1930eeff6f744c38a5f808bb1e28",
+    "status": "FULL_READ",
+    "read_ranges": [
+      "1-15"
+    ],
+    "source_url": "https://github.com/quantskills/skill-pandaai-factor-online/blob/0c353cfc225b1930eeff6f744c38a5f808bb1e28/HERMES.md"
+  },
+  {
+    "asset_id": 155,
+    "repo": "skill-pandaai-factor-online",
+    "relative": "README.en.md",
+    "sha256": "0865F3416753DF0377DED370C70B4A4107152B0044527822613F147E82A6F6E6",
+    "commit": "0c353cfc225b1930eeff6f744c38a5f808bb1e28",
+    "status": "FULL_READ",
+    "read_ranges": [
+      "1-205"
+    ],
+    "source_url": "https://github.com/quantskills/skill-pandaai-factor-online/blob/0c353cfc225b1930eeff6f744c38a5f808bb1e28/README.en.md"
+  },
+  {
+    "asset_id": 155,
+    "repo": "skill-pandaai-factor-online",
+    "relative": "README.md",
+    "sha256": "18958D6C762065D696F6B2CB9BDE7A47350F2CFBF42151C274C47AC0E6F56AE2",
+    "commit": "0c353cfc225b1930eeff6f744c38a5f808bb1e28",
+    "status": "FULL_READ",
+    "read_ranges": [
+      "1-182"
+    ],
+    "source_url": "https://github.com/quantskills/skill-pandaai-factor-online/blob/0c353cfc225b1930eeff6f744c38a5f808bb1e28/README.md"
+  },
+  {
+    "asset_id": 155,
+    "repo": "skill-pandaai-factor-online",
+    "relative": "SKILL.md",
+    "sha256": "8E664997B9471F6CB3D43F75A541070A02EAF312AF33943F3D9CF988ABAF6506",
+    "commit": "0c353cfc225b1930eeff6f744c38a5f808bb1e28",
+    "status": "FULL_READ",
+    "read_ranges": [
+      "1-551"
+    ],
+    "source_url": "https://github.com/quantskills/skill-pandaai-factor-online/blob/0c353cfc225b1930eeff6f744c38a5f808bb1e28/SKILL.md"
+  },
+  {
+    "asset_id": 155,
+    "repo": "skill-pandaai-factor-online",
+    "relative": "SKILL.zh-CN.md",
+    "sha256": "34DB51536854446461BF4099DD4E105A0098422E69576C96659A3A4C42DDF0BB",
+    "commit": "0c353cfc225b1930eeff6f744c38a5f808bb1e28",
+    "status": "FULL_READ",
+    "read_ranges": [
+      "1-428"
+    ],
+    "source_url": "https://github.com/quantskills/skill-pandaai-factor-online/blob/0c353cfc225b1930eeff6f744c38a5f808bb1e28/SKILL.zh-CN.md"
+  },
+  {
+    "asset_id": 155,
+    "repo": "skill-pandaai-factor-online",
+    "relative": "agents\\portable-loader.md",
+    "sha256": "38D974ED2B253F83ED3EB3DF3F453657C2722B479A7830C142824141201DD9F1",
+    "commit": "0c353cfc225b1930eeff6f744c38a5f808bb1e28",
+    "status": "FULL_READ",
+    "read_ranges": [
+      "1-13"
+    ],
+    "source_url": "https://github.com/quantskills/skill-pandaai-factor-online/blob/0c353cfc225b1930eeff6f744c38a5f808bb1e28/agents/portable-loader.md"
+  },
+  {
+    "asset_id": 155,
+    "repo": "skill-pandaai-factor-online",
+    "relative": "references\\cli.md",
+    "sha256": "404CC932A8F8A9280B7D41DE36E39BE3B93A53061AFE77F62A6F4FF51B54AA91",
+    "commit": "0c353cfc225b1930eeff6f744c38a5f808bb1e28",
+    "status": "FULL_READ",
+    "read_ranges": [
+      "1-241"
+    ],
+    "source_url": "https://github.com/quantskills/skill-pandaai-factor-online/blob/0c353cfc225b1930eeff6f744c38a5f808bb1e28/references/cli.md"
+  },
+  {
+    "asset_id": 155,
+    "repo": "skill-pandaai-factor-online",
+    "relative": "references\\competition_proxy.md",
+    "sha256": "2F8308465719723C3F32DC74F20C186D3F9DFBD6573A74DC235C7C2D781B7100",
+    "commit": "0c353cfc225b1930eeff6f744c38a5f808bb1e28",
+    "status": "FULL_READ",
+    "read_ranges": [
+      "1-49"
+    ],
+    "source_url": "https://github.com/quantskills/skill-pandaai-factor-online/blob/0c353cfc225b1930eeff6f744c38a5f808bb1e28/references/competition_proxy.md"
+  },
+  {
+    "asset_id": 155,
+    "repo": "skill-pandaai-factor-online",
+    "relative": "references\\competition_rules.md",
+    "sha256": "22F55B7CFCF4001F0ACDDE5C8C0626E0E3597DD0B2AB95CCB0DE061E582574B9",
+    "commit": "0c353cfc225b1930eeff6f744c38a5f808bb1e28",
+    "status": "FULL_READ",
+    "read_ranges": [
+      "1-116"
+    ],
+    "source_url": "https://github.com/quantskills/skill-pandaai-factor-online/blob/0c353cfc225b1930eeff6f744c38a5f808bb1e28/references/competition_rules.md"
+  },
+  {
+    "asset_id": 155,
+    "repo": "skill-pandaai-factor-online",
+    "relative": "references\\fields-balance-sheet.md",
+    "sha256": "710C380E07F49B9713A599244D919537B096984C97F55FCAF4C3659A09D5E6E0",
+    "commit": "0c353cfc225b1930eeff6f744c38a5f808bb1e28",
+    "status": "FULL_READ",
+    "read_ranges": [
+      "1-166"
+    ],
+    "source_url": "https://github.com/quantskills/skill-pandaai-factor-online/blob/0c353cfc225b1930eeff6f744c38a5f808bb1e28/references/fields-balance-sheet.md"
+  },
+  {
+    "asset_id": 155,
+    "repo": "skill-pandaai-factor-online",
+    "relative": "references\\fields-barra.md",
+    "sha256": "40C6ABBC1531303F755F6220D63F585EE7CDEC1233680C4CF52817CF3841E847",
+    "commit": "0c353cfc225b1930eeff6f744c38a5f808bb1e28",
+    "status": "FULL_READ",
+    "read_ranges": [
+      "1-16"
+    ],
+    "source_url": "https://github.com/quantskills/skill-pandaai-factor-online/blob/0c353cfc225b1930eeff6f744c38a5f808bb1e28/references/fields-barra.md"
+  },
+  {
+    "asset_id": 155,
+    "repo": "skill-pandaai-factor-online",
+    "relative": "references\\fields-cal-date.md",
+    "sha256": "84068F9F4C854645B444102CDF231F6DB98D55CF158E89C6C186A1C494A1F61B",
+    "commit": "0c353cfc225b1930eeff6f744c38a5f808bb1e28",
+    "status": "FULL_READ",
+    "read_ranges": [
+      "1-237"
+    ],
+    "source_url": "https://github.com/quantskills/skill-pandaai-factor-online/blob/0c353cfc225b1930eeff6f744c38a5f808bb1e28/references/fields-cal-date.md"
+  },
+  {
+    "asset_id": 155,
+    "repo": "skill-pandaai-factor-online",
+    "relative": "references\\fields-cal-mins.md",
+    "sha256": "2D93973E6E848549347C257BCEA3119AF80335A8CF117C121938FB4CE3DCDF05",
+    "commit": "0c353cfc225b1930eeff6f744c38a5f808bb1e28",
+    "status": "FULL_READ",
+    "read_ranges": [
+      "1-47"
+    ],
+    "source_url": "https://github.com/quantskills/skill-pandaai-factor-online/blob/0c353cfc225b1930eeff6f744c38a5f808bb1e28/references/fields-cal-mins.md"
+  },
+  {
+    "asset_id": 155,
+    "repo": "skill-pandaai-factor-online",
+    "relative": "references\\fields-cashflow-derived.md",
+    "sha256": "AADBF811C54A330BE359DF0ADD2EAE4C501E1C4BD0502292AEFEBA0431C53E7E",
+    "commit": "0c353cfc225b1930eeff6f744c38a5f808bb1e28",
+    "status": "FULL_READ",
+    "read_ranges": [
+      "1-33"
+    ],
+    "source_url": "https://github.com/quantskills/skill-pandaai-factor-online/blob/0c353cfc225b1930eeff6f744c38a5f808bb1e28/references/fields-cashflow-derived.md"
+  },
+  {
+    "asset_id": 155,
+    "repo": "skill-pandaai-factor-online",
+    "relative": "references\\fields-cashflow-statement.md",
+    "sha256": "7140348D86D44A039D1A931AC2E82A5DD802740D1EDFB7501F96C738FCAA98D8",
+    "commit": "0c353cfc225b1930eeff6f744c38a5f808bb1e28",
+    "status": "FULL_READ",
+    "read_ranges": [
+      "1-82"
+    ],
+    "source_url": "https://github.com/quantskills/skill-pandaai-factor-online/blob/0c353cfc225b1930eeff6f744c38a5f808bb1e28/references/fields-cashflow-statement.md"
+  },
+  {
+    "asset_id": 155,
+    "repo": "skill-pandaai-factor-online",
+    "relative": "references\\fields-financial-derived.md",
+    "sha256": "2BE75CAE5C5090537BCCAB2585DC91A60C201A0DCDD7ED59BE6B9BAD4A94EC8B",
+    "commit": "0c353cfc225b1930eeff6f744c38a5f808bb1e28",
+    "status": "FULL_READ",
+    "read_ranges": [
+      "1-118"
+    ],
+    "source_url": "https://github.com/quantskills/skill-pandaai-factor-online/blob/0c353cfc225b1930eeff6f744c38a5f808bb1e28/references/fields-financial-derived.md"
+  },
+  {
+    "asset_id": 155,
+    "repo": "skill-pandaai-factor-online",
+    "relative": "references\\fields-growth-derived.md",
+    "sha256": "26569EF5E4B1A9F6DD4197A3AE52287F93FD4938AB62B28414A3BACACC56AA74",
+    "commit": "0c353cfc225b1930eeff6f744c38a5f808bb1e28",
+    "status": "FULL_READ",
+    "read_ranges": [
+      "1-40"
+    ],
+    "source_url": "https://github.com/quantskills/skill-pandaai-factor-online/blob/0c353cfc225b1930eeff6f744c38a5f808bb1e28/references/fields-growth-derived.md"
+  },
+  {
+    "asset_id": 155,
+    "repo": "skill-pandaai-factor-online",
+    "relative": "references\\fields-income-statement.md",
+    "sha256": "7BDD7AF9B48C63A24A85C158B8D4AEA2FB4B16C933382551E5380490CFC6C9E9",
+    "commit": "0c353cfc225b1930eeff6f744c38a5f808bb1e28",
+    "status": "FULL_READ",
+    "read_ranges": [
+      "1-101"
+    ],
+    "source_url": "https://github.com/quantskills/skill-pandaai-factor-online/blob/0c353cfc225b1930eeff6f744c38a5f808bb1e28/references/fields-income-statement.md"
+  },
+  {
+    "asset_id": 155,
+    "repo": "skill-pandaai-factor-online",
+    "relative": "references\\fields-ma-indicators.md",
+    "sha256": "193D66F78F09D42EAEE674EB9F3DC527299BA3BBD0DD95A0678D9FAD9FA27B0C",
+    "commit": "0c353cfc225b1930eeff6f744c38a5f808bb1e28",
+    "status": "FULL_READ",
+    "read_ranges": [
+      "1-22"
+    ],
+    "source_url": "https://github.com/quantskills/skill-pandaai-factor-online/blob/0c353cfc225b1930eeff6f744c38a5f808bb1e28/references/fields-ma-indicators.md"
+  },
+  {
+    "asset_id": 155,
+    "repo": "skill-pandaai-factor-online",
+    "relative": "references\\fields-operating-derived.md",
+    "sha256": "C244A03AC02CDDEEE776ECFEACF38EABCE3AE4558730B071512901BC2E1A264F",
+    "commit": "0c353cfc225b1930eeff6f744c38a5f808bb1e28",
+    "status": "FULL_READ",
+    "read_ranges": [
+      "1-101"
+    ],
+    "source_url": "https://github.com/quantskills/skill-pandaai-factor-online/blob/0c353cfc225b1930eeff6f744c38a5f808bb1e28/references/fields-operating-derived.md"
+  },
+  {
+    "asset_id": 155,
+    "repo": "skill-pandaai-factor-online",
+    "relative": "references\\fields-oscillators.md",
+    "sha256": "8A8289FD3CC0E1C1C21357EEEBFC02DF186C61DD335146799E1D3EEACE00A1B7",
+    "commit": "0c353cfc225b1930eeff6f744c38a5f808bb1e28",
+    "status": "FULL_READ",
+    "read_ranges": [
+      "1-30"
+    ],
+    "source_url": "https://github.com/quantskills/skill-pandaai-factor-online/blob/0c353cfc225b1930eeff6f744c38a5f808bb1e28/references/fields-oscillators.md"
+  },
+  {
+    "asset_id": 155,
+    "repo": "skill-pandaai-factor-online",
+    "relative": "references\\fields-valuation.md",
+    "sha256": "6BAF8AE25BFE244BD80B42004B480D1700F0189B2C8CC48403D52435C3813BAA",
+    "commit": "0c353cfc225b1930eeff6f744c38a5f808bb1e28",
+    "status": "FULL_READ",
+    "read_ranges": [
+      "1-44"
+    ],
+    "source_url": "https://github.com/quantskills/skill-pandaai-factor-online/blob/0c353cfc225b1930eeff6f744c38a5f808bb1e28/references/fields-valuation.md"
+  },
+  {
+    "asset_id": 155,
+    "repo": "skill-pandaai-factor-online",
+    "relative": "references\\fields-volume-indicators.md",
+    "sha256": "06BA6537701F3A94A4A4BE08A8C527A35D020B9EE3A396889A92658261E0870C",
+    "commit": "0c353cfc225b1930eeff6f744c38a5f808bb1e28",
+    "status": "FULL_READ",
+    "read_ranges": [
+      "1-21"
+    ],
+    "source_url": "https://github.com/quantskills/skill-pandaai-factor-online/blob/0c353cfc225b1930eeff6f744c38a5f808bb1e28/references/fields-volume-indicators.md"
+  },
+  {
+    "asset_id": 155,
+    "repo": "skill-pandaai-factor-online",
+    "relative": "references\\fields.md",
+    "sha256": "6AD4569F4D35D6165885237873FC0F7F333F01A2D634048E0A4C18AAB2EEB533",
+    "commit": "0c353cfc225b1930eeff6f744c38a5f808bb1e28",
+    "status": "FULL_READ",
+    "read_ranges": [
+      "1-411"
+    ],
+    "source_url": "https://github.com/quantskills/skill-pandaai-factor-online/blob/0c353cfc225b1930eeff6f744c38a5f808bb1e28/references/fields.md"
+  },
+  {
+    "asset_id": 155,
+    "repo": "skill-pandaai-factor-online",
+    "relative": "references\\operators.md",
+    "sha256": "D2BB2698031D5032C290A1FC207FB15CFC1C4B38644750821C6F2268DF221769",
+    "commit": "0c353cfc225b1930eeff6f744c38a5f808bb1e28",
+    "status": "FULL_READ",
+    "read_ranges": [
+      "1-375"
+    ],
+    "source_url": "https://github.com/quantskills/skill-pandaai-factor-online/blob/0c353cfc225b1930eeff6f744c38a5f808bb1e28/references/operators.md"
+  },
+  {
+    "asset_id": 155,
+    "repo": "skill-pandaai-factor-online",
+    "relative": "references\\pitfalls.md",
+    "sha256": "DEFD0E54645175AE25F79B3EB94A2AD0A359A958E3540109B82CBF8CD1A4947A",
+    "commit": "0c353cfc225b1930eeff6f744c38a5f808bb1e28",
+    "status": "FULL_READ",
+    "read_ranges": [
+      "1-156"
+    ],
+    "source_url": "https://github.com/quantskills/skill-pandaai-factor-online/blob/0c353cfc225b1930eeff6f744c38a5f808bb1e28/references/pitfalls.md"
+  },
+  {
+    "asset_id": 155,
+    "repo": "skill-pandaai-factor-online",
+    "relative": "references\\playbook.md",
+    "sha256": "969452B9BED40D4019D80FDB79A5A44EFE766240EF58ED0BD1EF2C4E63EEC79C",
+    "commit": "0c353cfc225b1930eeff6f744c38a5f808bb1e28",
+    "status": "FULL_READ",
+    "read_ranges": [
+      "1-149"
+    ],
+    "source_url": "https://github.com/quantskills/skill-pandaai-factor-online/blob/0c353cfc225b1930eeff6f744c38a5f808bb1e28/references/playbook.md"
+  },
+  {
+    "asset_id": 155,
+    "repo": "skill-pandaai-factor-online",
+    "relative": "references\\python_factors.md",
+    "sha256": "310CF6AFD276CDB4120ABF815E9401F2AD4ECEA92E48E432A91EBB5BD3D4C8BE",
+    "commit": "0c353cfc225b1930eeff6f744c38a5f808bb1e28",
+    "status": "FULL_READ",
+    "read_ranges": [
+      "1-67"
+    ],
+    "source_url": "https://github.com/quantskills/skill-pandaai-factor-online/blob/0c353cfc225b1930eeff6f744c38a5f808bb1e28/references/python_factors.md"
+  },
+  {
+    "asset_id": 155,
+    "repo": "skill-pandaai-factor-online",
+    "relative": "references\\source_boundary.md",
+    "sha256": "1874AF9CD421B6A6318DC4BC12B6CB6D1BE11E486047E7B031AD2904D2C83925",
+    "commit": "0c353cfc225b1930eeff6f744c38a5f808bb1e28",
+    "status": "FULL_READ",
+    "read_ranges": [
+      "1-45"
+    ],
+    "source_url": "https://github.com/quantskills/skill-pandaai-factor-online/blob/0c353cfc225b1930eeff6f744c38a5f808bb1e28/references/source_boundary.md"
+  },
+  {
+    "asset_id": 199,
+    "repo": "skill-stock-memory-analyzer-usa",
+    "relative": "README.en.md",
+    "sha256": "006789960E22A12270A4447BAC91880795AE33CE24CEF1BAFE2B25BB34AB8660",
+    "commit": "be7c455ce061b36848c69b2ca7090dc66019648b",
+    "status": "FULL_READ",
+    "read_ranges": [
+      "1-213"
+    ],
+    "source_url": "https://github.com/quantskills/skill-stock-memory-analyzer-usa/blob/be7c455ce061b36848c69b2ca7090dc66019648b/README.en.md"
+  },
+  {
+    "asset_id": 199,
+    "repo": "skill-stock-memory-analyzer-usa",
+    "relative": "README.md",
+    "sha256": "F4E0219DD8F70DA3B5A47AE79B4D503643AC4EF74944D62320CB0633154C1334",
+    "commit": "be7c455ce061b36848c69b2ca7090dc66019648b",
+    "status": "FULL_READ",
+    "read_ranges": [
+      "1-217"
+    ],
+    "source_url": "https://github.com/quantskills/skill-stock-memory-analyzer-usa/blob/be7c455ce061b36848c69b2ca7090dc66019648b/README.md"
+  },
+  {
+    "asset_id": 199,
+    "repo": "skill-stock-memory-analyzer-usa",
+    "relative": "requirements.txt",
+    "sha256": "4CA6C620F79AFFE83208C4B43A4CB2D18033191EF2282857DF67F396B899B42B",
+    "commit": "be7c455ce061b36848c69b2ca7090dc66019648b",
+    "status": "FULL_READ",
+    "read_ranges": [
+      "1-4"
+    ],
+    "source_url": "https://github.com/quantskills/skill-stock-memory-analyzer-usa/blob/be7c455ce061b36848c69b2ca7090dc66019648b/requirements.txt"
+  },
+  {
+    "asset_id": 199,
+    "repo": "skill-stock-memory-analyzer-usa",
+    "relative": "SKILL.md",
+    "sha256": "4A34F18C3F90BAB287E7F28847AFAC5275353BB20881D7AA44F8E817E667DC52",
+    "commit": "be7c455ce061b36848c69b2ca7090dc66019648b",
+    "status": "FULL_READ",
+    "read_ranges": [
+      "1-360"
+    ],
+    "source_url": "https://github.com/quantskills/skill-stock-memory-analyzer-usa/blob/be7c455ce061b36848c69b2ca7090dc66019648b/SKILL.md"
+  },
+  {
+    "asset_id": 199,
+    "repo": "skill-stock-memory-analyzer-usa",
+    "relative": "agents\\portable-loader.md",
+    "sha256": "81F156A02F19CF1A31A5AE54837DEEDD9D799E014E25FD6B6BE1A885262FBE8C",
+    "commit": "be7c455ce061b36848c69b2ca7090dc66019648b",
+    "status": "FULL_READ",
+    "read_ranges": [
+      "1-7"
+    ],
+    "source_url": "https://github.com/quantskills/skill-stock-memory-analyzer-usa/blob/be7c455ce061b36848c69b2ca7090dc66019648b/agents/portable-loader.md"
+  },
+  {
+    "asset_id": 199,
+    "repo": "skill-stock-memory-analyzer-usa",
+    "relative": "docs\\superpowers\\plans\\2026-07-16-primary-source-industry-refresh-plan.md",
+    "sha256": "C410082C2C9F330826232AFFFB2EF7940371414C887BA65ADBFD68DEDE2FE09A",
+    "commit": "be7c455ce061b36848c69b2ca7090dc66019648b",
+    "status": "FULL_READ",
+    "read_ranges": [
+      "1-348"
+    ],
+    "source_url": "https://github.com/quantskills/skill-stock-memory-analyzer-usa/blob/be7c455ce061b36848c69b2ca7090dc66019648b/docs/superpowers/plans/2026-07-16-primary-source-industry-refresh-plan.md"
+  },
+  {
+    "asset_id": 199,
+    "repo": "skill-stock-memory-analyzer-usa",
+    "relative": "docs\\superpowers\\plans\\2026-07-17-readme-evaluation-overview-plan.md",
+    "sha256": "F424F69EC23FC6B4A1BC2F4728D8642466AC0F745CE1EA1CCA52EE522F51D762",
+    "commit": "be7c455ce061b36848c69b2ca7090dc66019648b",
+    "status": "FULL_READ",
+    "read_ranges": [
+      "1-193"
+    ],
+    "source_url": "https://github.com/quantskills/skill-stock-memory-analyzer-usa/blob/be7c455ce061b36848c69b2ca7090dc66019648b/docs/superpowers/plans/2026-07-17-readme-evaluation-overview-plan.md"
+  },
+  {
+    "asset_id": 199,
+    "repo": "skill-stock-memory-analyzer-usa",
+    "relative": "docs\\superpowers\\plans\\2026-07-30-skhy-post-listing-support.md",
+    "sha256": "E155ECF6B16DE653AFE964D1E20BC95F5751BCAA057F36432E66C3D5CBA35D71",
+    "commit": "be7c455ce061b36848c69b2ca7090dc66019648b",
+    "status": "FULL_READ",
+    "read_ranges": [
+      "1-303"
+    ],
+    "source_url": "https://github.com/quantskills/skill-stock-memory-analyzer-usa/blob/be7c455ce061b36848c69b2ca7090dc66019648b/docs/superpowers/plans/2026-07-30-skhy-post-listing-support.md"
+  },
+  {
+    "asset_id": 199,
+    "repo": "skill-stock-memory-analyzer-usa",
+    "relative": "docs\\superpowers\\specs\\2026-07-16-primary-source-industry-refresh-design.md",
+    "sha256": "121D687288A726DD40AB0C1763A58F059145A21F2F59B055F655EC7823974B63",
+    "commit": "be7c455ce061b36848c69b2ca7090dc66019648b",
+    "status": "FULL_READ",
+    "read_ranges": [
+      "1-251"
+    ],
+    "source_url": "https://github.com/quantskills/skill-stock-memory-analyzer-usa/blob/be7c455ce061b36848c69b2ca7090dc66019648b/docs/superpowers/specs/2026-07-16-primary-source-industry-refresh-design.md"
+  },
+  {
+    "asset_id": 199,
+    "repo": "skill-stock-memory-analyzer-usa",
+    "relative": "docs\\superpowers\\specs\\2026-07-17-readme-evaluation-overview-design.md",
+    "sha256": "CF8A288F0ECD0AC2B63CEE887EA5119DE215123864C2FACCB6E66FD436EE7081",
+    "commit": "be7c455ce061b36848c69b2ca7090dc66019648b",
+    "status": "FULL_READ",
+    "read_ranges": [
+      "1-104"
+    ],
+    "source_url": "https://github.com/quantskills/skill-stock-memory-analyzer-usa/blob/be7c455ce061b36848c69b2ca7090dc66019648b/docs/superpowers/specs/2026-07-17-readme-evaluation-overview-design.md"
+  },
+  {
+    "asset_id": 199,
+    "repo": "skill-stock-memory-analyzer-usa",
+    "relative": "docs\\superpowers\\specs\\2026-07-30-skhy-post-listing-design.md",
+    "sha256": "BBCFA98C1DC6BF9BF36A296CA94955D9A49CFB4A73A666F88D2570FA15899D31",
+    "commit": "be7c455ce061b36848c69b2ca7090dc66019648b",
+    "status": "FULL_READ",
+    "read_ranges": [
+      "1-57"
+    ],
+    "source_url": "https://github.com/quantskills/skill-stock-memory-analyzer-usa/blob/be7c455ce061b36848c69b2ca7090dc66019648b/docs/superpowers/specs/2026-07-30-skhy-post-listing-design.md"
+  },
+  {
+    "asset_id": 170,
+    "repo": "skill-post-market-screener",
+    "relative": "OPERATION_MANUAL.md",
+    "sha256": "10191DD9A7130395F77A32B39AA2236254064B504CD13B32ED1ED2FA2EBAAC3C",
+    "commit": "7cf0714d50c8816ac0bf81e573c76b21b3718a56",
+    "status": "FULL_READ",
+    "read_ranges": [
+      "1-687"
+    ],
+    "source_url": "https://github.com/quantskills/skill-post-market-screener/blob/7cf0714d50c8816ac0bf81e573c76b21b3718a56/OPERATION_MANUAL.md"
+  },
+  {
+    "asset_id": 170,
+    "repo": "skill-post-market-screener",
+    "relative": "README.en.md",
+    "sha256": "8D2CB1531B314010A794364D9306693C3F9CFE04F256542E7AA43C1E2AAA9A76",
+    "commit": "7cf0714d50c8816ac0bf81e573c76b21b3718a56",
+    "status": "FULL_READ",
+    "read_ranges": [
+      "1-335"
+    ],
+    "source_url": "https://github.com/quantskills/skill-post-market-screener/blob/7cf0714d50c8816ac0bf81e573c76b21b3718a56/README.en.md"
+  },
+  {
+    "asset_id": 170,
+    "repo": "skill-post-market-screener",
+    "relative": "README.md",
+    "sha256": "0A4E0D7604ACFAA056F3215C090DB9AC429102B203942084923E167C5806B9FC",
+    "commit": "7cf0714d50c8816ac0bf81e573c76b21b3718a56",
+    "status": "FULL_READ",
+    "read_ranges": [
+      "1-366"
+    ],
+    "source_url": "https://github.com/quantskills/skill-post-market-screener/blob/7cf0714d50c8816ac0bf81e573c76b21b3718a56/README.md"
+  },
+  {
+    "asset_id": 170,
+    "repo": "skill-post-market-screener",
+    "relative": "requirements.txt",
+    "sha256": "ECE792396E7BA6C09115D380FFDD0C73D9ECA7881E7069A2AC86D02964DCDC3E",
+    "commit": "7cf0714d50c8816ac0bf81e573c76b21b3718a56",
+    "status": "FULL_READ",
+    "read_ranges": [
+      "1-8"
+    ],
+    "source_url": "https://github.com/quantskills/skill-post-market-screener/blob/7cf0714d50c8816ac0bf81e573c76b21b3718a56/requirements.txt"
+  },
+  {
+    "asset_id": 170,
+    "repo": "skill-post-market-screener",
+    "relative": "SKILL.md",
+    "sha256": "17265C258545B208468B5F105A84D3EB533538B8D27274E758C0D3190F6CDBEC",
+    "commit": "7cf0714d50c8816ac0bf81e573c76b21b3718a56",
+    "status": "FULL_READ",
+    "read_ranges": [
+      "1-240"
+    ],
+    "source_url": "https://github.com/quantskills/skill-post-market-screener/blob/7cf0714d50c8816ac0bf81e573c76b21b3718a56/SKILL.md"
+  },
+  {
+    "asset_id": 170,
+    "repo": "skill-post-market-screener",
+    "relative": "agents\\portable-loader.md",
+    "sha256": "922EAC1FCE5DA6CA5D3B1C282F4334BBDA333DF4A6A3AD7BD1336D6B581BDC7C",
+    "commit": "7cf0714d50c8816ac0bf81e573c76b21b3718a56",
+    "status": "FULL_READ",
+    "read_ranges": [
+      "1-67"
+    ],
+    "source_url": "https://github.com/quantskills/skill-post-market-screener/blob/7cf0714d50c8816ac0bf81e573c76b21b3718a56/agents/portable-loader.md"
+  },
+  {
+    "asset_id": 170,
+    "repo": "skill-post-market-screener",
+    "relative": "references\\pandadata-map.md",
+    "sha256": "B3B8FFD0009FEF9C0B0528B10DC5677AE3F8C10458BC8190C804B77BA8C21708",
+    "commit": "7cf0714d50c8816ac0bf81e573c76b21b3718a56",
+    "status": "FULL_READ",
+    "read_ranges": [
+      "1-61"
+    ],
+    "source_url": "https://github.com/quantskills/skill-post-market-screener/blob/7cf0714d50c8816ac0bf81e573c76b21b3718a56/references/pandadata-map.md"
+  },
+  {
+    "asset_id": 170,
+    "repo": "skill-post-market-screener",
+    "relative": "references\\pattern-formulas.md",
+    "sha256": "239134559A790D88CDE957571E0792EE0B38445A82A8EAA4595DA5F6D207B4E7",
+    "commit": "7cf0714d50c8816ac0bf81e573c76b21b3718a56",
+    "status": "FULL_READ",
+    "read_ranges": [
+      "1-147"
+    ],
+    "source_url": "https://github.com/quantskills/skill-post-market-screener/blob/7cf0714d50c8816ac0bf81e573c76b21b3718a56/references/pattern-formulas.md"
+  },
+  {
+    "asset_id": 170,
+    "repo": "skill-post-market-screener",
+    "relative": "references\\report-template.md",
+    "sha256": "074157E72C4398C67638C131FA3B9932C58E514861E39FE922E020CC67DACE20",
+    "commit": "7cf0714d50c8816ac0bf81e573c76b21b3718a56",
+    "status": "FULL_READ",
+    "read_ranges": [
+      "1-83"
+    ],
+    "source_url": "https://github.com/quantskills/skill-post-market-screener/blob/7cf0714d50c8816ac0bf81e573c76b21b3718a56/references/report-template.md"
+  },
+  {
+    "asset_id": 170,
+    "repo": "skill-post-market-screener",
+    "relative": "references\\validate-rules.md",
+    "sha256": "19D15D207C38BC0F7C2ACD0EFF5C9FDC0C7DBD805A46A3FCB4CD70F1B8DE1F35",
+    "commit": "7cf0714d50c8816ac0bf81e573c76b21b3718a56",
+    "status": "FULL_READ",
+    "read_ranges": [
+      "1-69"
+    ],
+    "source_url": "https://github.com/quantskills/skill-post-market-screener/blob/7cf0714d50c8816ac0bf81e573c76b21b3718a56/references/validate-rules.md"
+  },
+  {
+    "asset_id": 21,
+    "repo": "skill-a-share-tradability-auditor",
+    "relative": "README.en.md",
+    "sha256": "82F4717372EDEF2F2DA15C9069EE7D541568330973F9E8FF9B97DE31CB434C26",
+    "commit": "0d1cbdafde3ddb148a0bed90d06ad09525bfecee",
+    "status": "FULL_READ",
+    "read_ranges": [
+      "1-135"
+    ],
+    "source_url": "https://github.com/quantskills/skill-a-share-tradability-auditor/blob/0d1cbdafde3ddb148a0bed90d06ad09525bfecee/README.en.md"
+  },
+  {
+    "asset_id": 21,
+    "repo": "skill-a-share-tradability-auditor",
+    "relative": "README.md",
+    "sha256": "2D9B26F9E8DF7A2ED0CFCEF7DF093C76BDCF8599502BB011EEE4C3A97005368D",
+    "commit": "0d1cbdafde3ddb148a0bed90d06ad09525bfecee",
+    "status": "FULL_READ",
+    "read_ranges": [
+      "1-176"
+    ],
+    "source_url": "https://github.com/quantskills/skill-a-share-tradability-auditor/blob/0d1cbdafde3ddb148a0bed90d06ad09525bfecee/README.md"
+  },
+  {
+    "asset_id": 21,
+    "repo": "skill-a-share-tradability-auditor",
+    "relative": "requirements.txt",
+    "sha256": "326FE266856696DB57C867FF1DC23A7F7FC1CAED50A1513EFAB95E4759292FC6",
+    "commit": "0d1cbdafde3ddb148a0bed90d06ad09525bfecee",
+    "status": "FULL_READ",
+    "read_ranges": [
+      "1-8"
+    ],
+    "source_url": "https://github.com/quantskills/skill-a-share-tradability-auditor/blob/0d1cbdafde3ddb148a0bed90d06ad09525bfecee/requirements.txt"
+  },
+  {
+    "asset_id": 21,
+    "repo": "skill-a-share-tradability-auditor",
+    "relative": "SKILL.md",
+    "sha256": "2D324F46FBC8C4BAE855866A893FF7C122DA8C42D9A3982D3A8407F2E7114295",
+    "commit": "0d1cbdafde3ddb148a0bed90d06ad09525bfecee",
+    "status": "FULL_READ",
+    "read_ranges": [
+      "1-265"
+    ],
+    "source_url": "https://github.com/quantskills/skill-a-share-tradability-auditor/blob/0d1cbdafde3ddb148a0bed90d06ad09525bfecee/SKILL.md"
+  },
+  {
+    "asset_id": 21,
+    "repo": "skill-a-share-tradability-auditor",
+    "relative": "USAGE.md",
+    "sha256": "A9F35A00804F92711358FF212B58C195E93FB391AD638EC2BDC1A4199EF1258E",
+    "commit": "0d1cbdafde3ddb148a0bed90d06ad09525bfecee",
+    "status": "FULL_READ",
+    "read_ranges": [
+      "1-167"
+    ],
+    "source_url": "https://github.com/quantskills/skill-a-share-tradability-auditor/blob/0d1cbdafde3ddb148a0bed90d06ad09525bfecee/USAGE.md"
+  },
+  {
+    "asset_id": 21,
+    "repo": "skill-a-share-tradability-auditor",
+    "relative": "agents\\portable-loader.md",
+    "sha256": "37E73DCFA15517B4A20B4858B7DA967F46E1F32C18F68FB54CBEB7E2D54C2466",
+    "commit": "0d1cbdafde3ddb148a0bed90d06ad09525bfecee",
+    "status": "FULL_READ",
+    "read_ranges": [
+      "1-28"
+    ],
+    "source_url": "https://github.com/quantskills/skill-a-share-tradability-auditor/blob/0d1cbdafde3ddb148a0bed90d06ad09525bfecee/agents/portable-loader.md"
+  },
+  {
+    "asset_id": 21,
+    "repo": "skill-a-share-tradability-auditor",
+    "relative": "references\\boundary.md",
+    "sha256": "5F433F33112DCFF9FED854DB18568926F2B83EE770A1DDF8117732684E0CDF68",
+    "commit": "0d1cbdafde3ddb148a0bed90d06ad09525bfecee",
+    "status": "FULL_READ",
+    "read_ranges": [
+      "1-61"
+    ],
+    "source_url": "https://github.com/quantskills/skill-a-share-tradability-auditor/blob/0d1cbdafde3ddb148a0bed90d06ad09525bfecee/references/boundary.md"
+  },
+  {
+    "asset_id": 21,
+    "repo": "skill-a-share-tradability-auditor",
+    "relative": "references\\data-map.md",
+    "sha256": "D8D866500859985A942D517AA827255CA984767FC539AE740CDA50B1665D6B0C",
+    "commit": "0d1cbdafde3ddb148a0bed90d06ad09525bfecee",
+    "status": "FULL_READ",
+    "read_ranges": [
+      "1-53"
+    ],
+    "source_url": "https://github.com/quantskills/skill-a-share-tradability-auditor/blob/0d1cbdafde3ddb148a0bed90d06ad09525bfecee/references/data-map.md"
+  },
+  {
+    "asset_id": 21,
+    "repo": "skill-a-share-tradability-auditor",
+    "relative": "references\\limit-rules.md",
+    "sha256": "1FCC95F07A23A42656A23B02BD3F00B9CEFE310AF3D12EFFD53C0D41B4C6CE45",
+    "commit": "0d1cbdafde3ddb148a0bed90d06ad09525bfecee",
+    "status": "FULL_READ",
+    "read_ranges": [
+      "1-115"
+    ],
+    "source_url": "https://github.com/quantskills/skill-a-share-tradability-auditor/blob/0d1cbdafde3ddb148a0bed90d06ad09525bfecee/references/limit-rules.md"
+  },
+  {
+    "asset_id": 21,
+    "repo": "skill-a-share-tradability-auditor",
+    "relative": "references\\methodology.md",
+    "sha256": "D8B40385DF44F94348F544CABBDC6E42790646C573520749254DFCCD79E896E0",
+    "commit": "0d1cbdafde3ddb148a0bed90d06ad09525bfecee",
+    "status": "FULL_READ",
+    "read_ranges": [
+      "1-86"
+    ],
+    "source_url": "https://github.com/quantskills/skill-a-share-tradability-auditor/blob/0d1cbdafde3ddb148a0bed90d06ad09525bfecee/references/methodology.md"
+  },
+  {
+    "asset_id": 21,
+    "repo": "skill-a-share-tradability-auditor",
+    "relative": "references\\output-schema.md",
+    "sha256": "6A5DED9E76F911E94A213F56EBE05BAFC8279EDBB2095C29FD963F9F91A60F31",
+    "commit": "0d1cbdafde3ddb148a0bed90d06ad09525bfecee",
+    "status": "FULL_READ",
+    "read_ranges": [
+      "1-121"
+    ],
+    "source_url": "https://github.com/quantskills/skill-a-share-tradability-auditor/blob/0d1cbdafde3ddb148a0bed90d06ad09525bfecee/references/output-schema.md"
+  },
+  {
+    "asset_id": 21,
+    "repo": "skill-a-share-tradability-auditor",
+    "relative": "validation\\README.md",
+    "sha256": "765B0AE7A8E8FFADDFE1BCCB32320DA185E094C839D3F19276A4CDD0D92F9526",
+    "commit": "0d1cbdafde3ddb148a0bed90d06ad09525bfecee",
+    "status": "FULL_READ",
+    "read_ranges": [
+      "1-46"
+    ],
+    "source_url": "https://github.com/quantskills/skill-a-share-tradability-auditor/blob/0d1cbdafde3ddb148a0bed90d06ad09525bfecee/validation/README.md"
+  },
+  {
+    "asset_id": 63,
+    "repo": "skill-dl-transformer-multiasset",
+    "relative": "AGENTS.md",
+    "sha256": "E9AA2607EFE02B2EF8A668BC59EA97345B3C74351B1145DF61A5D7DD71909028",
+    "commit": "801f905db991b21c05879af144f9c186404687a2",
+    "status": "FULL_READ",
+    "read_ranges": [
+      "1-7"
+    ],
+    "source_url": "https://github.com/quantskills/skill-dl-transformer-multiasset/blob/801f905db991b21c05879af144f9c186404687a2/AGENTS.md"
+  },
+  {
+    "asset_id": 63,
+    "repo": "skill-dl-transformer-multiasset",
+    "relative": "CLAUDE.md",
+    "sha256": "7FC40E46D2D28D7E5E0A808A7E1ABBF8A272CA7A10AE03043BE28DC8B7D228CD",
+    "commit": "801f905db991b21c05879af144f9c186404687a2",
+    "status": "FULL_READ",
+    "read_ranges": [
+      "1-7"
+    ],
+    "source_url": "https://github.com/quantskills/skill-dl-transformer-multiasset/blob/801f905db991b21c05879af144f9c186404687a2/CLAUDE.md"
+  },
+  {
+    "asset_id": 63,
+    "repo": "skill-dl-transformer-multiasset",
+    "relative": "HERMES.md",
+    "sha256": "63DABD6E839EEB0CDA8CF12D8C66A75FCFAF60C0195959B834726098D319E54A",
+    "commit": "801f905db991b21c05879af144f9c186404687a2",
+    "status": "FULL_READ",
+    "read_ranges": [
+      "1-7"
+    ],
+    "source_url": "https://github.com/quantskills/skill-dl-transformer-multiasset/blob/801f905db991b21c05879af144f9c186404687a2/HERMES.md"
+  },
+  {
+    "asset_id": 63,
+    "repo": "skill-dl-transformer-multiasset",
+    "relative": "OPENCLAW.md",
+    "sha256": "AF847590A767D3BF85AF3609676886BB3E0D36980D615EB81110958F7104492B",
+    "commit": "801f905db991b21c05879af144f9c186404687a2",
+    "status": "FULL_READ",
+    "read_ranges": [
+      "1-7"
+    ],
+    "source_url": "https://github.com/quantskills/skill-dl-transformer-multiasset/blob/801f905db991b21c05879af144f9c186404687a2/OPENCLAW.md"
+  },
+  {
+    "asset_id": 63,
+    "repo": "skill-dl-transformer-multiasset",
+    "relative": "README.en.md",
+    "sha256": "02836FED7E7C4A7C1E6661F69B931951CB848F7CB4A5CC4DDD20D1340EB3205B",
+    "commit": "801f905db991b21c05879af144f9c186404687a2",
+    "status": "FULL_READ",
+    "read_ranges": [
+      "1-46"
+    ],
+    "source_url": "https://github.com/quantskills/skill-dl-transformer-multiasset/blob/801f905db991b21c05879af144f9c186404687a2/README.en.md"
+  },
+  {
+    "asset_id": 63,
+    "repo": "skill-dl-transformer-multiasset",
+    "relative": "README.md",
+    "sha256": "FF3C6F493B9773EE62593CAEA9FDE7E4737965CC97F9747DB09FA05A7CCF7FB7",
+    "commit": "801f905db991b21c05879af144f9c186404687a2",
+    "status": "FULL_READ",
+    "read_ranges": [
+      "1-182"
+    ],
+    "source_url": "https://github.com/quantskills/skill-dl-transformer-multiasset/blob/801f905db991b21c05879af144f9c186404687a2/README.md"
+  },
+  {
+    "asset_id": 63,
+    "repo": "skill-dl-transformer-multiasset",
+    "relative": "SKILL.md",
+    "sha256": "E324E2E2FB1BF0A3ED5D75F7C2B3E8A837BC0C82BB8509E7E52F4B74CD590647",
+    "commit": "801f905db991b21c05879af144f9c186404687a2",
+    "status": "FULL_READ",
+    "read_ranges": [
+      "1-27"
+    ],
+    "source_url": "https://github.com/quantskills/skill-dl-transformer-multiasset/blob/801f905db991b21c05879af144f9c186404687a2/SKILL.md"
+  },
+  {
+    "asset_id": 63,
+    "repo": "skill-dl-transformer-multiasset",
+    "relative": "dl-transformer-multiasset\\README.md",
+    "sha256": "AFB65000EC98C97009157154F3CB9328DFD05AEED4A9AE4E5FADC8D76DEA86FE",
+    "commit": "801f905db991b21c05879af144f9c186404687a2",
+    "status": "FULL_READ",
+    "read_ranges": [
+      "1-97"
+    ],
+    "source_url": "https://github.com/quantskills/skill-dl-transformer-multiasset/blob/801f905db991b21c05879af144f9c186404687a2/dl-transformer-multiasset/README.md"
+  },
+  {
+    "asset_id": 63,
+    "repo": "skill-dl-transformer-multiasset",
+    "relative": "dl-transformer-multiasset\\SKILL.md",
+    "sha256": "B1CCAE61A1EEBA8CFB3613F34806C7A291454C6CDFE8BCB0250F6D19F2D7E85D",
+    "commit": "801f905db991b21c05879af144f9c186404687a2",
+    "status": "FULL_READ",
+    "read_ranges": [
+      "1-150"
+    ],
+    "source_url": "https://github.com/quantskills/skill-dl-transformer-multiasset/blob/801f905db991b21c05879af144f9c186404687a2/dl-transformer-multiasset/SKILL.md"
+  },
+  {
+    "asset_id": 63,
+    "repo": "skill-dl-transformer-multiasset",
+    "relative": "dl-transformer-multiasset\\VALIDATION_OUTPUT.md",
+    "sha256": "78B740E5B33880A97E1BF5A25BB252AD2283AAFA58987420204B998B9961BE65",
+    "commit": "801f905db991b21c05879af144f9c186404687a2",
+    "status": "FULL_READ",
+    "read_ranges": [
+      "1-159"
+    ],
+    "source_url": "https://github.com/quantskills/skill-dl-transformer-multiasset/blob/801f905db991b21c05879af144f9c186404687a2/dl-transformer-multiasset/VALIDATION_OUTPUT.md"
+  },
+  {
+    "asset_id": 63,
+    "repo": "skill-dl-transformer-multiasset",
+    "relative": "dl-transformer-multiasset\\VALIDATION.md",
+    "sha256": "9595D424649CA869481EA72A689CD0261DCBF756EC30501C887C6C9C1940AAF2",
+    "commit": "801f905db991b21c05879af144f9c186404687a2",
+    "status": "FULL_READ",
+    "read_ranges": [
+      "1-163"
+    ],
+    "source_url": "https://github.com/quantskills/skill-dl-transformer-multiasset/blob/801f905db991b21c05879af144f9c186404687a2/dl-transformer-multiasset/VALIDATION.md"
+  },
+  {
+    "asset_id": 63,
+    "repo": "skill-dl-transformer-multiasset",
+    "relative": "dl-transformer-multiasset\\references\\data_guide.md",
+    "sha256": "701886AED0A0830C0C163E9268565D9860FCB96023BEE66754B398706F4065AD",
+    "commit": "801f905db991b21c05879af144f9c186404687a2",
+    "status": "FULL_READ",
+    "read_ranges": [
+      "1-227"
+    ],
+    "source_url": "https://github.com/quantskills/skill-dl-transformer-multiasset/blob/801f905db991b21c05879af144f9c186404687a2/dl-transformer-multiasset/references/data_guide.md"
+  },
+  {
+    "asset_id": 63,
+    "repo": "skill-dl-transformer-multiasset",
+    "relative": "dl-transformer-multiasset\\references\\model_arch.md",
+    "sha256": "B72BDCA26AE98F65421120B6959E15123EFF2136D4376F430123D8073525F4BC",
+    "commit": "801f905db991b21c05879af144f9c186404687a2",
+    "status": "FULL_READ",
+    "read_ranges": [
+      "1-290"
+    ],
+    "source_url": "https://github.com/quantskills/skill-dl-transformer-multiasset/blob/801f905db991b21c05879af144f9c186404687a2/dl-transformer-multiasset/references/model_arch.md"
+  },
+  {
+    "asset_id": 63,
+    "repo": "skill-dl-transformer-multiasset",
+    "relative": "dl-transformer-multiasset\\references\\training_guide.md",
+    "sha256": "DB5DF6783D7A4250D33580EE8DD8CC48221342DAFB23C1A446F400D28D9CDE32",
+    "commit": "801f905db991b21c05879af144f9c186404687a2",
+    "status": "FULL_READ",
+    "read_ranges": [
+      "1-445"
+    ],
+    "source_url": "https://github.com/quantskills/skill-dl-transformer-multiasset/blob/801f905db991b21c05879af144f9c186404687a2/dl-transformer-multiasset/references/training_guide.md"
+  },
+  {
+    "asset_id": 63,
+    "repo": "skill-dl-transformer-multiasset",
+    "relative": "dl-transformer-multiasset-production\\SKILL.md",
+    "sha256": "CE3035DD439EA06DBFF2BB4177573C4B32C4F767DF55E28D10ED1FDEA9BB3412",
+    "commit": "801f905db991b21c05879af144f9c186404687a2",
+    "status": "FULL_READ",
+    "read_ranges": [
+      "1-103"
+    ],
+    "source_url": "https://github.com/quantskills/skill-dl-transformer-multiasset/blob/801f905db991b21c05879af144f9c186404687a2/dl-transformer-multiasset-production/SKILL.md"
+  },
+  {
+    "asset_id": 190,
+    "repo": "skill-shortterm-mean-reversal",
+    "relative": "CHANGELOG.md",
+    "sha256": "598E556615ECFB368562A6565CF3FCEE0FF35FFDC0FC0DEF91098AA30DDF9F3E",
+    "commit": "dc65559482aebed4fb0b4532bb3f668a025d4887",
+    "status": "FULL_READ",
+    "read_ranges": [
+      "1-83"
+    ],
+    "source_url": "https://github.com/quantskills/skill-shortterm-mean-reversal/blob/dc65559482aebed4fb0b4532bb3f668a025d4887/CHANGELOG.md"
+  },
+  {
+    "asset_id": 190,
+    "repo": "skill-shortterm-mean-reversal",
+    "relative": "CONTRIBUTING.md",
+    "sha256": "690F7FA42DB8EA5EE296BD2B09E115BE6B2003C95C2E8AE111EF78B0D28E9C41",
+    "commit": "dc65559482aebed4fb0b4532bb3f668a025d4887",
+    "status": "FULL_READ",
+    "read_ranges": [
+      "1-21"
+    ],
+    "source_url": "https://github.com/quantskills/skill-shortterm-mean-reversal/blob/dc65559482aebed4fb0b4532bb3f668a025d4887/CONTRIBUTING.md"
+  },
+  {
+    "asset_id": 190,
+    "repo": "skill-shortterm-mean-reversal",
+    "relative": "PROGRESS.md",
+    "sha256": "99AE9E9F40AD02EBB6054F031DB0B48D121CF8891108D7438AAAF9C6AC6E0C5C",
+    "commit": "dc65559482aebed4fb0b4532bb3f668a025d4887",
+    "status": "FULL_READ",
+    "read_ranges": [
+      "1-45"
+    ],
+    "source_url": "https://github.com/quantskills/skill-shortterm-mean-reversal/blob/dc65559482aebed4fb0b4532bb3f668a025d4887/PROGRESS.md"
+  },
+  {
+    "asset_id": 190,
+    "repo": "skill-shortterm-mean-reversal",
+    "relative": "README.en.md",
+    "sha256": "C08AE83E4465F230E37ACE184F91BD61FA1C34DB72BA52858EAE331536BADB01",
+    "commit": "dc65559482aebed4fb0b4532bb3f668a025d4887",
+    "status": "FULL_READ",
+    "read_ranges": [
+      "1-253"
+    ],
+    "source_url": "https://github.com/quantskills/skill-shortterm-mean-reversal/blob/dc65559482aebed4fb0b4532bb3f668a025d4887/README.en.md"
+  },
+  {
+    "asset_id": 190,
+    "repo": "skill-shortterm-mean-reversal",
+    "relative": "README.md",
+    "sha256": "DE26A1E47925C217EEB7D795F6DFF7C0CC25E7B51C859E7555C1FFDD228DCA63",
+    "commit": "dc65559482aebed4fb0b4532bb3f668a025d4887",
+    "status": "FULL_READ",
+    "read_ranges": [
+      "1-250"
+    ],
+    "source_url": "https://github.com/quantskills/skill-shortterm-mean-reversal/blob/dc65559482aebed4fb0b4532bb3f668a025d4887/README.md"
+  },
+  {
+    "asset_id": 190,
+    "repo": "skill-shortterm-mean-reversal",
+    "relative": "requirements-dev.txt",
+    "sha256": "F5A4AC2A8570693310BAD54AF31CA0B80113477C2DE6E56229AD9DD8AE4189AD",
+    "commit": "dc65559482aebed4fb0b4532bb3f668a025d4887",
+    "status": "FULL_READ",
+    "read_ranges": [
+      "1-2"
+    ],
+    "source_url": "https://github.com/quantskills/skill-shortterm-mean-reversal/blob/dc65559482aebed4fb0b4532bb3f668a025d4887/requirements-dev.txt"
+  },
+  {
+    "asset_id": 190,
+    "repo": "skill-shortterm-mean-reversal",
+    "relative": "requirements.txt",
+    "sha256": "0BBAE9C0C836D704E0D4260B203DF868EE1311F763779B31106E3C04FA34163D",
+    "commit": "dc65559482aebed4fb0b4532bb3f668a025d4887",
+    "status": "FULL_READ",
+    "read_ranges": [
+      "1-5"
+    ],
+    "source_url": "https://github.com/quantskills/skill-shortterm-mean-reversal/blob/dc65559482aebed4fb0b4532bb3f668a025d4887/requirements.txt"
+  },
+  {
+    "asset_id": 190,
+    "repo": "skill-shortterm-mean-reversal",
+    "relative": "ROADMAP.md",
+    "sha256": "830FCBB7436853C5670BDD661E2171102E508FCA555FA9C3172A74200187E6DD",
+    "commit": "dc65559482aebed4fb0b4532bb3f668a025d4887",
+    "status": "FULL_READ",
+    "read_ranges": [
+      "1-60"
+    ],
+    "source_url": "https://github.com/quantskills/skill-shortterm-mean-reversal/blob/dc65559482aebed4fb0b4532bb3f668a025d4887/ROADMAP.md"
+  },
+  {
+    "asset_id": 190,
+    "repo": "skill-shortterm-mean-reversal",
+    "relative": "SKILL.md",
+    "sha256": "49BE62F572CA0B2E40DE6C77BFCA710A2934DC6CC942F47662F8307038563A73",
+    "commit": "dc65559482aebed4fb0b4532bb3f668a025d4887",
+    "status": "FULL_READ",
+    "read_ranges": [
+      "1-113"
+    ],
+    "source_url": "https://github.com/quantskills/skill-shortterm-mean-reversal/blob/dc65559482aebed4fb0b4532bb3f668a025d4887/SKILL.md"
+  },
+  {
+    "asset_id": 190,
+    "repo": "skill-shortterm-mean-reversal",
+    "relative": "VALIDATION.md",
+    "sha256": "7F954ACBC4038FF27D43172884C460905F15D664667C66BC2B726F06F1C10419",
+    "commit": "dc65559482aebed4fb0b4532bb3f668a025d4887",
+    "status": "FULL_READ",
+    "read_ranges": [
+      "1-102"
+    ],
+    "source_url": "https://github.com/quantskills/skill-shortterm-mean-reversal/blob/dc65559482aebed4fb0b4532bb3f668a025d4887/VALIDATION.md"
+  },
+  {
+    "asset_id": 190,
+    "repo": "skill-shortterm-mean-reversal",
+    "relative": "agents\\portable-loader.md",
+    "sha256": "55EB879F18576A1D6B77E89DFC954AD2711566B780D8FFDE30952584BC91BC20",
+    "commit": "dc65559482aebed4fb0b4532bb3f668a025d4887",
+    "status": "FULL_READ",
+    "read_ranges": [
+      "1-3"
+    ],
+    "source_url": "https://github.com/quantskills/skill-shortterm-mean-reversal/blob/dc65559482aebed4fb0b4532bb3f668a025d4887/agents/portable-loader.md"
+  },
+  {
+    "asset_id": 190,
+    "repo": "skill-shortterm-mean-reversal",
+    "relative": "references\\data_guide.md",
+    "sha256": "2818ACAFFE8F20B03DD0A2E37A07C76A1AF1A9F249914679BDFA87B127EF0B4C",
+    "commit": "dc65559482aebed4fb0b4532bb3f668a025d4887",
+    "status": "FULL_READ",
+    "read_ranges": [
+      "1-13"
+    ],
+    "source_url": "https://github.com/quantskills/skill-shortterm-mean-reversal/blob/dc65559482aebed4fb0b4532bb3f668a025d4887/references/data_guide.md"
+  },
+  {
+    "asset_id": 190,
+    "repo": "skill-shortterm-mean-reversal",
+    "relative": "references\\methodology.md",
+    "sha256": "D39362CB8D9DBF388520CFF0BACD9B9C1C888787674943232056E6354DFEEDA8",
+    "commit": "dc65559482aebed4fb0b4532bb3f668a025d4887",
+    "status": "FULL_READ",
+    "read_ranges": [
+      "1-44"
+    ],
+    "source_url": "https://github.com/quantskills/skill-shortterm-mean-reversal/blob/dc65559482aebed4fb0b4532bb3f668a025d4887/references/methodology.md"
+  },
+  {
+    "asset_id": 190,
+    "repo": "skill-shortterm-mean-reversal",
+    "relative": "references\\source_boundary.md",
+    "sha256": "A99AABF4FEF9D9FA4270189C106B09E6553C56FFC10A60B55AEC2EBAC8948749",
+    "commit": "dc65559482aebed4fb0b4532bb3f668a025d4887",
+    "status": "FULL_READ",
+    "read_ranges": [
+      "1-11"
+    ],
+    "source_url": "https://github.com/quantskills/skill-shortterm-mean-reversal/blob/dc65559482aebed4fb0b4532bb3f668a025d4887/references/source_boundary.md"
+  },
+  {
+    "asset_id": 137,
+    "repo": "skill-market-regime-analysis",
+    "relative": "README.en.md",
+    "sha256": "66EB4F67BBAF46B27AB24CFB7539DAB6590FC38437D56B3B8A0FECDBDD15D293",
+    "commit": "ce1301568000a7ed4972ec5b305867d59cfba0c7",
+    "status": "FULL_READ",
+    "read_ranges": [
+      "1-123"
+    ],
+    "source_url": "https://github.com/quantskills/skill-market-regime-analysis/blob/ce1301568000a7ed4972ec5b305867d59cfba0c7/README.en.md"
+  },
+  {
+    "asset_id": 137,
+    "repo": "skill-market-regime-analysis",
+    "relative": "README.md",
+    "sha256": "81256946652C57404D840C84CCE92CC003FEAC65F4A6C3859400491E8CDB6D24",
+    "commit": "ce1301568000a7ed4972ec5b305867d59cfba0c7",
+    "status": "FULL_READ",
+    "read_ranges": [
+      "1-133"
+    ],
+    "source_url": "https://github.com/quantskills/skill-market-regime-analysis/blob/ce1301568000a7ed4972ec5b305867d59cfba0c7/README.md"
+  },
+  {
+    "asset_id": 137,
+    "repo": "skill-market-regime-analysis",
+    "relative": "SKILL.md",
+    "sha256": "B6F59DEC2188E67C0DF8661E5BB7A1381BD1403E6C08B287CE879C5ACB50366D",
+    "commit": "ce1301568000a7ed4972ec5b305867d59cfba0c7",
+    "status": "FULL_READ",
+    "read_ranges": [
+      "1-258"
+    ],
+    "source_url": "https://github.com/quantskills/skill-market-regime-analysis/blob/ce1301568000a7ed4972ec5b305867d59cfba0c7/SKILL.md"
+  },
+  {
+    "asset_id": 137,
+    "repo": "skill-market-regime-analysis",
+    "relative": "references\\conditional_analysis.md",
+    "sha256": "9E30CAAAFB133D0BF8AACD7EA97C10A961697A789DD825C6C30EF495157C279F",
+    "commit": "ce1301568000a7ed4972ec5b305867d59cfba0c7",
+    "status": "FULL_READ",
+    "read_ranges": [
+      "1-185"
+    ],
+    "source_url": "https://github.com/quantskills/skill-market-regime-analysis/blob/ce1301568000a7ed4972ec5b305867d59cfba0c7/references/conditional_analysis.md"
+  },
+  {
+    "asset_id": 137,
+    "repo": "skill-market-regime-analysis",
+    "relative": "references\\feature_engineering.md",
+    "sha256": "8D5B0998F7D23F82F3C74724B20E43E36B3B564FB48C1285CAC798A6C97E7E8E",
+    "commit": "ce1301568000a7ed4972ec5b305867d59cfba0c7",
+    "status": "FULL_READ",
+    "read_ranges": [
+      "1-183"
+    ],
+    "source_url": "https://github.com/quantskills/skill-market-regime-analysis/blob/ce1301568000a7ed4972ec5b305867d59cfba0c7/references/feature_engineering.md"
+  },
+  {
+    "asset_id": 137,
+    "repo": "skill-market-regime-analysis",
+    "relative": "references\\hmm_detection.md",
+    "sha256": "D554915EF27E31CBAE2D9C5C36F87B15249207AE0D63940D85286B24134755FA",
+    "commit": "ce1301568000a7ed4972ec5b305867d59cfba0c7",
+    "status": "FULL_READ",
+    "read_ranges": [
+      "1-185"
+    ],
+    "source_url": "https://github.com/quantskills/skill-market-regime-analysis/blob/ce1301568000a7ed4972ec5b305867d59cfba0c7/references/hmm_detection.md"
+  },
+  {
+    "asset_id": 137,
+    "repo": "skill-market-regime-analysis",
+    "relative": "references\\risk_forecast.md",
+    "sha256": "43A653FEB3F6EE97CF2485BD43252B7E0D4836A5FBF80BAFA97D98A616434585",
+    "commit": "ce1301568000a7ed4972ec5b305867d59cfba0c7",
+    "status": "FULL_READ",
+    "read_ranges": [
+      "1-174"
+    ],
+    "source_url": "https://github.com/quantskills/skill-market-regime-analysis/blob/ce1301568000a7ed4972ec5b305867d59cfba0c7/references/risk_forecast.md"
+  },
+  {
+    "asset_id": 137,
+    "repo": "skill-market-regime-analysis",
+    "relative": "references\\source_boundary.md",
+    "sha256": "2AD3A0A99C0BAEF6CAEE9557D66963BB67E7520F8809F61BCD0674B6A7DEDFCF",
+    "commit": "ce1301568000a7ed4972ec5b305867d59cfba0c7",
+    "status": "FULL_READ",
+    "read_ranges": [
+      "1-12"
+    ],
+    "source_url": "https://github.com/quantskills/skill-market-regime-analysis/blob/ce1301568000a7ed4972ec5b305867d59cfba0c7/references/source_boundary.md"
+  },
+  {
+    "asset_id": 137,
+    "repo": "skill-market-regime-analysis",
+    "relative": "references\\threshold_rules.md",
+    "sha256": "1C24B33D17361FC33DF35B286A54B57067929EC65EC85E064FAB8536A21C25E7",
+    "commit": "ce1301568000a7ed4972ec5b305867d59cfba0c7",
+    "status": "FULL_READ",
+    "read_ranges": [
+      "1-108"
+    ],
+    "source_url": "https://github.com/quantskills/skill-market-regime-analysis/blob/ce1301568000a7ed4972ec5b305867d59cfba0c7/references/threshold_rules.md"
+  },
+  {
+    "asset_id": 17,
+    "repo": "skill-a-share-market-participation",
+    "relative": "README.en.md",
+    "sha256": "EC7CB168D3BE40284AB4E534BCFD1F47D94E5D5BD1DA123FFB6871E3BABB4701",
+    "commit": "e0984965ff8bd26fec67a798a9f35c5717d0a301",
+    "status": "FULL_READ",
+    "read_ranges": [
+      "1-180"
+    ],
+    "source_url": "https://github.com/quantskills/skill-a-share-market-participation/blob/e0984965ff8bd26fec67a798a9f35c5717d0a301/README.en.md"
+  },
+  {
+    "asset_id": 17,
+    "repo": "skill-a-share-market-participation",
+    "relative": "README.md",
+    "sha256": "6D777A8997817D5A51601DC7B5DE581D42801D5B217383416AC2B5EA4AC3F829",
+    "commit": "e0984965ff8bd26fec67a798a9f35c5717d0a301",
+    "status": "FULL_READ",
+    "read_ranges": [
+      "1-546"
+    ],
+    "source_url": "https://github.com/quantskills/skill-a-share-market-participation/blob/e0984965ff8bd26fec67a798a9f35c5717d0a301/README.md"
+  },
+  {
+    "asset_id": 17,
+    "repo": "skill-a-share-market-participation",
+    "relative": "requirements.txt",
+    "sha256": "889A16280459B045D4B6089CB8592CA9521F5495032AD4FAE7DF058C7286C167",
+    "commit": "e0984965ff8bd26fec67a798a9f35c5717d0a301",
+    "status": "FULL_READ",
+    "read_ranges": [
+      "1-3"
+    ],
+    "source_url": "https://github.com/quantskills/skill-a-share-market-participation/blob/e0984965ff8bd26fec67a798a9f35c5717d0a301/requirements.txt"
+  },
+  {
+    "asset_id": 17,
+    "repo": "skill-a-share-market-participation",
+    "relative": "SKILL.md",
+    "sha256": "0E8AC9D8784B72A78B5544905E2915A4356A4AF9966C6A8EAD80CFF1278E3FC8",
+    "commit": "e0984965ff8bd26fec67a798a9f35c5717d0a301",
+    "status": "FULL_READ",
+    "read_ranges": [
+      "1-128"
+    ],
+    "source_url": "https://github.com/quantskills/skill-a-share-market-participation/blob/e0984965ff8bd26fec67a798a9f35c5717d0a301/SKILL.md"
+  },
+  {
+    "asset_id": 17,
+    "repo": "skill-a-share-market-participation",
+    "relative": "agents\\portable-loader.md",
+    "sha256": "607979509BABD0AA7D028B01B173A44DF1F48F82DEF2DF328A742B70E1C6ED68",
+    "commit": "e0984965ff8bd26fec67a798a9f35c5717d0a301",
+    "status": "FULL_READ",
+    "read_ranges": [
+      "1-14"
+    ],
+    "source_url": "https://github.com/quantskills/skill-a-share-market-participation/blob/e0984965ff8bd26fec67a798a9f35c5717d0a301/agents/portable-loader.md"
+  },
+  {
+    "asset_id": 17,
+    "repo": "skill-a-share-market-participation",
+    "relative": "examples\\sample_report.md",
+    "sha256": "54160B58110F1CE0F90E9AF74C671BD0C2E0CF981D2FC47512463C07EB4880D2",
+    "commit": "e0984965ff8bd26fec67a798a9f35c5717d0a301",
+    "status": "FULL_READ",
+    "read_ranges": [
+      "1-67"
+    ],
+    "source_url": "https://github.com/quantskills/skill-a-share-market-participation/blob/e0984965ff8bd26fec67a798a9f35c5717d0a301/examples/sample_report.md"
+  },
+  {
+    "asset_id": 17,
+    "repo": "skill-a-share-market-participation",
+    "relative": "references\\input-contract.md",
+    "sha256": "B94A3CF6AC34AFB84B80D8CADAF2C6AC35E05B464602469A3A5C2E6C6C2FA322",
+    "commit": "e0984965ff8bd26fec67a798a9f35c5717d0a301",
+    "status": "FULL_READ",
+    "read_ranges": [
+      "1-87"
+    ],
+    "source_url": "https://github.com/quantskills/skill-a-share-market-participation/blob/e0984965ff8bd26fec67a798a9f35c5717d0a301/references/input-contract.md"
+  },
+  {
+    "asset_id": 17,
+    "repo": "skill-a-share-market-participation",
+    "relative": "references\\methodology.md",
+    "sha256": "DE7B7B90510DFEFACC7DBDCC78BC5DBA22FE1F3B7897D1FEE81791DEA1B57544",
+    "commit": "e0984965ff8bd26fec67a798a9f35c5717d0a301",
+    "status": "FULL_READ",
+    "read_ranges": [
+      "1-135"
+    ],
+    "source_url": "https://github.com/quantskills/skill-a-share-market-participation/blob/e0984965ff8bd26fec67a798a9f35c5717d0a301/references/methodology.md"
+  },
+  {
+    "asset_id": 17,
+    "repo": "skill-a-share-market-participation",
+    "relative": "references\\output-contract.md",
+    "sha256": "B0DAB0D8C037A597E9AAFC92BCAAA98C83001817ED479D2F3D69ECA6E04F3931",
+    "commit": "e0984965ff8bd26fec67a798a9f35c5717d0a301",
+    "status": "FULL_READ",
+    "read_ranges": [
+      "1-49"
+    ],
+    "source_url": "https://github.com/quantskills/skill-a-share-market-participation/blob/e0984965ff8bd26fec67a798a9f35c5717d0a301/references/output-contract.md"
+  },
+  {
+    "asset_id": 127,
+    "repo": "skill-keynes-contrarian-investment",
+    "relative": "CLAUDE.md",
+    "sha256": "414154F2F08F47BED6E24C301997CE81404749D8D805387952F2681861696E75",
+    "commit": "0c4bc57cf767979491bab26f4af6a9e55763e4ca",
+    "status": "FULL_READ",
+    "read_ranges": [
+      "1-3"
+    ],
+    "source_url": "https://github.com/quantskills/skill-keynes-contrarian-investment/blob/0c4bc57cf767979491bab26f4af6a9e55763e4ca/CLAUDE.md"
+  },
+  {
+    "asset_id": 127,
+    "repo": "skill-keynes-contrarian-investment",
+    "relative": "README.en.md",
+    "sha256": "FF84252FFBB5C9A659ACE834BCA36392C103FCA441F747B072091D4D06B9CB5F",
+    "commit": "0c4bc57cf767979491bab26f4af6a9e55763e4ca",
+    "status": "FULL_READ",
+    "read_ranges": [
+      "1-158"
+    ],
+    "source_url": "https://github.com/quantskills/skill-keynes-contrarian-investment/blob/0c4bc57cf767979491bab26f4af6a9e55763e4ca/README.en.md"
+  },
+  {
+    "asset_id": 127,
+    "repo": "skill-keynes-contrarian-investment",
+    "relative": "README.md",
+    "sha256": "6AF2A134A949DA278F7C405E946EDD1220FEFDF126287428E18F0911B3724BBA",
+    "commit": "0c4bc57cf767979491bab26f4af6a9e55763e4ca",
+    "status": "FULL_READ",
+    "read_ranges": [
+      "1-156"
+    ],
+    "source_url": "https://github.com/quantskills/skill-keynes-contrarian-investment/blob/0c4bc57cf767979491bab26f4af6a9e55763e4ca/README.md"
+  },
+  {
+    "asset_id": 127,
+    "repo": "skill-keynes-contrarian-investment",
+    "relative": "SKILL.md",
+    "sha256": "9503F65D32376083F58C6C27CA7CBE424B55F78B36962C99211602EAEC848787",
+    "commit": "0c4bc57cf767979491bab26f4af6a9e55763e4ca",
+    "status": "FULL_READ",
+    "read_ranges": [
+      "1-232"
+    ],
+    "source_url": "https://github.com/quantskills/skill-keynes-contrarian-investment/blob/0c4bc57cf767979491bab26f4af6a9e55763e4ca/SKILL.md"
+  },
+  {
+    "asset_id": 127,
+    "repo": "skill-keynes-contrarian-investment",
+    "relative": "agents\\portable-loader.md",
+    "sha256": "9B815CAF838DAFDCC301B893A7CDEF72096D9205EFFD05B0FCC95E5FDAF2D9C4",
+    "commit": "0c4bc57cf767979491bab26f4af6a9e55763e4ca",
+    "status": "FULL_READ",
+    "read_ranges": [
+      "1-23"
+    ],
+    "source_url": "https://github.com/quantskills/skill-keynes-contrarian-investment/blob/0c4bc57cf767979491bab26f4af6a9e55763e4ca/agents/portable-loader.md"
+  },
+  {
+    "asset_id": 127,
+    "repo": "skill-keynes-contrarian-investment",
+    "relative": "references\\data_dictionary.md",
+    "sha256": "CAB789C025DEF74381243C4F16B06CD65F62E8CDFAD4D1F7661AA0CDB29A2459",
+    "commit": "0c4bc57cf767979491bab26f4af6a9e55763e4ca",
+    "status": "FULL_READ",
+    "read_ranges": [
+      "1-13"
+    ],
+    "source_url": "https://github.com/quantskills/skill-keynes-contrarian-investment/blob/0c4bc57cf767979491bab26f4af6a9e55763e4ca/references/data_dictionary.md"
+  },
+  {
+    "asset_id": 127,
+    "repo": "skill-keynes-contrarian-investment",
+    "relative": "references\\examples.md",
+    "sha256": "6BBE99214987A2B2ED3FD30580F0117884B6BDB44CCC68C5475627930CED6722",
+    "commit": "0c4bc57cf767979491bab26f4af6a9e55763e4ca",
+    "status": "FULL_READ",
+    "read_ranges": [
+      "1-304"
+    ],
+    "source_url": "https://github.com/quantskills/skill-keynes-contrarian-investment/blob/0c4bc57cf767979491bab26f4af6a9e55763e4ca/references/examples.md"
+  },
+  {
+    "asset_id": 127,
+    "repo": "skill-keynes-contrarian-investment",
+    "relative": "references\\investment_framework.md",
+    "sha256": "20E8A3C94320D98F8CC632A6C4AE398A31A560A1E85F68D4585EE89654E9105B",
+    "commit": "0c4bc57cf767979491bab26f4af6a9e55763e4ca",
+    "status": "FULL_READ",
+    "read_ranges": [
+      "1-27"
+    ],
+    "source_url": "https://github.com/quantskills/skill-keynes-contrarian-investment/blob/0c4bc57cf767979491bab26f4af6a9e55763e4ca/references/investment_framework.md"
+  },
+  {
+    "asset_id": 127,
+    "repo": "skill-keynes-contrarian-investment",
+    "relative": "references\\methodology.md",
+    "sha256": "DC2E0BAAC46AD49F5CF1B8EBA3021B257DA6B58461F2F097A52BE0F667F537D5",
+    "commit": "0c4bc57cf767979491bab26f4af6a9e55763e4ca",
+    "status": "FULL_READ",
+    "read_ranges": [
+      "1-25"
+    ],
+    "source_url": "https://github.com/quantskills/skill-keynes-contrarian-investment/blob/0c4bc57cf767979491bab26f4af6a9e55763e4ca/references/methodology.md"
+  },
+  {
+    "asset_id": 127,
+    "repo": "skill-keynes-contrarian-investment",
+    "relative": "references\\output_schema.md",
+    "sha256": "F83749B6F8B3A8A82518936438C80E98F95D34CDD5B47F1080833D8930F8F30E",
+    "commit": "0c4bc57cf767979491bab26f4af6a9e55763e4ca",
+    "status": "FULL_READ",
+    "read_ranges": [
+      "1-25"
+    ],
+    "source_url": "https://github.com/quantskills/skill-keynes-contrarian-investment/blob/0c4bc57cf767979491bab26f4af6a9e55763e4ca/references/output_schema.md"
+  },
+  {
+    "asset_id": 127,
+    "repo": "skill-keynes-contrarian-investment",
+    "relative": "references\\pandadata_contract.md",
+    "sha256": "5C92B347D387A7CA941C1C31C411BF66810D694446F38D0F257E04EA2C76E027",
+    "commit": "0c4bc57cf767979491bab26f4af6a9e55763e4ca",
+    "status": "FULL_READ",
+    "read_ranges": [
+      "1-28"
+    ],
+    "source_url": "https://github.com/quantskills/skill-keynes-contrarian-investment/blob/0c4bc57cf767979491bab26f4af6a9e55763e4ca/references/pandadata_contract.md"
+  },
+  {
+    "asset_id": 127,
+    "repo": "skill-keynes-contrarian-investment",
+    "relative": "references\\source_boundary.md",
+    "sha256": "1E6314026DC42CF9EE3EE32B216FED8111117C1B26B390012DCE47DBF0816B0C",
+    "commit": "0c4bc57cf767979491bab26f4af6a9e55763e4ca",
+    "status": "FULL_READ",
+    "read_ranges": [
+      "1-7"
+    ],
+    "source_url": "https://github.com/quantskills/skill-keynes-contrarian-investment/blob/0c4bc57cf767979491bab26f4af6a9e55763e4ca/references/source_boundary.md"
+  },
+  {
+    "asset_id": 95,
+    "repo": "skill-fundamental-alpha",
+    "relative": "README.en.md",
+    "sha256": "564791A96A205034486CACA1B701CDE347AFCCE11267624C30E591462801DDD4",
+    "commit": "5bbb00a244f2e1330894d3c7fcb016d5c98b9954",
+    "status": "FULL_READ",
+    "read_ranges": [
+      "1-93"
+    ],
+    "source_url": "https://github.com/quantskills/skill-fundamental-alpha/blob/5bbb00a244f2e1330894d3c7fcb016d5c98b9954/README.en.md"
+  },
+  {
+    "asset_id": 95,
+    "repo": "skill-fundamental-alpha",
+    "relative": "README.md",
+    "sha256": "1DDADD3EAB8576DA36CC695F5165BBD4B0B8BAD1EE633F19874FD19EF35F4C1E",
+    "commit": "5bbb00a244f2e1330894d3c7fcb016d5c98b9954",
+    "status": "FULL_READ",
+    "read_ranges": [
+      "1-89"
+    ],
+    "source_url": "https://github.com/quantskills/skill-fundamental-alpha/blob/5bbb00a244f2e1330894d3c7fcb016d5c98b9954/README.md"
+  },
+  {
+    "asset_id": 95,
+    "repo": "skill-fundamental-alpha",
+    "relative": "requirements.txt",
+    "sha256": "10A8E322E63B696F37A6BA693E56107F2BBF5E3863F281E01F0AC087A4062F0D",
+    "commit": "5bbb00a244f2e1330894d3c7fcb016d5c98b9954",
+    "status": "FULL_READ",
+    "read_ranges": [
+      "1-4"
+    ],
+    "source_url": "https://github.com/quantskills/skill-fundamental-alpha/blob/5bbb00a244f2e1330894d3c7fcb016d5c98b9954/requirements.txt"
+  },
+  {
+    "asset_id": 95,
+    "repo": "skill-fundamental-alpha",
+    "relative": "SKILL.md",
+    "sha256": "84470E20FB8FE6505496427B8E8F4C82F9CFA6148FCAE0AB5BB46251D80E9D05",
+    "commit": "5bbb00a244f2e1330894d3c7fcb016d5c98b9954",
+    "status": "FULL_READ",
+    "read_ranges": [
+      "1-327"
+    ],
+    "source_url": "https://github.com/quantskills/skill-fundamental-alpha/blob/5bbb00a244f2e1330894d3c7fcb016d5c98b9954/SKILL.md"
+  },
+  {
+    "asset_id": 95,
+    "repo": "skill-fundamental-alpha",
+    "relative": "agents\\portable-loader.md",
+    "sha256": "6B98DE95374092C8966CCF6B0A91A0096F7AFD5B4A62A7865F26ED7238701236",
+    "commit": "5bbb00a244f2e1330894d3c7fcb016d5c98b9954",
+    "status": "FULL_READ",
+    "read_ranges": [
+      "1-58"
+    ],
+    "source_url": "https://github.com/quantskills/skill-fundamental-alpha/blob/5bbb00a244f2e1330894d3c7fcb016d5c98b9954/agents/portable-loader.md"
+  },
+  {
+    "asset_id": 95,
+    "repo": "skill-fundamental-alpha",
+    "relative": "references\\agent-integration.md",
+    "sha256": "758673026BDEF0A6C3318B5FF653ED36F5D91250FCDC0D6D76AC78CDBADA52D8",
+    "commit": "5bbb00a244f2e1330894d3c7fcb016d5c98b9954",
+    "status": "FULL_READ",
+    "read_ranges": [
+      "1-49"
+    ],
+    "source_url": "https://github.com/quantskills/skill-fundamental-alpha/blob/5bbb00a244f2e1330894d3c7fcb016d5c98b9954/references/agent-integration.md"
+  },
+  {
+    "asset_id": 95,
+    "repo": "skill-fundamental-alpha",
+    "relative": "references\\fundamental_ops.md",
+    "sha256": "F4968B74A26AEB95D5C4E2071A9475891BD10BB6A7567E0CD47A4AC2027DAA8E",
+    "commit": "5bbb00a244f2e1330894d3c7fcb016d5c98b9954",
+    "status": "FULL_READ",
+    "read_ranges": [
+      "1-267"
+    ],
+    "source_url": "https://github.com/quantskills/skill-fundamental-alpha/blob/5bbb00a244f2e1330894d3c7fcb016d5c98b9954/references/fundamental_ops.md"
+  },
+  {
+    "asset_id": 120,
+    "repo": "skill-ic-analysis",
+    "relative": "README.en.md",
+    "sha256": "9E667FE201A57E1B61291E31DBD67C6B08AC8FEFE5C128BDC30A14B76AB684BD",
+    "commit": "a2a864852ed53145a2cf833f0dde84b10a93916f",
+    "status": "FULL_READ",
+    "read_ranges": [
+      "1-133"
+    ],
+    "source_url": "https://github.com/quantskills/skill-ic-analysis/blob/a2a864852ed53145a2cf833f0dde84b10a93916f/README.en.md"
+  },
+  {
+    "asset_id": 120,
+    "repo": "skill-ic-analysis",
+    "relative": "README.md",
+    "sha256": "EA3126012CDEFB38042B1F83988FA1C8AEE43F21F5CB06D88D74F56E96D4B9E1",
+    "commit": "a2a864852ed53145a2cf833f0dde84b10a93916f",
+    "status": "FULL_READ",
+    "read_ranges": [
+      "1-134"
+    ],
+    "source_url": "https://github.com/quantskills/skill-ic-analysis/blob/a2a864852ed53145a2cf833f0dde84b10a93916f/README.md"
+  },
+  {
+    "asset_id": 120,
+    "repo": "skill-ic-analysis",
+    "relative": "SKILL.md",
+    "sha256": "E37AA850338AFA03FCAE35349D6959666E6A41A3BBC8F86F276A5E8571DD8609",
+    "commit": "a2a864852ed53145a2cf833f0dde84b10a93916f",
+    "status": "FULL_READ",
+    "read_ranges": [
+      "1-156"
+    ],
+    "source_url": "https://github.com/quantskills/skill-ic-analysis/blob/a2a864852ed53145a2cf833f0dde84b10a93916f/SKILL.md"
+  },
+  {
+    "asset_id": 120,
+    "repo": "skill-ic-analysis",
+    "relative": "agents\\portable-loader.md",
+    "sha256": "BF581FB24B03F822A0599533DD27AD61938B0A69BD47212BE8E5D4421687D658",
+    "commit": "a2a864852ed53145a2cf833f0dde84b10a93916f",
+    "status": "FULL_READ",
+    "read_ranges": [
+      "1-63"
+    ],
+    "source_url": "https://github.com/quantskills/skill-ic-analysis/blob/a2a864852ed53145a2cf833f0dde84b10a93916f/agents/portable-loader.md"
+  },
+  {
+    "asset_id": 120,
+    "repo": "skill-ic-analysis",
+    "relative": "references\\dual-ic.md",
+    "sha256": "2F2DB7D0F786893B93FE09253E660483D989F0977818768B19C3EB38BB89FCCE",
+    "commit": "a2a864852ed53145a2cf833f0dde84b10a93916f",
+    "status": "FULL_READ",
+    "read_ranges": [
+      "1-61"
+    ],
+    "source_url": "https://github.com/quantskills/skill-ic-analysis/blob/a2a864852ed53145a2cf833f0dde84b10a93916f/references/dual-ic.md"
+  },
+  {
+    "asset_id": 120,
+    "repo": "skill-ic-analysis",
+    "relative": "references\\ic-decay.md",
+    "sha256": "620C13EF894BC214AE0BBD1A74BD22FE5AB7073A5E241651186C4CFDBC197036",
+    "commit": "a2a864852ed53145a2cf833f0dde84b10a93916f",
+    "status": "FULL_READ",
+    "read_ranges": [
+      "1-76"
+    ],
+    "source_url": "https://github.com/quantskills/skill-ic-analysis/blob/a2a864852ed53145a2cf833f0dde84b10a93916f/references/ic-decay.md"
+  },
+  {
+    "asset_id": 120,
+    "repo": "skill-ic-analysis",
+    "relative": "references\\ic-timeline.md",
+    "sha256": "D0E4EBABBD6F327D755FF5343628F2DBB14A1BAC83BA5E4346A9B1244A24ADA3",
+    "commit": "a2a864852ed53145a2cf833f0dde84b10a93916f",
+    "status": "FULL_READ",
+    "read_ranges": [
+      "1-82"
+    ],
+    "source_url": "https://github.com/quantskills/skill-ic-analysis/blob/a2a864852ed53145a2cf833f0dde84b10a93916f/references/ic-timeline.md"
+  },
+  {
+    "asset_id": 120,
+    "repo": "skill-ic-analysis",
+    "relative": "references\\report-format.md",
+    "sha256": "750C8B44C7B5A42C513C4C4D5F4C48F1684A30A94A7D1953EE957B5F716F3270",
+    "commit": "a2a864852ed53145a2cf833f0dde84b10a93916f",
+    "status": "FULL_READ",
+    "read_ranges": [
+      "1-77"
+    ],
+    "source_url": "https://github.com/quantskills/skill-ic-analysis/blob/a2a864852ed53145a2cf833f0dde84b10a93916f/references/report-format.md"
+  },
+  {
+    "asset_id": 120,
+    "repo": "skill-ic-analysis",
+    "relative": "references\\subsample-ic.md",
+    "sha256": "147182D2779F9D054382D919E5A2AF533E86E16281C7E1C833D5B4061146E815",
+    "commit": "a2a864852ed53145a2cf833f0dde84b10a93916f",
+    "status": "FULL_READ",
+    "read_ranges": [
+      "1-79"
+    ],
+    "source_url": "https://github.com/quantskills/skill-ic-analysis/blob/a2a864852ed53145a2cf833f0dde84b10a93916f/references/subsample-ic.md"
+  },
+  {
+    "asset_id": 120,
+    "repo": "skill-ic-analysis",
+    "relative": "references\\top-basket-stability.md",
+    "sha256": "0191343FC86F0AE7C1502204095DF4495037D520B076E9CDBEDFA7BC627A13DD",
+    "commit": "a2a864852ed53145a2cf833f0dde84b10a93916f",
+    "status": "FULL_READ",
+    "read_ranges": [
+      "1-68"
+    ],
+    "source_url": "https://github.com/quantskills/skill-ic-analysis/blob/a2a864852ed53145a2cf833f0dde84b10a93916f/references/top-basket-stability.md"
+  },
+  {
+    "asset_id": 107,
+    "repo": "skill-global-macro-trend-strategy",
+    "relative": "README.en.md",
+    "sha256": "A83BCF6C79B42F716F5482B47656D9AAD4A1F5DEA3AEF227C8DFBA6838588337",
+    "commit": "2eb638f8da966e51e5d0c026a7bc66a6f408d0c7",
+    "status": "FULL_READ",
+    "read_ranges": [
+      "1-132"
+    ],
+    "source_url": "https://github.com/quantskills/skill-global-macro-trend-strategy/blob/2eb638f8da966e51e5d0c026a7bc66a6f408d0c7/README.en.md"
+  },
+  {
+    "asset_id": 107,
+    "repo": "skill-global-macro-trend-strategy",
+    "relative": "README.md",
+    "sha256": "CF02D501D65360FF1D29CD8F259BC8F689D279B452D6F956DF2511259BAFB1C2",
+    "commit": "2eb638f8da966e51e5d0c026a7bc66a6f408d0c7",
+    "status": "FULL_READ",
+    "read_ranges": [
+      "1-121"
+    ],
+    "source_url": "https://github.com/quantskills/skill-global-macro-trend-strategy/blob/2eb638f8da966e51e5d0c026a7bc66a6f408d0c7/README.md"
+  },
+  {
+    "asset_id": 107,
+    "repo": "skill-global-macro-trend-strategy",
+    "relative": "SKILL.md",
+    "sha256": "B5EEFDC5DC0B43FB8B249847A5BF6ACCE3E974A925B193B50EE87AFE2A40A8FF",
+    "commit": "2eb638f8da966e51e5d0c026a7bc66a6f408d0c7",
+    "status": "FULL_READ",
+    "read_ranges": [
+      "1-157"
+    ],
+    "source_url": "https://github.com/quantskills/skill-global-macro-trend-strategy/blob/2eb638f8da966e51e5d0c026a7bc66a6f408d0c7/SKILL.md"
+  },
+  {
+    "asset_id": 107,
+    "repo": "skill-global-macro-trend-strategy",
+    "relative": "agents\\portable-loader.md",
+    "sha256": "FB76DB176A2AC85B23D07E3017033B5F106A907C95A3AC5721CF24C966F5D84C",
+    "commit": "2eb638f8da966e51e5d0c026a7bc66a6f408d0c7",
+    "status": "FULL_READ",
+    "read_ranges": [
+      "1-16"
+    ],
+    "source_url": "https://github.com/quantskills/skill-global-macro-trend-strategy/blob/2eb638f8da966e51e5d0c026a7bc66a6f408d0c7/agents/portable-loader.md"
+  },
+  {
+    "asset_id": 107,
+    "repo": "skill-global-macro-trend-strategy",
+    "relative": "references\\backtest-notes.md",
+    "sha256": "965CEF7668E057167FE383D47141E6024F50B6BD8576C8CAA182BCE996E716A9",
+    "commit": "2eb638f8da966e51e5d0c026a7bc66a6f408d0c7",
+    "status": "FULL_READ",
+    "read_ranges": [
+      "1-62"
+    ],
+    "source_url": "https://github.com/quantskills/skill-global-macro-trend-strategy/blob/2eb638f8da966e51e5d0c026a7bc66a6f408d0c7/references/backtest-notes.md"
+  },
+  {
+    "asset_id": 107,
+    "repo": "skill-global-macro-trend-strategy",
+    "relative": "references\\source_boundary.md",
+    "sha256": "B771D2C941B5A7DD5DCBF25762971D1CA3E05BB09314923CA054DC3C16DA9AEF",
+    "commit": "2eb638f8da966e51e5d0c026a7bc66a6f408d0c7",
+    "status": "FULL_READ",
+    "read_ranges": [
+      "1-19"
+    ],
+    "source_url": "https://github.com/quantskills/skill-global-macro-trend-strategy/blob/2eb638f8da966e51e5d0c026a7bc66a6f408d0c7/references/source_boundary.md"
+  },
+  {
+    "asset_id": 107,
+    "repo": "skill-global-macro-trend-strategy",
+    "relative": "references\\strategy-contract.md",
+    "sha256": "4697A278FC22D8FB516F9BA53401D94A4DA4EC1FBBE818F58C2AAE7D6F7DD40D",
+    "commit": "2eb638f8da966e51e5d0c026a7bc66a6f408d0c7",
+    "status": "FULL_READ",
+    "read_ranges": [
+      "1-75"
+    ],
+    "source_url": "https://github.com/quantskills/skill-global-macro-trend-strategy/blob/2eb638f8da966e51e5d0c026a7bc66a6f408d0c7/references/strategy-contract.md"
+  },
+  {
+    "asset_id": 88,
+    "repo": "skill-factor-pool-evolution",
+    "relative": "README.en.md",
+    "sha256": "4C788CC2BCFD1A9A837D17B8C7F9D87172FA1FF843977889348189C034234F92",
+    "commit": "6731bfa8bf1da6fb3f3ecc6e7eb730005002342e",
+    "status": "FULL_READ",
+    "read_ranges": [
+      "1-92"
+    ],
+    "source_url": "https://github.com/quantskills/skill-factor-pool-evolution/blob/6731bfa8bf1da6fb3f3ecc6e7eb730005002342e/README.en.md"
+  },
+  {
+    "asset_id": 88,
+    "repo": "skill-factor-pool-evolution",
+    "relative": "README.md",
+    "sha256": "A7E5420FC91559AA1F5D35BF835F6DC47D8410FEFB8A9BCD09940B9C17D52E9E",
+    "commit": "6731bfa8bf1da6fb3f3ecc6e7eb730005002342e",
+    "status": "FULL_READ",
+    "read_ranges": [
+      "1-96"
+    ],
+    "source_url": "https://github.com/quantskills/skill-factor-pool-evolution/blob/6731bfa8bf1da6fb3f3ecc6e7eb730005002342e/README.md"
+  },
+  {
+    "asset_id": 88,
+    "repo": "skill-factor-pool-evolution",
+    "relative": "SKILL.md",
+    "sha256": "28E4A409B2699576142793F8A085B5A578B5757C013E967A48AB7587F56D3DE7",
+    "commit": "6731bfa8bf1da6fb3f3ecc6e7eb730005002342e",
+    "status": "FULL_READ",
+    "read_ranges": [
+      "1-213"
+    ],
+    "source_url": "https://github.com/quantskills/skill-factor-pool-evolution/blob/6731bfa8bf1da6fb3f3ecc6e7eb730005002342e/SKILL.md"
+  },
+  {
+    "asset_id": 88,
+    "repo": "skill-factor-pool-evolution",
+    "relative": "agents\\portable-loader.md",
+    "sha256": "00EE3A26CB34CE4189DBC4FBEEAB20DD1F7E4FDB2939A8F9219C5B5076F826CF",
+    "commit": "6731bfa8bf1da6fb3f3ecc6e7eb730005002342e",
+    "status": "FULL_READ",
+    "read_ranges": [
+      "1-40"
+    ],
+    "source_url": "https://github.com/quantskills/skill-factor-pool-evolution/blob/6731bfa8bf1da6fb3f3ecc6e7eb730005002342e/agents/portable-loader.md"
+  },
+  {
+    "asset_id": 88,
+    "repo": "skill-factor-pool-evolution",
+    "relative": "references\\evolution_rules.md",
+    "sha256": "DA0EC93A8542A1C181DF49B5E29D2F3D4480C6F3977BDCC5496C18602134D72A",
+    "commit": "6731bfa8bf1da6fb3f3ecc6e7eb730005002342e",
+    "status": "FULL_READ",
+    "read_ranges": [
+      "1-155"
+    ],
+    "source_url": "https://github.com/quantskills/skill-factor-pool-evolution/blob/6731bfa8bf1da6fb3f3ecc6e7eb730005002342e/references/evolution_rules.md"
+  },
+  {
+    "asset_id": 88,
+    "repo": "skill-factor-pool-evolution",
+    "relative": "references\\input_schema.md",
+    "sha256": "FCABA40A4C0D8418E49A059DC7C03623F698C8579DC052C8484908BF0A002B64",
+    "commit": "6731bfa8bf1da6fb3f3ecc6e7eb730005002342e",
+    "status": "FULL_READ",
+    "read_ranges": [
+      "1-193"
+    ],
+    "source_url": "https://github.com/quantskills/skill-factor-pool-evolution/blob/6731bfa8bf1da6fb3f3ecc6e7eb730005002342e/references/input_schema.md"
+  },
+  {
+    "asset_id": 88,
+    "repo": "skill-factor-pool-evolution",
+    "relative": "references\\output_contract.md",
+    "sha256": "68E8AB2F1928CDF38A2FFA4765359ED43A4A283460124774DCD43389CCAFD3BD",
+    "commit": "6731bfa8bf1da6fb3f3ecc6e7eb730005002342e",
+    "status": "FULL_READ",
+    "read_ranges": [
+      "1-117"
+    ],
+    "source_url": "https://github.com/quantskills/skill-factor-pool-evolution/blob/6731bfa8bf1da6fb3f3ecc6e7eb730005002342e/references/output_contract.md"
+  },
+  {
+    "asset_id": 176,
+    "repo": "skill-quant-portfolio-risk",
+    "relative": "CLAUDE.md",
+    "sha256": "B0337FFF06F59119674FC164707A6C6ECD4160802E3F5F028F909E84491737D4",
+    "commit": "c89d92b7a6b03e8ec8df729978e73d56aadf3cd4",
+    "status": "FULL_READ",
+    "read_ranges": [
+      "1-7"
+    ],
+    "source_url": "https://github.com/quantskills/skill-quant-portfolio-risk/blob/c89d92b7a6b03e8ec8df729978e73d56aadf3cd4/CLAUDE.md"
+  },
+  {
+    "asset_id": 176,
+    "repo": "skill-quant-portfolio-risk",
+    "relative": "README.en.md",
+    "sha256": "14C05C42741719F1DA924CB3A1F39E6A202FE03C9CBE76E85D266B6976DC7D31",
+    "commit": "c89d92b7a6b03e8ec8df729978e73d56aadf3cd4",
+    "status": "FULL_READ",
+    "read_ranges": [
+      "1-31"
+    ],
+    "source_url": "https://github.com/quantskills/skill-quant-portfolio-risk/blob/c89d92b7a6b03e8ec8df729978e73d56aadf3cd4/README.en.md"
+  },
+  {
+    "asset_id": 176,
+    "repo": "skill-quant-portfolio-risk",
+    "relative": "README.md",
+    "sha256": "531C7EE0282BBCEDBD5477DDDC1D9B7C687C3C7A4FD12C0941292D823574CAD4",
+    "commit": "c89d92b7a6b03e8ec8df729978e73d56aadf3cd4",
+    "status": "FULL_READ",
+    "read_ranges": [
+      "1-30"
+    ],
+    "source_url": "https://github.com/quantskills/skill-quant-portfolio-risk/blob/c89d92b7a6b03e8ec8df729978e73d56aadf3cd4/README.md"
+  },
+  {
+    "asset_id": 176,
+    "repo": "skill-quant-portfolio-risk",
+    "relative": "SKILL.md",
+    "sha256": "26AAB128DDAE5E679D149671E6854F09AEA7340870DCCACFC4423777789616A4",
+    "commit": "c89d92b7a6b03e8ec8df729978e73d56aadf3cd4",
+    "status": "FULL_READ",
+    "read_ranges": [
+      "1-108"
+    ],
+    "source_url": "https://github.com/quantskills/skill-quant-portfolio-risk/blob/c89d92b7a6b03e8ec8df729978e73d56aadf3cd4/SKILL.md"
+  },
+  {
+    "asset_id": 176,
+    "repo": "skill-quant-portfolio-risk",
+    "relative": "agents\\portable-loader.md",
+    "sha256": "543C58446836991B79151DA4C81B6976E0D71B931F6A5298F8B315B96460FDA0",
+    "commit": "c89d92b7a6b03e8ec8df729978e73d56aadf3cd4",
+    "status": "FULL_READ",
+    "read_ranges": [
+      "1-5"
+    ],
+    "source_url": "https://github.com/quantskills/skill-quant-portfolio-risk/blob/c89d92b7a6b03e8ec8df729978e73d56aadf3cd4/agents/portable-loader.md"
+  },
+  {
+    "asset_id": 176,
+    "repo": "skill-quant-portfolio-risk",
+    "relative": "references\\governance-and-monitoring.md",
+    "sha256": "8122E19DEA8E032169269F5CB9320166E373413F3F7D8B0B8CE8D058F826F98B",
+    "commit": "c89d92b7a6b03e8ec8df729978e73d56aadf3cd4",
+    "status": "FULL_READ",
+    "read_ranges": [
+      "1-79"
+    ],
+    "source_url": "https://github.com/quantskills/skill-quant-portfolio-risk/blob/c89d92b7a6b03e8ec8df729978e73d56aadf3cd4/references/governance-and-monitoring.md"
+  },
+  {
+    "asset_id": 176,
+    "repo": "skill-quant-portfolio-risk",
+    "relative": "references\\portfolio-construction.md",
+    "sha256": "E4AFE816E7CB40BE290B8917ED61DA6142290F4BEB55C6C49F33DF47ED2233E7",
+    "commit": "c89d92b7a6b03e8ec8df729978e73d56aadf3cd4",
+    "status": "FULL_READ",
+    "read_ranges": [
+      "1-99"
+    ],
+    "source_url": "https://github.com/quantskills/skill-quant-portfolio-risk/blob/c89d92b7a6b03e8ec8df729978e73d56aadf3cd4/references/portfolio-construction.md"
+  },
+  {
+    "asset_id": 176,
+    "repo": "skill-quant-portfolio-risk",
+    "relative": "references\\risk-models.md",
+    "sha256": "B34DD9E46F7D51E6A2ACA58EC27535ED3DDEBE47DECC539D1ED92A65786E8B1D",
+    "commit": "c89d92b7a6b03e8ec8df729978e73d56aadf3cd4",
+    "status": "FULL_READ",
+    "read_ranges": [
+      "1-78"
+    ],
+    "source_url": "https://github.com/quantskills/skill-quant-portfolio-risk/blob/c89d92b7a6b03e8ec8df729978e73d56aadf3cd4/references/risk-models.md"
+  },
+  {
+    "asset_id": 6,
+    "repo": "agent-derivatives-skew-sentiment-monitor",
+    "relative": "AGENTS.md",
+    "sha256": "9853E3F240F6423B984B927404E3E08522AB71F1439BC9FE3F1F8D457B481C7B",
+    "commit": "266b0239b19f88b1f65393d769ae857a662aab26",
+    "status": "FULL_READ",
+    "read_ranges": [
+      "1-132"
+    ],
+    "source_url": "https://github.com/quantskills/agent-derivatives-skew-sentiment-monitor/blob/266b0239b19f88b1f65393d769ae857a662aab26/AGENTS.md"
+  },
+  {
+    "asset_id": 6,
+    "repo": "agent-derivatives-skew-sentiment-monitor",
+    "relative": "README.en.md",
+    "sha256": "21B395CADE29D08BC47CD79C129FED2D4D0BA20D78D601FFE5D8F1D5F1B0CEC9",
+    "commit": "266b0239b19f88b1f65393d769ae857a662aab26",
+    "status": "FULL_READ",
+    "read_ranges": [
+      "1-177"
+    ],
+    "source_url": "https://github.com/quantskills/agent-derivatives-skew-sentiment-monitor/blob/266b0239b19f88b1f65393d769ae857a662aab26/README.en.md"
+  },
+  {
+    "asset_id": 6,
+    "repo": "agent-derivatives-skew-sentiment-monitor",
+    "relative": "README.md",
+    "sha256": "243E780F7DA5F8962DDA19FA1EE7253B09576CE8947E88A6F441B3D975A7CCA7",
+    "commit": "266b0239b19f88b1f65393d769ae857a662aab26",
+    "status": "FULL_READ",
+    "read_ranges": [
+      "1-177"
+    ],
+    "source_url": "https://github.com/quantskills/agent-derivatives-skew-sentiment-monitor/blob/266b0239b19f88b1f65393d769ae857a662aab26/README.md"
+  },
+  {
+    "asset_id": 6,
+    "repo": "agent-derivatives-skew-sentiment-monitor",
+    "relative": "requirements.txt",
+    "sha256": "B956D8C142E8D8F9B4C2B6D3A60A8449C8CBFF586461292F02174448417BF010",
+    "commit": "266b0239b19f88b1f65393d769ae857a662aab26",
+    "status": "FULL_READ",
+    "read_ranges": [
+      "1-3"
+    ],
+    "source_url": "https://github.com/quantskills/agent-derivatives-skew-sentiment-monitor/blob/266b0239b19f88b1f65393d769ae857a662aab26/requirements.txt"
+  },
+  {
+    "asset_id": 6,
+    "repo": "agent-derivatives-skew-sentiment-monitor",
+    "relative": "examples\\prompt.md",
+    "sha256": "E971ED10D9486C96927D5B5B6E4528C3C4CABBF9CFF6DB02A337F710EE357A66",
+    "commit": "266b0239b19f88b1f65393d769ae857a662aab26",
+    "status": "FULL_READ",
+    "read_ranges": [
+      "1-6"
+    ],
+    "source_url": "https://github.com/quantskills/agent-derivatives-skew-sentiment-monitor/blob/266b0239b19f88b1f65393d769ae857a662aab26/examples/prompt.md"
+  },
+  {
+    "asset_id": 6,
+    "repo": "agent-derivatives-skew-sentiment-monitor",
+    "relative": "outputs\\live\\deliverable_index.md",
+    "sha256": "1AC5013C5DBA01374072EF72B1034C3373F314B1B5039C10AD9ADB8CEC2F23D3",
+    "commit": "266b0239b19f88b1f65393d769ae857a662aab26",
+    "status": "FULL_READ",
+    "read_ranges": [
+      "1-8"
+    ],
+    "source_url": "https://github.com/quantskills/agent-derivatives-skew-sentiment-monitor/blob/266b0239b19f88b1f65393d769ae857a662aab26/outputs/live/deliverable_index.md"
+  },
+  {
+    "asset_id": 6,
+    "repo": "agent-derivatives-skew-sentiment-monitor",
+    "relative": "outputs\\live\\derivatives_sentiment_memo.md",
+    "sha256": "12C2589AE0B4B1A3F2E83E23F8DD8FF43A2AB2AAC5F216EF702CAABA3DF44389",
+    "commit": "266b0239b19f88b1f65393d769ae857a662aab26",
+    "status": "FULL_READ",
+    "read_ranges": [
+      "1-6"
+    ],
+    "source_url": "https://github.com/quantskills/agent-derivatives-skew-sentiment-monitor/blob/266b0239b19f88b1f65393d769ae857a662aab26/outputs/live/derivatives_sentiment_memo.md"
+  },
+  {
+    "asset_id": 6,
+    "repo": "agent-derivatives-skew-sentiment-monitor",
+    "relative": "outputs\\live\\handoff_card.md",
+    "sha256": "60D001BFF18EF2C6C824D9064993E08583D12FB1A1C73B63B886267EB496A2E8",
+    "commit": "266b0239b19f88b1f65393d769ae857a662aab26",
+    "status": "FULL_READ",
+    "read_ranges": [
+      "1-7"
+    ],
+    "source_url": "https://github.com/quantskills/agent-derivatives-skew-sentiment-monitor/blob/266b0239b19f88b1f65393d769ae857a662aab26/outputs/live/handoff_card.md"
+  },
+  {
+    "asset_id": 6,
+    "repo": "agent-derivatives-skew-sentiment-monitor",
+    "relative": "outputs\\live\\monitoring_rules.md",
+    "sha256": "AFF90006E677488566BBDD8C6240B0E71DEA30B3A35031F2686B2E75C8080149",
+    "commit": "266b0239b19f88b1f65393d769ae857a662aab26",
+    "status": "FULL_READ",
+    "read_ranges": [
+      "1-3"
+    ],
+    "source_url": "https://github.com/quantskills/agent-derivatives-skew-sentiment-monitor/blob/266b0239b19f88b1f65393d769ae857a662aab26/outputs/live/monitoring_rules.md"
+  },
+  {
+    "asset_id": 6,
+    "repo": "agent-derivatives-skew-sentiment-monitor",
+    "relative": "outputs\\live\\operator_runbook.md",
+    "sha256": "E21DCB9FD21193B47A8FEDE72A801EBFF596F3F8F5BCA98D5D7ABD0BBB22887C",
+    "commit": "266b0239b19f88b1f65393d769ae857a662aab26",
+    "status": "FULL_READ",
+    "read_ranges": [
+      "1-4"
+    ],
+    "source_url": "https://github.com/quantskills/agent-derivatives-skew-sentiment-monitor/blob/266b0239b19f88b1f65393d769ae857a662aab26/outputs/live/operator_runbook.md"
+  },
+  {
+    "asset_id": 6,
+    "repo": "agent-derivatives-skew-sentiment-monitor",
+    "relative": "outputs\\live\\research_journal_template.md",
+    "sha256": "1AD09E878AB6737910FB889140314E9DFF619C99DAAA4B5A4B772200DFE64CF1",
+    "commit": "266b0239b19f88b1f65393d769ae857a662aab26",
+    "status": "FULL_READ",
+    "read_ranges": [
+      "1-9"
+    ],
+    "source_url": "https://github.com/quantskills/agent-derivatives-skew-sentiment-monitor/blob/266b0239b19f88b1f65393d769ae857a662aab26/outputs/live/research_journal_template.md"
+  },
+  {
+    "asset_id": 6,
+    "repo": "agent-derivatives-skew-sentiment-monitor",
+    "relative": "references\\agent-boundary.md",
+    "sha256": "31C80CF6CE9B55C2F506DC37A4206EB1D3126599FCDC89256FB26FF07B2FB4EE",
+    "commit": "266b0239b19f88b1f65393d769ae857a662aab26",
+    "status": "FULL_READ",
+    "read_ranges": [
+      "1-29"
+    ],
+    "source_url": "https://github.com/quantskills/agent-derivatives-skew-sentiment-monitor/blob/266b0239b19f88b1f65393d769ae857a662aab26/references/agent-boundary.md"
+  },
+  {
+    "asset_id": 6,
+    "repo": "agent-derivatives-skew-sentiment-monitor",
+    "relative": "references\\data-and-outputs.md",
+    "sha256": "9B301CD32F7E5A68F527CE3B6D81839957AFF9C65F5647C9A82638706E37A3ED",
+    "commit": "266b0239b19f88b1f65393d769ae857a662aab26",
+    "status": "FULL_READ",
+    "read_ranges": [
+      "1-35"
+    ],
+    "source_url": "https://github.com/quantskills/agent-derivatives-skew-sentiment-monitor/blob/266b0239b19f88b1f65393d769ae857a662aab26/references/data-and-outputs.md"
+  },
+  {
+    "asset_id": 6,
+    "repo": "agent-derivatives-skew-sentiment-monitor",
+    "relative": "references\\methodology.md",
+    "sha256": "39A30BD9A4CD7DB93C21A4102A558A89B409B70B55823B56E2A9626CC4C048BC",
+    "commit": "266b0239b19f88b1f65393d769ae857a662aab26",
+    "status": "FULL_READ",
+    "read_ranges": [
+      "1-42"
+    ],
+    "source_url": "https://github.com/quantskills/agent-derivatives-skew-sentiment-monitor/blob/266b0239b19f88b1f65393d769ae857a662aab26/references/methodology.md"
+  },
+  {
+    "asset_id": 25,
+    "repo": "skill-alpha-a06-hotmoney-reversal",
+    "relative": "README.en.md",
+    "sha256": "2D01EC6778C69BE6402E4B77BFC9FF1A0EC4A78EE382F323BF1D4EED94580335",
+    "commit": "495a22d02b34c0b5d6c567ebe1e21c1b4c0986b2",
+    "status": "FULL_READ",
+    "read_ranges": [
+      "1-151"
+    ],
+    "source_url": "https://github.com/quantskills/skill-alpha-a06-hotmoney-reversal/blob/495a22d02b34c0b5d6c567ebe1e21c1b4c0986b2/README.en.md"
+  },
+  {
+    "asset_id": 25,
+    "repo": "skill-alpha-a06-hotmoney-reversal",
+    "relative": "README.md",
+    "sha256": "E694B3B5CB582537EEDC1EBCCF978CE0D127127116F270902641817113D8A6A6",
+    "commit": "495a22d02b34c0b5d6c567ebe1e21c1b4c0986b2",
+    "status": "FULL_READ",
+    "read_ranges": [
+      "1-164"
+    ],
+    "source_url": "https://github.com/quantskills/skill-alpha-a06-hotmoney-reversal/blob/495a22d02b34c0b5d6c567ebe1e21c1b4c0986b2/README.md"
+  },
+  {
+    "asset_id": 25,
+    "repo": "skill-alpha-a06-hotmoney-reversal",
+    "relative": "SKILL.md",
+    "sha256": "9E05E6784946EDB6165EDD1402215457967A53AB691138D82386B573B36FEB4E",
+    "commit": "495a22d02b34c0b5d6c567ebe1e21c1b4c0986b2",
+    "status": "FULL_READ",
+    "read_ranges": [
+      "1-126"
+    ],
+    "source_url": "https://github.com/quantskills/skill-alpha-a06-hotmoney-reversal/blob/495a22d02b34c0b5d6c567ebe1e21c1b4c0986b2/SKILL.md"
+  },
+  {
+    "asset_id": 25,
+    "repo": "skill-alpha-a06-hotmoney-reversal",
+    "relative": "agents\\portable-loader.md",
+    "sha256": "9445D064D53867EEC92D7B1BC9F302077839D1BF74875938CA9DD2C3D48CD26A",
+    "commit": "495a22d02b34c0b5d6c567ebe1e21c1b4c0986b2",
+    "status": "FULL_READ",
+    "read_ranges": [
+      "1-39"
+    ],
+    "source_url": "https://github.com/quantskills/skill-alpha-a06-hotmoney-reversal/blob/495a22d02b34c0b5d6c567ebe1e21c1b4c0986b2/agents/portable-loader.md"
+  },
+  {
+    "asset_id": 25,
+    "repo": "skill-alpha-a06-hotmoney-reversal",
+    "relative": "开发产物\\SKILL.md",
+    "sha256": "3D9237C38F455FC82132B069CC68205A077BD8AC1568626D5DF66CA1E317436A",
+    "commit": "495a22d02b34c0b5d6c567ebe1e21c1b4c0986b2",
+    "status": "FULL_READ",
+    "read_ranges": [
+      "1-79"
+    ],
+    "source_url": "https://github.com/quantskills/skill-alpha-a06-hotmoney-reversal/blob/495a22d02b34c0b5d6c567ebe1e21c1b4c0986b2/开发产物/SKILL.md"
+  },
+  {
+    "asset_id": 25,
+    "repo": "skill-alpha-a06-hotmoney-reversal",
+    "relative": "开发产物\\references\\data_guide.md",
+    "sha256": "4BE7B6237F0B0AAC052414B1B89CB1F25CB7E05FF60DA968F204E75A31334D1D",
+    "commit": "495a22d02b34c0b5d6c567ebe1e21c1b4c0986b2",
+    "status": "FULL_READ",
+    "read_ranges": [
+      "1-54"
+    ],
+    "source_url": "https://github.com/quantskills/skill-alpha-a06-hotmoney-reversal/blob/495a22d02b34c0b5d6c567ebe1e21c1b4c0986b2/开发产物/references/data_guide.md"
+  },
+  {
+    "asset_id": 25,
+    "repo": "skill-alpha-a06-hotmoney-reversal",
+    "relative": "生产产物\\SKILL.md",
+    "sha256": "DEAFF2BBB156F48A6BE34436BD2EA39BA252C3EC8A5B414364706A3D16AE4AA7",
+    "commit": "495a22d02b34c0b5d6c567ebe1e21c1b4c0986b2",
+    "status": "FULL_READ",
+    "read_ranges": [
+      "1-62"
+    ],
+    "source_url": "https://github.com/quantskills/skill-alpha-a06-hotmoney-reversal/blob/495a22d02b34c0b5d6c567ebe1e21c1b4c0986b2/生产产物/SKILL.md"
+  },
+  {
+    "asset_id": 25,
+    "repo": "skill-alpha-a06-hotmoney-reversal",
+    "relative": "生产产物\\发布验收报告.md",
+    "sha256": "10C6977CCD27BDCA5335F17A60FE1E492495A126435A24498BD5FCC4A3A2CAC4",
+    "commit": "495a22d02b34c0b5d6c567ebe1e21c1b4c0986b2",
+    "status": "FULL_READ",
+    "read_ranges": [
+      "1-75"
+    ],
+    "source_url": "https://github.com/quantskills/skill-alpha-a06-hotmoney-reversal/blob/495a22d02b34c0b5d6c567ebe1e21c1b4c0986b2/生产产物/发布验收报告.md"
+  },
+  {
+    "asset_id": 94,
+    "repo": "skill-fund-holding-xray",
+    "relative": "README.en.md",
+    "sha256": "3ECC62A54FCEDC5F5F1E4D6AEA9A53CF83D8E24189245F18CF106613CFC6E2A9",
+    "commit": "93125c464b2e4626e65ea29e05904fa266e3a98d",
+    "status": "FULL_READ",
+    "read_ranges": [
+      "1-38"
+    ],
+    "source_url": "https://github.com/quantskills/skill-fund-holding-xray/blob/93125c464b2e4626e65ea29e05904fa266e3a98d/README.en.md"
+  },
+  {
+    "asset_id": 94,
+    "repo": "skill-fund-holding-xray",
+    "relative": "README.md",
+    "sha256": "603419D33DFB63CDB007AB6AD9A6477694486C4387CA7A2A1AF6FF271A08E369",
+    "commit": "93125c464b2e4626e65ea29e05904fa266e3a98d",
+    "status": "FULL_READ",
+    "read_ranges": [
+      "1-135"
+    ],
+    "source_url": "https://github.com/quantskills/skill-fund-holding-xray/blob/93125c464b2e4626e65ea29e05904fa266e3a98d/README.md"
+  },
+  {
+    "asset_id": 94,
+    "repo": "skill-fund-holding-xray",
+    "relative": "requirements.txt",
+    "sha256": "CF66B765656676128357F9B71018140C9236100C93184F425E978A79D3A0A2B8",
+    "commit": "93125c464b2e4626e65ea29e05904fa266e3a98d",
+    "status": "FULL_READ",
+    "read_ranges": [
+      "1-4"
+    ],
+    "source_url": "https://github.com/quantskills/skill-fund-holding-xray/blob/93125c464b2e4626e65ea29e05904fa266e3a98d/requirements.txt"
+  },
+  {
+    "asset_id": 94,
+    "repo": "skill-fund-holding-xray",
+    "relative": "SKILL.md",
+    "sha256": "199C29EDFADCC300AAFA779DE57A45D760CC89829C748A04F782D29FCDEE64F5",
+    "commit": "93125c464b2e4626e65ea29e05904fa266e3a98d",
+    "status": "FULL_READ",
+    "read_ranges": [
+      "1-107"
+    ],
+    "source_url": "https://github.com/quantskills/skill-fund-holding-xray/blob/93125c464b2e4626e65ea29e05904fa266e3a98d/SKILL.md"
+  },
+  {
+    "asset_id": 94,
+    "repo": "skill-fund-holding-xray",
+    "relative": "THIRD_PARTY_NOTICES.md",
+    "sha256": "D441DAFE693017589269774E61F2776720E5E3B3198A98125EF0E95BA5863E2D",
+    "commit": "93125c464b2e4626e65ea29e05904fa266e3a98d",
+    "status": "FULL_READ",
+    "read_ranges": [
+      "1-13"
+    ],
+    "source_url": "https://github.com/quantskills/skill-fund-holding-xray/blob/93125c464b2e4626e65ea29e05904fa266e3a98d/THIRD_PARTY_NOTICES.md"
+  },
+  {
+    "asset_id": 94,
+    "repo": "skill-fund-holding-xray",
+    "relative": "agents\\portable-loader.md",
+    "sha256": "B26DB4D9573D48551437F52A912E6D3CA57B3FB9F189686321E571ED391153ED",
+    "commit": "93125c464b2e4626e65ea29e05904fa266e3a98d",
+    "status": "FULL_READ",
+    "read_ranges": [
+      "1-3"
+    ],
+    "source_url": "https://github.com/quantskills/skill-fund-holding-xray/blob/93125c464b2e4626e65ea29e05904fa266e3a98d/agents/portable-loader.md"
+  },
+  {
+    "asset_id": 94,
+    "repo": "skill-fund-holding-xray",
+    "relative": "examples\\README.md",
+    "sha256": "5EF349419E1582CB01A198540EF3F4194CFDF315E1D6C8EACF02801067E31B3F",
+    "commit": "93125c464b2e4626e65ea29e05904fa266e3a98d",
+    "status": "FULL_READ",
+    "read_ranges": [
+      "1-3"
+    ],
+    "source_url": "https://github.com/quantskills/skill-fund-holding-xray/blob/93125c464b2e4626e65ea29e05904fa266e3a98d/examples/README.md"
+  },
+  {
+    "asset_id": 94,
+    "repo": "skill-fund-holding-xray",
+    "relative": "references\\api_reference.md",
+    "sha256": "21905AF8459EB0A44E5E06B9D1BC848C43FA531200F874BC19CDABEF0ED1BC98",
+    "commit": "93125c464b2e4626e65ea29e05904fa266e3a98d",
+    "status": "FULL_READ",
+    "read_ranges": [
+      "1-97"
+    ],
+    "source_url": "https://github.com/quantskills/skill-fund-holding-xray/blob/93125c464b2e4626e65ea29e05904fa266e3a98d/references/api_reference.md"
+  },
+  {
+    "asset_id": 185,
+    "repo": "skill-risk-return-metrics",
+    "relative": "README.en.md",
+    "sha256": "AAAB75FE527F443B88EB4E4D801CB40EA6DB06E2E44FC793C235437A3449F004",
+    "commit": "8bd630a38e8f2556e5902ea26fc1560dc61e33c2",
+    "status": "FULL_READ",
+    "read_ranges": [
+      {
+        "start": 1,
+        "end": 121
+      }
+    ],
+    "source_url": "https://github.com/quantskills/skill-risk-return-metrics/blob/8bd630a38e8f2556e5902ea26fc1560dc61e33c2/README.en.md"
+  },
+  {
+    "asset_id": 185,
+    "repo": "skill-risk-return-metrics",
+    "relative": "README.md",
+    "sha256": "B3BA86F536C4FF8859106ACE27E6BA2B0F964B21EE312D7A8E261FB9736D82AE",
+    "commit": "8bd630a38e8f2556e5902ea26fc1560dc61e33c2",
+    "status": "FULL_READ",
+    "read_ranges": [
+      {
+        "start": 1,
+        "end": 121
+      }
+    ],
+    "source_url": "https://github.com/quantskills/skill-risk-return-metrics/blob/8bd630a38e8f2556e5902ea26fc1560dc61e33c2/README.md"
+  },
+  {
+    "asset_id": 185,
+    "repo": "skill-risk-return-metrics",
+    "relative": "SKILL.md",
+    "sha256": "C4FF922C2748547209F220EC721C6AFABF4529C1C03DB40C6D607891635B8EDF",
+    "commit": "8bd630a38e8f2556e5902ea26fc1560dc61e33c2",
+    "status": "FULL_READ",
+    "read_ranges": [
+      {
+        "start": 1,
+        "end": 80
+      }
+    ],
+    "source_url": "https://github.com/quantskills/skill-risk-return-metrics/blob/8bd630a38e8f2556e5902ea26fc1560dc61e33c2/SKILL.md"
+  },
+  {
+    "asset_id": 185,
+    "repo": "skill-risk-return-metrics",
+    "relative": "agents\\portable-loader.md",
+    "sha256": "5971F7054ADE6C445D7362FB99F7E876D5FD111B9AD98494C4D4BB00CD46096E",
+    "commit": "8bd630a38e8f2556e5902ea26fc1560dc61e33c2",
+    "status": "FULL_READ",
+    "read_ranges": [
+      {
+        "start": 1,
+        "end": 7
+      }
+    ],
+    "source_url": "https://github.com/quantskills/skill-risk-return-metrics/blob/8bd630a38e8f2556e5902ea26fc1560dc61e33c2/agents/portable-loader.md"
+  },
+  {
+    "asset_id": 185,
+    "repo": "skill-risk-return-metrics",
+    "relative": "examples\\output\\risk_return_metrics.txt",
+    "sha256": "9F385C2D9F4BE0E1811CC8AFA076C07AB0F6D9F213E2B6017A94F1520B19FF23",
+    "commit": "8bd630a38e8f2556e5902ea26fc1560dc61e33c2",
+    "status": "FULL_READ",
+    "read_ranges": [
+      {
+        "start": 1,
+        "end": 33
+      }
+    ],
+    "source_url": "https://github.com/quantskills/skill-risk-return-metrics/blob/8bd630a38e8f2556e5902ea26fc1560dc61e33c2/examples/output/risk_return_metrics.txt"
+  },
+  {
+    "asset_id": 185,
+    "repo": "skill-risk-return-metrics",
+    "relative": "references\\example_output.md",
+    "sha256": "83F23DA2633D89C4B0DFB0F79A8539B01AF378D3AD76F892F16CB5348D922D76",
+    "commit": "8bd630a38e8f2556e5902ea26fc1560dc61e33c2",
+    "status": "FULL_READ",
+    "read_ranges": [
+      {
+        "start": 1,
+        "end": 42
+      }
+    ],
+    "source_url": "https://github.com/quantskills/skill-risk-return-metrics/blob/8bd630a38e8f2556e5902ea26fc1560dc61e33c2/references/example_output.md"
+  },
+  {
+    "asset_id": 197,
+    "repo": "skill-ssquant-trader-generator",
+    "relative": "README.en.md",
+    "sha256": "AD705CA55E73818541232174E17866BFE5A329D1938E043C505CDD05D95111DE",
+    "commit": "4538ad0133a558ae838bd2a95ba7c871b95fcb74",
+    "status": "FULL_READ",
+    "read_ranges": [
+      {
+        "start": 1,
+        "end": 96
+      }
+    ],
+    "source_url": "https://github.com/quantskills/skill-ssquant-trader-generator/blob/4538ad0133a558ae838bd2a95ba7c871b95fcb74/README.en.md"
+  },
+  {
+    "asset_id": 197,
+    "repo": "skill-ssquant-trader-generator",
+    "relative": "README.md",
+    "sha256": "61805C695B53BC96E443BD4D9B673D59792B7C8228B0EAC5B0651D645520A52B",
+    "commit": "4538ad0133a558ae838bd2a95ba7c871b95fcb74",
+    "status": "FULL_READ",
+    "read_ranges": [
+      {
+        "start": 1,
+        "end": 96
+      }
+    ],
+    "source_url": "https://github.com/quantskills/skill-ssquant-trader-generator/blob/4538ad0133a558ae838bd2a95ba7c871b95fcb74/README.md"
+  },
+  {
+    "asset_id": 197,
+    "repo": "skill-ssquant-trader-generator",
+    "relative": "SKILL.md",
+    "sha256": "478C79BF7160A78612A29278FF65982F7C03BE94D064B6D9FEE77468D600712B",
+    "commit": "4538ad0133a558ae838bd2a95ba7c871b95fcb74",
+    "status": "FULL_READ",
+    "read_ranges": [
+      {
+        "start": 1,
+        "end": 305
+      }
+    ],
+    "source_url": "https://github.com/quantskills/skill-ssquant-trader-generator/blob/4538ad0133a558ae838bd2a95ba7c871b95fcb74/SKILL.md"
+  },
+  {
+    "asset_id": 197,
+    "repo": "skill-ssquant-trader-generator",
+    "relative": "agents\\portable-loader.md",
+    "sha256": "4FD00AFDEC646761A1CCD9B77E721428808DBD1AE9CF6AC01C06F19B7001AE92",
+    "commit": "4538ad0133a558ae838bd2a95ba7c871b95fcb74",
+    "status": "FULL_READ",
+    "read_ranges": [
+      {
+        "start": 1,
+        "end": 16
+      }
+    ],
+    "source_url": "https://github.com/quantskills/skill-ssquant-trader-generator/blob/4538ad0133a558ae838bd2a95ba7c871b95fcb74/agents/portable-loader.md"
+  },
+  {
+    "asset_id": 218,
+    "repo": "skill-xingtai-catcher",
+    "relative": "README.md",
+    "sha256": "45411995EC2BB476735B7DB66B22CA7A2718AAF7CA91339DDE03D0C8AFE5A8D0",
+    "commit": "2efc3be1eb9681fbea0ce4a25acf7af15fccb8b7",
+    "status": "FULL_READ",
+    "read_ranges": [
+      {
+        "start": 1,
+        "end": 166
+      }
+    ],
+    "source_url": "https://github.com/quantskills/skill-xingtai-catcher/blob/2efc3be1eb9681fbea0ce4a25acf7af15fccb8b7/README.md"
+  },
+  {
+    "asset_id": 218,
+    "repo": "skill-xingtai-catcher",
+    "relative": "SKILL.md",
+    "sha256": "404B09C4ED2E6FAA14276774086E5C2F5F5FBFCD18CDD09FE12A227B4CFE6C81",
+    "commit": "2efc3be1eb9681fbea0ce4a25acf7af15fccb8b7",
+    "status": "FULL_READ",
+    "read_ranges": [
+      {
+        "start": 1,
+        "end": 141
+      }
+    ],
+    "source_url": "https://github.com/quantskills/skill-xingtai-catcher/blob/2efc3be1eb9681fbea0ce4a25acf7af15fccb8b7/SKILL.md"
+  },
+  {
+    "asset_id": 218,
+    "repo": "skill-xingtai-catcher",
+    "relative": "references\\mcp-usage.md",
+    "sha256": "4A888495138C7250058B1C7EE336FADB46EDBE8AD3C0657DEBE4BC73BBAAEEE9",
+    "commit": "2efc3be1eb9681fbea0ce4a25acf7af15fccb8b7",
+    "status": "FULL_READ",
+    "read_ranges": [
+      {
+        "start": 1,
+        "end": 162
+      }
+    ],
+    "source_url": "https://github.com/quantskills/skill-xingtai-catcher/blob/2efc3be1eb9681fbea0ce4a25acf7af15fccb8b7/references/mcp-usage.md"
+  },
+  {
+    "asset_id": 54,
+    "repo": "skill-csrc-approval-pipeline",
+    "relative": "README.en.md",
+    "sha256": "7213BD277A247956CDB6160F7BC02D9686E74D33A875436D5D84C57CDE664D05",
+    "commit": "f2c6e548d5e4d1a44cd073ab04aca09a3a91dfc2",
+    "status": "FULL_READ",
+    "read_ranges": [
+      {
+        "start": 1,
+        "end": 86
+      }
+    ],
+    "source_url": "https://github.com/quantskills/skill-csrc-approval-pipeline/blob/f2c6e548d5e4d1a44cd073ab04aca09a3a91dfc2/README.en.md"
+  },
+  {
+    "asset_id": 54,
+    "repo": "skill-csrc-approval-pipeline",
+    "relative": "README.md",
+    "sha256": "83EECCCBEDCDEFDB0E3B02F8157620C2424255581122E30EDC25DADC16ED204C",
+    "commit": "f2c6e548d5e4d1a44cd073ab04aca09a3a91dfc2",
+    "status": "FULL_READ",
+    "read_ranges": [
+      {
+        "start": 1,
+        "end": 86
+      }
+    ],
+    "source_url": "https://github.com/quantskills/skill-csrc-approval-pipeline/blob/f2c6e548d5e4d1a44cd073ab04aca09a3a91dfc2/README.md"
+  },
+  {
+    "asset_id": 54,
+    "repo": "skill-csrc-approval-pipeline",
+    "relative": "SKILL.md",
+    "sha256": "E3EF79A234CE4B1820766A9FE0FE7B1BFE9262CEE642491B170CD8E59781C813",
+    "commit": "f2c6e548d5e4d1a44cd073ab04aca09a3a91dfc2",
+    "status": "FULL_READ",
+    "read_ranges": [
+      {
+        "start": 1,
+        "end": 143
+      }
+    ],
+    "source_url": "https://github.com/quantskills/skill-csrc-approval-pipeline/blob/f2c6e548d5e4d1a44cd073ab04aca09a3a91dfc2/SKILL.md"
+  },
+  {
+    "asset_id": 54,
+    "repo": "skill-csrc-approval-pipeline",
+    "relative": "agents\\portable-loader.md",
+    "sha256": "516F9F14A96650430953BF118B6899F3998CCDB1586ADB494F10F51C76B3AB83",
+    "commit": "f2c6e548d5e4d1a44cd073ab04aca09a3a91dfc2",
+    "status": "FULL_READ",
+    "read_ranges": [
+      {
+        "start": 1,
+        "end": 22
+      }
+    ],
+    "source_url": "https://github.com/quantskills/skill-csrc-approval-pipeline/blob/f2c6e548d5e4d1a44cd073ab04aca09a3a91dfc2/agents/portable-loader.md"
+  },
+  {
+    "asset_id": 54,
+    "repo": "skill-csrc-approval-pipeline",
+    "relative": "references\\api_guide.md",
+    "sha256": "77E9F0828EBB7537574FDBCA7844B41FAACFE0C799E621713186BF8770A5D379",
+    "commit": "f2c6e548d5e4d1a44cd073ab04aca09a3a91dfc2",
+    "status": "FULL_READ",
+    "read_ranges": [
+      {
+        "start": 1,
+        "end": 93
+      }
+    ],
+    "source_url": "https://github.com/quantskills/skill-csrc-approval-pipeline/blob/f2c6e548d5e4d1a44cd073ab04aca09a3a91dfc2/references/api_guide.md"
+  },
+  {
+    "asset_id": 54,
+    "repo": "skill-csrc-approval-pipeline",
+    "relative": "生产产物\\SKILL.md",
+    "sha256": "CBBFB0DE447B273DAF8CEE8538706FFAF2E69C0FD44741F30FE28299D34DE9D4",
+    "commit": "f2c6e548d5e4d1a44cd073ab04aca09a3a91dfc2",
+    "status": "FULL_READ",
+    "read_ranges": [
+      {
+        "start": 1,
+        "end": 161
+      }
+    ],
+    "source_url": "https://github.com/quantskills/skill-csrc-approval-pipeline/blob/f2c6e548d5e4d1a44cd073ab04aca09a3a91dfc2/生产产物/SKILL.md"
+  },
+  {
+    "asset_id": 124,
+    "repo": "skill-intraday-data-quality-auditor",
+    "relative": "README.en.md",
+    "sha256": "5E4F4B03C4AF7F2A18B03CC3F083CA5C8DA398A395BBBBB0B64D9B530A6A713F",
+    "commit": "b9f633480a7c77c9595251f67018d4d37cc3241d",
+    "status": "FULL_READ",
+    "read_ranges": [
+      {
+        "end": 30,
+        "start": 1
+      }
+    ],
+    "source_url": "https://github.com/quantskills/skill-intraday-data-quality-auditor/blob/b9f633480a7c77c9595251f67018d4d37cc3241d/README.en.md"
+  },
+  {
+    "asset_id": 124,
+    "repo": "skill-intraday-data-quality-auditor",
+    "relative": "README.md",
+    "sha256": "34468341C6AB5BF3E4B8506B300DF4AC29E2135A24863A9894AE492F3B5102F8",
+    "commit": "b9f633480a7c77c9595251f67018d4d37cc3241d",
+    "status": "FULL_READ",
+    "read_ranges": [
+      {
+        "end": 79,
+        "start": 1
+      }
+    ],
+    "source_url": "https://github.com/quantskills/skill-intraday-data-quality-auditor/blob/b9f633480a7c77c9595251f67018d4d37cc3241d/README.md"
+  },
+  {
+    "asset_id": 124,
+    "repo": "skill-intraday-data-quality-auditor",
+    "relative": "requirements.txt",
+    "sha256": "78A9D8E328C939710BDF40AAB147FD9AAE4BC8D01073C071E3977DE816A727D1",
+    "commit": "b9f633480a7c77c9595251f67018d4d37cc3241d",
+    "status": "FULL_READ",
+    "read_ranges": [
+      {
+        "end": 2,
+        "start": 1
+      }
+    ],
+    "source_url": "https://github.com/quantskills/skill-intraday-data-quality-auditor/blob/b9f633480a7c77c9595251f67018d4d37cc3241d/requirements.txt"
+  },
+  {
+    "asset_id": 124,
+    "repo": "skill-intraday-data-quality-auditor",
+    "relative": "SKILL.md",
+    "sha256": "E5B686E71237A2947216C79FE9D24E1E5DC06D136C8568867C6D298AA0737499",
+    "commit": "b9f633480a7c77c9595251f67018d4d37cc3241d",
+    "status": "FULL_READ",
+    "read_ranges": [
+      {
+        "end": 84,
+        "start": 1
+      }
+    ],
+    "source_url": "https://github.com/quantskills/skill-intraday-data-quality-auditor/blob/b9f633480a7c77c9595251f67018d4d37cc3241d/SKILL.md"
+  },
+  {
+    "asset_id": 124,
+    "repo": "skill-intraday-data-quality-auditor",
+    "relative": "agents\\portable-loader.md",
+    "sha256": "A4B52B9A085946CE9275354CC00C54738E6531A7202ED67E52A47668C3B62EF1",
+    "commit": "b9f633480a7c77c9595251f67018d4d37cc3241d",
+    "status": "FULL_READ",
+    "read_ranges": [
+      {
+        "end": 16,
+        "start": 1
+      }
+    ],
+    "source_url": "https://github.com/quantskills/skill-intraday-data-quality-auditor/blob/b9f633480a7c77c9595251f67018d4d37cc3241d/agents/portable-loader.md"
+  },
+  {
+    "asset_id": 124,
+    "repo": "skill-intraday-data-quality-auditor",
+    "relative": "references\\methodology.md",
+    "sha256": "B0FF8AC2E7A0FC88E06DDE6D80BDE41F0C9DF172CA9EEA1B6814CD8F4DF0643C",
+    "commit": "b9f633480a7c77c9595251f67018d4d37cc3241d",
+    "status": "FULL_READ",
+    "read_ranges": [
+      {
+        "end": 26,
+        "start": 1
+      }
+    ],
+    "source_url": "https://github.com/quantskills/skill-intraday-data-quality-auditor/blob/b9f633480a7c77c9595251f67018d4d37cc3241d/references/methodology.md"
+  },
+  {
+    "asset_id": 124,
+    "repo": "skill-intraday-data-quality-auditor",
+    "relative": "references\\output-contract.md",
+    "sha256": "3E29656B0A7E619DA955E1705D59B09277DEF408D5B24F62BBF7E736067D1E34",
+    "commit": "b9f633480a7c77c9595251f67018d4d37cc3241d",
+    "status": "FULL_READ",
+    "read_ranges": [
+      {
+        "end": 19,
+        "start": 1
+      }
+    ],
+    "source_url": "https://github.com/quantskills/skill-intraday-data-quality-auditor/blob/b9f633480a7c77c9595251f67018d4d37cc3241d/references/output-contract.md"
+  },
+  {
+    "asset_id": 124,
+    "repo": "skill-intraday-data-quality-auditor",
+    "relative": "references\\pandadata-integration.md",
+    "sha256": "44BCAC6D26E461CC9DA172458592F79A97ED663137C405DD99F37157163B9517",
+    "commit": "b9f633480a7c77c9595251f67018d4d37cc3241d",
+    "status": "FULL_READ",
+    "read_ranges": [
+      {
+        "end": 34,
+        "start": 1
+      }
+    ],
+    "source_url": "https://github.com/quantskills/skill-intraday-data-quality-auditor/blob/b9f633480a7c77c9595251f67018d4d37cc3241d/references/pandadata-integration.md"
+  },
+  {
+    "asset_id": 124,
+    "repo": "skill-intraday-data-quality-auditor",
+    "relative": "validation\\README.md",
+    "sha256": "C949B05A4F1A4BD47D3A2F4F3EB3CD33BC79C44936E45579867199A8FD17E355",
+    "commit": "b9f633480a7c77c9595251f67018d4d37cc3241d",
+    "status": "FULL_READ",
+    "read_ranges": [
+      {
+        "end": 13,
+        "start": 1
+      }
+    ],
+    "source_url": "https://github.com/quantskills/skill-intraday-data-quality-auditor/blob/b9f633480a7c77c9595251f67018d4d37cc3241d/validation/README.md"
+  },
+  {
+    "asset_id": 101,
+    "repo": "skill-futures-roll-auditor",
+    "relative": "README.en.md",
+    "sha256": "ADC890E1D36A8E27B93D2C27079B8516074FD54A09FD208987774DF830D639E4",
+    "commit": "646f6a6fd0d49bd930c854c7b54e0a91d1d033b8",
+    "status": "FULL_READ",
+    "read_ranges": [
+      {
+        "end": 31,
+        "start": 1
+      }
+    ],
+    "source_url": "https://github.com/quantskills/skill-futures-roll-auditor/blob/646f6a6fd0d49bd930c854c7b54e0a91d1d033b8/README.en.md"
+  },
+  {
+    "asset_id": 101,
+    "repo": "skill-futures-roll-auditor",
+    "relative": "README.md",
+    "sha256": "40BDBE427028CEA92065883AC0B4B03791B5478EAF4DD434D96D9BE42DF0B8A3",
+    "commit": "646f6a6fd0d49bd930c854c7b54e0a91d1d033b8",
+    "status": "FULL_READ",
+    "read_ranges": [
+      {
+        "end": 77,
+        "start": 1
+      }
+    ],
+    "source_url": "https://github.com/quantskills/skill-futures-roll-auditor/blob/646f6a6fd0d49bd930c854c7b54e0a91d1d033b8/README.md"
+  },
+  {
+    "asset_id": 101,
+    "repo": "skill-futures-roll-auditor",
+    "relative": "requirements.txt",
+    "sha256": "78A9D8E328C939710BDF40AAB147FD9AAE4BC8D01073C071E3977DE816A727D1",
+    "commit": "646f6a6fd0d49bd930c854c7b54e0a91d1d033b8",
+    "status": "FULL_READ",
+    "read_ranges": [
+      {
+        "end": 2,
+        "start": 1
+      }
+    ],
+    "source_url": "https://github.com/quantskills/skill-futures-roll-auditor/blob/646f6a6fd0d49bd930c854c7b54e0a91d1d033b8/requirements.txt"
+  },
+  {
+    "asset_id": 101,
+    "repo": "skill-futures-roll-auditor",
+    "relative": "SKILL.md",
+    "sha256": "7348431E2F587910A305932A296DF196A5D7E63FAE2699CB0FD9023647F3D122",
+    "commit": "646f6a6fd0d49bd930c854c7b54e0a91d1d033b8",
+    "status": "FULL_READ",
+    "read_ranges": [
+      {
+        "end": 84,
+        "start": 1
+      }
+    ],
+    "source_url": "https://github.com/quantskills/skill-futures-roll-auditor/blob/646f6a6fd0d49bd930c854c7b54e0a91d1d033b8/SKILL.md"
+  },
+  {
+    "asset_id": 101,
+    "repo": "skill-futures-roll-auditor",
+    "relative": "agents\\portable-loader.md",
+    "sha256": "6B749DA6F60109F29CA437615192EF1D9F650845B82F4915F607546C0EE0DAEB",
+    "commit": "646f6a6fd0d49bd930c854c7b54e0a91d1d033b8",
+    "status": "FULL_READ",
+    "read_ranges": [
+      {
+        "end": 16,
+        "start": 1
+      }
+    ],
+    "source_url": "https://github.com/quantskills/skill-futures-roll-auditor/blob/646f6a6fd0d49bd930c854c7b54e0a91d1d033b8/agents/portable-loader.md"
+  },
+  {
+    "asset_id": 101,
+    "repo": "skill-futures-roll-auditor",
+    "relative": "references\\methodology.md",
+    "sha256": "CA4AC7707F117E810D035CFB6680B516AEA6CD79FC421A402BC8208D53581002",
+    "commit": "646f6a6fd0d49bd930c854c7b54e0a91d1d033b8",
+    "status": "FULL_READ",
+    "read_ranges": [
+      {
+        "end": 26,
+        "start": 1
+      }
+    ],
+    "source_url": "https://github.com/quantskills/skill-futures-roll-auditor/blob/646f6a6fd0d49bd930c854c7b54e0a91d1d033b8/references/methodology.md"
+  },
+  {
+    "asset_id": 101,
+    "repo": "skill-futures-roll-auditor",
+    "relative": "references\\output-contract.md",
+    "sha256": "3E29656B0A7E619DA955E1705D59B09277DEF408D5B24F62BBF7E736067D1E34",
+    "commit": "646f6a6fd0d49bd930c854c7b54e0a91d1d033b8",
+    "status": "FULL_READ",
+    "read_ranges": [
+      {
+        "end": 19,
+        "start": 1
+      }
+    ],
+    "source_url": "https://github.com/quantskills/skill-futures-roll-auditor/blob/646f6a6fd0d49bd930c854c7b54e0a91d1d033b8/references/output-contract.md"
+  },
+  {
+    "asset_id": 101,
+    "repo": "skill-futures-roll-auditor",
+    "relative": "references\\pandadata-integration.md",
+    "sha256": "7C914E4499F638B32FC3386234130532E5B413ADC95336840863A75662357CD4",
+    "commit": "646f6a6fd0d49bd930c854c7b54e0a91d1d033b8",
+    "status": "FULL_READ",
+    "read_ranges": [
+      {
+        "end": 34,
+        "start": 1
+      }
+    ],
+    "source_url": "https://github.com/quantskills/skill-futures-roll-auditor/blob/646f6a6fd0d49bd930c854c7b54e0a91d1d033b8/references/pandadata-integration.md"
+  },
+  {
+    "asset_id": 101,
+    "repo": "skill-futures-roll-auditor",
+    "relative": "validation\\README.md",
+    "sha256": "5D8E739DA31E0A04D0485615529D2C5C53B168D3CCCF229103F090546A6274BD",
+    "commit": "646f6a6fd0d49bd930c854c7b54e0a91d1d033b8",
+    "status": "FULL_READ",
+    "read_ranges": [
+      {
+        "end": 14,
+        "start": 1
+      }
+    ],
+    "source_url": "https://github.com/quantskills/skill-futures-roll-auditor/blob/646f6a6fd0d49bd930c854c7b54e0a91d1d033b8/validation/README.md"
+  },
+  {
+    "asset_id": 93,
+    "repo": "skill-forecast-calibration-audit",
+    "relative": "README.en.md",
+    "sha256": "D9025AE48FC57B6D129F0D86D0CC66D6160018988EA9807E01E38733D627E05A",
+    "commit": "9fd588982c060ff2b0356616405034b6a7ac2837",
+    "status": "FULL_READ",
+    "read_ranges": [
+      {
+        "end": 106,
+        "start": 1
+      }
+    ],
+    "source_url": "https://github.com/quantskills/skill-forecast-calibration-audit/blob/9fd588982c060ff2b0356616405034b6a7ac2837/README.en.md"
+  },
+  {
+    "asset_id": 93,
+    "repo": "skill-forecast-calibration-audit",
+    "relative": "README.md",
+    "sha256": "C81FF60A6960064C7200E107B5FAE69C4B60109B530AE8C3493C03F742A3D906",
+    "commit": "9fd588982c060ff2b0356616405034b6a7ac2837",
+    "status": "FULL_READ",
+    "read_ranges": [
+      {
+        "end": 106,
+        "start": 1
+      }
+    ],
+    "source_url": "https://github.com/quantskills/skill-forecast-calibration-audit/blob/9fd588982c060ff2b0356616405034b6a7ac2837/README.md"
+  },
+  {
+    "asset_id": 93,
+    "repo": "skill-forecast-calibration-audit",
+    "relative": "requirements.txt",
+    "sha256": "40ACC775A6A399370F62603982B589AB02E6C371A8DECEE54303B05365512B96",
+    "commit": "9fd588982c060ff2b0356616405034b6a7ac2837",
+    "status": "FULL_READ",
+    "read_ranges": [
+      {
+        "end": 2,
+        "start": 1
+      }
+    ],
+    "source_url": "https://github.com/quantskills/skill-forecast-calibration-audit/blob/9fd588982c060ff2b0356616405034b6a7ac2837/requirements.txt"
+  },
+  {
+    "asset_id": 93,
+    "repo": "skill-forecast-calibration-audit",
+    "relative": "SKILL.md",
+    "sha256": "382D2512A6B8709E6E864FCDAAAB37DD4E39451BBF0FD2939C441F59B1A5D980",
+    "commit": "9fd588982c060ff2b0356616405034b6a7ac2837",
+    "status": "FULL_READ",
+    "read_ranges": [
+      {
+        "end": 76,
+        "start": 1
+      }
+    ],
+    "source_url": "https://github.com/quantskills/skill-forecast-calibration-audit/blob/9fd588982c060ff2b0356616405034b6a7ac2837/SKILL.md"
+  },
+  {
+    "asset_id": 93,
+    "repo": "skill-forecast-calibration-audit",
+    "relative": "agents\\portable-loader.md",
+    "sha256": "2093F049BBDE51F43B59CDB3D2765FAFCD99E63B0070D1249C31C515298BB427",
+    "commit": "9fd588982c060ff2b0356616405034b6a7ac2837",
+    "status": "FULL_READ",
+    "read_ranges": [
+      {
+        "end": 16,
+        "start": 1
+      }
+    ],
+    "source_url": "https://github.com/quantskills/skill-forecast-calibration-audit/blob/9fd588982c060ff2b0356616405034b6a7ac2837/agents/portable-loader.md"
+  },
+  {
+    "asset_id": 93,
+    "repo": "skill-forecast-calibration-audit",
+    "relative": "references\\input_contract.md",
+    "sha256": "95B9AD17992BBD138A89CFEEF60EE2983F5D0CD2F0DFDEA98BBD13435604D729",
+    "commit": "9fd588982c060ff2b0356616405034b6a7ac2837",
+    "status": "FULL_READ",
+    "read_ranges": [
+      {
+        "end": 5,
+        "start": 1
+      }
+    ],
+    "source_url": "https://github.com/quantskills/skill-forecast-calibration-audit/blob/9fd588982c060ff2b0356616405034b6a7ac2837/references/input_contract.md"
+  },
+  {
+    "asset_id": 93,
+    "repo": "skill-forecast-calibration-audit",
+    "relative": "references\\source_boundary.md",
+    "sha256": "2AD3A0A99C0BAEF6CAEE9557D66963BB67E7520F8809F61BCD0674B6A7DEDFCF",
+    "commit": "9fd588982c060ff2b0356616405034b6a7ac2837",
+    "status": "FULL_READ",
+    "read_ranges": [
+      {
+        "end": 12,
+        "start": 1
+      }
+    ],
+    "source_url": "https://github.com/quantskills/skill-forecast-calibration-audit/blob/9fd588982c060ff2b0356616405034b6a7ac2837/references/source_boundary.md"
+  },
+  {
+    "asset_id": 192,
+    "repo": "skill-signal-stability-audit",
+    "relative": "README.en.md",
+    "sha256": "68E584BB0F5B6E627848FD8255807082EBE4EEDCB911AA7892F375756E9FAA8F",
+    "commit": "3591038081e6156fea935804682cdfabffde014f",
+    "status": "FULL_READ",
+    "read_ranges": [
+      {
+        "end": 44,
+        "start": 1
+      }
+    ],
+    "source_url": "https://github.com/quantskills/skill-signal-stability-audit/blob/3591038081e6156fea935804682cdfabffde014f/README.en.md"
+  },
+  {
+    "asset_id": 192,
+    "repo": "skill-signal-stability-audit",
+    "relative": "README.md",
+    "sha256": "33E9D480FDDFE206A9719AA1D4CE8D2B0BB765FA53AFB0F20D34EA13352C50B1",
+    "commit": "3591038081e6156fea935804682cdfabffde014f",
+    "status": "FULL_READ",
+    "read_ranges": [
+      {
+        "end": 28,
+        "start": 1
+      }
+    ],
+    "source_url": "https://github.com/quantskills/skill-signal-stability-audit/blob/3591038081e6156fea935804682cdfabffde014f/README.md"
+  },
+  {
+    "asset_id": 192,
+    "repo": "skill-signal-stability-audit",
+    "relative": "requirements.txt",
+    "sha256": "3B1AAFA7418D2DA4A1C87A5EE67E391A1490BC3A0DAA0F584FFFD9B62417387D",
+    "commit": "3591038081e6156fea935804682cdfabffde014f",
+    "status": "FULL_READ",
+    "read_ranges": [
+      {
+        "end": 2,
+        "start": 1
+      }
+    ],
+    "source_url": "https://github.com/quantskills/skill-signal-stability-audit/blob/3591038081e6156fea935804682cdfabffde014f/requirements.txt"
+  },
+  {
+    "asset_id": 192,
+    "repo": "skill-signal-stability-audit",
+    "relative": "SKILL.md",
+    "sha256": "D456E6FC1E8DD09B17D010BEEE11EAA63025D4648B8DA0F11FD63F9DB97FC3CE",
+    "commit": "3591038081e6156fea935804682cdfabffde014f",
+    "status": "FULL_READ",
+    "read_ranges": [
+      {
+        "end": 66,
+        "start": 1
+      }
+    ],
+    "source_url": "https://github.com/quantskills/skill-signal-stability-audit/blob/3591038081e6156fea935804682cdfabffde014f/SKILL.md"
+  },
+  {
+    "asset_id": 192,
+    "repo": "skill-signal-stability-audit",
+    "relative": "agents\\claude-code.md",
+    "sha256": "A1FAAAC99C46E106C6A807C7FA1EF20E2E8CB640303B41DBEC00092F1A80AD27",
+    "commit": "3591038081e6156fea935804682cdfabffde014f",
+    "status": "FULL_READ",
+    "read_ranges": [
+      {
+        "end": 3,
+        "start": 1
+      }
+    ],
+    "source_url": "https://github.com/quantskills/skill-signal-stability-audit/blob/3591038081e6156fea935804682cdfabffde014f/agents/claude-code.md"
+  },
+  {
+    "asset_id": 192,
+    "repo": "skill-signal-stability-audit",
+    "relative": "agents\\codex.md",
+    "sha256": "496AA2753F9B3F12D62C38D357C1C3CEE7E8E4837F7FE1C214212276DA31C326",
+    "commit": "3591038081e6156fea935804682cdfabffde014f",
+    "status": "FULL_READ",
+    "read_ranges": [
+      {
+        "end": 3,
+        "start": 1
+      }
+    ],
+    "source_url": "https://github.com/quantskills/skill-signal-stability-audit/blob/3591038081e6156fea935804682cdfabffde014f/agents/codex.md"
+  },
+  {
+    "asset_id": 192,
+    "repo": "skill-signal-stability-audit",
+    "relative": "agents\\openclaw.md",
+    "sha256": "803A771ACF94370CF8221340E41899AD906522FE2CCEA70379DEFC89F94647BE",
+    "commit": "3591038081e6156fea935804682cdfabffde014f",
+    "status": "FULL_READ",
+    "read_ranges": [
+      {
+        "end": 3,
+        "start": 1
+      }
+    ],
+    "source_url": "https://github.com/quantskills/skill-signal-stability-audit/blob/3591038081e6156fea935804682cdfabffde014f/agents/openclaw.md"
+  },
+  {
+    "asset_id": 192,
+    "repo": "skill-signal-stability-audit",
+    "relative": "agents\\portable-loader.md",
+    "sha256": "DBA8D695035A6EBF6225BC90135450A424C05776CC12F31E80CEB88A69050470",
+    "commit": "3591038081e6156fea935804682cdfabffde014f",
+    "status": "FULL_READ",
+    "read_ranges": [
+      {
+        "end": 8,
+        "start": 1
+      }
+    ],
+    "source_url": "https://github.com/quantskills/skill-signal-stability-audit/blob/3591038081e6156fea935804682cdfabffde014f/agents/portable-loader.md"
+  },
+  {
+    "asset_id": 192,
+    "repo": "skill-signal-stability-audit",
+    "relative": "references\\methodology.md",
+    "sha256": "256F3C144E1ABCFF82C849C13AC423317DF58EFBEF237BA9601DB2BFCF9E9E2A",
+    "commit": "3591038081e6156fea935804682cdfabffde014f",
+    "status": "FULL_READ",
+    "read_ranges": [
+      {
+        "end": 27,
+        "start": 1
+      }
+    ],
+    "source_url": "https://github.com/quantskills/skill-signal-stability-audit/blob/3591038081e6156fea935804682cdfabffde014f/references/methodology.md"
+  },
+  {
+    "asset_id": 192,
+    "repo": "skill-signal-stability-audit",
+    "relative": "references\\source_boundary.md",
+    "sha256": "57245C42AD562524F3907F5B4632FEC612643D2DB078319EEFB02EDDF579144C",
+    "commit": "3591038081e6156fea935804682cdfabffde014f",
+    "status": "FULL_READ",
+    "read_ranges": [
+      {
+        "end": 10,
+        "start": 1
+      }
+    ],
+    "source_url": "https://github.com/quantskills/skill-signal-stability-audit/blob/3591038081e6156fea935804682cdfabffde014f/references/source_boundary.md"
+  }
+]

@@ -1,0 +1,132 @@
+name: Python Virtual Environments
+
+on:
+  push:
+    branches: ['*']
+    tags: ['*']
+  pull_request:
+    branches: [master]
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: self-hosted
+    container:
+        image: quantconnect/lean:foundation
+        options: --cpus 12 --memory 12g
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Run Python Virtual Environments Tests
+        shell: bash
+        run: |
+          # Both virtual environments are set up while the solution builds. Their test expects them at /lean-testenv, one at a time,
+          # so the one without system packages is set up aside and moved there before its test
+          setupVirtualEnvironments() {
+            # Python Virtual Environment System Packages
+            python -m venv /lean-testenv --system-site-packages && . /lean-testenv/bin/activate && pip install --no-cache-dir lean==1.0.221 && deactivate &&
+
+            # Python Virtual Environment
+            python -m venv /lean-testenv-no-system-packages && . /lean-testenv-no-system-packages/bin/activate && pip install --no-cache-dir lean==1.0.221 && deactivate
+          }
+          setupVirtualEnvironments > setupVirtualEnvironments.log 2>&1 &
+          setupVirtualEnvironmentsPid=$!
+
+          # Build
+          dotnet build /p:Configuration=Release /v:quiet /p:WarningLevel=1 QuantConnect.Lean.sln
+
+          wait $setupVirtualEnvironmentsPid && result=passed || result=failed
+          echo "========== setupVirtualEnvironments $result =========="
+          cat setupVirtualEnvironments.log
+          [ $result = passed ]
+
+          # The test groups below run at the same time, each one in its own test hosts and in order, and their output is shown as each one ends.
+          # Packages that hang or interfere when sharing a test host keep running in their own dotnet test invocation, as before.
+          packageTests() {
+            # Run Python Package Tests, except PyStan, which runs in separatePackageTests to balance the groups
+            dotnet test ./Tests/bin/Release/QuantConnect.Tests.dll --filter "FullyQualifiedName=QuantConnect.Tests.Python.PythonPackagesTests&Name!=PyStan" --blame-hang-timeout 120seconds --blame-crash
+          }
+
+          virtualEnvironmentAndSeparatePackageTests() {
+            # Run Virtual Environment Test System Packages
+            dotnet test ./Tests/bin/Release/QuantConnect.Tests.dll --filter "FullyQualifiedName=QuantConnect.Tests.Python.PythonVirtualEnvironmentTests.AssertVirtualEnvironment"
+
+            # Python Virtual Environment
+            rm -rf /lean-testenv && mv /lean-testenv-no-system-packages /lean-testenv
+
+            # Run Virtual Environment Test
+            dotnet test ./Tests/bin/Release/QuantConnect.Tests.dll --filter "FullyQualifiedName=QuantConnect.Tests.Python.PythonVirtualEnvironmentTests.AssertVirtualEnvironment"
+
+            # Run StableBaselines Python Package Test
+            dotnet test ./Tests/bin/Release/QuantConnect.Tests.dll --filter "FullyQualifiedName=QuantConnect.Tests.Python.PythonPackagesTests.StableBaselinesTest" --blame-hang-timeout 120seconds --blame-crash
+
+            # Run AxPlatform Python Package Test
+            dotnet test ./Tests/bin/Release/QuantConnect.Tests.dll --filter "FullyQualifiedName=QuantConnect.Tests.Python.PythonPackagesTests.AxPlatformTest" --blame-hang-timeout 120seconds --blame-crash
+
+            # Run TensorlyTest Python Package Test
+            dotnet test ./Tests/bin/Release/QuantConnect.Tests.dll --filter "FullyQualifiedName=QuantConnect.Tests.Python.PythonPackagesTests.TensorlyTest" --blame-hang-timeout 120seconds --blame-crash
+
+            # Run NeuralTangents, Ignite Python Package Test
+            dotnet test ./Tests/bin/Release/QuantConnect.Tests.dll --filter "FullyQualifiedName=QuantConnect.Tests.Python.PythonPackagesTests.IgniteTest" --blame-hang-timeout 120seconds --blame-crash
+
+            # Run TensorflowTest
+            dotnet test ./Tests/bin/Release/QuantConnect.Tests.dll --filter "FullyQualifiedName=QuantConnect.Tests.Python.PythonPackagesTests.TensorflowTest" --blame-hang-timeout 120seconds --blame-crash
+
+            # Run TensorflowProbability
+            dotnet test ./Tests/bin/Release/QuantConnect.Tests.dll --filter "FullyQualifiedName=QuantConnect.Tests.Python.PythonPackagesTests.TensorflowProbabilityTest" --blame-hang-timeout 120seconds --blame-crash
+
+            # Run Hvplot Python Package Test
+            dotnet test ./Tests/bin/Release/QuantConnect.Tests.dll --filter "FullyQualifiedName=QuantConnect.Tests.Python.PythonPackagesTests.RiskparityportfolioTest" --blame-hang-timeout 120seconds --blame-crash
+
+            # Run Shap
+            dotnet test ./Tests/bin/Release/QuantConnect.Tests.dll --filter "FullyQualifiedName=QuantConnect.Tests.Python.PythonPackagesTests.KerasTest|PyvinecopulibTest" --blame-hang-timeout 120seconds --blame-crash
+
+            # Run Neuralforecast
+            dotnet test ./Tests/bin/Release/QuantConnect.Tests.dll --filter "FullyQualifiedName=QuantConnect.Tests.Python.PythonPackagesTests.Neuralforecast" --blame-hang-timeout 120seconds --blame-crash
+          }
+
+          separatePackageTests() {
+            # Run Transformers
+            dotnet test ./Tests/bin/Release/QuantConnect.Tests.dll --filter "FullyQualifiedName=QuantConnect.Tests.Python.PythonPackagesTests.Transformers" --blame-hang-timeout 120seconds --blame-crash
+
+            dotnet test ./Tests/bin/Release/QuantConnect.Tests.dll --filter "FullyQualifiedName=QuantConnect.Tests.Python.PythonPackagesTests.XTransformers" --blame-hang-timeout 120seconds --blame-crash
+
+            dotnet test ./Tests/bin/Release/QuantConnect.Tests.dll --filter "FullyQualifiedName=QuantConnect.Tests.Python.PythonPackagesTests.StatsForecast|Mlforecast" --blame-hang-timeout 120seconds --blame-crash
+
+            dotnet test ./Tests/bin/Release/QuantConnect.Tests.dll --filter "FullyQualifiedName=QuantConnect.Tests.Python.PythonPackagesTests.MlxtendTest|Thinc" --blame-hang-timeout 120seconds --blame-crash
+
+            dotnet test ./Tests/bin/Release/QuantConnect.Tests.dll --filter "FullyQualifiedName=QuantConnect.Tests.Python.PythonPackagesTests.ModuleVersionTestExplicit" --blame-hang-timeout 120seconds --blame-crash
+
+            dotnet test ./Tests/bin/Release/QuantConnect.Tests.dll --filter "FullyQualifiedName=QuantConnect.Tests.Python.PythonPackagesTests.Tsfel" --blame-hang-timeout 120seconds --blame-crash
+
+            dotnet test ./Tests/bin/Release/QuantConnect.Tests.dll --filter "FullyQualifiedName=QuantConnect.Tests.Python.PythonPackagesTests.ScikitOptimizeTest" --blame-hang-timeout 120seconds --blame-crash
+
+            dotnet test ./Tests/bin/Release/QuantConnect.Tests.dll --filter "FullyQualifiedName=QuantConnect.Tests.Python.PythonPackagesTests.PyStan" --blame-hang-timeout 120seconds --blame-crash
+          }
+
+          testGroups=(packageTests virtualEnvironmentAndSeparatePackageTests separatePackageTests)
+
+          # Thread pools default to the host's core count, not the container's cpus limit, and the groups running at the same time
+          # would starve each other into hangs: give each group its share of the cpus instead
+          read quota period < /sys/fs/cgroup/cpu.max || quota=max
+          cpus=$([ "$quota" = max ] && nproc || echo $(( quota / period )))
+          threads=$(( cpus > ${#testGroups[@]} ? cpus / ${#testGroups[@]} : 1 ))
+          export OMP_NUM_THREADS=$threads MKL_NUM_THREADS=$threads OPENBLAS_NUM_THREADS=$threads NUMBA_NUM_THREADS=$threads TF_NUM_INTRAOP_THREADS=$threads TF_NUM_INTEROP_THREADS=$threads
+
+          pids=()
+          for testGroup in "${testGroups[@]}"; do
+            $testGroup > $testGroup.log 2>&1 &
+            pids+=($!)
+          done
+
+          failed=0
+          for i in "${!testGroups[@]}"; do
+            wait ${pids[$i]} && result=passed || { result=failed; failed=1; }
+            echo "========== ${testGroups[$i]} $result =========="
+            cat ${testGroups[$i]}.log
+          done
+          exit $failed

@@ -1,0 +1,961 @@
+{
+  "schema_version": 1,
+  "batch_id": "L0009",
+  "module": "Common",
+  "reviewer": "Codex",
+  "review_date": "2026-11-04",
+  "completed_at_utc": "2026-11-04T10:06:26.2362175Z",
+  "status": "FULL_TEXT_READ_STATIC_REVIEW_COMPLETE",
+  "source_root": "C:/Users/A/Desktop/TX/QuantConnect/Lean-master QuantConnect的精简算法交易引擎（Python、C#）",
+  "inventory_path": "C:/Users/A/Documents/Codex/outputs/lean-full-review-20261101/codex/inventory/batch_plan.json",
+  "inventory_sha256": "beae32ec81fac4ce7da5894c17c9e849732f306fbe24691bec665b9612c34718",
+  "planned_segments": 40,
+  "read_segments": 40,
+  "planned_lines": 6299,
+  "read_lines": 6299,
+  "coverage_percent": 100,
+  "all_source_hashes_match": true,
+  "method": "Full numbered source output in 11 untruncated chunks, followed by static control/data-flow review",
+  "successful_read_chunks": [
+    {
+      "global_start_line": 1,
+      "global_end_line": 600,
+      "output_truncated": false,
+      "status": "READ"
+    },
+    {
+      "global_start_line": 601,
+      "global_end_line": 1200,
+      "output_truncated": false,
+      "status": "READ"
+    },
+    {
+      "global_start_line": 1201,
+      "global_end_line": 1800,
+      "output_truncated": false,
+      "status": "READ"
+    },
+    {
+      "global_start_line": 1801,
+      "global_end_line": 2400,
+      "output_truncated": false,
+      "status": "READ"
+    },
+    {
+      "global_start_line": 2401,
+      "global_end_line": 3000,
+      "output_truncated": false,
+      "status": "READ"
+    },
+    {
+      "global_start_line": 3001,
+      "global_end_line": 3600,
+      "output_truncated": false,
+      "status": "READ"
+    },
+    {
+      "global_start_line": 3601,
+      "global_end_line": 4200,
+      "output_truncated": false,
+      "status": "READ"
+    },
+    {
+      "global_start_line": 4201,
+      "global_end_line": 4800,
+      "output_truncated": false,
+      "status": "READ"
+    },
+    {
+      "global_start_line": 4801,
+      "global_end_line": 5400,
+      "output_truncated": false,
+      "status": "READ"
+    },
+    {
+      "global_start_line": 5401,
+      "global_end_line": 6000,
+      "output_truncated": false,
+      "status": "READ"
+    },
+    {
+      "global_start_line": 6001,
+      "global_end_line": 6299,
+      "output_truncated": false,
+      "status": "READ"
+    }
+  ],
+  "segments": [
+    {
+      "path": "Common/Algorithm/Framework/Alphas/Analysis/InsightManager.cs",
+      "sha256": "24b7b90c8d725aba5ffd1b7833d34e582bdcc081b8635e9219970b7a4336e89d",
+      "actual_sha256": "24b7b90c8d725aba5ffd1b7833d34e582bdcc081b8635e9219970b7a4336e89d",
+      "hash_match": true,
+      "start_line": 1,
+      "end_line": 127,
+      "actual_file_lines": 127,
+      "read_ranges": [
+        {
+          "start_line": 1,
+          "end_line": 127
+        }
+      ],
+      "read_lines": 127,
+      "global_start_line": 1,
+      "global_end_line": 127,
+      "status": "FULL_TEXT_READ",
+      "review_status": "STATIC_REVIEW_COMPLETE",
+      "unread_ranges": []
+    },
+    {
+      "path": "Common/Algorithm/Framework/Alphas/GeneratedInsightsCollection.cs",
+      "sha256": "c85f394ee5595a4362f531761fa14eb999d41f2a9a10337947794b3a93a11242",
+      "actual_sha256": "c85f394ee5595a4362f531761fa14eb999d41f2a9a10337947794b3a93a11242",
+      "hash_match": true,
+      "start_line": 1,
+      "end_line": 47,
+      "actual_file_lines": 47,
+      "read_ranges": [
+        {
+          "start_line": 1,
+          "end_line": 47
+        }
+      ],
+      "read_lines": 47,
+      "global_start_line": 128,
+      "global_end_line": 174,
+      "status": "FULL_TEXT_READ",
+      "review_status": "STATIC_REVIEW_COMPLETE",
+      "unread_ranges": []
+    },
+    {
+      "path": "Common/Algorithm/Framework/Alphas/IInsightScoreFunction.cs",
+      "sha256": "041a45866c4823bcedeeaab7cafdceec4d0e81937dfc1c91c8e34c629cdad3eb",
+      "actual_sha256": "041a45866c4823bcedeeaab7cafdceec4d0e81937dfc1c91c8e34c629cdad3eb",
+      "hash_match": true,
+      "start_line": 1,
+      "end_line": 31,
+      "actual_file_lines": 31,
+      "read_ranges": [
+        {
+          "start_line": 1,
+          "end_line": 31
+        }
+      ],
+      "read_lines": 31,
+      "global_start_line": 175,
+      "global_end_line": 205,
+      "status": "FULL_TEXT_READ",
+      "review_status": "STATIC_REVIEW_COMPLETE",
+      "unread_ranges": []
+    },
+    {
+      "path": "Common/Algorithm/Framework/Alphas/Insight.cs",
+      "sha256": "94aa99875e86bfb2efffd8a7994738097be0afb930d6cf638c3cc1601624595f",
+      "actual_sha256": "94aa99875e86bfb2efffd8a7994738097be0afb930d6cf638c3cc1601624595f",
+      "hash_match": true,
+      "start_line": 1,
+      "end_line": 747,
+      "actual_file_lines": 747,
+      "read_ranges": [
+        {
+          "start_line": 1,
+          "end_line": 747
+        }
+      ],
+      "read_lines": 747,
+      "global_start_line": 206,
+      "global_end_line": 952,
+      "status": "FULL_TEXT_READ",
+      "review_status": "STATIC_REVIEW_COMPLETE",
+      "unread_ranges": []
+    },
+    {
+      "path": "Common/Algorithm/Framework/Alphas/InsightCollection.cs",
+      "sha256": "ecbadf1b24380c4c24d6383bfaa30bc424669772ec34a4a83450f882c527b503",
+      "actual_sha256": "ecbadf1b24380c4c24d6383bfaa30bc424669772ec34a4a83450f882c527b503",
+      "hash_match": true,
+      "start_line": 1,
+      "end_line": 395,
+      "actual_file_lines": 395,
+      "read_ranges": [
+        {
+          "start_line": 1,
+          "end_line": 395
+        }
+      ],
+      "read_lines": 395,
+      "global_start_line": 953,
+      "global_end_line": 1347,
+      "status": "FULL_TEXT_READ",
+      "review_status": "STATIC_REVIEW_COMPLETE",
+      "unread_ranges": []
+    },
+    {
+      "path": "Common/Algorithm/Framework/Alphas/InsightDirection.cs",
+      "sha256": "622a4302d0d7e0a81944beb421b23b99950b5e8426fa247ae74f03b64da8af2a",
+      "actual_sha256": "622a4302d0d7e0a81944beb421b23b99950b5e8426fa247ae74f03b64da8af2a",
+      "hash_match": true,
+      "start_line": 1,
+      "end_line": 42,
+      "actual_file_lines": 42,
+      "read_ranges": [
+        {
+          "start_line": 1,
+          "end_line": 42
+        }
+      ],
+      "read_lines": 42,
+      "global_start_line": 1348,
+      "global_end_line": 1389,
+      "status": "FULL_TEXT_READ",
+      "review_status": "STATIC_REVIEW_COMPLETE",
+      "unread_ranges": []
+    },
+    {
+      "path": "Common/Algorithm/Framework/Alphas/InsightScore.cs",
+      "sha256": "bc439037b8f3007c530171dd819bdb5c2493a5b9f39ca3957f4125d19e864442",
+      "actual_sha256": "bc439037b8f3007c530171dd819bdb5c2493a5b9f39ca3957f4125d19e864442",
+      "hash_match": true,
+      "start_line": 1,
+      "end_line": 136,
+      "actual_file_lines": 136,
+      "read_ranges": [
+        {
+          "start_line": 1,
+          "end_line": 136
+        }
+      ],
+      "read_lines": 136,
+      "global_start_line": 1390,
+      "global_end_line": 1525,
+      "status": "FULL_TEXT_READ",
+      "review_status": "STATIC_REVIEW_COMPLETE",
+      "unread_ranges": []
+    },
+    {
+      "path": "Common/Algorithm/Framework/Alphas/InsightScoreFunctionPythonWrapper.cs",
+      "sha256": "9c7e428e20668083e0c9b9b0435279988cbf5545fb898af15be23e9aff3855cd",
+      "actual_sha256": "9c7e428e20668083e0c9b9b0435279988cbf5545fb898af15be23e9aff3855cd",
+      "hash_match": true,
+      "start_line": 1,
+      "end_line": 45,
+      "actual_file_lines": 45,
+      "read_ranges": [
+        {
+          "start_line": 1,
+          "end_line": 45
+        }
+      ],
+      "read_lines": 45,
+      "global_start_line": 1526,
+      "global_end_line": 1570,
+      "status": "FULL_TEXT_READ",
+      "review_status": "STATIC_REVIEW_COMPLETE",
+      "unread_ranges": []
+    },
+    {
+      "path": "Common/Algorithm/Framework/Alphas/InsightScoreType.cs",
+      "sha256": "03819e72cef2e8d16eb6e0ef95c50638dc825296420237085fecc83a28797ea8",
+      "actual_sha256": "03819e72cef2e8d16eb6e0ef95c50638dc825296420237085fecc83a28797ea8",
+      "hash_match": true,
+      "start_line": 1,
+      "end_line": 38,
+      "actual_file_lines": 38,
+      "read_ranges": [
+        {
+          "start_line": 1,
+          "end_line": 38
+        }
+      ],
+      "read_lines": 38,
+      "global_start_line": 1571,
+      "global_end_line": 1608,
+      "status": "FULL_TEXT_READ",
+      "review_status": "STATIC_REVIEW_COMPLETE",
+      "unread_ranges": []
+    },
+    {
+      "path": "Common/Algorithm/Framework/Alphas/InsightType.cs",
+      "sha256": "2a7dc2693e6cd0083979a23a2af4840d0441de5807bc31c5414b9aca74b3314b",
+      "actual_sha256": "2a7dc2693e6cd0083979a23a2af4840d0441de5807bc31c5414b9aca74b3314b",
+      "hash_match": true,
+      "start_line": 1,
+      "end_line": 37,
+      "actual_file_lines": 37,
+      "read_ranges": [
+        {
+          "start_line": 1,
+          "end_line": 37
+        }
+      ],
+      "read_lines": 37,
+      "global_start_line": 1609,
+      "global_end_line": 1645,
+      "status": "FULL_TEXT_READ",
+      "review_status": "STATIC_REVIEW_COMPLETE",
+      "unread_ranges": []
+    },
+    {
+      "path": "Common/Algorithm/Framework/Alphas/Serialization/InsightJsonConverter.cs",
+      "sha256": "653e43186f387a25496029d281b8a3318f161c39c3d12d407ebe86acfd975a76",
+      "actual_sha256": "653e43186f387a25496029d281b8a3318f161c39c3d12d407ebe86acfd975a76",
+      "hash_match": true,
+      "start_line": 1,
+      "end_line": 46,
+      "actual_file_lines": 46,
+      "read_ranges": [
+        {
+          "start_line": 1,
+          "end_line": 46
+        }
+      ],
+      "read_lines": 46,
+      "global_start_line": 1646,
+      "global_end_line": 1691,
+      "status": "FULL_TEXT_READ",
+      "review_status": "STATIC_REVIEW_COMPLETE",
+      "unread_ranges": []
+    },
+    {
+      "path": "Common/Algorithm/Framework/Alphas/Serialization/SerializedInsight.cs",
+      "sha256": "269596e83603b904b03b6fe6469a4d04444b9938ef29da2a9a63822a25fa641c",
+      "actual_sha256": "269596e83603b904b03b6fe6469a4d04444b9938ef29da2a9a63822a25fa641c",
+      "hash_match": true,
+      "start_line": 1,
+      "end_line": 292,
+      "actual_file_lines": 292,
+      "read_ranges": [
+        {
+          "start_line": 1,
+          "end_line": 292
+        }
+      ],
+      "read_lines": 292,
+      "global_start_line": 1692,
+      "global_end_line": 1983,
+      "status": "FULL_TEXT_READ",
+      "review_status": "STATIC_REVIEW_COMPLETE",
+      "unread_ranges": []
+    },
+    {
+      "path": "Common/Algorithm/Framework/Portfolio/IPortfolioTarget.cs",
+      "sha256": "c3195ac184ed2ccda4d3007ee70f28574a2a2fd49903e25b3b3285ac8b01f197",
+      "actual_sha256": "c3195ac184ed2ccda4d3007ee70f28574a2a2fd49903e25b3b3285ac8b01f197",
+      "hash_match": true,
+      "start_line": 1,
+      "end_line": 39,
+      "actual_file_lines": 39,
+      "read_ranges": [
+        {
+          "start_line": 1,
+          "end_line": 39
+        }
+      ],
+      "read_lines": 39,
+      "global_start_line": 1984,
+      "global_end_line": 2022,
+      "status": "FULL_TEXT_READ",
+      "review_status": "STATIC_REVIEW_COMPLETE",
+      "unread_ranges": []
+    },
+    {
+      "path": "Common/Algorithm/Framework/Portfolio/PortfolioTarget.cs",
+      "sha256": "4c086d048f7da162e7ad1158c8527407c1286683ad3f35ce405b88213408687e",
+      "actual_sha256": "4c086d048f7da162e7ad1158c8527407c1286683ad3f35ce405b88213408687e",
+      "hash_match": true,
+      "start_line": 1,
+      "end_line": 203,
+      "actual_file_lines": 203,
+      "read_ranges": [
+        {
+          "start_line": 1,
+          "end_line": 203
+        }
+      ],
+      "read_lines": 203,
+      "global_start_line": 2023,
+      "global_end_line": 2225,
+      "status": "FULL_TEXT_READ",
+      "review_status": "STATIC_REVIEW_COMPLETE",
+      "unread_ranges": []
+    },
+    {
+      "path": "Common/Algorithm/Framework/Portfolio/PortfolioTargetCollection.cs",
+      "sha256": "2a2d88c477bfd6fd2906ef97aeb8bcef9bcf122a5d742593d2a8787bb13594f6",
+      "actual_sha256": "2a2d88c477bfd6fd2906ef97aeb8bcef9bcf122a5d742593d2a8787bb13594f6",
+      "hash_match": true,
+      "start_line": 1,
+      "end_line": 435,
+      "actual_file_lines": 435,
+      "read_ranges": [
+        {
+          "start_line": 1,
+          "end_line": 435
+        }
+      ],
+      "read_lines": 435,
+      "global_start_line": 2226,
+      "global_end_line": 2660,
+      "status": "FULL_TEXT_READ",
+      "review_status": "STATIC_REVIEW_COMPLETE",
+      "unread_ranges": []
+    },
+    {
+      "path": "Common/Algorithm/Framework/Portfolio/SignalExports/BaseSignalExport.cs",
+      "sha256": "a50276a05af420ba3c64bce18785f5eaa4b8c9e3f91b4ec03e91716e85968f85",
+      "actual_sha256": "a50276a05af420ba3c64bce18785f5eaa4b8c9e3f91b4ec03e91716e85968f85",
+      "hash_match": true,
+      "start_line": 1,
+      "end_line": 115,
+      "actual_file_lines": 115,
+      "read_ranges": [
+        {
+          "start_line": 1,
+          "end_line": 115
+        }
+      ],
+      "read_lines": 115,
+      "global_start_line": 2661,
+      "global_end_line": 2775,
+      "status": "FULL_TEXT_READ",
+      "review_status": "STATIC_REVIEW_COMPLETE",
+      "unread_ranges": []
+    },
+    {
+      "path": "Common/Algorithm/Framework/Portfolio/SignalExports/Collective2SignalExport.cs",
+      "sha256": "33108d31d9aa08b77b7d2835800d29952ef87fe94bd10c39872247d845051ae7",
+      "actual_sha256": "33108d31d9aa08b77b7d2835800d29952ef87fe94bd10c39872247d845051ae7",
+      "hash_match": true,
+      "start_line": 1,
+      "end_line": 639,
+      "actual_file_lines": 639,
+      "read_ranges": [
+        {
+          "start_line": 1,
+          "end_line": 639
+        }
+      ],
+      "read_lines": 639,
+      "global_start_line": 2776,
+      "global_end_line": 3414,
+      "status": "FULL_TEXT_READ",
+      "review_status": "STATIC_REVIEW_COMPLETE",
+      "unread_ranges": []
+    },
+    {
+      "path": "Common/Algorithm/Framework/Portfolio/SignalExports/CrunchDAOSignalExport.cs",
+      "sha256": "bdf7d6914371022b29597dd1e8138ea920100ef6b88da00bf06fba6734414d90",
+      "actual_sha256": "bdf7d6914371022b29597dd1e8138ea920100ef6b88da00bf06fba6734414d90",
+      "hash_match": true,
+      "start_line": 1,
+      "end_line": 290,
+      "actual_file_lines": 290,
+      "read_ranges": [
+        {
+          "start_line": 1,
+          "end_line": 290
+        }
+      ],
+      "read_lines": 290,
+      "global_start_line": 3415,
+      "global_end_line": 3704,
+      "status": "FULL_TEXT_READ",
+      "review_status": "STATIC_REVIEW_COMPLETE",
+      "unread_ranges": []
+    },
+    {
+      "path": "Common/Algorithm/Framework/Portfolio/SignalExports/NumeraiSignalExport.cs",
+      "sha256": "855e415d858ffb1e871f9620d42169805b19fa4f2719f79cb376c9c145061c29",
+      "actual_sha256": "855e415d858ffb1e871f9620d42169805b19fa4f2719f79cb376c9c145061c29",
+      "hash_match": true,
+      "start_line": 1,
+      "end_line": 281,
+      "actual_file_lines": 281,
+      "read_ranges": [
+        {
+          "start_line": 1,
+          "end_line": 281
+        }
+      ],
+      "read_lines": 281,
+      "global_start_line": 3705,
+      "global_end_line": 3985,
+      "status": "FULL_TEXT_READ",
+      "review_status": "STATIC_REVIEW_COMPLETE",
+      "unread_ranges": []
+    },
+    {
+      "path": "Common/Algorithm/Framework/Portfolio/SignalExports/SignalExportManager.cs",
+      "sha256": "6899cb179959f977fe2673d73cae8aa73d8ecdca2b2003b37f52e243a5308417",
+      "actual_sha256": "6899cb179959f977fe2673d73cae8aa73d8ecdca2b2003b37f52e243a5308417",
+      "hash_match": true,
+      "start_line": 1,
+      "end_line": 276,
+      "actual_file_lines": 276,
+      "read_ranges": [
+        {
+          "start_line": 1,
+          "end_line": 276
+        }
+      ],
+      "read_lines": 276,
+      "global_start_line": 3986,
+      "global_end_line": 4261,
+      "status": "FULL_TEXT_READ",
+      "review_status": "STATIC_REVIEW_COMPLETE",
+      "unread_ranges": []
+    },
+    {
+      "path": "Common/Algorithm/Framework/Portfolio/SignalExports/SignalExportTargetParameters.cs",
+      "sha256": "54d409cf45b560c2ff38526a455f2a6b22dd45db8e850708e9a2fb43d2e4477e",
+      "actual_sha256": "54d409cf45b560c2ff38526a455f2a6b22dd45db8e850708e9a2fb43d2e4477e",
+      "hash_match": true,
+      "start_line": 1,
+      "end_line": 36,
+      "actual_file_lines": 36,
+      "read_ranges": [
+        {
+          "start_line": 1,
+          "end_line": 36
+        }
+      ],
+      "read_lines": 36,
+      "global_start_line": 4262,
+      "global_end_line": 4297,
+      "status": "FULL_TEXT_READ",
+      "review_status": "STATIC_REVIEW_COMPLETE",
+      "unread_ranges": []
+    },
+    {
+      "path": "Common/Algorithm/Framework/Portfolio/SignalExports/VBaseSignalExport.cs",
+      "sha256": "d8edd204a2de96b535fb0b0be44907b4b12af877fa24f941319dc99a61375be4",
+      "actual_sha256": "d8edd204a2de96b535fb0b0be44907b4b12af877fa24f941319dc99a61375be4",
+      "hash_match": true,
+      "start_line": 1,
+      "end_line": 178,
+      "actual_file_lines": 178,
+      "read_ranges": [
+        {
+          "start_line": 1,
+          "end_line": 178
+        }
+      ],
+      "read_lines": 178,
+      "global_start_line": 4298,
+      "global_end_line": 4475,
+      "status": "FULL_TEXT_READ",
+      "review_status": "STATIC_REVIEW_COMPLETE",
+      "unread_ranges": []
+    },
+    {
+      "path": "Common/AlgorithmConfiguration.cs",
+      "sha256": "258732199cc690811144f80880fda6daea689b9b03620ad359aac843d45a8a6a",
+      "actual_sha256": "258732199cc690811144f80880fda6daea689b9b03620ad359aac843d45a8a6a",
+      "hash_match": true,
+      "start_line": 1,
+      "end_line": 155,
+      "actual_file_lines": 155,
+      "read_ranges": [
+        {
+          "start_line": 1,
+          "end_line": 155
+        }
+      ],
+      "read_lines": 155,
+      "global_start_line": 4476,
+      "global_end_line": 4630,
+      "status": "FULL_TEXT_READ",
+      "review_status": "STATIC_REVIEW_COMPLETE",
+      "unread_ranges": []
+    },
+    {
+      "path": "Common/AlgorithmImports.py",
+      "sha256": "2dca131d98dec2894be51e870abc66422e81e24b01cb5369f2a9877e9772b371",
+      "actual_sha256": "2dca131d98dec2894be51e870abc66422e81e24b01cb5369f2a9877e9772b371",
+      "hash_match": true,
+      "start_line": 1,
+      "end_line": 108,
+      "actual_file_lines": 108,
+      "read_ranges": [
+        {
+          "start_line": 1,
+          "end_line": 108
+        }
+      ],
+      "read_lines": 108,
+      "global_start_line": 4631,
+      "global_end_line": 4738,
+      "status": "FULL_TEXT_READ",
+      "review_status": "STATIC_REVIEW_COMPLETE",
+      "unread_ranges": []
+    },
+    {
+      "path": "Common/AlgorithmSettings.cs",
+      "sha256": "76bce8783cdb8ca9d38e1b49c6d3c1ed1f6d990fc12eb5ec22ede8914dd12585",
+      "actual_sha256": "76bce8783cdb8ca9d38e1b49c6d3c1ed1f6d990fc12eb5ec22ede8914dd12585",
+      "hash_match": true,
+      "start_line": 1,
+      "end_line": 203,
+      "actual_file_lines": 203,
+      "read_ranges": [
+        {
+          "start_line": 1,
+          "end_line": 203
+        }
+      ],
+      "read_lines": 203,
+      "global_start_line": 4739,
+      "global_end_line": 4941,
+      "status": "FULL_TEXT_READ",
+      "review_status": "STATIC_REVIEW_COMPLETE",
+      "unread_ranges": []
+    },
+    {
+      "path": "Common/AlgorithmUtils.cs",
+      "sha256": "2de7abf4fbd29847f5c5699f26b83c3c0f67809d45ac58edaebf297e9e1b9718",
+      "actual_sha256": "2de7abf4fbd29847f5c5699f26b83c3c0f67809d45ac58edaebf297e9e1b9718",
+      "hash_match": true,
+      "start_line": 1,
+      "end_line": 85,
+      "actual_file_lines": 85,
+      "read_ranges": [
+        {
+          "start_line": 1,
+          "end_line": 85
+        }
+      ],
+      "read_lines": 85,
+      "global_start_line": 4942,
+      "global_end_line": 5026,
+      "status": "FULL_TEXT_READ",
+      "review_status": "STATIC_REVIEW_COMPLETE",
+      "unread_ranges": []
+    },
+    {
+      "path": "Common/Analysis.cs",
+      "sha256": "664119e1935d888a544c45fe8d86189fb9e4877e98a310c32ab364f280e74746",
+      "actual_sha256": "664119e1935d888a544c45fe8d86189fb9e4877e98a310c32ab364f280e74746",
+      "hash_match": true,
+      "start_line": 1,
+      "end_line": 57,
+      "actual_file_lines": 57,
+      "read_ranges": [
+        {
+          "start_line": 1,
+          "end_line": 57
+        }
+      ],
+      "read_lines": 57,
+      "global_start_line": 5027,
+      "global_end_line": 5083,
+      "status": "FULL_TEXT_READ",
+      "review_status": "STATIC_REVIEW_COMPLETE",
+      "unread_ranges": []
+    },
+    {
+      "path": "Common/Api/Account.cs",
+      "sha256": "8be1db6b4a3458d12ba1d471ccd5269ff433035dbdec3a7fdeb72c0aff006c4d",
+      "actual_sha256": "8be1db6b4a3458d12ba1d471ccd5269ff433035dbdec3a7fdeb72c0aff006c4d",
+      "hash_match": true,
+      "start_line": 1,
+      "end_line": 64,
+      "actual_file_lines": 64,
+      "read_ranges": [
+        {
+          "start_line": 1,
+          "end_line": 64
+        }
+      ],
+      "read_lines": 64,
+      "global_start_line": 5084,
+      "global_end_line": 5147,
+      "status": "FULL_TEXT_READ",
+      "review_status": "STATIC_REVIEW_COMPLETE",
+      "unread_ranges": []
+    },
+    {
+      "path": "Common/Api/Authentication.cs",
+      "sha256": "a7b28ea60543bf18ad85cc3d34cf26e4f43185e210afbb8d0953df1573e64355",
+      "actual_sha256": "a7b28ea60543bf18ad85cc3d34cf26e4f43185e210afbb8d0953df1573e64355",
+      "hash_match": true,
+      "start_line": 1,
+      "end_line": 126,
+      "actual_file_lines": 126,
+      "read_ranges": [
+        {
+          "start_line": 1,
+          "end_line": 126
+        }
+      ],
+      "read_lines": 126,
+      "global_start_line": 5148,
+      "global_end_line": 5273,
+      "status": "FULL_TEXT_READ",
+      "review_status": "STATIC_REVIEW_COMPLETE",
+      "unread_ranges": []
+    },
+    {
+      "path": "Common/Api/AuthenticationResponse.cs",
+      "sha256": "cc5480cdc7197669d87a6fe594c8a87b7f299e0c536760330e0953726e0107fe",
+      "actual_sha256": "cc5480cdc7197669d87a6fe594c8a87b7f299e0c536760330e0953726e0107fe",
+      "hash_match": true,
+      "start_line": 1,
+      "end_line": 24,
+      "actual_file_lines": 24,
+      "read_ranges": [
+        {
+          "start_line": 1,
+          "end_line": 24
+        }
+      ],
+      "read_lines": 24,
+      "global_start_line": 5274,
+      "global_end_line": 5297,
+      "status": "FULL_TEXT_READ",
+      "review_status": "STATIC_REVIEW_COMPLETE",
+      "unread_ranges": []
+    },
+    {
+      "path": "Common/Api/Backtest.cs",
+      "sha256": "6522a07636388ad56b19a5cc564d63125731120e35ccabedc620b79b31baba39",
+      "actual_sha256": "6522a07636388ad56b19a5cc564d63125731120e35ccabedc620b79b31baba39",
+      "hash_match": true,
+      "start_line": 1,
+      "end_line": 357,
+      "actual_file_lines": 357,
+      "read_ranges": [
+        {
+          "start_line": 1,
+          "end_line": 357
+        }
+      ],
+      "read_lines": 357,
+      "global_start_line": 5298,
+      "global_end_line": 5654,
+      "status": "FULL_TEXT_READ",
+      "review_status": "STATIC_REVIEW_COMPLETE",
+      "unread_ranges": []
+    },
+    {
+      "path": "Common/Api/BacktestLog.cs",
+      "sha256": "8896030b6fec774fe47a161e3cb38cf87b9a43c052cca6f43b09c94cbe1ff33f",
+      "actual_sha256": "8896030b6fec774fe47a161e3cb38cf87b9a43c052cca6f43b09c94cbe1ff33f",
+      "hash_match": true,
+      "start_line": 1,
+      "end_line": 35,
+      "actual_file_lines": 35,
+      "read_ranges": [
+        {
+          "start_line": 1,
+          "end_line": 35
+        }
+      ],
+      "read_lines": 35,
+      "global_start_line": 5655,
+      "global_end_line": 5689,
+      "status": "FULL_TEXT_READ",
+      "review_status": "STATIC_REVIEW_COMPLETE",
+      "unread_ranges": []
+    },
+    {
+      "path": "Common/Api/BacktestReport.cs",
+      "sha256": "c363a5729642b6bbec18fcdb30f7fffd85aa33cd396cd5e87b9f997084e80a2e",
+      "actual_sha256": "c363a5729642b6bbec18fcdb30f7fffd85aa33cd396cd5e87b9f997084e80a2e",
+      "hash_match": true,
+      "start_line": 1,
+      "end_line": 34,
+      "actual_file_lines": 34,
+      "read_ranges": [
+        {
+          "start_line": 1,
+          "end_line": 34
+        }
+      ],
+      "read_lines": 34,
+      "global_start_line": 5690,
+      "global_end_line": 5723,
+      "status": "FULL_TEXT_READ",
+      "review_status": "STATIC_REVIEW_COMPLETE",
+      "unread_ranges": []
+    },
+    {
+      "path": "Common/Api/BaseOptimization.cs",
+      "sha256": "81ff1cafd1c0090f8d966fe6a0bdcdd4ad99889a84734b7c27f3f34fbe1ff4ef",
+      "actual_sha256": "81ff1cafd1c0090f8d966fe6a0bdcdd4ad99889a84734b7c27f3f34fbe1ff4ef",
+      "hash_match": true,
+      "start_line": 1,
+      "end_line": 113,
+      "actual_file_lines": 113,
+      "read_ranges": [
+        {
+          "start_line": 1,
+          "end_line": 113
+        }
+      ],
+      "read_lines": 113,
+      "global_start_line": 5724,
+      "global_end_line": 5836,
+      "status": "FULL_TEXT_READ",
+      "review_status": "STATIC_REVIEW_COMPLETE",
+      "unread_ranges": []
+    },
+    {
+      "path": "Common/Api/Compile.cs",
+      "sha256": "a3ed2594b1a2bf61de5e21fde7346946ede98f2a96602c7229e792665ad9c923",
+      "actual_sha256": "a3ed2594b1a2bf61de5e21fde7346946ede98f2a96602c7229e792665ad9c923",
+      "hash_match": true,
+      "start_line": 1,
+      "end_line": 58,
+      "actual_file_lines": 58,
+      "read_ranges": [
+        {
+          "start_line": 1,
+          "end_line": 58
+        }
+      ],
+      "read_lines": 58,
+      "global_start_line": 5837,
+      "global_end_line": 5894,
+      "status": "FULL_TEXT_READ",
+      "review_status": "STATIC_REVIEW_COMPLETE",
+      "unread_ranges": []
+    },
+    {
+      "path": "Common/Api/CompileState.cs",
+      "sha256": "c4dbffb10441a3369f11d6dbc9f0e02e907e50f481f12d63c2a6f1e638ed5bb6",
+      "actual_sha256": "c4dbffb10441a3369f11d6dbc9f0e02e907e50f481f12d63c2a6f1e638ed5bb6",
+      "hash_match": true,
+      "start_line": 1,
+      "end_line": 37,
+      "actual_file_lines": 37,
+      "read_ranges": [
+        {
+          "start_line": 1,
+          "end_line": 37
+        }
+      ],
+      "read_lines": 37,
+      "global_start_line": 5895,
+      "global_end_line": 5931,
+      "status": "FULL_TEXT_READ",
+      "review_status": "STATIC_REVIEW_COMPLETE",
+      "unread_ranges": []
+    },
+    {
+      "path": "Common/Api/Data.cs",
+      "sha256": "9dd3bd51e5b421eba027b3e8c26f432ef89a22cd7c75335ec48934c583dd6857",
+      "actual_sha256": "9dd3bd51e5b421eba027b3e8c26f432ef89a22cd7c75335ec48934c583dd6857",
+      "hash_match": true,
+      "start_line": 1,
+      "end_line": 151,
+      "actual_file_lines": 151,
+      "read_ranges": [
+        {
+          "start_line": 1,
+          "end_line": 151
+        }
+      ],
+      "read_lines": 151,
+      "global_start_line": 5932,
+      "global_end_line": 6082,
+      "status": "FULL_TEXT_READ",
+      "review_status": "STATIC_REVIEW_COMPLETE",
+      "unread_ranges": []
+    },
+    {
+      "path": "Common/Api/Estimate.cs",
+      "sha256": "85f689b7cce57e373cd9b114e7347c0072fe524be174f35c92ee4b4f5307b89e",
+      "actual_sha256": "85f689b7cce57e373cd9b114e7347c0072fe524be174f35c92ee4b4f5307b89e",
+      "hash_match": true,
+      "start_line": 1,
+      "end_line": 52,
+      "actual_file_lines": 52,
+      "read_ranges": [
+        {
+          "start_line": 1,
+          "end_line": 52
+        }
+      ],
+      "read_lines": 52,
+      "global_start_line": 6083,
+      "global_end_line": 6134,
+      "status": "FULL_TEXT_READ",
+      "review_status": "STATIC_REVIEW_COMPLETE",
+      "unread_ranges": []
+    },
+    {
+      "path": "Common/Api/InsightResponse.cs",
+      "sha256": "025e9d185970082df4037dca457c599b48305224fed6f4e397d51a0582b91854",
+      "actual_sha256": "025e9d185970082df4037dca457c599b48305224fed6f4e397d51a0582b91854",
+      "hash_match": true,
+      "start_line": 1,
+      "end_line": 36,
+      "actual_file_lines": 36,
+      "read_ranges": [
+        {
+          "start_line": 1,
+          "end_line": 36
+        }
+      ],
+      "read_lines": 36,
+      "global_start_line": 6135,
+      "global_end_line": 6170,
+      "status": "FULL_TEXT_READ",
+      "review_status": "STATIC_REVIEW_COMPLETE",
+      "unread_ranges": []
+    },
+    {
+      "path": "Common/Api/LiveAlgorithm.cs",
+      "sha256": "f1c236733b902244ce6482242063f01067a33f7bfeb7e29ef39b2a40b1e7fe1d",
+      "actual_sha256": "f1c236733b902244ce6482242063f01067a33f7bfeb7e29ef39b2a40b1e7fe1d",
+      "hash_match": true,
+      "start_line": 1,
+      "end_line": 129,
+      "actual_file_lines": 129,
+      "read_ranges": [
+        {
+          "start_line": 1,
+          "end_line": 129
+        }
+      ],
+      "read_lines": 129,
+      "global_start_line": 6171,
+      "global_end_line": 6299,
+      "status": "FULL_TEXT_READ",
+      "review_status": "STATIC_REVIEW_COMPLETE",
+      "unread_ranges": []
+    }
+  ],
+  "unread_segments": [],
+  "findings": [
+    "F01",
+    "F02",
+    "F03",
+    "F04",
+    "F05",
+    "F06",
+    "F07",
+    "F08",
+    "F09",
+    "F10",
+    "F11",
+    "F12",
+    "F13",
+    "F14"
+  ],
+  "runtime_verified": false,
+  "source_executed": false,
+  "compiled": false,
+  "backtested": false,
+  "source_modified": false,
+  "claude_directory_accessed": false,
+  "external_api_called": false,
+  "limitations": [
+    "Static review only; no runtime reproduction",
+    "Out-of-batch callers and tests not reviewed",
+    "Initial whole-inventory output truncated; selected L0009 inventory re-read completely",
+    "Initial abbreviated source path failed; no failed output counted as read",
+    "Hash-check command syntax failure corrected before successful verification"
+  ],
+  "report": "REVIEW_CN.md"
+}

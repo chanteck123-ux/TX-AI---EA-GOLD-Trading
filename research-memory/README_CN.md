@@ -30,3 +30,7 @@ GSM 三 SOP 旧版升级以 main 的中英文文件为当前入口。交易头�
 | 优先参考来源 | [来源约束](../GITHUB_PRIORITY_SOURCES.md) |
 | 当前 EA 研发计划 | [中文版](../FINAL_CHAMPION_ITERATION_SYSTEM_CN.md) · [English](../FINAL_CHAMPION_ITERATION_SYSTEM.md)；2026-09-12替换旧计划，更新SOP归属并新增§13动态风险与市场信息系统 |
 | 历史交付 | [安装与身份记录](../champion/current/INSTALL_MT5_CN.md) |
+
+## QuantSkills审核知识（2026-11-01）
+
+[batch_06完整知识包](quantskills/batch_06/README.md)：25个资产、246/246份文本全文审核与已有Claude笔记交叉核对；保留来源提交、哈希和未验证边界。不是全部4,524份完成，也不表示Claude独立全文审核已完成。

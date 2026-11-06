@@ -1,0 +1,74 @@
+{
+  "date": "2026-11-03",
+  "source_root": "C:/Users/A/Desktop/TX/QuantSkills量化技能/quantskills-main",
+  "files": [
+    {
+      "path": "package.json",
+      "sha256": "FA7A176F64657335E883E620A825B48DD283CD5D4A3689431678FF2535164D36",
+      "start_line": 1,
+      "end_line": 8,
+      "status": "FULL_TEXT_STATIC_READ_NOT_EXECUTED"
+    },
+    {
+      "path": "scripts/snapshot-contract.mjs",
+      "sha256": "1132CDEF5E16BC34F57DA6AC89DC65D6AE83CBE9E62965F2024690EA63AF45F3",
+      "start_line": 1,
+      "end_line": 276,
+      "status": "FULL_TEXT_STATIC_READ_NOT_EXECUTED"
+    },
+    {
+      "path": "scripts/build.mjs",
+      "sha256": "A43507D6770C5073D8450C95D126EC71787DA657A381449736DB90A51A77A34C",
+      "start_line": 1,
+      "end_line": 196,
+      "status": "FULL_TEXT_STATIC_READ_NOT_EXECUTED"
+    },
+    {
+      "path": "scripts/catalog-model.mjs",
+      "sha256": "271118B7A3B4BC9F5B589515760C6F906B51CD4AF0EED62F5366A229F8516BCF",
+      "start_line": 1,
+      "end_line": 21,
+      "status": "FULL_TEXT_STATIC_READ_NOT_EXECUTED"
+    },
+    {
+      "path": "scripts/render-site-data.mjs",
+      "sha256": "E1532B914D2E397CF598E9D91767C27057D6252BD5D7945B5A99E5D828C997D1",
+      "start_line": 1,
+      "end_line": 3,
+      "status": "FULL_TEXT_STATIC_READ_NOT_EXECUTED"
+    },
+    {
+      "path": "scripts/verify-build.mjs",
+      "sha256": "BB504D59593F472AB9C8A9B3DD6B0112A27F0F777A9A9467E36C08D51D042D02",
+      "start_line": 1,
+      "end_line": 44,
+      "status": "FULL_TEXT_STATIC_READ_NOT_EXECUTED"
+    },
+    {
+      "path": "tests/publication-transaction-security.test.mjs",
+      "sha256": "5752224081552EE9BB7A28528F95E252B399F1520A64268A4ABFDE8AFA222DD6",
+      "start_line": 1,
+      "end_line": 139,
+      "status": "FULL_TEXT_STATIC_READ_NOT_EXECUTED"
+    },
+    {
+      "path": "tests/catalog-admission-security.test.mjs",
+      "sha256": "FB62B6DE524C3D9C194AB698FF2FD14582411D890AD81323C9D5A77FEDF62E0E",
+      "start_line": 1,
+      "end_line": 113,
+      "status": "FULL_TEXT_STATIC_READ_NOT_EXECUTED"
+    },
+    {
+      "path": "tests/verify-build-count.test.mjs",
+      "sha256": "358B339D7504D2FB50AE22BB78F9BC93668F07FCC66A34C386F26BA1D756BA9D",
+      "start_line": 1,
+      "end_line": 15,
+      "status": "FULL_TEXT_STATIC_READ_NOT_EXECUTED"
+    }
+  ],
+  "partial": {
+    "status": "PARTIAL_TRUNCATED_OUTPUT_NOT_COUNTED_FULL",
+    "path": "README.md"
+  },
+  "other_files": "UNREAD_IN_THIS_BATCH"
+}

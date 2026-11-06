@@ -1,0 +1,33 @@
+{
+  "date": "2026-11-04",
+  "files": [
+    {
+      "path": "site/app.mjs",
+      "sha256": "C08E70A8498B9B30ABF3C734B033EAC6B37BCFC123B4DCE477171D4E9E4FFDCF",
+      "start_line": 1,
+      "end_line": 297,
+      "status": "FULL_TEXT_STATIC_READ_NOT_EXECUTED"
+    },
+    {
+      "path": "site/index.html",
+      "sha256": "A49F535E3221497C1F1D01B741891C5D4F4BC12F47AB97C7F9D318D42D80C44D",
+      "start_line": 1,
+      "end_line": 33,
+      "status": "FULL_TEXT_STATIC_READ_NOT_EXECUTED"
+    },
+    {
+      "path": "site/styles.css",
+      "sha256": "04A40C6D5058CD470763D23239651ED3876D70FAC8B99C7DFE88F9033D2D6803",
+      "start_line": 1,
+      "end_line": 4,
+      "status": "FULL_TEXT_STATIC_READ_NOT_EXECUTED"
+    },
+    {
+      "path": "tests/evaluation-view.test.mjs",
+      "sha256": "71C6A7D60A0F6D3079E92CBAB471E5F268B4B580B7A6152DD080A9D85C25889C",
+      "start_line": 1,
+      "end_line": 120,
+      "status": "FULL_TEXT_STATIC_READ_NOT_EXECUTED"
+    }
+  ]
+}

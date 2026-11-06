@@ -1,0 +1,475 @@
+{
+    "upstream_repo":  "https://github.com/quantskills/quantskills",
+    "upstream_commit":  "54b705861040664a41899949b2892d416f4b88dc",
+    "upstream_commit_date":  "2026-10-28T06:01:03Z",
+    "upstream_license":  "none declared (GitHub API license=null, no LICENSE file in copy)",
+    "local_copy":  "Desktop\\TX\\QuantSkills量化技能\\quantskills-main (not published)",
+    "local_zip":  {
+                      "name":  "quantskills-main.zip",
+                      "bytes":  50735763,
+                      "sha256":  "17718F30C941CBD06A3D83A8FA13B42BB4449AF78A3091C03C3EE60C616ADEAD",
+                      "entries":  89,
+                      "published":  false
+                  },
+    "match_check":  "README.md, scripts/build.mjs, site/catalog.json sha256 equal to raw files at upstream_commit (spot check 3/76)",
+    "file_count":  76,
+    "total_bytes":  51469338,
+    "files":  [
+                  {
+                      "path":  ".github/workflows/daily-build.yml",
+                      "bytes":  2045,
+                      "sha256":  "D81853A34FEF905D1318358FDAB6CB72E5B4ACD60A7C2963784A9F7DB8F754ED",
+                      "source_url":  "https://github.com/quantskills/quantskills/blob/54b705861040664a41899949b2892d416f4b88dc/.github/workflows/daily-build.yml"
+                  },
+                  {
+                      "path":  ".github/workflows/deploy-pages.yml",
+                      "bytes":  1177,
+                      "sha256":  "15CD02F0151EA2A158CB423697ACC4945E9F18ECE5BDAFF9A5A4BBD56A929494",
+                      "source_url":  "https://github.com/quantskills/quantskills/blob/54b705861040664a41899949b2892d416f4b88dc/.github/workflows/deploy-pages.yml"
+                  },
+                  {
+                      "path":  ".gitignore",
+                      "bytes":  48,
+                      "sha256":  "BE5452E428648F220F0807E75BEB8486BD273C32DA0A1932E893BAA8774E984F",
+                      "source_url":  "https://github.com/quantskills/quantskills/blob/54b705861040664a41899949b2892d416f4b88dc/.gitignore"
+                  },
+                  {
+                      "path":  "assets/.gitkeep",
+                      "bytes":  114,
+                      "sha256":  "2108362ECB65D7E36BD8144DAF9E2529E1BD5668BCD8C961E82879BD86C4509A",
+                      "source_url":  "https://github.com/quantskills/quantskills/blob/54b705861040664a41899949b2892d416f4b88dc/assets/.gitkeep"
+                  },
+                  {
+                      "path":  "assets/agent-correlation-break-research.png",
+                      "bytes":  1549069,
+                      "sha256":  "0DBD8D2F24CCC22CEA9AD3780FD3DE323BC5A885679FF00D0D493B9CAE2CF1E6",
+                      "source_url":  "https://github.com/quantskills/quantskills/blob/54b705861040664a41899949b2892d416f4b88dc/assets/agent-correlation-break-research.png"
+                  },
+                  {
+                      "path":  "assets/agent-crowding-risk-monitor.png",
+                      "bytes":  1512193,
+                      "sha256":  "3509747315C47373142D325D86C1764140D021F6A46FE81AC096DC3173FE0BBC",
+                      "source_url":  "https://github.com/quantskills/quantskills/blob/54b705861040664a41899949b2892d416f4b88dc/assets/agent-crowding-risk-monitor.png"
+                  },
+                  {
+                      "path":  "assets/agent-derivatives-skew-sentiment-monitor.png",
+                      "bytes":  1820603,
+                      "sha256":  "BF7E34198C4875CA7CEA21687F22A648DD7096D6007AAAC329D2E90385F9DCCC",
+                      "source_url":  "https://github.com/quantskills/quantskills/blob/54b705861040664a41899949b2892d416f4b88dc/assets/agent-derivatives-skew-sentiment-monitor.png"
+                  },
+                  {
+                      "path":  "assets/agent-market-regime-monitor.png",
+                      "bytes":  1541593,
+                      "sha256":  "FE855ACE342F8E8B2CCCE86E9E312B695E79F3288CBC668A361D1268BB7FB9F3",
+                      "source_url":  "https://github.com/quantskills/quantskills/blob/54b705861040664a41899949b2892d416f4b88dc/assets/agent-market-regime-monitor.png"
+                  },
+                  {
+                      "path":  "assets/agent-quantspace.png",
+                      "bytes":  1505412,
+                      "sha256":  "CB2705B5B7D55BCABE6BF90CBDB343574FAA7F276292E4A3FA495D4DE45653E4",
+                      "source_url":  "https://github.com/quantskills/quantskills/blob/54b705861040664a41899949b2892d416f4b88dc/assets/agent-quantspace.png"
+                  },
+                  {
+                      "path":  "assets/pandaai-community-qr.jpg",
+                      "bytes":  143189,
+                      "sha256":  "2274B745401AB1D2875942A14C75A146F47DAD385055093D6EE781F2C1A34759",
+                      "source_url":  "https://github.com/quantskills/quantskills/blob/54b705861040664a41899949b2892d416f4b88dc/assets/pandaai-community-qr.jpg"
+                  },
+                  {
+                      "path":  "assets/skill-a-share-stock-dossier.png",
+                      "bytes":  1482966,
+                      "sha256":  "2E1D387F2FF36366D9B67099DD0DF23C4452F65AF04C6B7F9D8AA668ED21C906",
+                      "source_url":  "https://github.com/quantskills/quantskills/blob/54b705861040664a41899949b2892d416f4b88dc/assets/skill-a-share-stock-dossier.png"
+                  },
+                  {
+                      "path":  "assets/skill-backtest.png",
+                      "bytes":  1616212,
+                      "sha256":  "1E33BAEDA3E0FFEA267F651FD8F61DF7CB098C9D760ECA5FFF79FC17A26CAFD4",
+                      "source_url":  "https://github.com/quantskills/quantskills/blob/54b705861040664a41899949b2892d416f4b88dc/assets/skill-backtest.png"
+                  },
+                  {
+                      "path":  "assets/skill-doc-to-alphas.png",
+                      "bytes":  1686457,
+                      "sha256":  "08597A75B788D72457ED4FDDC43F58C18B828CF2DDEC69C157CEB301A076A428",
+                      "source_url":  "https://github.com/quantskills/quantskills/blob/54b705861040664a41899949b2892d416f4b88dc/assets/skill-doc-to-alphas.png"
+                  },
+                  {
+                      "path":  "assets/skill-event-risk-alert.png",
+                      "bytes":  1670391,
+                      "sha256":  "A3B82858167A4BA322C1732B1258B4BAD9A53D835CD8F61156155BEBD1BA654C",
+                      "source_url":  "https://github.com/quantskills/quantskills/blob/54b705861040664a41899949b2892d416f4b88dc/assets/skill-event-risk-alert.png"
+                  },
+                  {
+                      "path":  "assets/skill-factor-debug.png",
+                      "bytes":  1493270,
+                      "sha256":  "BA6F4DEA700CA41854F18E40FF976F25E4559F61F4CBDE2BB1314C4FA18ECFF7",
+                      "source_url":  "https://github.com/quantskills/quantskills/blob/54b705861040664a41899949b2892d416f4b88dc/assets/skill-factor-debug.png"
+                  },
+                  {
+                      "path":  "assets/skill-factor-evaluate.png",
+                      "bytes":  1497973,
+                      "sha256":  "C752C715E472C72A4DC51E57E4A14628C93A4A20BF13AD61B73891B1521E97C8",
+                      "source_url":  "https://github.com/quantskills/quantskills/blob/54b705861040664a41899949b2892d416f4b88dc/assets/skill-factor-evaluate.png"
+                  },
+                  {
+                      "path":  "assets/skill-factormad-debate-factor-mining.png",
+                      "bytes":  1784916,
+                      "sha256":  "E883EE0709296D94D28BFD9410EBAEE81F085744AC4908C94891EA986C138315",
+                      "source_url":  "https://github.com/quantskills/quantskills/blob/54b705861040664a41899949b2892d416f4b88dc/assets/skill-factormad-debate-factor-mining.png"
+                  },
+                  {
+                      "path":  "assets/skill-factor-mine.png",
+                      "bytes":  1455068,
+                      "sha256":  "A3078035E6A36E222E5A704856FE31095F2F13E4785EC8B828184B37625391BC",
+                      "source_url":  "https://github.com/quantskills/quantskills/blob/54b705861040664a41899949b2892d416f4b88dc/assets/skill-factor-mine.png"
+                  },
+                  {
+                      "path":  "assets/skill-factor-review.png",
+                      "bytes":  1504054,
+                      "sha256":  "47BE8938E4597B47DF9975A446448ECC1BA09A137BBB7FADB7235C20EC645610",
+                      "source_url":  "https://github.com/quantskills/quantskills/blob/54b705861040664a41899949b2892d416f4b88dc/assets/skill-factor-review.png"
+                  },
+                  {
+                      "path":  "assets/skill-gaetano-crux-capital-research-model.png",
+                      "bytes":  1525119,
+                      "sha256":  "00503E860AE53956AD164E6315208D02333268814D6A4D30F6248CA753AF7994",
+                      "source_url":  "https://github.com/quantskills/quantskills/blob/54b705861040664a41899949b2892d416f4b88dc/assets/skill-gaetano-crux-capital-research-model.png"
+                  },
+                  {
+                      "path":  "assets/skill-ic-analysis.png",
+                      "bytes":  1495865,
+                      "sha256":  "40C2582567000F9B3785C9E9667FEC9355C751EFE8769392EF2568763A444772",
+                      "source_url":  "https://github.com/quantskills/quantskills/blob/54b705861040664a41899949b2892d416f4b88dc/assets/skill-ic-analysis.png"
+                  },
+                  {
+                      "path":  "assets/skill-index-valuation-rotation.png",
+                      "bytes":  1639931,
+                      "sha256":  "4B0668A555C674DF404FB12F2A22095413F1076BC67797AACFB5A77620FF261B",
+                      "source_url":  "https://github.com/quantskills/quantskills/blob/54b705861040664a41899949b2892d416f4b88dc/assets/skill-index-valuation-rotation.png"
+                  },
+                  {
+                      "path":  "assets/skill-market-daily-review.png",
+                      "bytes":  1481971,
+                      "sha256":  "2FCB1E41A4A308EF3EA17A4C7BF9E7520D6B22BAC69029D4A934A2778D236AF0",
+                      "source_url":  "https://github.com/quantskills/quantskills/blob/54b705861040664a41899949b2892d416f4b88dc/assets/skill-market-daily-review.png"
+                  },
+                  {
+                      "path":  "assets/skill-options-vol-analyst.png",
+                      "bytes":  1667637,
+                      "sha256":  "A8485EF294286FFDC3D0E50956B9D725AFD43F89F62BB4259398C3C79480A18B",
+                      "source_url":  "https://github.com/quantskills/quantskills/blob/54b705861040664a41899949b2892d416f4b88dc/assets/skill-options-vol-analyst.png"
+                  },
+                  {
+                      "path":  "assets/skill-pandadata-warehouse.png",
+                      "bytes":  1449419,
+                      "sha256":  "A43150AEDB650EA81DF93A6C36700FD691BE58DF1170140C506C1619E6056260",
+                      "source_url":  "https://github.com/quantskills/quantskills/blob/54b705861040664a41899949b2892d416f4b88dc/assets/skill-pandadata-warehouse.png"
+                  },
+                  {
+                      "path":  "assets/skill-paper-replication.png",
+                      "bytes":  1524527,
+                      "sha256":  "2941BE5CAA4E5A8B23D0C2DA7A60CF5E00479B30C6F1AF03FC3EA3635AF7B7B3",
+                      "source_url":  "https://github.com/quantskills/quantskills/blob/54b705861040664a41899949b2892d416f4b88dc/assets/skill-paper-replication.png"
+                  },
+                  {
+                      "path":  "assets/skill-quant-factor-directional-alpha.png",
+                      "bytes":  1477671,
+                      "sha256":  "56F178974207FD667E76CCD7A9A210A40111F4F2DBD9895B7341E02C9EDE679C",
+                      "source_url":  "https://github.com/quantskills/quantskills/blob/54b705861040664a41899949b2892d416f4b88dc/assets/skill-quant-factor-directional-alpha.png"
+                  },
+                  {
+                      "path":  "assets/skill-quant-factor-risk-pattern-alpha.png",
+                      "bytes":  1515881,
+                      "sha256":  "C07AB3C43766585112F22F3827D252F7880F9882B054CBA3088E82960E499795",
+                      "source_url":  "https://github.com/quantskills/quantskills/blob/54b705861040664a41899949b2892d416f4b88dc/assets/skill-quant-factor-risk-pattern-alpha.png"
+                  },
+                  {
+                      "path":  "assets/skill-quant-factor-skill-factory.png",
+                      "bytes":  1519381,
+                      "sha256":  "05B25A5BA8815323787CC322C1D59E8980D3A465F6562232E3EB93AD3D39F4B5",
+                      "source_url":  "https://github.com/quantskills/quantskills/blob/54b705861040664a41899949b2892d416f4b88dc/assets/skill-quant-factor-skill-factory.png"
+                  },
+                  {
+                      "path":  "assets/skill-quant-factor-volume-stat-alpha.png",
+                      "bytes":  1539885,
+                      "sha256":  "E4ED901EF0EBFC1046AB97F18BEFD8A31A0E3962763982401033AC5FC4FF52D2",
+                      "source_url":  "https://github.com/quantskills/quantskills/blob/54b705861040664a41899949b2892d416f4b88dc/assets/skill-quant-factor-volume-stat-alpha.png"
+                  },
+                  {
+                      "path":  "assets/skill-quant-research-replication.png",
+                      "bytes":  1785901,
+                      "sha256":  "7DBD40EB170515D856FC1B718CC71A05E0A0ED99463B21CFEDCA4C95B2C0C893",
+                      "source_url":  "https://github.com/quantskills/quantskills/blob/54b705861040664a41899949b2892d416f4b88dc/assets/skill-quant-research-replication.png"
+                  },
+                  {
+                      "path":  "assets/skill-report-replication.png",
+                      "bytes":  1488918,
+                      "sha256":  "81DB25638B2C45E9FF85DAC5ECAA2EA42FD0F4C482497A2BEAE628107D99D3D9",
+                      "source_url":  "https://github.com/quantskills/quantskills/blob/54b705861040664a41899949b2892d416f4b88dc/assets/skill-report-replication.png"
+                  },
+                  {
+                      "path":  "assets/skill-serenity-research-model.png",
+                      "bytes":  1489390,
+                      "sha256":  "4681CEF1695CFD655977D7F4D483D71A4A55FEF76BC9BA43A720065957096273",
+                      "source_url":  "https://github.com/quantskills/quantskills/blob/54b705861040664a41899949b2892d416f4b88dc/assets/skill-serenity-research-model.png"
+                  },
+                  {
+                      "path":  "assets/skill-ssquant-ai-trader.png",
+                      "bytes":  1510358,
+                      "sha256":  "AA6AD9B7595D207DFBD978B582B14AAD0C61D78079BB6FC09E346040CA39B060",
+                      "source_url":  "https://github.com/quantskills/quantskills/blob/54b705861040664a41899949b2892d416f4b88dc/assets/skill-ssquant-ai-trader.png"
+                  },
+                  {
+                      "path":  "assets/skill-stock-screener.png",
+                      "bytes":  1682340,
+                      "sha256":  "6ECBC3A12384359D7EDB88B6D2002DD3E388BBBE7C94619AED9E24E39791E5B9",
+                      "source_url":  "https://github.com/quantskills/quantskills/blob/54b705861040664a41899949b2892d416f4b88dc/assets/skill-stock-screener.png"
+                  },
+                  {
+                      "path":  "assets/skill-time-series-analysis.png",
+                      "bytes":  1734730,
+                      "sha256":  "98DC5ADDCC3A0D1867C900AC489554EF5101835FEE64DCC9CF940E6AB458CBE0",
+                      "source_url":  "https://github.com/quantskills/quantskills/blob/54b705861040664a41899949b2892d416f4b88dc/assets/skill-time-series-analysis.png"
+                  },
+                  {
+                      "path":  "assets/skill-x-trader-builder.png",
+                      "bytes":  1751166,
+                      "sha256":  "84F1EF22E7E30936317BB543D2B88559B2A41B4F974D1E20B97445B1E3171A51",
+                      "source_url":  "https://github.com/quantskills/quantskills/blob/54b705861040664a41899949b2892d416f4b88dc/assets/skill-x-trader-builder.png"
+                  },
+                  {
+                      "path":  "data/curation.json",
+                      "bytes":  102,
+                      "sha256":  "6F3D81896B7148C6258055C89E13B6C24F0B311307470EF7A0052D9B89677141",
+                      "source_url":  "https://github.com/quantskills/quantskills/blob/54b705861040664a41899949b2892d416f4b88dc/data/curation.json"
+                  },
+                  {
+                      "path":  "docs/README.en.template.md",
+                      "bytes":  2316,
+                      "sha256":  "A380C386E3585E05C6A24136DA25D3F8E676E82695235F62FCE5EEDDC60D6EF2",
+                      "source_url":  "https://github.com/quantskills/quantskills/blob/54b705861040664a41899949b2892d416f4b88dc/docs/README.en.template.md"
+                  },
+                  {
+                      "path":  "docs/README.zh.template.md",
+                      "bytes":  2108,
+                      "sha256":  "D2CE913F2B29D5005B0D128BBF09FE1F7054FF1C730C7B862A463B1557F88A2F",
+                      "source_url":  "https://github.com/quantskills/quantskills/blob/54b705861040664a41899949b2892d416f4b88dc/docs/README.zh.template.md"
+                  },
+                  {
+                      "path":  "docs/superpowers/specs/2026-08-10-quantskills-catalog-contracts-migration-design.md",
+                      "bytes":  26285,
+                      "sha256":  "A2E7BE8613927D094B9C3BDFA7D30EA1BEBA60AEA324334BABBF944378B0CA1F",
+                      "source_url":  "https://github.com/quantskills/quantskills/blob/54b705861040664a41899949b2892d416f4b88dc/docs/superpowers/specs/2026-08-10-quantskills-catalog-contracts-migration-design.md"
+                  },
+                  {
+                      "path":  "package.json",
+                      "bytes":  144,
+                      "sha256":  "FA7A176F64657335E883E620A825B48DD283CD5D4A3689431678FF2535164D36",
+                      "source_url":  "https://github.com/quantskills/quantskills/blob/54b705861040664a41899949b2892d416f4b88dc/package.json"
+                  },
+                  {
+                      "path":  "README.en.md",
+                      "bytes":  90443,
+                      "sha256":  "E56E1537EBA5866E4822EC45C439D36E598E65E6615A0461B1C8F266596E2426",
+                      "source_url":  "https://github.com/quantskills/quantskills/blob/54b705861040664a41899949b2892d416f4b88dc/README.en.md"
+                  },
+                  {
+                      "path":  "README.md",
+                      "bytes":  82885,
+                      "sha256":  "E04303319F97686D14B26A2CFA9697F3DEB450E5A1FC052EB2EFC2C5139C5E67",
+                      "source_url":  "https://github.com/quantskills/quantskills/blob/54b705861040664a41899949b2892d416f4b88dc/README.md"
+                  },
+                  {
+                      "path":  "scripts/build.mjs",
+                      "bytes":  10045,
+                      "sha256":  "A43507D6770C5073D8450C95D126EC71787DA657A381449736DB90A51A77A34C",
+                      "source_url":  "https://github.com/quantskills/quantskills/blob/54b705861040664a41899949b2892d416f4b88dc/scripts/build.mjs"
+                  },
+                  {
+                      "path":  "scripts/build-github-metadata-plan.mjs",
+                      "bytes":  6616,
+                      "sha256":  "A7D955EA89F0074AB8CBAE2306EA3AB8BB07468C9D2353406CA72FD5AFF73AB9",
+                      "source_url":  "https://github.com/quantskills/quantskills/blob/54b705861040664a41899949b2892d416f4b88dc/scripts/build-github-metadata-plan.mjs"
+                  },
+                  {
+                      "path":  "scripts/catalog-model.mjs",
+                      "bytes":  930,
+                      "sha256":  "271118B7A3B4BC9F5B589515760C6F906B51CD4AF0EED62F5366A229F8516BCF",
+                      "source_url":  "https://github.com/quantskills/quantskills/blob/54b705861040664a41899949b2892d416f4b88dc/scripts/catalog-model.mjs"
+                  },
+                  {
+                      "path":  "scripts/render-readme.mjs",
+                      "bytes":  7494,
+                      "sha256":  "42B68D2D724B1CC267B633232A44643408D5DFC50056CDED0805091CBC35CC5A",
+                      "source_url":  "https://github.com/quantskills/quantskills/blob/54b705861040664a41899949b2892d416f4b88dc/scripts/render-readme.mjs"
+                  },
+                  {
+                      "path":  "scripts/render-site-data.mjs",
+                      "bytes":  281,
+                      "sha256":  "E1532B914D2E397CF598E9D91767C27057D6252BD5D7945B5A99E5D828C997D1",
+                      "source_url":  "https://github.com/quantskills/quantskills/blob/54b705861040664a41899949b2892d416f4b88dc/scripts/render-site-data.mjs"
+                  },
+                  {
+                      "path":  "scripts/snapshot-contract.mjs",
+                      "bytes":  22330,
+                      "sha256":  "1132CDEF5E16BC34F57DA6AC89DC65D6AE83CBE9E62965F2024690EA63AF45F3",
+                      "source_url":  "https://github.com/quantskills/quantskills/blob/54b705861040664a41899949b2892d416f4b88dc/scripts/snapshot-contract.mjs"
+                  },
+                  {
+                      "path":  "scripts/verify-build.mjs",
+                      "bytes":  3585,
+                      "sha256":  "BB504D59593F472AB9C8A9B3DD6B0112A27F0F777A9A9467E36C08D51D042D02",
+                      "source_url":  "https://github.com/quantskills/quantskills/blob/54b705861040664a41899949b2892d416f4b88dc/scripts/verify-build.mjs"
+                  },
+                  {
+                      "path":  "site/app.mjs",
+                      "bytes":  17896,
+                      "sha256":  "C08E70A8498B9B30ABF3C734B033EAC6B37BCFC123B4DCE477171D4E9E4FFDCF",
+                      "source_url":  "https://github.com/quantskills/quantskills/blob/54b705861040664a41899949b2892d416f4b88dc/site/app.mjs"
+                  },
+                  {
+                      "path":  "site/catalog.json",
+                      "bytes":  536945,
+                      "sha256":  "48557E5BA456465214A5C08CCCC23BE17F7D713ACF4D2524870CC1D464BF0855",
+                      "source_url":  "https://github.com/quantskills/quantskills/blob/54b705861040664a41899949b2892d416f4b88dc/site/catalog.json"
+                  },
+                  {
+                      "path":  "site/index.html",
+                      "bytes":  3171,
+                      "sha256":  "A49F535E3221497C1F1D01B741891C5D4F4BC12F47AB97C7F9D318D42D80C44D",
+                      "source_url":  "https://github.com/quantskills/quantskills/blob/54b705861040664a41899949b2892d416f4b88dc/site/index.html"
+                  },
+                  {
+                      "path":  "site/styles.css",
+                      "bytes":  4084,
+                      "sha256":  "04A40C6D5058CD470763D23239651ED3876D70FAC8B99C7DFE88F9033D2D6803",
+                      "source_url":  "https://github.com/quantskills/quantskills/blob/54b705861040664a41899949b2892d416f4b88dc/site/styles.css"
+                  },
+                  {
+                      "path":  "tests/build.test.mjs",
+                      "bytes":  673,
+                      "sha256":  "E2A019B0DCBF0809FE9F6B4C29494FD46B6023F1050B1C066B3F86A16E3B50C4",
+                      "source_url":  "https://github.com/quantskills/quantskills/blob/54b705861040664a41899949b2892d416f4b88dc/tests/build.test.mjs"
+                  },
+                  {
+                      "path":  "tests/catalog-admission-security.test.mjs",
+                      "bytes":  5353,
+                      "sha256":  "FB62B6DE524C3D9C194AB698FF2FD14582411D890AD81323C9D5A77FEDF62E0E",
+                      "source_url":  "https://github.com/quantskills/quantskills/blob/54b705861040664a41899949b2892d416f4b88dc/tests/catalog-admission-security.test.mjs"
+                  },
+                  {
+                      "path":  "tests/catalog-ui.test.mjs",
+                      "bytes":  3360,
+                      "sha256":  "781E66D11952DF79A61E32211930E8DDFE743717DF6963ED8DDDB67C9BAA004D",
+                      "source_url":  "https://github.com/quantskills/quantskills/blob/54b705861040664a41899949b2892d416f4b88dc/tests/catalog-ui.test.mjs"
+                  },
+                  {
+                      "path":  "tests/community-portal.test.mjs",
+                      "bytes":  1345,
+                      "sha256":  "2B58775C4A6DB890E9C82A45FAAE3D3D2214A0EFB5281A24F4C09640B16C2462",
+                      "source_url":  "https://github.com/quantskills/quantskills/blob/54b705861040664a41899949b2892d416f4b88dc/tests/community-portal.test.mjs"
+                  },
+                  {
+                      "path":  "tests/evaluation-view.test.mjs",
+                      "bytes":  5570,
+                      "sha256":  "71C6A7D60A0F6D3079E92CBAB471E5F268B4B580B7A6152DD080A9D85C25889C",
+                      "source_url":  "https://github.com/quantskills/quantskills/blob/54b705861040664a41899949b2892d416f4b88dc/tests/evaluation-view.test.mjs"
+                  },
+                  {
+                      "path":  "tests/failure-injection.test.mjs",
+                      "bytes":  2835,
+                      "sha256":  "238C419A3267A52B9A70FE6031A7885A0A801DE720C34549A67E2473B6B099C0",
+                      "source_url":  "https://github.com/quantskills/quantskills/blob/54b705861040664a41899949b2892d416f4b88dc/tests/failure-injection.test.mjs"
+                  },
+                  {
+                      "path":  "tests/fixtures/catalog.snapshot.json",
+                      "bytes":  31788,
+                      "sha256":  "82E911BCE4BF296781F3DB344D60E5C39EF8D7A1A30DB2DBE525303F97A7CF8A",
+                      "source_url":  "https://github.com/quantskills/quantskills/blob/54b705861040664a41899949b2892d416f4b88dc/tests/fixtures/catalog.snapshot.json"
+                  },
+                  {
+                      "path":  "tests/golden/README.en.md",
+                      "bytes":  14935,
+                      "sha256":  "4B85043FA84D75C665D2BDDFBCD9ED958EB38FD51D200349C2B8342A9BCF307E",
+                      "source_url":  "https://github.com/quantskills/quantskills/blob/54b705861040664a41899949b2892d416f4b88dc/tests/golden/README.en.md"
+                  },
+                  {
+                      "path":  "tests/golden/README.md",
+                      "bytes":  13830,
+                      "sha256":  "90ADA71AD7DE8F5DFEF9AEB9694078C99B812D253A9EC1FD551E8462078AFFE1",
+                      "source_url":  "https://github.com/quantskills/quantskills/blob/54b705861040664a41899949b2892d416f4b88dc/tests/golden/README.md"
+                  },
+                  {
+                      "path":  "tests/metadata-plan.test.mjs",
+                      "bytes":  1203,
+                      "sha256":  "D0CD0EC3D03476225C81E606F15DCDB76073C76E38FA668B7EAF029FD0F816F0",
+                      "source_url":  "https://github.com/quantskills/quantskills/blob/54b705861040664a41899949b2892d416f4b88dc/tests/metadata-plan.test.mjs"
+                  },
+                  {
+                      "path":  "tests/no-fallback.test.mjs",
+                      "bytes":  738,
+                      "sha256":  "AE7B66B3EF3862C85BB424B41EEC496425A730B193F590CCA2B8A559642C4C01",
+                      "source_url":  "https://github.com/quantskills/quantskills/blob/54b705861040664a41899949b2892d416f4b88dc/tests/no-fallback.test.mjs"
+                  },
+                  {
+                      "path":  "tests/publication-transaction-security.test.mjs",
+                      "bytes":  6839,
+                      "sha256":  "5752224081552EE9BB7A28528F95E252B399F1520A64268A4ABFDE8AFA222DD6",
+                      "source_url":  "https://github.com/quantskills/quantskills/blob/54b705861040664a41899949b2892d416f4b88dc/tests/publication-transaction-security.test.mjs"
+                  },
+                  {
+                      "path":  "tests/readme-render.test.mjs",
+                      "bytes":  2038,
+                      "sha256":  "988915E23E2D2AB9AE8EDD97349D32D2F749898B5730F7BA09D397B6291C94D5",
+                      "source_url":  "https://github.com/quantskills/quantskills/blob/54b705861040664a41899949b2892d416f4b88dc/tests/readme-render.test.mjs"
+                  },
+                  {
+                      "path":  "tests/site-accessibility.test.mjs",
+                      "bytes":  508,
+                      "sha256":  "AE9955F9FDA169E44DF9C4E5A7676C439157EC78CCA071A312BEC5DDCD94C5BA",
+                      "source_url":  "https://github.com/quantskills/quantskills/blob/54b705861040664a41899949b2892d416f4b88dc/tests/site-accessibility.test.mjs"
+                  },
+                  {
+                      "path":  "tests/site-filter.test.mjs",
+                      "bytes":  488,
+                      "sha256":  "A30AB2384514A0218B51E12CF1053CB845D4116E9454B1B136B86D7EA51A1C5D",
+                      "source_url":  "https://github.com/quantskills/quantskills/blob/54b705861040664a41899949b2892d416f4b88dc/tests/site-filter.test.mjs"
+                  },
+                  {
+                      "path":  "tests/site-render.test.mjs",
+                      "bytes":  710,
+                      "sha256":  "71AE7DD41E6086053E624B8DFFA011084319A9D023DAAB412996EE0AAA1B64BD",
+                      "source_url":  "https://github.com/quantskills/quantskills/blob/54b705861040664a41899949b2892d416f4b88dc/tests/site-render.test.mjs"
+                  },
+                  {
+                      "path":  "tests/site-security.test.mjs",
+                      "bytes":  8396,
+                      "sha256":  "40E569D9FBF3F3BB2DC622852D08C03C9A91446CF8A2CB91E275A611A4BA044B",
+                      "source_url":  "https://github.com/quantskills/quantskills/blob/54b705861040664a41899949b2892d416f4b88dc/tests/site-security.test.mjs"
+                  },
+                  {
+                      "path":  "tests/snapshot-consistency.test.mjs",
+                      "bytes":  1477,
+                      "sha256":  "0F670D79F340355107C705D8FC5000EF434E359F19081EA9E2FFAA13597FCA04",
+                      "source_url":  "https://github.com/quantskills/quantskills/blob/54b705861040664a41899949b2892d416f4b88dc/tests/snapshot-consistency.test.mjs"
+                  },
+                  {
+                      "path":  "tests/unranked-listing.test.mjs",
+                      "bytes":  1114,
+                      "sha256":  "0F9DBE82376549C4BFC0798A7E245B1FCD489292FFF3CA343D4D9306690A06A0",
+                      "source_url":  "https://github.com/quantskills/quantskills/blob/54b705861040664a41899949b2892d416f4b88dc/tests/unranked-listing.test.mjs"
+                  },
+                  {
+                      "path":  "tests/verify-build-count.test.mjs",
+                      "bytes":  750,
+                      "sha256":  "358B339D7504D2FB50AE22BB78F9BC93668F07FCC66A34C386F26BA1D756BA9D",
+                      "source_url":  "https://github.com/quantskills/quantskills/blob/54b705861040664a41899949b2892d416f4b88dc/tests/verify-build-count.test.mjs"
+                  },
+                  {
+                      "path":  "tests/workflow-policy.test.mjs",
+                      "bytes":  888,
+                      "sha256":  "578251C3E2EAEF63181794E81EFF149F1EBEE145125AED7E310F8CC93B077DDD",
+                      "source_url":  "https://github.com/quantskills/quantskills/blob/54b705861040664a41899949b2892d416f4b88dc/tests/workflow-policy.test.mjs"
+                  }
+              ]
+}
