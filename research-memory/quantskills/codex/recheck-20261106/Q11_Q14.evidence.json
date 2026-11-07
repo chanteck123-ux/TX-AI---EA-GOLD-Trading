@@ -1,0 +1,42 @@
+[
+  {
+    "path": "skill-strategy-tearsheet-report/scripts/metrics.py",
+    "sha256": "735ADC89943BA5B98C8430637BE935324F42A5BC698896DEF55F3A8501087524",
+    "review": "TARGETED_STATIC_RECHECK_NOT_RUNTIME_TEST"
+  },
+  {
+    "path": "skill-strategy-tearsheet-report/scripts/tearsheet.py",
+    "sha256": "9876298C44FD368839ADF336ACFA15481E8501022775D96FC49FA63F8FC4220D",
+    "review": "TARGETED_STATIC_RECHECK_NOT_RUNTIME_TEST"
+  },
+  {
+    "path": "skill-strategy-tearsheet-report/scripts/data_source.py",
+    "sha256": "CE0C27A0CCEDC4B2D60AE310177E51618C5087A0C6D54B545C23AA6CA8C77EAD",
+    "review": "TARGETED_STATIC_RECHECK_NOT_RUNTIME_TEST"
+  },
+  {
+    "path": "skill-strategy-tearsheet-report/references/metrics-glossary.md",
+    "sha256": "C54B8E4E52478F065F896C4047A33900DA87EF4CAE74494370077FACCEBB2801",
+    "review": "TARGETED_STATIC_RECHECK_NOT_RUNTIME_TEST"
+  },
+  {
+    "path": "skill-strategy-performance-report/scripts/performance/trades.py",
+    "sha256": "2768BA125AEAC0D5283197863D9B6ED4D1C1D21F69E4A4D28E14073664584D33",
+    "review": "TARGETED_STATIC_RECHECK_NOT_RUNTIME_TEST"
+  },
+  {
+    "path": "skill-strategy-performance-report/scripts/performance/returns.py",
+    "sha256": "22474E4FDDDAD0F1CDF8B3027FE177E74B05A9F66264152693A3C4508726D93F",
+    "review": "TARGETED_STATIC_RECHECK_NOT_RUNTIME_TEST"
+  },
+  {
+    "path": "skill-strategy-performance-report/scripts/performance/base.py",
+    "sha256": "98992EA768AEA0B4FAC2559C2CCD9605FBE47F02EDFFB5220D705AAD12A24E65",
+    "review": "TARGETED_STATIC_RECHECK_NOT_RUNTIME_TEST"
+  },
+  {
+    "path": "skill-strategy-performance-report/scripts/strategy_report_cli.py",
+    "sha256": "C93DB69BB4DCCA5E00D3AF575620AAF6312896E82C6B46672718F12897E8622B",
+    "review": "TARGETED_STATIC_RECHECK_NOT_RUNTIME_TEST"
+  }
+]
