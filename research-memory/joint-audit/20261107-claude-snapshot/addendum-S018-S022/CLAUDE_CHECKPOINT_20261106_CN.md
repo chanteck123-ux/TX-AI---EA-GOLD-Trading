@@ -1,0 +1,36 @@
+# Claude 阅读断点（2026-11-07 第五次更新，按用户选定的"分层完成"执行）
+- 分层计划见 `CLAUDE_TIERED_COMPLETION_PLAN_20261107_CN.md`。
+- **QuantSkills**：
+  - 源码批次 S001–S022 已完成，另完成第 2 层 S-DATA1（csv/jsonl 结构核对）。
+  - **UNREAD 4,033**（FULL_READ 2,192，PARTIAL 10，DIFF_VERIFIED 4,089）。
+  - S022：已读 b11 止盈止损和 b12 日内仓位的源码，两者的 test.py 仍未读。
+  - 已用关键词搜索其余未读代码：55 个文件命中下单、止损、对账等词，大多是组合优化、归因和测试代码，后续按相关性挑选。候选清单见 `quantskills-learning-20261022/claude-full-review/coverage/unread_exec_keyword_hits_20261107.txt`（关键词搜索结果，不代表已读）。
+  - S021：只读了 portfolio_manager.py 的风险函数（约 1,150 / 13,790 行），该文件仍是 PARTIAL。
+  - 已读完：
+    - S018：结算、盘中执行、平仓策略和 PM 风控辅助；
+    - S019：PM 风险门与原因分类；
+    - S020：trader.py 全文。
+    - 详见 A010。
+  - 第 1 层下一批：
+    1. 读 `agent-macro-driven-rotation` 中的 `runtime/cli.py` 和 `scripts/reconcile_report_vs_api.py`（对账），以及 `agent-alpha-portfolio-guardian`；
+    2. portfolio_manager.py 其余与仓位预算有关的函数：`_apply_position_budget_policy_for_new_entry`（第 1840 行）、`_one_lot_probe_risk_check`（第 2113 行）、`_step4_capital_plan`（第 2753 行）。
+- **Kronos**：
+  - 论文约九成已读原文，还剩表 18 后半至表 21。
+  - E1、E2、E7 仍在等 Codex 复核。
+- **LEAN**：
+  - L001–L013 已完成，第 2 层完成 L-DATA2 和 L-DATA3。
+  - 当前覆盖：**UNREAD 5,944**，FULL_READ 98，PARTIAL 5。
+  - L013（2026-11-07）读完了：
+    - `Common/Statistics` 全部 12 个文件；
+    - `BaseResultsHandler` 与 `BacktestingResultHandler`；
+    - AlgorithmManager（与 L011 合计为全文）；
+    - Paper 券商；
+    - SymbolProperties、SymbolPropertiesDatabase、SecurityExchangeHours。
+  - 笔记：`lean-full-review-20261101/claude/batches/L013_statistics_results_CN.md`。
+  - 全库没有内容完全相同的重复文件，第 3 层需要改用结构归组。
+  - 第 1 层下一批：
+    - `SecurityTransactionManager.cs` 的其余部分；
+    - LocalMarketHours 与 MarketHoursDatabase；
+    - `Engine/Results` 下的 Live、Regression 和 IResultHandler；
+    - `Analysis/` 中与止损止盈、保证金、过期成交相关的分析器。
+- **方案 B**：b7ee115 已推送，等待 Codex 复审。
