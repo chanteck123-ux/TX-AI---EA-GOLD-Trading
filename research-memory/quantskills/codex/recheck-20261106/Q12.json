@@ -1,0 +1,263 @@
+{
+  "task": "Q12",
+  "asset": "A210 skill-trade-review",
+  "reviewer": "Codex independent",
+  "timestamp": "2026-11-06T19:02:17.9640448+08:00",
+  "source_root": "C:/Users/A/Documents/Codex/quantskills-learning-repos/skill-trade-review/skill-trade-review",
+  "git_head": "883fbf25668409d3cee19733f422ba3e0e1068b9",
+  "tracked_worktree": "clean at inspection (untracked files excluded)",
+  "request": {
+    "path": "C:/Users/A/Documents/Codex/outputs/joint-full-review-20261101/CLAUDE_TO_CODEX_QS_RECHECK_REQUEST_20261106_CN.md",
+    "sha256": "c171a18bf69db150e34be4ab624ad255956e52a79ce1f9998a3b74bc29e47b4c"
+  },
+  "method": "Bounded static source/call-chain review, PowerShell read and hash only",
+  "third_party_executed": false,
+  "third_party_imported": false,
+  "runtime_tested": false,
+  "source_modified": false,
+  "claude_directory_modified": false,
+  "scope": "Only five Q12 claims; frequency separated. Main-contract fallback and withdrawn LLM claims not adjudicated.",
+  "counts": {
+    "PLAUSIBLE": 1,
+    "CONFIRMED": 5,
+    "REJECTED": 0
+  },
+  "findings": [
+    {
+      "limits": "未替作者决定最终业务阈值；纯期货无股票context时返回None。",
+      "evidence": [
+        {
+          "file": "C:\\Users\\A\\Documents\\Codex\\quantskills-learning-repos\\skill-trade-review\\skill-trade-review\\scripts\\stock_context.py",
+          "start": 19,
+          "end": 25,
+          "sha256": "39a66cc6f741139f8a3db160e643085787ed6c33d5662834e0e389532c82a072",
+          "excerpt": "def _annualized_vol(series) -> float:\r\n    if series is None or len(series) < 2:\r\n        return 0.0\r\n    pct = series.pct_change().dropna()\r\n    if pct.empty:\r\n        return 0.0\r\n    return float(pct.std() * math.sqrt(252) * 100)"
+        },
+        {
+          "file": "C:\\Users\\A\\Documents\\Codex\\quantskills-learning-repos\\skill-trade-review\\skill-trade-review\\scripts\\stock_context.py",
+          "start": 39,
+          "end": 53,
+          "sha256": "39a66cc6f741139f8a3db160e643085787ed6c33d5662834e0e389532c82a072",
+          "excerpt": "    # --- 1. 日线（≥ 80 个交易日，覆盖 MA60 + 缓冲） ---\r\n    daily_start = _shift_yyyymmdd(start_yyyymmdd, -150)\r\n    try:\r\n        idx = panda_data.get_index_daily(symbol=[benchmark],\r\n                                         start_date=daily_start,\r\n                                         end_date=end_yyyymmdd)\r\n        if idx is not None and not idx.empty:\r\n            idx = idx.sort_values(\"date\").reset_index(drop=True)\r\n            out[\"index_close\"] = float(idx[\"close\"].iloc[-1])\r\n            out[\"index_pct_pct\"] = _safe_pct_change(idx[\"close\"])\r\n            out[\"index_volatility_5d\"] = _annualized_vol(idx[\"close\"].tail(6))\r\n            # 技术指标 — 日线\r\n            out[\"technical_daily\"] = all_indicators(idx.tail(80))\r\n    except Exception as exc:  # noqa: BLE001\r\n        out[\"_index_error\"] = str(exc)"
+        },
+        {
+          "file": "C:\\Users\\A\\Documents\\Codex\\quantskills-learning-repos\\skill-trade-review\\skill-trade-review\\scripts\\context_loader.py",
+          "start": 47,
+          "end": 80,
+          "sha256": "e575a7d2dee3fd3cfad37b3efae689e71c03956a67db370534f36f531d065bc6",
+          "excerpt": "    asset_types = set(df[\"asset_type\"].unique())\r\n    start, end = period[\"start\"].replace(\"-\", \"\"), period[\"end\"].replace(\"-\", \"\")\r\n\r\n    if \"stock_a\" in asset_types:\r\n        try:\r\n            out[\"stock\"] = load_stock_context(start, end)\r\n        except Exception as exc:  # noqa: BLE001\r\n            out[\"fetch_failures\"].append(f\"stock context 拉取失败: {exc}\")\r\n\r\n    fut_codes = df.loc[df[\"asset_type\"] == \"future_cn\", \"variety\"].dropna().unique().tolist()\r\n    for variety in fut_codes:\r\n        try:\r\n            out[\"futures\"][variety] = load_future_context(variety, start, end)\r\n        except Exception as exc:  # noqa: BLE001\r\n            out[\"fetch_failures\"].append(f\"future context [{variety}] 拉取失败: {exc}\")\r\n\r\n    out[\"regime_label\"] = _infer_regime(out)\r\n    return out\r\n\r\n\r\ndef _infer_regime(ctx: dict) -> str | None:\r\n    \"\"\"简单 regime 标签：基于股票指数涨跌 + 5 日波动。\"\"\"\r\n    stock = ctx.get(\"stock\") or {}\r\n    pct = stock.get(\"index_pct_pct\")\r\n    vol = stock.get(\"index_volatility_5d\")\r\n    if pct is None or vol is None:\r\n        return None\r\n    if vol > 0.30:\r\n        return \"high_vol\"\r\n    if pct > 0.5:\r\n        return \"trend_up\"\r\n    if pct < -0.5:\r\n        return \"trend_down\"\r\n    return \"range_bound\""
+        },
+        {
+          "file": "C:\\Users\\A\\Documents\\Codex\\quantskills-learning-repos\\skill-trade-review\\skill-trade-review\\scripts\\market_review.py",
+          "start": 32,
+          "end": 39,
+          "sha256": "46ffa912cd3b25a91d801cd60d47de17fd93fca85bf6c850155112492b5c50f7",
+          "excerpt": "def _bucket_vol(vol: float | None) -> str:\r\n    if vol is None:\r\n        return \"unknown\"\r\n    if vol >= 30:\r\n        return \"high\"\r\n    if vol >= 18:\r\n        return \"medium\"\r\n    return \"low\""
+        }
+      ],
+      "id": "Q12.1a",
+      "finding": "std*sqrt(252)*100 输出年化百分数，20表示20%；_infer_regime 的 >0.30 实际为超过0.30%即high_vol。同项目 _bucket_vol 使用>=30为high，尺度相差100倍。",
+      "claim": "百分数波动与0.30阈值尺度不一致",
+      "chain": "run -> load_context -> load_stock_context/_annualized_vol -> _infer_regime",
+      "status": "CONFIRMED"
+    },
+    {
+      "limits": "vol<=0.30、缺股票数据等不命中；静态分支不是实际触发率。",
+      "evidence": [
+        {
+          "file": "C:\\Users\\A\\Documents\\Codex\\quantskills-learning-repos\\skill-trade-review\\skill-trade-review\\scripts\\context_loader.py",
+          "start": 67,
+          "end": 80,
+          "sha256": "e575a7d2dee3fd3cfad37b3efae689e71c03956a67db370534f36f531d065bc6",
+          "excerpt": "def _infer_regime(ctx: dict) -> str | None:\r\n    \"\"\"简单 regime 标签：基于股票指数涨跌 + 5 日波动。\"\"\"\r\n    stock = ctx.get(\"stock\") or {}\r\n    pct = stock.get(\"index_pct_pct\")\r\n    vol = stock.get(\"index_volatility_5d\")\r\n    if pct is None or vol is None:\r\n        return None\r\n    if vol > 0.30:\r\n        return \"high_vol\"\r\n    if pct > 0.5:\r\n        return \"trend_up\"\r\n    if pct < -0.5:\r\n        return \"trend_down\"\r\n    return \"range_bound\""
+        }
+      ],
+      "id": "Q12.1b",
+      "finding": "机制支持过度触发风险，但无实际输入分布及频率统计，不能确认几乎永远。",
+      "claim": "几乎永远high_vol",
+      "chain": "同Q12.1a",
+      "status": "PLAUSIBLE"
+    },
+    {
+      "limits": "股票存在不表示必定优先返回，须命中条件；high_vol_market不含up/down，使逆势判断False。这里股票high使用_bucket_vol>=30，不能与_infer_regime的0.30混同。",
+      "evidence": [
+        {
+          "file": "C:\\Users\\A\\Documents\\Codex\\quantskills-learning-repos\\skill-trade-review\\skill-trade-review\\scripts\\market_review.py",
+          "start": 254,
+          "end": 285,
+          "sha256": "46ffa912cd3b25a91d801cd60d47de17fd93fca85bf6c850155112492b5c50f7",
+          "excerpt": "def _overall_regime(stock_review: dict, future_reviews: dict[str, dict]) -> str:\r\n    s_trend = stock_review.get(\"trend\") if stock_review else None\r\n    s_vol = stock_review.get(\"volatility\") if stock_review else None\r\n\r\n    if s_vol == \"high\":\r\n        return \"high_vol_market\"\r\n    if s_trend in (\"strong_up\", \"mild_up\"):\r\n        return \"stock_up_trend\"\r\n    if s_trend in (\"strong_down\", \"mild_down\"):\r\n        return \"stock_down_trend\"\r\n\r\n    fut_trends = [f[\"trend\"] for f in future_reviews.values() if f.get(\"trend\") not in (None, \"unknown\")]\r\n    if fut_trends:\r\n        ups = sum(1 for t in fut_trends if \"up\" in t)\r\n        downs = sum(1 for t in fut_trends if \"down\" in t)\r\n        if ups > downs and ups >= len(fut_trends) * 0.6:\r\n            return \"futures_up_trend\"\r\n        if downs > ups and downs >= len(fut_trends) * 0.6:\r\n            return \"futures_down_trend\"\r\n\r\n    return stock_review.get(\"regime\") if stock_review else \"unknown\"\r\n\r\n\r\ndef build_market_review(context: dict | None) -> dict:\r\n    ctx = context or {}\r\n    stock_ctx = ctx.get(\"stock\")\r\n    fut_ctxs = ctx.get(\"futures\") or {}\r\n    regime_label = ctx.get(\"regime_label\")\r\n\r\n    stock_review = _stock_review(stock_ctx, regime_label)\r\n    future_reviews = {v: _future_review_one(v, fctx) for v, fctx in fut_ctxs.items()}\r\n    overall = _overall_regime(stock_review, future_reviews)"
+        },
+        {
+          "file": "C:\\Users\\A\\Documents\\Codex\\quantskills-learning-repos\\skill-trade-review\\skill-trade-review\\scripts\\per_trade_review.py",
+          "start": 193,
+          "end": 234,
+          "sha256": "273d530b8a21e2948984e4558197427871461bfffa7fe5f823b2ed67b0883668",
+          "excerpt": "def _check_against_basis(asset_type: str, variety: str | None, direction: str,\r\n                         market_review: dict) -> bool:\r\n    if asset_type != \"future_cn\" or not variety:\r\n        return False\r\n    fut = (market_review.get(\"futures\") or {}).get(variety) or {}\r\n    regime = fut.get(\"basis_regime\")\r\n    if regime == \"contango\" and direction == \"long\":\r\n        return True\r\n    if regime == \"backwardation\" and direction == \"short\":\r\n        return True\r\n    return False\r\n\r\n\r\ndef _check_against_trend(asset_type: str, direction: str, market_review: dict) -> bool:\r\n    if asset_type.startswith(\"stock\"):\r\n        trend = (market_review.get(\"stock\") or {}).get(\"trend\")\r\n    else:\r\n        trend = market_review.get(\"overall_regime\", \"\")\r\n    if not trend:\r\n        return False\r\n    if direction == \"long\" and \"down\" in str(trend):\r\n        return True\r\n    if direction == \"short\" and \"up\" in str(trend):\r\n        return True\r\n    return False\r\n\r\n\r\n# ---------- 主入口 ----------\r\n\r\ndef review_single_trade(row: pd.Series, market_review: dict) -> dict:\r\n    asset_type = row.get(\"asset_type\") or \"unknown\"\r\n    variety = row.get(\"variety\")\r\n    direction = row.get(\"direction\")\r\n    status = row.get(\"status\")\r\n    ts_code = row.get(\"ts_code\")\r\n    vol = _safe_float(row.get(\"volume\"))\r\n    mult = _safe_float(row.get(\"multiplier\"), 1.0)\r\n\r\n    against_basis = _check_against_basis(asset_type, variety, direction, market_review)\r\n    against_trend = _check_against_trend(asset_type, direction, market_review)\r\n    daily_vol_pct = _get_daily_vol(asset_type, variety, market_review)\r\n    alignment = _rate_alignment(against_basis, against_trend, asset_type)"
+        },
+        {
+          "file": "C:\\Users\\A\\Documents\\Codex\\quantskills-learning-repos\\skill-trade-review\\skill-trade-review\\scripts\\per_trade_review.py",
+          "start": 120,
+          "end": 130,
+          "sha256": "273d530b8a21e2948984e4558197427871461bfffa7fe5f823b2ed67b0883668",
+          "excerpt": "def _rate_alignment(against_basis: bool, against_trend: bool,\r\n                    asset_type: str) -> str:\r\n    \"\"\"方向 vs 市场。期货同时看趋势 + 基差，股票只看趋势。\"\"\"\r\n    if asset_type == \"future_cn\":\r\n        if against_basis and against_trend:\r\n            return \"against\"     # 双逆\r\n        if against_basis or against_trend:\r\n            return \"mixed\"       # 单逆（仅一项）\r\n        return \"aligned\"\r\n    # 股票/其它：只看趋势\r\n    return \"against\" if against_trend else \"aligned\""
+        },
+        {
+          "file": "C:\\Users\\A\\Documents\\Codex\\quantskills-learning-repos\\skill-trade-review\\skill-trade-review\\scripts\\review.py",
+          "start": 606,
+          "end": 614,
+          "sha256": "48b431cf4d407c75dc1d2808e1349bfc1851080a842787db62e990d6bfd563d7",
+          "excerpt": "    summary = _compute_summary(df, include_open_in_winrate=include_open_wr)\r\n    attribution = _compute_attribution(df)\r\n    patterns = detect_patterns(df, summary, attribution, context)\r\n\r\n    market_review = build_market_review(context)\r\n    trade_reviews = review_all_trades(df, market_review)\r\n\r\n    advice = generate_advice(patterns, trade_reviews=trade_reviews,\r\n                             market_review=market_review)"
+        }
+      ],
+      "id": "Q12.2",
+      "finding": "非股票分支读取overall_regime而非本品种trend；overall先判股票high，再股票up/down，再按期货多数方向。股票方向或其他期货的多数方向可覆盖本期货方向。",
+      "claim": "期货against_trend使用股票优先overall_regime",
+      "chain": "run -> build_market_review/_overall_regime -> review_all_trades/review_single_trade -> _check_against_trend -> _rate_alignment",
+      "status": "CONFIRMED"
+    },
+    {
+      "limits": "确认本地混用及零值回退；未调用供应商API，其rate为小数还是百分数、符号约定及实际误分率未核验，不断言contango/backwardation必然颠倒。market_review.py:209局部basis未参与返回，实际分类来自future_context。",
+      "evidence": [
+        {
+          "file": "C:\\Users\\A\\Documents\\Codex\\quantskills-learning-repos\\skill-trade-review\\skill-trade-review\\scripts\\future_context.py",
+          "start": 109,
+          "end": 120,
+          "sha256": "a843c66b892cceffd002d184d4de76cd39cf32ab05265bda8a2fba23188c6e3f",
+          "excerpt": "    # --- 4. 基差 ---\r\n    try:\r\n        basis = panda_data.get_future_basis(underlying_symbol=[variety],\r\n                                            start_date=start_yyyymmdd,\r\n                                            end_date=end_yyyymmdd)\r\n        if basis is not None and not basis.empty:\r\n            basis = basis.sort_values(\"date\")\r\n            for col in (\"basis\", \"basis_rate\"):\r\n                if col in basis.columns:\r\n                    out[col] = float(basis[col].iloc[-1])\r\n    except Exception:\r\n        pass"
+        },
+        {
+          "file": "C:\\Users\\A\\Documents\\Codex\\quantskills-learning-repos\\skill-trade-review\\skill-trade-review\\scripts\\future_context.py",
+          "start": 148,
+          "end": 158,
+          "sha256": "a843c66b892cceffd002d184d4de76cd39cf32ab05265bda8a2fba23188c6e3f",
+          "excerpt": "    # --- 7. 商品 regime 推断 ---\r\n    basis_val = out.get(\"basis\") or out.get(\"basis_rate\")\r\n    if basis_val is not None:\r\n        if basis_val > 0.005:\r\n            out[\"commodity_regime\"] = \"backwardation\"\r\n        elif basis_val < -0.005:\r\n            out[\"commodity_regime\"] = \"contango\"\r\n        else:\r\n            out[\"commodity_regime\"] = \"flat\"\r\n\r\n    return out"
+        },
+        {
+          "file": "C:\\Users\\A\\Documents\\Codex\\quantskills-learning-repos\\skill-trade-review\\skill-trade-review\\references\\data_guide.md",
+          "start": 99,
+          "end": 105,
+          "sha256": "0cbe8481ccdb8b366e5338229a68b053a1099b4b5d5e67ebc1da4ad00ebe80bc",
+          "excerpt": "### 期货分支（`future_context.py`）\r\n按命中品种分别拉：\r\n- `get_future_dominant`：主力合约日线（close、当日涨跌、5 日年化波动、主力代码）\r\n- `get_future_basis`：基差及基差率\r\n- `get_future_warehouse_receipt`：仓单\r\n- `get_future_ls_ratio`：多空持仓比\r\n- 推断 commodity_regime：`backwardation` / `flat` / `contango`"
+        },
+        {
+          "file": "C:\\Users\\A\\Documents\\Codex\\quantskills-learning-repos\\skill-trade-review\\skill-trade-review\\scripts\\market_review.py",
+          "start": 206,
+          "end": 211,
+          "sha256": "46ffa912cd3b25a91d801cd60d47de17fd93fca85bf6c850155112492b5c50f7",
+          "excerpt": "def _future_review_one(variety: str, fctx: dict) -> dict:\r\n    pct = fctx.get(\"dominant_pct_pct\")\r\n    vol = fctx.get(\"volatility_5d\")\r\n    basis = fctx.get(\"basis_rate\") if fctx.get(\"basis_rate\") is not None else fctx.get(\"basis\")\r\n    regime = fctx.get(\"commodity_regime\")\r\n    ls = fctx.get(\"ls_ratio\")"
+        },
+        {
+          "file": "C:\\Users\\A\\Documents\\Codex\\quantskills-learning-repos\\skill-trade-review\\skill-trade-review\\scripts\\market_review.py",
+          "start": 234,
+          "end": 243,
+          "sha256": "46ffa912cd3b25a91d801cd60d47de17fd93fca85bf6c850155112492b5c50f7",
+          "excerpt": "    return {\r\n        \"variety\": variety,\r\n        \"dominant_close\": fctx.get(\"dominant_close\"),\r\n        \"dominant_pct_pct\": pct,\r\n        \"volatility_5d\": vol,\r\n        \"trend\": _bucket_pct(pct),\r\n        \"volatility\": _bucket_vol(vol),\r\n        \"basis_regime\": regime,\r\n        \"ls_ratio\": ls,\r\n        \"ls_signal\": ls_sig,"
+        },
+        {
+          "file": "C:\\Users\\A\\Documents\\Codex\\quantskills-learning-repos\\skill-trade-review\\skill-trade-review\\scripts\\per_trade_review.py",
+          "start": 193,
+          "end": 203,
+          "sha256": "273d530b8a21e2948984e4558197427871461bfffa7fe5f823b2ed67b0883668",
+          "excerpt": "def _check_against_basis(asset_type: str, variety: str | None, direction: str,\r\n                         market_review: dict) -> bool:\r\n    if asset_type != \"future_cn\" or not variety:\r\n        return False\r\n    fut = (market_review.get(\"futures\") or {}).get(variety) or {}\r\n    regime = fut.get(\"basis_regime\")\r\n    if regime == \"contango\" and direction == \"long\":\r\n        return True\r\n    if regime == \"backwardation\" and direction == \"short\":\r\n        return True\r\n    return False"
+        }
+      ],
+      "id": "Q12.3",
+      "finding": "原样读取basis与basis_rate，以or合并后共用±0.005阈值，没有转换。本地data_guide明确区分基差与基差率。basis为0会回退rate；basis=0且rate缺失时不生成regime。",
+      "claim": "basis or basis_rate未统一量纲",
+      "chain": "load_future_context -> _future_review_one commodity_regime/basis_regime -> _check_against_basis -> alignment",
+      "status": "CONFIRMED"
+    },
+    {
+      "limits": "不等于总分为零；报告叙述把None显示为∞，并非全部展示当作1。仅审计第三方评分，不采用或改变用户EA评分。",
+      "evidence": [
+        {
+          "file": "C:\\Users\\A\\Documents\\Codex\\quantskills-learning-repos\\skill-trade-review\\skill-trade-review\\scripts\\review.py",
+          "start": 154,
+          "end": 171,
+          "sha256": "48b431cf4d407c75dc1d2808e1349bfc1851080a842787db62e990d6bfd563d7",
+          "excerpt": "def _compute_score(summary: dict, asset_mix: dict[str, float], context: dict | None) -> float:\r\n    wr = summary.get(\"win_rate_closed\") or 0.0\r\n    pf = summary.get(\"profit_factor\")\r\n    pf = 1.0 if pf is None else float(pf)\r\n\r\n    fut_ratio = asset_mix.get(\"future_cn\", 0.0)\r\n    baseline = 0.4 * fut_ratio + 0.5 * (1 - fut_ratio)\r\n\r\n    # vs benchmark 项: 用 total_pnl 相对 open_exposure 的小幅正负作为粗略 alpha 替代\r\n    exposure = (summary.get(\"open_exposure\") or 0.0) + abs(summary.get(\"realized_pnl\") or 0.0)\r\n    alpha = (summary.get(\"total_pnl\") or 0.0) / exposure if exposure else 0.0\r\n\r\n    score = (\r\n        0.4 * (wr - baseline) * 2.0\r\n        + 0.4 * math.tanh(pf - 1.0)\r\n        + 0.2 * math.tanh(alpha * 50)\r\n    )\r\n    return float(round(score, 4))"
+        },
+        {
+          "file": "C:\\Users\\A\\Documents\\Codex\\quantskills-learning-repos\\skill-trade-review\\skill-trade-review\\scripts\\review.py",
+          "start": 176,
+          "end": 223,
+          "sha256": "48b431cf4d407c75dc1d2808e1349bfc1851080a842787db62e990d6bfd563d7",
+          "excerpt": "def _compute_summary(df: pd.DataFrame, include_open_in_winrate: bool = False) -> dict:\r\n    closed = df[df[\"status\"] == \"closed\"]\r\n    opens = df[df[\"status\"] == \"open\"]\r\n\r\n    realized = float(closed[\"realized_pnl\"].sum()) if not closed.empty else 0.0\r\n    unrealized = float(opens[\"unrealized_pnl\"].sum()) if not opens.empty else 0.0\r\n\r\n    if include_open_in_winrate:\r\n        wins = int((closed[\"realized_pnl\"] > 0).sum() if not closed.empty else 0) + \\\r\n               int((opens[\"unrealized_pnl\"] > 0).sum() if not opens.empty else 0)\r\n        denom = len(closed) + len(opens)\r\n    else:\r\n        wins = int((closed[\"realized_pnl\"] > 0).sum()) if not closed.empty else 0\r\n        denom = len(closed)\r\n\r\n    win_rate = float(wins) / denom if denom else 0.0\r\n    avg_win = float(closed.loc[closed[\"realized_pnl\"] > 0, \"realized_pnl\"].mean()) if not closed.empty and (closed[\"realized_pnl\"] > 0).any() else 0.0\r\n    avg_loss = float(closed.loc[closed[\"realized_pnl\"] < 0, \"realized_pnl\"].mean()) if not closed.empty and (closed[\"realized_pnl\"] < 0).any() else 0.0\r\n\r\n    if not closed.empty and (closed[\"realized_pnl\"] < 0).any():\r\n        profit_factor = float(closed.loc[closed[\"realized_pnl\"] > 0, \"realized_pnl\"].sum() /\r\n                              abs(closed.loc[closed[\"realized_pnl\"] < 0, \"realized_pnl\"].sum()))\r\n    elif not closed.empty and (closed[\"realized_pnl\"] > 0).any():\r\n        profit_factor = float(\"inf\")\r\n    else:\r\n        profit_factor = 1.0\r\n\r\n    if not opens.empty:\r\n        open_exposure = float((opens[\"cost_price\"].astype(float) *\r\n                               opens[\"volume\"].astype(float) *\r\n                               opens[\"multiplier\"].astype(float)).sum())\r\n    else:\r\n        open_exposure = 0.0\r\n\r\n    return {\r\n        \"n_trades\": int(len(df)),\r\n        \"n_closed\": int(len(closed)),\r\n        \"n_open\": int(len(opens)),\r\n        \"n_winning_closed\": int(wins),\r\n        \"win_rate_closed\": round(win_rate, 4),\r\n        \"realized_pnl\": round(realized, 2),\r\n        \"unrealized_pnl\": round(unrealized, 2),\r\n        \"total_pnl\": round(realized + unrealized, 2),\r\n        \"avg_win\": round(avg_win, 2),\r\n        \"avg_loss\": round(avg_loss, 2),\r\n        \"profit_factor\": None if math.isinf(profit_factor) else round(profit_factor, 4),\r\n        \"open_exposure\": round(open_exposure, 2),\r\n    }"
+        },
+        {
+          "file": "C:\\Users\\A\\Documents\\Codex\\quantskills-learning-repos\\skill-trade-review\\skill-trade-review\\scripts\\review.py",
+          "start": 380,
+          "end": 386,
+          "sha256": "48b431cf4d407c75dc1d2808e1349bfc1851080a842787db62e990d6bfd563d7",
+          "excerpt": "        f\"浮动 PnL: {_fmt_money(summary['unrealized_pnl'])}；\"\r\n        f\"合计: **{_fmt_money(summary['total_pnl'])}**\"\r\n    )\r\n    lines.append(\r\n        f\"- 已平仓胜率: {summary['win_rate_closed']*100:.1f}%；\"\r\n        f\"盈亏比: {summary.get('profit_factor') if summary.get('profit_factor') is not None else '∞'}；\"\r\n        f\"未平仓敞口: {_fmt_money(summary['open_exposure'])}\""
+        },
+        {
+          "file": "C:\\Users\\A\\Documents\\Codex\\quantskills-learning-repos\\skill-trade-review\\skill-trade-review\\scripts\\review.py",
+          "start": 668,
+          "end": 675,
+          "sha256": "48b431cf4d407c75dc1d2808e1349bfc1851080a842787db62e990d6bfd563d7",
+          "excerpt": "    asset_mix_pnl = {k: abs(v[\"realized\"]) + abs(v[\"unrealized\"])\r\n                     for k, v in attribution[\"by_asset_type\"].items()}\r\n    total_abs = sum(asset_mix_pnl.values()) or 1.0\r\n    asset_mix = {k: v / total_abs for k, v in asset_mix_pnl.items()}\r\n\r\n    score = _compute_score(summary, asset_mix, context)\r\n    rating, rating_warnings = _rate(score, summary[\"n_closed\"])\r\n    warnings.extend(rating_warnings)"
+        }
+      ],
+      "id": "Q12.4",
+      "finding": "至少一笔正收益且无负收益时PF=inf，summary转None，评分再转1.0，因此PF分项0.4*tanh(pf-1)=0；正收益加零收益也命中。",
+      "claim": "全胜PF转None后评分当作1",
+      "chain": "run -> _compute_summary -> _compute_score -> _rate",
+      "status": "CONFIRMED"
+    },
+    {
+      "limits": "限匹配期货格式但规格缺项；不匹配格式可触发unknown警告，无关警告仍可能出现。已有realized_pnl未按乘数重算，已有unrealized_pnl不被补算覆盖。",
+      "evidence": [
+        {
+          "file": "C:\\Users\\A\\Documents\\Codex\\quantskills-learning-repos\\skill-trade-review\\skill-trade-review\\scripts\\asset_classifier.py",
+          "start": 52,
+          "end": 86,
+          "sha256": "d9e13a1f45da4dea8feb8d8b5cfc4206fe4a021c9d5b5ef9d2e5e233dca192a8",
+          "excerpt": "_RE_STOCK_A = re.compile(r\"^\\d{6}\\.(SZ|SH|BJ)$\", re.IGNORECASE)\r\n_RE_STOCK_HK = re.compile(r\"^\\d{4,5}\\.HK$\", re.IGNORECASE)\r\n_RE_STOCK_US = re.compile(r\"^[A-Z]{1,5}(\\.US)?$\")\r\n_RE_FUTURE_CONTRACT = re.compile(\r\n    r\"^([A-Z]{1,2})\\d{3,4}\\.(CFE|SHFE|DCE|CZCE|INE|GFEX)$\", re.IGNORECASE\r\n)\r\n_RE_FUTURE_VARIETY = re.compile(\r\n    r\"^([A-Z]{1,2})\\.(CFE|SHFE|DCE|CZCE|INE|GFEX)$\", re.IGNORECASE\r\n)\r\n\r\n\r\ndef classify(ts_code: str) -> AssetInfo:\r\n    \"\"\"根据 ts_code 推断资产类型与合约元信息。\"\"\"\r\n    code = (ts_code or \"\").strip()\r\n\r\n    if not code:\r\n        return AssetInfo(\"unknown\", None, 1.0, \"000300.SH\", None)\r\n\r\n    # 期货合约（带年月）或品种连续合约\r\n    for regex in (_RE_FUTURE_CONTRACT, _RE_FUTURE_VARIETY):\r\n        m = regex.match(code)\r\n        if m:\r\n            variety = m.group(1).upper()\r\n            exchange = m.group(2).upper()\r\n            spec = FUTURE_SPECS.get(variety)\r\n            if spec:\r\n                return AssetInfo(\r\n                    asset_type=\"future_cn\",\r\n                    variety=variety,\r\n                    multiplier=float(spec[\"multiplier\"]),\r\n                    benchmark=spec[\"benchmark\"],\r\n                    exchange=exchange,\r\n                )\r\n            # 无字典命中：仍归为期货但 multiplier 缺省 1，并由上游 warning\r\n            return AssetInfo(\"future_cn\", variety, 1.0, \"000300.SH\", exchange)"
+        },
+        {
+          "file": "C:\\Users\\A\\Documents\\Codex\\quantskills-learning-repos\\skill-trade-review\\skill-trade-review\\scripts\\pnl_normalizer.py",
+          "start": 67,
+          "end": 83,
+          "sha256": "bceb483a8b3cd8146e5e4faf6fe3b496648e6264ac675ad256316645b880ef69",
+          "excerpt": "    # 5. 派生 asset_type / variety / multiplier / benchmark\r\n    asset_info = df[\"ts_code\"].astype(str).map(classify)\r\n    df[\"asset_type\"] = asset_info.map(lambda x: x.asset_type)\r\n    df[\"variety\"] = asset_info.map(lambda x: x.variety)\r\n    df[\"multiplier\"] = asset_info.map(lambda x: x.multiplier)\r\n    df[\"benchmark_default\"] = asset_info.map(lambda x: x.benchmark)\r\n\r\n    if (df[\"asset_type\"] == \"unknown\").any():\r\n        unknown_codes = sorted(df.loc[df[\"asset_type\"] == \"unknown\", \"ts_code\"].unique())\r\n        warnings.append(f\"以下 ts_code 无法识别品种，按 unknown 处理: {unknown_codes}\")\r\n\r\n    # 6. account_id 缺省\r\n    if \"account_id\" not in df.columns:\r\n        df[\"account_id\"] = \"default\"\r\n    df[\"account_id\"] = df[\"account_id\"].fillna(\"default\").astype(str)\r\n\r\n    return df, warnings"
+        },
+        {
+          "file": "C:\\Users\\A\\Documents\\Codex\\quantskills-learning-repos\\skill-trade-review\\skill-trade-review\\scripts\\pnl_normalizer.py",
+          "start": 122,
+          "end": 134,
+          "sha256": "bceb483a8b3cd8146e5e4faf6fe3b496648e6264ac675ad256316645b880ef69",
+          "excerpt": "    # 2. 计算 unrealized_pnl\r\n    need_unreal = open_mask & df[\"unrealized_pnl\"].isna()\r\n    for idx in df.index[need_unreal]:\r\n        cost = df.at[idx, \"cost_price\"]\r\n        mark = df.at[idx, \"mark_price\"]\r\n        vol = df.at[idx, \"volume\"]\r\n        mult = df.at[idx, \"multiplier\"]\r\n        direction = df.at[idx, \"direction\"]\r\n        if pd.isna(mark) or pd.isna(cost) or pd.isna(vol):\r\n            df.at[idx, \"unrealized_pnl\"] = 0.0\r\n            continue\r\n        diff = (mark - cost) if direction == \"long\" else (cost - mark)\r\n        df.at[idx, \"unrealized_pnl\"] = float(diff) * float(vol) * float(mult)"
+        },
+        {
+          "file": "C:\\Users\\A\\Documents\\Codex\\quantskills-learning-repos\\skill-trade-review\\skill-trade-review\\scripts\\review.py",
+          "start": 203,
+          "end": 206,
+          "sha256": "48b431cf4d407c75dc1d2808e1349bfc1851080a842787db62e990d6bfd563d7",
+          "excerpt": "    if not opens.empty:\r\n        open_exposure = float((opens[\"cost_price\"].astype(float) *\r\n                               opens[\"volume\"].astype(float) *\r\n                               opens[\"multiplier\"].astype(float)).sum())"
+        },
+        {
+          "file": "C:\\Users\\A\\Documents\\Codex\\quantskills-learning-repos\\skill-trade-review\\skill-trade-review\\scripts\\per_trade_review.py",
+          "start": 37,
+          "end": 41,
+          "sha256": "273d530b8a21e2948984e4558197427871461bfffa7fe5f823b2ed67b0883668",
+          "excerpt": "def _pct_of_cost(pnl: float, cost: float, vol: float, mult: float) -> float | None:\r\n    base = cost * vol * mult\r\n    if base <= 0:\r\n        return None\r\n    return round(pnl / base * 100, 2)"
+        },
+        {
+          "file": "C:\\Users\\A\\Documents\\Codex\\quantskills-learning-repos\\skill-trade-review\\skill-trade-review\\scripts\\per_trade_review.py",
+          "start": 222,
+          "end": 234,
+          "sha256": "273d530b8a21e2948984e4558197427871461bfffa7fe5f823b2ed67b0883668",
+          "excerpt": "def review_single_trade(row: pd.Series, market_review: dict) -> dict:\r\n    asset_type = row.get(\"asset_type\") or \"unknown\"\r\n    variety = row.get(\"variety\")\r\n    direction = row.get(\"direction\")\r\n    status = row.get(\"status\")\r\n    ts_code = row.get(\"ts_code\")\r\n    vol = _safe_float(row.get(\"volume\"))\r\n    mult = _safe_float(row.get(\"multiplier\"), 1.0)\r\n\r\n    against_basis = _check_against_basis(asset_type, variety, direction, market_review)\r\n    against_trend = _check_against_trend(asset_type, direction, market_review)\r\n    daily_vol_pct = _get_daily_vol(asset_type, variety, market_review)\r\n    alignment = _rate_alignment(against_basis, against_trend, asset_type)"
+        }
+      ],
+      "id": "Q12.5",
+      "finding": "匹配期货正则但FUTURE_SPECS缺项时返回future_cn/1.0。上游只对asset_type==unknown报警，故没有未知乘数专项warning，与注释不符。规范化会覆盖输入multiplier；补算浮盈、敞口和成本收益率使用该值。",
+      "claim": "未收录期货乘数取1且无专项报警",
+      "chain": "run -> validate_and_split/classify -> fill_missing_mark_and_unrealized / _compute_summary / review_single_trade",
+      "status": "CONFIRMED"
+    }
+  ],
+  "coverage": "Evidence excerpts actually read; no full repository or full review.py coverage claim. No market data/API verification."
+}
