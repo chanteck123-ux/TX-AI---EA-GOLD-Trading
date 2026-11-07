@@ -1,0 +1,17 @@
+[
+  {
+    "source": "C:/Users/A/Documents/Codex/outputs/lean-full-review-20261101/claude/batches/L013_statistics_results_CN.md",
+    "file": "L013_statistics_results_CN.md",
+    "sha256": "74B01A85E835CE2ABB503D7B30E58FFB2770CC3BF59A055838AF202A039DF2AA"
+  },
+  {
+    "source": "C:/Users/A/Documents/Codex/outputs/joint-full-review-20261101/CLAUDE_RECEIPT_CN.md",
+    "file": "CLAUDE_RECEIPT_CN.md",
+    "sha256": "40A77681EBD46F98EE4CF55096DE46C032A68E6D18D4DFE2539323FBBCEEA2B2"
+  },
+  {
+    "source": "C:/Users/A/Documents/Codex/outputs/joint-full-review-20261101/CLAUDE_CHECKPOINT_20261106_CN.md",
+    "file": "CLAUDE_CHECKPOINT_20261106_CN.md",
+    "sha256": "AE1980E32D6868D2F23D7468F987E4E729F022DF69800121E2578BF331C3CB4F"
+  }
+]
