@@ -1,0 +1,14 @@
+﻿result.json audited: 584; consistent with README-derived factors_584.csv and factor_index.json: 584
+status values: 
+pass=584
+no_future_check values: 
+True=584
+icir_5d / (ic_mean/ic_std): min 7.099 max 7.099 (sqrt(252/5)=7.099)
+ic_mean < 0: 204; long_short_mean < 0: 160
+|naive t| >= 1.96 (t = ic/(icstd/sqrt(icobs)); overlapping 5d IC so t is overstated): 220 of 584
+markets: 
+cn=98,us=50 x584
+openai.yaml normalized hash groups: 
+skill-quant-factor-directional-alpha|E001824F91A4=48; skill-quant-factor-directional-alpha|445BD38D2761=148; skill-quant-factor-risk-pattern-alpha|D0A63562880D=72; skill-quant-factor-directional-alpha|55CA372FFC0D=25; skill-quant-factor-directional-alpha|B2EEB92A68B6=25; skill-quant-factor-directional-alpha|E1095A00DB67=50; skill-quant-factor-risk-pattern-alpha|FCC5D4DCE7B0=24; skill-quant-factor-risk-pattern-alpha|4709DEB395D5=96; skill-quant-factor-risk-pattern-alpha|FE97EC28864B=96
+
+## mismatches

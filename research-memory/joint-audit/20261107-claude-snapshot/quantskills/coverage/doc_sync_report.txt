@@ -1,0 +1,8 @@
+﻿# doc-layer -> source inventory sync
+at: 2026-11-06T18:47:15
+already_set: 79
+applied: 4521
+not_in_inventory: 0
+sha_mismatch: 0
+
+## sha mismatches (key, coverage sha, inventory sha)
