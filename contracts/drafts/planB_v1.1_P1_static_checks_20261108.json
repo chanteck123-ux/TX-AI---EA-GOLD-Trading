@@ -1,0 +1,37 @@
+{
+  "date": "2026-11-08",
+  "operator": "Codex",
+  "base_main": "557d952c434b986d8d74cb47417835fb039ce757",
+  "kind": "DOCUMENT_STATIC_CHECK_ONLY",
+  "diff_check": "PASS",
+  "current_json": "PARSED",
+  "re28_re31_named_rows": 46,
+  "all_named_rows": "NOT RUN",
+  "compile": "NOT RUN",
+  "mt5": "NOT RUN",
+  "lean": "NOT RUN",
+  "demo": "NOT RUN",
+  "claude_p1_review": "PENDING",
+  "files": [
+    {
+      "path": "contracts/risk_execution_interface.md",
+      "sha256": "77a9314066c6a50d37e30cf5a6dee127fa18170b238a59f0105c74a4d8240182"
+    },
+    {
+      "path": "contracts/drafts/planB_v1.1_R5_codex_review_20261108.md",
+      "sha256": "605b73f4cf21f88531420d93deb37db0e817682abdad9a06d5e75f573ec50179"
+    },
+    {
+      "path": "contracts/drafts/planB_v1.1_batch_handoff_20261108.md",
+      "sha256": "15690c90afd5787d73bbbad8876360728deece1ba9949aae95b456546ac85790"
+    },
+    {
+      "path": "contracts/drafts/planB_v1.1_consistency_check_claude_20261018.md",
+      "sha256": "c922df398a69fb03937abc8a1177958a2f2b5e9f76e51e6a1b400f8459298913"
+    },
+    {
+      "path": "开发交易头脑EA/交易头脑v1.2/research/CURRENT.json",
+      "sha256": "acc039b5312764d5f596a58ee278fd20e52e244fee36be080bd325ea113058b4"
+    }
+  ]
+}
