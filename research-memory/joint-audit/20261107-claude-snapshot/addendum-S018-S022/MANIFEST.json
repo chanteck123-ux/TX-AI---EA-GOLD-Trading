@@ -1,0 +1,47 @@
+[
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\GAPS_CN.md",
+    "path": "GAPS_CN.md",
+    "sha256": "0D62F00E2CD7A80CCCF1735293278636E3F306529348131FC60FD69886F93C04"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A010.md",
+    "path": "assets/A010.md",
+    "sha256": "D5E83E7F40FDC981DE1864DC4D2E2EBCB10AEDBFA500C691DA5C809AA0CA2762"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A032.md",
+    "path": "assets/A032.md",
+    "sha256": "9554302532BD75FC5FEECF0CE9F37453BA6BB426613482797AE0371FAB365174"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A033.md",
+    "path": "assets/A033.md",
+    "sha256": "9A39F7B1B23A658B3108330E849C4A0528EED81C9204AB072947DA5452ADCED8"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\coverage\\qs_source_inventory.csv",
+    "path": "coverage/qs_source_inventory.csv",
+    "sha256": "F34D10AE46180B22A0BE3CE788014E31F2BA2F3A368360A741774B51A2AD326E"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\coverage\\unread_exec_keyword_hits_20261107.txt",
+    "path": "coverage/unread_exec_keyword_hits_20261107.txt",
+    "sha256": "041269AB23799E7C7FB4807C9D2336F4D40375F55E81AC2C7AF3F41E771C9B3D"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\joint-full-review-20261101\\CLAUDE_RECEIPT_CN.md",
+    "path": "CLAUDE_RECEIPT_CN.md",
+    "sha256": "F74C4FF79734703957B6CAD2B17E92899CC9CF5A45B7BE108DFB8C3A0056DACB"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\joint-full-review-20261101\\CLAUDE_CHECKPOINT_20261106_CN.md",
+    "path": "CLAUDE_CHECKPOINT_20261106_CN.md",
+    "sha256": "FDDBC54A87007A40555120395690EE26B1A1EDDFBF096E3D8C53572608B689C0"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\joint-full-review-20261101\\CLAUDE_TO_CODEX_QS_RECHECK_REQUEST_20261106_CN.md",
+    "path": "CLAUDE_TO_CODEX_QS_RECHECK_REQUEST_20261106_CN.md",
+    "sha256": "E0FF78DEA026C97AB37E6264B7177BD7D884A3EF1E10889DFD580698D271D550"
+  }
+]

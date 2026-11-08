@@ -1,0 +1,1467 @@
+[
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\CLAUDE_RECEIPT_Q11_Q16_CODEX_RECHECK_20261107_CN.md",
+    "path": "quantskills/CLAUDE_RECEIPT_Q11_Q16_CODEX_RECHECK_20261107_CN.md",
+    "sha256": "5E669895D8EF9D1F52BC889F3096198DE637099707667752A0D041D8D7533D91"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\CODEX_RECHECK_RESPONSE_20261026_CN.md",
+    "path": "quantskills/CODEX_RECHECK_RESPONSE_20261026_CN.md",
+    "sha256": "D389454E23D604E55F1A0A08CAFA96F6FB9A5118B6BC4477664917489F7A6C7E"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\CROSS_REVIEW_RECEIPT_CN.md",
+    "path": "quantskills/CROSS_REVIEW_RECEIPT_CN.md",
+    "sha256": "F7C86E8C72C30BBF494A90BE876A8E47D1F8542CF78C3FD877D93A528EE503AA"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\GAPS_CN.md",
+    "path": "quantskills/GAPS_CN.md",
+    "sha256": "0D62F00E2CD7A80CCCF1735293278636E3F306529348131FC60FD69886F93C04"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\GITHUB_BATCH06_RECEIPT_CN.md",
+    "path": "quantskills/GITHUB_BATCH06_RECEIPT_CN.md",
+    "sha256": "2132A62853883124DEBB3A616A3E8D72F15A44F24DEDEAAD424AAC4A10134E11"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\plan_main.csv",
+    "path": "quantskills/plan_main.csv",
+    "sha256": "DEF999E51AFA823DE25815B7C68D6C1796E94C14B5CBDD755411EA6024C39813"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\progress_plan_main.json",
+    "path": "quantskills/progress_plan_main.json",
+    "sha256": "CD689AD2C883129CEF801D954F11712754A588FEF238D04F37669E94A6D7BF8E"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\README_CN.md",
+    "path": "quantskills/README_CN.md",
+    "sha256": "170461E4B7DBC74BE3FB8937C5F45F47855FAF2E07AE60D88951F8917DA724B2"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A001.md",
+    "path": "quantskills/assets/A001.md",
+    "sha256": "656F13850B5C5CC7520443DEFED7A16A11D2340D782F6197E2BA8BC9E2255899"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A002.md",
+    "path": "quantskills/assets/A002.md",
+    "sha256": "A6A5D2F399756BC7CA72FE485EC2A4C5774A254D9700C6242B6E007FB425C5B1"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A003.md",
+    "path": "quantskills/assets/A003.md",
+    "sha256": "EF3DDC19BF01F995F1DED21FFA2E596D3B3FBDAA0EFAD1F0EC15FE25B51D76B6"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A004.md",
+    "path": "quantskills/assets/A004.md",
+    "sha256": "04242076F5D4FCFBF5617901906C59B1ECAF03C7D0E775001FAEAB188D0A22FB"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A005.md",
+    "path": "quantskills/assets/A005.md",
+    "sha256": "34ECBED013415085A5E1D3B9DB6E4A0C136B8C4CBA1D3B6267029E2A3CC1CC4D"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A006.md",
+    "path": "quantskills/assets/A006.md",
+    "sha256": "3216DB4EFB0A68AA029DF0ED2307697C64A905FF70CDE155D04168B01D0068ED"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A007.md",
+    "path": "quantskills/assets/A007.md",
+    "sha256": "28319AAC1F252C1507F3410F5AED5DAAEF26C9343B7BA97F6F5023AA63565560"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A008.md",
+    "path": "quantskills/assets/A008.md",
+    "sha256": "D3DE4EEF33CC05C58CA24D1859565779CE726B447FB99A710A682B3D5DAA9A7E"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A009.md",
+    "path": "quantskills/assets/A009.md",
+    "sha256": "EC69982096023876BB23DE56A5580A2203546FD327FF5A0A04BECC23BCECF269"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A010.md",
+    "path": "quantskills/assets/A010.md",
+    "sha256": "D5E83E7F40FDC981DE1864DC4D2E2EBCB10AEDBFA500C691DA5C809AA0CA2762"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A011.md",
+    "path": "quantskills/assets/A011.md",
+    "sha256": "31576A4F2A4AA3D466FA2D3E9E31CA8DFCA65D8C2F7D3885065436A24D69612B"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A012.md",
+    "path": "quantskills/assets/A012.md",
+    "sha256": "C216E4A276F705466C51F2145CE07ED7076C7131ADEEF17D550EFB3C79764EC3"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A013.md",
+    "path": "quantskills/assets/A013.md",
+    "sha256": "46EEC8489BA291119D91B8623056190B861CC958A4DE12440950DC830E0569E3"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A014.md",
+    "path": "quantskills/assets/A014.md",
+    "sha256": "D915F300DAB69A262F9C26F6C97980655C47C774C7F8DD4AD710EFE693DFA328"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A015.md",
+    "path": "quantskills/assets/A015.md",
+    "sha256": "F8B7BDE4004F4424A2EBD9B2152DE2ADCE6820F75B0BE3FA92CCA256A46300A3"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A016.md",
+    "path": "quantskills/assets/A016.md",
+    "sha256": "5E22C8AAD1E5315F3E8DCA3ADEE716E36CEB9ECDA083F721DB1FF6A38767D388"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A017.md",
+    "path": "quantskills/assets/A017.md",
+    "sha256": "63E0E842D77EF15CAF5372C2F29BEB7E5541AB97273836A06D2E6DC1322ACF6B"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A018.md",
+    "path": "quantskills/assets/A018.md",
+    "sha256": "2A0624609AB007AAC86D6AB98A2934F71AC2FDFE45F121E5F9762E26670F7BC1"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A019.md",
+    "path": "quantskills/assets/A019.md",
+    "sha256": "F9FB8723C47704C9FF76DC0F9B2BE5548D8B406C71069E8C987E3991C0C150D1"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A020.md",
+    "path": "quantskills/assets/A020.md",
+    "sha256": "F3B692B0F39E66D187B0685DC8BAC9A17433CD618F26E90259FB188C081E486D"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A021.md",
+    "path": "quantskills/assets/A021.md",
+    "sha256": "87D32126B69A67D5495B3DD61CA2D3B3568716EB019B7671E44082CFE9BF968E"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A022.md",
+    "path": "quantskills/assets/A022.md",
+    "sha256": "B879AEEE8580153F23F4057C061A0159F497A3C33EBA0C104C67B591FC2188FE"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A023.md",
+    "path": "quantskills/assets/A023.md",
+    "sha256": "1D495349B06E377353C5D38EA7C961844031DCDF8A56F02EDC252B6914BD0731"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A024.md",
+    "path": "quantskills/assets/A024.md",
+    "sha256": "0F84218C3C43682B9E7AC80F7083FCF1AC1275D7E7DE672169011B3FF3682A30"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A025.md",
+    "path": "quantskills/assets/A025.md",
+    "sha256": "59BB0613C67EEFF4C105E1DFA76887C642BBF8D0343E93ED164630401D651280"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A026.md",
+    "path": "quantskills/assets/A026.md",
+    "sha256": "48892ED4F4CA63162122EC11DD445C3A41CDD34DBEA860CA3821270708FDC74C"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A027.md",
+    "path": "quantskills/assets/A027.md",
+    "sha256": "9AA6C74EBF031622A3F5E8612BF1F44C248CAA3EC47313218BD3BA7084CE2E68"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A028.md",
+    "path": "quantskills/assets/A028.md",
+    "sha256": "98FE31EA3CBD445BBBFBEFDA34F9BB423CA7B5194A0E93CCEE156DCE70DFBA2D"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A029.md",
+    "path": "quantskills/assets/A029.md",
+    "sha256": "598310ECAC57B36B825E4F0B27B2A42679DD4FA697E0943318AB82C340E6C302"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A030.md",
+    "path": "quantskills/assets/A030.md",
+    "sha256": "06F76378E46674AED096D83D24AB0192A2E46A688807E312CD0650F483058E06"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A031.md",
+    "path": "quantskills/assets/A031.md",
+    "sha256": "6A25472D309FD94F75AACE2CCE656B3930252C71CE6C1513EA3948031A58CC8F"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A032.md",
+    "path": "quantskills/assets/A032.md",
+    "sha256": "9554302532BD75FC5FEECF0CE9F37453BA6BB426613482797AE0371FAB365174"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A033.md",
+    "path": "quantskills/assets/A033.md",
+    "sha256": "9A39F7B1B23A658B3108330E849C4A0528EED81C9204AB072947DA5452ADCED8"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A034.md",
+    "path": "quantskills/assets/A034.md",
+    "sha256": "D19F5B8C2C80664404F2D211A4E18740441C87FEC1794D8D9E0E1AA9CD318F97"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A035.md",
+    "path": "quantskills/assets/A035.md",
+    "sha256": "7A8FBC5C8E853A5CFE16A3960306176D59B916918D7508CF64E98FF1E0CBDA5F"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A036.md",
+    "path": "quantskills/assets/A036.md",
+    "sha256": "7B23AAF67EAE28622C312D68B4B4081F4042B8BCDEE247C088D8EBB34978382A"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A037.md",
+    "path": "quantskills/assets/A037.md",
+    "sha256": "C63BD809ACA1BB8AAAAC117CBE364CC3F06B05B1749ADF7B7E280B3F9CFD8361"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A038.md",
+    "path": "quantskills/assets/A038.md",
+    "sha256": "63E1FDCB948FB3A27D92E67F221B1C1D159F5C4CC1E48307944EF6B4062E6733"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A039.md",
+    "path": "quantskills/assets/A039.md",
+    "sha256": "7412A806C8CCFFB9A6BA6E1C97F93BE9AB1A6A8E1F538C36C30103AA15FF4758"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A040.md",
+    "path": "quantskills/assets/A040.md",
+    "sha256": "4A40BA4FA85562AC4889EF527D5DADA41975FDD7EF5CB53A13D76E0569ED0D38"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A041.md",
+    "path": "quantskills/assets/A041.md",
+    "sha256": "EF11D09FE3A120E41DA67CA9AEB4D8575306B8D9BEB48025D11F8BA299EB02D7"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A042.md",
+    "path": "quantskills/assets/A042.md",
+    "sha256": "076B398FB2A55A999A5B598E4E462F80467F6FDB694109D7561A66E62DE19AAB"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A043.md",
+    "path": "quantskills/assets/A043.md",
+    "sha256": "6343913B86A54213892C4F79467C3AB06166FEC8AE70DFDF48307278E205630E"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A044.md",
+    "path": "quantskills/assets/A044.md",
+    "sha256": "C7060349DB126D8E3BEFE1BB0D2F6FBCF8D0D42E95559EC711CEE1EE464F9164"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A045.md",
+    "path": "quantskills/assets/A045.md",
+    "sha256": "1F559098C48244FA9B65BC4B78B5F7ED1BF63ACCD5B58225EA6183015C5D7F6C"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A046.md",
+    "path": "quantskills/assets/A046.md",
+    "sha256": "8A74D44945C10BA7B96661EDDBAACE3B4A8223B0C6E473F57CA6726353CF7C63"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A047.md",
+    "path": "quantskills/assets/A047.md",
+    "sha256": "3FD94D0953C143A2B549562461251BA741AC1FFD14CB276925AA9F94439699F2"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A048.md",
+    "path": "quantskills/assets/A048.md",
+    "sha256": "D11FB142884F6DEE2C5E6715021DCCF5D240F0989A49C04CD5DFB60322259A1D"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A049.md",
+    "path": "quantskills/assets/A049.md",
+    "sha256": "8F9B33DF72A2F586F57AB0A7A556B32035010D6425E1FB704FEFA1422A549A8D"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A050.md",
+    "path": "quantskills/assets/A050.md",
+    "sha256": "08560B5791ACACC209006ED362C6BA902F0FA82E8C6A11F06187EA6FFC728D8F"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A051.md",
+    "path": "quantskills/assets/A051.md",
+    "sha256": "F699BB9D643382469216DB4272CDA1C98DA6A0ADBA32EC77B9D4695590229305"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A052.md",
+    "path": "quantskills/assets/A052.md",
+    "sha256": "1F52B90215702520A3FF5792FF4BFA9D8844B377CE58065CB4E7E007F97CD98C"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A053.md",
+    "path": "quantskills/assets/A053.md",
+    "sha256": "4D00B32EF68CAD1707A0180A34B4D4F9D32A1B3B49D5B9AB5DC4ECBF3B6CDBBD"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A054.md",
+    "path": "quantskills/assets/A054.md",
+    "sha256": "689D77F870F74F2B509E46CB98466551B14D9DA538A79BAFE24723B95EEB49E7"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A055.md",
+    "path": "quantskills/assets/A055.md",
+    "sha256": "DB50B475AED8F034972A01BF87B07436FB247ED6B56E259B243297FB357C1250"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A056.md",
+    "path": "quantskills/assets/A056.md",
+    "sha256": "2A9D113870C65B1B3DF0FEC7544215A06F5144A63588D7DF7BC921DD3BD282EA"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A057.md",
+    "path": "quantskills/assets/A057.md",
+    "sha256": "4573C2C8B9B0789CAEAEBB92B7A2FC9627746F91DF0438E6E3DC37756B9DB59D"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A058.md",
+    "path": "quantskills/assets/A058.md",
+    "sha256": "C231B731761046C83A89E6E8714BD145CBA59FDEA2F83F86B3B00E21595E6F70"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A059.md",
+    "path": "quantskills/assets/A059.md",
+    "sha256": "3BB6936D51D6ECB2217C8F5923E04402FCE1D36290D70914101A1237D5706501"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A060.md",
+    "path": "quantskills/assets/A060.md",
+    "sha256": "99531F2A4D7FE108558CB90AFEC8E2C341C116488BA42D86C5AE0483DADE4615"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A061.md",
+    "path": "quantskills/assets/A061.md",
+    "sha256": "26DD17473FDEE1B0267814E1C2E366394BCAD1E14A9004DF34B921FF49FBC3C8"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A062.md",
+    "path": "quantskills/assets/A062.md",
+    "sha256": "12484BA0B08673F0C2996E8F76BA2A5C73F9463AC617CB4F23149661C2EC3A41"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A063.md",
+    "path": "quantskills/assets/A063.md",
+    "sha256": "2786684850C668D53CDF8705D56F4A2EDD7DB9F675748E937B7CE069DAE99AFD"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A064.md",
+    "path": "quantskills/assets/A064.md",
+    "sha256": "5F38807D1888F32C55E967B06147A239F5D7648F967B6424F19FB774CE7C82B5"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A065.md",
+    "path": "quantskills/assets/A065.md",
+    "sha256": "844CF2ECC9362763C2A410FED20D6C8007A74AC4D065B6E02F031B0E95544B0E"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A066.md",
+    "path": "quantskills/assets/A066.md",
+    "sha256": "7F66F7C78B16E80CE69FA3858C450AA11B649BA564C999B28A795C85566DC982"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A067.md",
+    "path": "quantskills/assets/A067.md",
+    "sha256": "E4B8FD5147EB3FED507A9157F24AFD02E07228E338409897E9A9001E30EB94DC"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A068.md",
+    "path": "quantskills/assets/A068.md",
+    "sha256": "80FCAAA7A0A68A42573143C306510B49636D448ACBD3D04F01FBF38863787FD9"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A069.md",
+    "path": "quantskills/assets/A069.md",
+    "sha256": "31F5C164D069D09CD4F688F955152998E92D7AC8EF97FBEDF1B94A1BC79676DB"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A070.md",
+    "path": "quantskills/assets/A070.md",
+    "sha256": "5F6401D5F37A2028D4749D57B6F1D23C01A134E0434B93FFC77D6043AD5DD865"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A071.md",
+    "path": "quantskills/assets/A071.md",
+    "sha256": "541A39B1E024ED4DCC1137653CB8ACCFAF1FCBFFA3310EC7BAFFB52AD1402643"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A072.md",
+    "path": "quantskills/assets/A072.md",
+    "sha256": "3405DF3888B4A3A05C3A988DEABCA73A7E8F019A2E1AA421788D5AD36B9D7566"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A073.md",
+    "path": "quantskills/assets/A073.md",
+    "sha256": "199E71A7CB8DC339B6E36BF3D3BC932A13E22B0996BCEDE704E96CA14E576B08"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A074.md",
+    "path": "quantskills/assets/A074.md",
+    "sha256": "F3A081500055C3BBBA5A757476F065F473ACF54C2879CFE44D62E1B732367416"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A075.md",
+    "path": "quantskills/assets/A075.md",
+    "sha256": "36A6F5D7B7123C34F3DD4A399B8010C0694ACC7D43AEC67B4D76E1BECED6FEBE"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A076.md",
+    "path": "quantskills/assets/A076.md",
+    "sha256": "F8400120608094FBDDFD65244CD2D91F759DDF7390AF10D035AFB5BA2C059B82"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A077.md",
+    "path": "quantskills/assets/A077.md",
+    "sha256": "CC9373AD5EDDE1D350DA9B43FCC90627974F2BFA4D31E5E13956CCF8E24893E0"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A078.md",
+    "path": "quantskills/assets/A078.md",
+    "sha256": "648B24991EC388A189ADCFF0CF7047E8B43C8BE4D42CECD072348B573D8F9870"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A079.md",
+    "path": "quantskills/assets/A079.md",
+    "sha256": "A5CBB546594113F4AE58D6A7CF241B6AE49ACA0D3A57A8B4F3FB06A36E673A07"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A080.md",
+    "path": "quantskills/assets/A080.md",
+    "sha256": "E7027561FF562BE2A5AFA88526FF8EDA17082D96408F8A852D74A090A6EF8B18"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A081.md",
+    "path": "quantskills/assets/A081.md",
+    "sha256": "565BA8B5211BA9998C8A5E923A96CC81E51CFAD96490DB74EF99205DF803E5D4"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A082.md",
+    "path": "quantskills/assets/A082.md",
+    "sha256": "DB36EFBBD7F80CC15E1DE7F197F0F545666B15959D014A36E12BF3072F72EEF8"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A083.md",
+    "path": "quantskills/assets/A083.md",
+    "sha256": "2FD310C98E96D7B216526C620D77D6D3FA8C85076AA266BDC6DF3BBB6D443B77"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A084.md",
+    "path": "quantskills/assets/A084.md",
+    "sha256": "BCB4A4E0C6B126176F7164B7CA2EDEAC240A500DA405B86E2A98F6FEC75DC3B3"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A085.md",
+    "path": "quantskills/assets/A085.md",
+    "sha256": "3FF27BB65B222241A88512F80289CC525DAEB6574DAAA1FFD2B75610CF600A09"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A086.md",
+    "path": "quantskills/assets/A086.md",
+    "sha256": "871163AD6170DDDE82F2610A06B94C76CDD9504DFB274B2592F9C340BC0F2076"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A087.md",
+    "path": "quantskills/assets/A087.md",
+    "sha256": "60905023F744DDFBF0DF93E0C29649AB75B88427C15D7433FBF794FEA21C8D09"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A088.md",
+    "path": "quantskills/assets/A088.md",
+    "sha256": "31A6400ED436652DC567E8D5BA9A45835AE2A02D14940B2EE74C29828EB064BC"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A089.md",
+    "path": "quantskills/assets/A089.md",
+    "sha256": "E0F615A03B8F5D46A91B8E1D5669D7CAEFB96132635AA9F281AB8227F977CE3C"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A090.md",
+    "path": "quantskills/assets/A090.md",
+    "sha256": "A6B6E8E1EACC662BDBBA4F29424FA58C56DD17B6B8F740B86A53E46D16322AB6"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A091.md",
+    "path": "quantskills/assets/A091.md",
+    "sha256": "1ACA79E7D1A1FC4CD1A479DD545F0C2B9603F6C53BE46A73590A714EE0AA415E"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A092.md",
+    "path": "quantskills/assets/A092.md",
+    "sha256": "7184615B60A70C17C91552FCCA6C815343AC2640B59B3E4EA543A756535406CC"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A093.md",
+    "path": "quantskills/assets/A093.md",
+    "sha256": "5A7F7D394F546E381D5CE3ED18D42D6D30B724FD75613F0ACC7A2C9E49E2B0CA"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A094.md",
+    "path": "quantskills/assets/A094.md",
+    "sha256": "92F301F9972E3980D7314FA24E16155FE0803881C2517CFDEB61C46041173A62"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A095.md",
+    "path": "quantskills/assets/A095.md",
+    "sha256": "9B2C9007133F41F2CF67823D2ED313EB1D575AFC800D45014594E67DF2CE8AD2"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A096.md",
+    "path": "quantskills/assets/A096.md",
+    "sha256": "045F04CDF19CF77C3EE7A917915FC0F042A7BFB71420594F4A80D38736F0B297"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A097.md",
+    "path": "quantskills/assets/A097.md",
+    "sha256": "CE47CFE1ABD337ADB294F83981AD020BAA202EC58C1C71958707595BB81A6561"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A098.md",
+    "path": "quantskills/assets/A098.md",
+    "sha256": "24456E7246679459F45ED8948EC9C8A65770BC50163281DFD8BF6D08A13745D6"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A099.md",
+    "path": "quantskills/assets/A099.md",
+    "sha256": "7683BC0F538696B0D5E1A9B05ECAE53E300B5B8F04D19E5477F203B5F39B3318"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A100.md",
+    "path": "quantskills/assets/A100.md",
+    "sha256": "0CCF26D803F25234900C67BC995D1989C6F0139CB9EF455BFE8AFC899936707F"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A101.md",
+    "path": "quantskills/assets/A101.md",
+    "sha256": "508169EF40EEA0A19DED399CDE9C8C5884F68661258DFCE75945F1DC36C55FDF"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A102.md",
+    "path": "quantskills/assets/A102.md",
+    "sha256": "E3CA0238B7BEE0903375B27D7E9288138BB7D103EA58971F39E8A9A5F59F450C"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A103.md",
+    "path": "quantskills/assets/A103.md",
+    "sha256": "9191D4F876BFE3345D263C1A12F4C4892E785079BFA1237AC2632C45D5E6EB2F"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A104.md",
+    "path": "quantskills/assets/A104.md",
+    "sha256": "C0ADA7E2CF51DAEECF57B0B5E4FC8B8BBA04F87CD057398F8E505FC19C7D731C"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A105.md",
+    "path": "quantskills/assets/A105.md",
+    "sha256": "D836B46062BD0234392511093ABA2AA446213C0985289D7C38AAD803067AF45C"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A106.md",
+    "path": "quantskills/assets/A106.md",
+    "sha256": "D707DD923B0ACFCFBD327175ED2D946BF6B1D000E3C1FA28833F16A2C0F57758"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A107.md",
+    "path": "quantskills/assets/A107.md",
+    "sha256": "027DEF7D39C7F6C0B99921C00235C7137E914529456B47283BA9D5D1F727A7BE"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A108.md",
+    "path": "quantskills/assets/A108.md",
+    "sha256": "12B5CE104B9A1786D73C18E68CA4B0BE5BA9675A9A1D511739EC23370E6EF404"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A109.md",
+    "path": "quantskills/assets/A109.md",
+    "sha256": "56AA2312005CD6FE249EAEE4DD4D288A511F118ADAD95D49A0E1862A06A2C549"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A110.md",
+    "path": "quantskills/assets/A110.md",
+    "sha256": "DC93189F70FDB8E76360A738EEC419858AEB238D34FA12DEB535D241318CDEAB"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A111.md",
+    "path": "quantskills/assets/A111.md",
+    "sha256": "7E452B66C4E2DE1CDFE2245130C5261BB47F9AE0FA79D9A48942125AF46F470C"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A112.md",
+    "path": "quantskills/assets/A112.md",
+    "sha256": "B702EC03F4EEA799524E3F892E6394544C42C3FC6C581A67BA54D538D3F8F995"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A113.md",
+    "path": "quantskills/assets/A113.md",
+    "sha256": "4B2C538EB8A75053629029DD03ED3B1BBE3D86078425331B706A7B4A0FD6C691"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A114.md",
+    "path": "quantskills/assets/A114.md",
+    "sha256": "29AC533C692D7E998A61108655578050CDD21554F9B6F0C54C258AC6BF72E976"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A115.md",
+    "path": "quantskills/assets/A115.md",
+    "sha256": "C21E87B4B212412030CACA9E784D1CEBF0EF831117B5E44534310F85965BFAC0"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A116.md",
+    "path": "quantskills/assets/A116.md",
+    "sha256": "2BFEF187C7FC79E79939F7CE324205D1528A68892BFD937A16C5D93447069A60"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A117.md",
+    "path": "quantskills/assets/A117.md",
+    "sha256": "8BB808B93D03B78B61A2AE1F4D65B47F91B8A532D0D1B8A4647F50AF2E7C86AC"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A118.md",
+    "path": "quantskills/assets/A118.md",
+    "sha256": "FD7C703778FCF1A606E3EC2041E58E4106F8E240AEC3540F692E74812FC55C63"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A119.md",
+    "path": "quantskills/assets/A119.md",
+    "sha256": "CF941DD64EE53664F00DDE28EF71C1777EAE1986F1997F160D3B7828DA283739"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A120.md",
+    "path": "quantskills/assets/A120.md",
+    "sha256": "F5FE4A018EE2980CFEE6B4EE49B622BB5AB6C09C29238CCC0A6833AF69AC2091"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A121.md",
+    "path": "quantskills/assets/A121.md",
+    "sha256": "61327C1EBBCAAF3094AB01247716D6592CCC10BF272985D3C7DD7AD80EF29070"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A122.md",
+    "path": "quantskills/assets/A122.md",
+    "sha256": "D4CA18AA4796A1540EC0498B58ADC5660DF56E0147287CE700C0D70E316199B1"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A123.md",
+    "path": "quantskills/assets/A123.md",
+    "sha256": "0EBB5CF8760BEC9F1ED8E9BA2BA10B80A04DDE0E9E99471A3C44926C0C1D8127"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A124.md",
+    "path": "quantskills/assets/A124.md",
+    "sha256": "F6415A5FD278FA8C623738B090E96D27180157840E519FAB9214D2629DE4379D"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A125.md",
+    "path": "quantskills/assets/A125.md",
+    "sha256": "ED1EAD2FC5E5E45385381E969659231BBFB09D496341912D14A1CF0E6FACCEDC"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A126.md",
+    "path": "quantskills/assets/A126.md",
+    "sha256": "DDEDF8CDFE4A6927A6F6B1F480A810E0054982CE28A1CF6849753477109F6D26"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A127.md",
+    "path": "quantskills/assets/A127.md",
+    "sha256": "4C79FB58ED1CB0AC02C409A43911AF8275558F6E345ABBA1D9EAA303808F0463"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A128.md",
+    "path": "quantskills/assets/A128.md",
+    "sha256": "C54382B7A99471E45F477C0C1FB663D4659B7269FCAA87438D1B0ACB9D7CED5B"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A129.md",
+    "path": "quantskills/assets/A129.md",
+    "sha256": "747F5CB47EC604ED700F9D1DD58488856587F73782CA21537B9E7AE8E5813C3B"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A130.md",
+    "path": "quantskills/assets/A130.md",
+    "sha256": "27A0D5BF9D63E784A09EC1ED848FCA39FF58E33192A592A36C4CDE231D53B49B"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A131.md",
+    "path": "quantskills/assets/A131.md",
+    "sha256": "3282555E377CF7A4140902478DEA49FEA1343B459790F674E46514410065386E"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A132.md",
+    "path": "quantskills/assets/A132.md",
+    "sha256": "5EEDDD02BE5ACD40EB74150F4E8B493BF0CEB32BD4DC5E27C2E74D9804FBAF44"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A133.md",
+    "path": "quantskills/assets/A133.md",
+    "sha256": "CB4921965494AE4D7D13B9510B761A6354A4F22DFF74C193C40ACD2F54CF7147"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A134.md",
+    "path": "quantskills/assets/A134.md",
+    "sha256": "EBFCA3E4E5BDF3E010D2EC191633CEE44B5C7A6D8335BF8EB0E63A950664FCB2"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A135.md",
+    "path": "quantskills/assets/A135.md",
+    "sha256": "EC87B37D98CC79EDF14A0F3C3864640B744A180B8805DBE7A75C9F3F0C7C87F5"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A136.md",
+    "path": "quantskills/assets/A136.md",
+    "sha256": "610C8228684FBEF7DC0D4EA3C543761111C204A1DAFD2EA6651EDCC572354285"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A137.md",
+    "path": "quantskills/assets/A137.md",
+    "sha256": "D5FCECFB61318299736A7D0A89BD4BAC4C8CC3F7ADF98C3B6D7E9EC22DFB679F"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A138.md",
+    "path": "quantskills/assets/A138.md",
+    "sha256": "8F820C9AEA7284B6A489AE6B13B437153ED9682AFDF0230097C47BCF272A88FC"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A139.md",
+    "path": "quantskills/assets/A139.md",
+    "sha256": "9FA18AD9793601AEDFFDE1E6799B2993DF96BF664833D18D1DE3DDF4B91750E8"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A140.md",
+    "path": "quantskills/assets/A140.md",
+    "sha256": "9AC4A1322A4AC81CEDE72E36943AC50E30382BEE750F66E7185643240C747CBD"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A141.md",
+    "path": "quantskills/assets/A141.md",
+    "sha256": "FC9CE62C6135589CFBD9BA2E7FE826BC25354AEC37ABCCED6B0DD9495FD9F59D"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A142.md",
+    "path": "quantskills/assets/A142.md",
+    "sha256": "A8F30E88E00EE1CE30EF458EBBE46A84E7BA5B2985F3436A99F95BE9518012D1"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A143.md",
+    "path": "quantskills/assets/A143.md",
+    "sha256": "0C299F740568EF0B7F782FA3E86038D4B4C471249005033AE60A6D03ECE34DEC"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A144.md",
+    "path": "quantskills/assets/A144.md",
+    "sha256": "949DFA9BB2513905197F2A1952AE0349A1CE687A31BEDDADD9CF9C628F9747C2"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A145.md",
+    "path": "quantskills/assets/A145.md",
+    "sha256": "8063244F491117C10C095C7339CEAB701257745C25457C58922F35DA895916C7"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A146.md",
+    "path": "quantskills/assets/A146.md",
+    "sha256": "E581CE4C77C1410D4FCE773AD001E7502911879D3A5613BFC62CF0F1B43E8912"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A147.md",
+    "path": "quantskills/assets/A147.md",
+    "sha256": "6D43E4F182C5D82AB9249590840AB5193813BBBA7E502EEE572AAA51BACAE237"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A148.md",
+    "path": "quantskills/assets/A148.md",
+    "sha256": "5F66603BACEA89125435BB5C36FC871B3BECBCA29AE4DC8A331EFF6C529A80FC"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A149.md",
+    "path": "quantskills/assets/A149.md",
+    "sha256": "CA433E2281068D4BBC4F149AF8A3AC9816384CC38B0DB8044E5E086CB3BF1B2E"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A150.md",
+    "path": "quantskills/assets/A150.md",
+    "sha256": "AF1A026B9693318562FA0A1A51D94763BD986FAF7074BA5C723BC8B6554164B3"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A151.md",
+    "path": "quantskills/assets/A151.md",
+    "sha256": "344EF3607A2FBB2619235DA7E44D03F9F7ACB851DD5DF77FEEE6416C476F7D9E"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A152.md",
+    "path": "quantskills/assets/A152.md",
+    "sha256": "35DFDE5EE6F803DBFB01999B0EE3A56E24C62F3054A084DDB34C3907CBB2E2CA"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A153.md",
+    "path": "quantskills/assets/A153.md",
+    "sha256": "166DB407E09DF9EFCBEAA2BBD14A6F36614D013702F39B58AF423FFCA1A1F274"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A154.md",
+    "path": "quantskills/assets/A154.md",
+    "sha256": "EF71EDB0D1A9AA4E44E8FA78C17D8110F796D6D56765FA169497323F7889F919"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A155.md",
+    "path": "quantskills/assets/A155.md",
+    "sha256": "6F34EB46874F90B8A04CF43C543E48B0365A39F6742DF8EFD60107B5E07EC628"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A156.md",
+    "path": "quantskills/assets/A156.md",
+    "sha256": "6646BA773F2DE819C287A089321B661B924C5004B884F53DCF6E4B247D0F5A7B"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A157.md",
+    "path": "quantskills/assets/A157.md",
+    "sha256": "A9D1ADB7FD126512FCB919844A4768C2B5887D3F24C95CE27CDB4A62202ACF1A"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A158.md",
+    "path": "quantskills/assets/A158.md",
+    "sha256": "989F9045356750DCF78227997D98C1E0A57269DC8D7DAF323A4D48F5BEC298BE"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A159.md",
+    "path": "quantskills/assets/A159.md",
+    "sha256": "32D641BA167C6357D9EB795682A8BC4D4D2860EF98CB505C5EF2A9014C31CBC1"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A160.md",
+    "path": "quantskills/assets/A160.md",
+    "sha256": "2F0FEAC49772782E00D4C08D57AA4BBDAC9B5CFC961604FF2EBBFCDA780EA316"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A161.md",
+    "path": "quantskills/assets/A161.md",
+    "sha256": "591B37D0093325CF257B65C9368FA5CC3DE2DB4416DBAB159582AC2CC360CDF3"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A162.md",
+    "path": "quantskills/assets/A162.md",
+    "sha256": "AD5CAEFA01E8E737C520CAE0B63B9DFA709ED0A4E8E6C8A1BFF56F1EEA882A2D"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A163.md",
+    "path": "quantskills/assets/A163.md",
+    "sha256": "0266A4D082D6D4817E35A0E16EFDDBB4B8B5E8D4376B1ABDBC862342B30511F3"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A164.md",
+    "path": "quantskills/assets/A164.md",
+    "sha256": "0EF8A1FF6A1D92B214B64F2FAEAD8EDFDDF6CAB81A101246D301B444EC59FF70"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A165.md",
+    "path": "quantskills/assets/A165.md",
+    "sha256": "3B18D638F25D0EB638037B81828B29D62325E4732D5BA0E7B3992ACFCA9D30C5"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A166.md",
+    "path": "quantskills/assets/A166.md",
+    "sha256": "9B2634F8E5010FFF2EA8DF7C754E3239432A7F4FB8B530335F0B6063722837A0"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A167.md",
+    "path": "quantskills/assets/A167.md",
+    "sha256": "1B2E5FA4FE81606952CBC424F575038279B53AB5C2265CC39460F6D52834738B"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A168.md",
+    "path": "quantskills/assets/A168.md",
+    "sha256": "1860A7A8A75CB40265B253556A14162698A839E47E5DE2F8D95863CB5BAD4562"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A169.md",
+    "path": "quantskills/assets/A169.md",
+    "sha256": "A2FBFC06F7A73880E66157C81CA06611E3F2C4A5ADA2C41DACA731D6B1E68373"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A170.md",
+    "path": "quantskills/assets/A170.md",
+    "sha256": "E22D642207FD08FE4B3242F30CF364F9B79C4857D7ABECD7BC9731D4DF9928C0"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A171.md",
+    "path": "quantskills/assets/A171.md",
+    "sha256": "C11549700A71F37127EA0153D80244897ECA5FD187B32E93B8646735BB3B6834"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A172.md",
+    "path": "quantskills/assets/A172.md",
+    "sha256": "B56F266FFF49FCD08A0D1BB6CA74001A487EA799BB30B43D88C19884C654340D"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A173.md",
+    "path": "quantskills/assets/A173.md",
+    "sha256": "5B00B364D5DA78CCE801509ED1310A707D1CD127801B2BA30ADC6BB79DF10AFD"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A174.md",
+    "path": "quantskills/assets/A174.md",
+    "sha256": "9F45F154FAB812A95FCE5D0C6147C7A899EEF4BD23BD8E103AAF34727A6583C8"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A175.md",
+    "path": "quantskills/assets/A175.md",
+    "sha256": "B033D7C64B675B26C9A2575844DADCDE0C3A7685E92CFBA3C3AC85AA9878F82D"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A176.md",
+    "path": "quantskills/assets/A176.md",
+    "sha256": "AF7165D44F0FD755B239EC3B426749729E143BA7EC790C044D50917834BDD674"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A177.md",
+    "path": "quantskills/assets/A177.md",
+    "sha256": "A60F7E8CD356D4EDD9C05ADB626379CCFCB82A0D6AA8F6B849E5A7751894F214"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A178.md",
+    "path": "quantskills/assets/A178.md",
+    "sha256": "057844154ECB4C7FDABD379C74740127D60464719C274C3DFAD365CEAA699FA2"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A179.md",
+    "path": "quantskills/assets/A179.md",
+    "sha256": "1F2CE2D5FA05C145902E77FB8AF9F7800552B2A491632926B6386AB5F9F0E8FB"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A180.md",
+    "path": "quantskills/assets/A180.md",
+    "sha256": "E3275640825E4CF4115A1EB1D0BDC040283D852A451D7C3CA6672624DA22B917"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A181.md",
+    "path": "quantskills/assets/A181.md",
+    "sha256": "F2B7DAA74C56E56A9FFA2E6A5BF390AA454FFA128B6044AC798CB28EBDF3BE94"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A182.md",
+    "path": "quantskills/assets/A182.md",
+    "sha256": "0A3F4431EDE248AA28414C06489E20A52F2FC3EDC0C8CF1D0382B31D7C3777E6"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A183.md",
+    "path": "quantskills/assets/A183.md",
+    "sha256": "D149D36AFE7FE19B7719AAECB5E4083A8642C7A38BB9F04F7040F27A37424D64"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A184.md",
+    "path": "quantskills/assets/A184.md",
+    "sha256": "91A753DF7A48334B16618DBE968C4D3DAA7A3FEC96D59EDB07942DEE3EBD9776"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A185.md",
+    "path": "quantskills/assets/A185.md",
+    "sha256": "E3DD8EFB247E01F58D77C73285E338849012C0D7A9E4313BA5364DF22189CD1B"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A186.md",
+    "path": "quantskills/assets/A186.md",
+    "sha256": "F47122C1BA00483DEA4F328698A09A6CF49FF175A413FF3EE0B5A1C86092E218"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A187.md",
+    "path": "quantskills/assets/A187.md",
+    "sha256": "DB9DB2C997895CFCA7221B294790C6C26189ACC659EDF05FA9A8976345E032C5"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A188.md",
+    "path": "quantskills/assets/A188.md",
+    "sha256": "030E1D310CDE12C3AA1C668663FBEE26952BD5F0A98296FAA6CF8D1053F1379A"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A189.md",
+    "path": "quantskills/assets/A189.md",
+    "sha256": "3B5248CA32EA8DBD898A19332A8183D0D855281E8730BBF47B9F3AFECE7A1B37"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A190.md",
+    "path": "quantskills/assets/A190.md",
+    "sha256": "4B51CBC604B197E0F42DEA3D86A760DF3D1062D53ECF0A7AB6FEF53F06620412"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A191.md",
+    "path": "quantskills/assets/A191.md",
+    "sha256": "CF813D5B4B88A0DB3E977D8B4ADF465E4B8ED231E0DE6E45C319B506315A2CA3"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A192.md",
+    "path": "quantskills/assets/A192.md",
+    "sha256": "B30168E00D9F85122620531C98B09154FBFA4D90FC81E293FE83A0B62C68E614"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A193.md",
+    "path": "quantskills/assets/A193.md",
+    "sha256": "8117F1F9727AB59E5873C65551B9EE806AD02E679BF379E235F3BE78736A2037"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A194.md",
+    "path": "quantskills/assets/A194.md",
+    "sha256": "E7128D14F90603228BEC40467610DCC90FBA6FC9C58FA35D6C88A0B60598C010"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A195.md",
+    "path": "quantskills/assets/A195.md",
+    "sha256": "F0AA8BF5F28E4715B94A11AF666B575CB6229C4055C8D610B18E0C8976150CCF"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A196.md",
+    "path": "quantskills/assets/A196.md",
+    "sha256": "897A6AB0F88A5A59A4D1AF394FBF70ABD313FC361BE9670E12B2E05C77081724"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A197.md",
+    "path": "quantskills/assets/A197.md",
+    "sha256": "84942712D5E7560643424A6620D04F5D9D876D707B32C35DD2E8E3B424C919ED"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A198.md",
+    "path": "quantskills/assets/A198.md",
+    "sha256": "5490AB658DD49B15A137F7A202756DEF277EB8CABF077B9E3598AC3143444437"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A199.md",
+    "path": "quantskills/assets/A199.md",
+    "sha256": "D15151FBE68CAD6E07026F12DBE7729FAEEABE86C450AC018F96C90C58640A6B"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A200.md",
+    "path": "quantskills/assets/A200.md",
+    "sha256": "38C89026186E0AA673D5ED9C8B361F268D948C57D88F0C7599DAE74C3D694598"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A201.md",
+    "path": "quantskills/assets/A201.md",
+    "sha256": "8D71848DA6B22D9334025636EDABE1C66B4214DB78399898CF0F92B722A5BEBB"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A202.md",
+    "path": "quantskills/assets/A202.md",
+    "sha256": "68FB8CB019A3938720B672ED9C47A3625BE26351E19A26FCE81D6FC91289F543"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A203.md",
+    "path": "quantskills/assets/A203.md",
+    "sha256": "65087C48B0CD0D0CA2CB0999B9744954D70004BA517BAABCE6B31FD1DE12D24E"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A204.md",
+    "path": "quantskills/assets/A204.md",
+    "sha256": "E689029031F7061902E2CDEC9ADB216B2FF481DA29191E45252BAAE8D9A63B54"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A205.md",
+    "path": "quantskills/assets/A205.md",
+    "sha256": "5B1C806A458E2BC0606F7F6B495F50AC0F49012AF32217118AB671D7F8EB07D4"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A206.md",
+    "path": "quantskills/assets/A206.md",
+    "sha256": "700E278480722D41CB53BB1378B9092F0C3240C0BD13A7F7069EB7BA0A7EA09D"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A207.md",
+    "path": "quantskills/assets/A207.md",
+    "sha256": "F12664112F13499C65B3F22325F4BD35738956E23E0164811536EC47C86AD74D"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A208.md",
+    "path": "quantskills/assets/A208.md",
+    "sha256": "C182175F7CDCCC90CA68D2256227806F9EE5B31D4781DBDD7D62A5BCBE5CC87E"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A209.md",
+    "path": "quantskills/assets/A209.md",
+    "sha256": "7284651B55FD4B8AB15B7DD4ECC446314DE7019591E4C6B96547879040FBD9D5"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A210.md",
+    "path": "quantskills/assets/A210.md",
+    "sha256": "7223A56799DF3EFBA747EF527A49930E7CD1160468D5E6E721D4055E895C9EEA"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A211.md",
+    "path": "quantskills/assets/A211.md",
+    "sha256": "69DC7B4DCA4042FF480322778369DB2745C2ABDAD29CF0C4C83F4BB7305DFF87"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A212.md",
+    "path": "quantskills/assets/A212.md",
+    "sha256": "F0C8253A3F988B7672DF4E32F30F18F8F3317FA4417F873BF3509F57F0E52EB4"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A213.md",
+    "path": "quantskills/assets/A213.md",
+    "sha256": "F9A777FFEB6B8691CE58B415B0CB86B35C96C792051D6175065DC12201EA706B"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A214.md",
+    "path": "quantskills/assets/A214.md",
+    "sha256": "CAEF67B86FFEFB9DCC0DB8C7C580127010A88A8E9270A4A4FFBA6A11EE2CDD79"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A215.md",
+    "path": "quantskills/assets/A215.md",
+    "sha256": "829047F67E2811F3F07531CCFB49DE2A2BDE457D73895CD9A626653DE12DB8A1"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A216.md",
+    "path": "quantskills/assets/A216.md",
+    "sha256": "3BE6997D2668C8709585C47E15C810B384E7ED1E9B94797F21E5A371FC681CEA"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A217.md",
+    "path": "quantskills/assets/A217.md",
+    "sha256": "35375663370A3BEF220A86BC1BA716D2A1EA229A8574EB005B3C8B3DB2464D2B"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\A218.md",
+    "path": "quantskills/assets/A218.md",
+    "sha256": "1682F12660B0B24A81C4A6F4E2168D6B51A0D8F5DD7F919D733F2229B6096F54"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\assets\\HUB.md",
+    "path": "quantskills/assets/HUB.md",
+    "sha256": "0392D52E25B65295066FDD67946338A2F8FD71D8301E8519DFB5F213563CBF80"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\coverage\\coverage.csv",
+    "path": "quantskills/coverage/coverage.csv",
+    "sha256": "3FDF403A3CFAEAA1D73988A8569C9547325C8DB99FD6EF4286E104A5D2B9EDAD"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\coverage\\doc_sync_report.txt",
+    "path": "quantskills/coverage/doc_sync_report.txt",
+    "sha256": "F755F06AD08907576244974573728E90E769874827A655C0AB653FCCAF2FF16A"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\coverage\\method_notes_CN.md",
+    "path": "quantskills/coverage/method_notes_CN.md",
+    "sha256": "E673496BCBE900A02474061111A6B9F4CC5EE166F58CF2FD222733BB12EFFBFA"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\coverage\\method_overrides_quantskills_CN.csv",
+    "path": "quantskills/coverage/method_overrides_quantskills_CN.csv",
+    "sha256": "87010C4D93C6BA71F8CB9C516390EC8494C800509EC33CAD5836E5684937AF8E"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\coverage\\qs_data_audit.csv",
+    "path": "quantskills/coverage/qs_data_audit.csv",
+    "sha256": "311C642933E06389324E40102DC9100E3F5D733D4AF28D2E1F2834305A06E738"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\coverage\\qs_source_inventory.csv",
+    "path": "quantskills/coverage/qs_source_inventory.csv",
+    "sha256": "F34D10AE46180B22A0BE3CE788014E31F2BA2F3A368360A741774B51A2AD326E"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\coverage\\unread_exec_keyword_hits_20261107.txt",
+    "path": "quantskills/coverage/unread_exec_keyword_hits_20261107.txt",
+    "sha256": "041269AB23799E7C7FB4807C9D2336F4D40375F55E81AC2C7AF3F41E771C9B3D"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\coverage\\template_diff\\coverage_factor_docs.csv",
+    "path": "quantskills/coverage/template_diff/coverage_factor_docs.csv",
+    "sha256": "221B19D589EEF741A9611FC65562B80885B6B2B415218A444DCE6F16E784C2E7"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\coverage\\template_diff\\factors_584.csv",
+    "path": "quantskills/coverage/template_diff/factors_584.csv",
+    "sha256": "25EB8EBA88B9199C7F3F761ECAAACB0DC4DD0AAF25BF1757E7DFB1EFF0CAA184"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\coverage\\template_diff\\residual_lines_3100.txt",
+    "path": "quantskills/coverage/template_diff/residual_lines_3100.txt",
+    "sha256": "2B193839D9A829694F342ADB83BA9569FFBDA831386060DC4F80FB1462B524B7"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\coverage\\template_diff\\result_json_584.csv",
+    "path": "quantskills/coverage/template_diff/result_json_584.csv",
+    "sha256": "8A8844D2661D67B8702D3F8D5900A1CCAB500A0FAD88CD635278ED2FE9909678"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\coverage\\template_diff\\result_json_summary.txt",
+    "path": "quantskills/coverage/template_diff/result_json_summary.txt",
+    "sha256": "75244751B0F46A228131B88ADC39D9313E7984A229DA4F937AAA289A3AA834DA"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\tools\\audit_factor_results.ps1",
+    "path": "quantskills/tools/audit_factor_results.ps1",
+    "sha256": "F9C9A247D0278260B5BC9D20B14E5AE2EF4DFCD9CDB29C5BAF7A0EC2BE7F65D9"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\tools\\build_packs.ps1",
+    "path": "quantskills/tools/build_packs.ps1",
+    "sha256": "A3F6CA6757D944783A0BA4E5D4BC27AAE857FE9D92E5D3EDE98152F32D4EE10E"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\tools\\build_source_inventory.ps1",
+    "path": "quantskills/tools/build_source_inventory.ps1",
+    "sha256": "38712AB2BFC2DB8FD2D5D8EFEA8541DC9EAC9E50FB6570A6FA4AFCDB58C52FBD"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\tools\\hash_reuse_inventory.ps1",
+    "path": "quantskills/tools/hash_reuse_inventory.ps1",
+    "sha256": "71EA0D9F51159707F8985044DFEAFEB338C06235464D3395ABF6D0ABC20B79F4"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\tools\\mark_read.ps1",
+    "path": "quantskills/tools/mark_read.ps1",
+    "sha256": "1CB238451A46AA07C4FD53CC698415F78583F9DBB1AD344EE4AC0A566AD878BB"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\tools\\mark_s013.ps1",
+    "path": "quantskills/tools/mark_s013.ps1",
+    "sha256": "E8C1575AEF9F01989B6C60B5E12BB93A80DCBBF361E5A274B5BEBA9F658CDEBF"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\tools\\mark_source.ps1",
+    "path": "quantskills/tools/mark_source.ps1",
+    "sha256": "3201C016873BFD04A42B10F402F17806BB808835850F8270DE4BD5D672FC28FB"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\tools\\mark_template_py.ps1",
+    "path": "quantskills/tools/mark_template_py.ps1",
+    "sha256": "CA77BD41D15FF7DEAB41013DE36622C375E20DA244F7BF17BC3228EC41DC1D01"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\tools\\sync_doc_coverage.ps1",
+    "path": "quantskills/tools/sync_doc_coverage.ps1",
+    "sha256": "7F1F5DEDE8D08BEB89868443538BAD0512867CC5099568F6414B87F5D8277A13"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\tools\\template_diff.ps1",
+    "path": "quantskills/tools/template_diff.ps1",
+    "sha256": "9CA98841F35BA3DC0668D15A58AE20715A9F8F9B37F7D076F6D7179BEA631B69"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\lean-full-review-20261101\\claude\\batches\\L-DATA_zip_and_xauusd_CN.md",
+    "path": "lean/batches/L-DATA_zip_and_xauusd_CN.md",
+    "sha256": "F912C677F39C7D035754DA6FA691076B3A9FF0C8AA9071D048DA3F72BCAC50B9"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\lean-full-review-20261101\\claude\\batches\\L001_fills_slippage_CN.md",
+    "path": "lean/batches/L001_fills_slippage_CN.md",
+    "sha256": "C26AFDF55C7C2EDD7508E8C1B4AC6E93626E291B50E50763580E2698B2B60BCF"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\lean-full-review-20261101\\claude\\batches\\L002_margin_cfd_CN.md",
+    "path": "lean/batches/L002_margin_cfd_CN.md",
+    "sha256": "BF6AAA3FAC257D6B44F6D9E6E94735D1C22FDB172B22081F0825F46693D06AA0"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\lean-full-review-20261101\\claude\\batches\\L003_order_states_CN.md",
+    "path": "lean/batches/L003_order_states_CN.md",
+    "sha256": "85A6A0E43BDBA1ABE9564A53FB5AA6CC1617FB7890DA1D499E48639118AFD16B"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\lean-full-review-20261101\\claude\\batches\\L004_order_ticket_CN.md",
+    "path": "lean/batches/L004_order_ticket_CN.md",
+    "sha256": "B26B417570BB420C6634534769DC9EFE51876A3B581E3A88B0F49312CEA36831"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\lean-full-review-20261101\\claude\\batches\\L005_transaction_handlers_CN.md",
+    "path": "lean/batches/L005_transaction_handlers_CN.md",
+    "sha256": "E27F07A340AA3F0C53BD9F3E7668CD6589BC7D7A303F5ED3289B42F6774F5BDD"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\lean-full-review-20261101\\claude\\batches\\L006_pool_backtesting_brokerage_CN.md",
+    "path": "lean/batches/L006_pool_backtesting_brokerage_CN.md",
+    "sha256": "EC600D07C2D9730C18CC68BB0012BEC28BD582CF07E945C354F07C16FD9CBD5E"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\lean-full-review-20261101\\claude\\batches\\L007_brokerage_models_fees_CN.md",
+    "path": "lean/batches/L007_brokerage_models_fees_CN.md",
+    "sha256": "A9AA8C4E3C95B24EB1CF953562CDB6727847EA34A13D078916FADDEFF439012A"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\lean-full-review-20261101\\claude\\batches\\L008_default_brokerage_portfolio_fill_CN.md",
+    "path": "lean/batches/L008_default_brokerage_portfolio_fill_CN.md",
+    "sha256": "28C309D410B651DD3E4C6C358531B6EFABA3F2757B914104CF658D1142BE70C0"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\lean-full-review-20261101\\claude\\batches\\L009_portfolio_manager_holding_CN.md",
+    "path": "lean/batches/L009_portfolio_manager_holding_CN.md",
+    "sha256": "6B45AD9FA8A2172FEC7573ABC175B19A5408B6586042E23C3BC420FC31E282E5"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\lean-full-review-20261101\\claude\\batches\\L010_cashbook_cash_CN.md",
+    "path": "lean/batches/L010_cashbook_cash_CN.md",
+    "sha256": "2E2B6B90DF588790F72CE720DE8A710193B72EB4447A7CF471622CA0C9D1CE93"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\lean-full-review-20261101\\claude\\batches\\L011_margin_call_scheduling_CN.md",
+    "path": "lean/batches/L011_margin_call_scheduling_CN.md",
+    "sha256": "2BB59FFB3C4837963684CA7EC11112E946D72D9FC0151BAE989D4ED411D21C98"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\lean-full-review-20261101\\claude\\batches\\L012_time_in_force_CN.md",
+    "path": "lean/batches/L012_time_in_force_CN.md",
+    "sha256": "723D18CA6412E84956A3CAF7FC068BC107236148BD176C0185C8950A11C2E40A"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\lean-full-review-20261101\\claude\\batches\\L013_statistics_results_CN.md",
+    "path": "lean/batches/L013_statistics_results_CN.md",
+    "sha256": "74B01A85E835CE2ABB503D7B30E58FFB2770CC3BF59A055838AF202A039DF2AA"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\lean-full-review-20261101\\claude\\batches\\L014_market_hours_CN.md",
+    "path": "lean/batches/L014_market_hours_CN.md",
+    "sha256": "73BF7635BB66C03F1D5DABC181169CD96BA0BAFE6C89821EDC3FAA5BFADDA6C0"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\lean-full-review-20261101\\claude\\batches\\L015_analyses_CN.md",
+    "path": "lean/batches/L015_analyses_CN.md",
+    "sha256": "5C50370CA89EE0172C5AB6A3500F981E9AAA81CE3436FC3CEFF5197E4094ABFF"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\lean-full-review-20261101\\claude\\batches\\L016_benchmark_sharpe_CN.md",
+    "path": "lean/batches/L016_benchmark_sharpe_CN.md",
+    "sha256": "4C240EDB588A0E641D203D562C2BFF22F88CF22827B72ACD654F7A2EA33146E8"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\lean-full-review-20261101\\claude\\batches\\L017_examples_orders_CN.md",
+    "path": "lean/batches/L017_examples_orders_CN.md",
+    "sha256": "4C98C35C95C08DC5E838FC8D2B4FFC8D886E0A7D0D62C3BD9C1122ABB5ADB6F6"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\lean-full-review-20261101\\claude\\batches\\L018_examples_cfd_fx_margin_CN.md",
+    "path": "lean/batches/L018_examples_cfd_fx_margin_CN.md",
+    "sha256": "C73153286C04A54C2B27F071FCE5120A8DF71C8E091F56EAB35F6CFA4ACC7D36"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\lean-full-review-20261101\\claude\\batches\\L019_examples_orders2_CN.md",
+    "path": "lean/batches/L019_examples_orders2_CN.md",
+    "sha256": "269984EEA9A6E740C2C517CFB9537004090F4CE3FE4C9850F3C92DC0A0358980"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\lean-full-review-20261101\\claude\\batches\\L020_examples_async_hours_CN.md",
+    "path": "lean/batches/L020_examples_async_hours_CN.md",
+    "sha256": "20BDC53F5D3B848D36951BE6A5F075D3C6D4367FF236EF5E518C28C3552B7FCC"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\lean-full-review-20261101\\claude\\batches\\L021_examples_misc_CN.md",
+    "path": "lean/batches/L021_examples_misc_CN.md",
+    "sha256": "22510FDA4F0BB9A0F3687DCCAEB3A0037AE0D8435655D7ADFC5249FF08C77313"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\lean-full-review-20261101\\claude\\batches\\L022_examples_cont_CN.md",
+    "path": "lean/batches/L022_examples_cont_CN.md",
+    "sha256": "E1BDEF08AC2D2E8BB0D11132E04C5E18C41F62015D52A91A510A9A57815879DE"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\lean-full-review-20261101\\claude\\coverage\\data_tests_audit.csv",
+    "path": "lean/coverage/data_tests_audit.csv",
+    "sha256": "DC027CD10C2550F609A7EB99C8BDDC95AC93C2AD07AE974A634D1FD8EF84DDFD"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\lean-full-review-20261101\\claude\\coverage\\data_text_audit.csv",
+    "path": "lean/coverage/data_text_audit.csv",
+    "sha256": "CF8427826A46375C9C26DA63BA3DD786E64EF97EE7C4359647C09E097B055EEF"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\lean-full-review-20261101\\claude\\coverage\\lean_inventory.csv",
+    "path": "lean/coverage/lean_inventory.csv",
+    "sha256": "D0D69F2E7E0125946CB95100658C00948C23C65C3160D10B7D1A79B1AC0E6FF4"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\lean-full-review-20261101\\claude\\coverage\\xauusd_audit.csv",
+    "path": "lean/coverage/xauusd_audit.csv",
+    "sha256": "E58FA707ECB0F45179CF2BA14F258A0642665ABCD03E72B1B3F75CC2A6CB83D0"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\lean-full-review-20261101\\claude\\coverage\\zip_manifest.csv",
+    "path": "lean/coverage/zip_manifest.csv",
+    "sha256": "5D12FB776644BC2B95ACC485B8C3BAC4EDE79901E6E78344D020D2279F770204"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\lean-full-review-20261101\\claude\\tools\\audit_text_data.ps1",
+    "path": "lean/tools/audit_text_data.ps1",
+    "sha256": "1D56A6417582A4FF8ECDF09FDDDF9FDBC8110E16E9E53FF8974B8D3761BF22E6"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\lean-full-review-20261101\\claude\\tools\\audit_xauusd_zips.ps1",
+    "path": "lean/tools/audit_xauusd_zips.ps1",
+    "sha256": "39498CEA6E44C40E9113210F12CF0265C02B77BFC8369EE691AFACB76A3EBA82"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\lean-full-review-20261101\\claude\\tools\\print_example.sh",
+    "path": "lean/tools/print_example.sh",
+    "sha256": "4457EB685575443971586CA53E105FEC8FF34C7051F48E1C44105FEC146D2B18"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\lean-full-review-20261101\\claude\\tools\\read_batch.sh",
+    "path": "lean/tools/read_batch.sh",
+    "sha256": "021105F9DB8860721B41FBC45FF6CB525F982FDBA20F86D43AA15B6FDE795FA1"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\lean-full-review-20261101\\claude\\tools\\revert_md_from_data3.ps1",
+    "path": "lean/tools/revert_md_from_data3.ps1",
+    "sha256": "9BC7F953DD70797DE976D43C76792412D0201B8ADF7E2A1DB66C23E693B81749"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\lean-full-review-20261101\\claude\\tools\\structure_groups.ps1",
+    "path": "lean/tools/structure_groups.ps1",
+    "sha256": "C9821FAFD492E9A129F58CD8F0837901453E4AC5FA4477FF6DAE380D8EA565C9"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\lean-full-review-20261101\\claude\\tools\\zip_manifest.ps1",
+    "path": "lean/tools/zip_manifest.ps1",
+    "sha256": "F1AE845DD22E2BF5345AD62D36797706719691DF79001FB7ACE059A808E61DFC"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\kronos-learning-20261101\\claude\\coverage.csv",
+    "path": "kronos/coverage.csv",
+    "sha256": "AEF42E9CE4E0D0BAEB5AD3928A05FF597D9C13A9FEF3C0A140B5D47AC18CA234"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\kronos-learning-20261101\\claude\\REVIEW_CN.md",
+    "path": "kronos/REVIEW_CN.md",
+    "sha256": "3416DCF57BFD4ED83207F3D3FB6102D72A836AFC04099F328B8F9C04879485D0"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\kronos-learning-20261101\\claude\\REVIEW2_CN.md",
+    "path": "kronos/REVIEW2_CN.md",
+    "sha256": "E14DD7418668BEBD9DD875991C2AACBAADD87FD9C10B54671299A5DEDDDAF193"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\joint-full-review-20261101\\CLAUDE_CHECKPOINT_20261106_CN.md",
+    "path": "CLAUDE_CHECKPOINT_20261106_CN.md",
+    "sha256": "13C2CC6E3AD3C857A171C86DCC75576CF67BBB1B23F4DD9466426A5113B6BC2D"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\joint-full-review-20261101\\CLAUDE_RECEIPT_CN.md",
+    "path": "CLAUDE_RECEIPT_CN.md",
+    "sha256": "2B1319DE1EAE3F52F20066A513D0E4CA3E4FFD45CB5F23B47AD47C3C022F9BEF"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\joint-full-review-20261101\\CLAUDE_TIERED_COMPLETION_PLAN_20261107_CN.md",
+    "path": "CLAUDE_TIERED_COMPLETION_PLAN_20261107_CN.md",
+    "sha256": "2B8ACF924A72C22E632ABCF458101CCA73D10991593498C404746CEB77C42FC5"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\joint-full-review-20261101\\CLAUDE_TO_CODEX_LEAN_RECHECK_REQUEST_20261107_CN.md",
+    "path": "CLAUDE_TO_CODEX_LEAN_RECHECK_REQUEST_20261107_CN.md",
+    "sha256": "E90F931DD3C512AB09187862A78375988A864C57B5976CC6D3EF13416AB78F13"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\joint-full-review-20261101\\CLAUDE_TO_CODEX_QS_RECHECK_REQUEST_20261106_CN.md",
+    "path": "CLAUDE_TO_CODEX_QS_RECHECK_REQUEST_20261106_CN.md",
+    "sha256": "1246269893A7A497E64DB26B484FA9748D5F26CE2D622CC34689AF938B721D06"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\joint-full-review-20261101\\CLAUDE_V12_TAKEAWAYS_20261108_CN.md",
+    "path": "CLAUDE_V12_TAKEAWAYS_20261108_CN.md",
+    "sha256": "5F12D1F9C9586BE5AAC9695BD5421B5B8F2F10888392BED0AA1EBA42AA26D4E7"
+  }
+]
