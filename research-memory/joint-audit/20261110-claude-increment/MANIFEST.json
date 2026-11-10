@@ -1,0 +1,57 @@
+[
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\joint-full-review-20261101\\CLAUDE_CHECKPOINT_20261106_CN.md",
+    "path": "joint/CLAUDE_CHECKPOINT_20261106_CN.md",
+    "sha256": "C106F02E3D1E422BCBE4EBBA04992F47C7AA605EE184AD6497232C4F0F9AB68A"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\joint-full-review-20261101\\CLAUDE_RECEIPT_CN.md",
+    "path": "joint/CLAUDE_RECEIPT_CN.md",
+    "sha256": "B5B53CB19210D1CC6A1E9C45EEAA9143436FC6096103D5DA656A519A62ED0CDB"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\joint-full-review-20261101\\CLAUDE_TO_CODEX_LEAN_RECHECK_REQUEST_20261107_CN.md",
+    "path": "joint/CLAUDE_TO_CODEX_LEAN_RECHECK_REQUEST_20261107_CN.md",
+    "sha256": "2428C26AA8B98A1FE4B92135B0757CBA88DC0F649C2473B1F533A6FF3466BC40"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\lean-full-review-20261101\\claude\\batches\\L125-L129_indicators_CN.md",
+    "path": "lean/batches/L125-L129_indicators_CN.md",
+    "sha256": "BCD8D1F7F35FCC6B2F126BD01365226367FDF4256821887E19C4A753AE4244C2"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\lean-full-review-20261101\\claude\\batches\\L130-L136_indicators_CN.md",
+    "path": "lean/batches/L130-L136_indicators_CN.md",
+    "sha256": "389CC57976545E700ACC5F5D178C7FE50D40FE101E2735DFCA12C8FD2008A5BA"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\lean-full-review-20261101\\claude\\batches\\L137-L142_engine_CN.md",
+    "path": "lean/batches/L137-L142_engine_CN.md",
+    "sha256": "CBA022A681F130A015660485D425A4ED6F6353D7517CB32D686CF9E4EA0B5281"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\lean-full-review-20261101\\claude\\batches\\L143-L148_misc_CN.md",
+    "path": "lean/batches/L143-L148_misc_CN.md",
+    "sha256": "12D2B5691FF61AD2FDB567F2D016F634EEC10CFC80F6B2BAF142B74F9F7A859F"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\lean-full-review-20261101\\claude\\batches\\L149-_tests_CN.md",
+    "path": "lean/batches/L149-_tests_CN.md",
+    "sha256": "7F8E644D43288E932CC06D0E91928E7736EF2A16A59AB144CF12988CF71730C8"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\lean-full-review-20261101\\claude\\coverage\\lean_inventory.csv",
+    "path": "lean/coverage/lean_inventory.csv",
+    "sha256": "35C046F437505AE0977CD51FC4B8E05233F27F468B413B924062E19F863ED42E"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\lean-full-review-20261101\\claude\\tools\\dump_batch.sh",
+    "path": "lean/tools/dump_batch.sh",
+    "sha256": "B694A4138BE44B2010E63DFAE6D2536B6C8348AD6FF95DBB16D803BB003F5C36"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\lean-full-review-20261101\\claude\\tools\\mark_batch.ps1",
+    "path": "lean/tools/mark_batch.ps1",
+    "sha256": "1D3ADABD88A96553EBD6FEB2E52F650734A0C431B42C06AB45F601612683B37C"
+  }
+]
