@@ -1,0 +1,62 @@
+.github banner/icon/mark: QuantSkills logo; the icon's four-arrow X mark resembles a third-party fashion brand's arrow logo (possible trademark similarity, not a legal finding); mark = PandaAI-style head
+.github qr jpg: community QR code (PandaAI logo); content not decoded or transcribed
+guardian ic_decay_family: mock_run, F001-F003 Rank IC 0.03 -> decaying; F003 flips from negative to positive with horizon (sample data)
+corr-break correlation_heatmap: axes show only indices 0-2, no asset names; unreadable as a deliverable
+corr-break cross_correlation_bars: includes self-pairs (A:A=1) and symmetric duplicates; scorecard pair_count=9 (counts 3 self-pairs) and max_abs_cross_corr=1.0 come from the diagonal -> metric contaminated by self-correlation (image-level evidence; source to be checked)
+crowding funding_balance: 2025-01-02..01-10 margin balance ~4.63-4.72e9; lhb_amount_top: top 10 dragon-tiger-list amounts; scorecard puts metrics of different scale on one axis, only lhb_avg_amount visible (design flaw)
+skew iv_distribution: obvious spike in the 100 bin (~500 samples), suggests IV is clipped at 100 or failed solves are pinned to the upper bound (data-quality red flag)
+skew iv_top_contracts: the "top" 12 contracts are all FG604 calls with IV = 100 -> confirms IV is clipped at the upper bound, so the ranking is meaningless; scorecard iv_rows ~5400
+market-regime event_reason_distribution: Chinese labels render as tofu boxes (font missing); funding_balance chart is titled Margin Total Balance but its data is identical to the crowding-monitor chart (shared data source); scorecard has the same scale problem
+quantspace MA10 ATR reversion (IF): equity 1.0->~1.7 (2024-01..2026-07), but the sharp 2024-09/10 jump (0.92->1.23) carries much of the gain -> single-event concentration; max DD ~-14%; before/after-cost gap is small
+quantspace XGBoost triple-barrier (IF): very few trades (equity flat for long stretches), early 2024-10 spike then giveback; final ~1.054, max DD ~-10%, return roughly equal to drawdown; tiny sample, nothing statistically meaningful
+quantspace futures cross-sectional reversal: 1.0->~2.1->1.78, DD at the end of the sample ~-17% and still deepening; costs move the result by ~0.1
+quantspace futures XGBoost rank: 1.0->~2.4->2.05, DD at end of 2026-06 ~-15%; strong at first, deteriorating late (a pattern consistent with overfitting)
+quantspace developer-qr.jpg: personal WeChat contact QR with a personal photo, nickname and city (personal info, not transcribed); personal data committed to a public repo
+SVG x4: ssquant-skill-map is a pure architecture diagram (AGENTS.md / data_server / CTP Gate / Reports) with no scripts; the other three are text logos (FM/FH/RR)
+quantskills/assets covers (AI-generated promo cards; common pattern: "no automatic orders" + research only):
+- correlation-break: consistent with the code (get_future_dominant_corr, 3 evidence charts + scorecard)
+- crowding-risk-monitor: claims "GitHub Star 40K+, 12 contributors" (unverifiable and inconsistent with a small repo, likely false or copied from a template); the right-hand pipeline says "11+ platforms searched in parallel / Best Takes v2", which does not match a Pandadata LHB monitor (copied from another card); says MIT License, inconsistent with the catalog's GPL-3.0-only
+- derivatives-skew: the right-hand panel is a "research-report replication workflow" (arXiv / factor IC / BACKTEST), unrelated to this agent; "PandasData" typo; GPL-3.0
+- market-regime: v1.0.7; step numbering 01 is repeated; overall consistent with the code
+- agent-quantspace: right-hand step numbering is garbled (01,02,02,04,05,06,02,06), AI-generated image artifact; content matches the README layering
+- a-share-stock-dossier: v1.0.5, 9 chapters / 10 risk rules / GPLv3; consistent
+- skill-backtest: v1.0.3; the main area states the backtest protocol (T+1 open, Top 10% equal weight, 15 bp two-way, no buy at limit-up / no sell at limit-down, no compounding cap); but the right-hand "nine-step pipeline" is Hurst/ADF/KPSS time-series analysis, copied from another card; some small text is garbled
+- doc-to-alphas: v1.0.1, 6 fields / 27 operators / 8 checks; consistent
+- event-risk-alert: v1.0.2; card content is badly mixed up: core functions, I/O and nine-step pipeline are all time-series / cointegration analysis, the CLI table comes from another signal-extraction skill, and only the bottom banner describes event risk (unlocks / pledges / buybacks / ST, etc.)
+- factor-debug: danger-signal list reusable as leakage alarm thresholds (rankIC>0.15, Sharpe>5, annualized >50% with MDD ~5%, val/train IC >95%, etc.)
+- factor-evaluate: score formula 0.20*IC+0.30*Sharpe+0.30*Ret+0.20*MDD+0.10*Mono+0.10*Turn, weights sum to 1.2 not 1; Sharpe and Ret overlap (to be checked against source); each item normalized to [-2,+2]
+- factormad: v1.0.2, consistent (two LLM debaters / ICIR selection / synthetic data check)
+- factor-mine: correlation gate |rho|>=0.85, 12 anti-cheat patterns, single-point change and accept/rollback; consistent
+- factor-review: three-layer review, minimum >=30 experiment rounds / >=10 factors; consistent
+- gaetano-crux: v1.0.4; claims to "replicate the research style of a real investment firm" (uses a real institution's name; note the attribution / endorsement risk); research only, no order following
+- ic-analysis: the "input requirements" panel mistakenly copies factor-review's ">=30 experiment rounds / >=10 factors" (small copy error); otherwise consistent
+- systemic issue: the same time-series "nine-step pipeline" (Hurst/ADF/KPSS/cointegration) is pasted into the right column of the backtest, event-risk-alert, index-valuation-rotation, options-vol-analyst and pandadata-warehouse cards, unrelated to their own functions; cover images are unreliable as functional descriptions
+- index-valuation-rotation v1.0.3: the main area (PE/PB percentiles + 20/60/120-day momentum + interface mapping) is consistent; parts 4/5 are also the time-series template
+- market-daily-review v1.0.4: six-step pipeline consistent (5 data groups / T+1 labeling / validate_report / generated daily at 18:30)
+- options-vol-analyst v1.0.4: main area consistent (IV/HV unit normalization 0.24 vs 24, term structure, skew, winsorize); "verification metrics" panel lists RankIC/ICIR/Q5-Q1, factor template wrongly inserted
+- pandadata-warehouse v1.0.2: core functions and I/O describe "batch-generate factor Skills", which do not match the warehouse; only the checks (partition parquet / no duplicate keys / spot-check vs API for 3 codes x 3 dates) and the five operation types are relevant
+- paper-replication: 8 steps / 6-stage pipeline / quality gate quality_gate_check.py; consistent; "full replication in one click" is promotional wording
+- quant-factor-directional-alpha: claims "296 factors, 296/296 pass real-market validation", sample 2021-01-04 -> 2026-06-10, A-shares 98 + US 50; "pass" only means the self-check script ran, it is not evidence of alpha (matches the earlier template-diff conclusion)
+- quant-factor-risk-pattern-alpha: 288/288 pass, same as above; requires SSQuant >= 0.4.6
+- **file/content mismatch**: skill-quant-factor-skill-factory.png actually shows the "Pandadata data interface v1.0.9 (skill-pandadata-api)" card, and its right column is the Gaetano six-step research pipeline; the card itself lists "credentials .env / user.json plaintext password" (consistent with the credential-persistence risk found earlier in A158)
+- quant-factor-volume-stat-alpha: 216/216 pass, same template and same reservations as the previous two
+- quant-research-replication: flowchart numbering has two step 5s ("strategy backtest and evaluation" repeated); otherwise consistent
+- report-replication: nearly identical to the paper-replication card (same pipeline / dependency components); consistent
+- serenity-research-model v1.0.7: reverse-engineers public X/Twitter posts into a "Serenity-style" research logic, cashtag whitelist filtering, 1/5/20/60/120-day return + max-drawdown verification, public trade posts treated as "unverified"; reconstructs a real person's public account, so attribution / persona risk applies
+- ssquant-ai-trader: SSQuant>=0.4.6, fully / semi-automatic modes, deploys to SIMNOW paper trading plus cron monitoring; input requires the "user account password written into trading_config.py" -> credentials stored in plaintext in a code file (security risk); automatic execution only on SIMNOW, but the design can be pointed at live trading
+- stock-screener v1.0.3: main area (natural language -> condition-to-interface mapping, 13 conditions) consistent; right column is again the time-series template
+- time-series-analysis v1.0.6: origin of the "nine-step / eight-step time-series pipeline" template; consistent
+- x-trader-builder v1.0.4: I/O and coverage panels are copied from the time-series card; the CLI subcommands (init-run/extract/auto-review/split/download-prices/evaluate/template/report) and core constraints (ticker != recommendation, survivorship check, P&L must be audited) are its own
+quantskills/assets/pandaai-community-qr.jpg: same community QR (see hash comparison); not decoded
+backtesting-bias-avoidance 回测审计_equity: net value after costs plus impact: 1 -> 2.8 (2021) -> 1.45 (2023-10), final DD ~-49%; serves as an example of how a strategy collapses once it is audited (late-sample collapse)
+buffett-moat-screener:
+- backtest_a_share (titled V9.1) and backtest_a_share_strict (titled V9.4) have curves that are visually identical (soft-scored portfolio ~1.7, old hard control ~2.2, CSI 300 ~1.4) -> the version change has no visible effect on the result, or the image was only relabeled; the soft-scored portfolio underperforms the old hard control
+- roster_2010 "fixed classic roster" 8.5x vs CSI 300 1.3x: the roster is picked with hindsight, so survivorship / look-ahead bias is extreme; the title correctly labels it "diagnostic", but it must not be read as strategy performance
+- us_fixed_roster: fixed US research pool since 2015, 5.3x, no benchmark line, same hindsight problem
+factor-grouped-wrapper framework/pipeline: validation IC selects the factor set, then the run is frozen and one OOS FactorBacktest follows; "OOS remains sealed until frozen_selection.json exists"; six-stage resumable CLI (validate/cache/backward/forward/freeze/OOS); good freeze-then-seal OOS practice, reusable by V1.2
+factormad framework/pipeline: two-agent debate (Summary/Opinion/Factor) plus four phases (generate / validate: execution, no look-ahead, stationarity, dimension consistency / correct / evaluate + correlation check, then store); the figures look like they come directly from the FactorMAD paper (redistribution and attribution need checking); the example shows ATR fixed for dimension consistency by dividing by close
+gao-shanwen wechat-cover: memorial cover for a real economist that organizes his books and articles into a Skill; the AI-generated image shows fabricated book spines and handwriting; reproducing a real person's works raises copyright / persona-attribution risk
+time-series-analysis CU/I(/IF/demo) KDE+QQ: lag 1/5/20 standardized return distributions, QQ tails slightly fat; the x-axis is labeled "close" when it is actually standardized returns (label error); with lag 5/20 log differences of overlapping windows, the sample is not independent
+- IF_DOMINANT: lag 20 shows clear right skew and a second peak (~+2.8σ), and the QQ plot deviates strongly from the normal line (right tail >6σ) -> the IF dominant series has strong right skew / jumps (consistent with the 2024-09 policy rally); the I_DOMINANT QQ also has a 5σ right tail
+- demo_spread: Fibonacci lags 1..34, distribution close to normal (synthetic demo spread)
+xingtai-catcher 01-05 screenshots: web SaaS "形态捕手" (upload a candlestick screenshot / hand-draw a pattern -> similarity matching across all A-shares and futures, daily radar, subscription push at 16:00, Top10); the home page attributes a "tremendous" quote to a real politician (a fabricated / misattributed quote, potential reputational and legal risk); the "detailed analysis" section generates "trend outlook + trading plan" and the score is a similarity score (~65), not a probability, which contradicts "research reference only"; the "win-rate report" button is greyed out and unavailable; data date 2026-06-18

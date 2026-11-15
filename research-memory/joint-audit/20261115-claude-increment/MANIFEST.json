@@ -1,0 +1,47 @@
+[
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\GAPS_CN.md",
+    "path": "quantskills/GAPS_CN.md",
+    "sha256": "98FAA3B0EFBB120862FFCACA48BE2E27E7ECC1CFA5A4E4518F62B78AEA3C3E30"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\coverage\\qs_source_inventory.csv",
+    "path": "quantskills/coverage/qs_source_inventory.csv",
+    "sha256": "0FF17A4135D1332023AE9FF161DC0A7E833F178B583D382A708FD61DDF2BEBA6"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\quantskills-learning-20261022\\claude-full-review\\coverage\\S024_image_observations_CN.txt",
+    "path": "quantskills/coverage/S024_image_observations_CN.txt",
+    "sha256": "8E63CD3BEDA1F938B746C83EB5054ACE4E8A4A961E97E202149107DD0C66F3B4"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\lean-full-review-20261101\\claude\\batches\\L149-_tests_CN.md",
+    "path": "lean/batches/L149-_tests_CN.md",
+    "sha256": "9482C31C3CDDA38567A19A8C01558786D3E9141E184B056C681E13512382FEEC"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\lean-full-review-20261101\\claude\\batches\\L183-_common_CN.md",
+    "path": "lean/batches/L183-_common_CN.md",
+    "sha256": "430850AD61EA79332B9C987FCC424C27DC1761E8C49167EC3D05B2E46F54489B"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\lean-full-review-20261101\\claude\\coverage\\lean_inventory.csv",
+    "path": "lean/coverage/lean_inventory.csv",
+    "sha256": "90986F143F669D12109691E521245733C57159959D55861A2C80EF42B3E060A7"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\lean-full-review-20261101\\claude\\tools\\fundnorm2.sh",
+    "path": "lean/tools/fundnorm2.sh",
+    "sha256": "0E6E056C21E7AC50D9EC3C5A9A340B2EC88BE5E3165E621EF035651A5B9D3AD0"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\joint-full-review-20261101\\CLAUDE_CHECKPOINT_20261106_CN.md",
+    "path": "joint/CLAUDE_CHECKPOINT_20261106_CN.md",
+    "sha256": "CB12E988555F80B9F0A23204B24606C47A0B3877AE162773F58F317CD9779595"
+  },
+  {
+    "source": "C:\\Users\\A\\Documents\\Codex\\outputs\\joint-full-review-20261101\\CLAUDE_RECEIPT_CN.md",
+    "path": "joint/CLAUDE_RECEIPT_CN.md",
+    "sha256": "3EC8C7859713B90A3A9DBB6A5198E6B800B9AB9AA9EE40BB9676B6B225E72443"
+  }
+]
